@@ -1,0 +1,231 @@
+{
+ "sujet": "Simplifier le parcours des familles d'élèves en situation de handicap : MDPH, PAP et dossier numérique unique",
+ "faits": [
+  {
+   "fait": "Selon le ministère de l'Éducation nationale (2026), **550 000 élèves en situation de handicap** sont scolarisés en milieu ordinaire à la rentrée 2025, dont plus de 95 % le sont à temps complet",
+   "chiffre": "550 000 ; 95 %",
+   "source": "assemblee-nationale.fr",
+   "annee": "",
+   "url": "https://questions.assemblee-nationale.fr/q17/17-10759QE.htm",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 550 000, 95 %",
+   "url_verifiee": "https://questions.assemblee-nationale.fr/q17/17-10759QE.htm"
+  },
+  {
+   "fait": "Selon l'Assemblée nationale (2025), le nombre d'enfants handicapés scolarisés en milieu ordinaire a plus que triplé depuis 2006 pour atteindre **468 300 élèves à la rentrée 2023**, soit **3,9 %** du total des élèves",
+   "chiffre": "468 300 ; 3,9 %",
+   "source": "assemblee-nationale.fr",
+   "annee": "",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/rapports/cion-soc/l17b1692-tii_rapport-information.pdf",
+   "statut": "à vérifier",
+   "detail": "chiffres absents de la source : 468 300, 3,9 %"
+  },
+  {
+   "fait": "D'après la Cour des comptes (2024), les dépenses de l'État en faveur de l'école inclusive s'élevaient à **2,7 milliards d'euros** en 2023, en hausse de **16 %** sur un an, portées majoritairement par la rémunération des accompagnants",
+   "chiffre": "2,7 milliards ; 16 %",
+   "source": "ccomptes.fr",
+   "annee": "",
+   "url": "https://www.ccomptes.fr/fr/documents/69412",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 2,7 milliards, 16 %",
+   "url_verifiee": "https://www.ccomptes.fr/fr/documents/69412"
+  },
+  {
+   "fait": "D'après le Sénat (2025), l'effectif des accompagnants d'élèves en situation de handicap (AESH) a été multiplié par **3,2** entre 2017 et 2025, atteignant **139 993 personnes** physiques en 2025",
+   "chiffre": "3,2 ; 139 993",
+   "source": "senat.fr",
+   "annee": "",
+   "url": "https://www.senat.fr/rap/l25-139-313/l25-139-31310.html",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 3,2, 139 993",
+   "url_verifiee": "https://www.senat.fr/rap/l25-139-313/l25-139-31310.html"
+  },
+  {
+   "fait": "Selon le ministère de l'Éducation nationale (2026), **351 224 élèves** scolarisés en école ou établissement ordinaire bénéficient d'une notification MDPH ouvrant droit à un accompagnement humain, et **6 élèves sur 10** en situation de handicap sont effectivement accompagnés par un AESH",
+   "chiffre": "351 224 ; 10",
+   "source": "assemblee-nationale.fr",
+   "annee": "",
+   "url": "https://questions.assemblee-nationale.fr/q17/17-10759QE.htm",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 351 224, 10",
+   "url_verifiee": "https://questions.assemblee-nationale.fr/q17/17-10759QE.htm"
+  },
+  {
+   "fait": "D'après une question parlementaire enregistrée au Sénat (2026), le délai moyen national de traitement des dossiers par les MDPH s'établissait à **4,7 mois** au deuxième trimestre 2024 selon la CNSA, dépassant le délai légal réglementaire de 4 mois",
+   "chiffre": "4,7",
+   "source": "senat.fr",
+   "annee": "",
+   "url": "https://www.senat.fr/questions/base/2026/qSEQ260609002.html",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 4,7",
+   "url_verifiee": "https://www.senat.fr/questions/base/2026/qSEQ260609002.html"
+  },
+  {
+   "fait": "D'après les données de la CNSA citées au Sénat (2026), les délais réels d'instruction des dossiers par les MDPH présentent de fortes disparités territoriales, variant de **2 à 11 mois** selon les départements",
+   "chiffre": "11",
+   "source": "senat.fr",
+   "annee": "",
+   "url": "https://www.senat.fr/questions/base/2026/qSEQ260609002.html",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 11",
+   "url_verifiee": "https://www.senat.fr/questions/base/2026/qSEQ260609002.html"
+  },
+  {
+   "fait": "Selon l'Assemblée nationale (2026), le délai moyen national d'instruction d'un dossier en MDPH atteint **4,4 mois**, masquant des délais allant de **6 à 18 mois** dans certains départements comme les Hauts-de-Seine",
+   "chiffre": "4,4 ; 18",
+   "source": "assemblee-nationale.fr",
+   "annee": "",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE18569",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 4,4, 18",
+   "url_verifiee": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE18569"
+  },
+  {
+   "fait": "Selon le ministère de l'Éducation nationale (2023), le nombre d'élèves en situation de handicap scolarisés en milieu ordinaire bénéficiant d'un AESH a augmenté de **51,3 %** entre 2017 et 2021",
+   "chiffre": "51,3 %",
+   "source": "education.gouv.fr",
+   "annee": "",
+   "url": "https://www.education.gouv.fr/sites/default/files/document/annexes-du-rapport-acte-ii-de-l-cole-inclusive-405618.pdf",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 51,3 %",
+   "url_verifiee": "https://www.education.gouv.fr/sites/default/files/document/annexes-du-rapport-acte-ii-de-l-cole-inclusive-405618.pdf"
+  },
+  {
+   "fait": "D'après la Cour des comptes (2024), **58,6 %** des élèves en situation de handicap scolarisés en milieu ordinaire dans le département du Rhône à la rentrée 2021 bénéficiaient d'une aide humaine, dont **64,4 %** sous la forme d'un accompagnement mutualisé",
+   "chiffre": "58,6 % ; 64,4 %",
+   "source": "ccomptes.fr",
+   "annee": "",
+   "url": "https://www.ccomptes.fr/fr/documents/71533",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 58,6 %, 64,4 %",
+   "url_verifiee": "https://www.ccomptes.fr/fr/documents/71533"
+  },
+  {
+   "fait": "D'après les travaux parlementaires de l'Assemblée nationale (2025), le livret de parcours inclusif (LPI) — application numérique d'interface entre l'École, la famille et la MDPH — a enregistré une augmentation de **69 %** de ses ouvertures de dossiers au cours de l'année scolaire 2023-2024",
+   "chiffre": "69 %",
+   "source": "assemblee-nationale.fr",
+   "annee": "",
+   "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2024-2025/premiere-seance-du-lundi-05-mai-2025",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 69 %",
+   "url_verifiee": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2024-2025/premiere-seance-du-lundi-05-mai-2025"
+  },
+  {
+   "fait": "Selon le ministère de l'Éducation nationale (Projet annuel de performances, 2025), **479 pôles d'appui à la scolarité (PAS)** sont devenus opérationnels à la rentrée 2025 pour apporter des réponses pédagogiques et des aménagements de premier niveau aux familles directement depuis l'établissement et sans attendre la MDPH",
+   "chiffre": "479",
+   "source": "assemblee-nationale.fr",
+   "annee": "",
+   "url": "https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1128234/file/PAP%202027%20-%20Enseignement%20scolaire.pdf",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 479",
+   "url_verifiee": "https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1128234/file/PAP%202027%20-%20Enseignement%20scolaire.pdf"
+  },
+  {
+   "fait": "Selon le ministère de l'Éducation nationale (2024), **7 000 ordinateurs** ont été livrés directement aux départements au printemps 2024 afin d'accélérer l'attribution de matériel pédagogique adapté sans subir la longueur habituelle des circuits administratifs",
+   "chiffre": "7 000",
+   "source": "education.gouv.fr",
+   "annee": "",
+   "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHESocNJ4Frbe05oiomKcb2-qNQTsdb1gojtKgAasD-GGGWxH2z2wgxU2dBltNLWuvztaJQSALi6Wy_Mx-L_oX1joBUAPxEtg3Q5zfuN0kg1y3LTKweX0OLr5DHQdQGtUPI2XWyFYewT8hff9BV1VilJ-dozaQDfvnusaRnKLr0NixpvwwCAPaEu3ufHNB2kVOuLk-chg==",
+   "statut": "à vérifier",
+   "detail": "source inaccessible (HTTPError 403)"
+  },
+  {
+   "fait": "Selon l'Assemblée nationale (2021), **43 500 entretiens** directs entre familles, équipes pédagogiques et AESH ont été déployés dès la rentrée 2020 pour adapter et décider des premiers aménagements d'élèves notifiés dès l'arrivée en établissement",
+   "chiffre": "43 500",
+   "source": "assemblee-nationale.fr",
+   "annee": "",
+   "url": "https://www.assemblee-nationale.fr/dyn/15/rapports/cion-cedu/l15b4597-tii_rapport-avis",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 43 500",
+   "url_verifiee": "https://www.assemblee-nationale.fr/dyn/15/rapports/cion-cedu/l15b4597-tii_rapport-avis.pdf"
+  },
+  {
+   "fait": "Selon le Sénat (2025), près de **100 000 élèves** en situation de handicap étaient scolarisés en lycées professionnels, représentant **4,9 %** des effectifs globaux de la voie professionnelle en 2021 (contre **3 %** en 2017), mettant en relief les ruptures de suivi lors des transitions scolaires en l'absence de livret numérique portatif",
+   "chiffre": "100 000 ; 4,9 % ; 3 %",
+   "source": "senat.fr",
+   "annee": "",
+   "url": "https://www.senat.fr/amendements/2024-2025/726/jeu_complet.html",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 100 000, 4,9 %, 3 %",
+   "url_verifiee": "https://www.senat.fr/amendements/2024-2025/726/jeu_complet.html"
+  },
+  {
+   "fait": "Selon la Cour des comptes (2024), **501 724 élèves en situation de handicap** étaient comptabilisés au total en 2022 en France, dont **436 085** en milieu ordinaire (+180 % par rapport à 2006) et le reste au sein des établissements médico-sociaux",
+   "chiffre": "501 724 ; 436 085 ; 180 %",
+   "source": "ccomptes.fr",
+   "annee": "",
+   "url": "https://www.ccomptes.fr/sites/default/files/2024-09/20240916-Inclusion-scolaire-des-enfants-en-situation-de-handicap.pdf",
+   "statut": "vérifié",
+   "detail": "tous les chiffres trouvés dans la source : 501 724, 436 085, 180 %",
+   "url_verifiee": "https://www.ccomptes.fr/sites/default/files/2024-09/20240916-Inclusion-scolaire-des-enfants-en-situation-de-handicap.pdf"
+  }
+ ],
+ "recherche_google": {
+  "requetes": [
+   "site:assemblee-nationale.fr \"LPI\" livret de parcours inclusif MDPH PAP",
+   "site:education.gouv.fr nombre eleves situation handicap PAP PPRE PPS depp 2022 2023 2024",
+   "site:senat.fr OR site:assemblee-nationale.fr OR site:ccomptes.fr delai mdph AESH eleves handicap chiffres",
+   "site:ccomptes.fr ecole inclusive delai traitement mdph",
+   "site:ccomptes.fr \"PAP\" \"PPS\" \"MDPH\" inclusion scolaire 2024",
+   "site:strategie.gouv.fr OR site:senat.fr dossier numerique eleve handicap livret parcours inclusif"
+  ],
+  "pages": [
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjBSks3s_6_JGQS8vOMkyMbraRanX7N0GY70GHK6dKNUFr7YYna7LHFm5PRVKj6LEdLNrzZWEP66SdFpX1JlFmxV5XyTDr5JpE4PhJU340YwSSJp1im7ZQ7X3bl9wst5-pz5p7_0M2qSVQmVWuL0jmmw==",
+    "title": "assemblee-nationale.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbqnQOxoQae5whtwwz_CwaMhAqmAvFGA6eIh2aBH0GNXSAEkksp9pyT1NhQ9eijOayz5d5fk-DtrBHbFfaXUENho783pQmhYjv5jR-tz33pamIF5FK1J-wDS_LaVgJvRbKh2sudzhEVLU4uss2oS7m5RGpxvA6uZqYgzb11zey0fApH286MM-lFBc7SWHwJuMvHDib-BY=",
+    "title": "assemblee-nationale.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGy-UltAmsooQZLQplqbXDjaLVw8v_LwgqK6gkzV4FIRPPaWIyo6p2CPzEgKWGRVNEZUcsCuhvTsR1jKZESPcbDZavk0SkunVmUHmr-wzf3fF4Nzfy-892mKCXGpNA52v8=",
+    "title": "ccomptes.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVALZcM1a6wlEDUKS8chu-06HaFcRFonqZPd0ft-jRPQLTFBzHEXkV0pojrJ3tFDDb7uynENiIhBQP7xol9Zi-OZGl0jkurrqHA2Zaf_XogUoA0maizrigYIzIrzqH-4Un2fBWZcLJwTDV-_Hq",
+    "title": "senat.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkuvYj81HPdmEQvnVYL6DQwdGHzPLAUoHDCUYeQuU4omRqDpvhs5K73CCLCQU17M1lsuCzZD4ys7_co0_WjGiAgNQDrWBTRTddc05XbefOPHyNFAdc0UwmN_8hkrFPBZxnse0grws_qNFrn-gz4h5FeA==",
+    "title": "senat.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyqHDp3hoWMavk3d5uWSBHn1BR2qgSvonX_wg0K6Wk_-BezdI-VZf_DSpeVOTS8RfWTLtq0x8c3JHviK8-lyAdI7ECUQD9nCtnJfVEXW0S0d59MmeJKHwR2B_MjKYKm966hIbKY18N7wuuTEQcJ4VPUK3k76BKLT14",
+    "title": "assemblee-nationale.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5vLDvSGFPuM1ril3ZoYGCsJPGxKT88HFPGnjYiH8F4MmQGgNI2OAbdd7WKlva4fMZeipdUaoxug3Z0PgoapptydTqrhBvO0mBYFoIRvhFmCbdJRcXess-h0ibXmMgOoQ29ffKWUt1TwKmiSJSpxcXnASQY-oYleV5Wn62rGM4ZR2F5ryi5y5EerTEvV6RzpAHXsaDCs6Evq3P0UnJyDuwp9kJECvSpYLIqQ==",
+    "title": "education.gouv.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbf1Fh8b2uWMklr_Cb13BImWw4C8CDGFdECzBM5DVGylXoJK_C718srsR-0iWY1-5S_2wwlXpLrrD-zVWShemMjJHp5DrQ7EI5ShzMntJJDKlRo9Vm_Jk3aEi1h7mj9uc=",
+    "title": "ccomptes.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExPH7_8QZUMYCTjCHWdOxRn3b3PJ8U7i7XJAh7u_5DsxAwGS7UQHQv0oDMw_RWt3o5ob8sYLplR_VnLH8Ws6vwlHhgU8dV3grUqWlCrcFPozMsTWQMlxfncmMl2iIJt0jCd0BHeCjcYNC1OFLwsOERQzBxBCAK5dgUeF32CfCCa1xBceEjS7J_K8ynOV5w37_mPskYKCYOstbBh6caFePmBPfj7WwamdPyW6KGLGidCx8Uz7YF4-n392s=",
+    "title": "assemblee-nationale.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM2E8gnB0VtkIaqhdpIqt1-p4U5jrpHhPNDAJHnmhDIh54HZVr0rbR7jhbJCD4BMaP3dn8ySBIfCDVhzjGy_s5BZo7uGyIrAbVSk1WfzLrybiKZmQjH1AwZEqcyAChNosIUMLewo4O98y4Q9iWQWxlWfw9v_RhptcwtebLjWbXtmJ1KcUedofwOfMaMetDsfR0a4xgaXMYfEA0BhAbOXg7Fnx62XgLUvldOVfq",
+    "title": "assemblee-nationale.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHESocNJ4Frbe05oiomKcb2-qNQTsdb1gojtKgAasD-GGGWxH2z2wgxU2dBltNLWuvztaJQSALi6Wy_Mx-L_oX1joBUAPxEtg3Q5zfuN0kg1y3LTKweX0OLr5DHQdQGtUPI2XWyFYewT8hff9BV1VilJ-dozaQDfvnusaRnKLr0NixpvwwCAPaEu3ufHNB2kVOuLk-chg==",
+    "title": "education.gouv.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBsioYINbxC0HdWi-l1hFhZm4rN-zFBkaE4Y3FDc4wfIRke0jCjd6T9rrOmFCdpaShXoDT25w52gieNxu6Lsn_slt0fMysDdfoOlbSGcmussa3d2ddM-KHHhhmXoZf9kqR50r3x_u2UF21Wex-nJ6LMsIHw4VFq7lBEj9zaRVEa1NJ06VdeEH5d_343g==",
+    "title": "assemblee-nationale.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoIbPY-dbAS6jRb26Qq2tocSAlCkpFAw_16ilhMxdjWCZCzenLiUUHOc-kHZkGrLbNqA-aGMO3vzulmRz9_Xuy_vxWaomu6-OMZxT0wTLYdHtibxxMQRYKrUzuB5_lIiOmZoZQvolgPWzDRjYdiDu6S8-wiKs=",
+    "title": "senat.fr"
+   },
+   {
+    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmpN93YSj9xy-KiANaFO0r4myviXRNvJvpQss3lHkvSqDDCVN-j76m0pqFBMW6rBvsjdppTMPB36SgbakMTnGU9kxiMYMGd5h1RSMwODcxDoxQpTELt-jIyyAbs0RA0xikdgq8AMs4eEqPLhj9Isu7wfviXyFHRrTZwEd08iHaCnztuf1IGiel1kSICIJOZYhHVHNLA_uU-UV-iUde0IJdsgbPGagn9AVx0sOUYBk=",
+    "title": "ccomptes.fr"
+   }
+  ]
+ }
+}

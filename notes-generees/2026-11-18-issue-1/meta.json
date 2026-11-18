@@ -1,0 +1,20 @@
+{
+ "titre": "Instaurer un dossier numérique unique et autoriser les aménagements scolaires sans attendre la MDPH",
+ "sujet": "Simplifier le parcours des familles d'élèves en situation de handicap : MDPH, PAP et dossier numérique unique",
+ "date": "2026-11-18",
+ "dossier": "notes-generees/2026-11-18-issue-1",
+ "faits": 16,
+ "verifies": 14,
+ "chiffres_non_rattaches": [],
+ "cout_usd": 0.032,
+ "appels": [
+  [
+   "gemini-3.8-flash",
+   0.0053
+  ],
+  [
+   "gemini-4-carbon",
+   0.0266
+  ]
+ ]
+}
