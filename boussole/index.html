@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boussole des formations</title>
+<meta name="description" content="De la 3e au premier métier, étape par étape, avec les vrais chiffres : orientation, bac, formations, réussite, emploi et IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: one column, five numbered steps in the order a pupil lives them; each step shows the national numbers first, then one choice that narrows the next step. */
+:root {
+  --bg: #f3f5fa; --card: #ffffff; --ink: #171f36; --ink-2: #49536f; --ink-3: #78819c; --rule: #dce1ec;
+  --accent: #2f46c9; --accent-ink: #ffffff; --accent-soft: #e7eafb; --tile: #f6f7fc;
+  --a: #13804a; --b: #4f9a2f; --c: #b98a00; --d: #d0662a; --e: #c23b3b;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11152a; --card: #1a2038; --ink: #edf0fa; --ink-2: #bcc3dc; --ink-3: #8c95b3; --rule: #2c3454;
+  --accent: #8c9bff; --accent-ink: #11152a; --accent-soft: #252d52; --tile: #141a30;
+  --a: #3fbf7f; --b: #86c25c; --c: #e0b23a; --d: #ec8a52; --e: #ee6d6d; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #11152a; --card: #1a2038; --ink: #edf0fa; --ink-2: #bcc3dc; --ink-3: #8c95b3; --rule: #2c3454;
+  --accent: #8c9bff; --accent-ink: #11152a; --accent-soft: #252d52; --tile: #141a30;
+  --a: #3fbf7f; --b: #86c25c; --c: #e0b23a; --d: #ec8a52; --e: #ee6d6d; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.5; padding: 24px 16px 64px; }
+.wrap { max-width: 840px; margin: 0 auto; display: grid; gap: 26px; }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.05; font-weight: 800; }
+h2 { font-size: 22px; font-weight: 800; }
+h3 { font-size: 17px; font-weight: 600; }
+p { margin: 0; }
+.tag { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.lead { font-size: 19px; color: var(--ink-2); max-width: 62ch; }
+.small { font-size: 14px; color: var(--ink-3); }
+.src { font-size: 13px; color: var(--ink-3); }
+header { display: grid; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; min-width: 0; display: grid; gap: 12px; }
+button, input, select { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+a { color: var(--accent); }
+
+/* Steps */
+.steps { display: flex; flex-wrap: wrap; gap: 6px; }
+.steps a { text-decoration: none; font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--rule); background: var(--card); color: var(--ink-2); }
+.step-h { display: flex; align-items: baseline; gap: 12px; }
+.step-n { font-family: var(--display); font-weight: 800; font-size: 30px; color: var(--accent); line-height: 1; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid var(--rule); background: var(--card); border-radius: 999px; padding: 8px 14px; font-size: 15px; cursor: pointer; text-align: left; }
+.chip b { font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip.big { font-size: 17px; padding: 10px 18px; font-weight: 700; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+.tile { background: var(--tile); border-radius: 10px; padding: 10px 12px; display: grid; gap: 2px; align-content: start; }
+.tile .num { font-family: var(--display); font-weight: 800; font-size: 22px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tile .lab { font-size: 13px; color: var(--ink-3); }
+.tile.ia .num { color: var(--band); }
+.bars { display: grid; gap: 8px; }
+.barrow { display: grid; gap: 3px; }
+.barrow .lab { display: flex; justify-content: space-between; gap: 10px; font-size: 15px; }
+.barrow b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { height: 12px; background: var(--rule); border-radius: 6px; overflow: hidden; }
+.track i { display: block; height: 100%; border-radius: 6px; background: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .track i { transition: width .4s ease; } }
+.choice { border-top: 1px dashed var(--rule); padding-top: 12px; display: grid; gap: 10px; }
+.choice h3 { color: var(--accent); }
+.panel { display: grid; gap: 10px; margin-top: 8px; }
+table.t { border-collapse: collapse; width: 100%; font-size: 15px; }
+table.t th, table.t td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.t td.n, table.t th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.twrap { overflow-x: auto; }
+
+/* Family cards */
+.tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.tools input, .tools select { flex: 1 1 240px; min-width: 0; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--rule); background: var(--card); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 12px; height: 12px; border-radius: 4px; display: inline-block; }
+.list { display: grid; gap: 12px; }
+.fam { display: grid; gap: 12px; text-align: left; width: 100%; background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 16px; cursor: pointer; }
+.fam:hover, .fam[aria-expanded="true"] { border-color: var(--accent); }
+.fam-head { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 12px; align-items: start; }
+.letter { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; color: #fff; font-family: var(--display); font-weight: 800; font-size: 23px; }
+.fam .name { font-weight: 700; font-size: 19px; }
+.fam .word { font-size: 15px; color: var(--ink-2); }
+.fam .tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 640px) { .fam .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fam .tile .num { font-size: 19px; }
+.detail { display: grid; gap: 12px; border-top: 1px solid var(--rule); padding-top: 12px; cursor: auto; }
+.detail p { color: var(--ink-2); }
+.offers { display: grid; gap: 8px; }
+.offer { display: grid; gap: 2px; padding: 10px 12px; border-radius: 10px; background: var(--tile); }
+.offer a { font-weight: 700; text-decoration: none; }
+.offer a:hover { text-decoration: underline; }
+.offer .meta { font-size: 14px; color: var(--ink-3); }
+.offers-tools input { width: 100%; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); }
+.words { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+@media (max-width: 560px) { .words { grid-template-columns: minmax(0, 1fr); } }
+.words div { font-size: 15px; color: var(--ink-2); }
+.words b { color: var(--ink); }
+details { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 14px 18px; }
+details summary { cursor: pointer; font-family: var(--display); font-weight: 600; font-size: 18px; }
+details[open] summary { margin-bottom: 10px; }
+details p, details li { color: var(--ink-2); font-size: 15px; }
+details ul { padding-left: 20px; margin: 6px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="tag">boussole-prototype · Préparer l'avenir · novembre 2026</div>
+    <h1>De la 3e au premier métier : les chiffres à chaque étape</h1>
+    <p class="lead">À chaque étape, tu vois ce que font vraiment les élèves, combien réussissent, ce qu'ils gagnent après, et ce qu'une intelligence artificielle sait déjà faire de leur travail. Choisis ta voie, puis ton bac : la suite s'adapte.</p>
+    <p class="small">Chiffres du ministère de l'Éducation nationale, du ministère de l'Enseignement supérieur et d'études publiées. Ils donnent une tendance, pas une certitude. Ce que tu aimes compte autant : parles-en avec ton professeur principal.</p>
+    <div class="choice" id="profil-box">
+      <h3>Où en es-tu ?</h3>
+      <div class="chips" id="profil">
+        <button class="chip big" type="button" data-p="college" aria-pressed="false">Au collège (4e, 3e)</button>
+        <button class="chip big" type="button" data-p="lycee" aria-pressed="false">Au lycée</button>
+        <button class="chip big" type="button" data-p="sup" aria-pressed="false">En licence, BUT ou BTS : continuer ou travailler ?</button>
+        <button class="chip big" type="button" data-p="tout" aria-pressed="false">Parent, professeur : tout voir</button>
+      </div>
+      <p class="small" id="profil-msg"></p>
+    </div>
+    <nav class="steps" aria-label="Étapes">
+      <a href="#e1">1 · Fin de 3e</a><a href="#e2">2 · Le bac</a><a href="#e3">3 · Après le bac</a><a href="#e4">4 · Réussir</a><a href="#e45">5 · Master ou emploi</a><a href="#e5">6 · Le travail et l'IA</a>
+    </nav>
+  </header>
+
+  <section class="card" id="e1" aria-labelledby="h1-">
+    <div class="step-h"><span class="step-n">1</span><h2 id="h1-">En fin de 3e, où vont les élèves ?</h2></div>
+    <div class="bars">
+      <div class="barrow"><div class="lab"><span>Seconde générale et technologique (lycée)</span><b>61,4 %</b></div><div class="track"><i style="width:61.4%"></i></div></div>
+      <div class="barrow"><div class="lab"><span>Seconde professionnelle (bac pro, en 3 ans)</span><b>19,1 %</b></div><div class="track"><i style="width:19.1%"></i></div></div>
+      <div class="barrow"><div class="lab"><span>Première année de CAP (en 2 ans)</span><b>5,8 %</b></div><div class="track"><i style="width:5.8%"></i></div></div>
+      <div class="barrow"><div class="lab"><span>Autres : redoublement, apprentissage, autres formations</span><b>13,7 %</b></div><div class="track"><i style="width:13.7%;background:var(--ink-3)"></i></div></div>
+    </div>
+    <p class="small">Élèves de 3e à la rentrée 2025 (DEPP, note d'information 25.59). Quand on demande la seconde générale et technologique en premier vœu, on l'obtient dans 87 % des cas ; pour la voie professionnelle, 58 % (DGESCO, Repères 2025). Un élève sur quinze (6,8 %) choisit l'apprentissage dès la 3e.</p>
+    <div class="choice">
+      <h3>Choisis ta voie</h3>
+      <div class="chips" id="voie">
+        <button class="chip big" type="button" data-v="gt" aria-pressed="false">Lycée général et technologique</button>
+        <button class="chip big" type="button" data-v="pro" aria-pressed="false">Lycée professionnel : bac pro ou CAP</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="e2" aria-labelledby="h2-">
+    <div class="step-h"><span class="step-n">2</span><h2 id="h2-">Quel bac ?</h2></div>
+    <div class="tiles">
+      <div class="tile"><div class="num">80 %</div><div class="lab">d'une génération obtient le bac (2025)</div></div>
+      <div class="tile"><div class="num">43 · 16 · 21</div><div class="lab">% d'une génération : bac général · technologique · professionnel</div></div>
+      <div class="tile"><div class="num">96 · 90 · 84</div><div class="lab">% de réussite à l'examen en 2026 : général · techno · pro</div></div>
+    </div>
+    <p class="small">DEPP, résultats définitifs 2025 (note 26.05) et provisoires de juin 2026 (note 26.33).</p>
+    <div class="choice" id="bac-choice">
+      <h3 id="bac-title">Choisis ton bac</h3>
+      <div class="chips" id="bac"></div>
+      <div id="bac-detail"></div>
+    </div>
+  </section>
+
+  <section class="card" id="e3" aria-labelledby="h3-">
+    <div class="step-h"><span class="step-n">3</span><h2 id="h3-">Après le bac : quelle formation ?</h2></div>
+    <p id="e3-intro" class="small"></p>
+    <div class="tools">
+      <label for="q" hidden>Chercher</label>
+      <input id="q" type="search" placeholder="Chercher : infirmier, droit, informatique, cuisine…">
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="list" id="list"></div>
+    <p class="small" id="count"></p>
+  </section>
+
+  <section class="card" id="e4" aria-labelledby="h4-">
+    <div class="step-h"><span class="step-n">4</span><h2 id="h4-">Réussir la première année, puis le diplôme</h2></div>
+    <p>C'est l'étape que les élèves oublient le plus souvent. En licence (à l'université), la moitié seulement des nouveaux bacheliers passe en deuxième année du premier coup, et quatre sur dix ont le diplôme en trois ou quatre ans. Tout dépend du bac et de la mention.</p>
+    <div class="twrap"><table class="t">
+      <tr><th>Formation</th><th class="n">Passent en 2e année</th><th class="n">Ont le diplôme</th><th class="n">Bac général</th><th class="n">Bac techno</th><th class="n">Bac pro</th></tr>
+      <tr><td>Licence (université, 3 ans)</td><td class="n">49 %</td><td class="n">40 % en 3 ou 4 ans</td><td class="n">46 %</td><td class="n">14 %</td><td class="n">6,5 %</td></tr>
+      <tr><td>BTS (2 ans)</td><td class="n">—</td><td class="n">75 % à l'examen</td><td class="n">84 %</td><td class="n">76 %</td><td class="n">65 %</td></tr>
+      <tr><td>BUT (3 ans)</td><td class="n">—</td><td class="n">55 % en 3 ans</td><td class="n" colspan="3"></td></tr>
+      <tr><td>Prépa scientifique (2 ans)</td><td class="n">—</td><td class="n">70 % en école d'ingénieurs 4 ans après l'entrée</td><td class="n" colspan="3"></td></tr>
+      <tr><td>Médecine (PASS et LAS)</td><td class="n">37 % sans perdre d'année</td><td class="n">—</td><td class="n" colspan="3"></td></tr>
+    </table></div>
+    <p class="small">Licence : bacheliers 2023 inscrits en L1 (passage) et bacheliers 2020 (diplôme), SIES, Note Flash 2025-29 ; avec une mention très bien, 70 % ont la licence en 3 ou 4 ans, avec une mention passable, 22 %. BTS : session 2024, RERS 2025 (8.10). BUT : bacheliers 2021, SIES. Prépa : SIES, novembre 2025. Médecine : réforme 2020, SIES. Les cartes de l'étape 3 donnent ces chiffres famille par famille, et selon tes spécialités.</p>
+  </section>
+
+  <section class="card" id="e45" aria-labelledby="h45-">
+    <div class="step-h"><span class="step-n">5</span><h2 id="h45-">Après la licence : continuer en master ou travailler ?</h2></div>
+    <p>Aujourd'hui, presque tous les diplômés de licence générale continuent leurs études, et ceux qui s'arrêtent trouvent moins souvent un emploi qu'après un master. Mais une licence professionnelle ou un master en alternance font aussi bien, ou mieux, que la moyenne des masters.</p>
+    <div class="tiles" id="mtiles"></div>
+    <p class="small" id="mtiles-src"></p>
+    <h3>Ta licence : t'arrêter ou continuer ?</h3>
+    <div class="tools"><label for="lsel" hidden>Ta licence</label><select id="lsel"><option value="">Choisis ta licence…</option></select></div>
+    <div id="lres"></div>
+    <h3>Chaque master, ses débouchés</h3>
+    <p>Un master n'est pas une garantie : deux ans et demi après le diplôme, un master sur dix a moins de 49 % de diplômés en emploi salarié en France, et un sur dix plus de 86 % (médiane : 71 %). Avant de choisir, regarde le master précis, pas la moyenne.</p>
+    <div class="tools"><label for="mq" hidden>Master ou université</label><input id="mq" type="search" placeholder="Chercher un master ou une université : droit des affaires, Lyon, informatique…" style="flex:1;min-width:240px"></div>
+    <div class="twrap" id="mres"></div>
+    <p class="small" id="mnote"></p>
+    <h3>Chercher un premier emploi ou une alternance</h3>
+    <p class="small">Offres pour les jeunes, dont les emplois accessibles avec une licence : <a href="https://www.1jeune1solution.gouv.fr/">1jeune1solution</a> (État) ; masters et licences en alternance, payés et souvent suivis d'une embauche : <a href="https://labonnealternance.apprentissage.beta.gouv.fr/">La bonne alternance</a> ; offres de cadres débutants : <a href="https://www.apec.fr/">Apec</a> ; toutes les offres : <a href="https://candidat.francetravail.fr/offres/recherche">France Travail</a>.</p>
+  </section>
+
+  <section class="card" id="e5" aria-labelledby="h5-">
+    <div class="step-h"><span class="step-n">6</span><h2 id="h5-">Trouver un travail, et ce que l'IA change</h2></div>
+    <div class="tiles">
+      <div class="tile"><div class="num">27 · 43 · 59</div><div class="lab">% en emploi 6 mois après la sortie : CAP · bac pro · BTS (sortants 2023)</div></div>
+      <div class="tile"><div class="num">76 %</div><div class="lab">des diplômés de licence professionnelle en emploi à 6 mois</div></div>
+      <div class="tile"><div class="num">60 %</div><div class="lab">des diplômés de master en emploi à 6 mois (83 % des licences pro à 12 mois)</div></div>
+      <div class="tile"><div class="num">21,6 %</div><div class="lab">de chômage des 15-24 ans en France mi-2026, contre 7,5 % des 25-49 ans</div></div>
+    </div>
+    <p class="small">DEPP, InserJeunes (RERS 2025, 8.19) ; MESR, InserSup (RERS 2025) ; Insee, 2e trimestre 2026.</p>
+    <h3>Ce que l'IA change déjà</h3>
+    <p>Depuis l'arrivée de ChatGPT fin 2022, les entreprises embauchent moins de jeunes de 21 à 29 ans en CDI dans les métiers où l'IA sait faire beaucoup de choses.</p>
+    <div class="bars" id="bars"></div>
+    <p class="small">Variation des embauches en CDI des 21-29 ans, novembre 2022 à mars 2026 (Palladino, Bergeaud, Bertheau, Bunel et Degos, HEC Paris et Banque de France, 2026). Sur chaque carte, « l'IA peut faire x tâches sur 10 » mesure la part des tâches des premiers métiers qu'une IA sait faire presque seule aujourd'hui (Hosseini et Lichtinger, Harvard, 2026). Ce n'est pas une prévision : en France, les formations les plus exposées (comptabilité, informatique) insèrent encore très bien.</p>
+    <h3>Ce qui protège</h3>
+    <p class="small">Des maths et du contact humain à la fois (Deming, 2017) ; un métier fait de plusieurs tâches, de décisions et de responsabilités plutôt que d'une tâche isolée (Garicano, 2026) ; une formation large, qui apprend à apprendre (Deming, 2025).</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-words">
+    <h2 id="h-words">Les mots à connaître</h2>
+    <div class="words">
+      <div><b>Le bac</b> : l'examen de fin de lycée, à 18 ans. Général (spécialités au choix), technologique (séries : STMG, STI2D, ST2S…) ou professionnel (un métier).</div>
+      <div><b>Les spécialités</b> : en bac général, on choisit 3 matières en première et on en garde 2 en terminale. Ce choix pèse sur les formations qui t'acceptent après.</div>
+      <div><b>BTS et BUT</b> : 2 ou 3 ans après le bac, dans un lycée ou un IUT, pour apprendre un métier précis.</div>
+      <div><b>La licence</b> : 3 ans à l'université. <b>Le master</b> : 2 ans de plus, donc 5 ans en tout.</div>
+      <div><b>La prépa</b> : 2 ans très intenses après le bac pour entrer dans une grande école (ingénieur, commerce, lettres).</div>
+      <div><b>Affelnet</b> : le logiciel qui t'affecte au lycée en fin de 3e. <b>Parcoursup</b> : le site où, en terminale, on demande ses formations.</div>
+      <div><b>« Trouvent un travail »</b> : la part des diplômés en emploi salarié en France 30 mois après le diplôme (InserSup 2026), ou 6 mois après pour les bacs pros (InserJeunes).</div>
+      <div><b>« L'IA peut faire »</b> : la part des tâches des premiers métiers qu'une IA sait faire presque seule aujourd'hui (Harvard, 2026).</div>
+    </div>
+  </section>
+
+  <details>
+    <summary>Comment la boussole est calculée</summary>
+    <p>Chaque famille de formations est reliée aux premiers métiers de ses diplômés. La note de A à E vient pour moitié de la part des tâches que l'IA peut déjà faire presque seule (Hosseini et Lichtinger, Harvard, 2026 : 19 000 tâches de 920 métiers, capacités de l'IA de décembre 2025, métiers américains équivalents aux métiers français), pour un quart du type de métier (tâches une par une, tâches liées, relations et responsabilités : Garicano, 2026) et pour un quart du produit maths × contact humain (Deming, 2017), ces deux derniers codés à la main.</p>
+    <ul>
+      <li><strong>Qui y entre</strong> : Parcoursup 2025, propositions acceptées par paire de spécialités du bac général (MESR, jeu « enseignements de spécialité des bacheliers généraux »).</li>
+      <li><strong>Réussite</strong> : SIES, Note Flash 2025-29 (passage en 2e année des bacheliers 2023, licence en 3 ou 4 ans des bacheliers 2020, par grand domaine et par paire de spécialités) et cohortes nationales par type de licence et de BUT ; pour les BTS, DEPP (voir étape 4). Les chiffres par paire décrivent qui réussit, pas l'effet d'une spécialité à elle seule.</li>
+      <li><strong>Travail</strong> : InserSup 2026 (emploi salarié et salaire net médian 30 mois après le diplôme, au niveau indiqué) ; InserJeunes (bacs pros, emploi à 6 et 12 mois, moyenne des lycées 2021-2024) ; Métiers 2030 (France Stratégie et Dares, croissance de l'emploi des métiers de la famille).</li>
+      <li><strong>Concurrence chinoise</strong> (filières industrielles : industrie et mécanique, électricité et électronique en BTS et BUT, laboratoire, bacs pros maintenance industrielle, usinage et chaudronnerie, mode et textile, bois) : hausse des importations françaises depuis la Chine entre 2018 et 2024 dans les industries où travaillent ces diplômés, rapportée à l'emploi français de ces industries en 2017 (BACI, CEPII ; Urssaf ; Eurostat), comparée à la moyenne de l'industrie. Pour chaque lieu de formation, exposition de sa zone d'emploi selon la méthode d'Autor, Dorn et Hanson (2013), en rang parmi les 287 zones de métropole. C'est une mesure d'exposition, pas un effet prouvé sur l'emploi.</li>
+      <li><strong>Mise à jour</strong> : les chiffres par formation (Parcoursup, InserSup, InserJeunes) sont publiés une fois par an : Parcoursup après chaque campagne, InserSup deux fois par an mais avec des diplômés suivis pendant deux ans et demi, donc des chiffres qui décrivent les promotions d'il y a deux à trois ans. Ils ne peuvent pas être suivis en direct. Les indicateurs nationaux (chômage des jeunes, offres d'emploi qui demandent de l'IA) changent chaque trimestre.</li>
+      <li><strong>Formations</strong> : Parcoursup 2025, <span id="psup-count"></span> ; lycées professionnels 2023-2024.</li>
+    </ul>
+    <p>Limites : l'IA « peut faire » une tâche ne veut pas dire que le métier va disparaître. Au Danemark, on ne voit encore aucun effet sur les salaires. Le nombre d'années après le bac est indicatif.</p>
+    <p class="src">Sources : Hosseini et Lichtinger (2026), <a href="https://github.com/s-mahdihosseini/GenAI_Expertise">GenAI and Expertise</a> ; Palladino et al. (2026), <a href="https://heclift.github.io/website/files/papers/LIFT_WP_2026-02.pdf">LIFT WP 2026-02</a> ; Deming (2017), <a href="https://scholar.harvard.edu/sites/scholar.harvard.edu/files/ddeming/files/deming_socialskills_qje.pdf">The Growing Importance of Social Skills</a> ; Deming (2025), <a href="https://forklightning.substack.com/p/shorting-the-ai-jobs-apocalypse">Shorting the AI jobs apocalypse</a> ; Garicano, Li et Wu (2026), Messy Jobs ; DEPP, notes 25.59, 26.05, 26.06, 26.33 et <a href="https://www.education.gouv.fr/sites/default/files/2025-09/rers2025-chapitre-8-version-corrig-e-le-25-septembre-2025-441735.pdf">RERS 2025, chapitre 8</a> ; SIES, <a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf">Note Flash 2025-29</a> ; MESR, <a href="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-insersup">InserSup</a>, <a href="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup">Parcoursup 2025</a> et <a href="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup-enseignements-de-specialite-bacheliers-generaux-2">spécialités</a> ; DEPP, <a href="https://data.education.gouv.fr/explore/dataset/fr-en-inserjeunes-lycee_pro">InserJeunes</a>. <a href="https://ajoly35.github.io/tuteur-ia/boussole/v1/">Version précédente de la boussole</a>.</p>
+  </details>
+</div>
+
+<script src="data.js"></script>
+<script src="projections.js"></script>
+<script src="reussite.js"></script>
+<script src="masters.js"></script>
+<script src="chinashock.js"></script>
+<script>
+const D = window.BOUSSOLE;
+const RE = window.BOUSSOLE_REUSSITE || { adm: {}, succ: {}, spec_totals: {}, nat: {}, disc: {}, disc_fr: {}, meta: {} };
+const P = window.BOUSSOLE_PROJ || { fams: {} };
+// Second source of exposure for technical programmes: Chinese import competition 2018-2024 (scripts/build_chinashock.py)
+const CN = window.BOUSSOLE_CHINE || { fam: {}, ze: {}, com: {}, meta: {} };
+const cnNorm = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/sainte-/g, "ste ").replace(/saint-/g, "st ").replace(/[-']/g, " ").replace(/\s+/g, " ").trim();
+function cnLevel(r) { return r < 0 ? ["En recul", "--a"] : r < 0.8 ? ["Faible", "--b"] : r < 1.2 ? ["Moyenne", "--c"] : r < 2 ? ["Forte", "--d"] : ["Très forte", "--e"]; }
+function cnTile(f) {
+  const c = CN.fam[f.k]; if (!c) return "";
+  const [w, col] = cnLevel(c.r);
+  const comp = c.r < 0 ? "importations chinoises en baisse dans ces industries" : `${fr(Math.round(c.r * 10) / 10)} fois la moyenne de l'industrie`;
+  return `<div class="tile ia" style="--band:var(${col})"><div class="num">${w}</div><div class="lab">concurrence chinoise, 2018-2024 (${comp})</div></div>`;
+}
+function cnZone(o) {
+  const z = CN.ze[CN.com[cnNorm(o[3]) + "|" + cnNorm(o[2])]]; if (!z) return "";
+  const t = z[2] >= 80 ? "parmi les 20 % de zones les plus exposées" : z[2] <= 20 ? "parmi les 20 % les moins exposées" : `exposition moyenne (${z[2]}e sur 100)`;
+  return ` · zone d'emploi ${esc(z[0])} : concurrence chinoise ${t}, industrie ${z[3]} % des emplois`;
+}
+function cnDetail(f) {
+  const c = CN.fam[f.k]; if (!c) return "";
+  return `<h3>Deux expositions : l'IA et la concurrence chinoise</h3>
+    <p><b>L'IA</b> peut faire ${f.sur10} tâches sur 10 des premiers métiers de cette famille. <b>La concurrence chinoise</b> touche les usines où ces métiers s'exercent : de 2018 à 2024, les importations françaises depuis la Chine dans ces industries ont ${c.sh >= 0 ? "augmenté" : "baissé"} de ${fr(Math.abs(Math.round(c.sh * 10) / 10))} milliers de dollars par salarié français du secteur, contre +${fr(CN.meta.all_mfg)} en moyenne dans l'industrie. ${c.divs.map(([n, v]) => `${n} : ${v >= 0 ? "+" : ""}${fr(v)}`).join(" ; ")}.</p>
+    <p class="small">C'est le « second choc chinois » (voitures électriques, batteries, panneaux solaires, machines). Mesure de l'exposition seulement : son effet sur l'emploi en France n'est pas encore établi (travaux en cours). Pour chaque lycée ou formation ci-dessous, la zone d'emploi indique si l'industrie locale est elle-même exposée. Sources : BACI (CEPII), Urssaf, méthode d'Autor, Dorn et Hanson (2013).</p>`;
+}
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const BANDS = [["A", 65, "--a", "Très protégée"], ["B", 52, "--b", "Plutôt protégée"], ["C", 40, "--c", "À moitié exposée"], ["D", 28, "--d", "Exposée"], ["E", -1, "--e", "Très exposée"]];
+const TIER = { 1: "des tâches une par une", 2: "plusieurs tâches liées", 3: "des relations et des responsabilités" };
+const psupLink = (cod) => `https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=${cod}&typeBac=0&originePc=0`;
+const euro = (n) => n.toLocaleString("fr-FR") + " €";
+const fr = (n) => String(n).replace(".", ",");
+const doubLabel = (d) => d.replace("|", " + ");
+
+// Years after the bac, by family (indicative).
+const YEARS = { maths: "3 à 5", info: "3 à 5", info_court: "2 ou 3", actuariat: "5", inge: "5", physique: "3 à 5", eco: "3 à 5", commerce_pge: "5", bachelor: "3", compta: "2 ou 3", vente: "2 ou 3", banque: "2 ou 3", admin: "2 ou 3", droit: "5", iep: "5", socio_psy: "3 à 5", lettres: "3 à 5", langues: "3 à 5", journalisme: "3 à 5", arts: "3 à 5", cpes: "3 à 5", prepa_sci: "2 + 3", prepa_eco: "2 + 3", prepa_lit: "2 + 3", infirmier: "3", sante: "6 à 11", paramedical: "3 à 5", bio: "3 à 5", labo: "2 ou 3", social: "3", aide: "2 ou 3", meef: "5", staps: "3 à 5", elec: "2 ou 3", industrie: "2 ou 3", btp: "2 ou 3", agri: "2 ou 3", tourisme: "2 ou 3", logistique: "2 ou 3" };
+const BTS_BY_BAC = { gen: 84.0, techno: 75.8, pro: 64.8 };
+const LIC_BY_BAC = { gen: 46.1, techno: 14.0, pro: 6.5 };
+
+// Bac technologique séries: candidates and success, session de juin 2026 (DEPP 26.33); BTS success by série, session 2024 (RERS 2025, 8.10); usual families after.
+const SERIES = [
+  ["STMG", "Management et gestion", 80284, 89.0, 73.1, ["compta", "vente", "banque", "admin", "bachelor", "eco", "logistique", "tourisme"]],
+  ["STI2D", "Industrie et développement durable", 27600, 90.6, 82.2, ["info_court", "elec", "industrie", "btp", "inge", "labo"]],
+  ["ST2S", "Santé et social", 22702, 91.2, 73.5, ["aide", "infirmier", "paramedical", "social", "socio_psy"]],
+  ["STL", "Laboratoire", 6369, 90.0, 78.0, ["labo", "bio", "physique", "industrie"]],
+  ["STAV", "Agronomie et vivant", 4561, 97.5, 81.4, ["agri", "labo", "bio"]],
+  ["STD2A", "Design et arts appliqués", 4028, 97.8, 82.2, ["arts", "btp"]],
+  ["STHR", "Hôtellerie et restauration", 2230, 96.1, 89.8, ["tourisme", "vente"]],
+  ["S2TMD", "Musique, danse, théâtre", 557, 98.9, 81.4, ["arts"]],
+];
+
+D.fams.forEach((f, i) => {
+  f.i = i; f.bp = !!f.ij;
+  const e = 1 - Math.min(f.expo, 0.8) / 0.8, m = (f.tier - 1) / 2, d = (f.math * f.social - 1) / 24;
+  f.score = Math.round(100 * (0.5 * e + 0.25 * m + 0.25 * d));
+  f.band = BANDS.find((b) => f.score > b[1]);
+  f.sur10 = Math.max(0, Math.round(f.expo * 10));
+  const a = RE.adm[f.k];
+  if (a && a.d) {
+    f.admTop = Object.entries(a.d).map(([k, v]) => [k, v[2]]).filter((x) => x[1] > 0).sort((x, y) => y[1] - x[1]);
+    f.admTot = f.admTop.reduce((s, x) => s + x[1], 0);
+  }
+});
+
+// Pairs of spécialités of the bac général: share of Parcoursup 2025 bacheliers généraux (spec_totals)
+const specSum = Object.values(RE.spec_totals || {}).reduce((s, v) => s + v, 0) || 1;
+const DOUBS = Object.entries(RE.spec_totals || {}).sort((a, b) => b[1] - a[1]).slice(0, 14).map(([d, n]) => [d, n, Math.round(1000 * n / specSum) / 10]);
+
+const S = { voie: null, bac: null, doub: null, serie: null, open: null };
+
+const FR = [["Métiers où l'IA sait faire le plus (traducteurs, journalistes, banque…)", -28.3], ["Métiers où l'IA sait faire le moins (infirmiers, maternelle, bâtiment…)", -7.5], ["Jeunes développeurs informatiques", -42]];
+$("bars").innerHTML = FR.map(([l, v]) => `<div class="barrow"><div class="lab"><span>${l}</span><b>${fr(v)} %</b></div><div class="track"><i style="width:${Math.abs(v) / 45 * 100}%;background:var(${v < -20 ? "--e" : "--c"})"></i></div></div>`).join("");
+$("legend").innerHTML = BANDS.map((b) => `<span><i class="dot" style="background:var(${b[2]})"></i>${b[0]} : ${b[3]}</span>`).join("");
+$("psup-count").textContent = `${D.meta.psup_classees.toLocaleString("fr-FR")} formations sur ${D.meta.psup_total.toLocaleString("fr-FR")} rattachées à une famille`;
+
+// Step 1
+$("voie").querySelectorAll(".chip").forEach((b) => b.onclick = () => {
+  S.voie = S.voie === b.dataset.v ? null : b.dataset.v; S.bac = null; S.doub = null; S.serie = null;
+  $("voie").querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", x.dataset.v === S.voie));
+  renderBac(); renderList();
+  if (S.voie) $("e2").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+// Step 2
+function renderBac() {
+  const opts = S.voie === "pro" ? [["pro", "Bac professionnel (3 ans)"], ["cap", "CAP (2 ans)"]] : S.voie === "gt" ? [["gen", "Bac général"], ["techno", "Bac technologique"]] : [["gen", "Bac général"], ["techno", "Bac technologique"], ["pro", "Bac professionnel"], ["cap", "CAP"]];
+  $("bac").innerHTML = opts.map(([k, l]) => `<button class="chip big" type="button" data-b="${k}" aria-pressed="${S.bac === k}">${l}</button>`).join("");
+  $("bac").querySelectorAll(".chip").forEach((b) => b.onclick = () => {
+    S.bac = S.bac === b.dataset.b ? null : b.dataset.b; S.doub = null; S.serie = null;
+    renderBac(); renderList();
+  });
+  $("bac-detail").innerHTML = bacDetail();
+  const dd = $("doubs"); if (dd) dd.querySelectorAll(".chip").forEach((b) => b.onclick = () => { S.doub = S.doub === b.dataset.d ? null : b.dataset.d; renderBac(); renderList(); });
+  const ss = $("series"); if (ss) ss.querySelectorAll(".chip").forEach((b) => b.onclick = () => { S.serie = S.serie === b.dataset.s ? null : b.dataset.s; renderBac(); renderList(); });
+}
+function bacDetail() {
+  if (S.bac === "gen") {
+    return `<div class="panel">
+      <p><strong>Bac général : 2 spécialités en terminale.</strong> 96 % de réussite à l'examen en 2026. Les mathématiques sont la spécialité la plus gardée (45 % des élèves de terminale 2025), devant les SES (35 %), la physique-chimie (33 %), la SVT (25 %) et l'HGGSP (24 %) (DEPP, note 26.06). Choisis ta paire de spécialités pour voir où elle mène :</p>
+      <div class="chips" id="doubs">${DOUBS.map(([d, n, p]) => `<button class="chip" type="button" data-d="${esc(d)}" aria-pressed="${S.doub === d}">${esc(doubLabel(d))} <b>${fr(p)} %</b></button>`).join("")}</div>
+      <p class="small">Part des bacheliers généraux inscrits sur Parcoursup 2025 ayant cette paire.</p>
+      ${S.doub ? doubPanel(S.doub) : ""}</div>`;
+  }
+  if (S.bac === "techno") {
+    return `<div class="panel">
+      <p><strong>Bac technologique : 8 séries.</strong> 90 % de réussite en 2026. Chaque série prépare à des BTS et BUT précis, et à quelques licences. Choisis ta série :</p>
+      <div class="chips" id="series">${SERIES.map(([k, l, n]) => `<button class="chip" type="button" data-s="${k}" aria-pressed="${S.serie === k}">${k} · ${l} <b>${n.toLocaleString("fr-FR")}</b></button>`).join("")}</div>
+      <p class="small">Nombre de candidats présents à la session de juin 2026 (DEPP, note 26.33).</p>
+      ${S.serie ? seriePanel(S.serie) : ""}</div>`;
+  }
+  if (S.bac === "pro") {
+    return `<div class="panel">
+      <p><strong>Bac professionnel : un métier en 3 ans après la 3e</strong>, en lycée professionnel ou en apprentissage, avec des stages. 84 % de réussite à l'examen en 2026 ; 27 % des bacheliers sont des bacheliers professionnels.</p>
+      <div class="tiles">
+        <div class="tile"><div class="num">57 %</div><div class="lab">continuent leurs études après le bac pro (surtout en BTS)</div></div>
+        <div class="tile"><div class="num">43 %</div><div class="lab">de ceux qui arrêtent sont en emploi 6 mois après (46 % avec le diplôme, 35 % sans)</div></div>
+        <div class="tile"><div class="num">65 %</div><div class="lab">des bacheliers pros qui passent un BTS l'obtiennent (84 % des bacheliers généraux)</div></div>
+      </div>
+      <p class="small">DEPP, InserJeunes, sortants 2023 (RERS 2025, 8.19) ; BTS session 2024 (RERS 2025, 8.10). Les 21 familles de bac pro sont dans l'étape 3, avec l'emploi à 6 et 12 mois pour chacune.</p></div>`;
+  }
+  if (S.bac === "cap") {
+    return `<div class="panel">
+      <p><strong>CAP : un métier en 2 ans après la 3e</strong>, souvent en apprentissage (une partie à l'école, le reste en entreprise). 10 % des jeunes passent par un CAP, 4 % en apprentissage et 6 % au lycée (DEPP).</p>
+      <div class="tiles">
+        <div class="tile"><div class="num">51 %</div><div class="lab">continuent leurs études après le CAP (bac pro, mention complémentaire)</div></div>
+        <div class="tile"><div class="num">27 %</div><div class="lab">de ceux qui arrêtent sont en emploi 6 mois après (30 % avec le diplôme, 18 % sans)</div></div>
+        <div class="tile"><div class="num">25 %</div><div class="lab">de chômage trois ans après la sortie pour un CAP ou BEP, contre 9 % pour un master</div></div>
+      </div>
+      <p class="small">DEPP, InserJeunes, sortants 2023 (RERS 2025, 8.19) ; Céreq, Génération 2021. Les familles de l'étape 3 sont celles des bacs pros : un CAP mène souvent au même métier, avec un an de moins.</p></div>`;
+  }
+  return "";
+}
+function doubPanel(d) {
+  const rows = D.fams.filter((f) => f.admTop).map((f) => [f, (RE.adm[f.k].d[d] || [0, 0, 0])[2]]).filter((r) => r[1] > 0);
+  const tot = rows.reduce((s, r) => s + r[1], 0) || 1;
+  rows.sort((a, b) => b[1] - a[1]);
+  const top = rows.slice(0, 8);
+  const l2s = Object.entries(RE.nat || {}).map(([disc, v]) => [disc, v.by_d && v.by_d[d] ? v.by_d[d].l2 : null]).filter((x) => x[1] != null);
+  return `<div class="choice"><h3>Avec ${esc(doubLabel(d))}, les bacheliers 2025 sont surtout allés vers :</h3>
+    <div class="bars">${top.map(([f, n]) => `<div class="barrow"><div class="lab"><span>${esc(f.s)} <span class="small">(${esc(f.g)})</span></span><b>${Math.round(100 * n / tot)} %</b></div><div class="track"><i style="width:${100 * n / tot}%"></i></div></div>`).join("")}</div>
+    <p class="small">Part des propositions acceptées sur Parcoursup 2025 par les bacheliers ayant cette paire, parmi les 39 familles. L'étape 3 est maintenant classée pour cette paire : d'abord les familles où elle entre le plus.</p>
+    ${l2s.length ? `<p class="small"><strong>Réussite en 1re année de licence avec cette paire</strong> (part qui passe en 2e année) : ${l2s.map(([disc, v]) => `${esc(RE.disc_fr[disc] || disc)} ${v} %`).join(" · ")} (SIES, bacheliers 2023).</p>` : ""}</div>`;
+}
+function seriePanel(k) {
+  const s = SERIES.find((x) => x[0] === k);
+  return `<div class="choice"><h3>Après un bac ${k} (${esc(s[1])})</h3>
+    <div class="tiles">
+      <div class="tile"><div class="num">${fr(s[3])} %</div><div class="lab">de réussite au bac ${k} en 2026</div></div>
+      <div class="tile"><div class="num">${fr(s[4])} %</div><div class="lab">des bacheliers ${k} qui passent un BTS l'obtiennent (2024)</div></div>
+      <div class="tile"><div class="num">14 %</div><div class="lab">des bacheliers technologiques inscrits en licence ont le diplôme en 3 ou 4 ans</div></div>
+    </div>
+    <p class="small">Les BTS et BUT sont la voie normale après un bac technologique : c'est là que la réussite est la meilleure. L'étape 3 montre d'abord les familles habituelles pour cette série.</p></div>`;
+}
+
+// Step 3
+function succ(f) {
+  const r = { l2: null, dip: null, l2lab: "passent en 2e année", diplab: "ont le diplôme" };
+  const s = RE.succ[f.k];
+  if (s && s.all) { r.l2 = s.all.l2 + " %"; r.dip = s.all.dip + " %"; r.diplab = s.type === "dut" ? "ont le DUT ou BUT en 2 ou 3 ans" : "ont la licence en 3 ou 4 ans"; }
+  else if (f.sies) { r.l2 = f.sies.l2 + " %"; r.dip = f.sies.lic + " %"; r.diplab = "ont la licence en 3 ou 4 ans"; }
+  if (!r.dip) {
+    if (f.g === "BTS / BUT") { const b = S.bac === "gen" ? BTS_BY_BAC.gen : S.bac === "techno" ? BTS_BY_BAC.techno : (S.bac === "pro" || S.bac === "cap") ? BTS_BY_BAC.pro : 74.7; r.dip = fr(b) + " %"; r.diplab = "ont le BTS à l'examen" + (S.bac ? ", avec ton bac" : ""); }
+    else if (f.k === "prepa_sci") { r.dip = "70 %"; r.diplab = "en école d'ingénieurs 4 ans après l'entrée"; }
+    else if (f.k === "sante") { r.l2 = "37 %"; r.l2lab = "passent sans perdre d'année"; }
+    else if (f.g === "Université" && S.bac && S.bac !== "cap") { const b = S.bac === "gen" ? LIC_BY_BAC.gen : S.bac === "techno" ? LIC_BY_BAC.techno : LIC_BY_BAC.pro; r.dip = fr(b) + " %"; r.diplab = "des bacheliers de ton bac ont la licence en 3 ou 4 ans"; }
+  }
+  return r;
+}
+function tilesHtml(f) {
+  if (f.bp) {
+    return `<div class="tiles">
+      <div class="tile"><div class="num">3 ans</div><div class="lab">après la 3e</div></div>
+      <div class="tile"><div class="num">${f.ij.pe} %</div><div class="lab">continuent leurs études (BTS, autre bac pro)</div></div>
+      <div class="tile"><div class="num">${f.ij.e6} %</div><div class="lab">en emploi 6 mois après (ceux qui arrêtent)</div></div>
+      <div class="tile"><div class="num">${f.ij.e12} %</div><div class="lab">en emploi 12 mois après</div></div>
+      <div class="tile ia" style="--band:var(${f.band[2]})"><div class="num">${f.sur10} sur 10</div><div class="lab">tâches que l'IA peut faire</div></div>
+      ${cnTile(f)}
+    </div>`;
+  }
+  const r = succ(f);
+  const ent = f.admTop && f.admTot ? `${Math.round(100 * f.admTop[0][1] / f.admTot)} % des entrants ont ${esc(doubLabel(f.admTop[0][0]))}` : "entrée : pas de chiffre";
+  return `<div class="tiles">
+    <div class="tile"><div class="num">${YEARS[f.k] || "3 à 5"} ans</div><div class="lab">après le bac</div></div>
+    <div class="tile"><div class="num">${r.dip || r.l2 || "?"}</div><div class="lab">${r.dip ? r.diplab : r.l2 ? r.l2lab : "réussite : pas de chiffre national"}</div></div>
+    <div class="tile"><div class="num">${f.ins ? Math.round(f.ins.emploi / 10) + " sur 10" : "?"}</div><div class="lab">${f.ins ? `trouvent un travail (30 mois ${esc(f.ins.niveau)})` : "emploi : pas encore de chiffre"}</div></div>
+    <div class="tile"><div class="num">${f.ins ? euro(f.ins.salaire) : "?"}</div><div class="lab">${f.ins ? "net par mois, au début" : "salaire : pas encore de chiffre"}</div></div>
+    <div class="tile ia" style="--band:var(${f.band[2]})"><div class="num">${f.sur10} sur 10</div><div class="lab">tâches que l'IA peut faire</div></div>
+    ${cnTile(f)}
+  </div>
+  <p class="small">${S.doub && f.admTop ? admLine(f) : `Qui y entre : ${ent}.`}</p>`;
+}
+function admLine(f) {
+  const x = RE.adm[f.k].d[S.doub];
+  if (!x || !x[0]) return `Avec ${esc(doubLabel(S.doub))}, presque personne n'y entre.`;
+  return `Avec ${esc(doubLabel(S.doub))} : <b>${Math.round(100 * x[1] / x[0])} %</b> des candidats ont reçu une proposition (${x[0].toLocaleString("fr-FR")} candidats en 2025).`;
+}
+function relevance(f) {
+  if (S.doub && f.admTop) { const x = RE.adm[f.k].d[S.doub]; return x ? x[2] : 0; }
+  if (S.doub) return 0;
+  if (S.serie) { const s = SERIES.find((x) => x[0] === S.serie); const i = s[5].indexOf(f.k); return i < 0 ? 0 : 100 - i; }
+  return f.score;
+}
+function renderList() {
+  const q = $("q").value.trim().toLowerCase();
+  const wantBp = S.voie === "pro" || S.bac === "pro" || S.bac === "cap";
+  const all = !S.voie && !S.bac;
+  let rows = D.fams.filter((f) => (all || (wantBp ? f.bp : !f.bp)) && (!q || (f.n + " " + f.s + " " + f.jobs + " " + f.note).toLowerCase().includes(q)));
+  rows = rows.map((f) => [f, relevance(f)]).sort((a, b) => b[1] - a[1] || b[0].score - a[0].score);
+  if (S.doub || S.serie) rows = rows.filter((r) => r[1] > 0);
+  const fams = rows.map((r) => r[0]);
+  $("e3-intro").textContent = S.doub ? `Les familles classées selon ce que font les bacheliers avec ${doubLabel(S.doub)} : d'abord celles où ils entrent le plus.` : S.serie ? `Les familles habituelles après un bac ${S.serie}, dans l'ordre le plus fréquent.` : wantBp ? `Les 21 familles de bac pro, de la plus protégée face à l'IA à la plus exposée. Touche une carte pour trouver un lycée près de chez toi.` : `Les 39 grandes familles de formations après le bac et les 21 familles de bac pro, de la plus protégée face à l'IA à la plus exposée. Chaque carte montre la chaîne complète : durée, réussite, travail, salaire, IA. Touche une carte pour les détails et pour trouver où la suivre près de chez toi.`;
+  $("list").innerHTML = fams.map((f) => `<div class="fam" role="button" tabindex="0" data-i="${f.i}" aria-expanded="${S.open === f.i}">
+      <div class="fam-head">
+        <div class="letter" style="background:var(${f.band[2]})" aria-label="Note ${f.band[0]}">${f.band[0]}</div>
+        <div style="min-width:0"><div class="name">${esc(f.s)}${f.bp ? ' <span class="small">· bac pro</span>' : ""}</div><div class="word">Métiers : ${esc(f.jobs)}</div></div>
+      </div>
+      ${tilesHtml(f)}
+      ${S.open === f.i ? detailHtml(f) : ""}</div>`).join("") || `<p>Rien ne correspond. Essaie un autre mot.</p>`;
+  $("count").textContent = `${fams.length} famille${fams.length > 1 ? "s" : ""}.`;
+  $("list").querySelectorAll(".fam").forEach((el) => {
+    const toggle = (e) => { if (e.target.closest(".detail")) return; const i = +el.dataset.i; S.open = S.open === i ? null : i; renderList(); };
+    el.onclick = toggle;
+    el.onkeydown = (e) => { if ((e.key === "Enter" || e.key === " ") && !e.target.closest(".detail")) { e.preventDefault(); toggle(e); } };
+  });
+  const oq = $("oq");
+  if (oq) { oq.oninput = () => renderOffers(D.fams[S.open], oq.value); renderOffers(D.fams[S.open], ""); }
+}
+function detailHtml(f) {
+  const pj = P.fams[f.k];
+  let h = `<div class="detail"><p><strong>${esc(f.n)}.</strong> ${esc(f.note)}</p>
+    <p>Dans ces métiers, le travail est fait surtout de ${TIER[f.tier]}. Maths : ${f.math}/5, contact humain : ${f.social}/5. Note : ${f.band[0]}, ${f.band[3].toLowerCase()} (${f.score}/100).${pj && pj.m_g != null ? ` Emplois de ces métiers en France d'ici 2030 : ${pj.m_g > 0 ? "+" : ""}${fr(pj.m_g)} % (Métiers 2030, France Stratégie et Dares).` : ""}</p>`;
+  if (f.admTop && f.admTop.length) {
+    h += `<h3>Qui y entre (bac général)</h3><div class="bars">${f.admTop.slice(0, 5).map(([d, n]) => `<div class="barrow"><div class="lab"><span>${esc(doubLabel(d))}</span><b>${Math.round(100 * n / f.admTot)} %</b></div><div class="track"><i style="width:${100 * n / f.admTot}%"></i></div></div>`).join("")}</div>
+      <p class="small">Part des propositions acceptées sur Parcoursup 2025 par paire de spécialités de terminale. Les bacheliers technologiques et professionnels y entrent aussi, surtout en BTS et BUT.</p>`;
+  }
+  const s = RE.succ[f.k];
+  if (s && s.all) {
+    const men = [["TB", "très bien"], ["B", "bien"], ["AB", "assez bien"], ["P", "sans mention"]].filter(([m]) => s[m]);
+    h += `<h3>Réussir</h3><p>Sur 100 nouveaux bacheliers inscrits : <b>${s.all.l2}</b> passent en 2e année un an après, <b>${s.all.red}</b> redoublent, et <b>${s.all.dip}</b> ont le diplôme ${s.type === "dut" ? "en 2 ou 3 ans" : "en 3 ou 4 ans"}.</p>
+      <div class="bars">${men.map(([m, l]) => `<div class="barrow"><div class="lab"><span>Mention ${l} au bac : passent en 2e année</span><b>${s[m].l2} %</b></div><div class="track"><i style="width:${s[m].l2}%;background:var(--b)"></i></div></div>`).join("")}</div>
+      <p class="small">SIES, cohortes nationales pour ce type de licence ou de BUT (passage : bacheliers ${s.type === "dut" ? RE.meta.dut_l2 : RE.meta.lic_l2} ; diplôme : bacheliers ${s.type === "dut" ? RE.meta.dut_dip : RE.meta.lic_dip}).</p>`;
+  }
+  if (f.sies && f.sies.bac) {
+    h += `<h3>Selon tes spécialités au bac</h3><p class="small">Part des nouveaux bacheliers qui passent en 2e année, en licence de ${esc(f.sies.disc)} (SIES, bacheliers 2023) :</p>
+      <div class="bars">${f.sies.bac.slice(0, 10).map(([lab, v, n, spe]) => `<div class="barrow"><div class="lab"><span>${esc(lab)}</span><b>${v} %</b></div><div class="track"><i style="width:${v}%;background:var(${spe ? "--b" : "--d"})"></i></div></div>`).join("")}</div>`;
+  }
+  if (f.ins) h += `<h3>Le travail après</h3><p>${f.ins.emploi} % des diplômés sont en emploi salarié en France 30 mois ${esc(f.ins.niveau)}, pour un salaire net médian de ${euro(f.ins.salaire)} par mois (InserSup 2026, ${f.ins.n.toLocaleString("fr-FR")} diplômés suivis).</p>`;
+  if (f.ij) h += `<h3>Le travail après</h3><p>Parmi les élèves qui arrêtent après ce bac pro, ${f.ij.e6} % sont en emploi 6 mois après et ${f.ij.e12} % 12 mois après ; ${f.ij.pe} % continuent leurs études (DEPP, InserJeunes, sortants 2021 à 2024).${f.bmo ? ` En France, ${f.bmo.projets.toLocaleString("fr-FR")} projets d'embauche par an dans ces métiers, dont ${f.bmo.difficiles} % jugés difficiles par les employeurs (France Travail, BMO 2026).` : ""}</p>`;
+  h += cnDetail(f);
+  h += f.ij ? `<h3>Où préparer ce bac pro (${f.nb.toLocaleString("fr-FR")} lycées × spécialités)</h3>
+    <div class="offers-tools"><label for="oq" hidden>Ville ou département</label><input id="oq" type="search" placeholder="Ta ville ou ton département"></div><div class="offers" id="offers"></div>`
+    : f.nb ? `<h3>Où suivre cette formation (${f.nb.toLocaleString("fr-FR")} sur Parcoursup)</h3>
+    <div class="offers-tools"><label for="oq" hidden>Ville ou établissement</label><input id="oq" type="search" placeholder="Ta ville, ton département ou un établissement"></div><div class="offers" id="offers"></div>`
+    : `<p class="small">Cette formation ne se trouve pas directement sur Parcoursup : on y accède après une licence ou un concours.</p>`;
+  return h + `</div>`;
+}
+function findOffers(f, q, n) {
+  q = (q || "").trim().toLowerCase();
+  if (f.ij) return (D.bp || []).filter((o) => o[0] === f.i && (!q || (o[1] + " " + o[2] + " " + o[3] + " " + o[4]).toLowerCase().includes(q))).slice(0, n);
+  return D.offers.filter((o) => o[0] === f.i && (!q || (o[1] + " " + o[2] + " " + o[3] + " " + o[4]).toLowerCase().includes(q))).sort((a, b) => b[5] - a[5]).slice(0, n);
+}
+function renderOffers(f, q) {
+  const el = $("offers"); if (!el || !f) return;
+  const list = findOffers(f, q, 10);
+  if (f.ij) { el.innerHTML = list.map((o) => `<div class="offer"><b>${esc(o[4].charAt(0).toUpperCase() + o[4].slice(1))}</b><span class="meta">${esc(o[1])} · ${esc(o[2])} (${esc(o[3])}) · ${o[5] ? "public" : "privé"}${o[6] >= 0 ? ` · tous ses bacs pros : ${o[6]} % en emploi 6 mois après` : ""}${CN.fam[f.k] ? cnZone(o) : ""}</span></div>`).join("") || `<p class="small">Aucun lycée trouvé ici. Essaie le nom de ton département.</p>`; return; }
+  el.innerHTML = list.map((o) => `<div class="offer"><a href="${psupLink(o[7])}" target="_blank" rel="noopener">${esc(o[4])}</a><span class="meta">${esc(o[1])} · ${esc(o[2])} (${esc(o[3])}) · ${o[8] ? "public" : "privé"} · ${o[5]} places${o[6] >= 0 ? ` · ${o[6]} % des candidats ont reçu une proposition` : ""}${o.length > 9 && o[9] != null ? ` · ${o[9]} % passent en 2e année ici` : ""}${CN.fam[f.k] ? cnZone(o) : ""}</span></div>`).join("") || `<p class="small">Aucune formation trouvée ici. Essaie le nom de ton département.</p>`;
+}
+$("q").oninput = renderList;
+renderBac();
+renderList();
+
+// Chaque master, ses débouchés (InserSup 2026_S1, built by scripts/build_masters.py)
+(function () {
+  const M = window.BOUSSOLE_MASTERS;
+  if (!M || !$("mq")) return;
+  const norm = (s) => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const pct = (v) => v === null || v === undefined ? "nd" : v + " %";
+  const cap = (s) => s.charAt(0) + s.slice(1).toLowerCase();
+  M.p.forEach((r) => { r.k = norm(r.t + " " + r.u + " " + r.a + " " + r.d); });
+  function render() {
+    const words = norm($("mq").value).split(/\s+/).filter((w) => w.length > 1);
+    if (!words.length) { $("mres").innerHTML = ""; return; }
+    const hits = M.p.filter((r) => words.every((w) => r.k.includes(w)));
+    hits.sort((a, b) => b.e - a.e);
+    const shown = hits.slice(0, 40);
+    let h = `<p class="small">${hits.length.toLocaleString("fr-FR")} master${hits.length > 1 ? "s" : ""} trouvé${hits.length > 1 ? "s" : ""}${hits.length > 40 ? ", les 40 premiers par taux d'emploi" : ""}.</p>`;
+    if (shown.length) {
+      h += `<table class="t"><thead><tr><th>Master</th><th>Université</th><th class="n">En emploi salarié à 30 mois</th><th class="n">Moyenne nationale du même master</th><th class="n">Emploi stable</th><th class="n">Salaire net médian</th><th class="n">Diplômés suivis</th><th class="n">Encore en études</th></tr></thead><tbody>`;
+      shown.forEach((r) => {
+        const n = M.nat[r.t];
+        h += `<tr><td>${esc(cap(r.t))}</td><td>${esc(r.u)}</td><td class="n"><b>${pct(r.e)}</b></td><td class="n">${n ? pct(n.e) : "nd"}</td><td class="n">${pct(r.s)}</td><td class="n">${r.w ? euro(r.w) : "nd"}</td><td class="n">${r.n}${r.c !== "2023" ? " *" : ""}</td><td class="n">${r.q === null ? "nd" : r.q}</td></tr>`;
+      });
+      h += `</tbody></table>`;
+    }
+    $("mres").innerHTML = h;
+  }
+  $("mq").addEventListener("input", render);
+  $("mnote").innerHTML = `${M.meta.n_programmes.toLocaleString("fr-FR")} masters d'université. Emploi salarié en France 30 mois après le diplôme, diplômés de 2023 (* : 2022 et 2023 réunis pour les petites formations) ; emploi stable : CDI ou fonctionnaire, parmi ceux qui travaillent ; salaire net médian en équivalent temps plein, diplômés de 2021 (seul chiffre publié). Un taux bas ne veut pas toujours dire un échec : l'emploi à l'étranger, à son compte ou la poursuite en thèse ne sont pas comptés (voir la dernière colonne). « nd » : non diffusé, trop peu de diplômés. Source : MESR, <a href="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-insersup">InserSup</a>, version 2026_S1.`;
+})();
+
+// Où en es-tu ? (profil) : montre le parcours utile, du collège au premier emploi.
+(function () {
+  const PROFILS = {
+    college: { show: ["e1", "e2", "e3", "e4", "e45", "e5"], msg: "Tout le parcours, de la fin de 3e au premier emploi : commence par l'étape 1." },
+    lycee: { show: ["e2", "e3", "e4", "e45", "e5"], msg: "À partir du bac : choisis ton bac, puis une formation, et regarde ce qu'elle donne jusqu'au premier emploi." },
+    sup: { show: ["e45", "e5"], msg: "Continuer en master ou travailler : compare ta licence et chaque master, puis cherche un emploi ou une alternance." },
+    tout: { show: ["e1", "e2", "e3", "e4", "e45", "e5"], msg: "Tout le parcours." }
+  };
+  const ALL = ["e1", "e2", "e3", "e4", "e45", "e5"];
+  function setProfil(k, scroll) {
+    const P = PROFILS[k]; if (!P) return;
+    ALL.forEach((id) => { const el = $(id); if (el) el.hidden = !P.show.includes(id); });
+    document.querySelectorAll(".steps a").forEach((a) => { a.hidden = !P.show.includes(a.getAttribute("href").slice(1)); });
+    document.querySelectorAll("#profil .chip").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.p === k)));
+    $("profil-msg").textContent = P.msg;
+    try { history.replaceState(null, "", "?profil=" + k + location.hash); } catch (e) {}
+    if (scroll) $(P.show[0]).scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  document.querySelectorAll("#profil .chip").forEach((b) => b.addEventListener("click", () => setProfil(b.dataset.p, true)));
+  const q = new URLSearchParams(location.search).get("profil");
+  if (q && PROFILS[q]) setProfil(q, false);
+})();
+
+// Après la licence : comparaison nationale licence / master (InserSup 2026_S1)
+(function () {
+  const M = window.BOUSSOLE_MASTERS;
+  if (!M || !M.totals || !$("mtiles")) return;
+  const T = M.totals, fr = (n) => n.toLocaleString("fr-FR");
+  const tile = (v, lab) => `<div class="tile"><div class="num">${v} %</div><div class="lab">${lab}</div></div>`;
+  $("mtiles").innerHTML = tile(T.lg.e, "après une licence générale") + tile(T.lp.e, "après une licence professionnelle") +
+    tile(T.m.e, "après un master") + tile(T.ma.e, "après un master en alternance");
+  $("mtiles-src").textContent = `Part des diplômés de 2023 en emploi salarié en France 30 mois après le diplôme, parmi ceux qui ont arrêté leurs études. Après une licence générale, ${fr(T.lg.n)} diplômés se sont arrêtés et ${fr(T.lg.q)} ont continué. Salaire net médian (diplômés de 2021) : ${fr(T.lg.w)} € après une licence générale, ${fr(T.lp.w)} € après une licence professionnelle, ${fr(T.m.w)} € après un master, ${fr(T.ma.w)} € après un master en alternance. MESR, InserSup 2026.`;
+  const cap = (s) => s.charAt(0) + s.slice(1).toLowerCase();
+  M.lic.forEach((r, i) => { const o = document.createElement("option"); o.value = i; o.textContent = cap(r.t); $("lsel").appendChild(o); });
+  $("lsel").addEventListener("change", () => {
+    const r = M.lic[$("lsel").value];
+    if (!r) { $("lres").innerHTML = ""; return; }
+    const w = (v) => v ? fr(v) + " €" : "non diffusé";
+    $("lres").innerHTML = `<div class="tiles">
+      <div class="tile"><div class="num">${r.le} %</div><div class="lab">en emploi 30 mois après, si tu t'arrêtes après la licence (salaire médian : ${w(r.lw)})</div></div>
+      <div class="tile"><div class="num">${r.me} %</div><div class="lab">après un master du même nom (salaire médian : ${w(r.mw)})</div></div>
+      <div class="tile"><div class="num">${fr(r.ln)} · ${r.lq === null ? "nd" : fr(r.lq)}</div><div class="lab">diplômés de cette licence qui s'arrêtent · qui continuent</div></div>
+    </div><p class="small">Ceux qui s'arrêtent après la licence sont peu nombreux et ne ressemblent pas forcément à ceux qui continuent : l'écart ne mesure pas seulement ce qu'apporte le master. Diplômés de 2023 (ou 2022 et 2023 réunis), salaires des diplômés de 2021 ; France entière.</p>`;
+  });
+})();
+</script>
+</body>
+</html>

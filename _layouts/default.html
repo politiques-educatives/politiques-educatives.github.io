@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+<div class="draft-banner">Document de travail du GT Éducation (Préparer l'avenir) : propositions non arbitrées</div>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-k">{{ site.title }}</span><span class="brand-s">GT Éducation · Préparer l'avenir</span></a>
+    <div class="top-actions"><a class="btn btn-gen" href="https://github.com/{{ site.repo }}/issues/new?template=note.yml" target="_blank" rel="noopener">Générer une note</a>
+    <label class="gsearch"><span class="sr">Rechercher dans tout le site</span><input id="gq" type="search" placeholder="Rechercher partout (tutorat, master, Milburn…)" autocomplete="off"></label></div>
+  </div>
+</header>
+<main class="wrap">
+{{ content }}
+</main>
+<footer class="wrap foot">
+  <p>Document de travail · GT Éducation, Préparer l'avenir · Adrien Joly, London School of Economics. Chaque chiffre est tiré d'une source publique citée ; les propositions ne sont pas arbitrées. Une erreur, une étude à ajouter ? <a href="https://github.com/{{ site.repo }}/issues/new?template=feedback.yml">Signaler une correction</a>.</p>
+</footer>
+</body>
+</html>

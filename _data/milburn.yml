@@ -1,0 +1,105 @@
+# Rapport Milburn (DWP, 17 novembre 2026, « From a Welfare State to a Working State »), 17 recommandations regroupées
+# selon le résumé du rapport (le rapport ne les numérote pas, p. 10). Source : research/12-milburn-review/2026-11-18-milburn-review.md.
+# statut : accepté (principe) | à l'étude (livre blanc 2027, revue Timms, Spending Review 2027) | sans réponse
+- n: 1
+  titre: "Objectif national : 5 % de jeunes sans emploi ni formation en 2036, aucun à 16-17 ans"
+  chiffre: "Taux modélisé 6,8 %, contre 13,4 % au départ"
+  statut: à l'étude
+  pages: "8, 31, 226"
+  france: "La France compte 10,5 % de 15-24 ans sans emploi ni formation (2023, Insee), contre 9,2 % dans l'UE."
+- n: 2
+  titre: "Garantie d'opportunité inscrite dans la loi pour tout jeune de 18 à 24 ans sans emploi ni formation"
+  chiffre: "Emploi, formation, apprentissage, stage jusqu'à 12 semaines, service civique ou aide à la création d'entreprise"
+  statut: accepté (principe)
+  pages: "21-22"
+  france: "Plus proche équivalent : le contrat d'engagement jeune, successeur de la Garantie jeunes, avec allocation (environ 700 000 entrées de mars 2022 à juin 2024, IPP)."
+- n: 3
+  titre: "Garantie de soutien inscrite dans la loi : santé, emploi, aide pratique"
+  chiffre: ""
+  statut: accepté (principe)
+  pages: "21"
+  france: ""
+- n: 4
+  titre: "Un emploi payé de six mois après 12 mois sans emploi ni formation, au lieu de 18"
+  chiffre: ""
+  statut: accepté (principe)
+  pages: "22-23"
+  france: "Le gouvernement l'applique aux allocataires du Universal Credit dès avril 2027, plus étroitement que Milburn. La France n'a pas d'emploi garanti en dernier recours."
+- n: 5
+  titre: "Un service local d'opportunités : conseiller sous 14 jours, plan personnel sous 4 semaines, partout en Angleterre d'ici 2029"
+  chiffre: ""
+  statut: accepté (principe)
+  pages: "23, 27-28"
+  france: "Missions locales et France Travail."
+- n: 6
+  titre: "Une fonction centrale de coordination"
+  chiffre: "Unité Youth Opportunities rattachée au Premier ministre"
+  statut: accepté (principe)
+  pages: "27"
+  france: ""
+- n: 7
+  titre: "Obligation de s'engager ; allocation retirée après des refus répétés (« les sanctions doivent rester rares »)"
+  chiffre: ""
+  statut: à l'étude
+  pages: "23"
+  france: ""
+- n: 8
+  titre: "Nouvelle allocation jeunesse (Youth Allowance) et refonte des aides liées à la santé pour les moins de 25 ans"
+  chiffre: "Économies de 3,6 Md£ par an en 2036/37"
+  statut: à l'étude
+  pages: "24-25"
+  france: ""
+- n: 9
+  titre: "Aide à l'employeur de 3 000 £ par embauche après six mois sans emploi ni formation, jusqu'à 7 000 £ pour une petite entreprise ; 2 500 £ par apprenti"
+  chiffre: "Environ 1,1 Md£ par an, 170 000 opportunités"
+  statut: sans réponse
+  pages: "12"
+  france: "Aide à l'embauche d'apprentis (décret n° 2026-168) : jusqu'à 5 000 € pour les entreprises de moins de 250 salariés (montants à vérifier)."
+- n: 10
+  titre: "Seuil de cotisations employeur relevé pour les 21-24 ans du commerce et de l'hôtellerie-restauration"
+  chiffre: "De 5 000 £ à 10 000 £, « quand les finances le permettront »"
+  statut: sans réponse
+  pages: "11"
+  france: ""
+- n: 11
+  titre: "Test d'impact jeunesse obligatoire ; recrutement de jeunes dans la fonction publique et les marchés publics"
+  chiffre: "11 % des entrants de la fonction publique âgés de 16 à 24 ans d'ici 2032"
+  statut: sans réponse
+  pages: "11-13"
+  france: ""
+- n: 12
+  titre: "École : repérage précoce du risque de décrochage, stage obligatoire, norme « prêt pour le travail » inspectée, devenir des élèves publié par établissement"
+  chiffre: ""
+  statut: sans réponse
+  pages: "14-15"
+  france: "Ce qui manque en France : une mesure du devenir des élèves par établissement et une norme inspectée (voir la proposition « cadre national d'orientation »)."
+- n: 13
+  titre: "Enseignement supérieur et formation professionnelle : salaires des diplômés de chaque formation publiés, financement lié aux résultats"
+  chiffre: "+150 000 jeunes de 18-24 ans par an en formation professionnelle"
+  statut: sans réponse
+  pages: "15-16"
+  france: "InserSup publie déjà l'emploi et le salaire à 30 mois ; la Boussole les affiche formation par formation."
+- n: 14
+  titre: "L'apprentissage, première priorité : 35 % d'une génération apprentie avant 25 ans"
+  chiffre: "Environ 270 000 entrées par an de moins de 25 ans d'ici 2036"
+  statut: sans réponse
+  pages: "16-17"
+  france: ""
+- n: 15
+  titre: "Santé mentale : thérapie, conseil ou réadaptation professionnelle sous trois mois pour les jeunes qui ont un plan"
+  chiffre: "359 000 jeunes de 18-25 ans orientés vers Talking Therapies en 2025/26"
+  statut: sans réponse
+  pages: "18-20"
+  france: ""
+- n: 16
+  titre: "Observatoire de l'IA et des jeunes : rapport annuel sur les voies d'entrée qui se ferment, par secteur et territoire"
+  chiffre: ""
+  statut: sans réponse
+  pages: "72-73"
+  france: "L'Observatoire France Travail (première étude le 17 novembre 2026, 16 000 employeurs) ne dit rien des débutants."
+- n: 17
+  titre: "Financement : 500 M£ en 2027/28 par redéploiement, 5,8 Md£ par an en 2036/37"
+  chiffre: "440 000 jeunes de plus en emploi durable, +0,4 % de PIB"
+  statut: à l'étude
+  pages: "25, 30-31"
+  france: ""

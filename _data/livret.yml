@@ -1,0 +1,115 @@
+# Livret du programme « Croire en nous », volume 1 (18 novembre 2026) : mesures éducation évaluées au regard des travaux du GT.
+# Source : research/15-livret-programme/2026-11-18-livret-education-evaluation.md (pages imprimées). Résumés paraphrasés.
+# eval : convergent | à compléter | tension | hors champ ; cartes : ids de propositions.yml
+- n: "64"
+  titre: "Un statut d'école publique autonome"
+  resume: "Le chef d'établissement adapte méthodes, horaires, organisation et discipline, participe au recrutement et à l'évaluation de son équipe ; les évaluations de chaque établissement sont publiées."
+  page: 22
+  eval: convergent
+  apport: "Note 2 : comparaison avec l'Angleterre (recrutement, évaluation, inspection) et conditions d'une autonomie qui marche ; publier des indicateurs de valeur ajoutée plutôt que des résultats bruts."
+  cartes: [gouv-recruter, gouv-evaluation]
+- n: "65"
+  titre: "+20 % de salaire pour les enseignants"
+  resume: "Hausse de 20 % sur le quinquennat, jusqu'à la moyenne européenne, surtout en milieu de carrière."
+  page: 22
+  eval: à compléter
+  apport: "Note 1 : lier la hausse à un service annuel qui réserve du temps au tutorat et au travail d'équipe ; coût à chiffrer, le livret ne le chiffre pas."
+  cartes: [heures-service-annuel]
+- n: "66"
+  titre: "Moins d'élèves par classe en maternelle et en primaire"
+  resume: "Réduire les effectifs des classes de maternelle et de primaire."
+  page: 22
+  eval: hors champ
+  apport: "Pas de revue dédiée dans nos travaux."
+  cartes: []
+- n: "67"
+  titre: "Lire, écrire, compter"
+  resume: "La lecture dès la maternelle, des tests de décodage, un objectif de vocabulaire à l'entrée au CP."
+  page: 22
+  eval: convergent
+  apport: "Constat DEPP 2026 : dictée de CE1 à 69,9 % de réussite contre 72,4 % en 2025, -7,2 points depuis 2019 ; un tiers des élèves de 15 ans en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40)."
+  cartes: [ia-bases]
+- n: "68"
+  titre: "Un service public universel du soutien scolaire"
+  resume: "Un soutien assuré par d'anciens professeurs, des étudiants volontaires et un assistant d'IA personnalisé."
+  page: 22
+  eval: convergent
+  apport: "Note sur le tuteur IA et preuves sur le tutorat : un tuteur humain et une IA qui guide sans donner la solution, évalués avant toute généralisation."
+  cartes: [tuteur-public, heures-emploi-du-temps]
+- n: "69"
+  titre: "L'IA à l'école par paliers"
+  resume: "Aucune IA avant le collège, une sensibilisation au collège, une intégration progressive au lycée ; les professeurs s'en servent pour préparer leurs cours."
+  page: 22
+  eval: convergent
+  apport: "Note sur le tuteur IA et formation des enseignants à l'IA."
+  cartes: [ia-bases, tuteur-marche]
+- n: "70"
+  titre: "Le portable strictement interdit à l'école, au collège et au lycée"
+  resume: "Interdiction stricte, avec confiscation et restitution aux parents."
+  page: 22
+  eval: tension
+  apport: "Preuves partagées : effet positif en Norvège (chez les filles), aucun effet en Suède, en Angleterre (Goodyear et al., 2025) ni aux États-Unis ; évaluer « Portable en pause » de façon indépendante avant d'en faire un argument."
+  cartes: [sante-portable]
+- n: "71"
+  titre: "Recréer des écoles normales"
+  resume: "Des écoles normales plus exigeantes sur les savoirs fondamentaux, et des carrières ouvertes aux professionnels venus d'ailleurs."
+  page: 23
+  eval: à compléter
+  apport: "Depuis 2026, le concours a lieu à bac+3, suivi d'un master rémunéré, toujours en INSPÉ ; aucune école normale n'existe aujourd'hui."
+  cartes: []
+- n: "72"
+  titre: "Une rentrée avancée pour les volontaires"
+  resume: "Une rentrée une à deux semaines plus tôt pour les volontaires ; les notes de juin comptent pour l'année suivante."
+  page: 23
+  eval: à compléter
+  apport: "Note 1 : le temps scolaire et les heures perdues en juin."
+  cartes: [heures-mercredi]
+- n: "73"
+  titre: "Une amende de responsabilisation des parents ; le 3018 renforcé"
+  resume: "Une amende pour les parents en cas de manquement, et plus de moyens pour le 3018 contre le harcèlement."
+  page: 23
+  eval: hors champ
+  apport: "Non couvert par nos travaux."
+  cartes: []
+- n: "74"
+  titre: "Élèves handicapés : professionnels du handicap et métier d'AESH reconnu"
+  resume: "L'intervention systématique des professionnels du handicap et la reconnaissance du métier d'AESH."
+  page: 23
+  eval: convergent
+  apport: "Compléments santé mentale et inclusion : 139 993 AESH pour 4,74 Md€ (Sénat, PLF 2026), délais MDPH, AESH rattachés à l'établissement."
+  cartes: [sante-paliers]
+- n: "75"
+  titre: "Un service public de l'orientation dès le collège"
+  resume: "Un tutorat personnalisé d'orientation, assuré par des étudiants, des professeurs et des intervenants."
+  page: 23
+  eval: convergent
+  apport: "Note 3 (orienter dès la 4e avec un tuteur), la Boussole des formations (de la 4e à l'emploi, IA et concurrence chinoise), le modèle Gatsby et Milburn."
+  cartes: [orient-4e, orient-transparence, orient-gatsby]
+- n: "76"
+  titre: "Assumer la sélection à l'université"
+  resume: "Fermer les formations aux faibles taux de diplôme et d'insertion, et revaloriser les filières scientifiques."
+  page: 23
+  eval: à compléter
+  apport: "Publier d'abord les débouchés de chaque formation (un master sur dix sous 49 % d'emploi, un sur dix au-dessus de 86 %) ; le master sert souvent de filtre (Insee Première n° 2109 ; Dares, Ofer 2016) ; licence professionnelle 78 % d'emploi contre 50 % en licence générale (InserSup 2026)."
+  cartes: [orient-debouches, ia-master]
+- n: "29"
+  titre: "Réseaux sociaux interdits aux moins de 15 ans"
+  resume: "Réécrire la loi d'interdiction avec un groupe transpartisan."
+  page: 12
+  eval: convergent
+  apport: "Les 16-19 ans passent plus de cinq heures par jour sur les écrans contre 14 minutes à lire (CNL, 2026) ; une corrélation, pas une causalité démontrée."
+  cartes: [sante-portable]
+- n: "119"
+  titre: "Un droit à la reconversion face à l'IA"
+  resume: "Un droit à la reconversion pour ceux dont le métier est remplacé par l'IA."
+  page: 30
+  eval: à compléter
+  apport: "Les débutants sont les premiers touchés ; une garantie pour les jeunes sans emploi ni formation sur le modèle Milburn et un suivi annuel des postes de débutants."
+  cartes: [ia-garantie, ia-observatoire]
+- n: "P08"
+  titre: "100 000 ingénieurs formés par an"
+  resume: "Priorité 08 : former 100 000 ingénieurs chaque année."
+  page: 5
+  eval: à compléter
+  apport: "La Boussole montre les filières scientifiques et techniques et la réussite en licence selon les spécialités du bac."
+  cartes: [orient-transparence]

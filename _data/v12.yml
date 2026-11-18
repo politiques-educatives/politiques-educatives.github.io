@@ -1,0 +1,172 @@
+# Comparaison : programme actuel (note v12 « Éducation : penser pratique », octobre 2026, discutée avec le rectorat de Normandie le 26 octobre 2026)
+# et ajouts proposés par le GT. Source v12 : EDUCATION-penser-pratique-v12.pdf (16 octobre 2026), paraphrasée, section entre parenthèses.
+# statut : nouveau (absent de la v12) | précise (la v12 le prévoit, l'ajout dit comment) | modifie (l'ajout change la règle v12) | inchangé (repris tel quel)
+# carte : id d'une entrée de propositions.yml
+- theme: Temps des professeurs
+  resume: "Un service annuel avec du temps réservé"
+  v12: "Formation continue de 80 heures par an, prise sur le service existant et sur six jours rémunérés pendant les vacances (§ 1)."
+  ajout: "Un service annuel plafonné, avec une part réservée dans l'emploi du temps au tutorat, à la concertation, à l'orientation et à la formation, sur le modèle écossais."
+  statut: précise
+  carte: heures-service-annuel
+- theme: Temps des professeurs
+  resume: "Le tutorat compté dans le service, pendant la journée"
+  v12: "Deux heures de tutorat par semaine pour les élèves en difficulté, pendant l'étude, payées en heures supplémentaires ; autonomie des établissements pour composer groupes et classes de renforcement (§ 3)."
+  ajout: "Le tutorat compté dans le service, pendant la journée, par des enseignants ; un emploi du temps construit par l'établissement avec cours en barrette et une heure de concertation par semaine."
+  statut: modifie
+  carte: heures-emploi-du-temps
+- theme: Temps des professeurs
+  resume: "Une dotation selon les besoins des élèves"
+  v12: "Groupes de niveau du CM1 à la terminale, plus petits pour les élèves en difficulté (§ 3)."
+  ajout: "Une dotation calculée selon le nombre d'élèves et la part d'élèves en difficulté, majorée par élève défavorisé (modèle pupil premium)."
+  statut: nouveau
+  carte: heures-dotation
+- theme: Temps des professeurs
+  resume: "Le mercredi matin, par bassin"
+  v12: "Rien sur la semaine de quatre jours."
+  ajout: "Le retour au mercredi matin, décidé par bassin avec la région et les communes."
+  statut: nouveau
+  carte: heures-mercredi
+- theme: Temps des professeurs
+  resume: "Mesurer la charge réelle chaque année"
+  v12: "Une politique d'établissement pour le bien-être des enseignants, avec moins de charge administrative (§ 4)."
+  ajout: "Une enquête annuelle sur la charge de travail réelle, pour que l'annualisation ne fasse pas glisser la charge."
+  statut: précise
+  carte: heures-charge
+- theme: Gouvernance de l'établissement
+  resume: "Une part des postes pourvue sur profil"
+  v12: "Des collèges autonomes là où c'est le plus difficile, sur volontariat, avec une large autonomie de recrutement ; le Capes reste national et le rang au concours détermine l'académie (§ 4)."
+  ajout: "Une part des postes de chaque établissement pourvue sur profil, d'abord dans les établissements les moins demandés, avec une prime et une évaluation prévue dès le départ."
+  statut: précise
+  carte: gouv-recruter
+- theme: Gouvernance de l'établissement
+  resume: "Des coordinateurs par discipline et par niveau"
+  v12: "Pas d'échelon intermédiaire prévu."
+  ajout: "Un coordinateur par discipline et par niveau, avec décharge de service, qui organise groupes, tutorat et observation entre pairs."
+  statut: nouveau
+  carte: gouv-coordinateurs
+- theme: Gouvernance de l'établissement
+  resume: "Une visite-conseil tous les deux ans"
+  v12: "Des inspecteurs qui conseillent : l'inspection diagnostique les méthodes de l'enseignant et l'oriente vers des formations (§ 1)."
+  ajout: "Une visite-conseil tous les deux ans pour chaque enseignant, chaque année pendant les trois premières, aussi par des pairs formés à l'observation."
+  statut: précise
+  carte: gouv-visite
+- theme: Gouvernance de l'établissement
+  resume: "Un corps qui évalue les établissements"
+  v12: "Des évaluations d'élèves qui servent : résultats en moins d'un mois, nouvelles évaluations chaque trimestre (§ 3)."
+  ajout: "Un corps spécialisé pour évaluer les établissements, distinct de l'inspection des enseignants, appuyé sur des indicateurs de valeur ajoutée étendus."
+  statut: nouveau
+  carte: gouv-evaluation
+- theme: Orientation et bac
+  resume: "Un tuteur d'orientation de la 4e à la terminale"
+  v12: "Une heure de vie de classe et d'éducation civique par semaine avec le professeur principal, orientation comprise (§ 5)."
+  ajout: "Un tuteur référent d'orientation de la 4e à la terminale, avec un entretien par trimestre, des heures dans son service et une formation sur les filières."
+  statut: précise
+  carte: orient-4e
+- theme: Orientation et bac
+  resume: "Deux réunions pour les parents d'élèves en difficulté"
+  v12: "Chaque trimestre, le professeur principal reçoit les parents et présente les résultats des évaluations (§ 5)."
+  ajout: "Deux réunions dédiées aux parents des élèves de 4e et de 3e en difficulté, un dispositif testé en France."
+  statut: précise
+  carte: orient-parents
+- theme: Orientation et bac
+  resume: "Des scientifiques en classe pour les filles"
+  v12: "Généraliser les interventions de scientifiques en classe pour les filles (§ 3)."
+  ajout: "Repris tel quel."
+  statut: inchangé
+  carte: orient-parents
+- theme: Orientation et bac
+  resume: "Un cadre d'orientation mesuré par établissement"
+  v12: "Rien sur un cadre d'orientation mesuré par établissement."
+  ajout: "Un cadre national d'orientation mesuré dans chaque établissement (repères Gatsby), et une norme « prêt pour le travail » comme le propose Milburn."
+  statut: nouveau
+  carte: orient-gatsby
+- theme: Orientation et bac
+  resume: "Un bac qui départage, des admissions conditionnelles"
+  v12: "Un examen national en fin de CM2 (§ 2). La note ne traite pas encore de Parcoursup (renvoi à une note sur l'université)."
+  ajout: "Un bac qui départage : épreuves nationales anonymes et admissions en licence conditionnelles aux notes, avec des places en BTS, BUT ou année préparatoire."
+  statut: nouveau
+  carte: orient-bac
+- theme: Orientation et bac
+  resume: "La transparence sur tout le parcours"
+  v12: "Absent."
+  ajout: "La transparence sur tout le parcours, de la 4e au premier emploi (prototype : la Boussole des formations)."
+  statut: nouveau
+  carte: orient-transparence
+- theme: Orientation et bac
+  resume: "Les débouchés et l'exposition à l'IA de chaque formation"
+  v12: "Absent."
+  ajout: "Publier l'emploi, le salaire et l'exposition à l'IA de chaque formation, master compris."
+  statut: nouveau
+  carte: orient-debouches
+- theme: IA, jeunes et emploi
+  resume: "Les maths jusqu'en terminale, pas d'IA libre avant les bases"
+  v12: "Rendre les maths obligatoires en terminale (§ 3)."
+  ajout: "Les maths jusqu'en terminale pour tous les élèves visant le supérieur, et pas d'IA en accès libre avant les fondamentaux ; seuil à trancher."
+  statut: précise
+  carte: ia-bases
+- theme: IA, jeunes et emploi
+  resume: "Une licence qui mène à un métier"
+  v12: "Absent (la v12 relève les droits d'inscription en master pour financer le programme, § 7)."
+  ajout: "Une licence qui mène à un métier (stage long ou alternance en L3), le master réservé à la recherche, à la réorientation et à l'alternance ; sondage des employeurs."
+  statut: nouveau
+  carte: ia-master
+- theme: IA, jeunes et emploi
+  resume: "Une garantie pour les jeunes sans emploi ni formation"
+  v12: "Absent."
+  ajout: "Une garantie pour chaque jeune sans emploi ni formation, sur le modèle Milburn."
+  statut: nouveau
+  carte: ia-garantie
+- theme: IA, jeunes et emploi
+  resume: "Un suivi annuel des postes de débutants"
+  v12: "Absent."
+  ajout: "Un suivi annuel des postes de débutants face à l'IA, par l'Observatoire France Travail."
+  statut: nouveau
+  carte: ia-observatoire
+- theme: IA, jeunes et emploi
+  resume: "L'orientation qui suit le marché du travail"
+  v12: "Absent."
+  ajout: "L'emploi, le salaire et les postes du bassin affichés sur Parcoursup et en bac pro ; la carte des bacs pro revue chaque année."
+  statut: nouveau
+  carte: ia-marche
+- theme: Santé mentale et écrans
+  resume: "Évaluer « Portable en pause »"
+  v12: "Le téléphone interdit pendant tout le temps scolaire, récréation comprise (§ 6)."
+  ajout: "Évaluer « Portable en pause » de façon indépendante avant d'en faire un argument : les effets des interdictions sont mitigés."
+  statut: précise
+  carte: sante-portable
+- theme: Santé mentale et écrans
+  resume: "Le papier d'abord"
+  v12: "Le papier d'abord : devoirs sur papier, pas de tablette individuelle généralisée (§ 6)."
+  ajout: "Repris tel quel ; paramétrages protecteurs par défaut imposés aux ENT et à Pronote par l'achat public."
+  statut: inchangé
+  carte: sante-portable
+- theme: Santé mentale et écrans
+  resume: "Un dossier unique, deux paliers décidés par l'école"
+  v12: "3 100 places en IME, AESH formés, enseignants spécialisés mieux payés (§ 5)."
+  ajout: "Un dossier numérique unique et deux premiers paliers de soutien décidés par l'école, sans dossier MDPH."
+  statut: nouveau
+  carte: sante-paliers
+- theme: Santé mentale et écrans
+  resume: "Un accès garanti au soin"
+  v12: "Augmenter le nombre de psychologues et d'infirmiers scolaires ; deux fois plus d'internes en pédopsychiatrie (§ 5)."
+  ajout: "Un accès garanti au soin : équipes de santé mentale présentes à l'école et ratios de psychologues avec délai garanti."
+  statut: précise
+  carte: sante-acces
+- theme: Santé mentale et écrans
+  resume: "Des programmes anti-harcèlement évalués"
+  v12: "Une salle par classe pour limiter le harcèlement dans les couloirs (§ 3)."
+  ajout: "Des programmes contre le harcèlement évalués par essai contrôlé (KiVa), avant toute généralisation."
+  statut: nouveau
+  carte: sante-harcelement
+- theme: Tuteur IA
+  resume: "Un tuteur IA public, testé d'abord"
+  v12: "Pas d'IA générative pour l'élève jusqu'au bac, règle réévaluée par la loi de programmation (§ 6)."
+  ajout: "Un tuteur IA public qui guide par indices sans donner la solution, testé par essai avant toute généralisation."
+  statut: modifie
+  carte: tuteur-public
+- theme: Tuteur IA
+  resume: "Un marché public payé selon les résultats"
+  v12: "L'IA, un outil pour les enseignants, sur une infrastructure publique et souveraine (§ 6)."
+  ajout: "Un marché public en quatre lots, avec 20 à 30 % du paiement liés aux résultats d'un essai indépendant."
+  statut: précise
+  carte: tuteur-marche

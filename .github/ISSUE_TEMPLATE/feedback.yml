@@ -1,0 +1,33 @@
+name: Signaler ou proposer une correction
+description: Un chiffre faux, une source à ajouter, une proposition à préciser.
+title: "[fiche] "
+labels: [retour]
+body:
+  - type: input
+    id: carte
+    attributes:
+      label: Fiche concernée
+      description: Identifiant de la fiche (rempli automatiquement depuis le site), ou nom de l'onglet.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type de retour
+      options:
+        - Chiffre ou source à corriger
+        - Nouvelle étude ou donnée à ajouter
+        - Proposition à préciser ou reformuler
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: Détail
+      description: Ce qui est à changer, et pourquoi. Donnez la source (lien, page) pour tout chiffre.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Ce formulaire est public. N'y mettez pas d'informations personnelles. Chaque retour est relu avant toute modification du site."

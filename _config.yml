@@ -1,0 +1,7 @@
+title: "Propositions et données du GT Éducation"
+description: "Les travaux du groupe de travail Éducation de Préparer l'avenir et les données qui les appuient."
+baseurl: ""
+lang: fr
+markdown: kramdown
+repo: politiques-educatives/politiques-educatives.github.io
+exclude: [README.md, routines, scripts, "*.py", "*.sh", Gemfile, Gemfile.lock]

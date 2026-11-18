@@ -1,0 +1,59 @@
+# Bibliothèque : notes finalisées du GT Éducation (PDF dans assets/notes/, copiés depuis out/ ; pas les versions archivées).
+notes:
+  - titre: "L'allocation des heures d'enseignement, comparaison internationale et britannique"
+    fichier: EDUCATION-note1-allocation-heures-enseignement.pdf
+    date: "novembre 2026"
+    langue: FR
+    pages: 2
+    resume: "Passer d'un service compté en heures de cours à un service annuel qui réserve du temps au tutorat et au travail d'équipe."
+  - titre: "Qui décide dans l'établissement ? Comparaison avec le Royaume-Uni"
+    fichier: EDUCATION-note2-gouvernance-etablissement.pdf
+    date: "novembre 2026"
+    langue: FR
+    pages: 2
+    resume: "Donner au chef d'établissement des leviers sur le recrutement et l'organisation, avec visites-conseil et évaluation des établissements."
+  - titre: "Orienter plus tôt, et rendre au bac sa valeur"
+    fichier: EDUCATION-note3-orienter.pdf
+    date: "octobre 2026, mise à jour novembre 2026"
+    langue: FR
+    pages: 2
+    resume: "Un tuteur d'orientation dès la 4e, un bac qui départage et des admissions conditionnelles aux notes, comme au Royaume-Uni."
+  - titre: "Teaching hours: an international and British comparison"
+    fichier: EDUCATION-EN-note1-teaching-hours.pdf
+    date: "November 2026"
+    langue: EN
+    pages: 2
+    resume: "English version of note 1."
+  - titre: "Who decides in a school? A comparison with the United Kingdom"
+    fichier: EDUCATION-EN-note2-school-governance.pdf
+    date: "November 2026"
+    langue: EN
+    pages: 2
+    resume: "English version of note 2."
+  - titre: "Guide pupils earlier, and give the baccalauréat back its value"
+    fichier: EDUCATION-EN-note3-careers-guidance.pdf
+    date: "October 2026"
+    langue: EN
+    pages: 2
+    resume: "English version of note 3."
+  - titre: "An AI tutor for French state schools"
+    fichier: EDUCATION-EN-note4-ai-tutor.pdf
+    date: "October 2026"
+    langue: EN
+    pages: 1
+    resume: "A public, voice-based tutor that guides without giving the answer, tested in a randomised trial first."
+recherche:
+  - "Gouvernance des écoles anglaises (ORS)"
+  - "Groupes de niveau et tutorat (EEF, méta-analyses)"
+  - "Inspection et évaluation des établissements"
+  - "Inclusion et handicap"
+  - "Orientation (Gatsby, Affelnet, Parcoursup)"
+  - "Indice IA des formations (Boussole)"
+  - "Un outil d'IA public pour l'école"
+  - "Formation des enseignants"
+  - "Santé mentale, écrans et inclusion (dont rapports Enfants et écrans et « Protéger sans empêcher »)"
+  - "Formation continue des enseignants"
+  - "Parcours d'orientation de la 4e à l'emploi"
+  - "Rapport Milburn : recommandations, réponses, comparaison avec la France"
+  - "Masters et sur-diplômés : le master comme filtre"
+  - "Pourquoi les résultats baissent : causes et niveau de preuve"

@@ -1,0 +1,77 @@
+# Générateur de notes : se déclenche sur une issue « Générer une note » (label note) ouverte par le
+# propriétaire du dépôt uniquement, pour que personne d'autre ne dépense le crédit Gemini.
+# Clé : secret GEMINI_API_KEY (Settings > Secrets and variables > Actions). Coût plafonné par exécution
+# (MAX_RUN_USD). Une exécution à la fois ; aucun nouvel essai automatique.
+name: Générer une note
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency: note-generator
+jobs:
+  note:
+    if: contains(github.event.issue.labels.*.name, 'note') && github.event.issue.user.login == 'ajoly35'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lire la demande
+        id: req
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const b = context.payload.issue.body || "";
+            const field = (h) => { const m = b.match(new RegExp("### " + h + "\\s*\\n+([^#]*)")); const v = m ? m[1].trim() : ""; return v === "_No response_" ? "" : v; };
+            core.setOutput("sujet", field("Sujet"));
+            core.setOutput("angle", field("Angle ou proposition visée \\(facultatif\\)"));
+            core.setOutput("public", field("Pour qui") || "équipe programme");
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-writer poppler-utils fonts-crosextra-carlito >/dev/null || sudo apt-get install -y -qq libreoffice-writer poppler-utils >/dev/null
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Générer
+        id: gen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MAX_RUN_USD: "1"
+          MIN_VERIFIED: "5"
+          SUJET: ${{ steps.req.outputs.sujet }}
+          ANGLE: ${{ steps.req.outputs.angle }}
+          PUBLIC: ${{ steps.req.outputs.public }}
+        run: |
+          OUT="notes-generees/$(date -u +%F)-issue-${{ github.event.issue.number }}"
+          python3 scripts/note_generator.py --sujet "$SUJET" --angle "$ANGLE" --public "$PUBLIC" --out "$OUT" | tee meta.txt
+          echo "out=$OUT" >> "$GITHUB_OUTPUT"
+      - name: Publier dans le dépôt
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          m = json.loads(pathlib.Path("meta.txt").read_text().strip().splitlines()[-1])
+          p = pathlib.Path("_data/notes_generees.yml"); p.parent.mkdir(exist_ok=True)
+          prev = p.read_text() if p.exists() else ""
+          entry = (f"- titre: {json.dumps(m['titre'], ensure_ascii=False)}\n  sujet: {json.dumps(m['sujet'], ensure_ascii=False)}\n"
+                   f"  date: {m['date']}\n  dossier: {m['dossier']}\n  verifies: {m['verifies']}\n  faits: {m['faits']}\n")
+          p.write_text(entry + prev)
+          PY
+          git config user.name "note-generator-bot"; git config user.email "actions@users.noreply.github.com"
+          git add notes-generees _data/notes_generees.yml
+          git commit -m "Note générée : ${{ steps.req.outputs.sujet }} (issue #${{ github.event.issue.number }})" && git pull --rebase && git push
+      - name: Répondre
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          OUT: ${{ steps.gen.outputs.out }}
+          STATUS: ${{ job.status }}
+        with:
+          script: |
+            const base = `https://${context.repo.owner}.github.io/${process.env.OUT}`;
+            const fs = require("fs");
+            let meta = ""; try { meta = fs.readFileSync("meta.txt", "utf8").trim().split("\n").pop(); } catch (e) {}
+            const ok = process.env.OUT && meta.startsWith("{");
+            const m = ok ? JSON.parse(meta) : null;
+            const body = ok
+              ? `Note prête (brouillon non relu), en ligne dans quelques minutes :\n- PDF : ${base}/note.pdf\n- Word : ${base}/note.docx\n- Texte : ${base}/note.md\n- Faits : ${m.verifies} vérifiés à la source sur ${m.faits} ; non utilisés : ${base}/a-verifier.md\n- Coût Gemini : ${m.cout_usd} $`
+              : `La génération s'est arrêtée (aucun nouvel essai automatique). Voir le journal : ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number, body });

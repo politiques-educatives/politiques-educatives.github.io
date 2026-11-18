@@ -1,0 +1,26 @@
+name: Générer une note
+description: Recherche sourcée, vérification des chiffres et note au format du GT (docx et pdf). Réservé au propriétaire du dépôt.
+title: "[note] "
+labels: ["note"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        La note est produite automatiquement en 5 à 10 minutes : recherche sur le web, vérification de chaque chiffre dans sa source, rédaction au format des notes du GT, puis .docx et .pdf au gabarit v12. Le lien arrive en commentaire ici. **Brouillon non relu** : à vérifier avant tout usage.
+  - type: input
+    id: sujet
+    attributes:
+      label: Sujet
+      placeholder: "ex. Le décrochage en première année de licence"
+    validations:
+      required: true
+  - type: input
+    id: angle
+    attributes:
+      label: Angle ou proposition visée (facultatif)
+      placeholder: "ex. Une année de transition rémunérée en apprentissage"
+  - type: input
+    id: public
+    attributes:
+      label: Pour qui
+      value: "équipe programme"

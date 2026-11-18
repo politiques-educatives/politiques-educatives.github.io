@@ -1,0 +1,28 @@
+# Refreshes the InserSup charts of the « Constat » tab once a month from the public MESR API
+# (scripts/charts.py --fetch): employment and salary 30 months after the degree, by diploma.
+# Commits the charts, their CSVs and _data/charts.yml when the figures change. Text is updated by the monthly routine, not here.
+name: Refresh charts
+on:
+  schedule:
+    - cron: "30 5 3 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: charts
+jobs:
+  charts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet matplotlib
+      - run: python3 scripts/charts.py --fetch
+      - name: Commit if the figures changed
+        run: |
+          git config user.name "politiques-educatives-bot"; git config user.email "actions@users.noreply.github.com"
+          git add assets/charts _data/charts.yml
+          # the date alone is not a change worth a commit
+          if git diff --cached --quiet -I'maj_le' -I'insersup_version' -- assets/charts/data _data/charts.yml ; then echo "figures unchanged"; exit 0; fi
+          git commit -m "Constat : graphiques InserSup actualisés $(date -u +%F) [skip ci]" && git pull --rebase && git push
