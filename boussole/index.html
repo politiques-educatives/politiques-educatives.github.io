@@ -40,8 +40,9 @@ p { margin: 0; }
 .src { font-size: 13px; color: var(--ink-3); }
 header { display: grid; gap: 12px; }
 .map-wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr); gap: 14px; align-items: start; }
-@media (max-width: 1100px) { .map-wrap { grid-template-columns: 1fr; } }
-#lp-svg { max-height: 760px; }
+.map-wrap { grid-template-columns: 1fr !important; }
+#lp-svg { max-height: 560px; }
+#lp-panel { max-height: none; }
 #lp-svg { width: 100%; height: auto; background: var(--bg); border-radius: 10px; touch-action: manipulation; }
 #lp-svg path { stroke: var(--card); stroke-width: 0.6; cursor: pointer; }
 #lp-svg path:hover, #lp-svg path.on { stroke: var(--ink); stroke-width: 1.6; }
