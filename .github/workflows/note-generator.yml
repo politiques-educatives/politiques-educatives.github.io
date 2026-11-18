@@ -27,6 +27,8 @@ jobs:
             core.setOutput("sujet", field("Sujet"));
             core.setOutput("angle", field("Angle ou proposition visée \\(facultatif\\)"));
             core.setOutput("public", field("Pour qui") || "équipe programme");
+            const th = { "IA et jeunes": "ia", "Handicap et santé mentale": "handicap", "Orientation et voie pro": "orientation", "Gouvernance de l'établissement": "gouvernance" };
+            core.setOutput("theme", th[field("Thème")] || "autre");
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-writer poppler-utils fonts-crosextra-carlito >/dev/null || sudo apt-get install -y -qq libreoffice-writer poppler-utils >/dev/null
       - uses: actions/setup-python@v5
         with:
@@ -39,21 +41,24 @@ jobs:
           MAX_RUN_USD: "1"
           MIN_VERIFIED: "5"
           SUJET: ${{ steps.req.outputs.sujet }}
+          THEME: ${{ steps.req.outputs.theme }}
           ANGLE: ${{ steps.req.outputs.angle }}
           PUBLIC: ${{ steps.req.outputs.public }}
         run: |
           OUT="notes-generees/$(date -u +%F)-issue-${{ github.event.issue.number }}"
           python3 scripts/note_generator.py --sujet "$SUJET" --angle "$ANGLE" --public "$PUBLIC" --out "$OUT" | tee meta.txt
+          echo "$THEME" > theme.txt
           echo "out=$OUT" >> "$GITHUB_OUTPUT"
       - name: Publier dans le dépôt
         run: |
           python3 - <<'PY'
           import json, pathlib
           m = json.loads(pathlib.Path("meta.txt").read_text().strip().splitlines()[-1])
+          theme = pathlib.Path("theme.txt").read_text().strip() if pathlib.Path("theme.txt").exists() else "autre"
           p = pathlib.Path("_data/notes_generees.yml"); p.parent.mkdir(exist_ok=True)
           prev = p.read_text() if p.exists() else ""
           entry = (f"- titre: {json.dumps(m['titre'], ensure_ascii=False)}\n  sujet: {json.dumps(m['sujet'], ensure_ascii=False)}\n"
-                   f"  date: {m['date']}\n  dossier: {m['dossier']}\n  verifies: {m['verifies']}\n  faits: {m['faits']}\n")
+                   f"  sujets: [{theme}]\n  date: {m['date']}\n  dossier: {m['dossier']}\n  verifies: {m['verifies']}\n  faits: {m['faits']}\n")
           p.write_text(entry + prev)
           PY
           git config user.name "note-generator-bot"; git config user.email "actions@users.noreply.github.com"

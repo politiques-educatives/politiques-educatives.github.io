@@ -7,6 +7,18 @@ body:
     attributes:
       value: |
         La note est produite automatiquement en 5 à 10 minutes : recherche sur le web, vérification de chaque chiffre dans sa source, rédaction au format des notes du GT, puis .docx et .pdf au gabarit v12. Le lien arrive en commentaire ici. **Brouillon non relu** : à vérifier avant tout usage.
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Thème
+      options:
+        - IA et jeunes
+        - Handicap et santé mentale
+        - Orientation et voie pro
+        - Gouvernance de l'établissement
+        - Autre
+    validations:
+      required: true
   - type: input
     id: sujet
     attributes:

@@ -13,7 +13,7 @@ layout: default
     <details class="rediger">
       <summary class="btn btn-gen">Rédiger une note</summary>
       <div class="rd-box">
-        <p><a class="btn btn-gen" href="https://github.com/{{ site.repo }}/issues/new?template=note.yml&title={{ '[note] ' | append: s.court | uri_escape }}&sujet={{ s.titre | uri_escape }}" target="_blank" rel="noopener">Générer un brouillon sur ce sujet</a></p>
+        <p><a class="btn btn-gen" href="https://github.com/{{ site.repo }}/issues/new?template=note.yml&title={{ '[note] ' | append: s.court | uri_escape }}&theme={{ s.court | uri_escape }}&sujet={{ s.titre | uri_escape }}" target="_blank" rel="noopener">Générer un brouillon sur ce sujet</a></p>
         <p class="note-src">Recherche sourcée, chiffres vérifiés à la source, note au format du GT (Word et PDF). Brouillon non relu ; génération réservée aux membres autorisés du dépôt.</p>
         <p><a href="{{ '/assets/modele/modele-note.docx' | relative_url }}">Modèle Word</a> · <a href="{{ '/assets/modele/modele-note.md' | relative_url }}">Modèle texte</a> : En bref, constat chiffré, analyse, position du programme, propositions, argumentaire, mise en œuvre, références. Une à deux pages ; jamais de chiffre ni de position du candidat inventés.</p>
         <p class="note-src">Dans « Sources », le bouton « Copier » de chaque fiche copie son chiffre clé et sa référence. Une erreur ? <a href="https://github.com/{{ site.repo }}/issues/new?template=feedback.yml" target="_blank" rel="noopener">Signaler une correction</a>.</p>
