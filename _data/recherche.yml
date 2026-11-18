@@ -1,0 +1,65 @@
+# Généré par scripts/build_recherche.py
+- slug: 01-england-governance-ors
+  titre: "01 · England: school governance, teacher working time, benchmarks vs France"
+  sujets: ["formation"]
+  mots: 3496
+- slug: 02-groupes-niveau-tutorat
+  titre: "02 — Groupes de niveau, groupes de besoins, tutorat : what the evidence says"
+  sujets: ["formation"]
+  mots: 3303
+- slug: 03-inspection-evaluation
+  titre: "03 — Teacher inspection and school evaluation: France vs benchmarks"
+  sujets: ["formation"]
+  mots: 3503
+- slug: 04-inclusion
+  titre: "04. Inclusion of pupils with disabilities: Italy, New York City, Québec"
+  sujets: ["inclusion"]
+  mots: 2643
+- slug: 05-orientation
+  titre: "05 — Orientation (careers guidance): France, England, Finland, evidence"
+  sujets: ["orientation"]
+  mots: 3726
+- slug: 06-index-ia-formations
+  titre: "06 — An AI-resilience index for French post-bac formations: evidence base"
+  sujets: ["orientation", "emploi"]
+  mots: 3463
+- slug: 07-outil-ia-public
+  titre: "07 — A public AI tool for pupils: what exists, who could bid, what the evidence says"
+  sujets: ["ecrans"]
+  mots: 3046
+- slug: 08-formation-enseignants
+  titre: "08 · Formation initiale et continue des enseignants"
+  sujets: ["formation"]
+  mots: 2510
+- slug: 09-brief-sante-mentale-handicap-inclusion
+  titre: "Brief de recherche : inclusion scolaire, santé scolaire et santé mentale des lycéens"
+  sujets: ["inclusion", "ecrans"]
+  mots: 4511
+- slug: 09-lecture-rapport-cianum-sortir-clandestinite
+  titre: "Lecture : CIANum, « Sortir de la clandestinité. Mettre l'IA au service d'une nouvelle ambition pour le système éducatif » (juin 2026)"
+  sujets: ["ecrans"]
+  mots: 3804
+- slug: 10-brief-formation-continue-enseignants
+  titre: "Augmenter réellement la formation continue des enseignants : état des lieux, comparaisons, options"
+  sujets: ["formation"]
+  mots: 5817
+- slug: 12-milburn-review
+  titre: "Milburn review of young people and work: recommendations, responses, France comparison"
+  sujets: ["emploi"]
+  mots: 2358
+- slug: 13-masters-job-market
+  titre: "Are young master's graduates doing worse than bachelor's graduates? US evidence and the French case"
+  sujets: ["emploi"]
+  mots: 1901
+- slug: 13-master-as-filter-evidence
+  titre: "Does a young hire need a master's? Evidence on the master as a filter"
+  sujets: ["emploi"]
+  mots: 1633
+- slug: 13-france-firms-master-filter-and-solutions
+  titre: "Do French firms use the master's as a filter? And how do we get young people into work faster?"
+  sujets: ["emploi"]
+  mots: 2713
+- slug: 14-why-scores-fall
+  titre: "Why are French scores falling? Evidence on causes (18 Nov 2026)"
+  sujets: ["ecrans"]
+  mots: 2130

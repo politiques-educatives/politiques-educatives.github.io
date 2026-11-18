@@ -1,5 +1,5 @@
 # Propositions du GT Éducation, une entrée par proposition.
-# Champs : id, theme, titre (une ligne), explication (2-4 phrases reprises des notes), preuves (liste : chiffre + source),
+# Champs : id, theme, sujets (hubs), issue_de (note d'origine), titre (une ligne), explication (2-4 phrases reprises des notes), preuves (liste : chiffre + source),
 #          note (fichier PDF dans assets/notes/), statut (proposition | piste | à chiffrer), maj_le (AAAA-MM-JJ)
 # Règle : chaque chiffre vient d'une note ou d'un dossier de recherche du GT, avec sa source. Aucune position du candidat inventée.
 
@@ -15,6 +15,8 @@
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [formation]
+  issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
 - id: heures-emploi-du-temps
   theme: Temps des professeurs
@@ -27,6 +29,8 @@
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [formation]
+  issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
 - id: heures-dotation
   theme: Temps des professeurs
@@ -38,6 +42,8 @@
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [formation]
+  issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
 - id: heures-mercredi
   theme: Temps des professeurs
@@ -49,6 +55,8 @@
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [formation]
+  issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
 - id: heures-charge
   theme: Temps des professeurs
@@ -62,6 +70,9 @@
   maj_le: 2026-11-18
 
 # ---------- Gouvernance
+  sujets: [formation]
+  issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
+
 - id: gouv-recruter
   theme: Gouvernance de l'établissement
   titre: "Recruter une part des enseignants sur projet, d'abord dans les établissements les moins demandés"
@@ -73,6 +84,8 @@
   note: EDUCATION-note2-gouvernance-etablissement.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [formation]
+  issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
 
 - id: gouv-coordinateurs
   theme: Gouvernance de l'établissement
@@ -83,6 +96,8 @@
   note: EDUCATION-note2-gouvernance-etablissement.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [formation]
+  issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
 
 - id: gouv-visite
   theme: Gouvernance de l'établissement
@@ -94,6 +109,8 @@
   note: EDUCATION-note2-gouvernance-etablissement.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [formation]
+  issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
 
 - id: gouv-evaluation
   theme: Gouvernance de l'établissement
@@ -107,6 +124,9 @@
   maj_le: 2026-11-18
 
 # ---------- Orientation et bac
+  sujets: [formation]
+  issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
+
 - id: orient-4e
   theme: Orientation et bac
   titre: "Orienter dès la 4e, avec un tuteur référent jusqu'en terminale"
@@ -119,6 +139,8 @@
   note: EDUCATION-note3-orienter.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [orientation]
+  issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
 
 - id: orient-parents
   theme: Orientation et bac
@@ -130,6 +152,8 @@
   note: EDUCATION-note3-orienter.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [orientation]
+  issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
 
 - id: orient-gatsby
   theme: Orientation et bac
@@ -141,6 +165,8 @@
   note: EDUCATION-note3-orienter.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [orientation]
+  issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
 
 - id: orient-bac
   theme: Orientation et bac
@@ -153,6 +179,8 @@
   note: EDUCATION-note3-orienter.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [orientation]
+  issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
 
 - id: orient-transparence
   theme: Orientation et bac
@@ -165,6 +193,8 @@
   note: EDUCATION-note3-orienter.pdf
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [orientation]
+  issue_de: "Proposition 3 du GT : la transparence sur tout le parcours (novembre 2026)"
 
 - id: orient-debouches
   theme: Orientation et bac
@@ -179,6 +209,9 @@
   maj_le: 2026-11-18
 
 # ---------- IA, jeunes et emploi
+  sujets: [orientation, emploi]
+  issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
+
 - id: ia-master
   theme: IA, jeunes et emploi
   titre: "Un jeune a-t-il vraiment besoin d'un master ? Une licence qui mène à un métier"
@@ -191,6 +224,8 @@
     - "Seuls 30 % des étudiants obtiennent leur licence en trois ans (SIES, Note Flash n° 29, novembre 2025)."
   statut: à chiffrer
   maj_le: 2026-11-18
+  sujets: [emploi]
+  issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-garantie
   theme: IA, jeunes et emploi
@@ -203,6 +238,8 @@
     - "Financement proposé : 500 millions de livres en 2027/28, 5,8 milliards par an d'ici 2036/37, pour 440 000 jeunes de plus en emploi durable (Milburn, 2026, p. 25 et 30-31) ; montants non engagés par le gouvernement."
   statut: à chiffrer
   maj_le: 2026-11-18
+  sujets: [emploi]
+  issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-observatoire
   theme: IA, jeunes et emploi
@@ -213,6 +250,8 @@
     - "Embauches en CDI des 21-29 ans : -28,3 % dans le cinquième des métiers les plus exposés à l'IA entre novembre 2022 et mars 2026, une baisse dont une partie vient du télétravail (LIFT, 2026)."
   statut: à chiffrer
   maj_le: 2026-11-18
+  sujets: [emploi]
+  issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-bases
   theme: IA, jeunes et emploi
@@ -224,6 +263,8 @@
     - "À 15 ans, un tiers des élèves est en difficulté de lecture, contre 15 % en 2000 (DEPP, note d'information 26.40, septembre 2026)."
   statut: à chiffrer
   maj_le: 2026-11-18
+  sujets: [emploi, ecrans]
+  issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-marche
   theme: IA, jeunes et emploi
@@ -236,54 +277,9 @@
   maj_le: 2026-11-18
 
 # ---------- Santé mentale et écrans
-- id: sante-portable
-  theme: Santé mentale et écrans
-  titre: "Évaluer « Portable en pause » avant d'en faire un argument"
-  explication: "Le dispositif est généralisé aux collèges publics en 2025-2026 sans évaluation indépendante. Les interdictions du téléphone ont des effets mitigés selon les pays : il faut mesurer avant de généraliser ou de s'en prévaloir."
-  preuves:
-    - "En Norvège, l'interdiction du smartphone au collège a amélioré les notes des filles et réduit leurs consultations pour troubles psychologiques (Abrahamsson, 2024) ; aucun effet sur les résultats en Suède (2020), en Angleterre (Goodyear et al., 2025) et aux États-Unis (2025-2026)."
-    - "Les élèves distraits par les appareils de leurs camarades obtiennent 15 points de moins en mathématiques (PISA 2022), ce qui n'est qu'une corrélation."
-    - "Les 16-19 ans passent plus de cinq heures par jour sur les écrans contre 14 minutes à lire (CNL, 2026)."
-  note: ""
-  statut: piste
-  maj_le: 2026-11-18
+  sujets: [emploi]
+  issue_de: "Note IA et jeunes (novembre 2026)"
 
-- id: sante-paliers
-  theme: Santé mentale et écrans
-  titre: "Un dossier unique et deux premiers paliers de soutien décidés par l'école"
-  explication: "Les deux premiers paliers de soutien décidés par l'école sans dossier MDPH, et un dossier numérique unique (livret de parcours inclusif, GEVA-Sco, téléservice MDPH) qui permet à l'établissement de décider des aménagements d'examens de droit commun, avec un coordinateur inclusion déchargé par établissement."
-  preuves:
-    - "Délai moyen en MDPH de 4,4 mois au deuxième trimestre 2025, contre 4 mois légaux ; budget de l'école inclusive de 4,74 Md€ pour 139 993 AESH (Sénat, PLF 2026)."
-    - "En Finlande, l'école décide seule des deux premiers paliers de soutien, dont bénéficient 26 % des élèves."
-    - "Le livret de parcours inclusif ne couvrait que 164 000 élèves en juin 2023 (Cour des comptes, septembre 2024)."
-  note: ""
-  statut: piste
-  maj_le: 2026-11-18
-
-- id: sante-acces
-  theme: Santé mentale et écrans
-  titre: "Un accès garanti au soin, plutôt que former seulement au repérage"
-  explication: "Des équipes de santé mentale rattachées au système de santé mais présentes à l'école, et des ratios de psychologues avec délai garanti. Former au repérage ne suffit pas si l'aval (PsyEN, CMP, maisons des adolescents) est saturé."
-  preuves:
-    - "19 % des lycéens sont à risque important de dépression, 25,7 % des filles et 11,7 % des garçons (EnCLASS 2024, Santé publique France, juin 2026)."
-    - "La Finlande garantit un rendez-vous sous 7 jours, avec un psychologue pour 780 élèves ; la France compte 1 PsyEN pour 1 500 élèves (Cour des comptes, 2020)."
-    - "Les premiers secours en santé mentale améliorent les connaissances des formés mais ont « peu ou pas d'effet » mesuré sur la santé mentale des personnes aidées (revue Cochrane, 2023, 21 essais)."
-  note: ""
-  statut: piste
-  maj_le: 2026-11-18
-
-- id: sante-harcelement
-  theme: Santé mentale et écrans
-  titre: "Contre le harcèlement, des programmes évalués par essai contrôlé"
-  explication: "Privilégier les programmes dont l'effet est prouvé et conditionner toute généralisation à un essai contrôlé, y compris pour la pleine conscience en classe."
-  preuves:
-    - "Le programme finlandais KiVa a prouvé une baisse significative du harcèlement par essai randomisé (117 écoles traitées contre 117 témoins, Garandeau et Salmivalli, 2018) ; pHARe n'a pas d'évaluation indépendante publiée de la victimisation."
-    - "La pleine conscience universelle en classe n'a montré aucun effet supérieur à l'enseignement habituel (essai MYRIAD, Kuyken et al., 2022, 8 376 élèves)."
-  note: ""
-  statut: piste
-  maj_le: 2026-11-18
-
-# ---------- Tuteur IA
 - id: tuteur-public
   theme: Tuteur IA
   titre: "Un tuteur IA public, vocal, qui ne donne jamais la solution avant une tentative"
@@ -291,9 +287,11 @@
   preuves:
     - "Les tuteurs structurés qui guident sans donner la réponse améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025)."
     - "L'accès libre à l'IA fait baisser les notes aux examens passés sans elle de 17 à 24 % (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026)."
-  note: EDUCATION-EN-note4-ai-tutor.pdf
+  note: ""
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [ecrans]
+  issue_de: "Note sur un tuteur IA pour l'Éducation nationale (octobre 2026)"
 
 - id: tuteur-marche
   theme: Tuteur IA
@@ -301,6 +299,8 @@
   explication: "Éviter l'erreur de MIA Seconde : séparer conception pédagogique et garde-fous, accès aux modèles par une passerelle publique (API Albert), voix sur des modèles français ouverts, et données d'orientation. Changer de modèle sous trois mois, remettre le modèle en concurrence tous les 12 à 24 mois, et lier 20 à 30 % du paiement aux résultats d'un essai indépendant."
   preuves:
     - "MIA Seconde, commandé en 2022 pour 2,8 M€ sur trois ans, a été livré avec un an de retard, sans résultats publiés (Next, 2024)."
-  note: EDUCATION-EN-note4-ai-tutor.pdf
+  note: ""
   statut: proposition
   maj_le: 2026-11-18
+  sujets: [ecrans]
+  issue_de: "Note sur un tuteur IA pour l'Éducation nationale (octobre 2026)"

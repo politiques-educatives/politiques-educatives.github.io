@@ -1,93 +1,57 @@
 #!/usr/bin/env python3
-"""Build the « Constat » charts (PNG + CSV) and _data/charts.yml.
+"""Write the data of the live charts (assets/charts/data/*.csv, long format) and _data/charts.yml.
 
 Usage: python3 scripts/charts.py [--fetch]
-  --fetch   refresh the InserSup charts from the public MESR API (fr-esr-insersup); used by
-            .github/workflows/charts.yml once a month. Without it, the last published values below are used.
+  --fetch   refresh the InserSup series from the public MESR API (fr-esr-insersup); used by
+            .github/workflows/charts.yml once a month. Without it, the last published values below are kept.
 
-Every figure is copied from a GT Éducation note or research file, with its source in the caption
-(_data/charts.yml). Static charts (DEPP, PISA, RERS, LIFT) are updated by hand when a new edition is out.
+The charts are drawn in the browser (Vega-Lite, assets/app.js) from these CSVs; their titles, captions and
+sources are in _data/graphiques.yml. Every figure here comes from a GT Éducation note or research file.
+Columns: categorie, serie, valeur [, salaire].
 """
 import csv, datetime, json, os, sys, urllib.parse, urllib.request
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "assets", "charts")
-DATA = os.path.join(OUT, "data")
+DATA = os.path.join(ROOT, "assets", "charts", "data")
 os.makedirs(DATA, exist_ok=True)
 
-# reference palette (dataviz skill), validated light mode: blue, orange
-C1, C2 = "#2a78d6", "#eb6834"
-INK, INK2, MUTED, GRID, SURF = "#1d2433", "#4a5468", "#6b7385", "#e3e6ec", "#ffffff"
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10.5, "axes.edgecolor": GRID,
-                     "axes.labelcolor": INK2, "xtick.color": INK2, "ytick.color": INK2,
-                     "axes.spines.top": False, "axes.spines.right": False, "axes.spines.left": False,
-                     "figure.facecolor": SURF, "axes.facecolor": SURF})
 
-
-def fr(x, d=1):
-    s = f"{x:.{d}f}".replace(".", ",")
-    return s[:-2] if d and s.endswith(",0") else s
-
-
-def save(fig, name, rows, header):
-    fig.savefig(os.path.join(OUT, name + ".png"), dpi=160, bbox_inches="tight")
-    plt.close(fig)
+def write(name, rows, header=("categorie", "serie", "valeur")):
     with open(os.path.join(DATA, name + ".csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f); w.writerow(header); w.writerows(rows)
 
 
-def grouped(name, cats, s1, s2, l1, l2, header, ylabel="%"):
-    fig, ax = plt.subplots(figsize=(7.2, 3.6))
-    x = range(len(cats)); w = 0.36
-    for off, vals, col, lab in ((-w / 2 - 0.01, s1, C1, l1), (w / 2 + 0.01, s2, C2, l2)):
-        bars = ax.bar([i + off for i in x], vals, w, color=col, label=lab, zorder=2)
-        for b, v in zip(bars, vals):
-            ax.text(b.get_x() + b.get_width() / 2, v + 1, fr(v), ha="center", va="bottom", fontsize=9, color=INK)
-    ax.set_xticks(list(x)); ax.set_xticklabels(cats)
-    ax.yaxis.grid(True, color=GRID, zorder=0); ax.set_ylabel(ylabel)
-    ax.legend(frameon=False, loc="upper left", ncol=2)
-    ax.set_ylim(0, max(s1 + s2) * 1.18)
-    save(fig, name, [[c, a, b] for c, a, b in zip(cats, s1, s2)], header)
+# ---------- static series (updated by hand with each new edition of the source)
+STATIC = {
+    # Inclusion
+    "aesh": [["2017", "AESH", 43000], ["2025", "AESH", 139993]],  # Sénat PLF 2026 ; 2017 « environ 43 000 » (Cnesco 2026)
+    "mdph": [["2023", "Délai moyen", 4.7], ["T2 2025", "Délai moyen", 4.4], ["2023", "Délai légal", 4], ["T2 2025", "Délai légal", 4]],
+    # Écrans, santé mentale, IA à l'école
+    "seconde": [["Maths 2de GT", "2019", 19.2], ["Maths 2de GT", "2026", 28.1], ["Maths 2de pro", "2019", 66.2], ["Maths 2de pro", "2026", 75.4],
+                ["Français 2de GT", "2019", 18.7], ["Français 2de GT", "2026", 22.1], ["Français 2de pro", "2019", 65.7], ["Français 2de pro", "2026", 69.8]],
+    "pisa": [["2000", "France", 15], ["2018", "France", 21], ["2022", "France", 27], ["2025", "France", 33], ["2025", "Moyenne OCDE", 30]],
+    "depression": [["Filles", "Lycéens", 25.7], ["Garçons", "Lycéens", 11.7], ["Ensemble", "Lycéens", 19]],
+    "psy": [["France (PsyEN)", "Élèves par psychologue", 1500], ["Finlande", "Élèves par psychologue", 780]],
+    # IA, jeunes et emploi
+    "filtre": [["Enfants d'ouvriers", "En licence", 10.1], ["Enfants d'ouvriers", "En master", 6.3],
+               ["Enfants de cadres", "En licence", 31.1], ["Enfants de cadres", "En master", 42.1]],
+    "embauches": [["Métiers les plus exposés à l'IA", "Embauches en CDI, 21-29 ans", -28.3], ["Métiers les moins exposés à l'IA", "Embauches en CDI, 21-29 ans", -7.5]],
+    # Orientation et voie professionnelle
+    "voeux": [["2de générale et technologique", "Premiers vœux satisfaits", 87.0], ["2de professionnelle", "Premiers vœux satisfaits", 61.3], ["CAP", "Premiers vœux satisfaits", 49.9]],
+    "boursiers": [["Élèves boursiers", "Décision vers la voie professionnelle", 52.2], ["Autres élèves", "Décision vers la voie professionnelle", 33.3]],
+    "licence-bac": [["Bac général", "Licence en 3 ou 4 ans", 46.1], ["Bac technologique", "Licence en 3 ou 4 ans", 14.0], ["Bac professionnel", "Licence en 3 ou 4 ans", 6.5]],
+    "emploi6mois": [["Après un bac pro", "En emploi à 6 mois", 43], ["Après un BTS", "En emploi à 6 mois", 59]],
+    # Socle : temps et formation des professeurs
+    "heures": [["Primaire", "France", 900], ["Primaire", "Moyenne OCDE", 770], ["Primaire", "Angleterre (réel)", 893],
+               ["Collège", "France", 720], ["Collège", "Moyenne OCDE", 710], ["Collège", "Angleterre (réel)", 777]],
+    "formation": [["Professeurs des écoles", "Jours de formation par an", 2], ["Professeurs du second degré", "Jours de formation par an", 1.5],
+                  ["Autres cadres A de l'État", "Jours de formation par an", 9.2]],
+}
+for k, v in STATIC.items():
+    write(k, v)
 
-
-# ---------- 1. Seconde 2026 vs 2019 (DEPP, test de positionnement de seconde 2026)
-grouped("seconde", ["Maths\n2de GT", "Maths\n2de pro", "Français\n2de GT", "Français\n2de pro"],
-        [19.2, 66.2, 18.7, 65.7], [28.1, 75.4, 22.1, 69.8], "2019", "2026",
-        ["groupe", "part_groupes_faibles_2019_pct", "part_groupes_faibles_2026_pct"],
-        ylabel="% dans les groupes faibles")
-
-# ---------- 2. PISA, compréhension de l'écrit, élèves sous le niveau 2 (DEPP, NI 26.40)
-yrs, fra = [2000, 2018, 2022, 2025], [15, 21, 27, 33]
-fig, ax = plt.subplots(figsize=(7.2, 3.4))
-ax.plot(yrs, fra, color=C1, lw=2, marker="o", ms=8, zorder=3, label="France")
-for x, y in zip(yrs, fra):
-    ax.text(x, y + 1.6, f"{y} %", ha="center", fontsize=9.5, color=INK)
-ax.plot([2025], [30], marker="D", ms=8, color=C2, ls="none", zorder=3, label="Moyenne OCDE 2025")
-ax.text(2025.4, 30, "OCDE 30 %", va="center", fontsize=9, color=INK2)
-ax.set_ylim(0, 40); ax.set_xticks(yrs); ax.yaxis.grid(True, color=GRID, zorder=0)
-ax.set_ylabel("% d'élèves de 15 ans sous le niveau 2"); ax.legend(frameon=False, loc="upper left")
-save(fig, "pisa", [[y, v, ""] for y, v in zip(yrs, fra)] + [[2025, "", 30]], ["annee", "france_pct", "ocde_pct"])
-
-# ---------- 3. Le filtre social du master (MESR, RERS 2025)
-grouped("filtre", ["Enfants d'ouvriers", "Enfants de cadres"], [10, 31], [6, 42], "en licence", "en master",
-        ["origine", "part_etudiants_licence_pct", "part_etudiants_master_pct"], ylabel="% des étudiants")
-
-# ---------- 4. Embauches en CDI des 21-29 ans, nov. 2022-mars 2026 (LIFT, 2026)
-fig, ax = plt.subplots(figsize=(7.2, 2.2))
-labs, vals = ["Métiers les moins exposés à l'IA", "Métiers les plus exposés à l'IA"], [-7.5, -28.3]
-bars = ax.barh(labs, vals, color=[C1, C2], height=0.5, zorder=2)
-for b, v in zip(bars, vals):
-    ax.text(v - 0.6, b.get_y() + b.get_height() / 2, fr(v) + " %", ha="right", va="center", fontsize=9.5, color=INK)
-ax.set_xlim(-34, 0); ax.xaxis.grid(True, color=GRID, zorder=0); ax.axvline(0, color=INK2, lw=1)
-ax.set_xlabel("Variation des embauches en CDI des 21-29 ans (%)")
-save(fig, "embauches", [[l, v] for l, v in zip(labs, vals)], ["groupe", "variation_pct"])
-
-# ---------- 5-6. InserSup : emploi salarié à 30 mois par diplôme (auto)
-LAST = {  # last published values (InserSup 2026_S1), used when --fetch is not given or fails
+# ---------- InserSup (refreshed monthly)
+LAST = {
     "bars": [["Licence générale", 50, 1750], ["Licence pro", 78, 1990], ["Master", 69, 2370],
              ["Master en alternance", 77, 2580], ["Licence pro en alternance", 82, 2030]],
     "trend": {"Licence générale": {2019: 49.93, 2020: 51.92, 2021: 51.46, 2022: 52.28, 2023: 50.35},
@@ -144,32 +108,13 @@ if "--fetch" in sys.argv:
     except Exception as e:  # keep the last published figures rather than break the site
         print("InserSup fetch failed, keeping last values:", e)
 
-fig, ax = plt.subplots(figsize=(7.2, 3.2))
-labs = [b[0] for b in ins["bars"]]; vals = [b[1] for b in ins["bars"]]
-cols = [C2 if "Licence générale" in l else C1 for l in labs]
-bars = ax.barh(labs[::-1], vals[::-1], color=cols[::-1], height=0.55, zorder=2)
-for b, v, s in zip(bars, vals[::-1], [x[2] for x in ins["bars"]][::-1]):
-    ax.text(v + 1, b.get_y() + b.get_height() / 2, f"{v} %  ·  {s:,} € net".replace(",", " "), va="center", fontsize=9, color=INK)
-ax.set_xlim(0, 110); ax.xaxis.grid(True, color=GRID, zorder=0)
-ax.set_xlabel("Diplômés en emploi salarié en France 30 mois après le diplôme (%)")
-save(fig, "insersup", ins["bars"], ["diplome", "emploi_salarie_30_mois_pct", "salaire_median_net_mensuel_eur"])
+write("insersup", [[b[0], "Emploi salarié à 30 mois", b[1], b[2]] for b in ins["bars"]], ("categorie", "serie", "valeur", "salaire"))
+write("insersup-tendance", [[str(y), lab, round(v, 1)] for lab, s in ins["trend"].items() for y, v in sorted(s.items())])
 
-fig, ax = plt.subplots(figsize=(7.2, 3.2))
-for lab, col, mk in (("Licence pro", C1, "o"), ("Master", "#1d2433", "s"), ("Licence générale", C2, "^")):
-    s = ins["trend"][lab]; xs = sorted(s)
-    ax.plot(xs, [s[x] for x in xs], color=col, lw=2, marker=mk, ms=7, label=lab, zorder=3)
-    ax.text(xs[-1] + 0.15, s[xs[-1]], lab, va="center", fontsize=9, color=INK2)
-ax.set_ylim(40, 85); ax.yaxis.grid(True, color=GRID, zorder=0)
-ax.set_xticks(sorted(ins["trend"]["Master"])); ax.set_xlabel("Promotion"); ax.set_ylabel("% en emploi salarié à 30 mois")
-ax.set_xlim(None, max(ins["trend"]["Master"]) + 1.3); ax.legend(frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=3)
-rows = [[lab, y, v] for lab, s in ins["trend"].items() for y, v in sorted(s.items())]
-save(fig, "insersup-tendance", rows, ["diplome", "promotion", "emploi_salarie_30_mois_pct"])
-
-# ---------- _data/charts.yml (dates and InserSup values for captions)
 b = {x[0]: x for x in ins["bars"]}
 with open(os.path.join(ROOT, "_data", "charts.yml"), "w", encoding="utf-8") as f:
     f.write(f"maj_le: {datetime.date.today().isoformat()}\n")
     f.write(f"insersup_version: \"{ins['version']}\"\ninsersup_promo: \"{ins['promo']}\"\ninsersup_promo_salaire: \"{ins['promo_salaire']}\"\n")
     for k, key in (("lg", "Licence générale"), ("lp", "Licence pro"), ("m", "Master"), ("ma", "Master en alternance"), ("lpa", "Licence pro en alternance")):
         f.write(f"{k}: {b[key][1]}\n{k}_salaire: {b[key][2]}\n")
-print("charts ok", ins["version"])
+print("charts data ok", ins["version"])

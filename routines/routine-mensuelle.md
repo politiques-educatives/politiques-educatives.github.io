@@ -19,5 +19,5 @@ Create a branch `claude/veille-YYYY-MM`, make the changes below, and open a pull
 
 **3. Open issues.** Read the open issues labelled `retour`. For each one that gives a checkable source, make the correction it asks for if the source confirms it, and reference the issue in the PR (« Corrige #n »). Otherwise reply in the PR description with what is missing.
 
-Do not edit charts, scripts, workflows, the Boussole folder or `_data/v12.yml`.
+Do not edit charts, scripts, workflows, the Boussole folder or `_data/sujets.yml`.
 In the pull request description, list each changed entry in one line (what changed and why). If nothing new meets these rules, open no pull request and say so.

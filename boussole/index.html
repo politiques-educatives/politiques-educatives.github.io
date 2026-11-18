@@ -39,6 +39,23 @@ p { margin: 0; }
 .small { font-size: 14px; color: var(--ink-3); }
 .src { font-size: 13px; color: var(--ink-3); }
 header { display: grid; gap: 12px; }
+.map-wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr); gap: 14px; align-items: start; }
+@media (max-width: 860px) { .map-wrap { grid-template-columns: 1fr; } }
+#lp-svg { width: 100%; height: auto; background: var(--bg); border-radius: 10px; touch-action: manipulation; }
+#lp-svg path { stroke: var(--card); stroke-width: 0.6; cursor: pointer; }
+#lp-svg path:hover, #lp-svg path.on { stroke: var(--ink); stroke-width: 1.6; }
+#lp-svg circle { stroke: var(--card); stroke-width: 0.5; cursor: pointer; }
+#lp-svg circle.on { stroke: var(--ink); stroke-width: 2; }
+.lp-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.lp-tools select, .lp-tools input { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); max-width: 100%; }
+.lp-legend { display: flex; gap: 4px; align-items: center; font-size: 13px; color: var(--ink-3); flex-wrap: wrap; }
+.lp-legend i { width: 26px; height: 10px; display: inline-block; border-radius: 2px; }
+#lp-panel { background: var(--bg); border-radius: 10px; padding: 12px 14px; font-size: 15px; display: grid; gap: 8px; max-height: 640px; overflow: auto; }
+#lp-panel table { border-collapse: collapse; width: 100%; font-size: 13px; }
+#lp-panel td, #lp-panel th { padding: 4px 6px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+#lp-panel th { color: var(--ink-3); font-weight: 600; }
+#lp-panel .pill { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }
+#lp-panel button.link { background: none; border: none; color: var(--accent, #2a4d8f); text-decoration: underline; cursor: pointer; padding: 0; font: inherit; text-align: left; }
 .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; min-width: 0; display: grid; gap: 12px; }
 button, input, select { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
@@ -128,7 +145,7 @@ details ul { padding-left: 20px; margin: 6px 0; }
       <p class="small" id="profil-msg"></p>
     </div>
     <nav class="steps" aria-label="Étapes">
-      <a href="#e1">1 · Fin de 3e</a><a href="#e2">2 · Le bac</a><a href="#e3">3 · Après le bac</a><a href="#e4">4 · Réussir</a><a href="#e45">5 · Master ou emploi</a><a href="#e5">6 · Le travail et l'IA</a>
+      <a href="#e1">1 · Fin de 3e</a><a href="#carte">Carte des lycées pro</a><a href="#e2">2 · Le bac</a><a href="#e3">3 · Après le bac</a><a href="#e4">4 · Réussir</a><a href="#e45">5 · Master ou emploi</a><a href="#e5">6 · Le travail et l'IA</a>
     </nav>
   </header>
 
@@ -148,6 +165,24 @@ details ul { padding-left: 20px; margin: 6px 0; }
         <button class="chip big" type="button" data-v="pro" aria-pressed="false">Lycée professionnel : bac pro ou CAP</button>
       </div>
     </div>
+  </section>
+
+  <section class="card" id="carte" aria-labelledby="h-carte">
+    <div class="step-h"><span class="step-n">⌖</span><h2 id="h-carte">La voie pro près de chez toi : lycées, industries locales, IA et concurrence chinoise</h2></div>
+    <p class="small">Chaque point est un lycée qui prépare un bac pro ou un CAP ; chaque zone est une zone d'emploi. Touche un lycée pour voir ses spécialités (élèves de terminale, emploi 6 mois après, part des tâches que l'IA sait faire, concurrence chinoise sur les usines où travaillent ces diplômés) et les principales industries autour. Touche une zone pour voir son industrie et ses lycées.</p>
+    <div class="lp-tools">
+      <label class="small" for="lp-layer">Colorer selon</label>
+      <select id="lp-layer"><option value="cn">Concurrence chinoise sur l'industrie de la zone (2018-2024)</option><option value="ai">IA : part des élèves de la zone dans des spécialités où l'IA fait au moins 4 tâches sur 10</option><option value="mfg">Poids de l'industrie dans l'emploi de la zone</option></select>
+      <label class="small" for="lp-spec">Spécialité</label>
+      <select id="lp-spec"><option value="">Toutes les spécialités</option></select>
+      <input id="lp-q" type="search" placeholder="Ta ville ou ton lycée" list="lp-dl" aria-label="Ville ou lycée"><datalist id="lp-dl"></datalist>
+    </div>
+    <div class="lp-legend" id="lp-legend"></div>
+    <div class="map-wrap">
+      <svg id="lp-svg" role="img" aria-label="Carte des zones d'emploi et des lycées professionnels"></svg>
+      <div id="lp-panel"><p class="small">Choisis un lycée ou une zone sur la carte, ou cherche ta ville.</p></div>
+    </div>
+    <p class="src" id="lp-src"></p>
   </section>
 
   <section class="card" id="e2" aria-labelledby="h2-">
@@ -260,6 +295,8 @@ details ul { padding-left: 20px; margin: 6px 0; }
 <script src="reussite.js"></script>
 <script src="masters.js"></script>
 <script src="chinashock.js"></script>
+<script src="ze-geo.js"></script>
+<script src="lycees-pro.js"></script>
 <script>
 const D = window.BOUSSOLE;
 const RE = window.BOUSSOLE_REUSSITE || { adm: {}, succ: {}, spec_totals: {}, nat: {}, disc: {}, disc_fr: {}, meta: {} };
@@ -560,15 +597,102 @@ renderList();
   $("mnote").innerHTML = `${M.meta.n_programmes.toLocaleString("fr-FR")} masters d'université. Emploi salarié en France 30 mois après le diplôme, diplômés de 2023 (* : 2022 et 2023 réunis pour les petites formations) ; emploi stable : CDI ou fonctionnaire, parmi ceux qui travaillent ; salaire net médian en équivalent temps plein, diplômés de 2021 (seul chiffre publié). Un taux bas ne veut pas toujours dire un échec : l'emploi à l'étranger, à son compte ou la poursuite en thèse ne sont pas comptés (voir la dernière colonne). « nd » : non diffusé, trop peu de diplômés. Source : MESR, <a href="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-insersup">InserSup</a>, version 2026_S1.`;
 })();
 
+
+// Carte des lycées professionnels (scripts/build_lycees_pro.py) : IA et concurrence chinoise
+(function () {
+  const L = window.LYCEES_PRO, G = window.ZE_GEO, svg = document.getElementById("lp-svg");
+  if (!L || !G || !svg) return;
+  const NS = "http://www.w3.org/2000/svg", esc2 = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+  const [x0, y0, x1, y1] = G.bbox;
+  svg.setAttribute("viewBox", `${x0} ${y0} ${x1 - x0} ${y1 - y0}`);
+  const RAMP = ["#e8eef7", "#c6d6ec", "#f2c98a", "#e8894a", "#c23b3b"];
+  const bin = (v, cuts) => v == null ? -1 : cuts.findIndex((c) => v < c) < 0 ? cuts.length : cuts.findIndex((c) => v < c);
+  const LAYERS = {
+    cn: { cuts: [20, 40, 60, 80], val: (z) => z.pct, leg: ["20 % les moins exposées", "", "moyenne", "", "20 % les plus exposées"], dot: (l) => l.cn },
+    ai: { cuts: [20, 35, 50, 65], val: (z) => z.ai, leg: ["< 20 %", "20-35 %", "35-50 %", "50-65 %", "≥ 65 %"], dot: (l) => l.ai },
+    mfg: { cuts: [10, 15, 20, 30], val: (z) => z.mfg, leg: ["< 10 %", "10-15 %", "15-20 %", "20-30 %", "≥ 30 %"], dot: () => null }
+  };
+  const gz = document.createElementNS(NS, "g"), gl = document.createElementNS(NS, "g");
+  svg.append(gz, gl);
+  const paths = {};
+  for (const [code, d] of Object.entries(G.units)) {
+    const p = document.createElementNS(NS, "path"); p.setAttribute("d", d); p.dataset.z = code;
+    const t = document.createElementNS(NS, "title"); t.textContent = (L.ze[code] || {}).n || code; p.append(t);
+    p.addEventListener("click", () => showZone(code)); gz.append(p); paths[code] = p;
+  }
+  const dots = L.l.map((l, i) => {
+    const c = document.createElementNS(NS, "circle"); c.setAttribute("cx", l.x); c.setAttribute("cy", l.y); c.setAttribute("r", 2.6);
+    const t = document.createElementNS(NS, "title"); t.textContent = `${l.n}, ${l.c}`; c.append(t);
+    c.addEventListener("click", (e) => { e.stopPropagation(); showLycee(i); }); gl.append(c); return c;
+  });
+  // specialties list (by pupils)
+  const sp = {}; L.l.forEach((l) => l.s.forEach((s) => { sp[s[0]] = (sp[s[0]] || 0) + s[1]; }));
+  const spSel = document.getElementById("lp-spec");
+  Object.entries(sp).sort((a, b) => b[1] - a[1]).forEach(([k, n]) => { const o = document.createElement("option"); o.value = k; o.textContent = `${cap(k)} (${n.toLocaleString("fr-FR")} élèves)`; spSel.append(o); });
+  const dl = document.getElementById("lp-dl"); const seen = new Set();
+  L.l.forEach((l) => { [l.c, l.n].forEach((v) => { if (!seen.has(v)) { seen.add(v); const o = document.createElement("option"); o.value = v; dl.append(o); } }); });
+  const state = { layer: "cn", spec: "" };
+  const cnWord = (r) => r == null ? "—" : r < 0 ? "en recul" : r < 0.8 ? "faible" : r < 1.2 ? "moyenne" : r < 2 ? "forte" : "très forte";
+  const cnCol = (r) => r == null ? "var(--ink-3)" : r < 0 ? "var(--a)" : r < 0.8 ? "var(--b)" : r < 1.2 ? "var(--c)" : r < 2 ? "var(--d)" : "var(--e)";
+  const aiCol = (v) => v == null ? "var(--ink-3)" : v < 2 ? "var(--a)" : v < 3 ? "var(--b)" : v < 4 ? "var(--c)" : v < 5 ? "var(--d)" : "var(--e)";
+  function render() {
+    const Ly = LAYERS[state.layer];
+    for (const [code, p] of Object.entries(paths)) { const z = L.ze[code]; const b = z ? bin(Ly.val(z), Ly.cuts) : -1; p.setAttribute("fill", b < 0 ? "#d9dce3" : RAMP[b]); }
+    L.l.forEach((l, i) => {
+      const has = !state.spec || l.s.some((s) => s[0] === state.spec);
+      dots[i].style.display = has ? "" : "none";
+      let v = Ly.dot(l);
+      if (state.spec) { const s = l.s.find((x) => x[0] === state.spec); v = s ? (state.layer === "ai" ? (s[3] != null ? s[3] * 10 : null) : s[4] != null ? s[4] * 50 : null) : null; }
+      dots[i].setAttribute("fill", v == null ? "#2a3550" : v >= 50 ? "#7a1420" : v >= 25 ? "#b5532a" : "#2a3550");
+      dots[i].setAttribute("r", state.spec ? 3.6 : 2.6);
+    });
+    document.getElementById("lp-legend").innerHTML = "<span>Zones :</span>" + RAMP.map((c, i) => `<i style="background:${c}"></i><span>${Ly.leg[i]}</span>`).join(" ") +
+      ` <span>· Points (lycées) : <b style="color:#7a1420">●</b> plus de la moitié des élèves dans des spécialités exposées, <b style="color:#b5532a">●</b> un quart à la moitié, <b style="color:#2a3550">●</b> moins</span>`;
+  }
+  function zoneHtml(code) {
+    const z = L.ze[code]; if (!z) return "";
+    return `<p><b>Zone d'emploi de ${esc2(z.n)}</b> · ${z.emp.toLocaleString("fr-FR")} salariés du privé${z.mfg != null ? `, dont ${z.mfg} % dans l'industrie (base 2017)` : ""}.</p>
+      ${z.pct != null ? `<p>Concurrence chinoise sur l'industrie de la zone : <b>${z.pct >= 80 ? "parmi les 20 % de zones les plus exposées" : z.pct <= 20 ? "parmi les 20 % les moins exposées" : `rang ${z.pct} sur 100`}</b> (hausse des importations chinoises 2018-2024 dans ses industries, par salarié).</p>` : ""}
+      ${z.ai != null ? `<p>IA : <b>${z.ai} %</b> des élèves de terminale pro de la zone sont dans une spécialité où l'IA sait faire au moins 4 tâches sur 10 des premiers métiers.</p>` : ""}
+      ${z.ind.length ? `<table><tr><th>Industries de la zone (2024)</th><th>Salariés</th><th>Concurrence chinoise</th></tr>${z.ind.map(([n, e, r]) => `<tr><td>${esc2(cap(n))}</td><td>${e.toLocaleString("fr-FR")}</td><td><span class="pill" style="background:${cnCol(r)}">${cnWord(r)}</span>${r != null ? ` ×${String(r).replace(".", ",")}` : ""}</td></tr>`).join("")}</table>` : ""}`;
+  }
+  function showZone(code) {
+    Object.values(paths).forEach((p) => p.classList.remove("on")); if (paths[code]) paths[code].classList.add("on");
+    const ly = L.l.map((l, i) => [l, i]).filter(([l]) => l.z === code);
+    document.getElementById("lp-panel").innerHTML = zoneHtml(code) + `<p><b>${ly.length} lycée${ly.length > 1 ? "s" : ""} pro dans la zone</b></p><ul>${ly.map(([l, i]) => `<li><button class="link" data-i="${i}">${esc2(l.n)}</button>, ${esc2(l.c)} · IA ${l.ai} % · Chine ${l.cn} %</li>`).join("")}</ul>`;
+    document.querySelectorAll("#lp-panel button.link").forEach((b) => b.onclick = () => showLycee(+b.dataset.i));
+  }
+  function showLycee(i) {
+    const l = L.l[i]; dots.forEach((d) => d.classList.remove("on")); dots[i].classList.add("on");
+    Object.values(paths).forEach((p) => p.classList.remove("on")); if (paths[l.z]) paths[l.z].classList.add("on");
+    document.getElementById("lp-panel").innerHTML = `<p><b>${esc2(l.n)}</b><br><span class="small">${esc2(l.c)} (${esc2(l.d)}) · ${l.pub ? "public" : "privé"} · UAI ${esc2(l.u)}</span></p>
+      <p><b>${l.ai} %</b> de ses élèves de terminale sont dans une spécialité où l'IA sait faire au moins 4 tâches sur 10 ; <b>${l.cn} %</b> dans une spécialité industrielle très exposée à la concurrence chinoise.</p>
+      <table><tr><th>Spécialité</th><th>Élèves de terminale</th><th>En emploi 6 mois après</th><th>IA (tâches sur 10)</th><th>Concurrence chinoise</th></tr>
+      ${l.s.map((s) => `<tr><td>${esc2(cap(s[0]))}</td><td>${s[1] || "—"}</td><td>${s[2] != null ? s[2] + " %" : "—"}</td><td><span class="pill" style="background:${aiCol(s[3])}">${s[3] != null ? String(s[3]).replace(".", ",") : "—"}</span></td><td>${s[4] != null ? `<span class="pill" style="background:${cnCol(s[4])}">${cnWord(s[4])}</span>` : '<span class="small">non industrielle</span>'}</td></tr>`).join("")}</table>` + zoneHtml(l.z);
+  }
+  document.getElementById("lp-layer").onchange = (e) => { state.layer = e.target.value; render(); };
+  spSel.onchange = (e) => { state.spec = e.target.value; render(); };
+  document.getElementById("lp-q").addEventListener("change", (e) => {
+    const q = e.target.value.trim().toLowerCase(); if (!q) return;
+    const i = L.l.findIndex((l) => l.n.toLowerCase() === q) >= 0 ? L.l.findIndex((l) => l.n.toLowerCase() === q) : L.l.findIndex((l) => l.c.toLowerCase().startsWith(q));
+    if (i >= 0) { const l = L.l[i]; if (l.n.toLowerCase() === q) showLycee(i); else showZone(l.z); }
+  });
+  svg.addEventListener("click", (e) => { if (e.target === svg) document.getElementById("lp-panel").innerHTML = '<p class="small">Choisis un lycée ou une zone sur la carte, ou cherche ta ville.</p>'; });
+  const m = L.meta;
+  document.getElementById("lp-src").textContent = `${m.n_lycees.toLocaleString("fr-FR")} lycées de métropole, ${m.n_specs.toLocaleString("fr-FR")} spécialités. Sources : InserJeunes (${m.inserjeunes}), effectifs de terminale (rentrée ${m.effectifs}), Annuaire de l'éducation ; IA : part des tâches des premiers métiers qu'une IA sait faire (Hosseini et Lichtinger, 2026, via les fiches ROME) ; concurrence chinoise : hausse des importations françaises depuis la Chine 2018-2024 par salarié des industries visées, rapportée à la moyenne de l'industrie (BACI, CEPII ; Urssaf ; Eurostat), et exposition des zones selon Autor, Dorn et Hanson (2013). Mesures d'exposition, pas des prévisions : leur effet sur l'emploi n'est pas établi.`;
+  render();
+})();
+
 // Où en es-tu ? (profil) : montre le parcours utile, du collège au premier emploi.
 (function () {
   const PROFILS = {
-    college: { show: ["e1", "e2", "e3", "e4", "e45", "e5"], msg: "Tout le parcours, de la fin de 3e au premier emploi : commence par l'étape 1." },
+    college: { show: ["e1", "carte", "e2", "e3", "e4", "e45", "e5"], msg: "Tout le parcours, de la fin de 3e au premier emploi : commence par l'étape 1." },
     lycee: { show: ["e2", "e3", "e4", "e45", "e5"], msg: "À partir du bac : choisis ton bac, puis une formation, et regarde ce qu'elle donne jusqu'au premier emploi." },
     sup: { show: ["e45", "e5"], msg: "Continuer en master ou travailler : compare ta licence et chaque master, puis cherche un emploi ou une alternance." },
-    tout: { show: ["e1", "e2", "e3", "e4", "e45", "e5"], msg: "Tout le parcours." }
+    tout: { show: ["e1", "carte", "e2", "e3", "e4", "e45", "e5"], msg: "Tout le parcours." }
   };
-  const ALL = ["e1", "e2", "e3", "e4", "e45", "e5"];
+  const ALL = ["e1", "carte", "e2", "e3", "e4", "e45", "e5"];
   function setProfil(k, scroll) {
     const P = PROFILS[k]; if (!P) return;
     ALL.forEach((id) => { const el = $(id); if (el) el.hidden = !P.show.includes(id); });

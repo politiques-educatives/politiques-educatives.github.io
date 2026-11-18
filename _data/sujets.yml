@@ -1,0 +1,43 @@
+# Onglets du site : un par sujet de travail du GT, puis la Boussole. Chaque sujet a des sous-onglets.
+# donnees : étiquettes de sujet utilisées dans propositions.yml, sources.yml, livret.yml, notes.yml, graphiques
+# sous-onglets (type) : synthese | ressource (graphiques + sources + dossiers + bloc) | sources (toutes les sources du sujet) | lien (va vers un autre onglet)
+- id: ia
+  titre: "IA et jeunes : l'emploi des débutants"
+  court: "IA et jeunes"
+  statut: "Note du GT, novembre 2026."
+  donnees: [emploi]
+  sous:
+    - {id: synthese, titre: "Synthèse", type: synthese, note_ia: true, graphiques: [embauches]}
+    - {id: milburn, titre: "Rapport Milburn", type: ressource, bloc: milburn, sources: [milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026], dossiers: [12-milburn-review]}
+    - {id: masters, titre: "Masters", type: ressource, bloc: masters, graphiques: [insersup, insersup-tendance, filtre], sources: [insee-2109, ofer-2016, rers-2025, insersup, sies-licence-2025, apec-2024, indeed-diplomes-2024, cereq-generation-2021, humburg-2015], dossiers: [13-masters-job-market, 13-master-as-filter-evidence, 13-france-firms-master-filter-and-solutions]}
+    - {id: comms, titre: "Comms", type: ressource, bloc: comms}
+    - {id: sources, titre: "Sources", type: sources}
+- id: handicap
+  titre: "Handicap et santé mentale"
+  court: "Handicap et santé mentale"
+  statut: "Inclusion, santé mentale, écrans et IA à l'école. La note inclusion est rédigée par d'autres membres du groupe : le site apporte la recherche et les sources ; propositions du GT limitées au tuteur IA."
+  donnees: [inclusion, ecrans]
+  sous:
+    - {id: synthese, titre: "Synthèse", type: synthese, constats: [depp-ni-25-63, senat-plf2026-inclusion, cnesco-2026-inclusion, cnsa-mdph-delais, enclass-2024, depp-pisa-2025, cnl-lecture-2026, interdictions-portable-null]}
+    - {id: handicap, titre: "Recherche handicap", type: ressource, graphiques: [aesh, mdph], sources: [cdc-inclusion-2024, senat-plf2026-inclusion, cnesco-2026-inclusion, depp-ni-25-63, cnsa-mdph-delais, mediateur-2025, inclusion-international, cdc-sante-scolaire-2020], dossiers: [04-inclusion, 09-brief-sante-mentale-handicap-inclusion]}
+    - {id: sante, titre: "Santé mentale et écrans", type: ressource, graphiques: [depression, psy, seconde, pisa], sources: [enclass-2024, drees-suicide-2025, enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-pisa-2025, depp-seconde-2026, depp-ce1-2026, pisa-2022-distraction, cnl-lecture-2026, abrahamsson-2024, interdictions-portable-null, portable-en-pause, pssm-cochrane-2023, myriad-2022, kiva-2018], dossiers: [14-why-scores-fall, 09-lecture-rapport-cianum-sortir-clandestinite, 07-outil-ia-public]}
+    - {id: sources, titre: "Sources", type: sources}
+- id: orientation
+  titre: "Orientation et voie professionnelle"
+  court: "Orientation et voie pro"
+  statut: "Note 3 du GT, à recentrer sur l'orientation en amont, dès la 3e."
+  donnees: [orientation]
+  sous:
+    - {id: synthese, titre: "Synthèse", type: synthese, graphiques: [voeux, boursiers, licence-bac, emploi6mois]}
+    - {id: boussole, titre: "Boussole", type: lien, cible: "boussole"}
+    - {id: carte, titre: "Carte des lycées pro", type: lien, cible: "boussole/carte"}
+    - {id: sources, titre: "Sources", type: sources}
+- id: gouvernance
+  titre: "Gouvernance de l'établissement"
+  court: "Gouvernance de l'établissement"
+  statut: "Autonomie, temps et formation des professeurs : notes 1 et 2 du GT."
+  donnees: [formation]
+  sous:
+    - {id: synthese, titre: "Synthèse", type: synthese}
+    - {id: recherche, titre: "Recherche", type: ressource, graphiques: [heures, formation], sources: [stpcd-2026, ocde-heures-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, eyles-machin-2019, taylor-tyler-2012, ofsted-2025, evaluation-etablissements-fr, cdc-inspecteurs-2022, nickow-2020, guryan-2023, eef-setting], dossiers: [01-england-governance-ors, 02-groupes-niveau-tutorat, 03-inspection-evaluation, 08-formation-enseignants, 10-brief-formation-continue-enseignants]}
+    - {id: sources, titre: "Sources", type: sources}

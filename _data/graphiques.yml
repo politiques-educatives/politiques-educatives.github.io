@@ -1,0 +1,118 @@
+# Graphiques interactifs (Vega-Lite, dessinés dans le navigateur depuis assets/charts/data/<csv>.csv, colonnes categorie, serie, valeur).
+# type : barres (categorie en x, serie en couleur) | barres-h (categorie en y) | ligne (categorie = année en x, serie en couleur)
+# auto : true = données actualisées chaque mois par .github/workflows/charts.yml (InserSup)
+- id: aesh
+  sujet: inclusion
+  titre: "Trois fois plus d'AESH qu'en 2017"
+  type: barres
+  unite: "AESH"
+  source: "Sénat, rapport PLF 2026 (139 993 en 2025) ; Cnesco, Regards actualisés n° 1, juin 2026 (environ 43 000 en 2017, valeur arrondie)"
+  note: "98 % des AESH sont à temps incomplet, pour un salaire net moyen d'environ 1 000 euros par mois."
+- id: mdph
+  sujet: inclusion
+  titre: "Les MDPH traitent les demandes au-delà du délai légal"
+  type: ligne
+  unite: "mois"
+  source: "CNSA, Mon Parcours Handicap (délai moyen de traitement, tous droits)"
+  note: "Le délai légal est de 4 mois ; il varie de 2,2 mois (Cantal) à bien davantage selon les départements."
+- id: seconde
+  sujet: ecrans
+  titre: "Plus d'élèves de seconde dans les groupes les plus faibles qu'en 2019"
+  type: barres
+  unite: "% des élèves"
+  source: "DEPP, test de positionnement de début de seconde 2026"
+  note: "Le communiqué du ministère compare à 2021 ; le rapport de la DEPP compare à 2019."
+- id: pisa
+  sujet: ecrans
+  titre: "Un tiers des élèves de 15 ans en difficulté de lecture"
+  type: ligne
+  unite: "% sous le niveau 2 (PISA, compréhension de l'écrit)"
+  source: "DEPP, note d'information 26.40, septembre 2026 (PISA 2025)"
+  note: "La baisse n'est pas propre à la France : son score a perdu 18 points depuis 2022, contre 14 en moyenne dans l'OCDE."
+- id: depression
+  sujet: ecrans
+  titre: "Un lycéen sur cinq à risque important de dépression, deux fois plus chez les filles"
+  type: barres-h
+  unite: "% des lycéens"
+  source: "Santé publique France, enquête EnCLASS 2024 (juin 2026)"
+  note: "Les études ne relient pas encore la santé mentale à la baisse des résultats scolaires."
+- id: psy
+  sujet: ecrans
+  titre: "Deux fois plus d'élèves par psychologue qu'en Finlande"
+  type: barres-h
+  unite: "élèves par psychologue"
+  source: "Cour des comptes, avril 2020 (France, PsyEN) ; loi finlandaise sur le bien-être des élèves, 2013"
+  note: "La Finlande garantit aussi un rendez-vous sous 7 jours."
+- id: insersup
+  sujet: emploi
+  titre: "La licence professionnelle insère mieux que le master"
+  type: barres-h
+  unite: "% en emploi salarié en France à 30 mois"
+  source: "MESR, InserSup"
+  note: "Les diplômés de licence générale qui s'arrêtent sont sélectionnés : la plupart poursuivent en master. Le salaire net mensuel médian s'affiche au survol."
+  auto: true
+- id: insersup-tendance
+  sujet: emploi
+  titre: "Un écart stable depuis cinq promotions"
+  type: ligne
+  unite: "% en emploi salarié en France à 30 mois"
+  source: "MESR, InserSup"
+  note: "Par promotion de diplômés ; valeurs au survol."
+  auto: true
+  etiquettes: false
+- id: filtre
+  sujet: emploi
+  titre: "Le master trie par origine sociale"
+  type: barres
+  unite: "% des étudiants"
+  source: "MESR, Repères et références statistiques 2025, tableau 7.16-3"
+  note: "Part des enfants d'ouvriers et de cadres parmi les étudiants français des universités, 2024-2025."
+- id: embauches
+  sujet: emploi
+  titre: "Les premières embauches reculent là où l'IA est la plus présente"
+  type: barres-h
+  unite: "% de variation, novembre 2022 à mars 2026"
+  source: "Palladino, Bergeaud, Bertheau, Bunel et Degos (2026), LIFT WP 2026-02"
+  note: "Cinquième des métiers les plus et les moins exposés à l'IA ; une partie de la baisse vient du télétravail."
+- id: voeux
+  sujet: orientation
+  titre: "En voie professionnelle, un premier vœu sur deux à trois seulement est satisfait"
+  type: barres-h
+  unite: "% des premiers vœux satisfaits, 2025"
+  source: "DGESCO, Repères pour l'orientation et l'affectation 2025"
+  note: "Les places en lycée professionnel ont baissé de 3 391 en 2025."
+- id: boursiers
+  sujet: orientation
+  titre: "Les boursiers sont plus souvent orientés vers la voie professionnelle"
+  type: barres-h
+  unite: "% des élèves de 3e"
+  source: "DGESCO, Repères 2025 (chiffres bruts)"
+  note: "À notes et vœux équivalents, les décisions restent influencées par le contexte social (Cour des comptes, 2025)."
+- id: licence-bac
+  sujet: orientation
+  titre: "La réussite en licence dépend du bac"
+  type: barres-h
+  unite: "% obtenant la licence en 3 ou 4 ans"
+  source: "SIES, Note Flash 2025-29, novembre 2025 (bacheliers 2020)"
+  note: ""
+- id: emploi6mois
+  sujet: orientation
+  titre: "Six mois après le diplôme, le BTS fait mieux que le bac pro"
+  type: barres-h
+  unite: "% en emploi à 6 mois"
+  source: "DEPP, InserJeunes, RERS 2025"
+  note: ""
+- id: heures
+  sujet: formation
+  titre: "La France compte des heures de cours, pas un temps de travail"
+  type: barres
+  unite: "heures de cours par an"
+  source: "OCDE, Regards sur l'éducation 2026"
+  note: "France et OCDE : heures réglementaires ; Angleterre : heures réellement faites (pas de plafond réglementaire)."
+- id: formation
+  sujet: formation
+  titre: "Un enseignant se forme quatre fois moins qu'un autre cadre de l'État"
+  type: barres-h
+  unite: "jours de formation par an"
+  source: "Cour des comptes, 2023 (enseignants, 2021 ; autres cadres A, 2019)"
+  note: "Années différentes : comparer les ordres de grandeur."

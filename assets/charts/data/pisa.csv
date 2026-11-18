@@ -1,6 +1,6 @@
-annee,france_pct,ocde_pct
-2000,15,
-2018,21,
-2022,27,
-2025,33,
-2025,,30
+categorie,serie,valeur
+2000,France,15
+2018,France,21
+2022,France,27
+2025,France,33
+2025,Moyenne OCDE,30

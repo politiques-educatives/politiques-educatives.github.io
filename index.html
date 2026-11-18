@@ -1,172 +1,57 @@
 ---
 layout: default
 ---
-{% assign g = site.data.charts %}
-<h1>Propositions et données du GT Éducation</h1>
-<p class="byline">Mis à jour le {{ g.maj_le | date: "%d/%m/%Y" }} · graphiques InserSup actualisés le 3 de chaque mois, textes le 17 après relecture</p>
-<p class="lead">Ce site réunit les notes d'octobre et novembre 2026 sur le temps des enseignants, la gouvernance scolaire, l'orientation et le bac, l'IA et l'emploi des jeunes, la santé mentale et les écrans, et un tuteur IA. Les propositions apparaissent en premier et s'ouvrent sur leurs explications, chiffres et sources. Les graphiques tirés de données publiques sont actualisés chaque mois, et chacun peut signaler une correction sur chaque fiche.</p>
-
-<div class="tabs" role="tablist">
-  <button class="tab" role="tab" aria-selected="true" aria-controls="p-propositions" id="t-propositions">Propositions<span class="hits"></span></button>
-  <button class="tab" role="tab" aria-selected="false" aria-controls="p-programme" id="t-programme">Programme et ajouts<span class="hits"></span></button>
-  <button class="tab" role="tab" aria-selected="false" aria-controls="p-constat" id="t-constat">Constat<span class="hits"></span></button>
-  <button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button>
-  <button class="tab" role="tab" aria-selected="false" aria-controls="p-milburn" id="t-milburn">Rapport Milburn<span class="hits"></span></button>
-  <button class="tab" role="tab" aria-selected="false" aria-controls="p-comms" id="t-comms">Comms<span class="hits"></span></button>
-  <button class="tab" role="tab" aria-selected="false" aria-controls="p-calendrier" id="t-calendrier">Calendrier<span class="hits"></span></button>
-  <button class="tab" role="tab" aria-selected="false" aria-controls="p-notes" id="t-notes">Notes et sources<span class="hits"></span></button>
+<div class="tabs" role="tablist" id="tabs">
+  {% for s in site.data.sujets %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-{{ s.id }}" id="t-{{ s.id }}">{{ s.court }}<span class="hits"></span></button>
+  {% endfor %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button>
 </div>
-<p class="gcount" id="gcount" hidden></p>
+<div class="gres" id="gres" hidden><p class="gcount" id="gcount"></p><div id="dossier-hits"></div></div>
 
-<!-- ============ PROPOSITIONS ============ -->
-<section class="panel" id="p-propositions" role="tabpanel" aria-labelledby="t-propositions">
-  <div class="filters" id="f-theme"><span class="lbl">Thème</span></div>
-  <div class="filters" id="f-statut"><span class="lbl">Statut</span></div>
-  <p class="count" id="count"></p>
-  <div id="props"></div>
-</section>
-
-<!-- ============ PROGRAMME v12 ============ -->
-<section class="panel" id="p-programme" role="tabpanel" aria-labelledby="t-programme" hidden>
-  <h2>Livret du programme (18 novembre 2026)</h2>
-  <p class="lead">Les mesures éducation du livret « Croire en nous » (volume 1), résumées, avec notre évaluation au regard des travaux du GT et un lien vers la fiche qui les étaye.</p>
-  <div class="legend"><span class="badge e-convergent">Convergent</span> nos notes vont dans le même sens et apportent preuves ou mode d'emploi · <span class="badge e-a-completer">À compléter</span> nos travaux ajoutent une condition ou un chiffrage · <span class="badge e-tension">Tension</span> nos preuves invitent à nuancer · <span class="badge e-hors-champ">Hors champ</span> non couvert par nos travaux</div>
-  <div class="filters" id="f-livret"><span class="lbl">Évaluation</span></div>
-  <p class="count" id="livcount"></p>
-  <div id="livret"></div>
-  <h2>Ce que nos travaux ajoutent</h2>
-  <ul class="ajouts" id="ajouts"></ul>
-  <details class="box v12box" id="v12box">
-    <summary><h2>Version v12 (octobre 2026) : comparaison avec nos ajouts</h2></summary>
-    <p class="lead">Cette partie compare la note « Éducation : penser pratique » (v12, octobre 2026) et les ajouts ou modifications proposés par le GT, thème par thème.</p>
-    <div class="legend"><span class="badge s-nouveau">Nouveau</span> absent de la v12 · <span class="badge s-precise">Précise</span> la v12 le prévoit, l'ajout dit comment · <span class="badge s-modifie">Modifie</span> l'ajout change la règle de la v12 · <span class="badge s-inchange">Inchangé</span> repris tel quel</div>
-    <div class="filters" id="f-v12"><span class="lbl">Statut</span></div>
-    <div class="filters" id="f-v12theme"><span class="lbl">Thème</span></div>
-    <p class="count" id="v12count"></p>
-    <div id="v12"></div>
-    <p class="note-src">Source v12 : « Éducation : penser pratique », version du 16 octobre 2026, paraphrasée (section entre parenthèses).</p>
-  </details>
-  <p class="note-src">Source livret : « Croire en nous », volume 1, 18 novembre 2026 (pages imprimées), mesures résumées.</p>
-</section>
-
-<!-- ============ CONSTAT ============ -->
-<section class="panel" id="p-constat" role="tabpanel" aria-labelledby="t-constat" hidden>
-  <p class="lead">Les graphiques montrent la baisse des résultats scolaires depuis 2019 en France et ailleurs, une licence générale moins insérante, un master socialement sélectif et la fermeture des premiers emplois exposés à l'IA. Les graphiques marqués « actualisé chaque mois » utilisent les données publiques InserSup.</p>
-  <div class="tiles s-item" data-s="écrans lecture santé mentale dépression emploi 20 ans bac jeunes sans emploi ni formation NEET">
-    <div class="tile"><div class="big">5 h <span>contre</span> 14 min</div><div class="tl">d'écrans et de lecture par jour chez les 16-19 ans</div><div class="ts">CNL, 2026</div></div>
-    <div class="tile"><div class="big">19 %</div><div class="tl">des lycéens à risque important de dépression (25,7 % des filles, 11,7 % des garçons)</div><div class="ts">EnCLASS 2024, Santé publique France, 2026</div></div>
-    <div class="tile"><div class="big">20 % <span>contre</span> ~60 %</div><div class="tl">de jeunes en emploi à 20 ans, en France et en Allemagne, au Royaume-Uni et aux États-Unis</div><div class="ts">CAE, Bozio et Wasmer, 2026</div></div>
-    <div class="tile"><div class="big">91,8 %</div><div class="tl">de reçus au bac en 2025, mais 30 % seulement obtiennent leur licence en trois ans</div><div class="ts">DEPP, 2025 ; SIES, 2025</div></div>
+{% for s in site.data.sujets %}<section class="panel" id="p-{{ s.id }}" role="tabpanel" aria-labelledby="t-{{ s.id }}" hidden>
+  <div class="hub-head">
+    <div class="hh-txt"><h1 class="hub-t">{{ s.titre }}</h1><p class="hub-s">{{ s.statut }}</p></div>
+    <details class="rediger">
+      <summary class="btn btn-gen">Rédiger une note</summary>
+      <div class="rd-box">
+        <p><a class="btn btn-gen" href="https://github.com/{{ site.repo }}/issues/new?template=note.yml&title={{ '[note] ' | append: s.court | uri_escape }}&sujet={{ s.titre | uri_escape }}" target="_blank" rel="noopener">Générer un brouillon sur ce sujet</a></p>
+        <p class="note-src">Recherche sourcée, chiffres vérifiés à la source, note au format du GT (Word et PDF). Brouillon non relu ; génération réservée aux membres autorisés du dépôt.</p>
+        <p><a href="{{ '/assets/modele/modele-note.docx' | relative_url }}">Modèle Word</a> · <a href="{{ '/assets/modele/modele-note.md' | relative_url }}">Modèle texte</a> : En bref, constat chiffré, analyse, position du programme, propositions, argumentaire, mise en œuvre, références. Une à deux pages ; jamais de chiffre ni de position du candidat inventés.</p>
+        <p class="note-src">Dans « Sources », le bouton « Copier » de chaque fiche copie son chiffre clé et sa référence. Une erreur ? <a href="https://github.com/{{ site.repo }}/issues/new?template=feedback.yml" target="_blank" rel="noopener">Signaler une correction</a>.</p>
+      </div>
+    </details>
   </div>
-  <figure class="s-item" data-s="seconde maths français groupes faibles DEPP 2019 2026 baisse niveau"><img src="{{ '/assets/charts/seconde.png' | relative_url }}" alt="Part des élèves de seconde dans les groupes les plus faibles, 2019 et 2026 : maths seconde générale et technologique 19,2 % puis 28,1 % ; maths seconde professionnelle 66,2 % puis 75,4 % ; français seconde générale et technologique 18,7 % puis 22,1 % ; français seconde professionnelle 65,7 % puis 69,8 %."><figcaption><strong>Le niveau baisse au lycée.</strong> Part des élèves de seconde dans les groupes les plus faibles au test de positionnement, 2019 et 2026. Le communiqué du ministère compare à 2021 ; le rapport de la DEPP compare à 2019. Source : DEPP, test de positionnement de début de seconde 2026. <a href="{{ '/assets/charts/data/seconde.csv' | relative_url }}">Données</a>. Actualisé à la main à chaque édition.</figcaption></figure>
-  <figure class="s-item" data-s="PISA lecture compréhension écrit OCDE 15 ans niveau 2"><img src="{{ '/assets/charts/pisa.png' | relative_url }}" alt="Part des élèves français de 15 ans sous le niveau 2 en compréhension de l'écrit : 15 % en 2000, 21 % en 2018, 27 % en 2022, 33 % en 2025 ; moyenne OCDE 30 % en 2025."><figcaption><strong>Un tiers des élèves de 15 ans en difficulté de lecture.</strong> Part des élèves sous le niveau 2 en compréhension de l'écrit (PISA). La baisse n'est pas propre à la France : son score a perdu 18 points depuis 2022, contre 14 en moyenne dans l'OCDE. Source : DEPP, note d'information 26.40, septembre 2026. <a href="{{ '/assets/charts/data/pisa.csv' | relative_url }}">Données</a>.</figcaption></figure>
-  <figure class="s-item" data-s="InserSup emploi salaire licence master licence professionnelle alternance 30 mois"><img src="{{ '/assets/charts/insersup.png' | relative_url }}" alt="Diplômés en emploi salarié en France 30 mois après le diplôme : licence générale {{ g.lg }} %, licence professionnelle {{ g.lp }} %, master {{ g.m }} %, master en alternance {{ g.ma }} %, licence professionnelle en alternance {{ g.lpa }} %."><figcaption><span class="auto">actualisé chaque mois</span> <strong>La licence professionnelle insère mieux que le master.</strong> Part des diplômés en emploi salarié en France 30 mois après le diplôme (promotion {{ g.insersup_promo }}) et salaire net mensuel médian (promotion {{ g.insersup_promo_salaire }}). Les diplômés de licence générale qui s'arrêtent sont sélectionnés : la plupart poursuivent en master. Source : MESR, InserSup ({{ g.insersup_version }}). <a href="{{ '/assets/charts/data/insersup.csv' | relative_url }}">Données</a>.</figcaption></figure>
-  <figure class="s-item" data-s="InserSup tendance promotion emploi licence master"><img src="{{ '/assets/charts/insersup-tendance.png' | relative_url }}" alt="Emploi salarié à 30 mois par promotion, 2019 à 2023 : licence professionnelle autour de 78 %, master autour de 69 %, licence générale autour de 51 %."><figcaption><span class="auto">actualisé chaque mois</span> <strong>Un écart stable depuis cinq promotions.</strong> Part des diplômés en emploi salarié en France 30 mois après le diplôme, par promotion. Source : MESR, InserSup ({{ g.insersup_version }}). <a href="{{ '/assets/charts/data/insersup-tendance.csv' | relative_url }}">Données</a>.</figcaption></figure>
-  <figure class="s-item" data-s="master filtre social ouvriers cadres RERS origine sociale"><img src="{{ '/assets/charts/filtre.png' | relative_url }}" alt="Part des étudiants selon l'origine sociale : enfants d'ouvriers 10 % en licence, 6 % en master ; enfants de cadres 31 % en licence, 42 % en master."><figcaption><strong>Le master trie par origine sociale.</strong> Part des enfants d'ouvriers et de cadres parmi les étudiants de licence et de master. Source : MESR, Repères et références statistiques (RERS) 2025. <a href="{{ '/assets/charts/data/filtre.csv' | relative_url }}">Données</a>.</figcaption></figure>
-  <figure class="s-item" data-s="IA embauches CDI jeunes 21-29 ans métiers exposés LIFT"><img src="{{ '/assets/charts/embauches.png' | relative_url }}" alt="Variation des embauches en CDI des 21-29 ans entre novembre 2022 et mars 2026 : -28,3 % dans les métiers les plus exposés à l'IA, -7,5 % dans les moins exposés."><figcaption><strong>Les premières embauches reculent là où l'IA est la plus présente.</strong> Variation des embauches en CDI des 21-29 ans entre novembre 2022 et mars 2026, cinquième des métiers les plus et les moins exposés à l'IA ; une partie de la baisse vient du télétravail. Source : Palladino, Bergeaud, Bertheau, Bunel et Degos (2026), LIFT WP 2026-02. <a href="{{ '/assets/charts/data/embauches.csv' | relative_url }}">Données</a>.</figcaption></figure>
+  <div class="subtabs" role="tablist">
+    {% for u in s.sous %}<button class="subtab{% if u.type == 'lien' %} sublink{% endif %}" role="tab" aria-selected="false" data-sub="{{ u.id }}" id="st-{{ s.id }}-{{ u.id }}">{{ u.titre }}<span class="hits"></span></button>
+    {% endfor %}
+  </div>
+  {% for u in s.sous %}<div class="subpanel" id="sp-{{ s.id }}-{{ u.id }}" data-topic="{{ s.id }}" data-sub="{{ u.id }}" hidden></div>
+  {% endfor %}
 </section>
+{% endfor %}
 
-<!-- ============ BOUSSOLE ============ -->
 <section class="panel" id="p-boussole" role="tabpanel" aria-labelledby="t-boussole" hidden>
-  <div class="s-item" data-s="Boussole formations Parcoursup InserSup orientation IA Chine importations industrie zone d'emploi">
-  <p class="lead">Ce prototype du GT montre aux élèves dès la 4e le parcours vers un premier métier : emploi et salaire à 30 mois (InserSup), taux de réussite, et tâches déjà réalisées par l'IA. Les filières industrielles et techniques affichent désormais l'exposition à l'IA et à la concurrence des importations chinoises de 2018 à 2024 (par secteur et zone d'emploi). Cette exposition est descriptive, ce n'est pas une prévision.</p>
-  <p><a class="btn" href="{{ '/boussole/' | relative_url }}" target="_blank" rel="noopener">Ouvrir la Boussole en plein écran</a> <a class="btn btn2" href="{{ '/boussole/?profil=college' | relative_url }}" target="_blank" rel="noopener">Je suis au collège</a> <a class="btn btn2" href="{{ '/boussole/?profil=sup#e45' | relative_url }}" target="_blank" rel="noopener">Master ou emploi ?</a></p>
-  </div>
-  <iframe class="bframe" title="Boussole des formations" data-src="{{ '/boussole/' | relative_url }}" loading="lazy"></iframe>
-</section>
-
-<!-- ============ MILBURN ============ -->
-<section class="panel" id="p-milburn" role="tabpanel" aria-labelledby="t-milburn" hidden>
-  <p class="lead">Cet onglet présente le rapport britannique Milburn (17 novembre 2026) sur les jeunes sans emploi ni formation (981 000 jeunes de 16 à 24 ans, soit 13,0 %, ONS avril-juin 2026). Il détaille ses 17 recommandations, la réponse du gouvernement et ce qui existe ou manque déjà en France.</p>
-  <div class="filters" id="f-milburn"><span class="lbl">Réponse du gouvernement</span></div>
-  <div id="milburn"></div>
-  <details class="box s-item" data-s="Milburn France contrat d'engagement jeune Garantie jeunes manque observatoire destination">
-    <summary><h2>Ce que la France a déjà, et ce qui lui manque</h2></summary>
-    <p>Milburn rejoint ce que la France a déjà dans la loi : une garantie avec allocation (le contrat d'engagement jeune), une obligation de formation jusqu'à 18 ans et un réseau local (missions locales). Ce qui manque, et que Milburn propose : un emploi payé garanti en dernier recours ; une mesure du devenir des élèves par établissement et une norme « prêt pour le travail », inspectées ; un suivi des postes de débutants face à l'IA par secteur et territoire ; des outils de repérage précoce du décrochage obligatoires à l'école.</p>
-    <p class="warn">Attention aux comparaisons : le Royaume-Uni mesure les 16-24 ans (13,0 %), la France les 15-29 ans (13,3 % au 3e trimestre 2026, Insee). Sur les 15-24 ans, le Royaume-Uni (13,6 %, OCDE 2025) est nettement au-dessus de la France (10,5 % en 2023).</p>
-    <p class="note-src">Sources : Milburn, <a href="https://assets.publishing.service.gov.uk/media/6afb1fc5ccb3ea58ac8743c1/from-a-welfare-state-to-a-working-state-full-report.pdf">From a Welfare State to a Working State</a>, DWP, 17 novembre 2026 (pages imprimées) ; <a href="https://www.gov.uk/government/speeches/work-and-pensions-secretary-statement-on-the-milburn-review-into-young-people-and-work">déclaration du ministre au Parlement</a>, 17 novembre 2026 ; Insee, Informations rapides n° 270.</p>
-  </details>
-</section>
-
-<!-- ============ COMMS ============ -->
-<section class="panel" id="p-comms" role="tabpanel" aria-labelledby="t-comms" hidden>
-  <p class="lead">Cinq vidéos britanniques sur les jeunes et le travail sont analysées plan par plan pour montrer ce qui fonctionne dans le format plutôt que le contenu, avec un contre-exemple français. L'objectif est de toucher les jeunes là où ils sont, sur leur téléphone.</p>
-  <div id="videos"></div>
-  <details class="box s-item" data-s="ce qui marche format quotidien métaphore chiffre sous-titres commentaire">
-    <summary><h2>Ce qui marche : un problème du quotidien, un objet, un chiffre, des sous-titres</h2></summary>
-    <div class="tbl-wrap"><table class="cmp"><thead><tr><th>Ressort</th><th>Exemple</th><th>Transposition</th></tr></thead><tbody>
-      <tr><td>Un problème du quotidien, pas un thème</td><td>se loger, trouver un premier emploi</td><td>le choix d'études, le premier CDI, l'attente d'un psy</td></tr>
-      <tr><td>Un objet-métaphore à l'image</td><td>escabeau, billets</td><td>un téléphone ouvert sur la Boussole</td></tr>
-      <tr><td>Un chiffre comparatif en une phrase</td><td>25 £ contre 1 £</td><td>un master sur dix sous 49 % d'emploi, un sur dix au-dessus de 86 %</td></tr>
-      <tr><td>Des mesures énumérées vite</td><td>cinq mesures en 20 s</td><td>trois propositions du GT au maximum</td></tr>
-      <tr><td>Une voix jeune qui retourne un cliché</td><td>« génération flocon »</td><td>« les jeunes ne veulent plus travailler »</td></tr>
-      <tr><td>Le commentaire comme suite de la vidéo</td><td>« dites-moi ce qui vous a bloqués »</td><td>réponses en vidéo aux obstacles les plus cités</td></tr>
-      <tr><td>Sous-titres incrustés, mot à mot</td><td>les cinq vidéos</td><td>indispensable : vidéos vues sans le son</td></tr>
-    </tbody></table></div>
-    <h3>Diffusion</h3>
-    <ul>
-      <li>Instagram Reels, TikTok et YouTube Shorts, vertical natif, sous-titres incrustés mot à mot.</li>
-      <li>Publier le jour de l'actualité : chiffre Insee, résultats Parcoursup (juin), nouvelle étude sur l'IA et l'embauche.</li>
-      <li>Une carte partageable par formation tirée de la Boussole (format story), pour que les lycéens la fassent circuler.</li>
-      <li>Une riposte prête avant toute vidéo qui touche aux aides aux jeunes : sous la vidéo de Burnham, c'est ce sujet qui a pris les commentaires.</li>
-    </ul>
-  </details>
-  <details class="box s-item" data-s="contre-exemple X évaluations nationales DEPP dictée seconde vérification Le Floch-Imad">
-    <summary><h2>Un contre-exemple français : un post alarmé sur les évaluations nationales, vérifié</h2></summary>
-    <p><a href="https://x.com/JLeFlochImad/status/2122979063086137629">Joachim Le Floch-Imad, X, 18 novembre 2026</a>. Un long texte sans vidéo, qui frappe par des questions d'examen concrètes que tout le monde comprend, puis un diagnostic de déclin et un appel au « courage politique » : le registre du constat alarmé, pas celui de la proposition. Ce que disent les chiffres officiels :</p>
-    <ul>
-      <li><strong>Confirmé.</strong> En seconde générale et technologique, 28,1 % des élèves sont dans les groupes faibles en maths, contre 19,2 % en 2019 ; 75,4 % contre 66,2 % en seconde professionnelle (<a href="https://www.education.gouv.fr/depp/test-de-positionnement-de-debut-de-seconde-2026-resultats-nationaux-506796">DEPP, seconde 2026</a>). Dictée de CE1 : 69,9 % de groupe satisfaisant en 2026, contre 72,4 % en 2025 (<a href="https://www.education.gouv.fr/depp/evaluations-2026-reperes-ce1-resultats-nationaux-506736">DEPP, Repères CE1 2026</a>).</li>
-      <li><strong>Forcé.</strong> « Les performances diminuent du CE1 au CM2 » : en CM2, le français est stable pour 7 compétences sur 9, et en 6e il est meilleur qu'en 2017 (groupes faibles : 28,7 % contre 31,7 %).</li>
-      <li><strong>Non vérifiable.</strong> Les exemples de questions : les rapports de la DEPP ne publient aucun résultat question par question.</li>
-      <li><strong>Les causes.</strong> La DEPP n'en avance aucune. La recherche, du plus solide au plus fragile : une baisse internationale (PISA), l'effet du Covid chez les adolescents (pas en CE1), moins de lecture et plus d'écrans (corrélation), la distraction en classe (corrélation). Les interdictions du téléphone ont des effets mitigés.</li>
-    </ul>
-  </details>
-</section>
-
-<!-- ============ CALENDRIER ============ -->
-<section class="panel" id="p-calendrier" role="tabpanel" aria-labelledby="t-calendrier" hidden>
-  <p class="lead">Les échéances tirées de nos notes et dossiers, en France, au Royaume-Uni et pour le groupe. Les dates approximatives sont signalées comme telles.</p>
-  <div class="filters" id="f-cal"><span class="lbl">Type</span></div>
-  <ol class="cal" id="cal"></ol>
-  <h2 class="th">Échéances récurrentes</h2>
-  <ul class="cal" id="calrec"></ul>
-</section>
-
-<!-- ============ NOTES ============ -->
-<section class="panel" id="p-notes" role="tabpanel" aria-labelledby="t-notes" hidden>
-  <p class="lead">Retrouvez ici l'ensemble des notes en PDF, les dossiers de recherche et la méthode utilisée.</p>
-  <p><a class="btn btn-gen" href="https://github.com/{{ site.repo }}/issues/new?template=note.yml" target="_blank" rel="noopener">Générer une note</a> <span class="note-src">Ouvre un formulaire : sujet, public, longueur. Le brouillon produit est publié ci-dessous après génération, sans relecture.</span></p>
-  <h2>Notes du GT Éducation</h2>
-  <ul class="lib">
-  {% for n in site.data.notes.notes %}<li class="s-item" data-s="{{ n.titre }} {{ n.resume }}"><details><summary><a href="{{ '/assets/notes/' | append: n.fichier | relative_url }}">{{ n.titre }}</a> <span class="meta">{{ n.langue }} · {{ n.date }} · {{ n.pages }} p. · PDF</span></summary><p class="vr">{{ n.resume }}</p></details></li>
-  {% endfor %}</ul>
-  <h2>Notes générées automatiquement (brouillons non relus)</h2>
-  <ul class="lib" id="notesgen"></ul>
-  <h2>Dossiers de recherche du GT</h2>
-  <p class="note-src">Chaque dossier recense les études et les chiffres vérifiés à la source (page ou URL), avec un statut vérifié ou non vérifié. Disponibles sur demande.</p>
-  <ul class="lib">
-  {% for r in site.data.notes.recherche %}<li class="s-item" data-s="{{ r }}">{{ r }}</li>
-  {% endfor %}</ul>
-  <h2>Méthode</h2>
-  <ul class="method">
-    <li>Chaque chiffre vient d'une note ou d'un dossier du GT et a été lu dans la source (page ou URL). Les propositions ne sont pas arbitrées ; aucune position du candidat n'est présentée ici.</li>
-    <li><strong>Statut des propositions.</strong> Proposition : rédigée et sourcée dans une note. À chiffrer : le principe est posé, le coût reste à établir. Piste : complément issu de nos dossiers, à discuter.</li>
-    <li><strong>Mises à jour.</strong> Les graphiques InserSup sont recalculés automatiquement le 3 de chaque mois depuis l'API publique du ministère. Le 17 de chaque mois, une veille propose les nouvelles études qui touchent une proposition ; elle est relue avant publication. Les autres graphiques sont mis à jour à la main à chaque nouvelle édition.</li>
-    <li><strong>Vos retours.</strong> Chaque fiche a un lien « Signaler ou proposer une correction », qui ouvre un formulaire public ; chaque retour est relu avant toute modification.</li>
-  </ul>
+  <p class="bintro s-item" data-s="Boussole formations Parcoursup InserSup orientation IA Chine importations industrie zone d'emploi lycée professionnel carte bac pro">La Boussole des formations, prototype du GT : de la 4e au premier emploi, l'emploi et le salaire de chaque formation, ce que l'IA sait déjà faire des premiers métiers et, pour les filières industrielles, l'exposition à la concurrence des importations chinoises (2018-2024). Descriptif, pas une prévision. <a href="#boussole/carte" data-route="boussole/carte">Carte des lycées pro</a> · <a href="{{ '/boussole/' | relative_url }}" target="_blank" rel="noopener">Plein écran</a></p>
+  <iframe class="bframe" id="bframe" title="Boussole des formations" data-src="{{ '/boussole/' | relative_url }}" scrolling="no"></iframe>
 </section>
 
 <script>
+window.SUJETS = {{ site.data.sujets | jsonify }};
 window.PROPS = {{ site.data.propositions | jsonify }};
-window.V12 = {{ site.data.v12 | jsonify }};
-window.MILBURN = {{ site.data.milburn | jsonify }};
-window.VIDEOS = {{ site.data.comms | jsonify }};
-window.CAL = {{ site.data.calendrier | jsonify }};
+window.SOURCES = {{ site.data.sources | jsonify }};
+window.GRAPHS = {{ site.data.graphiques | jsonify }};
+window.CHARTS_META = {{ site.data.charts | jsonify }};
+window.NOTES = {{ site.data.notes.notes | jsonify }};
+window.NOTES_GEN = {{ site.data.notes_generees | jsonify }};
+window.NOTE_IA = {{ site.data.note_ia | jsonify }};
 window.LIVRET = {{ site.data.livret | jsonify }};
 window.LIVRET_AJOUTS = {{ site.data.livret_ajouts | jsonify }};
-window.NOTES_GEN = {{ site.data.notes_generees | jsonify }};
-window.BASE = "{{ '' | relative_url }}";
+window.MILBURN = {{ site.data.milburn | jsonify }};
+window.VIDEOS = {{ site.data.comms | jsonify }};
+window.DOSSIERS = {{ site.data.recherche | jsonify }};
 window.REPO = "{{ site.repo }}";
-window.NOTES_BASE = "{{ '/assets/notes/' | relative_url }}";
+window.BASE = "{{ '' | relative_url }}";
 </script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 <script src="{{ '/assets/app.js' | relative_url }}"></script>

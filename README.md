@@ -6,16 +6,20 @@ Site de travail : https://politiques-educatives.github.io/ (non indexé). Source
 |---|---|
 | `_data/propositions.yml` | Propositions (une fiche chacune : explication, preuves, note) |
 | `_data/livret.yml`, `_data/livret_ajouts.yml` | Livret du programme (18/11/2026) : mesures éducation et notre évaluation ; ce que nos travaux ajoutent |
-| `_data/v12.yml` | Version v12 « Éducation : penser pratique » face aux ajouts du GT (section repliée) |
-| `_data/milburn.yml`, `_data/comms.yml`, `_data/calendrier.yml`, `_data/notes.yml` | Onglets Milburn, Comms, Calendrier, Notes |
+| `_data/milburn.yml`, `_data/comms.yml`, `_data/notes.yml` | Sous-onglets Rapport Milburn et Comms (IA et jeunes), notes PDF par sujet |
 | `_data/notes_generees.yml` | Notes produites par le générateur (bouton « Générer une note », formulaire `note.yml`) ; lu côté navigateur, absent = liste vide |
-| `scripts/charts.py` | Graphiques du Constat (`--fetch` : InserSup depuis l'API publique) |
+| `scripts/charts.py` | Données des graphiques interactifs (CSV ; `--fetch` : InserSup depuis l'API publique) ; titres et sources dans `_data/graphiques.yml` |
+| `_data/sujets.yml` | Les onglets : IA et jeunes, Handicap et santé mentale, Orientation et voie pro, Gouvernance de l'établissement (plus la Boussole), et leurs sous-onglets |
+| `_data/sources.yml` | Base de preuves : une fiche par source, résumé détaillé, chiffre à citer, statut de vérification |
+| `scripts/build_recherche.py` | Publie les dossiers de recherche sous `/recherche/` (noms et sections de travail retirés) et l'index de recherche |
+| `scripts/build_note_ia.py` | Reprend le texte de la note IA et jeunes dans `_data/note_ia.yml` (le PDF n'est pas publié) |
+| `assets/modele/` | Modèle de note (.md et .docx, construit par `scripts/build_note.py`) |
 | `scripts/sync_boussole.sh` | Copie la Boussole (`../site/boussole-pipeline/`, index.html et tous les .js) dans `boussole/` |
 | `.github/workflows/charts.yml` | Actualise les graphiques InserSup le 3 de chaque mois |
 | `routines/routine-mensuelle.md` | Consigne de la veille mensuelle (pull request le 17) |
 | `.github/ISSUE_TEMPLATE/feedback.yml` | Formulaire « Signaler une correction » relié à chaque fiche |
 
-Construire localement : `sh scripts/sync_boussole.sh && python3 scripts/charts.py` puis `jekyll build` (ou GitHub Pages).
+Construire localement : `sh scripts/sync_boussole.sh && python3 scripts/charts.py && python3 scripts/build_recherche.py && python3 scripts/build_note_ia.py` puis `jekyll build` (ou GitHub Pages).
 Les scripts adaptés au candidat (note comms) ne sont pas publiés ici, par choix.
 
 ## Générateur de notes (bouton « Générer une note »)

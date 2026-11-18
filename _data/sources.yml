@@ -1,0 +1,981 @@
+# Base de preuves du GT Éducation : une entrée par source (étude, rapport, données).
+# Tirée des dossiers de recherche (research/*.md) et des notes. Résumés détaillés : ce qui est étudié, données, méthode,
+# chiffres avec point de comparaison, limites. statut : vérifié (lu dans la source) | secondaire (repris d'une source
+# fiable sans lecture de l'original) | non vérifié. sujets : inclusion | ecrans | emploi | orientation | formation.
+# type : rapport | étude causale | méta-analyse | données | enquête | texte officiel | revue
+# cle : la citation courte à copier (chiffre clé + source). dossier : page /recherche/<slug>/ d'où vient l'entrée.
+
+# ================= GRANDS RAPPORTS (résumé partie par partie, pages) =================
+- id: cdc-inclusion-2024
+  titre: "Cour des comptes, L'inclusion scolaire des élèves en situation de handicap (septembre 2024)"
+  ref: "Cour des comptes (2024), L'inclusion scolaire des élèves en situation de handicap, rapport public thématique, septembre 2024."
+  lien: https://www.vie-publique.fr/files/rapport/pdf/295363.pdf
+  sujets: [inclusion]
+  type: rapport
+  statut: vérifié
+  resume: "Le rapport fait le bilan de vingt ans de scolarisation des élèves handicapés depuis la loi de 2005. Il constate une hausse massive des effectifs et des moyens (accompagnants, ULIS) sans pilotage par les besoins : l'Éducation nationale finance ce que les MDPH prescrivent, sans visibilité sur les volumes. Il chiffre le coût pour l'Éducation nationale à environ 3,7 Md€ en 2022, le coût global (collectivités comprises) restant inconnu."
+  sections:
+    - "Effectifs et dispositifs : les ULIS passent de 8 600 à 11 400 entre 2017 et 2025 (+30 %, chiffre repris par le Cnesco en 2026)."
+    - "Matériel pédagogique adapté : taux de couverture des prescriptions de 67 % en 2022 ; délais de 18 mois à 2 ans dans certains territoires."
+    - "Livret de parcours inclusif (p. 38-39) : généralisation prévue en 2022 non réalisée ; 164 000 élèves couverts en juin 2023, dont 19 % seulement avec un projet personnalisé de scolarisation ; de 4,5 livrets pour 100 élèves en Guadeloupe à moins de 0,1 à Paris et Mayotte."
+    - "Recommandation n° 9 : un référentiel harmonisé des prescriptions des MDPH, notamment pour les AESH individualisés et mutualisés."
+    - "Recommandation n° 10 : une base de données exhaustive avec l'identifiant national élève, étendue au médico-social."
+  cle: "Le livret de parcours inclusif ne couvrait que 164 000 élèves en juin 2023, dont 19 % avec un PPS (Cour des comptes, 2024, p. 38-39)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: senat-plf2026-inclusion
+  titre: "Sénat, avis budgétaire PLF 2026, mission Enseignement scolaire (école inclusive)"
+  ref: "Sénat (2025), avis sur le projet de loi de finances pour 2026, mission Enseignement scolaire."
+  lien: https://www.senat.fr/rap/l25-139-313/l25-139-31310.html
+  sujets: [inclusion]
+  type: rapport
+  statut: vérifié
+  resume: "L'avis budgétaire du Sénat détaille les crédits de l'école inclusive et leur dynamique. Le rapporteur juge non soutenable la « déconnexion entre le prescripteur et le payeur » : l'Éducation nationale paie les accompagnants notifiés par les MDPH, dont le nombre varie fortement d'un département à l'autre, sans maîtrise des volumes."
+  sections:
+    - "Budget : 4,74 Md€ en 2026 (+100 M€ sur 2025), dont 3,16 Md€ d'AESH et 1,55 Md€ d'enseignants spécialisés ; +25 % entre 2022 et 2026 ; 1 200 ETP d'AESH créés en 2026."
+    - "AESH : 139 993 en 2025, soit 3,2 fois plus qu'en 2017."
+    - "Notifications : 336 732 élèves notifiés par une MDPH en 2024, soit 65 % des élèves handicapés scolarisés ; 9 % des élèves en attente d'une aide au 31 mars 2025 (+1 point en un an)."
+  cle: "Le budget de l'école inclusive atteint 4,74 Md€ en 2026 pour 139 993 AESH (Sénat, avis PLF 2026)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: cnesco-2026-inclusion
+  titre: "Cnesco, Regards actualisés n° 1 : l'école inclusive et le handicap (juin 2026)"
+  ref: "Cnesco (2026), Regards actualisés n° 1, École inclusive et handicap, juin 2026."
+  lien: https://www.cnesco.fr/wp-content/uploads/2026/06/Regards-actualises_EcoleInclusiveHandicap_Cnesco.pdf
+  sujets: [inclusion]
+  type: rapport
+  statut: vérifié
+  resume: "Le Cnesco fait le point sur la scolarisation des élèves handicapés. 86 % sont en milieu ordinaire, 12 % en établissement hospitalier ou médico-social, 2 % en scolarité partagée (2024). Les accompagnants sont passés d'environ 43 000 en 2017 à près de 140 000, mais 98 % travaillent à temps incomplet (quotité moyenne de 62 à 63 %, salaire net moyen d'environ 1 000 euros). Plus de 40 000 élèves notifiés n'avaient pas d'accompagnant fin octobre 2025, sur 352 000 ayant droit. Le Cnesco cite l'Italie (enseignant co-intervenant plutôt qu'accompagnant individuel) comme référence."
+  cle: "Plus de 40 000 élèves notifiés n'avaient pas d'AESH fin octobre 2025, sur 352 000 ayant droit (Cnesco, 2026)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: depp-ni-25-63
+  titre: "DEPP, Note d'information 25.63 : les élèves en situation de handicap (novembre 2025)"
+  ref: "DEPP (2025), Note d'information n° 25.63, novembre 2025."
+  lien: https://www.education.gouv.fr/sites/default/files/document/depp-ni-2025-63-230137-0-pdf-474739.pdf
+  sujets: [inclusion]
+  type: données
+  statut: vérifié
+  resume: "Comptage annuel des élèves en situation de handicap. 563 400 élèves scolarisés à la rentrée 2024 (4,7 % des élèves), contre 232 400 (1,9 %) en 2006, soit 2,4 fois plus. Dans le second degré ordinaire, 187 800 élèves en 2024 (3,3 % des effectifs) contre 34 900 (0,6 %) en 2006 ; 6,4 fois plus au collège hors Segpa."
+  cle: "563 400 élèves handicapés scolarisés à la rentrée 2024, 2,4 fois plus qu'en 2006 (DEPP, NI 25.63)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: cnsa-mdph-delais
+  titre: "CNSA, délais de traitement des MDPH (2025)"
+  ref: "CNSA, Mon Parcours Handicap (2025), durée de traitement des demandes en MDPH."
+  lien: https://www.monparcourshandicap.gouv.fr/actualite/mdph-nouvelle-diminution-de-la-duree-de-traitement-des-demandes
+  sujets: [inclusion]
+  type: données
+  statut: vérifié
+  resume: "Le délai moyen de traitement d'une demande en MDPH (tous droits confondus) est de 4,4 mois au deuxième trimestre 2025, contre 4,7 mois en 2023, au-dessus du délai légal de 4 mois. Il varie de 2,2 mois (Cantal) à bien davantage selon les départements."
+  cle: "Délai moyen de traitement en MDPH : 4,4 mois au T2 2025, pour 4 mois légaux (CNSA)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: mediateur-2025
+  titre: "Médiateur de l'Éducation nationale, rapport 2025 (juillet 2026)"
+  ref: "Médiateur de l'Éducation nationale et de l'Enseignement supérieur (2026), rapport 2025."
+  lien: ""
+  sujets: [inclusion]
+  type: rapport
+  statut: vérifié
+  resume: "Le médiateur reçoit près de 28 500 saisines en 2025 (+20 % en un an, +51 % depuis 2020). Au premier degré, les saisines ont augmenté de 93 % en cinq ans et portent à 80 % sur la vie scolaire (harcèlement, handicap, inscription) ; les saisines liées aux AESH ont augmenté de 335 % en cinq ans. Le rapport juge le cadre des aménagements d'examens « mal adapté aux troubles psychiques sévères », car conditionné à une hospitalisation, et signale des élèves munis d'un ordinateur soupçonnés de fraude."
+  cle: "Près de 28 500 saisines du médiateur en 2025, +51 % depuis 2020 (Médiateur de l'Éducation nationale, 2026)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: cdc-sante-scolaire-2020
+  titre: "Cour des comptes, Les médecins et les personnels de santé scolaire (avril 2020)"
+  ref: "Cour des comptes (2020), Les médecins et les personnels de santé scolaire, avril 2020."
+  lien: https://www.vie-publique.fr/files/rapport/pdf/274412.pdf
+  sujets: [inclusion, ecrans]
+  type: rapport
+  statut: vérifié
+  resume: "La Cour examine la médecine scolaire, les infirmiers et les psychologues de l'Éducation nationale. Fin 2018, on compte 1 médecin scolaire pour 13 000 élèves, 1 psychologue de l'Éducation nationale pour 1 500 et 1 infirmier pour 1 300 (1 médecin ETP pour 15 624 élèves en 2022, selon une source ultérieure). Le budget de la santé scolaire est de 1 260 M€ en 2019. La Cour estime que les difficultés « ne tiennent pas à un manque de moyens budgétaires » mais au pilotage."
+  cle: "1 psychologue de l'Éducation nationale pour 1 500 élèves et 1 médecin scolaire pour 13 000 (Cour des comptes, 2020)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: enclass-2024
+  titre: "Santé publique France, enquête EnCLASS 2024 (juin 2026)"
+  ref: "Santé publique France (2026), enquête EnCLASS 2024, 2 juin 2026."
+  lien: ""
+  sujets: [ecrans]
+  type: enquête
+  statut: vérifié
+  resume: "Enquête sur la santé des collégiens et lycéens. 19 % des lycéens sont à risque important de dépression (25,7 % des filles, 11,7 % des garçons). 20 % ont eu des pensées suicidaires dans l'année (-4 points par rapport à 2022), mais 15 % déclarent une tentative de suicide au cours de leur vie (+2 points). L'édition 2022 (9 337 élèves) donnait 14 % et 15 % de risque de dépression au collège et au lycée."
+  cle: "19 % des lycéens à risque important de dépression : 25,7 % des filles, 11,7 % des garçons (EnCLASS 2024, Santé publique France, 2026)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: drees-suicide-2025
+  titre: "DREES, Observatoire national du suicide, 6e rapport (février 2025)"
+  ref: "DREES (2025), Observatoire national du suicide, 6e rapport, février 2025."
+  lien: ""
+  sujets: [ecrans]
+  type: rapport
+  statut: vérifié
+  resume: "Les hospitalisations pour gestes auto-infligés ont augmenté de 46 % chez les filles de 15 à 19 ans entre 2017 et 2023 (516 pour 100 000, quatre fois le taux des garçons) et de 70 % chez les 10-14 ans. Les passages aux urgences pour idées ou gestes suicidaires des moins de 18 ans augmentent sans interruption de 2022 à 2025."
+  cle: "Hospitalisations pour gestes auto-infligés : +46 % chez les filles de 15-19 ans entre 2017 et 2023 (DREES, 2025)."
+  propositions: []
+  dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: enfants-ecrans-2024
+  titre: "Commission « Enfants et écrans. À la recherche du temps perdu » (avril 2024)"
+  ref: "Benyamina, A. et S. Mouton (dir.) (2024), Enfants et écrans. À la recherche du temps perdu, rapport de la commission d'experts, avril 2024, 142 pages, 29 propositions."
+  lien: https://www.elysee.fr/admin/upload/default/0001/16/fbec6abe9d9cc1bff3043d87b9f7951e62779b09.pdf
+  sujets: [ecrans]
+  type: rapport
+  statut: vérifié
+  resume: "Commission d'experts installée par le Président de la République. Elle conclut à un consensus net sur les effets somatiques des écrans (sommeil, sédentarité, obésité, myopie), avec une relation dose-effet, et appelle à la vigilance sur le neurodéveloppement. L'« addiction aux écrans » n'est pas reconnue scientifiquement ; les réseaux sociaux « semblent être » un facteur de risque supplémentaire quand il existe une vulnérabilité préexistante, surtout chez les filles. Ses 29 propositions « font système »."
+  sections:
+    - "Synthèse (p. 6-8) : effets somatiques établis, prudence sur la santé mentale, 10 écrans en moyenne par foyer."
+    - "Proposition 13, bornes d'âge : pas de téléphone avant 11 ans ; sans internet à 11 ans ; connecté sans réseaux sociaux à 13 ans ; réseaux sociaux « éthiques » à 15 ans ; pas d'écran avant 3 ans."
+    - "Proposition 15 : toute ressource numérique éducative passe par une expérimentation, une étude d'impact et une labellisation."
+    - "Proposition 16 : un cadre strict pour Pronote et les ENT, avec des paramétrages protecteurs par défaut."
+    - "Proposition 17 : faire appliquer l'interdiction du téléphone au collège."
+    - "Proposition 20 : adapter les horaires scolaires au sommeil."
+  cle: "Les réseaux sociaux « semblent être » un facteur de risque supplémentaire quand il existe une vulnérabilité préexistante (commission Enfants et écrans, 2024)."
+  propositions: []
+  dossier: ""
+- id: proteger-sans-empecher-2026
+  titre: "CIANum, « Protéger sans empêcher : les vulnérabilités à l'ère de l'IA générative » (10 novembre 2026)"
+  ref: "Commission « IA générative et vulnérabilités » du CIANum (2026), Protéger sans empêcher, remis le 10 novembre 2026, 193 pages, 18 recommandations."
+  lien: https://www.elysee.fr/admin/upload/default/0001/20/eaaf28c592b0cc1e10cdeaa5ba0c0e9f4d746543.pdf
+  sujets: [ecrans]
+  type: rapport
+  statut: vérifié
+  resume: "Commission saisie par la ministre déléguée à l'IA (février 2026), 9 experts, 55 auditions. Elle décrit trois risques pour les jeunes utilisateurs de l'IA générative (cognitif, affectif, violences numériques) et des bénéfices éducatifs « variés et conditionnels ». Elle ne propose pas d'interdire, mais des garde-fous validés par des organismes indépendants et des modèles adaptés aux mineurs."
+  sections:
+    - "Usages (p. 20-21) : 26 % des 12-17 ans utilisent l'IA générative chaque jour (Baromètre du numérique 2026) ; près de 70 % des 15-24 ans y ont régulièrement recours (Arcom, juin 2026)."
+    - "Risques (p. 17-18) : « dette cognitive » ; la moitié des mineurs abordent des sujets personnels avec des chatbots (VYV/CNIL, mars 2026) ; 92 % des adolescents disent passer plus de temps qu'ils ne le voudraient sur les applications d'IA (YouGov, octobre 2026)."
+    - "Santé mentale (p. 39-44) : cas de suicides après des interactions prolongées ; les garde-fous des modèles « peuvent se dégrader » dans les conversations longues ; benchmark KORA de 28 % à 44 % sur la sécurité face à la détresse."
+    - "Bénéfices (p. 26-29) : « aucune étude scientifique d'envergure » ne montre qu'un outil seul fait mieux qu'un enseignant ; risque d'inégalité par l'abonnement (30 % d'erreurs pour une version gratuite contre 14 % pour la payante, AlgorithmWatch 2024)."
+    - "Recommandation 2 : « mode mineurs » (minuteur, pauses, horaires scolaires et sommeil), désactivation par défaut de l'anthropomorphisme et de la flagornerie."
+    - "Recommandation 12 : un programme d'éducation à l'IA dès le primaire, avec un nombre minimal d'heures."
+    - "Recommandation 13 : dans les classes, des modèles adaptés aux mineurs, « socratiques », labellisés après évaluation par le Conseil scientifique de l'Éducation nationale."
+  cle: "26 % des 12-17 ans utilisent l'IA générative chaque jour (rapport « Protéger sans empêcher », 2026, p. 20)."
+  propositions: [tuteur-public, ia-bases]
+  dossier: ""
+- id: cianum-clandestinite-2026
+  titre: "CIANum, « Sortir de la clandestinité. Mettre l'IA au service d'une nouvelle ambition pour le système éducatif » (juin 2026)"
+  ref: "Conseil de l'intelligence artificielle et du numérique (2026), Sortir de la clandestinité, rapport du groupe IA et éducation, juin 2026, 76 pages (308 avec annexes), 11 recommandations."
+  lien: ""
+  sujets: [ecrans, formation]
+  type: rapport
+  statut: vérifié
+  resume: "Thèse : l'IA est déjà dans l'éducation, mais de façon « clandestine » (usages dissimulés des élèves, des enseignants et des parents) ; le contrefactuel n'est pas l'absence d'IA mais « son omniprésence dans l'ombre » (p. 12). Le rapport propose une « éducation duale » (des temps avec et sans IA), des outils souverains labellisés « socratiques » et une formation massive des enseignants. Aucune recommandation n'est chiffrée en euros. Près de 50 auditions."
+  sections:
+    - "Usages (p. 15-17) : 90 % des élèves de seconde avaient utilisé l'IA pour leurs devoirs (Sénat, 2024) ; 91 % des enseignants l'utilisent, mais 3 % régulièrement avec leurs élèves (IGESR, 2025)."
+    - "Formation (p. 16, 50) : 9 % des enseignants français formés à l'IA dans l'année, contre 38 % dans l'OCDE (TALIS 2024) ; 14 % l'utilisent dans leur travail contre 41 % ; 10 % touchés par les formations déployées en mai 2025."
+    - "Preuves (p. 17-18) : sur 818 articles, 20 seulement ont un groupe de contrôle (Stanford, avril 2026) ; l'EEF mesure environ 30 % de temps de préparation gagné avec ChatGPT."
+    - "Principes (p. 43-48) : faire entrer l'IA en classe en décidant explicitement ce qui est autorisé ; éducation duale ; évaluation préalable ; formation, « clé de voûte » ; acheter ou produire des outils de qualité."
+    - "Recommandations (p. 49-66) : formation nationale des enseignants à et avec l'IA ; éducation à l'IA dès le primaire ; évaluer le processus et l'oral ; ateliers santé mentale dès 2027 ; conférence de consensus sur les barrières d'âge ; charte ; labellisation des applications socratiques ; évaluation systématique ; kiosque national d'outils souverains ; expérimentations ; conférence de financement État-collectivités."
+  cle: "9 % des enseignants français ont été formés à l'IA dans l'année, contre 38 % dans l'OCDE (CIANum, 2026, p. 16, d'après TALIS 2024)."
+  propositions: [tuteur-public, tuteur-marche]
+  dossier: 09-lecture-rapport-cianum-sortir-clandestinite
+- id: milburn-2026
+  titre: "Rapport Milburn, « From a Welfare State to a Working State » (17 novembre 2026)"
+  ref: "Milburn, A. (2026), From a Welfare State to a Working State: a new settlement for the next generation, Department for Work and Pensions, 17 novembre 2026, 278 pages."
+  lien: https://assets.publishing.service.gov.uk/media/6afb1fc5ccb3ea58ac8743c1/from-a-welfare-state-to-a-working-state-full-report.pdf
+  sujets: [emploi, orientation]
+  type: rapport
+  statut: vérifié
+  resume: "Revue indépendante commandée par le gouvernement britannique sur les jeunes sans emploi ni formation (981 000 jeunes de 16 à 24 ans, 13,0 %, ONS avril-juin 2026). Elle propose une garantie légale d'opportunité et de soutien, financée par un redéploiement des aides, et un volet école, apprentissage et IA. Le gouvernement en soutient le principe (livre blanc début 2027) ; les montants sont renvoyés à la Spending Review 2027. Détail des 17 recommandations dans l'onglet IA et jeunes."
+  sections:
+    - "Diagnostic (p. 25, 30-31, 37) : 25 £ d'allocations pour 1 £ d'aide à l'emploi en 2024/25 ; coût des jeunes sans emploi ni formation d'environ 125 Md£ par an ; 69 % des jeunes ont utilisé l'IA, 55 % s'en disent inquiets."
+    - "Garantie (p. 21-23) : emploi, formation, apprentissage, stage jusqu'à 12 semaines ou service civique ; conseiller sous 14 jours ; emploi payé de six mois après 12 mois sans emploi ni formation."
+    - "Employeurs (p. 12) : 3 000 £ par embauche, jusqu'à 7 000 £ pour une petite entreprise, 2 500 £ par apprenti ; environ 1,1 Md£ par an pour 170 000 opportunités."
+    - "École et supérieur (p. 14-16) : repérage précoce du décrochage, stage obligatoire, norme « prêt pour le travail » inspectée, devenir des élèves publié par établissement, salaires des diplômés publiés par formation."
+    - "Apprentissage (p. 16-17) : 35 % d'une génération apprentie avant 25 ans, environ 270 000 entrées par an d'ici 2036."
+    - "IA (p. 72-73) : un observatoire de l'IA et des jeunes, rapport annuel sur les voies d'entrée qui se ferment par secteur et par territoire."
+    - "Financement (p. 25, 30-31) : 500 M£ en 2027/28, 5,8 Md£ par an en 2036/37, compensés par 3,6 Md£ d'économies et 2,4 Md£ d'effets fiscaux ; 440 000 jeunes de plus en emploi durable."
+  cle: "Le rapport Milburn propose 3 000 £ par embauche d'un jeune resté six mois sans emploi ni formation, jusqu'à 7 000 £ pour une petite entreprise (Milburn, 2026, p. 12)."
+  propositions: [ia-garantie, ia-observatoire, orient-gatsby, orient-debouches]
+  dossier: 12-milburn-review
+- id: cdc-formation-2023
+  titre: "Cour des comptes, La formation continue des enseignants (2023)"
+  ref: "Cour des comptes (2023), La formation continue des enseignants de l'Éducation nationale."
+  lien: ""
+  sujets: [formation]
+  type: rapport
+  statut: vérifié
+  resume: "La Cour mesure le peu de temps de formation des enseignants et la sous-consommation des crédits. Un enseignant suit en moyenne 2 jours de formation par an au premier degré et 1,5 au second (2021), contre 9,2 jours pour les autres cadres A de l'État (2019). La formation continue coûte plus de 1,1 Md€ en 2021, avec 458 M€ de sous-consommation (p. 7). Les formations d'initiative locale, demandées par le chef d'établissement, sont « appréciées mais minoritaires » (p. 6) ; la Cour demande « des délégations de moyens à la main des cadres locaux » (p. 7)."
+  sections:
+    - "Tableau 1 : 2 jours (1er degré) et 1,5 jour (2nd degré) par enseignant en 2021, contre 3 et 3,2 en 2018-2019."
+    - "TALIS 2013 : 4 jours de formation pour 54 % des enseignants français, contre 8 jours pour 71 % dans l'OCDE."
+    - "Allocation de formation pendant les vacances : 120 € par jour, 5 jours par an au plus ; 2 261 bénéficiaires en 2021-2022 pour moins de 1 M€."
+    - "Le remplacement de 5 jours de formation obligatoire coûterait un demi-milliard d'euros (septembre 2023)."
+  cle: "Un enseignant suit 1,5 à 2 jours de formation par an, contre 9,2 pour les autres cadres A de l'État (Cour des comptes, 2023)."
+  propositions: [heures-service-annuel]
+  dossier: 10-brief-formation-continue-enseignants
+- id: senat-formation-2023
+  titre: "Sénat, rapport d'information sur la formation continue des enseignants (2023)"
+  ref: "Sénat (2023), rapport d'information n° 869 (2022-2023) sur la formation continue des enseignants."
+  lien: https://www.senat.fr/rap/r22-869/r22-8691.pdf
+  sujets: [formation]
+  type: rapport
+  statut: vérifié
+  resume: "Le Sénat montre que le verrou est le temps, pas l'argent : 1,08 Md€ consacré à la formation initiale et continue en 2022, en baisse de 27 % depuis 2017, et 38 % des crédits (658 M€) non consommés. Seuls 44 % des professeurs des écoles disent avoir toujours été remplacés pendant leurs formations ; la formation continue représente 18 % des absences en 2020-2021, premier motif hors maladie. Sa recommandation n° 9 inscrit les formations d'initiative locale au projet d'établissement."
+  cle: "38 % des crédits de formation des enseignants (658 M€) n'ont pas été consommés en 2022 (Sénat, 2023)."
+  propositions: [heures-service-annuel]
+  dossier: 10-brief-formation-continue-enseignants
+- id: depp-seconde-2026
+  titre: "DEPP, test de positionnement de début de seconde 2026"
+  ref: "DEPP (2026), Test de positionnement de début de seconde 2026, résultats nationaux, novembre 2026."
+  lien: https://www.education.gouv.fr/depp/test-de-positionnement-de-debut-de-seconde-2026-resultats-nationaux-506796
+  sujets: [ecrans, orientation]
+  type: données
+  statut: vérifié
+  resume: "Évaluation exhaustive des élèves de seconde à la rentrée. Le rapport compare à 2019. En maths, 28,1 % des élèves de seconde générale et technologique sont dans les groupes les plus faibles, contre 19,2 % en 2019 ; 75,4 % contre 66,2 % en seconde professionnelle (score moyen en baisse de 6 points). En français, 22,1 % contre 18,7 % en seconde générale et technologique, 69,8 % contre 65,7 % en voie professionnelle. Le rapport ne propose aucune explication de ces baisses."
+  cle: "En seconde générale et technologique, 28,1 % des élèves sont dans les groupes faibles en maths, contre 19,2 % en 2019 (DEPP, 2026)."
+  propositions: []
+  dossier: 14-why-scores-fall
+- id: depp-ce1-2026
+  titre: "DEPP, Repères CE1 2026 (évaluations de rentrée)"
+  ref: "DEPP (2026), Évaluations 2026, Repères CE1, résultats nationaux."
+  lien: https://www.education.gouv.fr/depp/evaluations-2026-reperes-ce1-resultats-nationaux-506736
+  sujets: [ecrans]
+  type: données
+  statut: vérifié
+  resume: "Évaluation exhaustive en début de CE1. 69,9 % des élèves sont dans le groupe satisfaisant pour « écrire des mots dictés » en 2026, contre 72,4 % en 2025 (-2,5 points) et 7,2 points de moins qu'en 2019. « Lire à voix haute des mots » : 68,3 % contre 69,9 % en 2025. Ces élèves n'étaient pas encore scolarisés pendant les fermetures de 2020 : le Covid n'explique pas cette baisse."
+  cle: "Dictée de CE1 : 69,9 % de groupe satisfaisant en 2026, contre 72,4 % en 2025 (DEPP, Repères CE1 2026)."
+  propositions: []
+  dossier: 14-why-scores-fall
+- id: depp-pisa-2025
+  titre: "DEPP, Note d'information 26.40 : PISA 2025 (septembre 2026)"
+  ref: "DEPP (2026), Note d'information n° 26.40, PISA 2025, septembre 2026."
+  lien: https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-40pisa-mathspdf-520231.pdf
+  sujets: [ecrans]
+  type: données
+  statut: vérifié
+  resume: "Résultats français de PISA 2025 (élèves de 15 ans). Compréhension de l'écrit : 456 points contre 461 dans l'OCDE, -18 points depuis 2022 après -19 entre 2018 et 2022 ; l'OCDE perd 14 points. 33 % des élèves sont sous le niveau 2, contre 27 % en 2022, 21 % en 2018 et 15 % en 2000 (OCDE 30 %). Les garçons perdent 23 points, les filles 11. Maths : 458 points, -16 depuis 2022. Les élèves passent 4,9 heures par jour sur les écrans les jours d'école, dont 3,0 de loisir (3,4 dans l'OCDE) : le temps d'écran français n'est pas exceptionnel. La note évoque d'« éventuels effets durables » du Covid."
+  cle: "À 15 ans, 33 % des élèves sont en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40, 2026)."
+  propositions: [ia-bases]
+  dossier: 14-why-scores-fall
+- id: pisa-2022-distraction
+  titre: "OCDE, PISA 2022, volume II : la distraction par les appareils numériques"
+  ref: "OCDE (2023), Résultats du PISA 2022, volume II."
+  lien: ""
+  sujets: [ecrans]
+  type: données
+  statut: vérifié
+  resume: "Environ 30 % des élèves de l'OCDE sont distraits par leurs appareils dans la plupart ou toutes les leçons de maths, 25 % par ceux des autres. Les élèves distraits par les appareils de leurs camarades dans au moins une partie des cours obtiennent 15 points de moins en maths, après contrôle du milieu social. Un usage de loisir jusqu'à une heure par jour à l'école va avec de meilleurs résultats. Dans les écoles qui interdisent le téléphone, 29 % des élèves s'en servent encore plusieurs fois par jour. Ce sont des corrélations."
+  cle: "Les élèves distraits par les appareils de leurs camarades ont 15 points de moins en maths (OCDE, PISA 2022, corrélation)."
+  propositions: []
+  dossier: 14-why-scores-fall
+- id: cnl-lecture-2026
+  titre: "CNL et Ipsos BVA, les jeunes et la lecture (avril 2026)"
+  ref: "Centre national du livre et Ipsos BVA (2026), Les jeunes Français et la lecture, avril 2026 (1 500 jeunes de 7 à 19 ans)."
+  lien: https://www.linfodurable.fr/les-jeunes-lisent-toujours-moins-surtout-ladolescence-selon-une-etude-55889
+  sujets: [ecrans]
+  type: enquête
+  statut: secondaire
+  resume: "Les 7-19 ans lisent 18 minutes par jour pour le loisir contre 3 h 01 d'écrans, 8 minutes de lecture de moins qu'en 2016. Les 16-19 ans passent plus de cinq heures par jour sur les écrans et 14 minutes à lire ; environ un tiers d'entre eux, surtout des garçons, ne lisent pas pour le loisir. Le recul de la lecture est le plus fort à 16-19 ans, comme la baisse aux tests : c'est cohérent, pas causal."
+  cle: "Les 16-19 ans passent plus de cinq heures par jour sur les écrans et 14 minutes à lire (CNL, 2026)."
+  propositions: [ia-bases]
+  dossier: 14-why-scores-fall
+- id: abrahamsson-2024
+  titre: "Abrahamsson (2024), l'interdiction du smartphone au collège en Norvège"
+  ref: "Abrahamsson, S. (2024), NHH Discussion Paper 1/2024 (publication annoncée dans le Journal of Human Resources, 2026)."
+  lien: https://econpapers.repec.org/paper/hhsnhheco/2024_5f001.htm
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Étude d'événement sur les interdictions du smartphone dans les collèges norvégiens. Les notes des filles progressent, le harcèlement baisse pour les deux sexes et les consultations pour troubles psychologiques des filles diminuent ; les effets sont plus forts pour les filles de milieu modeste. Le résumé ne donne pas les ordres de grandeur."
+  cle: "En Norvège, l'interdiction du smartphone au collège a amélioré les notes des filles et réduit leurs consultations pour troubles psychologiques (Abrahamsson, 2024)."
+  propositions: []
+  dossier: 14-why-scores-fall
+- id: interdictions-portable-null
+  titre: "Interdictions du téléphone sans effet mesuré : Suède, Angleterre, États-Unis"
+  ref: "Kessel et al. (2020), IFN WP 1288 ; Goodyear et al. (2025), Lancet Regional Health Europe ; Figlio et al. (2025) ; Dee et al. (2026), NBER."
+  lien: https://pmc.ncbi.nlm.nih.gov/articles/PMC11850730/
+  sujets: [ecrans]
+  type: étude causale
+  statut: secondaire
+  resume: "En Suède, les interdictions n'ont pas d'effet sur les résultats (Kessel et al., 2020). En Angleterre, sur 30 écoles et 1 227 élèves, les politiques restrictives ne vont pas avec un meilleur bien-être, sommeil ou niveau ; les élèves compensent hors de l'école (Goodyear et al., 2025, étude transversale). En Floride, moins d'un centile gagné la deuxième année (Figlio et al., 2025) ; l'étude américaine des pochettes trouve un effet proche de zéro à trois ans (Dee et al., 2026). En Angleterre, Beland et Murphy (2016) trouvaient au contraire +6,4 % d'écart-type."
+  cle: "Les interdictions du téléphone n'ont pas d'effet mesuré sur les résultats en Suède, en Angleterre (Goodyear et al., 2025) ni aux États-Unis."
+  propositions: []
+  dossier: 14-why-scores-fall
+- id: portable-en-pause
+  titre: "« Portable en pause » : bilan ministériel, sans évaluation indépendante"
+  ref: "Ministère de l'Éducation nationale, réponse au Sénat (janvier 2026) ; enquête SNPDEN (septembre 2025)."
+  lien: https://www.senat.fr/questions/base/2025/qSEQ25120857S.html
+  sujets: [ecrans]
+  type: texte officiel
+  statut: secondaire
+  resume: "Expérimenté avec plus de 32 000 élèves en 2024-2025, puis généralisé aux collèges publics en 2025-2026. Environ 80 % des collèges participants y sont favorables selon le ministère ; selon une enquête du syndicat des chefs d'établissement (septembre 2025), 9 collèges sur 10 ne l'appliquaient pas. Aucune évaluation d'impact sur les apprentissages n'a été trouvée ; elle a été demandée au Sénat en décembre 2025."
+  cle: "« Portable en pause » n'a pas fait l'objet d'une évaluation indépendante de ses effets sur les apprentissages (réponse au Sénat, 2026)."
+  propositions: []
+  dossier: 14-why-scores-fall
+- id: insee-2109
+  titre: "Insee Première n° 2109 : ce que rapporte d'aller au bout d'un diplôme (juin 2026)"
+  ref: "Pouliquen, E. (2026), Insee Première n° 2109, juin 2026."
+  lien: ""
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Suivi de la cohorte entrée en 6e en 2007, observée à 26-27 ans en 2023. L'étude compare les diplômés à ceux qui ont atteint la dernière année sans obtenir le diplôme (effet « parchemin »). Pour le master : emploi 90 % contre 87 % (écart non significatif), salaire net 2 240 € contre 2 130 €, +4 % après contrôles, mais +15 points de probabilité d'être cadre. Le diplôme ouvre surtout l'accès au statut, peu au salaire et à l'emploi."
+  cle: "Finir son master plutôt qu'arrêter en dernière année ajoute 15 points à la probabilité d'être cadre mais 4 % au salaire (Insee Première n° 2109, 2026)."
+  propositions: [ia-master]
+  dossier: 13-master-as-filter-evidence
+- id: ofer-2016
+  titre: "Dares, enquête Ofer 2016 : comment les employeurs recrutent"
+  ref: "Lhommeau, B. et V. Rémy (2022), Économie et Statistique n° 534-35 ; Pôle emploi, Éclairages et synthèses n° 43 (2018) ; Dares, enquête Ofer 2016."
+  lien: ""
+  sujets: [emploi]
+  type: enquête
+  statut: vérifié
+  resume: "Enquête auprès des établissements ayant recruté entre septembre et novembre 2015. Dans un CV, 74 % des employeurs regardent d'abord l'expérience dans le métier, 57 % les compétences comportementales et 40 % les diplômes. Le diplôme ne décide du choix final que dans 11 % des recrutements (22 % pour les cadres). 35 % des recruteurs n'avaient pas d'attente de diplôme, et 73 % disent qu'ils auraient pu embaucher quelqu'un de moins diplômé mais plus expérimenté (71 % pour les métiers techniques). Aucune vague plus récente n'existe."
+  cle: "73 % des recruteurs auraient pu embaucher quelqu'un de moins diplômé mais plus expérimenté (Dares, enquête Ofer 2016)."
+  propositions: [ia-master]
+  dossier: 13-france-firms-master-filter-and-solutions
+- id: rers-2025
+  titre: "MESR, Repères et références statistiques 2025 (origine sociale, coût par étudiant)"
+  ref: "MESR-DEPP (2025), Repères et références statistiques 2025, tableaux 7.16-3 et 10.05-2."
+  lien: https://www.education.gouv.fr/sites/default/files/2025-09/rers2025-chapitre-8-version-corrig-e-le-25-septembre-2025-441735.pdf
+  sujets: [emploi, orientation]
+  type: données
+  statut: vérifié
+  resume: "Origine sociale des étudiants français des universités en 2024-2025 : les enfants de cadres font 31,1 % des inscrits en licence, 42,1 % en master et 41,6 % en doctorat ; les enfants d'ouvriers 10,1 %, 6,3 % et 3,9 %. Coût moyen d'un étudiant d'université : 12 250 € par an (2023), soit environ 24 500 € pour deux années de master (calcul du GT). Emploi à 6 mois : 43 % après un bac pro, 59 % après un BTS (InserJeunes)."
+  cle: "Les enfants d'ouvriers passent de 10,1 % des étudiants en licence à 6,3 % en master, les enfants de cadres de 31,1 % à 42,1 % (RERS 2025)."
+  propositions: [ia-master, orient-transparence]
+  dossier: 13-master-as-filter-evidence
+- id: insersup
+  titre: "MESR, InserSup : emploi et salaire des diplômés à 30 mois"
+  ref: "MESR-SIES, InserSup, jeu de données fr-esr-insersup (version 2026_S1)."
+  lien: https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-insersup
+  sujets: [emploi, orientation]
+  type: données
+  statut: vérifié
+  resume: "Suivi exhaustif de l'insertion des diplômés de l'université par appariement avec les données sociales. À 30 mois, 50 % des diplômés de licence générale qui s'arrêtent sont en emploi salarié en France, 78 % après une licence professionnelle, 69 % après un master, 77 % après un master en alternance, 82 % après une licence professionnelle en alternance (promotion 2023). Salaire net mensuel médian (promotion 2021) : 1 750 € (licence générale) à 2 580 € (master en alternance). Un master sur dix est sous 49 % d'emploi, un sur dix au-dessus de 86 %. Limites : l'emploi non salarié et à l'étranger n'est pas compté ; les sortants de licence générale sont sélectionnés."
+  cle: "Emploi salarié à 30 mois : 78 % après une licence professionnelle, 69 % après un master, 50 % après une licence générale (InserSup 2026)."
+  propositions: [ia-master, orient-debouches, ia-marche]
+  dossier: ""
+- id: lift-2026
+  titre: "Palladino, Bergeaud, Bertheau, Bunel et Degos (2026), l'IA et l'embauche des jeunes en France"
+  ref: "Palladino, Bergeaud, Bertheau, Bunel et Degos (2026), LIFT WP 2026-02, HEC Paris et Banque de France."
+  lien: https://heclift.github.io/website/files/papers/LIFT_WP_2026-02.pdf
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Données administratives françaises sur les embauches. Entre novembre 2022 et mars 2026, les embauches en CDI des 21-29 ans reculent de 28,3 % dans le cinquième des métiers les plus exposés à l'IA, contre 7,5 % dans le cinquième le moins exposé, sans vague de licenciements. Une partie de la baisse vient du télétravail. Les utilisatrices intensives d'IA générative embauchent moins de jeunes en CDI depuis 2023 (résultat descriptif selon les auteurs)."
+  cle: "Les embauches en CDI des 21-29 ans ont baissé de 28,3 % dans les métiers les plus exposés à l'IA, contre 7,5 % dans les moins exposés (LIFT, 2026)."
+  propositions: [ia-observatoire, orient-debouches]
+  dossier: 06-index-ia-formations
+- id: canaries-2025
+  titre: "Brynjolfsson, Chandar et Chen (2025), « Canaries in the Coal Mine? »"
+  ref: "Brynjolfsson, E., B. Chandar et R. Chen (2025), Canaries in the Coal Mine?, Stanford Digital Economy Lab, août 2025."
+  lien: ""
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Données de paie d'ADP, premier gestionnaire de paie américain. Les 22-25 ans des métiers les plus exposés à l'IA perdent 13 % d'emploi relatif, à chocs d'entreprise contrôlés ; les travailleurs plus âgés des mêmes métiers sont stables ou en hausse."
+  cle: "Les 22-25 ans des métiers les plus exposés à l'IA ont perdu 13 % d'emploi relatif aux États-Unis (Brynjolfsson, Chandar et Chen, 2025)."
+  propositions: [ia-observatoire]
+  dossier: 06-index-ia-formations
+- id: humlum-2025
+  titre: "Humlum et Vestergaard (2025), effets limités des modèles de langage au Danemark"
+  ref: "Humlum, A. et E. Vestergaard (2025), Large Language Models, Small Labor Market Effects, BFI WP 2025-56 / NBER w33777."
+  lien: ""
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Deux enquêtes d'adoption (2023, 2024) auprès de 25 000 travailleurs et 7 000 établissements de 11 métiers exposés, appariées aux registres danois. Aucun effet sur les salaires ni les heures ; les intervalles de confiance excluent des effets supérieurs à 1 %. Contrepoint utile aux études américaines sur les débutants."
+  cle: "Au Danemark, l'adoption des modèles de langage n'a eu aucun effet mesurable sur les salaires ni les heures (Humlum et Vestergaard, 2025)."
+  propositions: []
+  dossier: 06-index-ia-formations
+- id: insee-ic-2026
+  titre: "Insee, Note de conjoncture (24 mars 2026) : l'emploi des jeunes dans l'information-communication"
+  ref: "Adjerad et Vermersch (2026), Insee, Note de conjoncture, 24 mars 2026."
+  lien: ""
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "L'emploi de l'information-communication baisse de 3,0 % entre fin 2023 et fin 2025, entièrement du fait des moins de 30 ans. L'emploi salarié des 15-29 ans (hors apprentis) dans les activités informatiques recule de 7,4 % sur un an fin 2025, contre -0,7 % dans l'ensemble du privé."
+  cle: "L'emploi salarié des 15-29 ans dans l'informatique a reculé de 7,4 % sur un an fin 2025, contre 0,7 % dans l'ensemble du privé (Insee, 2026)."
+  propositions: [ia-observatoire]
+  dossier: 06-index-ia-formations
+- id: orr-2026
+  titre: "Orr, Tucker et Warren (2026), l'exposition à l'IA par spécialité de diplôme"
+  ref: "Orr, Tucker et Warren (2026), US Census CES-WP-26-56, septembre 2026."
+  lien: ""
+  sujets: [emploi, orientation]
+  type: étude causale
+  statut: vérifié
+  resume: "Données administratives américaines sur les diplômés, par spécialité. Pour le dixième des spécialités les plus exposées à l'IA, l'emploi initial baisse de 5 points et les premiers revenus trimestriels de 13 %, un choc « comparable à une entrée sur le marché du travail en grande récession ». La moitié vient de salaires plus bas dans le même secteur, la moitié d'un déplacement vers le commerce."
+  cle: "Pour les spécialités les plus exposées à l'IA, les premiers revenus des diplômés américains baissent de 13 % (Orr, Tucker et Warren, 2026)."
+  propositions: [orient-debouches]
+  dossier: 06-index-ia-formations
+- id: hosseini-2026
+  titre: "Hosseini et Lichtinger (2026), exposition des métiers à l'IA par tâche (base de la Boussole)"
+  ref: "Hosseini, M. et G. Lichtinger (2026), GenAI Expertise, jeu de données Final_Occupation_Dataset."
+  lien: https://github.com/s-mahdihosseini/GenAI_Expertise
+  sujets: [orientation, emploi]
+  type: données
+  statut: vérifié
+  resume: "Mesure, pour chaque métier O*NET, la part des tâches qu'une IA peut faire à plus de 80 % (avg_auto_hl_bi). La Boussole l'applique aux premiers métiers de chaque formation : la licence de maths, l'informatique et la comptabilité mènent à des premiers emplois très automatisables, l'école d'ingénieurs et les doubles cursus résistent. L'exposition n'est pas une prévision : un métier exposé peut rester porteur (diplômés de comptabilité : 79 % en emploi à 30 mois)."
+  cle: "La licence de maths, l'informatique et la comptabilité mènent à des premiers emplois très automatisables (Hosseini et Lichtinger, 2026)."
+  propositions: [orient-debouches, orient-transparence]
+  dossier: 06-index-ia-formations
+- id: deming-2017
+  titre: "Deming (2017), l'importance croissante des compétences sociales"
+  ref: "Deming, D. (2017), « The Growing Importance of Social Skills in the Labor Market », Quarterly Journal of Economics."
+  lien: https://scholar.harvard.edu/sites/scholar.harvard.edu/files/ddeming/files/deming_socialskills_qje.pdf
+  sujets: [orientation, emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Aux États-Unis de 1980 à 2012, l'emploi et les salaires progressent le plus dans les métiers qui combinent compétences mathématiques et compétences sociales ; les métiers très mathématiques mais peu sociaux reculent. Base du critère « maths × contact humain » de la note de A à E de la Boussole."
+  cle: "Les emplois qui associent maths et compétences sociales progressent le plus (Deming, 2017)."
+  propositions: [orient-debouches]
+  dossier: 06-index-ia-formations
+- id: bastani-2025
+  titre: "Bastani et al. (2025), l'IA générative peut nuire à l'apprentissage (PNAS)"
+  ref: "Bastani, H. et al. (2025), « Generative AI without guardrails can harm learning », PNAS 122(26)."
+  lien: ""
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé dans un grand lycée turc, environ 1 000 élèves de la 9e à la 11e année, 50 classes, quatre séances de maths de 90 minutes. Pendant l'entraînement, GPT-4 sans garde-fou améliore les résultats de 48 % et un tuteur à indices (sans réponse directe) de 127 %. À l'examen passé sans IA, le groupe GPT-4 libre fait 17 % de moins que les élèves sans accès ; le tuteur à indices n'a pas d'effet négatif."
+  cle: "L'IA en accès libre fait perdre 17 % à l'examen passé sans elle ; un tuteur à indices ne fait rien perdre (Bastani et al., 2025)."
+  propositions: [tuteur-public, ia-bases]
+  dossier: 07-outil-ia-public
+- id: stromberg-2026
+  titre: "Strömberg, Lei et Wu (2026), l'IA générative et les notes en Chine"
+  ref: "Strömberg, Lei et Wu (2026), CEPR Discussion Paper 21577."
+  lien: ""
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Un comté chinois, 26 811 élèves de la 7e à la 12e année, différences de différences échelonnées sur 30 mois. Les notes de devoirs montent de 18 %, mais les contrôles mensuels sur table baissent de 20 %, le gaokao de 18 % et le zhongkao de 24 %. 81 % des utilisateurs ont un usage compatible avec la sous-traitance des devoirs. C'est exactement le risque d'un outil à la maison."
+  cle: "L'IA générative sans garde-fou a fait baisser de 20 % les notes aux contrôles sur table en Chine (Strömberg, Lei et Wu, 2026)."
+  propositions: [tuteur-public, ia-bases]
+  dossier: 07-outil-ia-public
+- id: kestin-2025
+  titre: "Kestin et al. (2025), un tuteur IA en physique à Harvard"
+  ref: "Kestin, G. et al. (2025), Scientific Reports 15."
+  lien: ""
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Cours d'introduction à la physique à Harvard, 194 étudiants analysés, essai croisé randomisé : un tuteur IA à la maison contre un cours en classe active. Gain de 0,63 écart-type (0,73 à 1,3 selon la régression quantile) en 49 minutes médianes contre 60 en classe. Limites : un seul cours, contenu d'introduction, étudiants très sélectionnés."
+  cle: "Un tuteur IA structuré a fait gagner 0,63 écart-type à des étudiants de physique de Harvard (Kestin et al., 2025)."
+  propositions: [tuteur-public]
+  dossier: 07-outil-ia-public
+- id: desimone-2025
+  titre: "De Simone et al. (2025), un programme d'IA générative au Nigeria (Banque mondiale)"
+  ref: "De Simone, M. et al. (2025), World Bank Policy Research Working Paper 11125."
+  lien: ""
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé dans le secondaire nigérian : un programme de six semaines après les cours en 2024, des binômes utilisant GPT-4 avec des consignes conçues par des enseignants. +0,31 écart-type à l'évaluation finale, +0,23 en anglais ; les auteurs l'équivalent à 1,5 à 2 ans de scolarité ordinaire. Gains plus forts pour les filles. Contexte très différent de la France."
+  cle: "Six semaines de tutorat IA encadré ont fait gagner 0,31 écart-type au Nigeria (De Simone et al., 2025)."
+  propositions: [tuteur-public]
+  dossier: 07-outil-ia-public
+- id: henkel-2024
+  titre: "Henkel et al. (2024), le tuteur Rori sur WhatsApp au Ghana"
+  ref: "Henkel, O. et al. (2024), arXiv 2402.09809."
+  lien: https://arxiv.org/abs/2402.09809
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Environ 1 000 élèves de la 3e à la 9e année dans 11 écoles ghanéennes, affectation par école : un tuteur de maths sur téléphone, deux séances de 30 minutes par semaine pendant 8 mois. Effet de 0,37 écart-type la première année. Limite : peu d'écoles, donc incertitude."
+  cle: "Un tuteur de maths sur téléphone a fait gagner 0,37 écart-type au Ghana (Henkel et al., 2024)."
+  propositions: [tuteur-public]
+  dossier: 07-outil-ia-public
+- id: tutor-copilot-2024
+  titre: "Wang et al. (2024), Tutor CoPilot : l'IA qui aide les tuteurs humains"
+  ref: "Wang, R. et al. (2024), Tutor CoPilot, arXiv 2410.03017."
+  lien: https://arxiv.org/abs/2410.03017
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé aux États-Unis, 900 tuteurs humains et 1 800 élèves de milieux défavorisés : l'IA suggère des relances au tuteur, pas à l'élève. Maîtrise des notions +4 points, +9 points pour les élèves des tuteurs les moins bien notés, pour environ 20 dollars par tuteur et par an ; les tuteurs donnent moins de réponses et posent plus de questions."
+  cle: "Une IA qui conseille les tuteurs humains a relevé de 9 points la maîtrise des élèves des tuteurs les moins bien notés, pour 20 dollars par tuteur et par an (Wang et al., 2024)."
+  propositions: [tuteur-public]
+  dossier: 07-outil-ia-public
+- id: mia-seconde
+  titre: "MIA Seconde : un marché public d'IA éducative sans résultats publiés"
+  ref: "Next (2024) ; marché du ministère de l'Éducation nationale, août 2022."
+  lien: ""
+  sujets: [ecrans]
+  type: texte officiel
+  statut: secondaire
+  resume: "Exercices adaptatifs en maths et en français pour la seconde, positionnés sur les tests d'entrée de la DEPP. Marché signé en août 2022 après un appel à projets de 2021, environ 2,8 M€ sur 36 mois, renouvelable. Livré avec un an de retard, sans résultats publiés. Mathia, assistant vocal de maths en cycle 2, n'a jamais été évalué publiquement."
+  cle: "MIA Seconde, commandé en 2022 pour 2,8 M€ sur trois ans, a été livré avec un an de retard, sans résultats publiés (Next, 2024)."
+  propositions: [tuteur-marche]
+  dossier: 07-outil-ia-public
+- id: cadre-usage-ia-2025
+  titre: "Ministère de l'Éducation nationale, Cadre d'usage de l'IA en éducation (juin 2025)"
+  ref: "MENJ (2025), Cadre d'usage de l'IA en éducation, 14 juin 2025 (BO du 19 juin 2025)."
+  lien: ""
+  sujets: [ecrans]
+  type: texte officiel
+  statut: secondaire
+  resume: "Après une consultation de janvier à mai 2025 : l'IA soutient le jugement de l'enseignant sans le remplacer ; outils libres recommandés, outils grand public tolérés sans données personnelles ; usage pédagogique par les élèves à partir de la 4e, en classe et sous la supervision de l'enseignant ; les devoirs rédigés par l'IA sans autorisation relèvent de la fraude."
+  cle: "Le cadre ministériel autorise l'usage de l'IA par les élèves à partir de la 4e, en classe et sous supervision (MENJ, juin 2025)."
+  propositions: [tuteur-public]
+  dossier: 07-outil-ia-public
+- id: nickow-2020
+  titre: "Nickow, Oreopoulos et Quan (2020, 2024), méta-analyse du tutorat"
+  ref: "Nickow, A., P. Oreopoulos et V. Quan (2020), NBER WP 27476 ; publié dans l'American Educational Research Journal (2024)."
+  lien: https://www.nber.org/papers/w27476
+  sujets: [formation, ecrans]
+  type: méta-analyse
+  statut: vérifié
+  resume: "96 essais randomisés, 732 estimations. Le tutorat améliore les résultats de 0,37 écart-type en moyenne (0,29 sur 89 essais dans la version publiée). L'effet est plus fort pendant le temps scolaire (0,40) qu'après (0,21), avec des enseignants (0,50) qu'avec des bénévoles (0,21). Seules 7 % des interventions concernent le collège ou au-delà, où l'effet est plus faible (0,16)."
+  cle: "Le tutorat améliore les résultats de 0,37 écart-type, davantage pendant le temps scolaire (0,40) qu'après (0,21) (Nickow, Oreopoulos et Quan, 2020)."
+  propositions: [heures-emploi-du-temps]
+  dossier: 02-groupes-niveau-tutorat
+- id: kraft-2024
+  titre: "Kraft, Schueler et Falken (2024), le tutorat à grande échelle"
+  ref: "Kraft, M., B. Schueler et G. Falken (2024), EdWorkingPaper 24-1031."
+  lien: ""
+  sujets: [formation]
+  type: méta-analyse
+  statut: vérifié
+  resume: "Les programmes de tutorat déployés à grande échelle ont des effets qui tombent au tiers ou à la moitié de ceux des essais de petite taille, et l'effet est plus faible au collège et au lycée."
+  cle: "À grande échelle, l'effet du tutorat tombe au tiers ou à la moitié (Kraft, Schueler et Falken, 2024)."
+  propositions: [heures-emploi-du-temps]
+  dossier: 02-groupes-niveau-tutorat
+- id: guryan-2023
+  titre: "Guryan et al. (2023), le tutorat intensif à Chicago"
+  ref: "Guryan, J. et al. (2023), « Not Too Late », American Economic Review 113(3), 738-765."
+  lien: https://voices.uchicago.edu/jensludwig/files/2023/03/Not-too-late-AER-2023.pdf
+  sujets: [formation]
+  type: étude causale
+  statut: vérifié
+  resume: "Lycéens de 9e et 10e année à Chicago : 45 à 50 minutes par jour en binôme avec un tuteur payé, pendant l'emploi du temps. Maths +0,18 à 0,40 écart-type pour les participants ; coût de 3 500 à 4 300 dollars par élève et par an. Le meilleur exemple d'un tutorat qui marche au lycée, intégré à l'emploi du temps."
+  cle: "Un tutorat quotidien en binôme pendant les cours a fait gagner 0,18 à 0,40 écart-type en maths à des lycéens de Chicago (Guryan et al., 2023)."
+  propositions: [heures-emploi-du-temps]
+  dossier: 02-groupes-niveau-tutorat
+- id: ntp-nfer
+  titre: "NFER, évaluation du programme national de tutorat anglais (2023, 2024)"
+  ref: "NFER (2023, 2024), National Tutoring Programme, Year 2 and Year 3 impact evaluations."
+  lien: https://www.nfer.ac.uk/publications/national-tutoring-programme-year-3-impact-evaluation/
+  sujets: [formation]
+  type: étude causale
+  statut: vérifié
+  resume: "Le tutorat organisé par les écoles gagne environ un mois de progrès en maths en primaire et au collège, moins d'un mois en anglais ; les prestataires extérieurs et les mentors n'apportent aucun gain. Plus d'heures donnent de meilleurs résultats, avec un optimum au-delà de 20 heures par élève. Moins de la moitié des élèves tutorés étaient défavorisés."
+  cle: "Le programme national de tutorat anglais a gagné au plus un mois de progrès (NFER, 2024)."
+  propositions: [heures-dotation]
+  dossier: 02-groupes-niveau-tutorat
+- id: apfee
+  titre: "Goux, Gurgand et Maurin, « Coup de pouce » en CP (essai randomisé 2010-2013)"
+  ref: "Goux, D., M. Gurgand et É. Maurin, évaluation du dispositif APFEE, J-PAL."
+  lien: https://www.povertyactionlab.org/fr/evaluation/accompagnement-intensif-pour-favoriser-legalite-des-chances-lecole-en-france-apfee
+  sujets: [formation]
+  type: étude causale
+  statut: vérifié
+  resume: "Environ 5 100 élèves de CP dans 109 écoles (Créteil, Lille, Versailles), groupes de 5, quatre séances d'1 h 30 par semaine après la classe. Aucun gain en lecture ni en maths ; plus de goût pour la lecture, pendant deux ans. Un tutorat après la classe, par d'autres que les enseignants, ne suffit pas."
+  cle: "Le « Coup de pouce » après la classe en CP n'a amélioré ni la lecture ni les maths (Goux, Gurgand et Maurin, essai randomisé)."
+  propositions: [heures-emploi-du-temps]
+  dossier: 02-groupes-niveau-tutorat
+- id: eef-setting
+  titre: "EEF, groupes de niveau par classe (setting and streaming)"
+  ref: "Education Endowment Foundation, Teaching and Learning Toolkit, Setting and streaming (mise à jour juillet 2021)."
+  lien: https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/setting-and-streaming
+  sujets: [formation]
+  type: méta-analyse
+  statut: vérifié
+  resume: "Synthèse de 58 études : séparer les élèves en classes de niveau apporte 0 mois de progrès en moyenne, -3 mois pour les élèves faibles et +1 pour les forts ; preuves « très limitées ». Les groupes de niveau au sein de la classe apportent environ +3 mois. L'essai britannique Best Practice in Setting (127 écoles) ne trouve aucun effet."
+  cle: "Les classes de niveau n'apportent rien en moyenne et font perdre 3 mois aux élèves faibles (EEF, 2021, 58 études)."
+  propositions: [heures-emploi-du-temps]
+  dossier: 02-groupes-niveau-tutorat
+- id: steenbergen-2016
+  titre: "Steenbergen-Hu, Makel et Olszewski-Kubilius (2016), méta-analyse des groupes de niveau"
+  ref: "Steenbergen-Hu, S., M. Makel et P. Olszewski-Kubilius (2016), Review of Educational Research 86, 849-899."
+  lien: ""
+  sujets: [formation]
+  type: méta-analyse
+  statut: vérifié
+  resume: "Méta-analyse de second ordre : 13 méta-analyses, 172 études. Les classes séparées par niveau gagnent 0,04 à 0,06 écart-type (presque rien) ; les groupes de niveau au sein de la classe 0,19 à 0,30 ; le regroupement par matière entre niveaux 0,26. Les effets ne diffèrent pas entre élèves forts, moyens et faibles. Terrin et Triventi (2023) montrent que les classes de niveau creusent les écarts."
+  cle: "Les groupes de niveau au sein de la classe gagnent 0,19 à 0,30 écart-type, les classes de niveau presque rien (Steenbergen-Hu et al., 2016)."
+  propositions: [heures-emploi-du-temps]
+  dossier: 02-groupes-niveau-tutorat
+- id: duflo-2011
+  titre: "Duflo, Dupas et Kremer (2011), groupes de niveau au Kenya"
+  ref: "Duflo, E., P. Dupas et M. Kremer (2011), American Economic Review 101(5), 1739-1774."
+  lien: ""
+  sujets: [formation]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé dans 121 écoles kényanes (première année) : les écoles qui répartissent les élèves par niveau gagnent 0,14 écart-type après 18 mois, encore visible un an après. Tous les élèves en profitent, car l'enseignant adapte son cours au niveau du groupe. Pays à bas revenu, à transposer avec prudence."
+  cle: "Répartir les élèves par niveau a fait gagner 0,14 écart-type à tous les élèves au Kenya (Duflo, Dupas et Kremer, 2011)."
+  propositions: []
+  dossier: 02-groupes-niveau-tutorat
+- id: stpcd-2026
+  titre: "DfE, School Teachers' Pay and Conditions Document 2026 (Angleterre)"
+  ref: "Department for Education (2026), School Teachers' Pay and Conditions Document and Guidance 2026."
+  lien: https://assets.publishing.service.gov.uk/media/6ad21656dfa45fcb6753cb0b/School_teachers_pay_and_conditions_document_and_guidance_2026.pdf
+  sujets: [formation]
+  type: texte officiel
+  statut: vérifié
+  resume: "Le contrat national anglais fixe 195 jours et 1 265 heures de « temps dirigé » par an, réparties par le chef d'établissement (paragraphe 52.5), dont au moins 10 % du temps d'enseignement pour la préparation et la correction (53.4). Il n'y a pas de plafond d'heures de cours. Depuis 2024, la progression salariale n'est plus obligatoirement liée à l'évaluation annuelle. 94 % des trusts appliquent encore les conditions nationales."
+  cle: "En Angleterre, le contrat fixe 1 265 heures de temps dirigé par an, dont 10 % au moins pour la préparation (STPCD 2026, 52.5 et 53.4)."
+  propositions: [heures-service-annuel]
+  dossier: 01-england-governance-ors
+- id: ocde-heures-2026
+  titre: "OCDE, Regards sur l'éducation 2026 : temps d'enseignement"
+  ref: "OCDE (2026), Regards sur l'éducation 2026 (données DSD_EAG_WT)."
+  lien: https://sdmx.oecd.org/public/rest/data/OECD.EDU.IMEP,DSD_EAG_WT@DF_STA_TCH,2.0/all
+  sujets: [formation]
+  type: données
+  statut: vérifié
+  resume: "Heures de cours réglementaires par an : France 900 en primaire et 720 au collège, contre 770 et 710 dans l'OCDE. L'Angleterre ne réglemente pas les heures de cours ; ses enseignants en font 893 et 777 dans les faits. Le chiffre français de 720 heures ne correspond pas au service d'un certifié (18 heures sur 36 semaines donnent 648 heures) : convention de déclaration non vérifiée. Le primaire français compte 162 jours de classe, contre 183 dans l'OCDE et 190 en Angleterre."
+  cle: "Les enseignants français font 900 heures de cours par an en primaire, contre 770 dans l'OCDE (OCDE, 2026)."
+  propositions: [heures-service-annuel, heures-mercredi]
+  dossier: 01-england-governance-ors
+- id: talis
+  titre: "OCDE, TALIS 2018 et 2024 : temps de travail et formation des enseignants"
+  ref: "OCDE, TALIS 2018 et TALIS 2024 ; DfE, TALIS 2018 research brief."
+  lien: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/919065/TALIS_2018_research_brief.pdf
+  sujets: [formation]
+  type: enquête
+  statut: vérifié
+  resume: "TALIS 2018 : un enseignant anglais de collège à temps plein déclare 49,3 heures de travail par semaine, dont 20,5 de cours et 32,7 d'autres tâches. TALIS 2024 : un enseignant français de collège déclare 37,2 heures (19,0 de cours), contre 38,5 (21,2) dans l'OCDE ; l'Angleterre n'y a pas participé. Seuls 35 % des enseignants français jugent que leur formation a amélioré leur pratique, contre 55 % dans l'OCDE ; 17 % des débutants ont un mentor attitré, contre 26 %."
+  cle: "Seuls 35 % des enseignants français jugent que leur formation a amélioré leur pratique, contre 55 % dans l'OCDE (TALIS 2024)."
+  propositions: [heures-charge]
+  dossier: 01-england-governance-ors
+- id: uws-eis-2024
+  titre: "Université de l'Ouest de l'Écosse pour l'EIS (2024), carnets de temps des enseignants écossais"
+  ref: "University of the West of Scotland pour l'Educational Institute of Scotland (2024), enquête sur la charge de travail."
+  lien: ""
+  sujets: [formation]
+  type: enquête
+  statut: vérifié
+  resume: "Carnets de temps de 1 800 enseignants écossais : 46 heures de travail sur une semaine type, 11 de plus que la semaine contractuelle de 35 heures, malgré le plafond de 22,5 heures de cours. Un plafond d'heures de cours ne suffit pas sans mesure ni encadrement des autres tâches."
+  cle: "En Écosse, les enseignants travaillent 46 heures par semaine, 11 de plus que leur contrat (UWS pour l'EIS, 2024)."
+  propositions: [heures-charge]
+  dossier: ""
+- id: eyles-machin-2019
+  titre: "Eyles et Machin (2019), les academies anglaises"
+  ref: "Eyles, A. et S. Machin (2019), Journal of the European Economic Association ; Eyles, Machin et McNally (2017), Journal of Public Economics ; EPI (2016)."
+  lien: ""
+  sujets: [formation]
+  type: étude causale
+  statut: vérifié
+  resume: "Les collèges en difficulté convertis en academies de 2002 à 2010, qui changeaient souvent de direction, progressent d'environ 0,2 écart-type en quatre ans. Ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2016), et les écoles primaires converties sans difficulté n'ont pas progressé (Eyles, Machin et McNally, 2017). L'autonomie a marché avec une nouvelle direction et des résultats publiés ; seule, elle n'a rien changé."
+  cle: "Les collèges en difficulté devenus academies avant 2010 ont progressé d'environ 0,2 écart-type en quatre ans (Eyles et Machin, 2019)."
+  propositions: [gouv-recruter]
+  dossier: 01-england-governance-ors
+- id: taylor-tyler-2012
+  titre: "Taylor et Tyler (2012), l'évaluation des enseignants par observation à Cincinnati"
+  ref: "Taylor, E. et J. Tyler (2012), American Economic Review ; Burgess, Rawal et Taylor (2021), Journal of Labor Economics ; EEF (2017), Teacher Observation."
+  lien: ""
+  sujets: [formation]
+  type: étude causale
+  statut: vérifié
+  resume: "À Cincinnati, une année d'évaluation fondée sur quatre observations, dont trois par des pairs formés, relève d'environ 0,10 écart-type les résultats en maths des élèves de ces enseignants les années suivantes. En Angleterre, dans 82 collèges, l'observation mutuelle gagne 0,07 écart-type au GCSE et la doubler n'ajoute rien (Burgess, Rawal et Taylor, 2021) ; l'évaluation officielle du même essai ne trouve aucun effet (EEF, 2017)."
+  cle: "Une année d'évaluation par observation a relevé de 0,10 écart-type les résultats des élèves à Cincinnati (Taylor et Tyler, 2012)."
+  propositions: [gouv-visite, gouv-coordinateurs]
+  dossier: 03-inspection-evaluation
+- id: ofsted-2025
+  titre: "Ofsted, cadre d'inspection des écoles (novembre 2025)"
+  ref: "Ofsted (2025), School inspection toolkit and report cards, novembre 2025."
+  lien: https://www.gov.uk/guidance/understanding-ofsted-report-cards-and-grades
+  sujets: [formation]
+  type: texte officiel
+  statut: vérifié
+  resume: "Depuis novembre 2025, l'Ofsted note chaque établissement sur cinq niveaux, domaine par domaine (inclusion, enseignement, résultats, assiduité, bien-être, direction), sans note globale, environ tous les quatre ans ; une école « à surveiller » est revue sous 24 mois. Les enseignants ne sont plus notés individuellement depuis 2014. Un échec à l'ancienne inspection relevait les résultats de 0,12 écart-type en maths en primaire (Hussain, 2015)."
+  cle: "Un échec à l'inspection a relevé les résultats des élèves de 0,12 écart-type en maths en primaire (Hussain, 2015)."
+  propositions: [gouv-evaluation]
+  dossier: 03-inspection-evaluation
+- id: evaluation-etablissements-fr
+  titre: "Conseil d'évaluation de l'école : l'évaluation des établissements en France"
+  ref: "Loi n° 2019-791 pour une école de la confiance ; Conseil d'évaluation de l'école, cadres d'évaluation 2020-2024 ; IH2EF."
+  lien: https://www.ih2ef.gouv.fr/evaluation-des-etablissements-scolaires
+  sujets: [formation]
+  type: texte officiel
+  statut: vérifié
+  resume: "Depuis 2019, chaque établissement s'auto-évalue puis reçoit une évaluation externe tous les cinq ans (environ 20 % par an), par des équipes d'inspecteurs et de personnels de direction d'autres établissements. Les rapports ne sont pas notés et pas systématiquement publiés (non vérifié). La valeur ajoutée par lycée (IVAL, depuis 1993) et par collège (IVAC, depuis 2024) n'y joue aucun rôle."
+  cle: "Chaque établissement français reçoit une évaluation externe tous les cinq ans, sans note ni lien avec la valeur ajoutée (Conseil d'évaluation de l'école)."
+  propositions: [gouv-evaluation]
+  dossier: 03-inspection-evaluation
+- id: cdc-inspecteurs-2022
+  titre: "Cour des comptes, référé sur les inspecteurs territoriaux (2022)"
+  ref: "Cour des comptes (2022), Les inspecteurs territoriaux des 1er et 2nd degrés de l'Éducation nationale, référé publié le 3 mai 2022."
+  lien: ""
+  sujets: [formation]
+  type: rapport
+  statut: secondaire
+  resume: "Environ 3 650 inspecteurs territoriaux, dont l'activité est « de plus en plus morcelée », au détriment du suivi des enseignants et de l'appui pédagogique. Ils consacrent environ 30 % de leur activité à l'évaluation des enseignants dans le premier degré, 20 à 30 % dans le second. Depuis 2017, un enseignant n'a plus d'inspection obligatoire après son troisième rendez-vous de carrière, vers la dix-neuvième année."
+  cle: "Après le dernier rendez-vous de carrière, vers 19 ans de métier, aucune visite de classe n'est obligatoire (décret de 2017 ; Cour des comptes, 2022)."
+  propositions: [gouv-visite]
+  dossier: 03-inspection-evaluation
+- id: formation-pd-research
+  titre: "Ce qui marche en formation continue : Fletcher-Wood et Zuccollo (2020), Sims et al. (2021), Kraft et al. (2018)"
+  ref: "Fletcher-Wood, H. et J. Zuccollo (2020), EPI/Wellcome ; Sims, S. et al. (2021), EEF ; Kraft, M., D. Blazar et D. Hogan (2018), Review of Educational Research 88(4)."
+  lien: https://discovery.ucl.ac.uk/10136274/1/Teacher-professional-development.pdf
+  sujets: [formation]
+  type: méta-analyse
+  statut: vérifié
+  resume: "Sur 53 essais randomisés, la formation continue améliore les résultats des élèves de 0,09 écart-type en moyenne, « comparable aux interventions les plus efficaces » par son coût (Fletcher-Wood et Zuccollo). Sur 104 essais, ce qui distingue les programmes efficaces, ce sont des mécanismes précis : gérer la charge cognitive, fixer des objectifs, modéliser, pratiquer, retour d'un expert (Sims et al.). Le coaching (60 études) gagne 0,49 écart-type sur la qualité de l'enseignement et 0,18 sur les résultats, mais bien moins à grande échelle (Kraft et al.). Les journées isolées ne changent rien."
+  cle: "La formation continue améliore les résultats des élèves de 0,09 écart-type en moyenne sur 53 essais (Fletcher-Wood et Zuccollo, 2020)."
+  propositions: [heures-service-annuel]
+  dossier: 10-brief-formation-continue-enseignants
+- id: depp-ni-25-65
+  titre: "DEPP, Note d'information 25.65 : la formation continue des enseignants (novembre 2025)"
+  ref: "DEPP (2025), Note d'information n° 25.65, novembre 2025."
+  lien: https://www.education.gouv.fr/sites/default/files/document/depp-ni-2025-65pdf-516569.pdf
+  sujets: [formation]
+  type: données
+  statut: vérifié
+  resume: "En 2023-2024, 84 % des professeurs des écoles et 69 % des enseignants du second degré ont suivi au moins un module, pour 3,9 et 3,1 jours en moyenne parmi ceux qui se sont formés. Le présentiel ne représente plus que 49 % et 53 % du temps de formation, contre 77 % et 90 % en 2015-2016 ; 58 % et 70 % des modules sont suivis en entier."
+  cle: "En 2023-2024, 69 % des enseignants du second degré ont suivi au moins un module de formation (DEPP, NI 25.65)."
+  propositions: []
+  dossier: 10-brief-formation-continue-enseignants
+- id: depp-reperes-orientation-2025
+  titre: "DGESCO, Repères pour l'orientation et l'affectation 2025"
+  ref: "DGESCO (2025), Repères pour l'orientation et l'affectation, édition 2025."
+  lien: ""
+  sujets: [orientation]
+  type: données
+  statut: vérifié
+  resume: "En fin de 3e, 52,2 % des élèves boursiers reçoivent une décision vers la voie professionnelle, contre 33,3 % des autres (chiffres bruts) ; les conseils de classe donnent un avis provisoire vers la voie pro à 58,8 % des boursiers contre 37,7 %. En 2025, 58,1 % des premiers vœux en voie professionnelle sont satisfaits (61,3 % en seconde pro, 49,9 % en CAP), contre 87,0 % en seconde générale et technologique ; les places en lycée professionnel baissent de 3 391. 2,5 % des décisions ne correspondent à aucune demande de la famille. 6,8 % des élèves de 3e choisissent l'apprentissage."
+  cle: "En fin de 3e, 52,2 % des boursiers reçoivent une décision vers la voie professionnelle, contre 33,3 % des autres élèves (DGESCO, 2025)."
+  propositions: [orient-4e]
+  dossier: 05-orientation
+- id: goux-2017
+  titre: "Goux, Gurgand et Maurin (2017), réunions avec les parents en 3e"
+  ref: "Goux, D., M. Gurgand et É. Maurin (2017), « Adjusting your dreams? High school plans and dropout behaviour », Economic Journal 127, 1025-1046."
+  lien: ""
+  sujets: [orientation]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé dans 37 collèges de l'académie de Versailles, 4 291 élèves de 3e en difficulté dans 179 classes : deux réunions conduites par le principal avec les parents. Les projets d'orientation deviennent plus réalistes ; le redoublement et le décrochage baissent de 25 à 40 % chez les élèves aux projets irréalistes. Coût quasi nul."
+  cle: "Deux réunions avec les parents d'élèves de 3e en difficulté ont réduit de 25 à 40 % le redoublement et le décrochage (Goux, Gurgand et Maurin, 2017)."
+  propositions: [orient-parents]
+  dossier: 05-orientation
+- id: avvisati-2014
+  titre: "Avvisati, Gurgand, Guyon et Maurin (2014), la Mallette des parents"
+  ref: "Avvisati, F., M. Gurgand, N. Guyon et É. Maurin (2014), « Getting parents involved », Review of Economic Studies 81, 57-83."
+  lien: ""
+  sujets: [orientation]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé en 6e dans 34 collèges de Créteil, environ 1 000 familles. Les parents s'impliquent davantage, le comportement des enfants s'améliore, avec de forts effets sur les camarades de classe. Dispositif étendu en 2010 à 1 300 collèges."
+  cle: "Associer les parents en 6e améliore le comportement des élèves et de leurs camarades (Avvisati et al., 2014)."
+  propositions: [orient-parents]
+  dossier: 05-orientation
+- id: breda-2023
+  titre: "Breda, Grenet, Monnet et Van Effenterre (2023), des scientifiques en classe"
+  ref: "Breda, T., J. Grenet, M. Monnet et C. Van Effenterre (2023), Economic Journal 133, 1773-1809."
+  lien: ""
+  sujets: [orientation]
+  type: étude causale
+  statut: vérifié
+  resume: "Interventions d'une heure par 56 femmes scientifiques, tirées au sort parmi 20 000 lycéens d'Île-de-France. En terminale, la part des filles qui entrent dans une formation scientifique sélective et masculine passe de 11 % à 14,5 %, surtout parmi les filles fortes en maths. Une mesure peu coûteuse et généralisable."
+  cle: "Une heure d'intervention d'une scientifique fait passer de 11 % à 14,5 % la part des filles qui entrent dans une formation scientifique sélective (Breda et al., 2023)."
+  propositions: [orient-parents]
+  dossier: 05-orientation
+- id: gatsby
+  titre: "Careers & Enterprise Company, les repères Gatsby (2024)"
+  ref: "Careers & Enterprise Company (2024) ; Hanson, Moore, Neary et Clark (2021), iCeGS Derby."
+  lien: ""
+  sujets: [orientation]
+  type: enquête
+  statut: vérifié
+  resume: "Les huit repères Gatsby (information sur les métiers, rencontres avec des employeurs, stages, entretien individuel…) sont mesurés dans chaque établissement anglais : 6,0 sur 8 en moyenne. Ceux qui les atteignent tous comptent 8 % de jeunes sans emploi ni formation en moins. Dans le Nord-Est (16 établissements, 2016-2019), la part d'établissements atteignant au moins 6 repères passe de 50 % à 85 % en deux ans. Limite : preuves déclaratives ou avant-après, sans correction de la sélection."
+  cle: "Les établissements anglais qui atteignent les huit repères Gatsby comptent 8 % de jeunes sans emploi ni formation en moins, un lien non causal (Careers & Enterprise Company, 2024)."
+  propositions: [orient-gatsby]
+  dossier: 05-orientation
+- id: hoxby-turner-2013
+  titre: "Hoxby et Turner (2013), informer les bons élèves modestes"
+  ref: "Hoxby, C. et S. Turner (2013), Expanding College Opportunities for High-Achieving, Low-Income Students."
+  lien: ""
+  sujets: [orientation]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé auprès d'environ 40 000 lycéens américains brillants et modestes : pour environ 6 dollars par élève (information personnalisée et exonération de frais), +48 % de candidatures, +78 % d'admissions dans un établissement à leur niveau, +46 % d'inscriptions. Une information ciblée et la levée de petits obstacles changent les choix."
+  cle: "Pour 6 dollars par élève, une information personnalisée a augmenté de 46 % les inscriptions des bons élèves modestes dans un établissement à leur niveau (Hoxby et Turner, 2013)."
+  propositions: [orient-transparence]
+  dossier: 05-orientation
+- id: hastings-2015
+  titre: "Hastings, Neilson et Zimmerman (2015), l'information sur les débouchés au Chili"
+  ref: "Hastings, J., C. Neilson et S. Zimmerman (2015)."
+  lien: ""
+  sujets: [orientation]
+  type: étude causale
+  statut: secondaire
+  resume: "Au Chili, informer les candidats sur les salaires et les coûts de chaque formation réduit de 4,6 % les choix de filières peu payées chez les jeunes modestes."
+  cle: "Au Chili, l'information sur les débouchés a réduit de 4,6 % les choix de filières peu payées chez les jeunes modestes (Hastings, Neilson et Zimmerman, 2015)."
+  propositions: [orient-transparence]
+  dossier: ""
+- id: sies-licence-2025
+  titre: "SIES, Note Flash 2025-29 : parcours et réussite en licence (novembre 2025)"
+  ref: "SIES (2025), Note Flash n° 29, Parcours et réussite en licence, novembre 2025."
+  lien: https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf
+  sujets: [orientation, emploi]
+  type: données
+  statut: vérifié
+  resume: "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'obtiennent en trois ou quatre ans (46,9 % pour ceux de 2018), en partie parce que 19 % sont partis en études de santé. Selon le bac : 46,1 % des bacheliers généraux, 14,0 % des technologiques et 6,5 % des professionnels. 30 % seulement obtiennent leur licence en trois ans. Le passage en deuxième année atteint 70 % pour les mentions très bien, contre 49,1 % en moyenne (2024)."
+  cle: "La licence est obtenue en 3 ou 4 ans par 46,1 % des bacheliers généraux, 14,0 % des technologiques et 6,5 % des professionnels (SIES, 2025)."
+  propositions: [orient-bac, ia-master]
+  dossier: ""
+- id: berlioux-2020
+  titre: "Rapport Berlioux (2020), orientation et égalité des chances dans les territoires ruraux"
+  ref: "Berlioux, S. (2020), Orientation et égalité des chances dans la France des zones rurales et des petites villes, 5 mars 2020 ; Insee Première n° 1888 (2022)."
+  lien: ""
+  sujets: [orientation]
+  type: rapport
+  statut: vérifié
+  resume: "Environ 10 millions de jeunes concernés ; le rapport pointe des déficits d'information, de transport et de réseau. 93,8 % des 15-17 ans ruraux étudient hors de leur commune, à 23,2 km en moyenne du lycée, deux fois la distance du collège (Insee, 2022). Les lycées les plus éloignés sont plus souvent agricoles ou professionnels, avec internat (DEPP, 2023)."
+  cle: "Les lycéens ruraux étudient en moyenne à 23,2 km de chez eux, deux fois la distance du collège (Insee Première n° 1888, 2022)."
+  propositions: [orient-4e]
+  dossier: 05-orientation
+- id: resnjanskij-2024
+  titre: "Resnjanskij et al. (2024), le mentorat d'élèves défavorisés en Allemagne"
+  ref: "Resnjanskij et al. (2024)."
+  lien: ""
+  sujets: [orientation]
+  type: étude causale
+  statut: secondaire
+  resume: "En Allemagne, un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés (résultat repris dans la note 3, étude non relue par le GT)."
+  cle: "Un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés en Allemagne (Resnjanskij et al., 2024)."
+  propositions: [orient-4e]
+  dossier: ""
+- id: cnesco-2018-orientation
+  titre: "Cnesco (2018), l'orientation au lycée et le second professeur principal"
+  ref: "Cnesco (2018), conférence de comparaisons internationales sur l'orientation."
+  lien: ""
+  sujets: [orientation]
+  type: rapport
+  statut: secondaire
+  resume: "Un tiers des lycées seulement a tenu les deux semaines d'orientation prévues. Le second professeur principal de terminale, créé fin 2017, est payé par une indemnité sans heures dégagées ni formation."
+  cle: "Un tiers des lycées seulement a tenu les deux semaines d'orientation (Cnesco, 2018)."
+  propositions: [orient-4e]
+  dossier: ""
+- id: inclusion-international
+  titre: "L'inclusion à l'étranger : Italie, New York, Québec, Finlande, Portugal, Pays-Bas, Angleterre"
+  ref: "ISTAT (2018, 2020, 2026) ; NYC DOE et Research Alliance ; OPHQ (2026) ; Protecteur du citoyen (2022) ; Statistics Finland (2024-2025) ; OCDE (2022) ; DfE (2026)."
+  lien: ""
+  sujets: [inclusion]
+  type: revue
+  statut: vérifié
+  resume: "Revue des modèles étrangers par le GT, sans évaluation causale disponible pour aucun. Italie : 1,6 élève par enseignant de soutien, mais 57,6 % changent d'enseignant chaque année et un enseignant sur trois n'est pas formé. New York : 23,2 % d'élèves avec un plan individuel, la moitié en classes à deux enseignants, des unités autisme (Nest, Horizon) populaires mais non évaluées, 21 000 recours par an. Québec : 23,9 % d'élèves en difficulté ou handicapés, 78,2 % en classe ordinaire, jusqu'à 16 mois d'attente entre le besoin et le service ; 42 % des parents paient en privé. Finlande : l'école décide seule des deux premiers paliers de soutien (26 % des élèves), loi sur un psychologue pour 780 élèves et un rendez-vous sous 7 jours. Portugal : décret de 2018 sans catégories de handicap, mesures décidées par une équipe de l'école. Pays-Bas : enveloppe fermée par partenariat régional d'écoles. Angleterre : un coordinateur formé (SENCO) dans chaque école, 538 547 plans éducation-santé-soins en 2026 et des déficits locaux de 3,3 Md£."
+  sections:
+    - "Leçon 1 : la stabilité de l'adulte compte autant que le nombre (Italie : 57,6 % de changements d'enseignant par an)."
+    - "Leçon 2 : former avant de recruter (Italie : un enseignant de soutien sur trois non formé)."
+    - "Leçon 6 : un financement conditionné au diagnostic crée des files d'attente et un marché privé (Québec : 16 mois, 42 % des parents paient)."
+    - "Leçon 7 : des droits opposables sans offre déplacent l'argent vers les avocats (New York : 21 000 recours par an, 1,3 Md$)."
+  cle: "En Finlande, l'école décide seule des deux premiers paliers de soutien, dont bénéficient 26 % des élèves (Statistics Finland, 2024)."
+  propositions: []
+  dossier: 04-inclusion
+- id: pssm-cochrane-2023
+  titre: "Revue Cochrane (2023) : les premiers secours en santé mentale"
+  ref: "Revue Cochrane (2023), Mental health first aid training, 21 essais, 22 604 participants."
+  lien: ""
+  sujets: [inclusion, ecrans]
+  type: méta-analyse
+  statut: vérifié
+  resume: "La formation aux premiers secours en santé mentale (deux jours) améliore les connaissances des personnes formées, mais a « peu ou pas d'effet » mesuré sur la santé mentale des personnes aidées, avec une certitude très faible. En France, 300 000 secouristes étaient formés en juin 2026. Former au repérage ne suffit pas si l'accès au soin est saturé."
+  cle: "Les premiers secours en santé mentale ont « peu ou pas d'effet » mesuré sur les personnes aidées (revue Cochrane, 2023, 21 essais)."
+  propositions: []
+  dossier: ""
+- id: myriad-2022
+  titre: "Kuyken et al. (2022), l'essai MYRIAD sur la pleine conscience à l'école"
+  ref: "Kuyken, W. et al. (2022), essai MYRIAD ; Foulkes et al. (2024)."
+  lien: ""
+  sujets: [ecrans]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé auprès de 8 376 élèves de 10 à 14 ans dans 84 écoles britanniques : la pleine conscience en classe n'a pas d'effet supérieur à l'enseignement habituel, avec des scores légèrement moins bons chez les élèves à risque. Foulkes et al. (2024) trouvent des effets négatifs."
+  cle: "La pleine conscience en classe n'a montré aucun effet supérieur à l'enseignement habituel (essai MYRIAD, 8 376 élèves, 2022)."
+  propositions: []
+  dossier: ""
+- id: kiva-2018
+  titre: "KiVa, programme finlandais contre le harcèlement (essai randomisé)"
+  ref: "Garandeau, C. et C. Salmivalli (2018)."
+  lien: ""
+  sujets: [ecrans, inclusion]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé dans 117 écoles traitées contre 117 témoins : baisse significative du harcèlement. En France, le programme pHARe n'a pas d'évaluation indépendante publiée de la victimisation. 88 % des écoliers se sentent bien à l'école, mais seules 4 victimes sur 10 en parlent (DEPP, 2024-2025)."
+  cle: "Le programme finlandais KiVa a réduit le harcèlement dans un essai sur 234 écoles (Garandeau et Salmivalli, 2018)."
+  propositions: []
+  dossier: ""
+- id: humburg-2015
+  titre: "Humburg et van der Velden (2015), licence ou master : ce que préfèrent les recruteurs en Europe"
+  ref: "Humburg, M. et R. van der Velden (2015), « Skills and the graduate recruitment process », Economics of Education Review 49."
+  lien: ""
+  sujets: [emploi]
+  type: étude causale
+  statut: secondaire
+  resume: "Expériences de vignettes avec des recruteurs de neuf pays européens pour un poste junior de diplômé. En moyenne, licence et master sont traités de façon proche, mais la France se distingue par sa préférence pour le master, quand le Royaume-Uni recrute volontiers à bac+3. Dans le même sens, un cabinet de conseil recrute « quasi exclusivement des masters » en France mais des bachelors au Royaume-Uni, un « choix culturel » selon un associé (presse, 2025)."
+  cle: "Les recruteurs français préfèrent le master là où les britanniques recrutent à bac+3 (Humburg et van der Velden, 2015)."
+  propositions: [ia-master]
+  dossier: 13-france-firms-master-filter-and-solutions
+- id: apec-2024
+  titre: "Apec, offres de cadres et jeunes diplômés (2024)"
+  ref: "Apec (2024, 2025), offres d'emploi cadres ; Insee, enquêtes Emploi 2023-2024."
+  lien: ""
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "30 % des offres de cadres publiées sur apec.fr sont ouvertes aux jeunes diplômés (moins d'un an d'expérience). 79 % des candidats aux offres de cadres de l'Apec ont un bac+5 ou plus, alors que 71 % des cadres du privé en emploi ont au moins un bac+3. Le filtre ne s'écrit pas dans les annonces : il passe par qui postule et qui est présélectionné. Le manque d'expérience est le premier obstacle cité par les diplômés de bac+5 (79 %)."
+  cle: "79 % des candidats aux offres de cadres de l'Apec ont un bac+5 ou plus (Apec, 2024)."
+  propositions: [ia-master]
+  dossier: 13-france-firms-master-filter-and-solutions
+- id: indeed-diplomes-2024
+  titre: "Indeed Hiring Lab, les diplômes demandés dans les annonces françaises (2024)"
+  ref: "Feist, L. (2024), Indeed Hiring Lab France, 12 novembre 2024."
+  lien: ""
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "Sur toutes les annonces françaises d'Indeed (janvier à septembre), la part sans exigence de diplôme passe de 53,1 % en 2017 à 61,7 % en 2024 ; celle qui demande au moins une licence baisse de 16,4 % à 14,5 %. Les annonces demandent moins de diplômes, pas plus."
+  cle: "La part des annonces françaises sans exigence de diplôme est passée de 53,1 % en 2017 à 61,7 % en 2024 (Indeed Hiring Lab, 2024)."
+  propositions: [ia-master]
+  dossier: 13-france-firms-master-filter-and-solutions
+- id: cereq-generation-2021
+  titre: "Céreq, enquête Génération 2021 : bac+5 et bac+3 à trois ans"
+  ref: "Céreq (2024), enquête Génération 2021."
+  lien: ""
+  sujets: [emploi]
+  type: enquête
+  statut: vérifié
+  resume: "Trois ans après la sortie, les bac+5 font nettement mieux que les bac+3/4 : 87 % en emploi contre 78 %, premier salaire médian de 1 810 € contre 1 530 €. Le Céreq écarte l'hypothèse d'une inflation des diplômes au niveau bac+5 et trouve un déclassement en baisse. Une prime réelle est compatible avec un filtre : seul un test du même poste pourvu à bac+3 et à bac+5 trancherait, et il n'en existe pas en France."
+  cle: "Trois ans après la sortie, 87 % des bac+5 sont en emploi contre 78 % des bac+3/4 (Céreq, Génération 2021)."
+  propositions: [ia-master]
+  dossier: 13-masters-job-market
+- id: kickstart-2024
+  titre: "DWP (2024), évaluation de Kickstart (Royaume-Uni, 2020-2022)"
+  ref: "Department for Work and Pensions (2024), Kickstart Scheme: a quantitative impact assessment, 7 octobre 2024."
+  lien: https://www.gov.uk/government/publications/kickstart-scheme-a-quantitative-impact-assessment/executive-summary-kickstart-scheme-a-quantitative-impact-assessment
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "163 000 emplois subventionnés de six mois pour des jeunes au Universal Credit. Pour 100 participants, 11 de plus sont en emploi non aidé à 24 mois que des non-participants comparables, et 3 de plus sortent des aides. Rendement par livre dépensée : 1,18 £ à 2 ans et 3,15 £ à 5 ans (toutes perspectives), 0,27 £ et 0,49 £ pour le Trésor. Effets plus forts pour les jeunes aux perspectives les plus faibles. Le NAO juge faibles les garanties sur l'additionnalité."
+  cle: "Kickstart a ajouté 11 jeunes en emploi non aidé pour 100 participants à 24 mois (DWP, 2024)."
+  propositions: [ia-garantie]
+  dossier: 12-milburn-review
+- id: garantie-jeunes-2016
+  titre: "Comité scientifique de la Garantie jeunes, rapport intermédiaire (novembre 2016)"
+  ref: "Comité scientifique d'évaluation de la Garantie jeunes (2016), rapport intermédiaire."
+  lien: ""
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Première cohorte, environ 14 mois après l'entrée : +6,3 points de taux d'emploi pour l'ensemble des jeunes éligibles (40,4 % contre 34,1 %), +4,6 points d'emploi durable ; +11,5 points pour les bénéficiaires effectifs. La deuxième cohorte ne confirme pas (non significatif). Le contrat d'engagement jeune, qui lui succède, aurait un effet « comparable » (IPP pour la Dares, 2026, non lu)."
+  cle: "La Garantie jeunes a relevé l'emploi de 6,3 points à environ 14 mois (comité scientifique, 2016), sans confirmation sur la seconde cohorte."
+  propositions: [ia-garantie]
+  dossier: 12-milburn-review
+- id: insee-neet-2026
+  titre: "Insee, les jeunes ni en emploi ni en formation en France (2025-2026)"
+  ref: "Insee, Informations rapides n° 270 (10 novembre 2026) ; Insee, Formations et emploi (12 février 2025)."
+  lien: https://www.insee.fr/fr/statistiques/9118603
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "13,3 % des 15-29 ans ne sont ni en emploi ni en formation au troisième trimestre 2026, stable sur le trimestre et +0,4 point sur un an ; chômage des 15-24 ans de 21,0 %. Sur les 15-24 ans, 10,5 % en 2023 contre 9,2 % dans l'UE ; 16,3 % chez les 25-29 ans. Attention : le Royaume-Uni mesure les 16-24 ans (13,0 %) ; sur la même tranche des 15-24 ans, il est nettement au-dessus (13,6 %, OCDE 2025)."
+  cle: "13,3 % des 15-29 ans ne sont ni en emploi ni en formation au 3e trimestre 2026 (Insee, Informations rapides n° 270)."
+  propositions: [ia-garantie]
+  dossier: 12-milburn-review
+- id: cae-91
+  titre: "CAE, Note n° 91 (Bozio et Wasmer, 2026) : l'emploi des jeunes"
+  ref: "Bozio, A. et É. Wasmer (2026), Note du CAE n° 91."
+  lien: ""
+  sujets: [emploi]
+  type: rapport
+  statut: vérifié
+  resume: "À 20 ans, seuls 20 % des jeunes Français sont en emploi, contre environ 60 % en Allemagne, au Royaume-Uni et aux États-Unis. Le CAE relève aussi qu'au-dessus du Smic, l'employeur débourse 300 à 400 € pour 100 € de revenu en plus pour le salarié."
+  cle: "À 20 ans, seuls 20 % des jeunes Français sont en emploi, contre environ 60 % en Allemagne, au Royaume-Uni et aux États-Unis (CAE, 2026)."
+  propositions: [ia-marche]
+  dossier: ""

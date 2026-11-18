@@ -42,7 +42,7 @@ _GT Éducation, Préparer l'avenir – <mois année> · brouillon généré auto
 ## Analyse
 - **<Cause ou précédent>.** <...>   (2 à 4 puces ; un précédent étranger concret si les faits en donnent un)
 ## Position actuelle du programme
-<une phrase : « à vérifier » sauf si un fait fourni la donne>
+<une ou deux phrases : la ou les mesures du livret du programme qui portent sur le sujet, avec « (livret, mesure n°X, p. Y) » ; « à vérifier » si aucune ne s'y rapporte>
 ## Propositions
 - **<Mesure>.** <ce qu'elle change, coût ou « à chiffrer », limite>   (2 à 4 puces)
 ## Argumentaire
@@ -273,10 +273,18 @@ les sites d'écoles privées, de conseil ou de presse. Évaluations causales et 
         sys.exit(f"Arrêt : seulement {len(ok)} faits vérifiés sur {len(facts)} ; voir sources.json.")
 
     # 3. Rédaction
+    livret = ""
+    lp = pathlib.Path(__file__).resolve().parent.parent / "_data" / "livret.yml"
+    if lp.exists():
+        import yaml
+        mes = yaml.safe_load(lp.read_text()) or []
+        livret = ("\nProgramme du candidat, livret « Croire en nous », volume 1 (18/11/2026), mesures éducation "
+                  "(seule source admise pour la position actuelle du programme) :\n" +
+                  "\n".join(f"- mesure n°{m['n']}, p. {m['page']} : {m['titre']}. {m['resume']}" for m in mes))
     brief = f"""Note pour : {a.public}. Sujet : {a.sujet}. {('Angle : ' + a.angle) if a.angle else ''}
 Date : {today.strftime('%m/%Y')}.
 Faits vérifiés (les seuls utilisables) :
-""" + "\n".join(f"- {f['fait']} [chiffre vérifié : {f['chiffre']}] (source : {f['source']}) {f.get('url_verifiee', f['url'])}" for f in ok)
+""" + "\n".join(f"- {f['fait']} [chiffre vérifié : {f['chiffre']}] (source : {f['source']}) {f.get('url_verifiee', f['url'])}" for f in ok) + livret
     system = ("Tu rédiges une note de campagne du GT Éducation de Préparer l'avenir (Horizons), "
               "au format des notes existantes du groupe.\n" + RULES + "\n\n" + STRUCTURE)
     note, _ = call(WRITE_MODEL, brief, system=system, max_out=12000, think=2000)
@@ -286,6 +294,7 @@ Faits vérifiés (les seuls utilisables) :
         sys.exit("Arrêt : la note ne suit pas le format attendu (pas de titre).")
     # chaque chiffre de la note doit venir d'un fait vérifié ; sinon il est marqué dans la note
     allowed = {re.sub(r"[\s\u202f\xa0]", "", g) for f in ok for g in numbers(f["fait"])}
+    allowed |= {re.sub(r"[\s\u202f\xa0]", "", g) for g in numbers(livret)}
     flagged = []
     def mark(m):
         t = m.group(0).strip()

@@ -1,3 +1,5 @@
-origine,part_etudiants_licence_pct,part_etudiants_master_pct
-Enfants d'ouvriers,10,6
-Enfants de cadres,31,42
+categorie,serie,valeur
+Enfants d'ouvriers,En licence,10.1
+Enfants d'ouvriers,En master,6.3
+Enfants de cadres,En licence,31.1
+Enfants de cadres,En master,42.1
