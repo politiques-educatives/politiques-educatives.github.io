@@ -40,7 +40,8 @@ p { margin: 0; }
 .src { font-size: 13px; color: var(--ink-3); }
 header { display: grid; gap: 12px; }
 .map-wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr); gap: 14px; align-items: start; }
-@media (max-width: 860px) { .map-wrap { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .map-wrap { grid-template-columns: 1fr; } }
+#lp-svg { max-height: 760px; }
 #lp-svg { width: 100%; height: auto; background: var(--bg); border-radius: 10px; touch-action: manipulation; }
 #lp-svg path { stroke: var(--card); stroke-width: 0.6; cursor: pointer; }
 #lp-svg path:hover, #lp-svg path.on { stroke: var(--ink); stroke-width: 1.6; }
@@ -671,7 +672,7 @@ renderList();
     Object.values(paths).forEach((p) => p.classList.remove("on")); if (paths[l.z]) paths[l.z].classList.add("on");
     document.getElementById("lp-panel").innerHTML = `<p><b>${esc2(l.n)}</b><br><span class="small">${esc2(l.c)} (${esc2(l.d)}) · ${l.pub ? "public" : "privé"} · UAI ${esc2(l.u)}</span></p>
       <p><b>${l.ai} %</b> de ses élèves de terminale sont dans une spécialité où l'IA sait faire au moins 4 tâches sur 10 ; <b>${l.cn} %</b> dans une spécialité industrielle très exposée à la concurrence chinoise.</p>
-      <table><tr><th>Spécialité</th><th>Élèves de terminale</th><th>En emploi 6 mois après</th><th>IA (tâches sur 10)</th><th>Concurrence chinoise</th></tr>
+      <table><tr><th>Spécialité</th><th title="Élèves de terminale, rentrée 2023">Élèves</th><th title="En emploi 6 mois après la sortie">Emploi à 6 mois</th><th title="Tâches des premiers métiers que l'IA sait faire, sur 10">IA /10</th><th title="Concurrence chinoise sur les usines où travaillent ces diplômés">Chine</th></tr>
       ${l.s.map((s) => `<tr><td>${esc2(cap(s[0]))}</td><td>${s[1] || "—"}</td><td>${s[2] != null ? s[2] + " %" : "—"}</td><td><span class="pill" style="background:${aiCol(s[3])}">${s[3] != null ? String(s[3]).replace(".", ",") : "—"}</span></td><td>${s[4] != null ? `<span class="pill" style="background:${cnCol(s[4])}">${cnWord(s[4])}</span>` : '<span class="small">non industrielle</span>'}</td></tr>`).join("")}</table>` + zoneHtml(l.z);
   }
   document.getElementById("lp-layer").onchange = (e) => { state.layer = e.target.value; render(); };
