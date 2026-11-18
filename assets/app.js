@@ -73,6 +73,7 @@
   }
   function noteHTML(n, gen) {
     var url = function (u) { return /^https?:/.test(u) ? u : BASE + (u.charAt(0) === "/" ? u : "/" + u); };
+    if (gen && n.dossier) { n.pdf = n.pdf || n.dossier + "/note.pdf"; n.docx = n.docx || n.dossier + "/note.docx"; }
     var href = gen ? (n.pdf ? url(n.pdf) : "") : BASE + "/assets/notes/" + n.fichier;
     return item("li", "", [n.titre, n.resume].join(" "),
       (href ? '<a href="' + esc(href) + '">' + esc(n.titre) + "</a>" : esc(n.titre)) + ' <span class="meta">' + esc(n.date || "") + (n.pages ? " · " + esc(n.pages) + " p." : "") +
@@ -141,7 +142,7 @@
   SUJ.forEach(function (S) {
     var K = S.donnees || [];
     var props = PROPS.filter(function (p) { return any(p.sujets, K); });
-    var liv = LIV.filter(function (m) { return any(m.sujets, K); });
+    var liv = LIV.filter(function (m) { return any(m.sujets, K) && m.eval !== "hors champ"; });
     var aj = AJ.filter(function (a) { return any(a.sujets, K); });
     var srcs = SRC.filter(function (s) { return any(s.sujets, K); });
     var notes = NOTES.filter(function (n) { return any(n.sujets, K); });
@@ -247,8 +248,11 @@
     var h = "#" + (topic === "boussole" ? route : topic + "/" + CUR.sub[topic]);
     if (location.hash !== h) history[replace ? "replaceState" : "pushState"](null, "", h);
   }
-  tabs.forEach(function (t) { t.addEventListener("click", function () { go(t.id.slice(2)); }); });
-  $$(".subtab").forEach(function (b) { b.addEventListener("click", function () { go(b.closest(".panel").id.slice(2) + "/" + b.getAttribute("data-sub")); }); });
+  tabs.forEach(function (t) { t.addEventListener("click", function () { go(t.id.slice(2)); window.scrollTo(0, 0); }); });
+  $$(".subtab").forEach(function (b) { b.addEventListener("click", function () { go(b.closest(".panel").id.slice(2) + "/" + b.getAttribute("data-sub")); window.scrollTo(0, 0); }); });
+  // sticky header + tab bar: the tab bar sits just under the header
+  function stickTop() { var h = document.querySelector("header.top"); document.documentElement.style.setProperty("--toph", (h ? h.offsetHeight : 0) + "px"); }
+  stickTop(); window.addEventListener("resize", stickTop);
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("[data-route]");
     if (a) { e.preventDefault(); go(a.getAttribute("data-route")); window.scrollTo(0, 0); return; }
@@ -265,7 +269,8 @@
     if (!anchor) return;
     try {
       var t = bf.contentDocument && bf.contentDocument.getElementById(anchor);
-      if (t) { var y = bf.getBoundingClientRect().top + window.pageYOffset + t.getBoundingClientRect().top - 10; window.scrollTo(0, y); }
+      if (t) { var off = (document.querySelector("header.top") || {}).offsetHeight || 0; off += ($("#tabs") || {}).offsetHeight || 0;
+        var y = bf.getBoundingClientRect().top + window.pageYOffset + t.getBoundingClientRect().top - 10 - off; window.scrollTo(0, y); }
     } catch (e) { /* ignore */ }
   }
   var bAnchor = null;
@@ -360,7 +365,9 @@
     var first = h.split("/")[0];
     if (legacy[first]) h = legacy[first];
     if (h && $("#t-" + h.split("/")[0])) go(h, true); else go(SUJ[0].id, true);
+    if (!(h.indexOf("boussole/") === 0)) window.scrollTo(0, 0);
   }
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   apply(); route();
   window.addEventListener("popstate", route);
   window.addEventListener("hashchange", route);

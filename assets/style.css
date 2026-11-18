@@ -236,3 +236,7 @@ details.rediger > summary::-webkit-details-marker{display:none}
 .bintro{font:.9rem system-ui,sans-serif;color:var(--ink2);margin:4px 0 10px}
 #bframe{height:1200px;min-height:600px;overflow:hidden}
 ul.vids{padding-left:18px}ul.vids li{margin-bottom:6px}
+
+/* sticky header and tab bar, so the topics stay reachable (also inside the Boussole) */
+header.top{position:sticky;top:0;z-index:60}
+#tabs{position:sticky;top:var(--toph,64px);z-index:55;background:var(--bg);margin-top:0;padding-top:8px}

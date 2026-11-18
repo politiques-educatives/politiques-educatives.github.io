@@ -47,7 +47,10 @@ header { display: grid; gap: 12px; }
 #lp-svg circle { stroke: var(--card); stroke-width: 0.5; cursor: pointer; }
 #lp-svg circle.on { stroke: var(--ink); stroke-width: 2; }
 .lp-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.lp-tools select, .lp-tools input { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); max-width: 100%; }
+.lp-tools { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 10px; align-items: center; }
+.lp-tools label { white-space: nowrap; }
+.lp-tools select, .lp-tools input { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); width: 100%; min-width: 0; }
+.lp-tools input { grid-column: 1 / -1; }
 .lp-legend { display: flex; gap: 4px; align-items: center; font-size: 13px; color: var(--ink-3); flex-wrap: wrap; }
 .lp-legend i { width: 26px; height: 10px; display: inline-block; border-radius: 2px; }
 #lp-panel { background: var(--bg); border-radius: 10px; padding: 12px 14px; font-size: 15px; display: grid; gap: 8px; max-height: 640px; overflow: auto; }
