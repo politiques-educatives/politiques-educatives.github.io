@@ -11,16 +11,10 @@ layout: default
 
 <section class="panel" id="p-accueil" role="tabpanel" aria-labelledby="t-accueil" hidden></section>
 
-{% for s in site.data.sujets %}<section class="panel" id="p-{{ s.id }}" role="tabpanel" aria-labelledby="t-{{ s.id }}" hidden>
-  <div class="thead"><h1>{{ s.titre }}</h1><p class="lead">{{ s.intro }}</p></div>
-  <div class="subtabs" role="tablist" aria-label="{{ s.titre }}">
-    <button class="subtab" role="tab" aria-selected="false" data-sub="essentiel" id="st-{{ s.id }}-essentiel" aria-controls="sp-{{ s.id }}-essentiel">L'essentiel<span class="hits"></span></button>
-    <button class="subtab" role="tab" aria-selected="false" data-sub="recherche" id="st-{{ s.id }}-recherche" aria-controls="sp-{{ s.id }}-recherche">Recherche et données<span class="hits"></span></button>
-    <button class="subtab" role="tab" aria-selected="false" data-sub="ailleurs" id="st-{{ s.id }}-ailleurs" aria-controls="sp-{{ s.id }}-ailleurs">Ailleurs<span class="hits"></span></button>
-  </div>
-  <div class="subpanel" id="sp-{{ s.id }}-essentiel" role="tabpanel" aria-labelledby="st-{{ s.id }}-essentiel" data-topic="{{ s.id }}" data-sub="essentiel" hidden></div>
-  <div class="subpanel" id="sp-{{ s.id }}-recherche" role="tabpanel" aria-labelledby="st-{{ s.id }}-recherche" data-topic="{{ s.id }}" data-sub="recherche" hidden></div>
-  <div class="subpanel" id="sp-{{ s.id }}-ailleurs" role="tabpanel" aria-labelledby="st-{{ s.id }}-ailleurs" data-topic="{{ s.id }}" data-sub="ailleurs" hidden></div>
+{% for s in site.data.sujets %}<section class="panel ptheme" id="p-{{ s.id }}" role="tabpanel" aria-labelledby="t-{{ s.id }}" hidden>
+  <div class="thead"><h1>{{ s.titre }}</h1><p class="lead">{{ s.intro }}</p><p class="rtime" id="rt-{{ s.id }}"></p>
+    <nav class="toc" aria-labelledby="toch-{{ s.id }}"><h2 class="toch" id="toch-{{ s.id }}">Dans ce thème</h2><ol id="toc-{{ s.id }}"></ol></nav></div>
+  <div class="qbody" id="qb-{{ s.id }}"></div>
 </section>
 {% endfor %}
 
@@ -44,6 +38,7 @@ layout: default
 
 <script>
 window.SUJETS = {{ site.data.sujets | jsonify }};
+window.SECTIONS = {{ site.data.sections | jsonify }};
 window.PROPS = {{ site.data.propositions | jsonify }};
 window.CAS = {{ site.data.cas_etrangers | jsonify }};
 window.SOURCES = {{ site.data.sources | jsonify }};

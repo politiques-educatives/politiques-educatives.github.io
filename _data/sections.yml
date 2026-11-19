@@ -1,0 +1,233 @@
+# Les sections de chaque thème (refonte du 19/11/2026) : un thème = 3 ou 4 sections lues dans l'ordre, et tout part d'elles.
+# Fichier à éditer à la main : titres, ordre des sections, et ce qui est rattaché à chacune.
+# Vérifier après chaque modification : python3 scripts/check_sections.py (chaque élément rattaché une seule fois).
+#
+# Une section :
+#   id        : court, sans accent ; donne l'adresse #<thème>/<id>
+#   titre     : libellé affiché (thématique ; questions dans Orientation et emploi)
+#   bref      : « En bref », 2 ou 3 phrases EXISTANTES, jamais de texte nouveau. Chaque élément est :
+#                 "texte"              repris tel quel (indiquer la provenance en commentaire)
+#                 {source: id}         le « chiffre à citer » (cle) d'une fiche de sources.yml
+#                 {vp: clé[.n]}        un texte de voie_pro.yml (ex. bref.0, chine)
+#                 {note_ia: constat.n} titre et texte d'un constat de note_ia.yml
+#                 {graphique: id}      la note d'un graphique de graphiques.yml
+#   chiffre   : « Le chiffre clé », un seul : {graphique: id} | {source: id} | {vp: clé} | {vp: carte} (capture de la carte des lycées pro)
+#   graphiques_plus : autres graphiques, montrés dans « Pour aller plus loin »
+#   carte     : faits de la carte internationale (_data/ailleurs.json) : theme (onglet de la carte), pays (pays sélectionné par « Voir sur la carte »), faits (ids, 2 à 4)
+#   ailleurs_sources : études étrangères de sources.yml montrées dans « Ce que font les autres pays » : {id, pays}
+#   propositions : ids de propositions.yml (cartes dépliables, avec « Ailleurs : le cas le plus proche »)
+#   livret    : mesures du livret du programme (numéros) ; ajouts : ids de livret_ajouts.yml
+#   sources, dossiers (slugs de recherche.yml), notes (PDF de notes.yml ou politiques.yml), notes_generees (dossier), blocs (masters, comms, note_ia)
+#   voiepro / voiepro_plus : blocs de voie_pro.yml montrés dans la section / dans « Pour aller plus loin »
+#                 (portefeuille, indice, resultats, methode, batiment, limites, chine, donnees, carte)
+# « reste » : ce qui n'est rattaché à aucune section, montré replié en bas du thème (« Tout le reste du thème »).
+# Tout élément des fichiers de données qui n'est rattaché nulle part va aussi, automatiquement, dans « Tout le reste » de son thème.
+
+themes:
+- theme: ecole
+  sections:
+  - id: temps
+    titre: "Le temps des professeurs"
+    bref:   # note 1, En bref (« Le constat », « La proposition ») et partie 1
+      - "**Le constat.** En France, tout ce qui n'est pas une heure de cours se paie en heures supplémentaires ou ne se fait pas. Le tutorat, le second professeur principal ou les groupes de besoins butent sur ce verrou."
+      - "La différence tient moins au volume qu'à la règle : la France compte des heures de cours, l'Angleterre et l'Écosse un temps de travail total."
+      - "**La proposition.** Un service annuel, avec un plafond d'heures de cours et une part réservée, inscrite dans l'emploi du temps, au tutorat et au travail d'équipe ; une dotation selon les élèves et leurs besoins ; une mesure régulière de la charge réelle, car un plafond seul ne suffit pas."
+    chiffre: {graphique: heures}
+    graphiques_plus: [formation]
+    carte: {theme: temps, pays: SCO, faits: [f16, f18, f11, f27]}
+    propositions: [heures-service-annuel, heures-emploi-du-temps, heures-dotation, heures-mercredi, heures-charge]
+    livret: ["65", "72", "71"]
+    sources: [ocde-heures-2026, stpcd-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, nickow-2020, kraft-2024, guryan-2023, ntp-nfer, apfee, eef-setting, steenbergen-2016, duflo-2011]
+    dossiers: [02-groupes-niveau-tutorat, 08-formation-enseignants, 10-brief-formation-continue-enseignants, 16-calendrier-formation-continue]
+    notes: [EDUCATION-note1-allocation-heures-enseignement.pdf]
+  - id: decider
+    titre: "Qui décide dans l'établissement"
+    bref:   # note 2, En bref (« Le constat ») et partie 3
+      - "**Le constat.** Le chef d'établissement français est responsable des résultats sans tenir les leviers : il ne choisit pas ses enseignants, n'évalue pas leur pédagogie et ne fixe pas leur service. L'enseignant n'a plus d'inspection obligatoire après le milieu de sa carrière."
+      - "L'autonomie a marché là où elle s'accompagnait d'une nouvelle direction et de résultats publiés ; seule, elle n'a rien changé."
+    chiffre: {source: cdc-inspecteurs-2022}
+    carte: {theme: gouvernance, pays: ENG, faits: [f39, f40, f43, f46]}
+    propositions: [gouv-recruter, gouv-coordinateurs, gouv-visite]
+    livret: ["64"]
+    sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022]
+    dossiers: [01-england-governance-ors]
+    notes: [EDUCATION-note2-gouvernance-etablissement.pdf]
+  - id: evaluer
+    titre: "Évaluer les établissements"
+    bref:   # note 2, partie 5
+      - "Depuis la loi de 2019 (premières évaluations en 2020-2021), chaque établissement s'auto-évalue puis reçoit une évaluation externe tous les cinq ans. La DEPP publie une valeur ajoutée par lycée (IVAL) depuis 1993 et par collège (IVAC) depuis 2024, limitée au bac et au brevet et sans rôle dans cette évaluation."
+      - "Un échec à l'inspection a relevé les résultats des élèves de 0,12 écart-type en maths en primaire (Hussain, 2015) et d'environ 0,1 dans le secondaire (Allen et Burgess, 2012), sous l'ancien système de notes."
+    chiffre: {source: evaluation-etablissements-fr}
+    carte: {theme: gouvernance, pays: ENG, faits: [f41, f141, f142, f138]}
+    propositions: [gouv-evaluation]
+    sources: [ofsted-2025, evaluation-etablissements-fr]
+    dossiers: [03-inspection-evaluation]
+  reste:
+    livret: ["66"]
+
+- theme: handicap
+  sections:
+  - id: handicap
+    titre: "Le handicap à l'école"
+    bref:
+      - {source: depp-ni-25-63}
+      - {source: cnesco-2026-inclusion}
+      - {source: cnsa-mdph-delais}
+    chiffre: {graphique: aesh}
+    graphiques_plus: [mdph]
+    ailleurs_sources: [{id: inclusion-international, pays: "Italie, New York, Québec, Finlande"}]
+    livret: ["74"]
+    sources: [cdc-inclusion-2024, senat-plf2026-inclusion, cnesco-2026-inclusion, depp-ni-25-63, cnsa-mdph-delais, mediateur-2025]
+    dossiers: [04-inclusion]
+    notes_generees: [notes-generees/2026-11-18-issue-1]
+  - id: sante-mentale
+    titre: "La santé mentale des jeunes"
+    bref:
+      - {source: drees-suicide-2025}
+      - {source: enfants-ecrans-2024}
+      - {source: cdc-sante-scolaire-2020}
+    chiffre: {graphique: depression}
+    graphiques_plus: [psy]
+    ailleurs_sources: [{id: kiva-2018, pays: Finlande}]
+    sources: [enclass-2024, drees-suicide-2025, cdc-sante-scolaire-2020, pssm-cochrane-2023, myriad-2022]
+    dossiers: [09-brief-sante-mentale-handicap-inclusion]
+  - id: ecrans
+    titre: "Écrans, portable et IA à l'école"
+    bref:
+      - {source: bastani-2025}
+      - {source: interdictions-portable-null}
+      - {source: portable-en-pause}
+    chiffre: {graphique: pisa}
+    graphiques_plus: [seconde]
+    ailleurs_sources: [{id: abrahamsson-2024, pays: Norvège}, {id: interdictions-portable-null, pays: "Suède, Angleterre, États-Unis"}]
+    propositions: [tuteur-public, tuteur-marche, ia-bases]
+    livret: ["67", "68", "69", "70", "29"]
+    ajouts: [a-portable]
+    sources: [enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-seconde-2026, depp-ce1-2026, depp-pisa-2025, pisa-2022-distraction, cnl-lecture-2026, portable-en-pause, bastani-2025, stromberg-2026, kestin-2025, desimone-2025, henkel-2024, tutor-copilot-2024, mia-seconde, cadre-usage-ia-2025]
+    dossiers: [07-outil-ia-public, 09-lecture-rapport-cianum-sortir-clandestinite, 14-why-scores-fall]
+  reste:
+    livret: ["73"]
+
+- theme: orientation
+  sections:
+  - id: orienter
+    titre: "Comment mieux orienter, et dès quand ?"
+    bref:   # note 3, partie 2
+      - "La première décision tombe en fin de 3e : 38,6 % des élèves du public entrent en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale ; DEPP, 2025)."
+      - "Le second professeur principal de terminale, sans heures ni formation, n'a pas marché : un tiers des lycées seulement a tenu les deux semaines d'orientation (Cnesco, 2018)."
+      - {source: goux-2017}
+    chiffre: {graphique: voeux}
+    graphiques_plus: [boursiers]
+    carte: {theme: orientation, pays: ENG, faits: [f54, f56, f58, f175]}
+    propositions: [orient-4e, orient-parents, orient-gatsby]
+    livret: ["75"]
+    sources: [depp-reperes-orientation-2025, goux-2017, avvisati-2014, breda-2023, gatsby, berlioux-2020, resnjanskij-2024, cnesco-2018-orientation]
+    dossiers: [05-orientation]
+    notes: [EDUCATION-note3-orienter.pdf]
+  - id: bac
+    titre: "Comment rendre au bac et à la licence leur valeur ?"
+    bref:   # note 3, En bref ; fiche orient-bac (preuves) ; bloc « Masters »
+      - "Plus d'un étudiant sur deux inscrit en licence ne l'a pas obtenue au bout de quatre ans. Le baccalauréat, obtenu par 91,8 % des candidats, ne dit plus aux élèves ni aux formations ce qu'ils savent."
+      - "Le passage en deuxième année atteint 70 % pour les bacheliers mention très bien, contre 49,1 % pour l'ensemble des néo-bacheliers en 2024 : le bac contient l'information, mais il ne s'en sert pas."
+      - "Le master sert souvent de filtre plus que de compétence : il trie par origine sociale, retarde de deux ans l'entrée dans la vie active, et une licence professionnelle insère mieux."
+    chiffre: {graphique: licence-bac}
+    graphiques_plus: [filtre]
+    carte: {theme: superieur, pays: UK, faits: [f76, f182, f183, f75]}
+    propositions: [orient-bac, ia-master]
+    livret: ["76"]
+    ajouts: [a-bac, a-master]
+    sources: [sies-licence-2025, insee-2109, ofer-2016, rers-2025, humburg-2015, apec-2024, indeed-diplomes-2024, cereq-generation-2021]
+    dossiers: [13-master-as-filter-evidence, 13-masters-job-market, 13-france-firms-master-filter-and-solutions, 17-orientation-apprentissage-preuves]
+    blocs: [masters]
+  - id: debouches
+    titre: "Les familles savent-elles où mène chaque formation ?"
+    bref:   # note 3, partie 1 ; fiche orient-debouches (preuves) ; fiche hastings-2015
+      - "Quand l'examen ne dit plus la vérité, ce sont les familles qui ont le réseau et l'information qui savent quelles formations mènent quelque part."
+      - "La Boussole classe les 13 819 formations de Parcoursup 2025 en 39 familles et affiche l'emploi et le salaire de 2 427 masters d'université (InserSup 2026)."
+      - {source: hastings-2015}
+    chiffre: {graphique: insersup}
+    graphiques_plus: [insersup-tendance]
+    carte: {theme: orientation, pays: US, faits: [f61, f60, f186, f62]}
+    propositions: [orient-transparence, orient-debouches]
+    livret: ["P08"]
+    ajouts: [a-debouches]
+    sources: [insersup, hastings-2015, hoxby-turner-2013, deming-2017]
+    dossiers: [06-index-ia-formations]
+  - id: ia
+    titre: "L'IA et l'emploi des débutants"
+    bref:
+      - {note_ia: constat.0}
+      - {note_ia: constat.1}
+      - {source: humlum-2025}
+    chiffre: {graphique: embauches}
+    carte: {theme: apprentissage, pays: UK, faits: [f87, f192, f202, f200]}
+    propositions: [ia-garantie, ia-observatoire]
+    livret: ["119"]
+    ajouts: [a-garantie]
+    sources: [lift-2026, canaries-2025, humlum-2025, insee-ic-2026, orr-2026, milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026, cae-91]
+    dossiers: [18-ia-embauches-exposition, 12-milburn-review]
+    notes: [EDUCATION-note-rapport-milburn.pdf]
+    blocs: [note_ia]
+  reste:
+    blocs: [comms]
+
+- theme: voiepro
+  sections:
+  - id: filieres
+    titre: "Les filières qui restent un bon choix"
+    bref:
+      - {vp: bref.0}
+      - {vp: bref.1}
+    chiffre: {vp: bref.2}
+    carte: {theme: apprentissage, pays: ENG, faits: [f88, f85, f86]}
+    voiepro: [indice]
+    voiepro_plus: [portefeuille, resultats, methode, batiment, limites, donnees]
+    dossiers: [19-indice-risque-filieres-techniques, 21-codifiabilite-revue, 21-codifiabilite-donnees]
+  - id: lycees
+    titre: "Les lycées pro face à l'IA et à la concurrence chinoise"
+    bref:
+      - {vp: chine}
+      - "Dans la Boussole des formations : un clic sur un lycée affiche sa fiche."
+    chiffre: {vp: carte}
+    voiepro_plus: [chine]
+    sources: [hosseini-2026]
+  - id: pointe
+    titre: "Mettre la voie pro à la pointe"
+    bref:   # note « filières techniques » du 19/11/2026 (constat et proposition 3, non publiée en PDF) ; fiche orient-transparence (preuves)
+      - "Dans l'industrie française, une usine qui s'équipe en machines modernes embauche davantage, y compris des ouvriers non qualifiés, et gagne des parts de marché face à ses concurrents étrangers (Aghion, Antonin, Bunel et Jaravel, 2023)."
+      - "**Mettre les filières techniques à la pointe technologique.** Actualiser les référentiels de bac pro et de BTS pour y intégrer les outils que les usines adoptent (automatisme, maintenance de machines modernes, usage professionnel de l'IA), en commençant par les zones d'emploi les plus exposées à la concurrence chinoise."
+      - "Emploi à 6 mois : 43 % après un bac pro, 59 % après un BTS (DEPP, InserJeunes, RERS 2025)."
+    chiffre: {graphique: emploi6mois}
+    carte: {theme: apprentissage, pays: ENG, faits: [f206, f207, f205, f176]}
+    propositions: [ia-marche]
+  reste: {}
+
+# Montré dans « Tout le reste » de chaque thème (sert à tous les thèmes).
+transversal:
+  dossiers: [22-cas-etrangers-propositions]
+
+# Une ligne par dossier de recherche : ce qu'il apporte (description de son contenu, d'après son titre).
+apports:
+  01-england-governance-ors: "Angleterre : qui recrute, évalue et organise, temps de travail des enseignants, repères chiffrés face à la France."
+  02-groupes-niveau-tutorat: "Groupes de niveau, groupes de besoins et tutorat : ce que montrent les essais."
+  03-inspection-evaluation: "Inspection des enseignants et évaluation des établissements : la France face à d'autres pays."
+  04-inclusion: "L'inclusion des élèves handicapés en Italie, à New York et au Québec."
+  05-orientation: "L'orientation en France, en Angleterre et en Finlande, et les preuves sur ce qui marche."
+  06-index-ia-formations: "Les preuves derrière un indice de résilience à l'IA des formations post-bac."
+  07-outil-ia-public: "Un outil d'IA public pour les élèves : ce qui existe, qui pourrait répondre, ce que disent les preuves."
+  08-formation-enseignants: "La formation initiale et continue des enseignants."
+  09-brief-sante-mentale-handicap-inclusion: "Inclusion scolaire, santé scolaire et santé mentale des lycéens : l'état des lieux chiffré."
+  09-lecture-rapport-cianum-sortir-clandestinite: "Lecture du rapport CIANum « Sortir de la clandestinité » sur l'IA à l'école (juin 2026)."
+  10-brief-formation-continue-enseignants: "Augmenter réellement la formation continue des enseignants : état des lieux, comparaisons, options."
+  12-milburn-review: "Le rapport Milburn : recommandations, réponses du gouvernement, comparaison avec la France."
+  13-masters-job-market: "Les jeunes diplômés de master s'insèrent-ils moins bien que ceux de licence ? États-Unis et France."
+  13-master-as-filter-evidence: "Le master comme filtre : ce que disent les études."
+  13-france-firms-master-filter-and-solutions: "Les entreprises françaises utilisent-elles le master comme filtre, et comment faire entrer les jeunes plus vite dans l'emploi."
+  14-why-scores-fall: "Pourquoi les résultats des élèves français baissent : les causes étudiées."
+  16-calendrier-formation-continue: "Où placer la formation continue dans l'année : une semaine de vacances ou trois jours par trimestre."
+  17-orientation-apprentissage-preuves: "Six affirmations vérifiées sur l'orientation, les années perdues et l'apprentissage."
+  18-ia-embauches-exposition: "IA, embauches et exposition : les preuves, et ce que fait le Royaume-Uni."
+  19-indice-risque-filieres-techniques: "La méthode complète de l'indice de risque des filières techniques (CAP, bac pro, BTS, BUT)."
+  21-codifiabilite-revue: "Revue de littérature : codifiabilité, faisceaux de tâches et portefeuille de carrières."
+  21-codifiabilite-donnees: "Les données publiques pour mesurer la codifiabilité, et leur place dans la Boussole et l'indice."
+  22-cas-etrangers-propositions: "Un cas étranger pour chaque proposition du GT : la source des encadrés « Ailleurs : le cas le plus proche »."

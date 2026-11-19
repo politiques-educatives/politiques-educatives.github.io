@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
-{% assign k = page.sujets | first %}{% case k %}{% when 'formation' %}{% assign t = 'ecole' %}{% when 'inclusion' %}{% assign t = 'handicap' %}{% when 'ecrans' %}{% assign t = 'handicap' %}{% else %}{% assign t = 'orientation' %}{% endcase %}
-<p class="crumbs"><a href="{{ '/' | relative_url }}#{{ t }}/recherche">← Recherche et données</a></p>
+{% assign qt = nil %}{% assign qs = nil %}{% for t in site.data.sections.themes %}{% for q in t.sections %}{% if q.dossiers contains page.slug %}{% assign qt = t.theme %}{% assign qs = q %}{% endif %}{% endfor %}{% endfor %}
+{% assign tt = '' %}{% for s in site.data.sujets %}{% if s.id == qt %}{% assign tt = s.titre %}{% endif %}{% endfor %}
+{% if qs %}<p class="crumbs">Ce dossier appuie la section <a href="{{ '/' | relative_url }}#{{ qt }}/{{ qs.id }}">{{ qs.titre }}</a> ({{ tt }})</p>
+{% elsif site.data.sections.transversal.dossiers contains page.slug %}<p class="crumbs">Ce dossier sert à tous les thèmes : <a href="{{ '/' | relative_url }}#accueil">retour à l'accueil</a></p>
+{% else %}<p class="crumbs"><a href="{{ '/' | relative_url }}#accueil">← Accueil</a></p>{% endif %}
 <h1>{{ page.title }}</h1>
 <p class="byline">Dossier de recherche du GT Éducation · chaque chiffre porte sa source ; les points non confirmés sont marqués UNVERIFIED ou « à vérifier » · <a href="https://github.com/{{ site.repo }}/issues/new?template=feedback.yml&carte={{ page.slug }}" target="_blank" rel="noopener">Signaler une correction</a></p>
 <article class="doc">

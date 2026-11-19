@@ -1,6 +1,6 @@
-// Politiques éducatives : Accueil, one tab per theme (same three sub-tabs everywhere), International, Boussole.
-// Routes: #accueil[/rediger], #<theme>/<essentiel|recherche|ailleurs>[/<section id>], #international/<carte[/<map theme>]|politiques>,
-//         #boussole[/<anchor>], #p-<card id>. Old routes (#ia/…, #gouvernance/…, #comparaisons…) are redirected (LEGACY).
+// Politiques éducatives : Accueil, one page per theme (sections from _data/sections.yml, read in order), International (two sub-tabs), Boussole.
+// Routes: #accueil[/rediger], #<theme>[/<section id>|/reste], #international/<carte[/<map theme>[/<country>]]|politiques>, #boussole[/<anchor>], #p-<card id>.
+// Old routes (#ia/…, #gouvernance/…, #<theme>/essentiel|recherche|ailleurs[/<section>]) are redirected (LEGACY, OLDSEC).
 // Every listed item has class "s-item" and its searchable text in data-s; the header search filters them all.
 (function () {
   "use strict";
@@ -28,8 +28,8 @@
   var mapTheme = {}; (AIL.themes || []).forEach(function (t) { mapTheme[t.key] = t; });
   var any = function (list, keys) { return (list || []).some(function (k) { return keys.indexOf(k) >= 0; }); };
   var livByCard = {}; LIV.forEach(function (m) { (m.cartes || []).forEach(function (c) { (livByCard[c] = livByCard[c] || []).push(m); }); });
-  var SUBS = { theme: [["essentiel", "L'essentiel"], ["recherche", "Recherche et données"], ["ailleurs", "Ailleurs"]], international: [["carte", "La carte"], ["politiques", "Politiques d'ailleurs"]] };
-  var subsOf = function (topic) { return sujById[topic] ? SUBS.theme : topic === "international" ? SUBS.international : null; };
+  var SUBS = { international: [["carte", "La carte"], ["politiques", "Politiques d'ailleurs"]] };
+  var subsOf = function (topic) { return topic === "international" ? SUBS.international : null; };
   function issueUrl(id, title) {
     return "https://github.com/" + W.REPO + "/issues/new?template=feedback.yml&title=" + encodeURIComponent("[" + id + "] " + title) + "&carte=" + encodeURIComponent(id);
   }
@@ -124,7 +124,7 @@
   }
   var ul = function (list, cls) { return '<ul class="' + (cls || "ev") + '">' + list.map(function (x) { return item("li", "", x, md(x)); }).join("") + "</ul>"; };
 
-  // ---------------- blocks reused from the former sub-tabs
+
   function noteIA() {
     var NI = W.NOTE_IA; if (!NI) return "";
     var r = function (c) { return row('<span class="pt">' + md(c.titre) + "</span>", "<p>" + md(c.texte) + "</p>", c.titre + " " + c.texte); };
@@ -170,108 +170,176 @@
         item("li", "", "non vérifiable questions", "<strong>Non vérifiable.</strong> Les exemples de questions : la DEPP ne publie aucun résultat question par question.") + "</ul>",
         '<a href="https://x.com/JLeFlochImad/status/2122979063086137629" target="_blank" rel="noopener">Post X du 18 novembre 2026</a>') + "</div>";
   }
-  var BLOCS = { masters: blocMasters, comms: blocComms };
+  var BLOCS = { masters: blocMasters, comms: blocComms, note_ia: noteIA };
 
-  // ---------------- « Voie pro, IA et concurrence chinoise » (research dossier 19, version 1)
+
+  // ---------------- « Voie pro et technologies de pointe »: blocks of _data/voie_pro.yml, placed by sections.yml (voiepro / voiepro_plus)
   var vpSrc = function () { return '<p class="src">Source : ' + esc(VP.source) + "</p>"; };
   var RISK_COLS = [0, 1, 2, 3, 4, 5];
-  function voieProEssentiel() {
-    if (!VP) return "";
-    return sec("En bref", ul(VP.bref, "bref"), "", "s-bref") +
-      sec("La carte des lycées pro",
-        item("div", "vp-carte", "carte lycées professionnels bac pro CAP spécialités IA Chine zone d'emploi " + VP.carte,
-          '<a class="vp-img" href="#boussole/carte" data-route="boussole/carte"><img src="' + esc(BASE + "/assets/captures/boussole-lycees-pro-ia-chine.jpg") + '" alt="Capture de la carte des lycées professionnels dans la Boussole" width="240" loading="lazy"></a>' +
-          '<div><p>' + md(VP.carte) + '</p><p class="src">Sources : ' + esc(VP.carte_source) + '</p><p><a class="btn" href="#boussole/carte" data-route="boussole/carte">Ouvrir la carte</a></p></div>'),
-        "Dans la Boussole des formations : un clic sur un lycée affiche sa fiche.") +
-      sec("L'indice de risque des filières techniques (version 1)",
-        ul(VP.resultats) +
-        "<h3>Les 10 spécialités les moins risquées</h3>" + table(VP.faibles, RISK_COLS, "moins risquées faible risque") + item("p", "", VP.apres_faibles, md(VP.apres_faibles)) +
-        "<h3>Les 10 spécialités les plus risquées</h3>" + table(VP.forts, RISK_COLS, "plus risquées risque élevé") + item("p", "", VP.apres_forts, md(VP.apres_forts)) +
-        '<p class="note-src">Risque et rangs de 0 à 1 (1 = plus de risque). Le détail des cinq composantes est dans « Recherche et données ».</p>' + vpSrc(),
-        "Une mesure du GT : le risque d'une spécialité, pas seulement son exposition à l'IA.", "s-indice");
-  }
-  function voieProRecherche() {
-    if (!VP) return "";
-    return sec("Méthode de l'indice", item("p", "", VP.demande_v1, md(VP.demande_v1)) + table(VP.composantes, null, "composantes méthode") +
+  var VPB = {
+    portefeuille: function () { return blk("Choisir comme on compose un portefeuille", item("p", "", VP.portefeuille, md(VP.portefeuille)) + vpSrc()); },
+    indice: function () {
+      return blk("L'indice de risque des filières techniques (version 1)",
+        '<p class="note-src">Une mesure du GT : le risque d\'une spécialité, pas seulement son exposition à l\'IA. Risque et rangs de 0 à 1 (1 = plus de risque).</p>' +
+        "<h4>Les 10 spécialités les moins risquées</h4>" + table(VP.faibles, RISK_COLS, "moins risquées faible risque") + item("p", "", VP.apres_faibles, md(VP.apres_faibles)) +
+        "<h4>Les 10 spécialités les plus risquées</h4>" + table(VP.forts, RISK_COLS, "plus risquées risque élevé") + item("p", "", VP.apres_forts, md(VP.apres_forts)) + vpSrc());
+    },
+    resultats: function () { return blk("Les résultats de la version 1", ul(VP.resultats) + vpSrc()); },
+    methode: function () {
+      return blk("Méthode de l'indice", item("p", "", VP.demande_v1, md(VP.demande_v1)) + table(VP.composantes, null, "composantes méthode") +
         item("p", "", VP.echelle, md(VP.echelle)) + item("p", "", VP.poids, md(VP.poids)) +
-        "<h3>Les cinq scénarios (vue portefeuille)</h3>" + table(VP.scenarios, null, "scénarios portefeuille poids") +
-        "<h3>Les 10 extrêmes, composante par composante</h3>" + table(VP.faibles, null, "moins risquées composantes") + table(VP.forts, null, "plus risquées composantes") + vpSrc(),
-        "", "s-methode") +
-      sec("Le bâtiment, revérifié", '<ol class="ev">' + VP.batiment.map(function (x) { return item("li", "", x, md(x)); }).join("") + "</ol>" +
-        table(VP.batiment_table, null, "bâtiment BMO tension Dares") + item("p", "note-src", VP.batiment_note, esc(VP.batiment_note)) + item("p", "", VP.lecture_tension, md(VP.lecture_tension)) + vpSrc()) +
-      sec("Limites", ul(VP.limites)) +
-      sec("La concurrence chinoise dans la Boussole", item("p", "", VP.chine, md(VP.chine))) +
-      sec("Les données de l'indice", '<ul class="lib">' + VP.donnees.map(function (d) { return item("li", "", d[0], '<a href="' + esc(d[1]) + '" target="_blank" rel="noopener">' + esc(d[0]) + "</a>"); }).join("") + "</ul>");
-  }
+        "<h4>Les cinq scénarios (vue portefeuille)</h4>" + table(VP.scenarios, null, "scénarios portefeuille poids") +
+        "<h4>Les 10 extrêmes, composante par composante</h4>" + table(VP.faibles, null, "moins risquées composantes") + table(VP.forts, null, "plus risquées composantes") + vpSrc());
+    },
+    batiment: function () {
+      return blk("Le bâtiment, revérifié", '<ol class="ev">' + VP.batiment.map(function (x) { return item("li", "", x, md(x)); }).join("") + "</ol>" +
+        table(VP.batiment_table, null, "bâtiment BMO tension Dares") + item("p", "note-src", VP.batiment_note, esc(VP.batiment_note)) + item("p", "", VP.lecture_tension, md(VP.lecture_tension)) + vpSrc());
+    },
+    limites: function () { return blk("Limites de l'indice", ul(VP.limites)); },
+    chine: function () { return blk("La concurrence chinoise dans la Boussole", item("p", "", VP.chine, md(VP.chine))); },
+    donnees: function () { return blk("Les données de l'indice", '<ul class="lib">' + VP.donnees.map(function (d) { return item("li", "", d[0], '<a href="' + esc(d[1]) + '" target="_blank" rel="noopener">' + esc(d[0]) + "</a>"); }).join("") + "</ul>"); },
+    carte: function () {
+      return item("div", "vp-carte", "carte lycées professionnels bac pro CAP spécialités IA Chine zone d'emploi " + VP.carte,
+        '<a class="vp-img" href="#boussole/carte" data-route="boussole/carte"><img src="' + esc(BASE + "/assets/captures/boussole-lycees-pro-ia-chine.jpg") + '" alt="Capture de la carte des lycées professionnels dans la Boussole" width="240" loading="lazy"></a>' +
+        "<div><p>" + md(VP.carte) + '</p><p class="src">Sources : ' + esc(VP.carte_source) + '</p><p><a class="btn" href="#boussole/carte" data-route="boussole/carte">Ouvrir la carte des lycées pro</a></p></div>');
+    }
+  };
+  function blk(title, body, cls) { return body ? '<div class="qblk' + (cls ? " " + cls : "") + '"><h3>' + title + "</h3>" + body + "</div>" : ""; }
 
-  // ---------------- « Ailleurs »: facts of the international map, grouped by country
-  function ailleurs(keys) {
-    var facts = (AIL.facts || []).filter(function (f) { return keys.indexOf(f.theme) >= 0 && f.country !== "FR"; });
-    if (!facts.length) return "";
-    var by = {}; facts.forEach(function (f) { (by[f.country] = by[f.country] || []).push(f); });
-    var name = function (k) { return (AIL.countries || {})[k] || k; };
-    return Object.keys(by).sort(function (a, b) { return by[b].length - by[a].length || name(a).localeCompare(name(b), "fr"); }).map(function (k) {
-      var list = by[k], body = keys.map(function (t) {
-        var fs = list.filter(function (f) { return f.theme === t; }); if (!fs.length) return "";
-        return (keys.length > 1 ? "<h3>" + esc(mapTheme[t] ? mapTheme[t].label : t) + "</h3>" : "") + '<ul class="ev">' + fs.map(function (f) {
-          return "<li>" + esc(f.fact) + ' <span class="sub">(' + (f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.source) + "</a>" : esc(f.source)) + ")</span></li>"; }).join("") + "</ul>";
-      }).join("");
-      return row('<span class="pt">' + esc(name(k)) + '</span><span class="tag">' + plural(list.length, "fait") + "</span>", body,
-        name(k) + " " + list.map(function (f) { return f.fact + " " + f.source; }).join(" "));
-    }).join("");
+  // ---------------- sections of each theme (_data/sections.yml)
+  var SECT = W.SECTIONS || { themes: [] }, APPORT = SECT.apports || {};
+  var factById = {}; (AIL.facts || []).forEach(function (f) { factById[f.id] = f; });
+  var cname = function (k) { return (AIL.countries || {})[k] || k; };
+  var noteByFile = {}; NOTES.forEach(function (n) { noteByFile[n.fichier] = n; });
+  var polByPdf = {}; POL.forEach(function (n) { polByPdf[n.pdf] = n; });
+  var genByDir = {}; GEN.forEach(function (n) { if (n.dossier) genByDir[n.dossier] = n; });
+  var livByN = {}; LIV.forEach(function (m) { livByN[String(m.n)] = m; });
+  var ajById = {}; AJ.forEach(function (a) { if (a.id) ajById[a.id] = a; });
+  var TAG2THEME = { formation: "ecole", inclusion: "handicap", ecrans: "handicap", orientation: "orientation", emploi: "orientation" };
+  var themeOfTags = function (tags) { for (var i = 0; i < (tags || []).length; i++) { if (TAG2THEME[tags[i]]) return TAG2THEME[tags[i]]; if (sujById[tags[i]]) return tags[i]; } return null; };
+  function getPath(obj, path) { return String(path).split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, obj); }
+  function resolve(x) {   // one « En bref » element -> markdown text
+    if (typeof x === "string") return x;
+    if (!x) return "";
+    if (x.source) return srcById[x.source] ? srcById[x.source].cle : "";
+    if (x.vp) return VP ? getPath(VP, x.vp) || "" : "";
+    if (x.note_ia) { var c = getPath(W.NOTE_IA, x.note_ia); return c ? "**" + c.titre + ".** " + c.texte.charAt(0).toUpperCase() + c.texte.slice(1) : ""; }
+    if (x.graphique) return gById[x.graphique] ? gById[x.graphique].note : "";
+    return "";
   }
-  function mapLinks(keys) {
-    return keys.filter(function (k) { return mapTheme[k]; }).map(function (k) { return '<a href="#international/carte/' + k + '" data-route="international/carte/' + k + '">' + esc(mapTheme[k].label) + "</a>"; }).join(" · ");
+  function chiffreHTML(c) {
+    if (!c) return "";
+    if (c.graphique && gById[c.graphique]) return '<div class="charts one">' + chartBox(gById[c.graphique]) + "</div>";
+    if (c.source && srcById[c.source]) { var s = srcById[c.source];
+      return item("div", "kfig", s.cle, '<p class="kf">' + md(s.cle) + '</p><p class="src">' + md(s.ref) + (s.lien ? ' <a href="' + esc(s.lien) + '" target="_blank" rel="noopener">Lien</a>' : "") + "</p>"); }
+    if (c.vp === "carte" && VP) return VPB.carte();
+    if (c.vp && VP) { var t = getPath(VP, c.vp) || ""; return item("div", "kfig", t, '<p class="kf">' + md(t) + "</p>" + vpSrc()); }
+    return "";
   }
-
-  // ---------------- build the theme sub-panels
-  SUJ.forEach(function (S) {
-    var K = S.donnees || [], G = S.graphiques || {};
-    var props = PROPS.filter(function (p) { return any(p.sujets, S.propositions || []); });
-    var liv = LIV.filter(function (m) { return any(m.sujets, K) && m.eval !== "hors champ"; });
-    var aj = AJ.filter(function (a) { return any(a.sujets, K); });
-    var srcs = SRC.filter(function (s) { return any(s.sujets, K); });
-    var notes = NOTES.filter(function (n) { return any(n.sujets, K); });
-    var gen = GEN.filter(function (n) { return n.sujet === S.id || any(n.sujets || [n.sujet], K.concat([S.id])); });
-    var pol = POL.filter(function (n) { return any(n.sujets, K); });
-    var dos = DOS.filter(function (d) { return any(d.sujets, K); }).concat(ids(S.dossiers, dosBySlug).filter(function (d) { return !any(d.sujets, K); }));
-    var h;
-    // L'essentiel
-    h = S.bref ? sec("En bref", '<ul class="bref">' + ids(S.bref, srcById).map(function (s) { return item("li", "", s.cle, md(s.cle)); }).join("") + "</ul>") : "";
-    if (S.voie_pro) h += voieProEssentiel();
-    if (props.length) h += sec("Nos propositions", props.map(propHTML).join(""), "Une ligne par proposition ; cliquez pour l'explication, les preuves et la note d'origine.");
-    if (S.note_ia) h += noteIA();
-    if (S.constats) h += sec("Ce que montrent les données", ids(S.constats, srcById).map(constatHTML).join(""), "Les chiffres clés de nos sources ; cliquez pour le détail.");
-    h += sec("Les chiffres clés", charts(G.essentiel));
-    h += sec("Les notes", (notes.length || gen.length || pol.length) ? '<ul class="lib">' + notes.map(function (n) { return noteHTML(n, false); }).join("") + pol.map(polNoteHTML).join("") + gen.map(function (n) { return noteHTML(n, true); }).join("") + "</ul>" : "");
-    h += sec("Le programme et nos travaux",
-      liv.map(livHTML).join("") + (aj.length ? '<h3>Ce que nos travaux ajoutent</h3><ul class="ajouts">' + aj.map(function (a) { return item("li", "", a.texte, md(a.texte)); }).join("") + "</ul>" : ""),
-      "Livret « Croire en nous », volume 1 (18 novembre 2026) : les mesures du programme et notre évaluation.");
-    $("#sp-" + S.id + "-essentiel").innerHTML = h;
-    // Recherche et données
-    h = (S.blocs || []).map(function (b) { return BLOCS[b] ? BLOCS[b]() : ""; }).join("");
-    if (S.voie_pro) h += voieProRecherche();
-    h += sec("Les chiffres", charts(G.recherche));
-    var used = {};
-    (S.groupes || []).forEach(function (g) {
-      var list = ids(g.sources, srcById); list.forEach(function (s) { used[s.id] = 1; });
-      h += sec("Sources : " + esc(g.titre) + " (" + list.length + ")", list.map(srcHTML).join(""), "", "s-" + slug(g.titre));
+  function ailleursHTML(q) {
+    var C = q.carte || {}, lis = (C.faits || []).filter(function (i) { return factById[i]; }).map(function (i) {
+      var f = factById[i];
+      return item("li", "", cname(f.country) + " " + f.fact + " " + f.source, "<b>" + esc(cname(f.country)) + "</b> : " + esc(f.fact) +
+        ' <span class="sub">(' + (f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.source) + "</a>" : esc(f.source)) + ")</span>");
+    }).concat((q.ailleurs_sources || []).filter(function (a) { return srcById[a.id]; }).map(function (a) {
+      var s = srcById[a.id]; return item("li", "", a.pays + " " + s.cle, "<b>" + esc(a.pays) + "</b> : " + md(s.cle) + (s.lien ? ' <a class="sub" href="' + esc(s.lien) + '" target="_blank" rel="noopener">Lien</a>' : ""));
+    }));
+    if (!lis.length) return '<p class="empty">La carte internationale ne couvre pas encore cette section.</p>';
+    var r = C.theme && mapTheme[C.theme] ? "international/carte/" + C.theme + (C.pays ? "/" + C.pays : "") : "";
+    return '<ul class="ail">' + lis.join("") + "</ul>" + (r ? '<p class="more-l"><a href="#' + r + '" data-route="' + r + '">Voir sur la carte (' + esc(mapTheme[C.theme].short || mapTheme[C.theme].label) + ")</a></p>" : "");
+  }
+  function dosLine(d) {
+    return item("li", "", d.titre + " " + (APPORT[d.slug] || ""), '<a href="' + esc(BASE + "/recherche/" + d.slug + ".html") + '">' + esc(APPORT[d.slug] || d.titre) + '</a> <span class="meta">dossier de recherche · ' + d.mots + " mots</span>");
+  }
+  function srcLine(s) {   // a source in « Pour aller plus loin »: title, and on one line what it adds (its key figure)
+    return srcHTML(s).replace("</summary>", '<span class="sl">' + md(s.cle) + "</span></summary>");
+  }
+  function plusHTML(q, label) {   // the content of a « Pour aller plus loin » or « Tout le reste »
+    var parts = [], n = [];
+    var notes = (q.notes || []).map(function (f) { return noteByFile[f] ? noteHTML(noteByFile[f], false) : polByPdf[f] ? polNoteHTML(polByPdf[f]) : ""; })
+      .concat((q.notes_generees || []).map(function (d) { return genByDir[d] ? noteHTML(genByDir[d], true) : ""; })).concat((q._notes || []).map(function (x) { return x; })).filter(Boolean);
+    if (notes.length) { parts.push(blk("Les notes du GT", '<ul class="lib">' + notes.join("") + "</ul>")); n.push(plural(notes.length, "note")); }
+    var dos = ids(q.dossiers, dosBySlug).concat(q._dos || []);
+    if (dos.length) { parts.push(blk("Les dossiers de recherche", '<ul class="lib">' + dos.map(dosLine).join("") + "</ul>")); n.push(plural(dos.length, "dossier")); }
+    var gr = (q.graphiques_plus || []).concat(q._gr || []).filter(function (i) { return gById[i]; });
+    if (gr.length) { parts.push(blk("Autres graphiques", charts(gr))); n.push(plural(gr.length, "graphique")); }
+    var srcs = ids(q.sources, srcById).concat(ids((q.ailleurs_sources || []).map(function (a) { return a.id; }), srcById).filter(function (s) { return (q.sources || []).indexOf(s.id) < 0; })).concat(q._src || []);
+    if (srcs.length) { parts.push(blk("Les sources", srcs.map(srcLine).join(""), "srcs")); n.push(plural(srcs.length, "source")); }
+    (q.blocs || []).forEach(function (b) { if (BLOCS[b]) parts.push(BLOCS[b]()); });
+    (q.voiepro_plus || []).forEach(function (k) { if (VP && VPB[k]) parts.push(VPB[k]()); });
+    if (q._props && q._props.length) parts.push(blk("Autres propositions", q._props.map(propHTML).join("")));
+    if (q._liv && q._liv.length) parts.push(blk("Le programme (livret)", q._liv.map(livHTML).join("")));
+    if (!parts.length) return "";
+    return '<details class="more"><summary><span class="more-t">' + label + '</span> <span class="mut">' + esc(n.join(" · ")) + "</span></summary>" + parts.join("") + "</details>";
+  }
+  function sectionHTML(T, q, i) {
+    var props = ids(q.propositions, byId), liv = (q.livret || []).map(function (k) { return livByN[String(k)]; }).filter(Boolean), aj = ids(q.ajouts, ajById);
+    var h = '<section class="qsec" id="q-' + T + "-" + esc(q.id) + '" data-q="' + esc(q.id) + '" data-t="' + esc(norm(q.titre)) + '" aria-labelledby="qh-' + T + "-" + esc(q.id) + '">' +
+      '<h2 class="qh" id="qh-' + T + "-" + esc(q.id) + '"><span class="qn">' + (i + 1) + "</span>" + md(q.titre) + "</h2>";
+    var bref = (q.bref || []).map(resolve).filter(Boolean);
+    if (bref.length) h += blk("En bref", '<ul class="bref">' + bref.map(function (t) { return item("li", "", t, md(t)); }).join("") + "</ul>", "qbref");
+    var ch = chiffreHTML(q.chiffre); if (ch) h += blk("Le chiffre clé", ch, "qfig");
+    (q.voiepro || []).forEach(function (k) { if (VP && VPB[k]) h += VPB[k](); });
+    h += blk("Ce que font les autres pays", ailleursHTML(q), "qail");
+    if (props.length || liv.length || aj.length)
+      h += blk("Ce que nous proposons", props.map(propHTML).join("") +
+        (liv.length ? '<h4>Dans le livret du programme « Croire en nous »</h4>' + liv.map(livHTML).join("") : "") +
+        (aj.length ? "<h4>Ce que nos travaux ajoutent au livret</h4>" + '<ul class="ajouts">' + aj.map(function (a) { return item("li", "", a.texte, md(a.texte)); }).join("") + "</ul>" : ""), "qprop");
+    h += plusHTML(q, "Pour aller plus loin");
+    return h + "</section>";
+  }
+  // everything attached to a section; whatever is not attached goes to « Tout le reste » of its theme
+  var USED = { p: {}, s: {}, g: {}, d: {}, n: {}, l: {}, a: {}, gen: {} };
+  SECT.themes.forEach(function (T) {
+    (T.sections || []).concat([T.reste || {}]).forEach(function (q) {
+      (q.propositions || []).forEach(function (k) { USED.p[k] = 1; }); (q.sources || []).forEach(function (k) { USED.s[k] = 1; });
+      (q.ailleurs_sources || []).forEach(function (a) { USED.s[a.id] = 1; });
+      if (q.chiffre && q.chiffre.graphique) USED.g[q.chiffre.graphique] = 1; (q.graphiques_plus || []).forEach(function (k) { USED.g[k] = 1; });
+      (q.dossiers || []).forEach(function (k) { USED.d[k] = 1; }); (q.notes || []).forEach(function (k) { USED.n[k] = 1; });
+      (q.livret || []).forEach(function (k) { USED.l[String(k)] = 1; }); (q.ajouts || []).forEach(function (k) { USED.a[k] = 1; });
+      (q.notes_generees || []).forEach(function (k) { USED.gen[k] = 1; });
     });
-    var rest = srcs.filter(function (s) { return !used[s.id]; }).concat(ids(S.sources_recherche, srcById).filter(function (s) { return !any(s.sujets, K); }));
-    h += sec((S.groupes ? "Autres sources du thème" : "Les sources du thème") + " (" + rest.length + ")", rest.map(srcHTML).join(""),
-      "Chaque fiche : ce qui a été étudié, les chiffres avec leur point de comparaison, les limites, et si le chiffre a été lu dans la source. « Copier » met la citation dans le presse-papiers.", "s-sources");
-    h += sec("Les dossiers de recherche", dosList(dos), "", "s-dossiers");
-    $("#sp-" + S.id + "-recherche").innerHTML = h;
-    // Ailleurs
-    var keys = S.carte || [], fa = ailleurs(keys);
-    h = fa ? sec("Pays par pays", fa, "Ce que font d'autres pays sur ce thème : les faits vérifiés de la carte internationale, chacun avec sa source. Voir sur la carte : " + mapLinks(keys) + ".")
-      : sec("Pays par pays", '<p class="empty s-item" data-s="carte internationale">La carte internationale ne couvre pas encore ce thème : voir les études et le dossier ci-dessous.</p>');
-    if (S.politiques) h += sec("Politiques d'ailleurs", pol.map(function (n) {
-      return item("div", "box", n.titre + " " + (n.bref || []).join(" "), '<p class="kick">' + esc(n.pays) + " · " + esc(n.date) + '</p><p><strong><a href="#international/politiques" data-route="international/politiques">' + esc(n.titre) + "</a></strong></p>" + ul(n.bref));
-    }).join(""), "Fiches d'une page, dans l'onglet International.");
-    h += sec("Études menées à l'étranger", ids(S.sources_ailleurs, srcById).map(srcHTML).join(""));
-    h += sec("Dossiers de recherche", dosList(ids(S.dossiers_ailleurs, dosBySlug)));
-    $("#sp-" + S.id + "-ailleurs").innerHTML = h;
+  });
+  ((SECT.transversal || {}).dossiers || []).forEach(function (k) { USED.d[k] = 1; });
+  function leftovers(tid) {
+    var mine = function (tags) { return themeOfTags(tags) === tid; };
+    return {
+      _props: PROPS.filter(function (p) { return !USED.p[p.id] && mine(p.sujets); }),
+      _src: SRC.filter(function (s) { return !USED.s[s.id] && mine(s.sujets); }),
+      _gr: GR.filter(function (g) { return !USED.g[g.id] && mine([g.sujet]); }).map(function (g) { return g.id; }),
+      _dos: DOS.filter(function (d) { return !USED.d[d.slug] && (mine(d.sujets) || (!(d.sujets || []).length && tid === "voiepro")); })
+        .concat(ids((SECT.transversal || {}).dossiers, dosBySlug)),
+      _notes: NOTES.filter(function (n) { return !USED.n[n.fichier] && mine(n.sujets); }).map(function (n) { return noteHTML(n, false); })
+        .concat(POL.filter(function (n) { return !USED.n[n.pdf] && mine(n.sujets); }).map(polNoteHTML))
+        .concat(GEN.filter(function (n) { return !USED.gen[n.dossier] && mine(n.sujets || [n.sujet]); }).map(function (n) { return noteHTML(n, true); })),
+      _liv: LIV.filter(function (m) { return !USED.l[String(m.n)] && mine(m.sujets); })
+    };
+  }
+  var RT = {};   // estimated reading time per theme (minutes)
+  function readMinutes(root) {   // words a reader sees without unfolding anything, at 200 words a minute, plus 30 s per chart
+    var words = 0, ch = 0;
+    (function walk(el) {
+      if (el.nodeType === 3) { words += (el.nodeValue.match(/\S+/g) || []).length; return; }
+      if (el.nodeType !== 1 || el.hidden || /^(SCRIPT|SVG|svg|TABLE)$/.test(el.tagName)) { if (el.tagName === "TABLE") words += Math.round((el.textContent.match(/\S+/g) || []).length / 3); return; }
+      if (el.classList && el.classList.contains("vis")) { ch++; return; }
+      if (el.tagName === "DETAILS" && !el.open) { var s = el.querySelector("summary"); if (s) walk(s); return; }
+      for (var c = el.firstChild; c; c = c.nextSibling) walk(c);
+    })(root);
+    return Math.max(1, Math.round(words / 200 + ch * 0.5));
+  }
+  SECT.themes.forEach(function (T) {
+    var S = sujById[T.theme], body = $("#qb-" + T.theme); if (!S || !body) return;
+    var secs = T.sections || [];
+    var rest = Object.assign({}, T.reste || {}, leftovers(T.theme));
+    rest._liv = ((T.reste || {}).livret || []).map(function (k) { return livByN[String(k)]; }).filter(Boolean).concat(rest._liv);
+    rest._props = ids((T.reste || {}).propositions, byId).concat(rest._props);
+    var restHTML = plusHTML(rest, "Tout le reste du thème");
+    body.innerHTML = secs.map(function (q, i) { return sectionHTML(T.theme, q, i); }).join("") +
+      (restHTML ? '<section class="qsec qrest" id="q-' + T.theme + '-reste" data-q="reste" data-t="">' + restHTML + "</section>" : "");
+    $("#toc-" + T.theme).innerHTML = secs.map(function (q) {
+      return '<li><a href="#' + T.theme + "/" + esc(q.id) + '" data-route="' + T.theme + "/" + esc(q.id) + '">' + md(q.titre) + '</a><span class="hits"></span></li>'; }).join("");
+    RT[T.theme] = readMinutes(body);
+    $("#rt-" + T.theme).textContent = "Lecture : environ " + RT[T.theme] + " min · " + plural(secs.length, "section");
   });
 
   // ---------------- International: « Politiques d'ailleurs »
@@ -288,13 +356,14 @@
         '<p><a class="btn btn2" href="' + esc(BASE + "/assets/notes/" + n.pdf) + '">La note en PDF (1 page)</a></p>');
     }).join("");
     var milSrc = ids(["milburn-2026", "kickstart-2024", "garantie-jeunes-2016", "insee-neet-2026"], srcById);
-    var themes = SUJ.map(function (S) { return '<a href="#' + S.id + '/ailleurs" data-route="' + S.id + '/ailleurs">' + esc(S.titre) + "</a>"; }).join(" · ");
+    var themes = SUJ.map(function (S) { return '<a href="#' + S.id + '" data-route="' + S.id + '">' + esc(S.titre) + "</a>"; }).join(" · ");
     el.innerHTML = sec("Politiques d'ailleurs", fiches, "Fiches d'une page sur une politique étrangère : ce qu'elle propose, ce qui a été retenu, et ce que cela dit pour la France.", "s-fiches") +
       blocMilburn() +
       sec("Les sources du rapport Milburn", milSrc.map(srcHTML).join("")) +
       sec("Le dossier de recherche", dosList(ids(["12-milburn-review"], dosBySlug))) +
-      '<p class="strip">Ailleurs, thème par thème : ' + themes + "</p>";
+      '<p class="strip">Chaque thème montre, section par section, ce que font les autres pays : ' + themes + "</p>";
   })();
+
 
   // ---------------- Accueil
   (function () {
@@ -305,15 +374,14 @@
       return '<a class="tile' + (img ? " tile-img" : "") + '" href="#' + route + '" data-route="' + route + '">' + (img ? '<img src="' + esc(img) + '" alt="" loading="lazy">' : "") +
         "<b>" + esc(title) + '</b><span class="mut">' + esc(text) + "</span>" + (meta ? '<span class="tn">' + esc(meta) + "</span>" : "") + "</a>";
     };
-    var themeTiles = SUJ.map(function (S) {
-      var K = S.donnees || [], G = S.graphiques || {};
-      var np = PROPS.filter(function (p) { return any(p.sujets, S.propositions || []); }).length;
-      var ns = SRC.filter(function (s) { return any(s.sujets, K); }).length + ids(S.sources_recherche, srcById).length;
-      var ng = (G.essentiel || []).length + (G.recherche || []).length;
-      var nn = NOTES.filter(function (n) { return any(n.sujets, K); }).length + POL.filter(function (n) { return any(n.sujets, K); }).length;
-      var meta = [np ? plural(np, "proposition") : "", S.voie_pro ? "indice de risque" : "", nn ? plural(nn, "note") : "", ns ? plural(ns, "source") : "", ng ? plural(ng, "graphique") : ""].filter(Boolean).join(" · ");
-      return tile(S.id + "/essentiel", S.titre, S.intro.split(". ")[0].replace(/\.$/, "") + ".", meta);
-    }).join("") + tile("international/politiques", "International", "Ce que font les autres pays, thème par thème, et des fiches d'une page sur leurs politiques, en commençant par le rapport Milburn.",
+    var themeTiles = SECT.themes.map(function (T) {
+      var S = sujById[T.theme]; if (!S) return "";
+      var secs = T.sections || [];
+      return '<div class="ttile"><h3 class="tt"><a href="#' + S.id + '" data-route="' + S.id + '">' + esc(S.titre) + "</a></h3>" +
+        '<p class="mut">' + esc(S.intro.split(". ")[0].replace(/\.$/, "") + ".") + "</p>" +
+        '<ol class="tq">' + secs.map(function (q) { return '<li><a href="#' + S.id + "/" + esc(q.id) + '" data-route="' + S.id + "/" + esc(q.id) + '">' + md(q.titre) + "</a></li>"; }).join("") + "</ol>" +
+        '<span class="tn">' + (RT[S.id] ? "Lecture : environ " + RT[S.id] + " min" : "") + "</span></div>";
+    }).join("") + tile("international/politiques", "International", "Ce que font les autres pays, sur la carte, et des fiches d'une page sur leurs politiques, en commençant par le rapport Milburn.",
       plural((AIL.facts || []).filter(function (f) { return f.country !== "FR"; }).length, "fait vérifié", "faits vérifiés") + " hors France · " + plural(POL.length, "fiche"));
     var tools = tile("boussole", "La Boussole des formations", "De la 5e au premier emploi, les débouchés de chaque formation (Affelnet, Parcoursup, Mon Master) et ce que l'IA sait déjà faire des premiers métiers.", "Outil interactif") +
       tile("boussole/carte", "La carte des lycées pro", VP ? VP.carte.split(". ")[0] + ". Un clic sur un lycée affiche sa fiche." : "", "Outil interactif · dans la Boussole", BASE + "/assets/captures/boussole-lycees-pro-ia-chine.jpg") +
@@ -324,7 +392,7 @@
     var gh = "https://github.com/" + W.REPO;
     el.innerHTML = '<div class="intro"><p class="kick">Mis à jour le ' + esc(date) + "</p>" +
       "<h1>Propositions et données du GT Éducation</h1>" +
-      '<p class="lead">Les travaux du groupe de travail Éducation de Préparer l\'avenir et les données qui les appuient.</p></div>' +
+      '<p class="lead">Les travaux du groupe de travail Éducation de Préparer l\'avenir et les données qui les appuient. Chaque thème se lit section par section : en bref, le chiffre clé, ce que font les autres pays, nos propositions.</p></div>' +
       '<h2 class="h2">Par thème</h2><div class="grid">' + themeTiles + "</div>" +
       '<h2 class="h2">Outils interactifs</h2><div class="grid">' + tools + "</div>" +
       '<h2 class="h2">Dernières notes</h2><ul class="lst">' + last + "</ul>" +
@@ -332,8 +400,11 @@
       '<p><a class="btn btn-gen" href="' + esc(gh + "/issues/new?template=note.yml&title=" + encodeURIComponent("[note] ")) + '" target="_blank" rel="noopener">Générer un brouillon</a></p>' +
       '<p class="note-src">Recherche sourcée, chiffres vérifiés à la source, note au format du GT (Word et PDF). Brouillon non relu ; génération réservée aux membres autorisés du dépôt.</p>' +
       '<p><a href="' + esc(BASE + "/assets/modele/modele-note.docx") + '">Modèle Word</a> · <a href="' + esc(BASE + "/assets/modele/modele-note.md") + '">Modèle texte</a> : En bref, constat chiffré, analyse, position du programme, propositions, argumentaire, mise en œuvre, références. Une à deux pages ; jamais de chiffre ni de position du candidat inventés.</p>' +
-      '<p class="note-src">Dans « Recherche et données », le bouton « Copier » de chaque fiche de source copie son chiffre clé et sa référence. Une erreur ? <a href="' + esc(gh + "/issues/new?template=feedback.yml") + '" target="_blank" rel="noopener">Signaler une correction</a>.</p></section>';
+      '<p class="note-src">Dans « Pour aller plus loin », le bouton « Copier » de chaque fiche de source copie son chiffre clé et sa référence. Une erreur ? <a href="' + esc(gh + "/issues/new?template=feedback.yml") + '" target="_blank" rel="noopener">Signaler une correction</a>.</p></section>';
   })();
+
+  // links to cards that are not shown anywhere become plain text
+  $$("a.tocard").forEach(function (a) { if (!document.getElementById("p-" + a.getAttribute("data-card"))) { var t = document.createElement("span"); t.innerHTML = a.innerHTML; a.parentNode.replaceChild(t, a); } });
 
   // links to cards that are not shown anywhere (e.g. the IA note's own proposals) become plain text
   $$("a.tocard").forEach(function (a) { if (!document.getElementById("p-" + a.getAttribute("data-card"))) { var t = document.createElement("span"); t.innerHTML = a.innerHTML; a.parentNode.replaceChild(t, a); } });
@@ -373,7 +444,7 @@
   W.__chartSpec = function (id) { return spec(gById[id]); };
   function drawCharts(root) {
     $$(".vis[data-chart]", root).forEach(function (el) {
-      if (el.getAttribute("data-done")) return;
+      if (el.getAttribute("data-done") || el.closest("details:not([open])") || el.closest("[hidden]")) return;
       el.setAttribute("data-done", "1");
       var g = gById[el.getAttribute("data-chart")];
       if (typeof W.vegaEmbed !== "function") { el.innerHTML = '<p class="empty">Graphique indisponible (bibliothèque non chargée) : voir les données ci-dessous.</p>'; return; }
@@ -381,12 +452,14 @@
     });
   }
 
+
   // ---------------- navigation
+  // routes: "<theme>[/<section id>|/reste]", "international/<carte[/<map theme>[/<country>]]|politiques>", "boussole[/<anchor>]", "accueil[/rediger]"
   var tabs = $$("#tabs .tab");
   var CUR = { topic: null, sub: {} };
   var topOffset = function () { return ((document.querySelector("header.top") || {}).offsetHeight || 0) + (($("#tabs") || {}).offsetHeight || 0); };
   function scrollToEl(el) { if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - topOffset() - 8); }
-  function show(topic, sub, extra) {
+  function show(topic, sub, extra, extra2) {
     var subs = subsOf(topic);
     if (subs) {
       if (!subs.some(function (s) { return s[0] === sub; })) sub = CUR.sub[topic] || subs[0][0];
@@ -395,23 +468,30 @@
     CUR.topic = topic;
     tabs.forEach(function (t) { var on = t.id === "t-" + topic; t.setAttribute("aria-selected", String(on)); t.tabIndex = on ? 0 : -1; $("#" + t.getAttribute("aria-controls")).hidden = !on; });
     if (topic === "boussole") { loadBoussole(sub); return; }
+    if (sujById[topic]) { drawCharts($("#p-" + topic)); return; }
     if (!subs) return;
     var panel = $("#p-" + topic);
     $$(".subtab", panel).forEach(function (b) { var on = b.getAttribute("data-sub") === sub; b.setAttribute("aria-selected", String(on)); b.tabIndex = on ? 0 : -1; });
     $$(".subpanel", panel).forEach(function (p) { p.hidden = p.getAttribute("data-sub") !== sub; });
-    if (topic === "international" && sub === "carte") loadComparaisons(extra);
+    if (topic === "international" && sub === "carte") loadComparaisons(extra, extra2);
     drawCharts($("#sp-" + topic + "-" + sub));
   }
-  // route: "topic[/sub[/extra]]". extra = a section id to scroll to, or the map theme for international/carte; for the Boussole, sub = anchor in the frame
   function go(route, replace) {
     var parts = route.split("/"), topic = parts[0], sub = parts[1], extra = parts[2];
     if (!$("#t-" + topic)) topic = "accueil";
-    show(topic, sub, extra);
-    var h = "#" + topic + (topic === "boussole" ? (sub ? "/" + sub : "") : subsOf(topic) ? "/" + CUR.sub[topic] + (extra ? "/" + extra : "") : (sub ? "/" + sub : ""));
+    show(topic, sub, extra, parts[3]);
+    var target = null, h;
+    if (sujById[topic]) {
+      target = sub ? document.getElementById("q-" + topic + "-" + sub) : null;
+      h = "#" + topic + (target ? "/" + sub : "");
+      if (target) { var dd = $("details.more", target); if (sub === "reste" && dd) dd.open = true; }
+    } else if (topic === "boussole") h = "#boussole" + (sub ? "/" + sub : "");
+    else if (subsOf(topic)) h = "#" + topic + "/" + CUR.sub[topic] + (extra ? "/" + extra + (parts[3] ? "/" + parts[3] : "") : "");
+    else { h = "#" + topic + (sub ? "/" + sub : ""); if (topic === "accueil" && sub) target = document.getElementById(sub); }
     if (location.hash !== h) history[replace ? "replaceState" : "pushState"](null, "", h);
     if (topic === "boussole" && sub) return;   // the frame scrolls itself to the anchor
-    var target = topic === "accueil" && sub ? document.getElementById(sub) : extra && subsOf(topic) && topic !== "international" ? $('[data-sec="' + extra.replace(/"/g, "") + '"]', $("#sp-" + topic + "-" + CUR.sub[topic])) : null;
     if (target) scrollToEl(target); else window.scrollTo(0, 0);
+    drawCharts(target || $("#p-" + topic));
   }
   tabs.forEach(function (t) { t.addEventListener("click", function () { go(t.id.slice(2)); }); });
   $$(".subtab").forEach(function (b) { b.addEventListener("click", function () { go(b.closest(".panel").id.slice(2) + "/" + b.getAttribute("data-sub")); }); });
@@ -431,6 +511,8 @@
     var c = e.target.closest && e.target.closest("a.tocard, a.perma");
     if (c) { e.preventDefault(); openCard(c.getAttribute("data-card")); }
   });
+  // charts inside a folded block are drawn when it opens
+  document.addEventListener("toggle", function (e) { if (e.target.open) drawCharts(e.target); }, true);
 
   // ---------------- Boussole embedded (same origin: the frame takes the height of its content)
   var bf = $("#bframe");
@@ -461,13 +543,16 @@
   }
 
   // ---------------- Comparaisons internationales embedded (same origin: fit the frame to its content; a map theme can be preset)
-  var cf = $("#cframe"), cTheme = null;
+  var cf = $("#cframe"), cTheme = null, cPays = null;
   function cfit() { try { var d = cf.contentDocument; if (d && d.body) cf.style.height = Math.max(d.documentElement.scrollHeight, d.body.scrollHeight, 700) + "px"; } catch (e) { /* keep CSS height */ } }
   function cpreset() { try { var b = cTheme && cf.contentDocument.getElementById("tab-" + cTheme); if (b && b.getAttribute("aria-selected") !== "true") b.click(); } catch (e) { /* ignore */ } }
-  function loadComparaisons(theme) {
+  function loadComparaisons(theme, pays) {
     if (!cf) return;
     cTheme = mapTheme[theme] ? theme : null;
+    var p = pays && (AIL.countries || {})[pays] ? pays : null;
+    if (cf.getAttribute("src") && p && p !== cPays) { cPays = p; cf.setAttribute("src", cf.getAttribute("data-src") + "?p=" + p + "#theme=" + (cTheme || "temps") + "&pays=" + p); return; }
     if (cf.getAttribute("src")) { cpreset(); cfit(); return; }
+    cPays = p;
     cf.addEventListener("load", function () {
       cfit(); cpreset();
       try { var d = cf.contentDocument;
@@ -475,7 +560,7 @@
         d.addEventListener("click", function () { setTimeout(cfit, 50); setTimeout(cfit, 400); });
       } catch (e) { /* ignore */ }
     });
-    cf.setAttribute("src", cf.getAttribute("data-src") + (cTheme ? "#theme=" + cTheme : ""));
+    cf.setAttribute("src", cf.getAttribute("data-src") + (cTheme || p ? "#theme=" + (cTheme || "temps") + (p ? "&pays=" + p : "") : ""));
   }
 
   // ---------------- copy buttons
@@ -488,8 +573,9 @@
     else window.prompt("Copier :", txt);
   });
 
-  // ---------------- search across every tab and sub-tab (and the text of the research files)
-  var Q = "", RIDX = null, loading = false;
+
+  // ---------------- search across every tab (and the text of the research files); jumps to the section that holds the first hit
+  var Q = "", RIDX = null, loading = false, lastJump = "";
   function loadIndex() {
     if (RIDX || loading || typeof fetch !== "function") return;
     loading = true;
@@ -498,20 +584,36 @@
     }).catch(function () { loading = false; });
   }
   function apply() {
-    var hits = {}, subHits = {};
+    var hits = {}, secHits = {};
     $$(".s-item").forEach(function (el) {
       var ok = !Q || norm(el.getAttribute("data-s") + " " + el.textContent).indexOf(Q) >= 0;
       el.hidden = !ok;
       if (ok) {
-        var p = el.closest(".panel"), sp = el.closest(".subpanel");
+        var p = el.closest(".panel"), s = el.closest(".qsec");
         if (p) hits[p.id.slice(2)] = (hits[p.id.slice(2)] || 0) + 1;
-        if (sp) subHits[sp.id] = (subHits[sp.id] || 0) + 1;
+        if (s) secHits[s.id] = (secHits[s.id] || 0) + 1;
       }
     });
-    $$(".hsec").forEach(function (s) { var it = $$(".s-item", s); s.hidden = !!Q && it.length > 0 && it.every(function (i) { return i.hidden; }); });
+    // a section whose title matches counts as a hit and shows everything
+    $$(".qsec").forEach(function (s) {
+      var tm = !!Q && !!s.getAttribute("data-t") && s.getAttribute("data-t").indexOf(Q) >= 0;
+      if (tm) { $$(".s-item", s).forEach(function (i) { i.hidden = false; }); secHits[s.id] = Math.max(secHits[s.id] || 0, 1); var p = s.closest(".panel").id.slice(2); hits[p] = (hits[p] || 0) + 1; }
+      s.hidden = !!Q && !secHits[s.id];
+    });
+    $$(".hsec, .qblk").forEach(function (s) { var it = $$(".s-item", s); s.hidden = !!Q && it.length > 0 && it.every(function (i) { return i.hidden; }); });
+    // unfold « Pour aller plus loin » / « Tout le reste » when they hold a hit, fold them back afterwards
+    $$("details.more").forEach(function (d) {
+      var has = !!Q && $$(".s-item", d).some(function (i) { return !i.hidden; });
+      if (has && !d.open) { d.open = true; d.setAttribute("data-sopen", "1"); }
+      else if (!Q && d.getAttribute("data-sopen")) { d.open = false; d.removeAttribute("data-sopen"); }
+    });
+    $$(".toc li").forEach(function (li) {
+      var a = $("a", li), id = "q-" + a.getAttribute("data-route").replace("/", "-"), n = secHits[id] || 0;
+      $(".hits", li).textContent = Q ? " " + n : ""; li.classList.toggle("nohit", !!Q && !n);
+    });
     tabs.forEach(function (t) { var k = t.id.slice(2); $(".hits", t).textContent = Q && k !== "accueil" ? " " + (hits[k] || 0) : ""; t.classList.toggle("nohit", !!Q && !hits[k]); });
     $$(".subtab").forEach(function (b) {
-      var id = "sp-" + b.closest(".panel").id.slice(2) + "-" + b.getAttribute("data-sub"), n = subHits[id] || 0;
+      var sp = $("#sp-" + b.closest(".panel").id.slice(2) + "-" + b.getAttribute("data-sub")), n = sp ? $$(".s-item", sp).filter(function (i) { return !i.hidden; }).length : 0;
       $(".hits", b).textContent = Q ? " " + n : ""; b.classList.toggle("nohit", !!Q && !n);
     });
     var total = Object.keys(hits).reduce(function (a, k) { return a + hits[k]; }, 0);
@@ -524,38 +626,48 @@
       }).join("") + "</ul>" : "";
     } else dh.innerHTML = "";
     $("#gres").hidden = !Q;
-    $("#gcount").textContent = Q ? total + " résultat" + (total > 1 ? "s" : "") + " pour « " + $("#gq").value.trim() + " » (nombre à côté de chaque onglet et sous-onglet)" + (nd ? ", et " + nd + " dossier" + (nd > 1 ? "s" : "") + " de recherche ci-dessous." : ".") : "";
-    if (Q && total) {   // stay where results are
+    $("#gcount").textContent = Q ? total + " résultat" + (total > 1 ? "s" : "") + " pour « " + $("#gq").value.trim() + " » (nombre à côté de chaque onglet et de chaque section)" + (nd ? ", et " + nd + " dossier" + (nd > 1 ? "s" : "") + " de recherche ci-dessous." : ".") : "";
+    if (Q && total) {   // go where the results are, and to the first section that holds one
       var topic = CUR.topic;
       if (!hits[topic]) topic = tabs.map(function (t) { return t.id.slice(2); }).filter(function (k) { return hits[k]; })[0];
       var subs = subsOf(topic);
       if (subs) {
-        var sub = CUR.sub[topic] || subs[0][0];
-        if (!subHits["sp-" + topic + "-" + sub]) sub = subs.map(function (s) { return s[0]; }).filter(function (k) { return subHits["sp-" + topic + "-" + k]; })[0] || sub;
+        var sub = CUR.sub[topic] || subs[0][0], cnt = function (k) { var sp = $("#sp-" + topic + "-" + k); return sp && $$(".s-item", sp).some(function (i) { return !i.hidden; }); };
+        if (!cnt(sub)) sub = subs.map(function (s) { return s[0]; }).filter(cnt)[0] || sub;
         show(topic, sub);
       } else if (topic) show(topic);
-    }
+      var first = sujById[topic] ? $$(".qsec", $("#p-" + topic)).filter(function (s) { return !s.hidden; })[0] : null;
+      var key = topic + "|" + (first ? first.id : "");
+      if (key !== lastJump) { lastJump = key; if (first) scrollToEl(first); else window.scrollTo(0, 0); }
+    } else lastJump = "";
+    drawCharts($("#p-" + CUR.topic));
     return total;
   }
   function clearSearch() { if (Q) { Q = ""; $("#gq").value = ""; apply(); } }
   var timer;
-  $("#gq").addEventListener("input", function (e) { clearTimeout(timer); timer = setTimeout(function () { Q = norm(e.target.value.trim()); if (Q) loadIndex(); apply(); }, 150); });
+  $("#gq").addEventListener("input", function (e) { clearTimeout(timer); timer = setTimeout(function () { Q = norm(e.target.value.trim()); if (Q) loadIndex(); apply(); }, 200); });
 
   // ---------------- deep links (and the routes of the former site)
   var LEGACY = {
-    "ia": "orientation/essentiel", "ia/synthese": "orientation/essentiel/s-note-ia", "ia/milburn": "international/politiques",
-    "ia/masters": "orientation/recherche/s-masters", "ia/comms": "orientation/recherche/s-comms", "ia/sources": "orientation/recherche/s-sources",
-    "handicap/synthese": "handicap/essentiel", "handicap/handicap": "handicap/recherche/s-handicap", "handicap/sante": "handicap/recherche/s-sante-mentale-et-ecrans", "handicap/sources": "handicap/recherche/s-sources",
-    "orientation/synthese": "orientation/essentiel", "orientation/sources": "orientation/recherche/s-sources",
-    "gouvernance": "ecole/essentiel", "gouvernance/synthese": "ecole/essentiel", "gouvernance/recherche": "ecole/recherche", "gouvernance/sources": "ecole/recherche/s-sources",
+    "ia": "orientation/ia", "ia/synthese": "orientation/ia", "ia/milburn": "international/politiques", "ia/masters": "orientation/bac", "ia/comms": "orientation/reste", "ia/sources": "orientation",
+    "handicap/synthese": "handicap", "handicap/handicap": "handicap/handicap", "handicap/sante": "handicap/sante-mentale", "handicap/sources": "handicap",
+    "orientation/synthese": "orientation", "orientation/sources": "orientation",
+    "gouvernance": "ecole/decider", "gouvernance/synthese": "ecole/decider", "gouvernance/recherche": "ecole/decider", "gouvernance/sources": "ecole/decider",
     "comparaisons": "international/carte",
-    "emploi": "orientation", "inclusion": "handicap", "ecrans": "handicap", "formation": "ecole", "preuves": "orientation/recherche/s-sources", "carte": "boussole/carte"
+    "emploi": "orientation/ia", "inclusion": "handicap/handicap", "ecrans": "handicap/ecrans", "formation": "ecole/temps", "preuves": "orientation", "carte": "boussole/carte"
   };
+  // the three former sub-tabs of each theme, and the section ids that could follow them
+  var OLDSUB = { essentiel: 1, recherche: 1, ailleurs: 1, synthese: 1, sources: 1 };
+  var OLDSEC = { "s-note-ia": "orientation/ia", "s-masters": "orientation/bac", "s-masters-et-premier-emploi": "orientation/bac", "s-comms": "orientation/reste",
+    "s-handicap": "handicap/handicap", "s-sante-mentale-et-ecrans": "handicap/sante-mentale", "s-indice": "voiepro/filieres", "s-methode": "voiepro/filieres", "s-milburn": "international/politiques" };
   function openCard(id) {
     var d = document.getElementById("p-" + id); if (!d) return;
     clearSearch();
-    var sp = d.closest(".subpanel");
-    go(sp.getAttribute("data-topic") + "/" + sp.getAttribute("data-sub"));
+    var p = d.closest(".panel"), sp = d.closest(".subpanel"), q = d.closest(".qsec");
+    if (sp) show(sp.getAttribute("data-topic"), sp.getAttribute("data-sub")); else show(p.id.slice(2));
+    for (var e = d.parentNode; e && e !== document; e = e.parentNode) if (e.tagName === "DETAILS") e.open = true;
+    var h = "#" + p.id.slice(2) + (q ? "/" + q.getAttribute("data-q") : "");
+    if (location.hash !== h && location.hash !== "#p-" + id) history.replaceState(null, "", h);
     d.open = true; scrollToEl(d); d.classList.add("flash"); setTimeout(function () { d.classList.remove("flash"); }, 1600);
   }
   function route() {
@@ -565,6 +677,8 @@
     if (LEGACY[h]) h = LEGACY[h];
     else if (LEGACY[p[0] + "/" + p[1]]) h = LEGACY[p[0] + "/" + p[1]];
     else if (LEGACY[p[0]] && !$("#t-" + p[0])) h = LEGACY[p[0]] + (p[1] ? "/" + p.slice(1).join("/") : "");
+    p = h.split("/");
+    if (sujById[p[0]] && OLDSUB[p[1]]) h = p[2] && OLDSEC[p[2]] ? OLDSEC[p[2]] : p[0];
     go(h || "accueil", true);
   }
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
