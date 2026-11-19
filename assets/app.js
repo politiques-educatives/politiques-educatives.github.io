@@ -322,7 +322,7 @@
       NOTES.map(function (n) { return '<li><a href="' + esc(BASE + "/assets/notes/" + n.fichier) + '">' + esc(n.titre) + '</a> <span class="mut">' + esc(n.date) + " · PDF</span></li>"; }).join("") +
       GEN.map(function (n) { var pdf = n.pdf || (n.dossier ? n.dossier + "/note.pdf" : ""); return "<li>" + (pdf ? '<a href="' + esc(fileUrl(pdf)) + '">' + esc(n.titre) + "</a>" : esc(n.titre)) + ' <span class="mut">' + esc(frDate(n.date)) + " · brouillon généré, non relu</span></li>"; }).join("");
     var gh = "https://github.com/" + W.REPO;
-    el.innerHTML = '<div class="intro"><p class="kick">Mis à jour le ' + esc(date) + " · document de travail, propositions non arbitrées</p>" +
+    el.innerHTML = '<div class="intro"><p class="kick">Mis à jour le ' + esc(date) + "</p>" +
       "<h1>Propositions et données du GT Éducation</h1>" +
       '<p class="lead">Les travaux du groupe de travail Éducation de Préparer l\'avenir et les données qui les appuient.</p></div>' +
       '<h2 class="h2">Par thème</h2><div class="grid">' + themeTiles + "</div>" +
