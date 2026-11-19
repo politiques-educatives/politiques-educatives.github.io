@@ -240,3 +240,4 @@ ul.vids{padding-left:18px}ul.vids li{margin-bottom:6px}
 /* sticky header and tab bar, so the topics stay reachable (also inside the Boussole) */
 header.top{position:sticky;top:0;z-index:60}
 #tabs{position:sticky;top:var(--toph,64px);z-index:55;background:var(--bg);margin-top:0;padding-top:8px}
+#cframe{height:1200px;min-height:700px}

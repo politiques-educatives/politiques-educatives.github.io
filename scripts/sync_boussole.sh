@@ -14,3 +14,6 @@ for f in "$SRC"/*.js; do [ -e "$f" ] && cp "$f" "$DEST/"; done
 # the old version (v1/) is not hosted here: point its link to the original site
 sed -i.bak 's#href="v1/"#href="https://ajoly35.github.io/tuteur-ia/boussole/v1/"#' "$DEST/index.html" && rm -f "$DEST/index.html.bak"
 ls "$DEST"
+# International comparison map (source: ../site/comparaisons/)
+CSRC="$HERE/../site/comparaisons"
+if [ -f "$CSRC/index.html" ]; then mkdir -p "$HERE/comparaisons"; cp "$CSRC/index.html" "$CSRC/comparaisons.js" "$HERE/comparaisons/"; ls "$HERE/comparaisons"; fi

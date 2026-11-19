@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="tabs" role="tablist" id="tabs">
   {% for s in site.data.sujets %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-{{ s.id }}" id="t-{{ s.id }}">{{ s.court }}<span class="hits"></span></button>
-  {% endfor %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button>
+  {% endfor %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button><button class="tab" role="tab" aria-selected="false" aria-controls="p-comparaisons" id="t-comparaisons">Comparaisons internationales<span class="hits"></span></button>
 </div>
 <div class="gres" id="gres" hidden><p class="gcount" id="gcount"></p><div id="dossier-hits"></div></div>
 
@@ -32,6 +32,11 @@ layout: default
 <section class="panel" id="p-boussole" role="tabpanel" aria-labelledby="t-boussole" hidden>
   <p class="bintro s-item" data-s="Boussole formations Parcoursup InserSup orientation IA Chine importations industrie zone d'emploi lycée professionnel carte bac pro">La Boussole des formations, prototype du GT : de la 4e au premier emploi, l'emploi et le salaire de chaque formation, ce que l'IA sait déjà faire des premiers métiers et, pour les filières industrielles, l'exposition à la concurrence des importations chinoises (2018-2024). Descriptif, pas une prévision. <a href="#boussole/carte" data-route="boussole/carte">Carte des lycées pro</a> · <a href="{{ '/boussole/' | relative_url }}" target="_blank" rel="noopener">Plein écran</a></p>
   <iframe class="bframe" id="bframe" title="Boussole des formations" data-src="{{ '/boussole/' | relative_url }}" scrolling="no"></iframe>
+</section>
+
+<section class="panel" id="p-comparaisons" role="tabpanel" aria-labelledby="t-comparaisons" hidden>
+  <p class="bintro s-item" data-s="comparaisons internationales carte pays Angleterre Écosse Allemagne Finlande Irlande Pays-Bas formation des enseignants orientation apprentissage gouvernance">Clique sur un pays pour voir comment il organise le temps des professeurs, la gouvernance, l'orientation, les secondes chances dans le supérieur et l'apprentissage, avec chaque chiffre sourcé et ce que nous proposons pour la France. <a href="{{ '/comparaisons/' | relative_url }}" target="_blank" rel="noopener">Plein écran</a></p>
+  <iframe class="bframe" id="cframe" title="Comparaisons internationales" data-src="{{ '/comparaisons/' | relative_url }}"></iframe>
 </section>
 
 <script>

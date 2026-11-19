@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ailleurs, comment font-ils ? Comparaisons internationales</title>
+<meta name="description" content="Carte des comparaisons internationales du GT Éducation : temps des enseignants, gouvernance, orientation, supérieur, apprentissage. Chaque chiffre avec sa source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Same palette and fonts as the Boussole (site/boussole-pipeline/index.html) so the two pages can link to each other. */
+:root {
+  --bg: #f3f5fa; --card: #ffffff; --ink: #171f36; --ink-2: #49536f; --ink-3: #6b7491; --rule: #dce1ec;
+  --accent: #2f46c9; --accent-ink: #ffffff; --accent-soft: #e7eafb; --tile: #f6f7fc;
+  --land: #d9dde8; --nodata: #eceef4;
+  --s1: #c9d1f8; --s2: #a2b0f0; --s3: #8293e6; --s4: #4f63d3; --s5: #2a3aa6;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #11152a; --card: #1a2038; --ink: #edf0fa; --ink-2: #bcc3dc; --ink-3: #9aa3c0; --rule: #2c3454;
+  --accent: #8c9bff; --accent-ink: #11152a; --accent-soft: #252d52; --tile: #141a30;
+  --land: #2a3150; --nodata: #222944;
+  --s1: #2c3870; --s2: #3d4ea0; --s3: #5a6dcc; --s4: #8696f0; --s5: #c3cbff; color-scheme: dark; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.5; padding: 24px 16px 64px; }
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 22px; }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.05; font-weight: 800; }
+h2 { font-size: 22px; font-weight: 800; }
+h3 { font-size: 17px; font-weight: 600; }
+p { margin: 0; }
+a { color: var(--accent); }
+.tag { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.lead { font-size: 19px; color: var(--ink-2); max-width: 66ch; }
+.small { font-size: 14px; color: var(--ink-3); }
+header { display: grid; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tabs button, .seg button, .subtabs button, .offmap button {
+  font: inherit; font-size: 15px; border: 1px solid var(--rule); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 8px 14px; cursor: pointer; min-height: 40px; }
+.tabs button[aria-selected="true"], .seg button[aria-pressed="true"], .subtabs button[aria-selected="true"] {
+  background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+.seg { display: inline-flex; gap: 6px; }
+label.sel { display: flex; gap: 8px; align-items: center; font-size: 15px; flex-wrap: wrap; }
+label.sel select { flex: 1 1 220px; min-width: 0; width: 100%; }
+.mapbox > * { min-width: 0; }
+select { font: inherit; font-size: 15px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); max-width: 100%; }
+
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 440px); gap: 18px; align-items: start; }
+@media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+.wrap > *, .layout > * { min-width: 0; }
+.mapbox { display: grid; gap: 10px; }
+#map { width: 100%; height: auto; max-height: 640px; display: block; background: var(--tile); border-radius: 10px; }
+#map path { stroke: var(--card); stroke-width: 0.7; stroke-linejoin: round; }
+#map path.ctx { fill: var(--land); }
+#map path.hit { cursor: pointer; }
+#map path.hit:hover { stroke: var(--ink); stroke-width: 1.4; }
+#map path.on { stroke: var(--ink); stroke-width: 2.2; }
+#map path:focus { outline: none; }
+#map path:focus-visible { stroke: var(--accent); stroke-width: 3; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 13px; color: var(--ink-2); }
+.legend span { display: inline-flex; gap: 5px; align-items: center; }
+.legend i.nd, .offmap i.nd { background: repeating-linear-gradient(45deg, var(--nodata) 0 3px, var(--land) 3px 5px) !important; }
+.legend i { width: 22px; height: 12px; display: inline-block; border-radius: 3px; border: 1px solid var(--rule); }
+.offmap { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.offmap button { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; padding: 6px 12px; min-height: 36px; }
+.offmap button i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; border: 1px solid var(--rule); }
+.offmap button.on { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+
+#panel { display: grid; gap: 12px; position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow: auto; }
+@media (max-width: 860px) { #panel { position: static; max-height: none; } }
+.subtabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.subtabs button { font-size: 14px; padding: 5px 11px; min-height: 34px; }
+.facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.facts li { border-left: 3px solid var(--accent); padding: 2px 0 2px 10px; }
+.src { display: block; font-size: 13px; color: var(--ink-3); margin-top: 2px; }
+.box { background: var(--tile); border-radius: 10px; padding: 10px 12px; display: grid; gap: 6px; font-size: 15px; }
+.box h3 { font-size: 15px; }
+.prop { display: grid; gap: 2px; }
+.badge { display: inline-block; font-size: 12px; font-weight: 700; background: var(--accent-soft); color: var(--ink); border-radius: 999px; padding: 1px 8px; margin-left: 4px; }
+.empty { color: var(--ink-2); font-style: italic; }
+details summary { cursor: pointer; color: var(--accent); font-size: 15px; }
+
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 7px 8px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+thead th { font-family: var(--display); font-size: 14px; position: sticky; top: 0; background: var(--card); }
+td.num { white-space: nowrap; }
+button.link { font: inherit; background: none; border: 0; color: var(--accent); text-decoration: underline; cursor: pointer; padding: 0; text-align: left; }
+.method { display: grid; gap: 10px; font-size: 15px; color: var(--ink-2); }
+.method ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="tag">Préparer l'avenir · GT Éducation · novembre 2026</p>
+    <h1>Ailleurs, comment font-ils ?</h1>
+    <p class="lead">Temps des enseignants, gouvernance des établissements, orientation, secondes chances dans le supérieur, apprentissage : ce que font les autres pays, chiffres et sources à l'appui, et ce que nous proposons pour la France.</p>
+    <p class="small">Cliquez sur un pays de la carte, ou choisissez-en un dans la liste « Hors carte ». Chaque fait vient d'un dossier vérifié du groupe ; rien n'est ajouté de mémoire.</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Thèmes" id="themes"></nav>
+
+  <section class="card" aria-labelledby="view-title">
+    <div class="bar">
+      <h2 id="view-title">Carte</h2>
+      <div class="seg" role="group" aria-label="Affichage">
+        <button type="button" id="btn-map" aria-pressed="true">Carte</button>
+        <button type="button" id="btn-table" aria-pressed="false">Tableau</button>
+      </div>
+    </div>
+
+    <div id="view-map" class="layout" style="margin-top:14px">
+      <div class="mapbox">
+        <label class="sel" for="color-by">Colorer la carte selon <select id="color-by"></select></label>
+        <svg id="map" role="group" aria-label="Carte de l'Europe : pays cliquables"></svg>
+        <div class="legend" id="legend" aria-live="polite"></div>
+        <div class="offmap" id="offmap"><span class="small">Hors carte :</span></div>
+        <p class="small" id="map-source"></p>
+        <p class="small">Fond de carte : Natural Earth 1:50m (domaine public), Angleterre, Écosse, pays de Galles et Irlande du Nord séparés.</p>
+      </div>
+      <aside id="panel" class="card" aria-live="polite" aria-label="Fiche pays"></aside>
+    </div>
+
+    <div id="view-table" hidden style="margin-top:14px; display:grid; gap:10px">
+      <p class="small">Indicateurs chiffrés comparables, pays par pays. Une case vide veut dire : pas encore documenté. Cliquez sur un pays pour ouvrir sa fiche.</p>
+      <div class="tablewrap"><table id="table"></table></div>
+    </div>
+  </section>
+
+  <section class="card method" aria-labelledby="method-title">
+    <h2 id="method-title">Sources et méthode</h2>
+    <ul>
+      <li><strong>D'où viennent les faits.</strong> Des notes 1 à 3 du GT Éducation et des dossiers de recherche du projet (temps et formation des enseignants, gouvernance anglaise, inspection, orientation, rapport Milburn, calendrier de la formation, vérification des idées sur l'orientation et l'apprentissage, IA et embauches des jeunes). Chaque fait reprend le chiffre tel qu'il est écrit dans son fichier, avec sa source (auteur ou institution, année, lien quand il existe).</li>
+      <li><strong>Ce qui est exclu.</strong> Tout ce que les dossiers marquent « non vérifié », « à vérifier » ou UNVERIFIED. Quand un pays n'a pas de fait vérifié sur un thème, la fiche le dit : « Pas encore documenté ».</li>
+      <li><strong>Contrôle automatique.</strong> Le script de construction vérifie, pour chaque fait, que l'extrait cité figure toujours mot pour mot dans le fichier source ; sinon la page n'est pas reconstruite.</li>
+      <li><strong>Les couleurs.</strong> La carte n'est colorée que par des indicateurs mesurés de la même façon dans plusieurs pays. Les écarts de définition sont dans les libellés (par exemple : âge de sortie des études en 2009, dernière année Eurostat disponible). Sinon, la carte montre le nombre de faits documentés.</li>
+      <li><strong>Prudence.</strong> Beaucoup de chiffres sont descriptifs ; seuls les résultats d'essais ou de quasi-expériences, signalés comme tels, mesurent un effet.</li>
+    </ul>
+    <p class="small" id="build-info"></p>
+  </section>
+</div>
+
+<script src="comparaisons.js"></script>
+<script>
+(function () {
+  const D = window.COMPARAISONS;
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const STEPS = ["--s1", "--s2", "--s3", "--s4", "--s5"];
+  const MAX_SHOWN = 6;
+  const state = { theme: "temps", colorBy: null, country: "FR", sub: null, view: "map" };
+  const factsById = Object.fromEntries(D.facts.map(f => [f.id, f]));
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fmt = v => String(v).replace(".", ",");
+  const groupOf = k => D.countries[k].group;
+  const membersOf = g => Object.keys(D.countries).filter(k => D.countries[k].group === g);
+  const groupName = g => D.groupNames[g] || D.countries[g].name;
+
+  /* ---------- theme tabs ---------- */
+  const themesEl = document.getElementById("themes");
+  D.themes.forEach(t => {
+    const b = document.createElement("button");
+    b.type = "button"; b.setAttribute("role", "tab"); b.id = "tab-" + t.key; b.textContent = t.short;
+    b.title = t.label;
+    b.addEventListener("click", () => setTheme(t.key));
+    b.addEventListener("keydown", e => {
+      const i = D.themes.findIndex(x => x.key === state.theme);
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        const n = D.themes[(i + (e.key === "ArrowRight" ? 1 : D.themes.length - 1)) % D.themes.length];
+        setTheme(n.key); document.getElementById("tab-" + n.key).focus(); e.preventDefault();
+      }
+    });
+    themesEl.appendChild(b);
+  });
+
+  /* ---------- map ---------- */
+  const svg = document.getElementById("map");
+  svg.setAttribute("viewBox", D.geo.viewBox);
+  svg.innerHTML = `<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" style="fill:var(--nodata)"/><line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--land);stroke-width:3"/></pattern></defs>`;
+  const pathsByKey = {};
+  D.geo.paths.forEach(p => {
+    const el = document.createElementNS(SVGNS, "path");
+    el.setAttribute("d", p.d);
+    if (!p.key) { el.setAttribute("class", "ctx"); el.setAttribute("aria-hidden", "true"); }
+    else {
+      el.setAttribute("class", "hit"); el.setAttribute("tabindex", "0"); el.setAttribute("role", "button");
+      el.dataset.key = p.key;
+      const t = document.createElementNS(SVGNS, "title"); el.appendChild(t);
+      el.addEventListener("click", () => select(p.key));
+      el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { select(p.key); e.preventDefault(); } });
+      pathsByKey[p.key] = el;
+    }
+    svg.appendChild(el);
+  });
+  // ctx paths first so country outlines sit on top
+  [...svg.querySelectorAll("path.hit")].forEach(el => svg.appendChild(el));
+
+  const offmapEl = document.getElementById("offmap");
+  const offKeys = Object.keys(D.countries).filter(k => D.countries[k].group === k && !membersOf(k).some(m => D.countries[m].map));
+  const offBtns = {};
+  offKeys.forEach(k => {
+    const b = document.createElement("button");
+    b.type = "button"; b.innerHTML = "<i></i>" + esc(D.countries[k].name);
+    b.addEventListener("click", () => select(k));
+    offmapEl.appendChild(b); offBtns[k] = b;
+  });
+
+  /* ---------- colour ---------- */
+  const countFacts = (k, theme) => D.facts.filter(f => f.theme === theme && (f.country === k || (groupOf(k) === "UK" && k !== "UK" && f.country === "UK"))).length;
+  function valueFor(k) {
+    if (state.colorBy === "count") return countFacts(k, state.theme);
+    const vals = D.indicators[state.colorBy].values;
+    if (vals[k]) return vals[k].value;
+    if (groupOf(k) === "UK" && vals.UK) return vals.UK.value;
+    return null;
+  }
+  function binner() {
+    if (state.colorBy === "count") {
+      const edges = [1, 3, 6, 11];
+      return { bin: v => (!v ? -1 : edges.filter(e => v >= e).length - 1), labels: ["1 à 2", "3 à 5", "6 à 10", "11 et plus"], first: 0 };
+    }
+    const vs = Object.values(D.indicators[state.colorBy].values).map(x => x.value);
+    const lo = Math.min(...vs), hi = Math.max(...vs);
+    return { bin: v => (v === null ? -1 : hi === lo ? 2 : Math.min(4, Math.floor((v - lo) / (hi - lo) * 5))), lo, hi };
+  }
+  const colourOf = i => (i < 0 ? "url(#hatch)" : `var(${STEPS[i + (state.colorBy === "count" ? 1 : 0)] || STEPS[4]})`);
+
+  function paint() {
+    const b = binner();
+    const unit = state.colorBy === "count" ? "" : " " + D.indicators[state.colorBy].unit;
+    Object.entries(pathsByKey).forEach(([k, el]) => {
+      const v = valueFor(k);
+      el.style.fill = colourOf(b.bin(v));
+      const name = D.countries[k].name;
+      const txt = state.colorBy === "count" ? `${name} : ${v} fait${v > 1 ? "s" : ""} documenté${v > 1 ? "s" : ""}` : `${name} : ${v === null ? "pas encore documenté" : fmt(v) + unit}`;
+      el.setAttribute("aria-label", txt + ". Ouvrir la fiche.");
+      el.firstChild.textContent = txt;
+      el.classList.toggle("on", groupOf(k) === state.country);
+    });
+    offKeys.forEach(k => {
+      const v = Math.max(...membersOf(k).map(m => valueFor(m) ?? -1));
+      const ii = b.bin(v < 0 ? null : v), sw = offBtns[k].querySelector("i");
+      sw.className = ii < 0 ? "nd" : ""; sw.style.background = ii < 0 ? "" : colourOf(ii);
+      offBtns[k].classList.toggle("on", state.country === k);
+      offBtns[k].setAttribute("aria-pressed", state.country === k ? "true" : "false");
+    });
+    const lg = document.getElementById("legend");
+    if (state.colorBy === "count") {
+      lg.innerHTML = `<span><i class="nd"></i>Pas encore documenté</span>` +
+        b.labels.map((l, i) => `<span><i style="background:${colourOf(i)}"></i>${l} faits</span>`).join("");
+      document.getElementById("map-source").textContent = "Nombre de faits vérifiés sur le thème « " + D.themes.find(t => t.key === state.theme).label + " ». Royaume-Uni : les faits valables pour tout le pays comptent pour chaque nation.";
+    } else {
+      const ind = D.indicators[state.colorBy];
+      lg.innerHTML = `<span><i class="nd"></i>Pas encore documenté</span>` +
+        `<span>${fmt(b.lo)}${esc(unit)}</span>` + STEPS.map(s => `<i style="background:var(${s})" aria-hidden="true"></i>`).join("") + `<span>${fmt(b.hi)}${esc(unit)}</span>`;
+      const srcs = [...new Set(Object.values(ind.values).map(x => x.source))];
+      document.getElementById("map-source").textContent = ind.label + ". Sources : " + srcs.join(" ; ") + ".";
+    }
+  }
+
+  /* ---------- colour selector ---------- */
+  const colorSel = document.getElementById("color-by");
+  function fillColorSel() {
+    const opts = [["count", "Nombre de faits documentés"]].concat(
+      Object.entries(D.indicators).filter(([, v]) => v.theme === state.theme && Object.keys(v.values).length >= 2).map(([k, v]) => [k, v.label]));
+    if (!opts.some(o => o[0] === state.colorBy)) state.colorBy = opts.length > 1 ? opts[1][0] : "count";
+    colorSel.innerHTML = opts.map(([k, l]) => `<option value="${k}"${k === state.colorBy ? " selected" : ""}>${esc(l)}</option>`).join("");
+  }
+  colorSel.addEventListener("change", () => { state.colorBy = colorSel.value; paint(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && state.view === "table") setView("map"); });
+
+  /* ---------- panel ---------- */
+  function factLi(f) {
+    const src = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.source)}</a>` : esc(f.source);
+    return `<li>${esc(f.fact)}<span class="src">Source : ${src}</span></li>`;
+  }
+  function renderPanel() {
+    const g = state.country, members = membersOf(g);
+    const sub = state.sub && members.includes(state.sub) ? state.sub : members[0];
+    const theme = D.themes.find(t => t.key === state.theme);
+    let h = `<p class="tag">${esc(theme.label)}</p><h2>${esc(groupName(g))}</h2>`;
+    if (members.length > 1) {
+      h += `<div class="subtabs" role="tablist" aria-label="Territoires">` + members.map(m =>
+        `<button type="button" role="tab" data-sub="${m}" aria-selected="${m === sub}">${esc(m === g ? (g === "UK" ? "Tout le Royaume-Uni" : D.countries[m].name) : D.countries[m].name)}</button>`).join("") + `</div>`;
+    }
+    const facts = D.facts.filter(f => f.country === sub && f.theme === state.theme);
+    if (!facts.length) h += `<p class="empty">Pas encore documenté.</p>`;
+    else {
+      h += `<ul class="facts">${facts.slice(0, MAX_SHOWN).map(factLi).join("")}</ul>`;
+      if (facts.length > MAX_SHOWN) h += `<details><summary>${facts.length - MAX_SHOWN} autre${facts.length - MAX_SHOWN > 1 ? "s" : ""} fait${facts.length - MAX_SHOWN > 1 ? "s" : ""}</summary><ul class="facts" style="margin-top:10px">${facts.slice(MAX_SHOWN).map(factLi).join("")}</ul></details>`;
+    }
+    const others = D.themes.filter(t => t.key !== state.theme && D.facts.some(f => f.country === sub && f.theme === t.key));
+    if (others.length) h += `<p class="small">Aussi documenté pour ce pays : ${others.map(t => `<button type="button" class="badge" data-theme="${t.key}" style="border:0;cursor:pointer">${esc(t.short)}</button>`).join(" ")}</p>`;
+    if (g !== "FR") {
+      const fr = factsById[D.france[state.theme]];
+      h += `<div class="box"><h3>Et en France ?</h3><p>${esc(fr.fact)}</p><span class="src">Source : ${fr.url ? `<a href="${esc(fr.url)}" target="_blank" rel="noopener">${esc(fr.source)}</a>` : esc(fr.source)}</span></div>`;
+    }
+    const props = D.proposals.filter(p => p.theme === state.theme)
+      .map(p => ({ p, inspired: p.modeles.includes(sub) || p.modeles.includes(g) }))
+      .sort((a, b) => b.inspired - a.inspired);
+    h += `<div class="box"><h3>Ce que nous proposons</h3>` + props.map(({ p, inspired }) =>
+      `<div class="prop"><strong>${esc(p.title)}${inspired && g !== "FR" ? `<span class="badge">s'inspire de ce pays</span>` : ""}</strong><span>${esc(p.text)}</span><span class="src">${esc(p.note)}</span></div>`).join("") + `</div>`;
+    const panel = document.getElementById("panel");
+    panel.innerHTML = h;
+    panel.querySelectorAll("[data-sub]").forEach(b => b.addEventListener("click", () => { state.sub = b.dataset.sub; renderPanel(); panel.querySelector(`[data-sub="${state.sub}"]`).focus(); }));
+    panel.querySelectorAll("[data-theme]").forEach(b => b.addEventListener("click", () => setTheme(b.dataset.theme)));
+  }
+
+  /* ---------- table ---------- */
+  function renderTable() {
+    const inds = Object.entries(D.indicators).filter(([, v]) => Object.keys(v.values).length);
+    const rows = Object.keys(D.countries).filter(k => inds.some(([, v]) => v.values[k]));
+    const themeOf = k => D.themes.find(t => t.key === D.indicators[k].theme).short;
+    let h = `<thead><tr><th scope="col">Pays</th>` + inds.map(([k, v]) => `<th scope="col">${esc(v.label)}<br><span class="small">${esc(themeOf(k))}</span></th>`).join("") + `</tr></thead><tbody>`;
+    rows.forEach(k => {
+      h += `<tr><th scope="row"><button type="button" class="link" data-country="${k}">${esc(D.countries[k].name)}</button></th>` + inds.map(([, v]) => {
+        const x = v.values[k];
+        return x ? `<td class="num" title="${esc(x.source)}">${fmt(x.value)} ${esc(v.unit)}<span class="src">${esc(x.source)}</span></td>` : `<td aria-label="Pas encore documenté"></td>`;
+      }).join("") + `</tr>`;
+    });
+    const t = document.getElementById("table");
+    t.innerHTML = h + `</tbody>`;
+    t.querySelectorAll("[data-country]").forEach(b => b.addEventListener("click", () => { setView("map"); select(b.dataset.country); document.getElementById("panel").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+  }
+
+  /* ---------- state changes ---------- */
+  function select(k) {
+    state.country = groupOf(k); state.sub = k;
+    paint(); renderPanel(); saveHash();
+  }
+  function setTheme(k) {
+    state.theme = k;
+    D.themes.forEach(t => {
+      const b = document.getElementById("tab-" + t.key);
+      b.setAttribute("aria-selected", t.key === k ? "true" : "false"); b.tabIndex = t.key === k ? 0 : -1;
+    });
+    fillColorSel(); paint(); renderPanel(); saveHash();
+  }
+  // Shareable state in the address: #theme=orientation&pays=ENG&vue=tableau
+  function saveHash() {
+    const h = `theme=${state.theme}&pays=${state.sub || state.country}` + (state.view === "table" ? "&vue=tableau" : "");
+    if (location.hash.slice(1) !== h) history.replaceState(null, "", "#" + h);
+  }
+  function setView(v) {
+    state.view = v;
+    document.getElementById("view-map").hidden = v !== "map";
+    document.getElementById("view-table").hidden = v !== "table";
+    document.getElementById("btn-map").setAttribute("aria-pressed", v === "map");
+    document.getElementById("btn-table").setAttribute("aria-pressed", v === "table");
+    document.getElementById("view-title").textContent = v === "map" ? "Carte" : "Tableau des indicateurs";
+    saveHash();
+  }
+  document.getElementById("btn-map").addEventListener("click", () => setView("map"));
+  document.getElementById("btn-table").addEventListener("click", () => setView("table"));
+
+  document.getElementById("build-info").textContent = `${D.facts.length} faits vérifiés, ${D.proposals.length} propositions, données construites le ${D.generated.split("-").reverse().join("/")} par scripts/build_comparaisons.py.`;
+  renderTable();
+  const q = new URLSearchParams(location.hash.slice(1));
+  const t0 = D.themes.some(t => t.key === q.get("theme")) ? q.get("theme") : "temps";
+  const p0 = D.countries[q.get("pays")] ? q.get("pays") : "FR";
+  state.country = groupOf(p0); state.sub = p0;
+  setTheme(t0);
+  if (q.get("vue") === "tableau") setView("table");
+})();
+</script>
+</body>
+</html>

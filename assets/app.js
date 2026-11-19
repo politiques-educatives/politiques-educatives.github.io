@@ -225,7 +225,7 @@
   function firstSub(topic) { var S = SUJ.filter(function (s) { return s.id === topic; })[0]; return S && S.sous[0].id; }
   function subType(topic, sub) { var S = SUJ.filter(function (s) { return s.id === topic; })[0]; var U = S && S.sous.filter(function (u) { return u.id === sub; })[0]; return U; }
   function show(topic, sub, anchor) {
-    if (topic !== "boussole") {
+    if (topic !== "boussole" && topic !== "comparaisons") {
       var U = subType(topic, sub);
       if (U && U.type === "lien") { go(U.cible); return; }
       sub = U ? sub : (CUR.sub[topic] || firstSub(topic));
@@ -234,6 +234,7 @@
     CUR.topic = topic;
     tabs.forEach(function (t) { var on = t.id === "t-" + topic; t.setAttribute("aria-selected", String(on)); $("#" + t.getAttribute("aria-controls")).hidden = !on; });
     if (topic === "boussole") { loadBoussole(anchor); return; }
+    if (topic === "comparaisons") { loadComparaisons(); return; }
     var panel = $("#p-" + topic);
     $$(".subtab", panel).forEach(function (b) { b.setAttribute("aria-selected", String(b.getAttribute("data-sub") === sub)); });
     $$(".subpanel", panel).forEach(function (p) { p.hidden = p.getAttribute("data-sub") !== sub; });
@@ -242,10 +243,10 @@
   function go(route, replace) {
     var parts = route.split("/"); var topic = parts[0], sub = parts[1];
     if (!$("#t-" + topic)) return;
-    var U = topic !== "boussole" && sub ? subType(topic, sub) : null;
+    var U = topic !== "boussole" && topic !== "comparaisons" && sub ? subType(topic, sub) : null;
     if (U && U.type === "lien") { go(U.cible, replace); return; }
     show(topic, sub, topic === "boussole" ? sub : null);
-    var h = "#" + (topic === "boussole" ? route : topic + "/" + CUR.sub[topic]);
+    var h = "#" + (topic === "boussole" || topic === "comparaisons" ? route : topic + "/" + CUR.sub[topic]);
     if (location.hash !== h) history[replace ? "replaceState" : "pushState"](null, "", h);
   }
   tabs.forEach(function (t) { t.addEventListener("click", function () { go(t.id.slice(2)); window.scrollTo(0, 0); }); });
@@ -287,6 +288,21 @@
       });
       bf.setAttribute("src", bf.getAttribute("data-src"));
     } else { fit(); toAnchor(bAnchor); }
+  }
+
+  // ---------------- Comparaisons internationales embedded (same origin: fit the frame to its content)
+  var cf = $("#cframe");
+  function cfit() { try { var d = cf.contentDocument; if (d && d.body) cf.style.height = Math.max(d.documentElement.scrollHeight, d.body.scrollHeight, 700) + "px"; } catch (e) { /* keep CSS height */ } }
+  function loadComparaisons() {
+    if (!cf || cf.getAttribute("src")) { cfit(); return; }
+    cf.addEventListener("load", function () {
+      cfit();
+      try { var d = cf.contentDocument;
+        if (W.ResizeObserver && d && d.body) new W.ResizeObserver(cfit).observe(d.body);
+        d.addEventListener("click", function () { setTimeout(cfit, 50); setTimeout(cfit, 400); });
+      } catch (e) { /* ignore */ }
+    });
+    cf.setAttribute("src", cf.getAttribute("data-src"));
   }
 
   // ---------------- copy buttons
@@ -339,7 +355,7 @@
     if (Q && total) {   // stay where results are
       var topic = CUR.topic;
       if (!hits[topic]) topic = tabs.map(function (t) { return t.id.slice(2); }).filter(function (k) { return hits[k]; })[0];
-      if (topic && topic !== "boussole") {
+      if (topic && topic !== "boussole" && topic !== "comparaisons") {
         var sub = CUR.sub[topic] || firstSub(topic);
         if (!subHits["sp-" + topic + "-" + sub]) sub = $$(".subpanel", $("#p-" + topic)).map(function (p) { return p.getAttribute("data-sub"); }).filter(function (k) { return subHits["sp-" + topic + "-" + k]; })[0] || sub;
         show(topic, sub);

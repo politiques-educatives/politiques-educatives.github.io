@@ -29,8 +29,6 @@
   donnees: [orientation]
   sous:
     - {id: synthese, titre: "Synthèse", type: synthese, graphiques: [voeux, boursiers, licence-bac, emploi6mois]}
-    - {id: boussole, titre: "Boussole", type: lien, cible: "boussole"}
-    - {id: carte, titre: "Carte des lycées pro", type: lien, cible: "boussole/carte"}
     - {id: sources, titre: "Sources", type: sources}
 - id: gouvernance
   titre: "Gouvernance de l'établissement"
