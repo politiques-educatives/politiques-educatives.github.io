@@ -19,3 +19,5 @@ CSRC="$HERE/../site/comparaisons"
 if [ -f "$CSRC/index.html" ]; then mkdir -p "$HERE/comparaisons"; cp "$CSRC/index.html" "$CSRC/comparaisons.js" "$HERE/comparaisons/"; ls "$HERE/comparaisons"; fi
 # Facts of the map for the « Ailleurs » sub-tabs (_data/ailleurs.json)
 python3 "$HERE/scripts/build_ailleurs.py"
+# Foreign case for each proposal (research/22)
+python3 "$HERE/scripts/build_cas_etrangers.py"

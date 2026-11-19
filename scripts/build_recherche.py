@@ -35,8 +35,9 @@ FILES = [  # (path under research/, slug, sujets)
     ("19-mesure-risque-filieres-techniques/2026-11-19-mesure-risque.md", "19-indice-risque-filieres-techniques", []),
     ("21-codifiabilite-portefeuille/2026-11-19-revue-codifiabilite.md", "21-codifiabilite-revue", []),
     ("21-codifiabilite-portefeuille/2026-11-19-donnees-publiques.md", "21-codifiabilite-donnees", []),
+    ("22-comparaisons-propositions/2026-11-19-synthese.md", "22-cas-etrangers-propositions", ["formation", "orientation", "emploi", "ecrans"]),
 ]
-NAMES = re.compile(r"gavini|rufenacht|virginie|v[ée]ronique|\bmato\b|landau|lemesle|whatsapp\.com|slack\.com|drive\.google|docs\.google|"
+NAMES = re.compile(r"gavini|rufenacht|virginie(?!-occidentale)|v[ée]ronique|\bmato\b|landau|lemesle|whatsapp\.com|slack\.com|drive\.google|docs\.google|"
                    r"\b(du|le|la|au|notre|ligne de la) candidate?\b|édouard philippe|edouard philippe|\badrien\b|échange privé|note de campagne|scratchpad|/private/tmp|~/|mis de côté", re.I)
 SUBS = [(re.compile(r"\s*\((amendé|amendée) par Adrien[^)]*\)", re.I), ""),
         (re.compile(r"\s+d'Adrien\b"), ""),

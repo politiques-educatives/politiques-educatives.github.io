@@ -20,6 +20,7 @@
       AJ = W.LIVRET_AJOUTS || [], NOTES = W.NOTES || [], GEN = W.NOTES_GEN || [], DOS = W.DOSSIERS || [],
       POL = W.POLITIQUES || [], AIL = W.AILLEURS || { themes: [], countries: {}, facts: [] }, VP = W.VOIEPRO || null;
   var byId = {}; PROPS.forEach(function (p) { byId[p.id] = p; });
+  var CAS = W.CAS || {}, IMPL = { soutient: "Va dans notre sens", condition: "À une condition", nuance: "Nuance", contredit: "Contredit" };
   var srcById = {}; SRC.forEach(function (s) { srcById[s.id] = s; });
   var gById = {}; GR.forEach(function (g) { gById[g.id] = g; });
   var dosBySlug = {}; DOS.forEach(function (d) { dosBySlug[d.slug] = d; });
@@ -48,10 +49,21 @@
     var tags = (livByCard[p.id] || []).map(function (m) { return '<span class="badge lv e-' + slug(m.eval) + '" title="Livret du programme, mesure ' + esc(m.n) + " : " + esc(m.eval) + '">Livret n°' + esc(m.n) + "</span>"; }).join("");
     return row('<span class="pt">' + md(p.titre) + '</span><span class="pm"><span class="badge st-' + slug(p.statut) + '">' + esc(p.statut) + "</span>" + tags + "</span>",
       '<p class="from">Issue de : ' + esc(p.issue_de || "") + "</p><p>" + md(p.explication) + "</p>" +
-      (ev ? '<h3>Ce que disent les preuves</h3><ul class="ev">' + ev + "</ul>" : "") +
+      (ev ? '<h3>Ce que disent les preuves</h3><ul class="ev">' + ev + "</ul>" : "") + casHTML(CAS[p.id]) +
       '<p class="pf">' + (p.note ? '<a href="' + esc(BASE + "/assets/notes/" + p.note) + '">Lire la note (PDF)</a> · ' : "") +
       '<a href="#p-' + esc(p.id) + '" class="perma" data-card="' + esc(p.id) + '">Lien vers cette fiche</a> · <a href="' + esc(issueUrl(p.id, p.titre)) + '" target="_blank" rel="noopener">Signaler une correction</a></p>',
-      [p.titre, p.explication, (p.preuves || []).join(" "), p.issue_de].join(" "), idAttr);
+      [p.titre, p.explication, (p.preuves || []).join(" "), p.issue_de, CAS[p.id] ? [CAS[p.id].pays, CAS[p.id].politique, CAS[p.id].explication].join(" ") : ""].join(" "), idAttr);
+  }
+  function casHTML(c) {
+    if (!c) return "";
+    if (c.aucun_exemple && !c.pays) return '<div class="cas"><h3>Ailleurs : le cas le plus proche</h3><p>' + md(c.aucun_exemple) + "</p></div>";
+    var src = c.source || {};
+    return '<div class="cas"><h3>Ailleurs : le cas le plus proche</h3>' +
+      '<p class="cas-h"><b>' + esc(c.pays) + "</b> : " + esc(c.politique) + ' <span class="badge im-' + slug(c.implication || "") + '">' + esc(IMPL[c.implication] || c.implication || "") + '</span> <span class="badge cf-' + slug(c.confiance || "") + '">Confiance ' + esc(c.confiance || "") + "</span></p>" +
+      "<p>" + md(c.explication || "") + "</p>" +
+      '<p class="cas-n"><b>Le chiffre :</b> ' + md(c.chiffre || "") + (c.comparaison ? " ; comparé à : " + md(c.comparaison) : "") + "</p>" +
+      (c.citation ? '<p class="cas-q">« ' + esc(c.citation) + " »</p>" : "") +
+      '<p class="note-src">Source : ' + (src.url ? '<a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.ref || src.url) + "</a>" : esc(src.ref || "")) + (src.page ? ", " + esc(src.page) : "") + (c.lu === "résumé" ? " (seul le résumé a été lu)" : "") + "</p></div>";
   }
   function cardLinks(list) {
     return (list || []).filter(function (c) { return byId[c]; }).map(function (c) {

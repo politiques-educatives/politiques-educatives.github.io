@@ -312,3 +312,5 @@ table.cmp td,table.cmp th{font-size:.86rem}
 table.cmp td:first-child{white-space:nowrap}
 @media (max-width:640px){.vp-carte img{max-height:240px;object-fit:cover;object-position:top}}
 @media (max-width:640px){details.row summary .pt{flex:1 1 calc(100% - 30px);order:3;padding-left:22px}details.row summary::before{order:0}}
+
+.cas{margin:12px 0 8px;padding:10px 14px;border-left:3px solid #6b5bd2;background:#f6f5fd;border-radius:6px}.cas h3{margin:0 0 6px;font-size:.95rem}.cas p{margin:4px 0}.cas-q{font-style:italic;color:var(--ink2)}.badge.im-soutient{background:#e3f4ea;color:#17663a}.badge.im-condition{background:#fff3d6;color:#7a5200}.badge.im-nuance{background:#eef0f5;color:#3a4256}.badge.im-contredit{background:#fde6e6;color:#8a1c1c}.badge.cf-elevee{background:#e3f4ea;color:#17663a}.badge.cf-moyenne{background:#eef0f5;color:#3a4256}.badge.cf-faible{background:#fde6e6;color:#8a1c1c}
