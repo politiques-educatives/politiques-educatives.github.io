@@ -14,14 +14,16 @@
   <div class="wrap top-row">
     <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-k">{{ site.title }}</span><span class="brand-s">GT Éducation · Préparer l'avenir</span></a>
     <div class="top-actions">
-    <label class="gsearch"><span class="sr">Rechercher dans tout le site</span><input id="gq" type="search" placeholder="Rechercher partout (tutorat, master, Milburn…)" autocomplete="off"></label></div>
+    <label class="gsearch"><span class="sr">Rechercher dans tout le site</span><input id="gq" type="search" placeholder="Rechercher (tutorat, master, Milburn…)" autocomplete="off"></label></div>
   </div>
 </header>
 <main class="wrap">
 {{ content }}
 </main>
 <footer class="wrap foot">
-  <p>Document de travail · GT Éducation, Préparer l'avenir · Adrien Joly, London School of Economics. Chaque chiffre est tiré d'une source publique citée ; les propositions ne sont pas arbitrées. Une erreur, une étude à ajouter ? <a href="https://github.com/{{ site.repo }}/issues/new?template=feedback.yml">Signaler une correction</a>.</p>
+  <p><strong>Méthode et sources.</strong> Chaque chiffre est tiré d'une source publique citée ; chaque fiche de source dit ce qui a été étudié et si le chiffre a été lu dans la source. Les propositions ne sont pas arbitrées. Les dossiers de recherche sont dans l'onglet « Recherche et données » de chaque thème.</p>
+  <p><a href="{{ '/' | relative_url }}#accueil/rediger" data-route="accueil/rediger">Rédiger une note</a> · <a href="https://github.com/{{ site.repo }}/issues/new?template=feedback.yml">Signaler une correction</a></p>
+  <p>Document de travail · GT Éducation, Préparer l'avenir · Adrien Joly, London School of Economics.</p>
 </footer>
 </body>
 </html>

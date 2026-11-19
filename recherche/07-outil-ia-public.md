@@ -53,7 +53,6 @@ sujets: ["ecrans"]
 
 | Field | Facts | Source |
 |---|---|---|
-| Company | **Excellence Learning SAS**, SIREN 104 982 798, created **4 May 2026**, share capital **€1,000**, Boulogne-Billancourt; Président **Adrien Aldasoro** (born 1994). Headcount not disclosed. | https://recherche-entreprises.api.gouv.fr/search?q=104982798 ; https://excellence-ai.com/mentions-legales |
 | Product | « L'IA entre en classe. Vous gardez le contrôle. » Teacher side: homework/test generation, scanning and question-by-question grading of handwritten copies under teacher review, course-to-quiz conversion, dashboard of stuck pupils. Pupil side: photo of handwritten homework for feedback, tutor giving **progressive hints, not answers**, revision flashcards/quizzes, holiday workbooks. Levels **6e to prépa**. **No voice or orientation features stated.** | https://excellence-ai.com/ |
 | Funding, users, evaluation | **None published.** Co-founders other than the president: **UNVERIFIED**. | — |
 | Hosting | App on **Render** (US), data on **MongoDB** and **AWS EMEA**: no French/sovereign hosting stated; would need migration (e.g. SecNumCloud) to bid. | mentions légales (above) |

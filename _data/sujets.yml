@@ -1,41 +1,60 @@
-# Onglets du site : un par sujet de travail du GT, puis la Boussole. Chaque sujet a des sous-onglets.
-# donnees : étiquettes de sujet utilisées dans propositions.yml, sources.yml, livret.yml, notes.yml, graphiques
-# sous-onglets (type) : synthese | ressource (graphiques + sources + dossiers + bloc) | sources (toutes les sources du sujet) | lien (va vers un autre onglet)
-- id: ia
-  titre: "IA et jeunes : l'emploi des débutants"
-  court: "IA et jeunes"
-  statut: "Note du GT, novembre 2026."
-  donnees: [emploi]
-  sous:
-    - {id: synthese, titre: "Synthèse", type: synthese, note_ia: true, graphiques: [embauches]}
-    - {id: milburn, titre: "Rapport Milburn", type: ressource, bloc: milburn, sources: [milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026], dossiers: [12-milburn-review]}
-    - {id: masters, titre: "Masters", type: ressource, bloc: masters, graphiques: [insersup, insersup-tendance, filtre], sources: [insee-2109, ofer-2016, rers-2025, insersup, sies-licence-2025, apec-2024, indeed-diplomes-2024, cereq-generation-2021, humburg-2015], dossiers: [13-masters-job-market, 13-master-as-filter-evidence, 13-france-firms-master-filter-and-solutions]}
-    - {id: comms, titre: "Comms", type: ressource, bloc: comms}
-    - {id: sources, titre: "Sources", type: sources}
+# Les thèmes du site (refonte du 19/11/2026). Chaque thème a les mêmes trois sous-onglets : essentiel, recherche, ailleurs.
+# donnees      : étiquettes de sujet utilisées dans sources.yml, livret.yml, notes.yml, recherche.yml (tout ce qui porte l'une d'elles est rangé ici)
+# propositions : étiquettes des fiches de propositions.yml montrées dans « L'essentiel » (la note IA et jeunes garde ses propres recommandations)
+# bref         : trois sources dont le « chiffre à citer » (champ cle) fait l'« En bref » ; voiepro : textes de _data/voie_pro.yml
+# graphiques   : essentiel = graphiques clés ; recherche = les autres
+# groupes      : sources rangées par sous-thème dans « Recherche et données » (le reste va dans « Autres sources du thème »)
+# carte        : thèmes de la carte internationale (comparaisons.js) montrés dans « Ailleurs », groupés par pays
+# Les onglets Accueil, International et Boussole sont dans index.html ; les anciens liens (#ia/…, #gouvernance/…) sont redirigés dans assets/app.js (LEGACY).
+- id: ecole
+  titre: "École et enseignants"
+  court: "École et enseignants"
+  intro: "Organisation de l'école, autonomie de l'établissement, temps et formation des professeurs : notes 1 et 2 du GT."
+  donnees: [formation]
+  propositions: [formation]
+  bref: [ocde-heures-2026, cdc-formation-2023, talis]
+  graphiques: {essentiel: [heures, formation], recherche: []}
+  carte: [temps, gouvernance]
+  dossiers_ailleurs: [01-england-governance-ors, 03-inspection-evaluation]
 - id: handicap
   titre: "Handicap et santé mentale"
   court: "Handicap et santé mentale"
-  statut: "Inclusion, santé mentale, écrans et IA à l'école. La note inclusion est rédigée par d'autres membres du groupe : le site apporte la recherche et les sources ; propositions du GT limitées au tuteur IA."
+  intro: "Inclusion, santé mentale, écrans et IA à l'école. La note inclusion est rédigée par d'autres membres du groupe : le site apporte la recherche et les sources ; propositions du GT limitées au tuteur IA."
   donnees: [inclusion, ecrans]
-  sous:
-    - {id: synthese, titre: "Synthèse", type: synthese, constats: [depp-ni-25-63, senat-plf2026-inclusion, cnesco-2026-inclusion, cnsa-mdph-delais, enclass-2024, depp-pisa-2025, cnl-lecture-2026, interdictions-portable-null]}
-    - {id: handicap, titre: "Recherche handicap", type: ressource, graphiques: [aesh, mdph], sources: [cdc-inclusion-2024, senat-plf2026-inclusion, cnesco-2026-inclusion, depp-ni-25-63, cnsa-mdph-delais, mediateur-2025, inclusion-international, cdc-sante-scolaire-2020], dossiers: [04-inclusion, 09-brief-sante-mentale-handicap-inclusion]}
-    - {id: sante, titre: "Santé mentale et écrans", type: ressource, graphiques: [depression, psy, seconde, pisa], sources: [enclass-2024, drees-suicide-2025, enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-pisa-2025, depp-seconde-2026, depp-ce1-2026, pisa-2022-distraction, cnl-lecture-2026, abrahamsson-2024, interdictions-portable-null, portable-en-pause, pssm-cochrane-2023, myriad-2022, kiva-2018], dossiers: [14-why-scores-fall, 09-lecture-rapport-cianum-sortir-clandestinite, 07-outil-ia-public]}
-    - {id: sources, titre: "Sources", type: sources}
+  propositions: [inclusion, ecrans]
+  bref: [depp-ni-25-63, cnesco-2026-inclusion, enclass-2024]
+  constats: [depp-ni-25-63, senat-plf2026-inclusion, cnesco-2026-inclusion, cnsa-mdph-delais, enclass-2024, depp-pisa-2025, cnl-lecture-2026, interdictions-portable-null]
+  graphiques: {essentiel: [aesh, mdph, depression], recherche: [psy, seconde, pisa]}
+  groupes:
+    - {titre: "Handicap", sources: [cdc-inclusion-2024, senat-plf2026-inclusion, cnesco-2026-inclusion, depp-ni-25-63, cnsa-mdph-delais, mediateur-2025, inclusion-international, cdc-sante-scolaire-2020]}
+    - {titre: "Santé mentale et écrans", sources: [enclass-2024, drees-suicide-2025, enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-pisa-2025, depp-seconde-2026, depp-ce1-2026, pisa-2022-distraction, cnl-lecture-2026, abrahamsson-2024, interdictions-portable-null, portable-en-pause, pssm-cochrane-2023, myriad-2022, kiva-2018]}
+  carte: []
+  sources_ailleurs: [inclusion-international, kiva-2018, interdictions-portable-null]
+  dossiers_ailleurs: [04-inclusion]
 - id: orientation
-  titre: "Orientation et voie professionnelle"
-  court: "Orientation et voie pro"
-  statut: "Note 3 du GT, à recentrer sur l'orientation en amont, dès la 3e."
-  donnees: [orientation]
-  sous:
-    - {id: synthese, titre: "Synthèse", type: synthese, graphiques: [voeux, boursiers, licence-bac, emploi6mois]}
-    - {id: sources, titre: "Sources", type: sources}
-- id: gouvernance
-  titre: "Gouvernance de l'établissement"
-  court: "Gouvernance de l'établissement"
-  statut: "Autonomie, temps et formation des professeurs : notes 1 et 2 du GT."
-  donnees: [formation]
-  sous:
-    - {id: synthese, titre: "Synthèse", type: synthese}
-    - {id: recherche, titre: "Recherche", type: ressource, graphiques: [heures, formation], sources: [stpcd-2026, ocde-heures-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, eyles-machin-2019, taylor-tyler-2012, ofsted-2025, evaluation-etablissements-fr, cdc-inspecteurs-2022, nickow-2020, guryan-2023, eef-setting], dossiers: [01-england-governance-ors, 02-groupes-niveau-tutorat, 03-inspection-evaluation, 08-formation-enseignants, 10-brief-formation-continue-enseignants]}
-    - {id: sources, titre: "Sources", type: sources}
+  titre: "Orientation et emploi des jeunes"
+  court: "Orientation et emploi"
+  intro: "Orienter plus tôt, dès la 4e (note 3 du GT), et l'emploi des débutants face à l'IA (note IA et jeunes) : masters, licence, premières embauches."
+  donnees: [orientation, emploi]
+  propositions: [orientation]
+  note_ia: true
+  bref: [depp-reperes-orientation-2025, insersup, rers-2025]
+  graphiques: {essentiel: [voeux, insersup, embauches], recherche: [boursiers, licence-bac, insersup-tendance, filtre]}
+  blocs: [masters, comms]
+  groupes:
+    - {titre: "Masters et premier emploi", sources: [insee-2109, ofer-2016, rers-2025, insersup, sies-licence-2025, apec-2024, indeed-diplomes-2024, cereq-generation-2021, humburg-2015]}
+  carte: [orientation, superieur]
+  politiques: true
+  sources_ailleurs: [gatsby, resnjanskij-2024]
+  dossiers_ailleurs: [05-orientation]
+- id: voiepro
+  titre: "Voie pro, IA et concurrence chinoise"
+  court: "Voie pro, IA et Chine"
+  intro: "Le lycée professionnel face à l'IA, aux robots et aux importations chinoises : la carte des lycées pro et un indice de risque par spécialité de CAP, bac pro et BTS."
+  donnees: []
+  propositions: []
+  voie_pro: true
+  graphiques: {essentiel: [emploi6mois], recherche: []}
+  sources_recherche: [hosseini-2026, orr-2026, deming-2017]
+  dossiers: [06-index-ia-formations, 19-indice-risque-filieres-techniques, 21-codifiabilite-revue, 21-codifiabilite-donnees]
+  carte: [apprentissage]

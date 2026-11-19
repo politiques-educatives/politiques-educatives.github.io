@@ -404,7 +404,7 @@
   dossier: 06-index-ia-formations
 - id: hosseini-2026
   titre: "Hosseini et Lichtinger (2026), exposition des métiers à l'IA par tâche (base de la Boussole)"
-  ref: "Hosseini, M. et G. Lichtinger (2026), GenAI Expertise, jeu de données Final_Occupation_Dataset."
+  ref: "Hosseini, S. M. et G. Lichtinger (2026), « Generative AI and Occupational Entry Barriers: The Labor Supply Channel of Technological Change », Harvard University, SSRN 6059674 ; données GenAI_Expertise (Final_Occupation_Dataset), https://github.com/s-mahdihosseini/GenAI_Expertise."
   lien: https://github.com/s-mahdihosseini/GenAI_Expertise
   sujets: [orientation, emploi]
   type: données

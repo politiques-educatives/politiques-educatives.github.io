@@ -26,7 +26,7 @@
 - slug: 07-outil-ia-public
   titre: "07 — A public AI tool for pupils: what exists, who could bid, what the evidence says"
   sujets: ["ecrans"]
-  mots: 3046
+  mots: 3016
 - slug: 08-formation-enseignants
   titre: "08 · Formation initiale et continue des enseignants"
   sujets: ["formation"]
@@ -63,3 +63,27 @@
   titre: "Why are French scores falling? Evidence on causes (18 Nov 2026)"
   sujets: ["ecrans"]
   mots: 2130
+- slug: 16-calendrier-formation-continue
+  titre: "Quand placer la formation continue dans l'année ? Une semaine de vacances ou trois jours par trimestre"
+  sujets: ["formation"]
+  mots: 4108
+- slug: 17-orientation-apprentissage-preuves
+  titre: "Vérification des idées « orientation, années perdues, apprentissage »"
+  sujets: ["orientation", "emploi"]
+  mots: 3811
+- slug: 18-ia-embauches-exposition
+  titre: "IA, embauches et exposition : ce que disent les preuves, et ce que fait le Royaume-Uni"
+  sujets: ["emploi"]
+  mots: 4192
+- slug: 19-indice-risque-filieres-techniques
+  titre: "19 · Du risque d'exposition au risque tout court : une mesure pour les filières techniques (CAP, bac pro, BTS, BUT)"
+  sujets: []
+  mots: 7465
+- slug: 21-codifiabilite-revue
+  titre: "21 · Codifiabilité, faisceaux de tâches et portefeuille de carrières : revue de littérature"
+  sujets: []
+  mots: 5507
+- slug: 21-codifiabilite-donnees
+  titre: "21 · Codifiabilité : données publiques et plan d'intégration (Boussole, indice de risque)"
+  sujets: []
+  mots: 2645

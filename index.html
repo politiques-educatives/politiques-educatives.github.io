@@ -1,42 +1,45 @@
 ---
 layout: default
 ---
-<div class="tabs" role="tablist" id="tabs">
-  {% for s in site.data.sujets %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-{{ s.id }}" id="t-{{ s.id }}">{{ s.court }}<span class="hits"></span></button>
-  {% endfor %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button><button class="tab" role="tab" aria-selected="false" aria-controls="p-comparaisons" id="t-comparaisons">International<span class="hits"></span></button>
-</div>
-<div class="gres" id="gres" hidden><p class="gcount" id="gcount"></p><div id="dossier-hits"></div></div>
+<nav class="tabs" role="tablist" id="tabs" aria-label="Rubriques du site">
+  <button class="tab" role="tab" aria-selected="false" aria-controls="p-accueil" id="t-accueil">Accueil<span class="hits"></span></button>
+  {% for s in site.data.sujets %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-{{ s.id }}" id="t-{{ s.id }}" title="{{ s.titre }}">{{ s.court }}<span class="hits"></span></button>
+  {% endfor %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-international" id="t-international">International<span class="hits"></span></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button>
+</nav>
+<div class="gres" id="gres" hidden><p class="gcount" id="gcount" aria-live="polite"></p><div id="dossier-hits"></div></div>
+
+<section class="panel" id="p-accueil" role="tabpanel" aria-labelledby="t-accueil" hidden></section>
 
 {% for s in site.data.sujets %}<section class="panel" id="p-{{ s.id }}" role="tabpanel" aria-labelledby="t-{{ s.id }}" hidden>
-  <div class="hub-head">
-    <div class="hh-txt"><h1 class="hub-t">{{ s.titre }}</h1><p class="hub-s">{{ s.statut }}</p></div>
-    <details class="rediger">
-      <summary class="btn btn-gen">Rédiger une note</summary>
-      <div class="rd-box">
-        <p><a class="btn btn-gen" href="https://github.com/{{ site.repo }}/issues/new?template=note.yml&title={{ '[note] ' | append: s.court | uri_escape }}&theme={{ s.court | uri_escape }}&sujet={{ s.titre | uri_escape }}" target="_blank" rel="noopener">Générer un brouillon sur ce sujet</a></p>
-        <p class="note-src">Recherche sourcée, chiffres vérifiés à la source, note au format du GT (Word et PDF). Brouillon non relu ; génération réservée aux membres autorisés du dépôt.</p>
-        <p><a href="{{ '/assets/modele/modele-note.docx' | relative_url }}">Modèle Word</a> · <a href="{{ '/assets/modele/modele-note.md' | relative_url }}">Modèle texte</a> : En bref, constat chiffré, analyse, position du programme, propositions, argumentaire, mise en œuvre, références. Une à deux pages ; jamais de chiffre ni de position du candidat inventés.</p>
-        <p class="note-src">Dans « Sources », le bouton « Copier » de chaque fiche copie son chiffre clé et sa référence. Une erreur ? <a href="https://github.com/{{ site.repo }}/issues/new?template=feedback.yml" target="_blank" rel="noopener">Signaler une correction</a>.</p>
-      </div>
-    </details>
+  <div class="thead"><h1>{{ s.titre }}</h1><p class="lead">{{ s.intro }}</p></div>
+  <div class="subtabs" role="tablist" aria-label="{{ s.titre }}">
+    <button class="subtab" role="tab" aria-selected="false" data-sub="essentiel" id="st-{{ s.id }}-essentiel" aria-controls="sp-{{ s.id }}-essentiel">L'essentiel<span class="hits"></span></button>
+    <button class="subtab" role="tab" aria-selected="false" data-sub="recherche" id="st-{{ s.id }}-recherche" aria-controls="sp-{{ s.id }}-recherche">Recherche et données<span class="hits"></span></button>
+    <button class="subtab" role="tab" aria-selected="false" data-sub="ailleurs" id="st-{{ s.id }}-ailleurs" aria-controls="sp-{{ s.id }}-ailleurs">Ailleurs<span class="hits"></span></button>
   </div>
-  <div class="subtabs" role="tablist">
-    {% for u in s.sous %}<button class="subtab{% if u.type == 'lien' %} sublink{% endif %}" role="tab" aria-selected="false" data-sub="{{ u.id }}" id="st-{{ s.id }}-{{ u.id }}">{{ u.titre }}<span class="hits"></span></button>
-    {% endfor %}
-  </div>
-  {% for u in s.sous %}<div class="subpanel" id="sp-{{ s.id }}-{{ u.id }}" data-topic="{{ s.id }}" data-sub="{{ u.id }}" hidden></div>
-  {% endfor %}
+  <div class="subpanel" id="sp-{{ s.id }}-essentiel" role="tabpanel" aria-labelledby="st-{{ s.id }}-essentiel" data-topic="{{ s.id }}" data-sub="essentiel" hidden></div>
+  <div class="subpanel" id="sp-{{ s.id }}-recherche" role="tabpanel" aria-labelledby="st-{{ s.id }}-recherche" data-topic="{{ s.id }}" data-sub="recherche" hidden></div>
+  <div class="subpanel" id="sp-{{ s.id }}-ailleurs" role="tabpanel" aria-labelledby="st-{{ s.id }}-ailleurs" data-topic="{{ s.id }}" data-sub="ailleurs" hidden></div>
 </section>
 {% endfor %}
+
+<section class="panel" id="p-international" role="tabpanel" aria-labelledby="t-international" hidden>
+  <div class="thead"><h1>International</h1><p class="lead">Comment d'autres pays organisent le temps des professeurs, la gouvernance, l'orientation, les secondes chances dans le supérieur et l'apprentissage, et ce qu'ils font pour leurs jeunes.</p></div>
+  <div class="subtabs" role="tablist" aria-label="International">
+    <button class="subtab" role="tab" aria-selected="false" data-sub="carte" id="st-international-carte" aria-controls="sp-international-carte">La carte<span class="hits"></span></button>
+    <button class="subtab" role="tab" aria-selected="false" data-sub="politiques" id="st-international-politiques" aria-controls="sp-international-politiques">Politiques d'ailleurs<span class="hits"></span></button>
+  </div>
+  <div class="subpanel" id="sp-international-carte" role="tabpanel" aria-labelledby="st-international-carte" data-topic="international" data-sub="carte" hidden>
+    <p class="bintro s-item" data-s="comparaisons internationales carte pays Angleterre Écosse Allemagne Finlande Irlande Pays-Bas formation des enseignants orientation apprentissage gouvernance">Clique sur un pays pour voir comment il organise le temps des professeurs, la gouvernance, l'orientation, les secondes chances dans le supérieur et l'apprentissage, avec chaque chiffre sourcé et ce que nous proposons pour la France. <a href="{{ '/comparaisons/' | relative_url }}" target="_blank" rel="noopener">Plein écran</a></p>
+    <iframe class="bframe" id="cframe" title="Comparaisons internationales" data-src="{{ '/comparaisons/' | relative_url }}" scrolling="no"></iframe>
+  </div>
+  <div class="subpanel" id="sp-international-politiques" role="tabpanel" aria-labelledby="st-international-politiques" data-topic="international" data-sub="politiques" hidden></div>
+</section>
 
 <section class="panel" id="p-boussole" role="tabpanel" aria-labelledby="t-boussole" hidden>
   <p class="bintro s-item" data-s="Boussole formations Parcoursup InserSup orientation IA Chine importations industrie zone d'emploi lycée professionnel carte bac pro">La Boussole des formations, prototype du GT : de la 5e au premier emploi, les débouchés de chaque formation (Affelnet, Parcoursup, Mon Master), ce que l'IA sait déjà faire des premiers métiers et, pour les filières industrielles, l'exposition à la concurrence des importations chinoises (2018-2024). Descriptif, pas une prévision. <a href="#boussole/carte" data-route="boussole/carte">Carte des lycées pro</a> · <a href="{{ '/boussole/' | relative_url }}" target="_blank" rel="noopener">Plein écran</a></p>
   <iframe class="bframe" id="bframe" title="Boussole des formations" data-src="{{ '/boussole/' | relative_url }}" scrolling="no"></iframe>
-</section>
-
-<section class="panel" id="p-comparaisons" role="tabpanel" aria-labelledby="t-comparaisons" hidden>
-  <p class="bintro s-item" data-s="comparaisons internationales carte pays Angleterre Écosse Allemagne Finlande Irlande Pays-Bas formation des enseignants orientation apprentissage gouvernance">Clique sur un pays pour voir comment il organise le temps des professeurs, la gouvernance, l'orientation, les secondes chances dans le supérieur et l'apprentissage, avec chaque chiffre sourcé et ce que nous proposons pour la France. <a href="{{ '/comparaisons/' | relative_url }}" target="_blank" rel="noopener">Plein écran</a></p>
-  <iframe class="bframe" id="cframe" title="Comparaisons internationales" data-src="{{ '/comparaisons/' | relative_url }}" scrolling="no"></iframe>
 </section>
 
 <script>
@@ -53,8 +56,12 @@ window.LIVRET_AJOUTS = {{ site.data.livret_ajouts | jsonify }};
 window.MILBURN = {{ site.data.milburn | jsonify }};
 window.VIDEOS = {{ site.data.comms | jsonify }};
 window.DOSSIERS = {{ site.data.recherche | jsonify }};
+window.POLITIQUES = {{ site.data.politiques | jsonify }};
+window.AILLEURS = {{ site.data.ailleurs | jsonify }};
+window.VOIEPRO = {{ site.data.voie_pro | jsonify }};
 window.REPO = "{{ site.repo }}";
 window.BASE = "{{ '' | relative_url }}";
+window.BUILT = {{ site.time | date: '%s' }};
 </script>
 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>

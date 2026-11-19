@@ -1,0 +1,577 @@
+# Généré par scripts/build_voie_pro.py depuis research/19 (résultats v1). Ne pas modifier à la main.
+bref:
+- '**Choisir comme on compose un portefeuille.** Personne ne sait vraiment ce que l''IA, les robots ou le commerce avec la Chine vont changer d''ici à tes 30 ans. Alors, au lieu de parier sur un seul avenir, on regarde quelles formations restent un bon choix dans tous les avenirs possibles : celles où il faut des mains, du contact et du jugement, où les entreprises cherchent du monde, et d''où l''on peut rebondir vers un métier voisin.'
+- '**Être exposé à l''IA ne veut pas dire être remplacé.** Savoir qu''une IA sait faire une partie des tâches d''un métier ne dit pas si elle va remplacer ou aider, ni si les entreprises recrutent, ni si l''on peut changer de métier. Notre indice regarde donc cinq choses : l''IA qui remplace vraiment, les robots, les embauches, la concurrence chinoise et la possibilité de rebondir.'
+- '**Ce que cela donne** pour 468 spécialités de CAP, bac pro et BTS : parmi les 122 plus grandes spécialités de CAP et bac pro, 18 restent parmi les moins risquées quel que soit l''avenir (16,1 % des élèves) et 9 parmi les plus risquées (10,0 %). Les métiers de terrain (soins à la personne, réparation, couverture) s''en sortent mieux que les métiers de bureau, de la vente et de l''image.'
+resultats:
+- '**Corrélation de rang avec l''exposition seule : 0,45** (468 spécialités ; 0,37 en v0) ; 0,55 sur les 122 grosses spécialités de CAP et bac pro (0,43 en v0). L''écart avec l''exposition reste net, mais il se réduit : une partie de l''écart v0 venait des projections américaines.'
+- '**Robustesse** (122 spécialités de CAP et bac pro avec au moins 100 élèves, 244 298 élèves) : **18 spécialités dans le tiers le moins risqué dans les cinq scénarios (16,1 % des élèves)**, contre 16 et 15,7 % en v0 ; entrent la réparation des carrosseries en CAP et le CAP réparation entretien des embarcations de plaisance. **9 dans le tiers le plus risqué partout (10,0 % des élèves)**, contre 11 et 10,3 % ; sortent les deux options « produits mécaniques » et la maroquinerie, entre le CAP opérateur logistique.'
+- '**Bureau contre terrain** (rang moyen pondéré par les élèves, CAP et bac pro) : bureau 0,85 (0,82 en v0), terrain 0,48 (0,51) ; pire scénario : bureau 0,96, terrain 0,63.'
+apres_faibles: Le CAP couvreur sort du top 10 de justesse (112e sur 122, risque 0,29) mais reste dans le tiers bas des cinq scénarios.
+apres_forts: 'Le CAP conducteur d''engins de travaux publics ne figure plus dans cette liste : il était relié par erreur à la fabrication de matériaux de construction ; relié aux engins de chantier, son risque est de 0,44.'
+batiment:
+- '**Comme attendu, la demande française fait baisser le bâtiment.** La composante demande du gros œuvre passe de 0,67 à 0,43, celle du charpentier de 0,82 à 0,48, celle du CAP chaudronnerie de 0,73 à 0,38. Rangs de risque : maçon 0,50 → 0,37, gros œuvre 0,58 → 0,37, charpentier 0,68 → 0,41. Ces spécialités repassent sous la médiane.'
+- '**Le couvreur reste le cas le plus sûr du bâtiment** : 81 % de projets difficiles (BMO 2025-2026 ; 79,7 % publié pour 2026), tension 1,49 (valeur du métier, « Tableau 1 »).'
+- '**La métallerie et le béton armé restent au-dessus de la médiane** (0,72 et 0,54) : robots élevés, demande à peine moyenne (part difficile 57 à 68 %).'
+batiment_note: '(Tension 0,96 = valeur du domaine « Bâtiment, travaux publics » : le métier n''est pas dans les tableaux publiés du classeur.)'
+lecture_tension: 'Lecture : une tension élevée réduit le risque. C''est un choix : une tension forte peut aussi refléter des conditions de travail dures ou des salaires faibles (deux des sept facteurs de la Dares). Pour un jeune qui cherche un emploi, la tension reste un atout à court terme.'
+echelle: '**Mise à l''échelle.** Composantes 1, 1 bis, 2, 3, 5 : rang centile parmi les 468 spécialités (0 = plus faible risque). Composante 4 : valeur directe (la plupart des spécialités sont à 0, un rang leur donnerait un risque fictif). Le taux d''emploi est classé à l''intérieur de son niveau (un CAP n''est pas comparé à un BTS).'
+poids: '**Pourquoi ces poids.** La technologie (IA + robots) fait la moitié du score, parce que c''est la question posée. L''IA pèse plus que les robots parce que son usage est déjà observé, alors que les robots ne sont compétitifs en coût que pour 0,3 % des tâches et qu''il faudrait environ 40 ans pour atteindre 10 % au rythme historique de baisse des prix (Legate-Yang et Massenkoff, 2026). La demande compte pour un quart : c''est elle qui décide de l''embauche dans les cinq ans. La Chine ne pèse que 10 % car elle ne concerne que les spécialités industrielles. La transférabilité (15 %) n''est pas un risque en soi, c''est l''amortisseur : elle dit si l''on peut rebondir.'
+demande_v1: Seule la composante **demande** change ; les quatre autres composantes, les poids (demande 0,25) et les cinq scénarios sont ceux de la v0, pour que tout écart vienne des données françaises.
+limites:
+- '**166 FAP sur 226 n''ont que la tension de leur domaine** : la tension ne distingue donc pas maçon et carreleur.'
+- '**La tension mesure 2024, la BMO 2025-2026.**'
+- '**Le choix des qualifications** (3 et 6 pour le CAP, 4 et 6 pour le bac pro, 7 pour le BTS) est une hypothèse ; le sortant de CAP occupe souvent un poste peu qualifié.'
+- '**Les métiers visés ne sont pas les métiers occupés.** Beaucoup de sortants de bac pro commerce travaillent ailleurs que dans la vente.'
+- '**La faible IA « observée » des métiers d''études** (géomètre : 0,009 contre 0,40 d''exposition H-L) vient de ce que peu de géomètres utilisent Claude, pas de ce que l''IA ne sait pas faire leurs tâches. Le scénario « IA rapide » corrige cela : le bac pro technicien géomètre topographe est au rang 0,09 dans le scénario de base mais 0,74 dans le scénario « IA rapide », donc 0,73 dans le pire scénario. Il n''est **pas** robuste, et la vue portefeuille le dit.'
+- '**Ce qui manque encore** : *Métiers 2030* ; le classeur complet des tensions (valeur par métier pour 166 FAP qui n''ont que celle de leur domaine) ; les métiers réellement occupés par les sortants ; le BUT.'
+portefeuille: Personne ne sait vraiment ce que l'IA, les robots ou le commerce avec la Chine vont changer d'ici à tes 30 ans. Alors, au lieu de parier sur un seul avenir, on regarde quelles formations restent un bon choix dans tous les avenirs possibles. Ce sont celles où il faut des mains, du contact et du jugement, où les entreprises cherchent du monde, et d'où l'on peut rebondir vers un métier voisin si le sien change. Un bon choix, c'est une formation qui ne te laisse pas sans solution si le monde prend un autre chemin que prévu.
+carte: '1 894 lycées de métropole, 13 587 spécialités de bac pro et CAP. Par lycée : spécialités, élèves de terminale (rentrée 2023), emploi à 6 mois (InserJeunes, cumul 2023-2024), exposition à l''IA de chaque spécialité, concurrence chinoise pour les 53 spécialités industrielles, et industries de sa zone d''emploi (Urssaf 2024).'
+carte_source: Annuaire de l'éducation (coordonnées, 18/11/2026) ; InserJeunes ; Hosseini, S. M. et G. Lichtinger (2026), « Generative AI and Occupational Entry Barriers », SSRN 6059674 ; BACI ; Urssaf 2024. Boussole des formations, GT Éducation.
+chine: 'Hausse des importations françaises depuis la Chine 2018-2024 par salarié des industries visées (BACI, emploi 2017), et exposition des 287 zones d''emploi (Autor, Dorn et Hanson, 2013). Mesure d''exposition, pas un effet prouvé : le papier n''identifie pas encore d''effet sur l''emploi.'
+composantes:
+  entetes:
+  - Composante
+  - Ce qu'elle mesure
+  - Donnée
+  - Poids de base
+  - Limites
+  lignes:
+  - - IA qui remplace
+    - Part du temps de travail en tâches qu'un LLM sait faire et qui sont déjà faites avec Claude, l'usage automatisé comptant 1 et l'usage d'aide 0,5
+    - « Observed exposure », Anthropic (Massenkoff et McCrory, 5 mars 2026)
+    - 0,30
+    - Usage d'un seul assistant, de ses utilisateurs (sous-estime les métiers de terrain où personne n'utilise de chatbot) ; change à chaque version
+  - - IA, capacité (scénario « IA rapide »)
+    - Part des tâches qu'une IA fait à plus de 80 %
+    - Hosseini et Lichtinger (2026), avg_auto_hl_bi
+    - 0 (base), 0,50 (IA rapide)
+    - Capacité, pas usage ni effet
+  - - Robots
+    - 'Indice 0 à 3 : tâches physiques qu''un robot démontré sait faire, pondérées par l''environnement (1 usine dédiée, 2 lieu de travail structuré, 3 lieu non structuré) et par le temps'
+    - Anthropic, « What work can robots do? » (Legate-Yang et Massenkoff, 30 sept. 2026)
+    - 0,20
+    - 'Faisabilité technique, pas adoption : robots compétitifs en coût pour 0,3 % des tâches seulement ; notation par un modèle d''IA'
+  - - Demande (inversée)
+    - 'Version 1 : 1 − [½ bloc français (moyenne des rangs : tension, part difficile BMO, intensité BMO) + ¼ emploi à 12 mois InserJeunes + ¼ croissance BLS]'
+    - Tensions Dares-France Travail 2024 ; BMO 2025 et 2026 (France Travail) ; InserJeunes, cumul 2023-2024 ; BLS Employment Projections 2025-35
+    - 0,25
+    - 166 FAP sur 226 n'ont que la tension de leur domaine ; la tension mesure 2024, la BMO 2025-2026
+  - - Chine
+    - Hausse des importations françaises depuis la Chine 2018-2024 par salarié des divisions NAF où s'exercent les métiers visés, rapportée à la moyenne de l'industrie
+    - Papier China shock 2 (BACI, emploi 2017) ; table officielle ROME → NAF (ROME v4, v462)
+    - 0,10
+    - La table ROME → NAF liste des secteurs sans poids d'emploi (ex. électricien relié à l'industrie électrique) ; services = 0
+  - - Transférabilité (inversée)
+    - (a) Part de l'emploi (américain) dans des métiers proches par le contenu du travail et peu exposés (IA + robots sous la médiane) ; (b) part des mobilités officielles ROME vers des métiers peu exposés
+    - (a) O*NET 31.0, importance des 41 activités, 52 aptitudes, 33 connaissances ; similarité cosinus centrée, seuil = 90e centile des paires (0,496), à la manière de Gathmann et Schönberg (2010) ; emplois BLS 2025 ; (b) ROME, rubrique « mobilité » (environ 10 cibles par fiche)
+    - 0,15
+    - (a) Proximité de contenu, pas flux observés ; (b) mobilités déclarées par France Travail, sans poids
+scenarios:
+  entetes:
+  - Scénario
+  - IA (usage)
+  - IA (capacité)
+  - Robots
+  - Demande
+  - Chine
+  - Transfert
+  lignes:
+  - - Base
+    - 0,30
+    - '0'
+    - 0,20
+    - 0,25
+    - 0,10
+    - 0,15
+  - - IA rapide (la capacité devient l'usage)
+    - '0'
+    - 0,50
+    - 0,10
+    - 0,20
+    - 0,05
+    - 0,15
+  - - Robots rapides
+    - 0,15
+    - '0'
+    - 0,45
+    - 0,20
+    - 0,05
+    - 0,15
+  - - Concurrence chinoise
+    - 0,20
+    - '0'
+    - 0,15
+    - 0,20
+    - 0,30
+    - 0,15
+  - - Statu quo technologique
+    - 0,10
+    - '0'
+    - 0,10
+    - 0,50
+    - 0,10
+    - 0,20
+faibles:
+  entetes:
+  - Niveau
+  - Spécialité
+  - Élèves
+  - Risque v1
+  - Rang pire scénario
+  - Exposition H-L
+  - Rang exposition seule
+  - IA
+  - Robots
+  - Demande v1
+  - Chine
+  - Transfert
+  lignes:
+  - - BAC PRO
+    - Maintenance nautique
+    - '425'
+    - 0,22
+    - 0,14
+    - 0,09
+    - 0,43
+    - 0,22
+    - 0,18
+    - 0,21
+    - 0,40
+    - 0,17
+  - - BAC PRO
+    - Technicien en prothèse dentaire
+    - '271'
+    - 0,26
+    - 0,21
+    - 0,01
+    - 0,06
+    - 0,08
+    - 0,31
+    - 0,45
+    - 0,00
+    - 0,44
+  - - BAC PRO
+    - Optique lunetterie
+    - '572'
+    - 0,27
+    - 0,09
+    - 0,06
+    - 0,29
+    - 0,33
+    - 0,24
+    - 0,40
+    - 0,00
+    - 0,12
+  - - BAC PRO
+    - ASSP option B, en structure
+    - 14 380
+    - 0,27
+    - 0,03
+    - 0,03
+    - 0,14
+    - 0,54
+    - 0,14
+    - 0,28
+    - 0,00
+    - 0,06
+  - - BAC PRO
+    - Réparation des carrosseries
+    - 1 133
+    - 0,28
+    - 0,23
+    - 0,01
+    - 0,05
+    - 0,08
+    - 0,47
+    - 0,29
+    - 0,28
+    - 0,39
+  - - BAC PRO
+    - ASSP option A, à domicile
+    - 2 907
+    - 0,28
+    - 0,04
+    - 0,03
+    - 0,14
+    - 0,54
+    - 0,14
+    - 0,33
+    - 0,00
+    - 0,06
+  - - BAC PRO
+    - Maintenance des véhicules option C, motocycles
+    - '684'
+    - 0,28
+    - 0,07
+    - 0,05
+    - 0,26
+    - 0,50
+    - 0,32
+    - 0,15
+    - 0,00
+    - 0,21
+  - - CAP
+    - Maintenance des véhicules option B, transport routier
+    - '366'
+    - 0,28
+    - 0,08
+    - 0,05
+    - 0,26
+    - 0,50
+    - 0,32
+    - 0,15
+    - 0,00
+    - 0,21
+  - - CAP
+    - Maintenance des véhicules option C, motocycles
+    - '202'
+    - 0,28
+    - 0,08
+    - 0,05
+    - 0,26
+    - 0,50
+    - 0,32
+    - 0,15
+    - 0,00
+    - 0,21
+  - - BAC PRO
+    - Maintenance des véhicules option B, transport routier
+    - '575'
+    - 0,28
+    - 0,09
+    - 0,05
+    - 0,26
+    - 0,50
+    - 0,32
+    - 0,16
+    - 0,00
+    - 0,21
+forts:
+  entetes:
+  - Niveau
+  - Spécialité
+  - Élèves
+  - Risque v1
+  - Rang pire scénario
+  - Exposition H-L
+  - Rang exposition seule
+  - IA
+  - Robots
+  - Demande v1
+  - Chine
+  - Transfert
+  lignes:
+  - - CAP
+    - Équipier polyvalent du commerce
+    - 18 866
+    - 0,73
+    - 1,00
+    - 0,24
+    - 0,82
+    - 0,99
+    - 0,59
+    - 0,75
+    - 0,00
+    - 0,83
+  - - BAC PRO
+    - Photographie
+    - '381'
+    - 0,71
+    - 1,00
+    - 0,46
+    - 0,95
+    - 0,83
+    - 0,60
+    - 0,83
+    - 0,00
+    - 0,91
+  - - BAC PRO
+    - Produits imprimés et pluri média, option A productions graphiques
+    - '604'
+    - 0,70
+    - 0,99
+    - 0,34
+    - 0,90
+    - 0,86
+    - 0,58
+    - 0,81
+    - 0,07
+    - 0,78
+  - - BAC PRO
+    - Produits imprimés et pluri média, option B productions imprimées
+    - '349'
+    - 0,70
+    - 0,98
+    - 0,33
+    - 0,89
+    - 0,86
+    - 0,58
+    - 0,80
+    - 0,07
+    - 0,78
+  - - BAC PRO
+    - Artisanat et métiers d'art, option enseigne et signalétique
+    - '147'
+    - 0,69
+    - 0,97
+    - 0,33
+    - 0,89
+    - 0,86
+    - 0,61
+    - 0,76
+    - 0,06
+    - 0,75
+  - - BAC PRO
+    - Artisanat et métiers d'art, option communication visuelle pluri média
+    - 1 710
+    - 0,69
+    - 1,00
+    - 0,52
+    - 0,97
+    - 0,94
+    - 0,31
+    - 0,86
+    - 0,03
+    - 0,85
+  - - CAP
+    - Ferronnier d'art
+    - '105'
+    - 0,65
+    - 0,97
+    - 0,01
+    - 0,08
+    - 0,69
+    - 0,88
+    - 0,68
+    - 0,25
+    - 0,47
+  - - CAP
+    - Signalétique et décors graphiques
+    - '449'
+    - 0,64
+    - 0,98
+    - 0,55
+    - 0,97
+    - 0,93
+    - 0,21
+    - 0,76
+    - 0,00
+    - 0,85
+  - - BAC PRO
+    - Métiers du commerce et de la vente, option A
+    - 21 567
+    - 0,63
+    - 0,96
+    - 0,50
+    - 0,96
+    - 0,96
+    - 0,26
+    - 0,76
+    - 0,00
+    - 0,70
+  - - BAC PRO
+    - Métiers de l'accueil
+    - 7 411
+    - 0,63
+    - 0,98
+    - 0,69
+    - 1,00
+    - 0,98
+    - 0,06
+    - 0,77
+    - 0,00
+    - 0,85
+batiment_table:
+  entetes:
+  - Niveau
+  - Spécialité
+  - Élèves
+  - FAP 2021 (premiers postes)
+  - Tension Dares 2024
+  - Part BMO difficile 2025-26
+  - Demande v0
+  - Demande v1
+  - Rang risque v0
+  - Rang risque v1
+  - Pire scénario v0
+  - Pire scénario v1
+  lignes:
+  - - CAP
+    - Électricien
+    - 7 522
+    - B2X32 B2X35 G0A40
+    - 1,07
+    - 66 %
+    - 0,32
+    - 0,27
+    - 0,25
+    - 0,21
+    - 0,52
+    - 0,47
+  - - CAP
+    - Peintre applicateur de revêtements
+    - 2 761
+    - B2X30 B2X31 B2X36
+    - 0,96
+    - 61 %
+    - 0,67
+    - 0,47
+    - 0,51
+    - 0,34
+    - 0,72
+    - 0,67
+  - - CAP
+    - Maçon
+    - 2 043
+    - B0X32 B1X31 B2X31
+    - 0,96
+    - 67 %
+    - 0,49
+    - 0,35
+    - 0,50
+    - 0,37
+    - 0,83
+    - 0,78
+  - - BAC PRO
+    - Technicien en chaudronnerie industrielle
+    - 1 768
+    - A3X41 B1X33 D1X30 D1X32 D1X33 G0B40 K0X30
+    - 1,03
+    - 67 %
+    - 0,50
+    - 0,41
+    - 0,62
+    - 0,57
+    - 0,70
+    - 0,69
+  - - BAC PRO
+    - Installateur en chauffage, climatisation et énergies renouvelables
+    - 1 450
+    - B2X33 E0X30
+    - 0,89
+    - 60 %
+    - 0,48
+    - 0,41
+    - 0,42
+    - 0,31
+    - 0,53
+    - 0,50
+  - - CAP
+    - Menuisier fabricant
+    - 1 282
+    - B1X33 B2X38 F1X31 U1X80
+    - 0,53
+    - 56 %
+    - 0,86
+    - 0,65
+    - 0,45
+    - 0,25
+    - 0,70
+    - 0,61
+  - - BAC PRO
+    - 'Technicien du bâtiment : gros œuvre'
+    - '804'
+    - B1X31
+    - 0,96
+    - 71 %
+    - 0,67
+    - 0,43
+    - 0,58
+    - 0,37
+    - 0,90
+    - 0,82
+  - - CAP
+    - Charpentier bois
+    - '760'
+    - B1X33 G0A40
+    - 1,33
+    - 75 %
+    - 0,82
+    - 0,48
+    - 0,68
+    - 0,41
+    - 0,80
+    - 0,69
+  - - CAP
+    - Chaudronnerie ou soudage, option chaudronnerie
+    - '623'
+    - B1X33 D1X30
+    - 1,33
+    - 78 %
+    - 0,73
+    - 0,38
+    - 0,76
+    - 0,56
+    - 0,89
+    - 0,75
+  - - BAC PRO
+    - 'Ouvrage du bâtiment : métallerie'
+    - '441'
+    - B1X33 B2X38 D1X30 K0X30
+    - 0,99
+    - 68 %
+    - 0,74
+    - 0,53
+    - 0,81
+    - 0,72
+    - 0,90
+    - 0,84
+  - - CAP
+    - Carreleur mosaïste
+    - '301'
+    - B2X30
+    - 0,96
+    - 65 %
+    - 0,41
+    - 0,32
+    - 0,40
+    - 0,27
+    - 0,77
+    - 0,75
+  - - CAP
+    - Couvreur
+    - '267'
+    - B1X34
+    - 1,49
+    - 81 %
+    - 0,03
+    - 0,04
+    - 0,06
+    - 0,05
+    - 0,13
+    - 0,11
+  - - CAP
+    - Constructeur d'ouvrages en béton armé
+    - '110'
+    - B0X32
+    - 0,96
+    - 57 %
+    - 0,40
+    - 0,33
+    - 0,57
+    - 0,54
+    - 0,82
+    - 0,82
+source: 'GT Éducation, « Du risque d''exposition au risque tout court : une mesure pour les filières techniques (CAP, bac pro, BTS) », note de méthode, 19 novembre 2026, résultats de la version 1. Document de travail.'
+donnees:
+- - 'Hosseini, S. M. et G. Lichtinger (2026), « Generative AI and Occupational Entry Barriers: The Labor Supply Channel of Technological Change », Harvard University, SSRN 6059674'
+  - https://papers.ssrn.com/abstract=6059674
+- - Hosseini et Lichtinger (2026), données GenAI_Expertise (exposition des métiers à l'IA)
+  - https://github.com/s-mahdihosseini/GenAI_Expertise
+- - Massenkoff et McCrory (2026), Labor market impacts (IA observée)
+  - https://www.anthropic.com/research/labor-market-impacts
+- - Legate-Yang et Massenkoff (2026), What work can robots do?
+  - https://www.anthropic.com/research/what-work-can-robots-do
+- - Dares, tensions sur le marché du travail en 2024
+  - https://dares.travail-emploi.gouv.fr/publication/les-tensions-sur-le-marche-du-travail-en-2024
+- - Dares, nomenclature des familles professionnelles 2021 (table ROME → FAP)
+  - https://dares.travail-emploi.gouv.fr/donnees/la-nomenclature-des-familles-professionnelles-2021
+- - France Travail, enquête Besoins en main-d'œuvre (BMO) 2025 et 2026
+  - https://www.data.gouv.fr/datasets/enquete-besoins-en-main-doeuvre-bmo
+- - BLS, Employment Projections 2025-2035
+  - https://www.bls.gov/emp/
+- - InserJeunes (emploi des sortants de voie pro)
+  - https://data.education.gouv.fr
+- - ROME v4, France Travail (open data)
+  - https://www.francetravail.org/opendata/repertoire-operationnel-des-meti.html?type=article

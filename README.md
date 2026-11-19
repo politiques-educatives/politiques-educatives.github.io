@@ -6,10 +6,13 @@ Site de travail : https://politiques-educatives.github.io/ (non indexé). Source
 |---|---|
 | `_data/propositions.yml` | Propositions (une fiche chacune : explication, preuves, note) |
 | `_data/livret.yml`, `_data/livret_ajouts.yml` | Livret du programme (18/11/2026) : mesures éducation et notre évaluation ; ce que nos travaux ajoutent |
-| `_data/milburn.yml`, `_data/comms.yml`, `_data/notes.yml` | Sous-onglets Rapport Milburn et Comms (IA et jeunes), notes PDF par sujet |
+| `_data/milburn.yml`, `_data/comms.yml`, `_data/notes.yml` | Rapport Milburn (International, « Politiques d'ailleurs »), Comms (Orientation et emploi, « Recherche et données »), notes PDF par sujet |
+| `_data/politiques.yml` | Fiches d'une page « Politiques d'ailleurs » (onglet International), construites par `scripts/build_politiques.py` depuis `../notes/international/` ; PDF dans `assets/notes/` |
+| `_data/ailleurs.json` | Faits de la carte internationale pour les sous-onglets « Ailleurs », construits par `scripts/build_ailleurs.py` (lancé par `sync_boussole.sh`) |
+| `_data/voie_pro.yml` | Thème Voie pro : indice de risque des filières techniques (v1), construit par `scripts/build_voie_pro.py` depuis `../research/19-…/2026-11-19-mesure-risque.md` |
 | `_data/notes_generees.yml` | Notes produites par le générateur (bouton « Générer une note », formulaire `note.yml`) ; lu côté navigateur, absent = liste vide |
 | `scripts/charts.py` | Données des graphiques interactifs (CSV ; `--fetch` : InserSup depuis l'API publique) ; titres et sources dans `_data/graphiques.yml` |
-| `_data/sujets.yml` | Les onglets : IA et jeunes, Handicap et santé mentale, Orientation et voie pro, Gouvernance de l'établissement (plus la Boussole), et leurs sous-onglets |
+| `_data/sujets.yml` | Les quatre thèmes (École et enseignants, Handicap et santé mentale, Orientation et emploi des jeunes, Voie pro, IA et concurrence chinoise), chacun avec les sous-onglets L'essentiel, Recherche et données, Ailleurs. Accueil, International et Boussole sont dans `index.html` ; les anciens liens sont redirigés dans `assets/app.js` (LEGACY) |
 | `_data/sources.yml` | Base de preuves : une fiche par source, résumé détaillé, chiffre à citer, statut de vérification |
 | `scripts/build_recherche.py` | Publie les dossiers de recherche sous `/recherche/` (noms et sections de travail retirés) et l'index de recherche |
 | `scripts/build_note_ia.py` | Reprend le texte de la note IA et jeunes dans `_data/note_ia.yml` (le PDF n'est pas publié) |
@@ -19,10 +22,10 @@ Site de travail : https://politiques-educatives.github.io/ (non indexé). Source
 | `routines/routine-mensuelle.md` | Consigne de la veille mensuelle (pull request le 17) |
 | `.github/ISSUE_TEMPLATE/feedback.yml` | Formulaire « Signaler une correction » relié à chaque fiche |
 
-Construire localement : `sh scripts/sync_boussole.sh && python3 scripts/charts.py && python3 scripts/build_recherche.py && python3 scripts/build_note_ia.py` puis `jekyll build` (ou GitHub Pages).
+Construire localement : `sh scripts/sync_boussole.sh && python3 scripts/build_politiques.py && python3 scripts/build_voie_pro.py && python3 scripts/charts.py && python3 scripts/build_recherche.py && python3 scripts/build_note_ia.py` puis `jekyll build` (ou GitHub Pages).
 Les scripts adaptés au candidat (note comms) ne sont pas publiés ici, par choix.
 
-## Générateur de notes (bouton « Générer une note »)
+## Générateur de notes (« Rédiger une note », page d'accueil)
 
 Le bouton ouvre le formulaire `.github/ISSUE_TEMPLATE/note.yml`. Si la demande vient du propriétaire (`ajoly35`), `.github/workflows/note-generator.yml` lance `scripts/note_generator.py` :
 1. recherche Gemini Flash avec Google Search ; seuls les passages rattachés à une page réellement consultée sont gardés ;

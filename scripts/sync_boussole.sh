@@ -17,3 +17,5 @@ ls "$DEST"
 # International comparison map (source: ../site/comparaisons/)
 CSRC="$HERE/../site/comparaisons"
 if [ -f "$CSRC/index.html" ]; then mkdir -p "$HERE/comparaisons"; cp "$CSRC/index.html" "$CSRC/comparaisons.js" "$HERE/comparaisons/"; ls "$HERE/comparaisons"; fi
+# Facts of the map for the « Ailleurs » sub-tabs (_data/ailleurs.json)
+python3 "$HERE/scripts/build_ailleurs.py"

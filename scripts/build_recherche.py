@@ -29,10 +29,20 @@ FILES = [  # (path under research/, slug, sujets)
     ("13-masters-surdiplomes/2026-11-18-master-as-filter-evidence.md", "13-master-as-filter-evidence", ["emploi"]),
     ("13-masters-surdiplomes/2026-11-18-france-firms-master-filter-and-solutions.md", "13-france-firms-master-filter-and-solutions", ["emploi"]),
     ("14-baisse-niveau-causes/2026-11-18-why-scores-fall.md", "14-why-scores-fall", ["ecrans"]),
+    ("16-calendrier-formation-continue/2026-11-19-calendrier-formation-continue.md", "16-calendrier-formation-continue", ["formation"]),
+    ("17-verification-idees-orientation/2026-11-19-verification.md", "17-orientation-apprentissage-preuves", ["orientation", "emploi"]),
+    ("18-ia-embauches-exposition/2026-11-19-ia-embauches-milburn.md", "18-ia-embauches-exposition", ["emploi"]),
+    ("19-mesure-risque-filieres-techniques/2026-11-19-mesure-risque.md", "19-indice-risque-filieres-techniques", []),
+    ("21-codifiabilite-portefeuille/2026-11-19-revue-codifiabilite.md", "21-codifiabilite-revue", []),
+    ("21-codifiabilite-portefeuille/2026-11-19-donnees-publiques.md", "21-codifiabilite-donnees", []),
 ]
 NAMES = re.compile(r"gavini|rufenacht|virginie|v[ée]ronique|\bmato\b|landau|lemesle|whatsapp\.com|slack\.com|drive\.google|docs\.google|"
-                   r"\b(du|le|la|au|notre|ligne de la) candidate?\b|édouard philippe|edouard philippe", re.I)
-DROP_SECTIONS = re.compile(r"proposed insertions|pistes pour la note|insertions? propos|ce que le groupe peut reprendre|lecture pour le gt", re.I)
+                   r"\b(du|le|la|au|notre|ligne de la) candidate?\b|édouard philippe|edouard philippe|\badrien\b|échange privé|note de campagne|scratchpad|/private/tmp|~/|mis de côté", re.I)
+SUBS = [(re.compile(r"\s*\((amendé|amendée) par Adrien[^)]*\)", re.I), ""),
+        (re.compile(r"\s+d'Adrien\b"), ""),
+        (re.compile(r"calcul de session", re.I), "calcul du GT"),
+        (re.compile(r",? par moi ou par un agent", re.I), "")]
+DROP_SECTIONS = re.compile(r"proposed insertions|pistes pour la note|insertions? propos|ce que le groupe peut reprendre|lecture pour le gt|reformuler la mesure|chiffres de la note de campagne|passer à la v1|prototype calculé aujourd|deming et le portefeuille", re.I)
 
 index, listing = [], []
 for path, slug, sujets in FILES:
@@ -49,6 +59,8 @@ for path, slug, sujets in FILES:
                 continue
         if skip:
             continue
+        for rx, rep in SUBS:
+            line = rx.sub(rep, line)
         if NAMES.search(line):
             print(f"[{slug}] line dropped: {line.strip()[:100]}")
             continue
