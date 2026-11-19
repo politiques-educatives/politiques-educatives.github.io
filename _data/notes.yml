@@ -1,6 +1,12 @@
 # Notes finalisées du GT publiées en PDF (assets/notes/, copiées depuis out/). Pas de versions anglaises.
-# La note IA et jeunes n'est pas publiée en PDF (choix de l'auteur) ; son texte est dans le hub IA et jeunes.
+# La note « L'IA et les jeunes » est publiée en PDF depuis la v5 (19/11/2026).
 notes:
+  - titre: "L'IA et les jeunes : ni peur ni déni, un plan"
+    fichier: EDUCATION-note-ia-jeunes-v5.pdf
+    date: "19 novembre 2026"
+    pages: 2
+    sujets: [emploi]
+    resume: "Cinq éléments de langage, notre logique, et les preuves : la transparence sur chaque formation (Boussole), ce que font les autres pays (rapport Milburn), des preuves partagées sur l'IA et l'emploi, et des voies techniques à la pointe."
   - titre: "L'allocation des heures d'enseignement, comparaison internationale et britannique"
     fichier: EDUCATION-note1-allocation-heures-enseignement.pdf
     date: "novembre 2026"
