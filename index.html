@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="tabs" role="tablist" id="tabs">
   {% for s in site.data.sujets %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-{{ s.id }}" id="t-{{ s.id }}">{{ s.court }}<span class="hits"></span></button>
-  {% endfor %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button><button class="tab" role="tab" aria-selected="false" aria-controls="p-comparaisons" id="t-comparaisons">Comparaisons internationales<span class="hits"></span></button>
+  {% endfor %}<button class="tab" role="tab" aria-selected="false" aria-controls="p-boussole" id="t-boussole">Boussole<span class="hits"></span></button><button class="tab" role="tab" aria-selected="false" aria-controls="p-comparaisons" id="t-comparaisons">International<span class="hits"></span></button>
 </div>
 <div class="gres" id="gres" hidden><p class="gcount" id="gcount"></p><div id="dossier-hits"></div></div>
 
@@ -59,4 +59,4 @@ window.BASE = "{{ '' | relative_url }}";
 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-<script src="{{ '/assets/app.js' | relative_url }}"></script>
+<script src="{{ '/assets/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
