@@ -285,6 +285,9 @@
       h += blk("Ce que nous proposons", props.map(propHTML).join("") +
         (liv.length ? '<h4>Dans le livret du programme « Croire en nous »</h4>' + liv.map(livHTML).join("") : "") +
         (aj.length ? "<h4>Ce que nos travaux ajoutent au livret</h4>" + '<ul class="ajouts">' + aj.map(function (a) { return item("li", "", a.texte, md(a.texte)); }).join("") + "</ul>" : ""), "qprop");
+    if ((q.edl || []).length) h += blk("Éléments de langage", '<ul class="edl">' + q.edl.map(function (e) {
+      return item("li", "", e.amorce + " " + e.texte, '<b>' + esc(e.amorce) + '.</b> « ' + esc(e.texte) + ' »' + '<span class="note-src"> ' + esc(e.source) + "</span>"); }).join("") +
+      '</ul><p class="note-src">À dire tels quels, sans chiffres. Les chiffres qui les appuient sont dans la section.</p>', "qedl");
     h += plusHTML(q, "Pour aller plus loin");
     return h + "</section>";
   }

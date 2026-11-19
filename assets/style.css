@@ -359,3 +359,5 @@ ol.tq{margin:2px 0 4px;padding-left:20px;font-size:.92rem}ol.tq li{margin:0 0 4p
 }
 /* eight tabs on one line at desktop width */
 @media (min-width:900px){#tabs .tab{padding:10px 9px 9px;font-size:.9rem}}
+
+.edl{list-style:none;margin:0;padding:10px 14px;border-left:3px solid #e8692e;background:#fff7f2;border-radius:6px}.edl li{margin:6px 0;line-height:1.5}.edl .note-src{display:block;margin-top:2px}

@@ -111,6 +111,8 @@ themes:
 - theme: orientation
   sections:
   - id: orienter
+    edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
+      - {amorce: "Voies de réussite", texte: "Il n'y a pas besoin d'attendre de longues années et une pile de diplômes pour entrer dans la vie active : orientons mieux, plus tôt, et valorisons toutes les voies qui mènent à un métier.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
     titre: "Comment mieux orienter, et dès quand ?"
     bref:   # note 3, partie 2
       - "La première décision tombe en fin de 3e : 38,6 % des élèves du public entrent en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale ; DEPP, 2025)."
@@ -140,6 +142,9 @@ themes:
     dossiers: [13-master-as-filter-evidence, 13-masters-job-market, 13-france-firms-master-filter-and-solutions, 17-orientation-apprentissage-preuves]
     blocs: [masters]
   - id: debouches
+    edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
+      - {amorce: "Transparence", texte: "Nous devons dire la vérité aux jeunes : chaque formation doit afficher clairement l'emploi, le salaire et ce que l'IA change, pour permettre à chacun de choisir en connaissance de cause.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
+      - {amorce: "Aux familles", texte: "L'État ne promet pas de deviner quels métiers existeront demain, il promet de dire la vérité aux familles sur les débouchés de chaque formation. Dès le collège et le lycée, chacun pourra choisir sa voie en connaissance de cause, vers des filières solides. Et si un métier évolue, personne ne restera sans solution pour rebondir.", source: "Note « Filières techniques, IA et concurrence chinoise », GT Éducation, novembre 2026"}
     titre: "Les familles savent-elles où mène chaque formation ?"
     bref:   # note 3, partie 1 ; fiche orient-debouches (preuves) ; fiche hastings-2015
       - "Quand l'examen ne dit plus la vérité, ce sont les familles qui ont le réseau et l'information qui savent quelles formations mènent quelque part."
@@ -154,6 +159,8 @@ themes:
     sources: [insersup, hastings-2015, hoxby-turner-2013, deming-2017]
     dossiers: [06-index-ia-formations]
   - id: ia
+    edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
+      - {amorce: "Outil d'apprentissage", texte: "Être exposé à l'IA ne veut pas dire être remplacé : tout dépend de la façon dont on s'en sert, car bien utilisée, l'IA aide justement les débutants à apprendre plus vite.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
     titre: "L'IA et l'emploi des débutants"
     bref:
       - {note_ia: constat.0}
@@ -174,6 +181,9 @@ themes:
 - theme: voiepro
   sections:
   - id: filieres
+    edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
+      - {amorce: "Sécurité du parcours", texte: "Comme on ne met pas tous ses œufs dans le même panier, chaque jeune a droit à un socle solide, un vrai savoir-faire technique et la possibilité de se reformer.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
+      - {amorce: "Sur la technologie", texte: "Être exposé à une nouvelle technologie ne veut pas dire être remplacé par elle. C'est le plus souvent l'occasion de mieux exercer son métier et de gagner en qualification, à condition d'y être préparé dès l'école.", source: "Note « Filières techniques, IA et concurrence chinoise », GT Éducation, novembre 2026"}
     titre: "Les filières qui restent un bon choix"
     bref:
       - {vp: bref.0}
@@ -192,6 +202,9 @@ themes:
     voiepro_plus: [chine]
     sources: [hosseini-2026]
   - id: pointe
+    edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
+      - {amorce: "Ambition industrielle", texte: "Nous avons besoin de la jeunesse pour bâtir l'industrie française de demain, avec des filières techniques à la pointe face à la concurrence internationale, notamment chinoise, où personne ne reste sans solution.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
+      - {amorce: "Aux élèves des voies pro", texte: "On a besoin de vous pour bâtir l'industrie française de demain. Une usine qui se modernise ne se passe pas de ses techniciens et de ses ouvriers, elle s'appuie sur leur maîtrise des nouvelles machines pour conquérir des marchés. Choisir un métier technique aujourd'hui, c'est choisir d'être au cœur de la production de demain.", source: "Note « Filières techniques, IA et concurrence chinoise », GT Éducation, novembre 2026"}
     titre: "Mettre la voie pro à la pointe"
     bref:   # note « filières techniques » du 19/11/2026 (constat et proposition 3, non publiée en PDF) ; fiche orient-transparence (preuves)
       - "Dans l'industrie française, une usine qui s'équipe en machines modernes embauche davantage, y compris des ouvriers non qualifiés, et gagne des parts de marché face à ses concurrents étrangers (Aghion, Antonin, Bunel et Jaravel, 2023)."
