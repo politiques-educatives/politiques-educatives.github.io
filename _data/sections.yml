@@ -35,7 +35,7 @@ themes:
     chiffre: {graphique: heures}
     graphiques_plus: [formation]
     carte: {theme: temps, pays: SCO, faits: [f16, f18, f11, f27]}
-    propositions: [heures-service-annuel, heures-emploi-du-temps, heures-dotation, heures-mercredi, heures-charge]
+    propositions: [heures-service-annuel, heures-emploi-du-temps, heures-dotation, heures-mercredi, heures-charge, lfi-heures-dues, lfi-budget-temps, lfi-postes-difficiles, lfi-manuels-papier]
     livret: ["65", "72", "71"]
     sources: [ocde-heures-2026, stpcd-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, nickow-2020, kraft-2024, guryan-2023, ntp-nfer, apfee, eef-setting, steenbergen-2016, duflo-2011]
     dossiers: [02-groupes-niveau-tutorat, 08-formation-enseignants, 10-brief-formation-continue-enseignants, 16-calendrier-formation-continue]

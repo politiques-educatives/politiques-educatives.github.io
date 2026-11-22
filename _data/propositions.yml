@@ -519,3 +519,61 @@
   maj_le: 2026-11-22
   sujets: [emploi]
   issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+# ---------- Inspirées des propositions de J. Le Floch-Imad (« Main basse sur l'Éducation nationale », 2025), vérifiées par le GT (22/11/2026) : research/29-atelier-gt/le-floch-imad-*
+- id: lfi-heures-dues
+  theme: Temps des professeurs
+  titre: "Assurer chaque heure de cours : réunions hors classe, vivier de remplaçants volontaires, transparence trimestrielle"
+  explication: "En 2023-2024, 9 % des heures ne sont pas assurées au collège public, dont un tiers pour motifs institutionnels, et le remplacement court ne couvre que 11,7 % des besoins (Cour des comptes, 2025, p. 11, 14, 47-48). Inspirée des propositions de Joachim Le Floch-Imad, la mesure place réunions et formations hors classe, publie les heures perdues et crée un vivier de remplaçants volontaires payés à l'heure, sans aucune heure imposée. Les retraités sollicités en 2024 ayant peu répondu (Cour des comptes, 2025, p. 96), ils resteront un appoint."
+  preuves:
+    - "9 % des heures d'enseignement non assurées dans les collèges publics en 2023-2024, dont 8 % par non-remplacement ; 11 % en éducation prioritaire contre 8 % ailleurs (Cour des comptes, 2025, p. 14)"
+    - "Les absences institutionnelles (formation, concours, projets) représentent 36 % des absences de courte durée et le tiers du temps d'enseignement perdu (Cour des comptes, 2025, p. 11)"
+    - "Taux d'efficacité du remplacement de courte durée : 11,7 % en 2024-2025, pour une cible ministérielle de 36 % (Cour des comptes, 2025, p. 47-48)"
+    - "Coût des heures d'enseignement non assurées dans le second degré public : 2,58 Md€ en 2024, dont environ la moitié pour motifs institutionnels (Cour des comptes, 2025, p. 55)"
+    - "En éducation prioritaire, un point d'heures non assurées en plus est associé à 0,061 point de moins à l'écrit du DNB ; effet significatif mais de faible ampleur, corrélation et non effet causal (Cour des comptes, 2025, p. 77)"
+    - "Le ministère a sollicité des enseignants retraités en 2024 ; « peu ont répondu à l'appel » (Cour des comptes, 2025, p. 96) : le vivier de retraités est un appoint, pas la solution"
+    - "Coût : à chiffrer (heures payées du vivier ; la Cour estime à 119 M€ le coût du remplacement de courte durée en 2024, p. 55) ; repère : 2,58 Md€ d'heures payées mais non assurées"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [formation]
+  issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"
+
+- id: lfi-budget-temps
+  theme: Temps des professeurs
+  titre: "Protéger le temps des fondamentaux et confier les tâches administratives aux personnels de soutien"
+  explication: "Au collège, les enseignants déclarent 37,2 heures de travail hebdomadaire dont 19,0 heures de cours (TALIS 2024), alors qu'à Chicago, une double heure d'algèbre a amélioré les résultats des élèves en difficulté (Cortes, Goodman et Nomi, 2015). Inspirée des propositions de Joachim Le Floch-Imad, la mesure impose que toute nouvelle certification ou « éducation à » indique l'heure qu'elle remplace, hors français et mathématiques, et transfère les tâches administratives aux personnels de soutien. Aucune heure de cours n'est imposée en plus aux enseignants, et le transfert devra être chiffré en postes de soutien."
+  preuves:
+    - "Chicago, double heure d'algèbre pour les élèves sous la médiane : +0,15 écart-type à l'ACT et +8,6 points d'entrée dans le supérieur (Cortes, Goodman et Nomi, 2015, déjà dans research/02)"
+    - "Collège : 37,2 h de travail déclarées par semaine, dont 19,0 h de cours, contre 38,5 h dans l'OCDE (TALIS 2024, vérifié dans etablissement-verification.md)"
+    - "Coût : à budget constant pour la règle de budget-temps ; transfert des tâches à chiffrer (temps de secrétariat et d'assistants d'éducation)"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [formation]
+  issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"
+
+- id: lfi-postes-difficiles
+  theme: Temps des professeurs
+  titre: "Flécher une part des +20 % vers les professeurs expérimentés engagés trois ans en poste difficile"
+  explication: "En éducation prioritaire, 11 % des heures de cours sont perdues contre 8 % ailleurs (Cour des comptes, 2025, p. 10 et 64), dans un système où un enseignant du primaire à 10 ans d'ancienneté gagne 17 % de moins que dans l'OCDE (CAE, Note n° 84, 2025, p. 2). Inspirée des propositions de Joachim Le Floch-Imad, la mesure verse une prime annuelle majorée et un bonus mutation aux professeurs expérimentés volontaires pour trois ans en REP+ ou rural isolé, sans engagement imposé. Financée dans les +20 %, elle devra être évaluée par la DEPP, faute d'évaluation causale existante de la prime REP+."
+  preuves:
+    - "En éducation prioritaire, 11 % des heures de cours ne sont pas assurées en 2023-2024, contre 8 % ailleurs ; les enseignants y sont plus souvent absents pour santé et pour raisons institutionnelles (Cour des comptes, 2025, p. 10 et 64)"
+    - "Aucune évaluation causale de la prime REP+ n'a été trouvée"
+    - "Un enseignant du primaire à 10 ans d'ancienneté est payé 17 % de moins que ses homologues de l'OCDE (CAE, Note n° 84, 2025, p. 2)"
+    - "Coût : à budget constant dans l'enveloppe des +20 % (livret N°65) ; part fléchée et montant de la prime à chiffrer"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [formation]
+  issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"
+
+- id: lfi-manuels-papier
+  theme: Temps des professeurs
+  titre: "Garantir un manuel papier par élève dans les fondamentaux, du CP à la 3e, avec label facultatif"
+  explication: "Les communes financent aujourd'hui les manuels du primaire. Inspirée des propositions de Joachim Le Floch-Imad, la mesure garantit un manuel imprimé financé par l'État en français et mathématiques du CP à la 3e (et histoire au collège), avec un label facultatif qui laisse toute liberté pédagogique et n'impose aucune heure aux enseignants. Elle maintient en complément les outils numériques évalués, les tablettes du Plan numérique de 2015 ayant relevé les acquis de +9 à 12 % d'écart-type en mathématiques et +14 à 25 % en français (Azmat et al., 2022, DEPP, cité par CAE, Note n° 84, p. 9)."
+  preuves:
+    - "Prise de notes à la main : l'avantage trouvé par Mueller et Oppenheimer (2014) n'est pas répliqué ; 145 étudiants, différences faibles et non significatives (Urry et al., 2021, Psychological Science)"
+    - "Tablettes individuelles du Plan numérique de 2015 : +9 à 12 % d'écart-type en mathématiques et +14 à 25 % en français entre la fin de 5e et l'entrée en seconde (Azmat et al., 2022, DEPP, cité par CAE, Note n° 84, p. 9)"
+    - "Coût : à chiffrer (nombre d'élèves du CP à la 3e multiplié par le prix des manuels, moins les dotations existantes)"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [formation]
+  issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"

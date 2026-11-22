@@ -30,10 +30,10 @@ for p in L:
            f"- Citation : « {d.get('citation')} »", ""]
 # Propositions pour les manques « jeunes » du livret (research/26-lacunes-jeunes/<slug>-propositions.json, même protocole)
 import glob
-for f in sorted(glob.glob(os.path.join(HERE, "..", "research", "26-lacunes-jeunes", "*-propositions.json"))):
+for f in sorted(glob.glob(os.path.join(HERE, "..", "research", "26-lacunes-jeunes", "*-propositions.json"))) + [os.path.join(HERE, "..", "research", "29-atelier-gt", "le-floch-imad-propositions.json")]:
     for d in json.load(open(f, encoding="utf-8")):
         c = d.get("cas_etranger") or {}
-        if not c:
+        if not c or d["id"] in ("lfi-budget-temps",):  # cas étranger non vérifié
             continue
         s = c.get("source", {})
         keep = {k: c.get(k) for k in ["pays", "politique", "type_preuve", "chiffre", "comparaison", "implication", "explication", "citation", "lu", "confiance", "aucun_exemple"]}

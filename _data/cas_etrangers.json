@@ -700,5 +700,59 @@
    "url": "https://docs.iza.org/dp12478.pdf",
    "page": "résumé (abstract)"
   }
+ },
+ "lfi-heures-dues": {
+  "pays": "États-Unis",
+  "politique": "Mesure de l'effet des absences d'enseignants remplacés par des suppléants, écoles de la ville de New York",
+  "type_preuve": "causale",
+  "chiffre": "Un jour de classe avec un remplaçant fait perdre autant d'apprentissage que remplacer un enseignant moyen par un enseignant du 10e au 20e centile ; la perte par jour est plus faible pour les absences longues.",
+  "comparaison": "Mêmes enseignants et mêmes classes, années avec et sans absences (effets fixes) ; données administratives sur plusieurs années",
+  "implication": "soutient",
+  "explication": "Le temps de cours manqué ou assuré par un inconnu coûte en apprentissages, et surtout pour les absences courtes. C'est précisément là que la France remplace le moins (11,7 %). D'où la priorité donnée aux absences courtes évitables (institutionnelles) et à un vivier de remplaçants qui connaissent l'établissement.",
+  "citation": "the expected loss in daily productivity from employing a temporary substitute is on par with replacing a regular worker of average productivity with one at the 10th-20th percentile of productivity",
+  "lu": "résumé",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Herrmann M. et Rockoff J. (2012), « Worker Absence and Productivity: Evidence from Teaching », Journal of Labor Economics 30(4), 749-782",
+   "url": "https://www.nber.org/papers/w16524",
+   "page": "résumé"
+  }
+ },
+ "lfi-postes-difficiles": {
+  "pays": "États-Unis",
+  "politique": "Talent Transfer Initiative : 20 000 dollars sur deux ans aux enseignants à forte valeur ajoutée qui acceptent un poste dans une école à faibles résultats",
+  "type_preuve": "causale",
+  "chiffre": "À l'élémentaire, +4 à +10 centiles en lecture et en mathématiques selon l'année ; aucun effet au collège ; les enseignants restent pendant la prime, beaucoup partent ensuite.",
+  "comparaison": "Essai randomisé : postes vacants tirés au sort entre offre de prime et recrutement habituel",
+  "implication": "condition",
+  "explication": "La prime marche à l'école élémentaire et tant qu'elle dure : d'où une prime annuelle versée chaque année de présence, et une priorité au primaire. L'effet au collège n'est pas établi.",
+  "citation": "The 80 transfer teachers significantly raised scores in both math and reading in elementary grades",
+  "lu": "résumé",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Glazerman S., Protik A., Teh B., Bruch J. et Max J. (2013), Transfer Incentives for High-Performing Teachers: Final Results from a Multisite Randomized Experiment, NCEE 2014-4003, Mathematica/IES",
+   "url": "https://www.mathematica.org/publications/transfer-incentives-for-highperforming-teachers-final-results-from-a-multisite-randomized-experiment",
+   "page": "résumé"
+  }
+ },
+ "lfi-manuels-papier": {
+  "pays": "Suède",
+  "politique": "Retour aux manuels imprimés : subvention de l'État aux écoles pour acheter manuels et guides de l'enseignant, après une décennie de priorité au numérique",
+  "type_preuve": "institutionnelle",
+  "chiffre": "755 millions de couronnes en 2024 puis 555 millions par an, selon le gouvernement suédois (février 2024)",
+  "comparaison": "Descriptif : pas encore d'évaluation de l'effet sur les élèves",
+  "implication": "condition",
+  "explication": "La Suède a constaté que beaucoup d'écoles n'avaient pas assez de manuels et finance leur achat. L'effet n'est pas encore évalué : la France doit prévoir une évaluation par la DEPP, en commençant par l'éducation prioritaire.",
+  "citation": "For 2025, the Government is proposing an additional SEK 200 million, which means the government grant comprises SEK 755 million and then SEK 555 million annually",
+  "lu": "extrait (via recherche)",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Gouvernement suédois (février 2024), Government investing in more reading time and less screen time",
+   "url": "https://government.se/articles/2024/02/government-investing-in-more-reading-time-and-less-screen-time/",
+   "page": "article"
+  }
  }
 }
