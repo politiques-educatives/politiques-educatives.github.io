@@ -226,6 +226,7 @@ themes:
     chiffre: {graphique: emploi6mois}
     carte: {theme: apprentissage, pays: ENG, faits: [f206, f207, f205, f176]}
     propositions: [ia-marche]
+    notes: [EDUCATION-note-ecole-entreprise.pdf]
   reste: {}
 
 # Montré dans « Tout le reste » de chaque thème (sert à tous les thèmes).

@@ -1,6 +1,12 @@
 # Notes finalisées du GT publiées en PDF (assets/notes/, copiées depuis out/). Pas de versions anglaises.
 # La note « L'IA et les jeunes » est publiée en PDF depuis la v5 (19/11/2026).
 notes:
+  - titre: "Apprendre avec ceux qui savent : écoles, entreprises et seniors à l'heure de l'IA"
+    fichier: EDUCATION-note-ecole-entreprise.pdf
+    date: "22 novembre 2026"
+    pages: 3
+    sujets: [emploi]
+    resume: "Pour les jeunes : le réseau que leurs parents n'ont pas, un adulte payé pour leur apprendre le métier dès le premier jour, un projet qu'ils choisissent, et d'abord savoir faire seul, puis plus vite avec l'IA. Sept mesures en pilotes évalués : sections lycée-branche, rencontres avec des professionnels, diplômes écrits avec ceux qui les enseignent, tuteurs payés, binômes junior-senior, projets et portfolio."
   - titre: "Gagner du temps de vie : le premier salaire plus tôt, à l'heure de l'IA"
     fichier: EDUCATION-note-temps-de-vie.pdf
     date: "22 novembre 2026"
