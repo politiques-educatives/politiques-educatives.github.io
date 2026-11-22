@@ -28,6 +28,17 @@ for p in L:
            f"- Chiffre : {d.get('chiffre')} ; comparé à : {d.get('comparaison')}",
            f"- Source : {s.get('ref')}, {s.get('page')}, {s.get('url')}",
            f"- Citation : « {d.get('citation')} »", ""]
+# Propositions pour les manques « jeunes » du livret (research/26-lacunes-jeunes/<slug>-propositions.json, même protocole)
+import glob
+for f in sorted(glob.glob(os.path.join(HERE, "..", "research", "26-lacunes-jeunes", "*-propositions.json"))):
+    for d in json.load(open(f, encoding="utf-8")):
+        c = d.get("cas_etranger") or {}
+        if not c:
+            continue
+        s = c.get("source", {})
+        keep = {k: c.get(k) for k in ["pays", "politique", "type_preuve", "chiffre", "comparaison", "implication", "explication", "citation", "lu", "confiance", "aucun_exemple"]}
+        keep["source"] = {"ref": s.get("ref"), "url": s.get("url"), "page": s.get("page")}
+        out[d["id"]] = keep
 json.dump(out, open(os.path.join(HERE, "_data", "cas_etrangers.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 open(os.path.join(R, "2026-11-19-synthese.md"), "w", encoding="utf-8").write("\n".join(md))
 print(len(out), "cas")

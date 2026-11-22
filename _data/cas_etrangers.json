@@ -448,5 +448,257 @@
    "url": "https://eprints.bournemouth.ac.uk/36219/",
    "page": "p. 1 (résumé), p. 2-3 (introduction) de la version acceptée"
   }
+ },
+ "batiments-inventaire-public": {
+  "pays": "Royaume-Uni (Angleterre)",
+  "politique": "Condition Data Collection : inspection visuelle de toutes les écoles publiques par le ministère, note de A à D par élément, données publiées école par école en 2023",
+  "type_preuve": "institutionnelle",
+  "chiffre": "22 031 écoles inspectées (99,8 %) en 2017-2019, besoin de remise en état chiffré à 11,4 Md£ ; 700 000 élèves dans une école qui doit être reconstruite ou lourdement rénovée",
+  "comparaison": "Descriptif : couverture de l'inventaire contre l'ensemble des écoles publiques ; le NAO compare les écoles au plus fort besoin mesuré et les candidatures déposées (345 sur 1 000 sans candidature)",
+  "implication": "condition",
+  "explication": "L'Angleterre montre qu'un inventaire national complet, publié école par école, est faisable en deux à trois ans. Le NAO montre aussi sa limite : si l'argent reste attribué sur candidature, une partie des écoles les plus dégradées n'en profite pas. L'inventaire doit donc commander l'attribution des aides.",
+  "citation": "The Government has published school-level data for the first Condition Data Collection (CDC1).",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "DfE (2021), « Condition of School Buildings Survey CDC1, key findings report » ; lettre de Baroness Barran au Parlement, 20/07/2023 (DEP2023-0618) ; National Audit Office (2023), « Condition of school buildings », HC 1516",
+   "url": "https://data.parliament.uk/DepositedPapers/Files/DEP2023-0618/Collection.pdf",
+   "page": "lettre p. 1 ; CDC1 p. 4 et 6 ; NAO p. 7 et 32"
+  }
+ },
+ "batiments-fonds-chaleur-air": {
+  "pays": "États-Unis",
+  "politique": "Obligations scolaires (school bonds) votées par les électeurs des districts pour financer les bâtiments, dans 29 États",
+  "type_preuve": "causale",
+  "chiffre": "+0,08 écart-type (district) pour 1 000 $ de dépense cumulée dans les districts pauvres, aucun effet détectable dans les districts aisés ; +0,27 écart-type pour les projets de chauffage-ventilation-climatisation dans les districts pauvres ; les équipements sportifs font monter les prix des logements (+17 %) mais pas les scores",
+  "comparaison": "Districts où l'obligation a été votée de justesse contre districts où elle a été rejetée de justesse, avec dates échelonnées",
+  "implication": "soutient",
+  "explication": "La plus grande étude disponible réconcilie les résultats mitigés : l'argent des bâtiments fait progresser les élèves quand il va aux systèmes de base et aux districts pauvres. Cela appuie un fonds ciblé sur la chaleur, l'air et les polluants dans les écoles REP. Limite : la climatisation est plus répandue aux États-Unis, et les effets sont mesurés au niveau du district, environ trois fois plus petits au niveau de l'élève.",
+  "citation": "authorizing a bond to fund HVAC systems increases test scores by 0.27 sd in low-SES districts but leaves them unaffected in high-SES districts",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Biasi, B., Lafortune, J. et Schönholzer, D. (2024), « What Works and for Whom? Effectiveness and Efficiency of School Capital Investments Across the U.S. », NBER Working Paper 32040 ; publié dans le Quarterly Journal of Economics 140(3), 2025",
+   "url": "https://www.nber.org/papers/w32040",
+   "page": "p. 25 et 27 (numérotation imprimée), note 18 p. 12"
+  }
+ },
+ "batiments-ddec-perequation": {
+  "pays": "Royaume-Uni (Angleterre)",
+  "politique": "School Condition Allocations : crédits d'entretien des bâtiments répartis par formule entre les responsables d'écoles",
+  "type_preuve": "institutionnelle",
+  "chiffre": "1 089 M£ répartis en 2022-23 par une formule fondée sur le nombre d'élèves, le type d'école et les données d'état du bâti",
+  "comparaison": "Descriptif : formule fondée sur les besoins mesurés, contre la DDEC française figée sur les montants historiques",
+  "implication": "soutient",
+  "explication": "L'Angleterre indexe une partie de ses crédits d'entretien sur l'état mesuré des bâtiments et le nombre d'élèves. C'est le principe que nous proposons pour la DDEC. Aucune évaluation ne dit si cette formule améliore l'état des écoles ou les résultats.",
+  "citation": "The formula uses indicators of condition need including pupil numbers",
+  "lu": "texte intégral",
+  "confiance": "faible",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "National Audit Office (2023), « Condition of school buildings », HC 1516, figure 8",
+   "url": "https://www.nao.org.uk/wp-content/uploads/2023/06/condition-of-school-buildings.pdf",
+   "page": "p. 33"
+  }
+ },
+ "disc-testing-grands-employeurs": {
+  "pays": "États-Unis",
+  "politique": "Testing répété de 108 des plus grands employeurs (Fortune 500) puis bulletin public classant 97 entreprises nommément",
+  "type_preuve": "causale",
+  "chiffre": "Un nom afro-américain réduit la probabilité de contact de 2,1 points (9 %) ; le quintile le plus discriminant concentre près de la moitié des contacts perdus ; 23 entreprises identifiées ; écart moyen de 24 % dans la pire catégorie du bulletin contre 3 % dans la meilleure",
+  "comparaison": "Candidatures fictives identiques sauf le nom (afro-américain ou blanc), plus de 83 000 candidatures envoyées au hasard, comparaison entre entreprises",
+  "implication": "soutient",
+  "explication": "Un testing répété et assez large identifie des entreprises précises avec un faible risque d'erreur. Cela justifie un contrôle ciblé et une publication par catégories. L'étude mesure la discrimination mais n'évalue pas l'effet de la publication.",
+  "citation": "Distinctively Black names reduce the probability of employer contact by 2.1 percentage points relative to distinctively white names.",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Kline, P., Rose, E. et Walters, C. (2022), « Systemic Discrimination Among Large U.S. Employers », Quarterly Journal of Economics 137(4) (NBER WP 29053) ; et (2024), « A Discrimination Report Card », American Economic Review 114(8) (NBER WP 32313)",
+   "url": "https://www.nber.org/system/files/working_papers/w29053/w29053.pdf",
+   "page": "WP 29053 : résumé et p. 12 ; WP 32313 : p. 4"
+  }
+ },
+ "disc-apprentissage-stages": {
+  "pays": "États-Unis",
+  "politique": "Contrôles de l'OFCCP (office fédéral) sur les entreprises sous contrat fédéral, soumises à des obligations d'égalité à l'embauche",
+  "type_preuve": "causale",
+  "chiffre": "72 des 108 grandes entreprises testées sont des contractants fédéraux ; leurs écarts de contact selon la race sont « substantiellement plus faibles »",
+  "comparaison": "Écarts de contact mesurés par testing, contractants fédéraux comparés aux autres grandes entreprises (corrélation, pas effet causal du statut)",
+  "implication": "nuance",
+  "explication": "Les employeurs qui reçoivent de l'argent public sous condition de contrôle discriminent moins. Cela appuie l'idée de lier l'aide à l'apprentissage à l'acceptation des tests. Mais le testing est causal, pas le lien avec le statut de contractant.",
+  "citation": "Federal contractors exhibit substantially smaller contact gaps, perhaps reflecting the stronger regulatory standards to which they are held",
+  "lu": "texte intégral",
+  "confiance": "faible",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Kline, P., Rose, E. et Walters, C. (2022), « Systemic Discrimination Among Large U.S. Employers », Quarterly Journal of Economics 137(4) (NBER WP 29053)",
+   "url": "https://www.nber.org/system/files/working_papers/w29053/w29053.pdf",
+   "page": "p. 24"
+  }
+ },
+ "disc-inspection-tests": {
+  "pays": "Belgique",
+  "politique": "Pouvoir de test (appels mystère, candidatures fictives) des inspecteurs sociaux : Région de Bruxelles-Capitale (2017), État fédéral (2018, article 42/1 du Code pénal social), assoupli par la loi du 1er avril 2022",
+  "type_preuve": "institutionnelle",
+  "chiffre": "Inspection bruxelloise : 4 tests en 2018, 2 en 2019, 0 en 2020, 2 en 2021 ; inspection fédérale : 2 tests en tout au 1er janvier 2022",
+  "comparaison": "Nombre de tests réalisés depuis la création du pouvoir (avant/après, pas de groupe témoin)",
+  "implication": "condition",
+  "explication": "Le test n'était permis qu'après plainte et avec des indices objectifs : il n'a presque jamais été utilisé. Le pouvoir de test ne sert que s'il peut être déclenché à partir de données, comme les testings statistiques.",
+  "citation": "quatre tests réalisés en 2018, deux en 2019, aucun en 2020 et deux en 2021",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Neven, J.-F., Ringelheim, J. et van der Plancke, V. (2022), « Les tests de situation et la méthode du client-mystère comme outils de détection et de preuve des discriminations », CRIDHO Working Paper 2022-5, UCLouvain",
+   "url": "https://sites.uclouvain.be/cridho/documents/Working.Papers/CRIDHO-WP-2022-5_Neven-Ringelheim-vanderPlancke_Tests%20situation.pdf",
+   "page": "p. 20 et suivantes"
+  }
+ },
+ "bourses-bareme-lineaire": {
+  "pays": "Allemagne",
+  "politique": "BAföG : aide fédérale aux étudiants dont le montant baisse de façon continue avec le revenu des parents (pas d'échelons)",
+  "type_preuve": "institutionnelle",
+  "chiffre": "2 540 € par mois de revenu parental (couple) non comptés, puis seulement 50 % du revenu au-dessus de ce montant pris en compte",
+  "comparaison": "Règle de calcul de la loi, comparée aux huit échelons français ; pas d'évaluation causale du barème",
+  "implication": "soutient",
+  "explication": "Un grand pays européen calcule son aide aux étudiants par une formule continue, sans marche d'escalier. Cela montre que la linéarisation est faisable à grande échelle. Ce n'est pas une preuve d'effet : l'argument d'efficacité vient des études françaises et américaines.",
+  "citation": "bleibt anrechnungsfrei 1. zu 50 vom Hundert und 2. zu 5 vom Hundert für jedes Kind",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Bundesausbildungsförderungsgesetz (BAföG), § 25 Freibeträge vom Einkommen der Eltern und des Ehegatten oder Lebenspartners",
+   "url": "https://www.gesetze-im-internet.de/baf_g/__25.html",
+   "page": "§ 25, al. 1 et 4"
+  }
+ },
+ "residences-etudiantes-zones-tendues": {
+  "pays": "Pays-Bas",
+  "politique": "Plan national de logement étudiant 2022-2030 (Landelijk Actieplan Studentenhuisvesting) : État, villes universitaires, établissements et bailleurs visent 60 000 logements étudiants abordables",
+  "type_preuve": "institutionnelle",
+  "chiffre": "30 000 à 35 000 logements neufs en quatre ans (environ 5 000 par an) pour un objectif de 60 000 en 2030",
+  "comparaison": "Avancement par rapport à l'objectif du plan ; évaluation intermédiaire sans mesure d'effet",
+  "implication": "condition",
+  "explication": "Le plan néerlandais avance à environ la moitié du rythme visé, comme le plan 60 000 français. Surtout, les logements neufs sont en partie annulés par des bailleurs privés qui vendent après des hausses d'impôts sur la location. Un programme de résidences ne marche que si l'on ne réduit pas en même temps l'offre locative privée.",
+  "citation": "de nieuwbouw die sinds het LAS is toegevoegd (orde 30.000 tot 35.000 eenheden) wordt deels tenietgedaan door de krimp van de particuliere voorraad",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Tussenevaluatie Landelijk Actieplan Studentenhuisvesting. Bestuurlijk-inhoudelijke evaluatie 2026, 7 juillet 2026 (document transmis à la Tweede Kamer)",
+   "url": "https://www.tweedekamer.nl/downloads/document?id=2026D40636",
+   "page": "p. 1, 6 et 9"
+  }
+ },
+ "emplois-etudiants-campus": {
+  "pays": "États-Unis",
+  "politique": "Federal Work-Study : emplois étudiants subventionnés par l'État fédéral, souvent sur le campus, attribués selon le besoin",
+  "type_preuve": "causale",
+  "chiffre": "+3,2 points de probabilité d'obtenir une licence en six ans ; 11 heures de travail par semaine contre 18 pour les autres étudiants salariés",
+  "comparaison": "Appariement sur score de propension : participants contre non-participants comparables ; effets séparés selon que l'étudiant aurait travaillé ailleurs ou pas du tout",
+  "implication": "soutient",
+  "explication": "Pour les étudiants qui auraient de toute façon travaillé, l'emploi subventionné réduit les heures et améliore les résultats. Pour ceux qui n'auraient pas travaillé, l'effet s'inverse. Il faut donc cibler les boursiers qui travaillent déjà longtemps hors du campus. Méthode par appariement, moins solide qu'un essai randomisé.",
+  "citation": "about half of FWS participants are inframarginal workers, for whom FWS reduces hours worked and improves academic outcomes",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Scott-Clayton, J. et Minaya, V. (2016), « Should Student Employment Be Subsidized? Conditional Counterfactuals and the Outcomes of Work-Study Participation », Economics of Education Review 52 ; NBER WP 20329 (2014)",
+   "url": "https://www.nber.org/papers/w20329.pdf",
+   "page": "résumé, p. 4 et p. 11 du WP"
+  }
+ },
+ "j-emploi-tutore": {
+  "pays": "Royaume-Uni",
+  "politique": "Kickstart (2020-2022) : emplois de six mois financés par l'État pour les 16-24 ans au crédit universel",
+  "type_preuve": "causale",
+  "chiffre": "11 jeunes de plus sur 100 en emploi non aidé 24 mois après ; 6 850 £ par entrée pour l'État, qui récupère 0,27 £ par livre dépensée à deux ans ; 163 000 postes",
+  "comparaison": "Participants comparés à des jeunes éligibles qui n'ont pas commencé (appariement sur score de propension)",
+  "implication": "soutient",
+  "explication": "Un emploi subventionné de six mois chez un employeur aide durablement les jeunes chômeurs à trouver un emploi. Le coût net pour l'État reste élevé à deux ans : il faut cibler les jeunes les plus éloignés de l'emploi.",
+  "citation": "For the Exchequer, Kickstart makes a return of £0.27 for every pound spent at two years",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "DWP (2024), Kickstart scheme: a quantitative impact assessment",
+   "url": "https://www.gov.uk/government/publications/kickstart-scheme-a-quantitative-impact-assessment/kickstart-scheme-a-quantitative-impact-assessment",
+   "page": "résumé ; tableaux 4.3 et 4.4"
+  }
+ },
+ "j-prime-conditionnelle": {
+  "pays": "Suède",
+  "politique": "Baisse permanente des cotisations patronales sur les jeunes (2007-2015), de 31,4 % à 15,5 %",
+  "type_preuve": "causale",
+  "chiffre": "+2,1 points d'emploi des jeunes, pour 0,8 % du PIB par an, soit 64 569 à 113 943 dollars par emploi et par an",
+  "comparaison": "Jeunes éligibles comparés à des salariés un peu plus âgés non éligibles",
+  "implication": "nuance",
+  "explication": "Une baisse générale et durable des cotisations des jeunes crée des emplois, mais à un coût par emploi très élevé. C'est l'argument pour une aide temporaire et conditionnée à la création nette d'emplois plutôt qu'une baisse permanente.",
+  "citation": "the per-job year cost was $113,943 during the medium run",
+  "lu": "texte intégral",
+  "confiance": "élevée",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Saez, Schoefer et Seim (2019), American Economic Review 109(5) ; Saez, Schoefer et Seim (2021), Journal of Public Economics 200",
+   "url": "https://eml.berkeley.edu/~saez/saez-schoefer-seimJPUBE21hysteresis.pdf",
+   "page": "AER p. 1723 et 1735 ; JPubE p. 12"
+  }
+ },
+ "stages-garantie-rep": {
+  "pays": "Angleterre",
+  "politique": "Rapport Milburn (2026) : expérience de travail rendue obligatoire pour les écoles, mise en relation par le Youth Opportunity Service quand l'école ne trouve pas assez de places, obligation pour les administrations d'offrir des places aux élèves",
+  "type_preuve": "institutionnelle",
+  "chiffre": "58 % des élèves font une expérience de travail entre 14 et 16 ans ; 81 % de ceux qui en trouvent une l'organisent eux-mêmes ou par leur famille ; 78 % des personnels scolaires citent les relations familiales comme principale source d'inégalité.",
+  "comparaison": "Descriptif : comparaison entre élèves selon leur réseau familial, pas d'évaluation causale du placement lui-même.",
+  "implication": "condition",
+  "explication": "L'Angleterre fait le même constat que la DEPP : l'accès passe par la famille. Le rapport en tire la même réponse, une obligation pour l'école et une mise en relation publique, avec les administrations en premier. Il n'existe pas d'évaluation causale de l'effet d'un stage d'observation sur le parcours ; la mesure se justifie par l'égalité d'accès et doit être évaluée.",
+  "citation": "Of those who secure a placement, 81 per cent arrange it themselves or through their family",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Milburn A. (2026), From a Welfare State to a Working State: a new settlement for the next generation, Department for Work and Pensions, 17 novembre 2026",
+   "url": "https://assets.publishing.service.gov.uk/media/6afb1fc5ccb3ea58ac8743c1/from-a-welfare-state-to-a-working-state-full-report.pdf",
+   "page": "p. 50 (§ 236), aussi p. 15 (§ 65), p. 62 (§ 293), p. 68 (§ 316)"
+  }
+ },
+ "stages-jobs-ete": {
+  "pays": "États-Unis (New York)",
+  "politique": "Summer Youth Employment Program (SYEP) : emplois d'été pour les 14-21 ans, payés par la ville, attribués par loterie quand les candidats dépassent les places",
+  "type_preuve": "causale",
+  "chiffre": "Incarcération en baisse de 0,098 point (9,93 % du niveau du groupe témoin) et mortalité en baisse de 0,073 point (17,97 %) ; légère baisse des salaires pendant les trois années suivantes ; aucun effet sur l'entrée dans le supérieur.",
+  "comparaison": "Gagnants contre perdants des loteries d'accès au programme (2005-2008), données fiscales, pénitentiaires et de décès.",
+  "implication": "nuance",
+  "explication": "Le job d'été protège les jeunes, surtout les garçons, mais ne leur ouvre pas un meilleur emploi ensuite. La mesure tient sur l'argument de sécurité et de première expérience, pas sur l'insertion. Contexte très différent de la France (violence armée, système pénal), d'où une confiance moyenne.",
+  "citation": "SYEP participation decreases the probability of incarceration and decreases the probability of mortality",
+  "lu": "texte intégral",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Gelber A., Isen A. et Kessler J. B. (2016), « The Effects of Youth Employment: Evidence from New York City Lotteries », Quarterly Journal of Economics 131(1), p. 423-460",
+   "url": "https://users.nber.org/~kesslerj/papers/GelberIsenKessler_2016.pdf",
+   "page": "résumé (p. 1) et introduction (p. 4-5)"
+  }
+ },
+ "stages-superieur-boursiers": {
+  "pays": "Allemagne",
+  "politique": "Stages en entreprise obligatoires dans certains cursus universitaires selon l'université et la filière",
+  "type_preuve": "causale",
+  "chiffre": "Environ 6 % de salaire en plus quelques années après le diplôme, et moins de chômage la première année de carrière.",
+  "comparaison": "Variable instrumentale : diplômés dont le cursus imposait un stage contre diplômés dont le cursus ne l'imposait pas (enquêtes longitudinales de diplômés), mêmes résultats en moindres carrés.",
+  "implication": "soutient",
+  "explication": "Le stage en entreprise paie, surtout pour les étudiants de filières peu tournées vers l'emploi. Cela justifie de garantir l'accès aux étudiants sans réseau plutôt que de laisser le stage aux mieux entourés. L'étude mesure l'effet du stage, pas celui d'une garantie de placement.",
+  "citation": "we find positive and significant earnings returns of about 6% in both OLS and IV regressions",
+  "lu": "résumé",
+  "confiance": "moyenne",
+  "aucun_exemple": null,
+  "source": {
+   "ref": "Margaryan S., Saniter N., Schumann M. et Siedler T. (2019), « Do Internships Pay Off? The Effects of Student Internships on Earnings », IZA DP 12478 ; publié dans Journal of Human Resources 57(4), 2022, p. 1242-1275",
+   "url": "https://docs.iza.org/dp12478.pdf",
+   "page": "résumé (abstract)"
+  }
  }
 }

@@ -62,6 +62,11 @@ themes:
     propositions: [gouv-evaluation]
     sources: [ofsted-2025, evaluation-etablissements-fr]
     dossiers: [03-inspection-evaluation]
+  - id: batiments
+    titre: "L'état des bâtiments scolaires"
+    bref:   # même encadré (outils IA et jeunes, 21/11/2026)
+      - "État des écoles : aucune mesure sur la rénovation des bâtiments scolaires dans le livret."
+    propositions: [batiments-inventaire-public, batiments-fonds-chaleur-air, batiments-ddec-perequation]
   reste:
     livret: ["66"]
 
@@ -173,8 +178,15 @@ themes:
     ajouts: [a-garantie]
     sources: [lift-2026, canaries-2025, humlum-2025, insee-ic-2026, orr-2026, milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026, cae-91]
     dossiers: [18-ia-embauches-exposition, 12-milburn-review]
-    notes: [EDUCATION-note-ia-jeunes-v5.pdf, EDUCATION-note-rapport-milburn.pdf]
+    notes: [EDUCATION-note-ia-jeunes-v6.pdf, EDUCATION-note-ia-jeunes-v5.pdf, EDUCATION-note-rapport-milburn.pdf]
     blocs: [note_ia]
+  - id: jeunes
+    titre: "Que proposer aux jeunes sur l'emploi, les stages, les études et les discriminations ?"
+    bref:   # encadré « Ce que le programme ne dit pas encore aux jeunes », notes/parler-ia-jeunes/2026-11-21-outils-ia-jeunes.md (Gemini, vérifié)
+      - "Le livret « Croire en nous » contient des mesures pour la jeunesse, mais il ne répond pas aux inquiétudes exprimées par les jeunes sur le terrain : le manque d'emplois et de stages, le coût de la vie et l'état des écoles."
+      - "Premier emploi et chômage : aucune mesure sur l'embauche des débutants, le chômage des jeunes ou les jeunes sans emploi ni formation. Stages et discriminations : les mots n'apparaissent pas dans le livret."
+      - "Salaire face au loyer : rien de spécifique pour les jeunes, les bourses ou le logement étudiant."
+    propositions: [j-emploi-tutore, j-prime-conditionnelle, stages-garantie-rep, stages-jobs-ete, stages-superieur-boursiers, bourses-bareme-lineaire, residences-etudiantes-zones-tendues, emplois-etudiants-campus, disc-testing-grands-employeurs, disc-apprentissage-stages, disc-inspection-tests]
   reste:
     blocs: [comms]
 

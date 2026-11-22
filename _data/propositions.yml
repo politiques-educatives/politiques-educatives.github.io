@@ -304,3 +304,218 @@
   maj_le: 2026-11-18
   sujets: [ecrans]
   issue_de: "Note sur un tuteur IA pour l'Éducation nationale (octobre 2026)"
+
+# ---------- Ce que le livret ne dit pas encore aux jeunes (22/11/2026) : research/26-lacunes-jeunes (protocole, ledgers, un cas étranger par proposition)
+# Textes : Gemini 4 Carbon à partir des fiches de recherche ; preuves reprises des fiches (chiffres vérifiés dans les ledgers).
+- id: j-emploi-tutore
+  theme: Premier emploi des jeunes
+  titre: "Un emploi tutoré de six mois en entreprise pour les jeunes sans emploi ni formation"
+  explication: "En entreprise privée, un contrat aidé augmente de 23 points l'accès à un emploi non aidé deux ans et demi plus tard (Cour des comptes, 2018, p. 140). L'État financera une partie du salaire d'un emploi de six mois avec tuteur en entreprise privée, réservé aux jeunes restés 6 à 12 mois sans emploi ni formation. Comme ces contrats ne créent que 0,1 emploi net par embauche (Cour des comptes, 2018, p. 141), ils seront ciblés uniquement sur ces jeunes éloignés de l'emploi."
+  preuves:
+    - "Contrats aidés du secteur marchand (CIE) : +23 points d'emploi non aidé deux ans et demi après l'entrée, par rapport à des personnes comparables sans contrat (Cour des comptes, 2018, p. 140)"
+    - "Mais 0,1 emploi net créé par contrat financé : la plupart des embauches auraient eu lieu sans aide (Cour des comptes, 2018, p. 141)"
+    - "Coût : à chiffrer"
+  statut: à chiffrer
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: j-prime-conditionnelle
+  theme: Premier emploi des jeunes
+  titre: "Une prime d'embauche temporaire, versée seulement si l'effectif augmente, quand le chômage des jeunes monte"
+  explication: "Le chômage des 15-24 ans atteint 21,0 % au 3e trimestre 2026 (Insee, 2026), mais une aide générale finance à 84 % des embauches qui auraient eu lieu sans elle (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 25). Nous proposons une prime temporaire aux petites entreprises, déclenchée au-dessus d'un seuil de chômage des jeunes et arrêtée à la décrue. Versée uniquement si l'effectif de l'entreprise augmente, elle crée 4,4 fois plus d'emplois à budget égal (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 27)."
+  preuves:
+    - "Zéro charges (2009, entreprises de moins de 10 salariés) : 84 % des embauches aidées auraient eu lieu sans l'aide (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 25)"
+    - "Conditionnée à la hausse de l'effectif, la même enveloppe aurait créé 4,4 fois plus d'emplois (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 27)"
+    - "Chômage des 15-24 ans : 21,0 % au 3e trimestre 2026 (Insee, 2026)"
+    - "Coût : nul hors période de déclenchement ; seuil et montant à chiffrer"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: stages-garantie-rep
+  theme: Stages
+  titre: "Garantir par l'établissement un stage de 3e et de seconde à chaque élève d'éducation prioritaire"
+  explication: "Deux tiers des stages passent par l'entourage, contre 4 % par l'établissement, et 41 % des enfants d'ouvriers cherchent sans proches (Guichard, DEPP, 2026). Comme l'accompagnement seul ne suffit pas (L'Horty, Duguet et Petit, 2012) et que moins de 10 000 des 33 000 offres dédiées ont trouvé preneur (circulaire du Premier ministre, 31/07/2019), recteurs et préfets réuniront des places publiques et privées. Les établissements de REP, REP+ et ruraux isolés affecteront directement les élèves restés sans stage à une date butoir, avec déploiement évalué par tirage au sort."
+  preuves:
+    - "Deux tiers des stages de 3e et de seconde sont trouvés grâce à la famille ou à l'entourage, 4 % grâce à l'établissement (Guichard, DEPP, 2026)"
+    - "41 % des enfants d'ouvriers trouvent leur stage sans l'aide de proches, contre 24 % des enfants de cadres (Guichard, DEPP, 2026)"
+    - "En REP/REP+, 12 % des stages sont trouvés par l'établissement contre 3 % ailleurs (Guichard, DEPP, 2026)"
+    - "Moins de 10 000 des 33 000 offres de la plateforme REP+ pourvues en 2018-2019 (circulaire du Premier ministre, 31/07/2019)"
+    - "Accompagnement à la recherche de stage en éducation prioritaire, tirage au sort de classes (550 élèves) : aucun effet sur l'accès au stage, mais 48,8 % contre 38,3 % d'élèves confortés dans leur choix d'orientation (L'Horty, Duguet et Petit, 2012)"
+    - "Angleterre : 81 % des placements organisés par l'élève ou sa famille ; le rapport recommande une obligation légale et un service public de mise en relation (Milburn, 2026, p. 15, 50 et 62)"
+    - "Coût : à chiffrer (temps d'un référent stages par établissement ; places publiques à coût marginal faible)"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: stages-jobs-ete
+  theme: Stages
+  titre: "Financer un job d'été de six semaines pour les lycéens des quartiers prioritaires"
+  explication: "À Chicago, des jobs d'été tirés au sort ont réduit de 43 % les arrestations pour violence chez les lycéens (Heller, 2014). L'État et les collectivités financeront six semaines d'emploi tutoré au salaire minimum, 25 heures par semaine, pour les 16-18 ans des quartiers prioritaires. C'est une piste à tester par tirage au sort, conçue pour la sécurité et une première expérience, car ces dispositifs n'améliorent pas l'emploi formel ultérieur (Davis et Heller, 2017, résumé J-PAL)."
+  preuves:
+    - "Chicago, 1 634 lycéens tirés au sort : 43 % d'arrestations pour violence en moins sur 16 mois par rapport au groupe témoin (Heller, 2014)"
+    - "Chicago 2012 : 35 % d'arrestations pour violence en moins sur un an, aucun effet sur l'emploi formel ni la scolarité, 45 % d'arrestations pour vol en plus (Davis et Heller, 2017, résumé J-PAL)"
+    - "New York, 294 100 participants aux loteries : incarcération en baisse de 9,93 % et mortalité de 17,97 % par rapport au groupe témoin, mais salaires légèrement plus bas les trois années suivantes (Gelber, Isen et Kessler, 2016)"
+    - "Coût à Chicago : environ 3 000 dollars par participant (Davis et Heller, résumé J-PAL)"
+    - "Coût : à chiffrer pour la France (repère : environ 3 000 dollars par participant à Chicago, salaires et encadrement compris)"
+  statut: piste
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: stages-superieur-boursiers
+  theme: Stages
+  titre: "Garantir par l'établissement un stage en entreprise aux étudiants boursiers restés sans place"
+  explication: "Un stage pendant les études augmente le salaire d'environ 6 % en Allemagne (Margaryan, Saniter, Schumann et Siedler, 2019), mais en France 26 % des étudiants le trouvent par leur réseau social (SIES, 2017, données Céreq Génération 2010). Chaque formation exigeant un stage attribuera aux boursiers sans solution à une date butoir une place chez ses entreprises partenaires, et publiera la part de stages fournis et gratifiés. Aucune étude n'évaluant encore cette garantie, c'est une piste à tester."
+  preuves:
+    - "Allemagne : environ 6 % de salaire en plus après un stage en entreprise pendant les études, estimé en utilisant les stages obligatoires de certains cursus (Margaryan, Saniter, Schumann et Siedler, 2019)"
+    - "États-Unis, testing par CV : une expérience de stage augmente de 14 % (2,2 points) le taux de convocation à un entretien (Nunley, Pugh, Romero et Seals, 2015)"
+    - "26 % des étudiants trouvent leur stage par leur réseau social ; père en emploi : +7 points de probabilité d'avoir fait un stage (SIES, 2017, données Céreq Génération 2010)"
+    - "61 % des sortants de BTS-DUT ont fait un dernier stage court et non gratifié (SIES, 2017)"
+    - "Coût : à chiffrer"
+  statut: piste
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: bourses-bareme-lineaire
+  theme: "Étudiants : bourses et logement"
+  titre: "Remplacer les échelons des bourses étudiantes par un barème continu et indexé sur les prix"
+  explication: "Le nombre de boursiers a reculé à 662 000 en 2024-2025 (Sénat, 2025), alors qu'être éligible à 1 500 € par an augmente jusqu'à 5 points l'inscription et la réussite en master (Fack et Grenet, 2015). Le ministère remplacera les huit échelons par une formule continue indexée sur les prix, supprimant les effets de seuil. Ce barème, chiffré entre 350 et 400 M€ par an (Sénat, avis n° 144, 2025, p. 15), sera financé en recentrant les APL étudiantes et en supprimant la réduction d'impôt pour frais de scolarité."
+  preuves:
+    - "Jusqu'à +5 points d'inscription ou de réinscription pour l'éligibilité à 1 500 € par an, contre les candidats juste au-dessus du seuil (Fack et Grenet, 2015)"
+    - "+5 points d'obtention du diplôme pour les entrants en master, jusqu'à +3 points en dernière année, même comparaison (Fack et Grenet, 2015)"
+    - "+2 points (13 %) de diplômés en quatre ans et +5 à 8 % de salaire pour environ 711 $ de bourse en plus, contre les étudiants juste au-dessus du seuil ; dépense remboursée par l'impôt en dix ans (Denning, Marx et Turner, 2019)"
+    - "662 000 boursiers en 2024-2025, plus bas depuis 2015, recul de 2,6 % en un an (Sénat, 2025)"
+    - "31 % des boursiers touchent moins de 150 € par mois (Sénat, 2025)"
+    - "Coût : 350 à 400 M€ par an selon le ministère (Sénat, avis n° 144, 2025, p. 15), soit 15 à 17 % des 2,32 Md€ de crédits de bourses 2026 ; gain des financements proposés à chiffrer"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: residences-etudiantes-zones-tendues
+  theme: "Étudiants : bourses et logement"
+  titre: "Construire les résidences étudiantes sociales d'abord dans les villes sous 5 places pour 100 étudiants"
+  explication: "À Paris, on compte 3 places sociales pour 100 étudiants contre 8,2 en moyenne, pour un reste à charge de 375 € dans le privé contre 100 € dans le social (Cour des comptes, 2025). L'État, les Crous et les universités construiront des résidences à loyer plafonné dans les villes sous 5 places pour 100 étudiants, sur des terrains publics cédés gratuitement, avec compensation des places perdues. Augmenter l'offre contient les loyers (Grislain-Letrémy et Trevien, 2022), alors qu'une hausse d'aide au logement les relève (Fack, 2006)."
+  preuves:
+    - "Reste à charge après APL à Paris en 2023 : 375 € par mois dans le privé contre 100 € dans le parc social (Cour des comptes, 2025)"
+    - "3 places à vocation sociale pour 100 étudiants à Paris contre 13 à Orléans et 8,2 en moyenne nationale (Cour des comptes, 2025)"
+    - "Plan 60 000 : 37 435 places livrées en 2018-2022 (62 % de l'objectif), 33 600 nettes (56 %), 11 000 places perdues par les réhabilitations (Cour des comptes, 2025)"
+    - "Une hausse d'aide au logement relève le loyer des nouveaux allocataires de 78 centimes par euro, contre une situation sans réforme (Fack, 2006)"
+    - "Là où l'offre de studios a augmenté par la construction neuve, les loyers des petits logements ont cessé de monter malgré l'extension des APL (Grislain-Letrémy et Trevien, 2022)"
+    - "Coût : À chiffrer ; repère : 4,9 Md€ de construction pour 69 300 places nettes entre 2012 et 2023, dont 607 M€ de subventions directes, soit environ 71 000 € par place (Cour des comptes, 2025, p. 12)"
+  statut: à chiffrer
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: emplois-etudiants-campus
+  theme: "Étudiants : bourses et logement"
+  titre: "Créer des emplois étudiants sur le campus de 15 heures maximum, d'abord pour les boursiers"
+  explication: "Près de la moitié des étudiants, 44 %, travaillent pendant l'année (OVE, 2023), ce qui réduit fortement leurs chances de réussir, surtout au-delà de 16 heures hebdomadaires (Beffy, Fougère et Maurel, 2009). À l'inverse, des emplois courts sur le campus aux États-Unis augmentent de 3,2 points l'obtention de la licence (Scott-Clayton et Minaya, 2016). Les universités et les Crous recruteront prioritairement des boursiers jusqu'à 15 heures par semaine, adaptées aux cours et cofinancées par l'État : une piste à tester."
+  preuves:
+    - "Sans leur emploi, les étudiants salariés auraient eu 43 points de probabilité de plus de réussir leur année, effet plus fort au-delà de 16 heures par semaine (Beffy, Fougère et Maurel, 2009)"
+    - "+3,2 points de licence en six ans pour les participants au Federal Work-Study contre des non-participants comparables ; 11 heures par semaine contre 18 pour les autres étudiants salariés (Scott-Clayton et Minaya, 2016)"
+    - "Uruguay, loterie : pas d'effet sur les notes et +4 points d'inscription deux ans après pour les élèves tirés au sort, contre les non-tirés (Le Barbanchon, Ubfal et Araya, 2023)"
+    - "44 % des étudiants ont une activité rémunérée pendant l'année (OVE, 2023)"
+    - "Coût : À chiffrer"
+  statut: piste
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: batiments-inventaire-public
+  theme: Bâtiments scolaires
+  titre: "Inspecter et publier l'état de chaque école, collège et lycée public bâtiment par bâtiment"
+  explication: "L'Assemblée nationale n'a pu obtenir d'état des lieux complet du bâti scolaire (rapport n° 1974, 2023, p. 42-43), et le dossier amiante manque dans la moitié des écoles du panel ministériel (question n° 5405, 2025, citant le ministère). En cinq ans, l'État et les collectivités inspecteront tous les établissements publics pour publier une note de A à D, la température, le CO2, l'amiante et l'énergie. Cet inventaire permettra de cibler les aides sur les besoins réels, même si l'effet propre de la publication reste non mesuré."
+  preuves:
+    - "L'Assemblée n'a pas pu obtenir un état des lieux complet du bâti scolaire et recommande un observatoire (rapport n° 1974, 2023, p. 42-43)"
+    - "54 % des collectivités suivies par ÉduRénov n'ont qu'une vision partielle de leur patrimoine scolaire ; une sur cinq découvre un bâti plus dégradé que prévu (ÉduRénov, 2025, p. 9 ; échantillon non représentatif)"
+    - "Le dossier technique amiante, obligatoire, n'existe que dans la moitié des écoles du panel du ministère, contre 100 % exigés (question n° 5405, 2025, citant le ministère)"
+    - "En Angleterre, 345 des 1 000 écoles au plus fort besoin n'avaient pas candidaté au programme de reconstruction (NAO, 2023, p. 32)"
+    - "Aucune étude causale ne mesure l'effet de la publication elle-même"
+    - "Coût : à chiffrer (coût des inspections anglaises CDC non trouvé)"
+  statut: à chiffrer
+  maj_le: 2026-11-22
+  sujets: [formation]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: batiments-fonds-chaleur-air
+  theme: Bâtiments scolaires
+  titre: "Créer un fonds d'État pour la chaleur, l'air et les sanitaires des écoles défavorisées"
+  explication: "D'ici 2030, 9,4 millions d'élèves subiront de fortes chaleurs (ÉduRénov, 2025), alors que rénover le chauffage et la ventilation améliore les résultats scolaires dans les quartiers pauvres (Biasi, Lafortune et Schönholzer, 2024) et que baisser le CO2 accélère de 12 % le travail scolaire (Wargocki et al., 2020, revue). L'État financera à 90 %, en REP+ puis REP selon l'inventaire national, les travaux thermiques, de ventilation, de sanitaires et de dépollution. Le fonds exclura les dépenses sans effet prouvé et sera évalué par vagues."
+  preuves:
+    - "Projets de chauffage-ventilation-climatisation : +0,27 écart-type de district (environ +0,09 écart-type élève) dans les districts pauvres, aucun effet dans les districts aisés (Biasi, Lafortune et Schönholzer, 2024)"
+    - "Sans climatisation, une année plus chaude de 1 °F réduit l'apprentissage de l'année d'environ 1 %, par rapport au même élève lors d'un autre passage du test (Goodman et al., 2020)"
+    - "Quatre ans dans un bâtiment neuf : +0,1 écart-type en maths et environ 4 jours de présence en plus par an, par rapport aux mêmes élèves avant (Lafortune et Schönholzer, 2019)"
+    - "Baisser le CO2 de 2 100 à 900 ppm : +12 % de vitesse aux tests et tâches scolaires (Wargocki et al., 2020, revue)"
+    - "Contre-exemples : près de 1 400 campagnes texanes sans effet sur les résultats (Martorell et al., 2016) ; Building Schools for the Future sans effet de court terme (Thomson, 2016)"
+    - "9,4 millions d'élèves français exposés à 2 à 8 jours de fortes chaleurs par an d'ici 2030, 2 à 5 fois plus qu'en 1976-2005 (ÉduRénov, 2025)"
+    - "Coût : à chiffrer ; repères : rénovation 300 à 1 700 €/m² (Sénat, 2023) ; 52 Md€ sur dix ans pour toutes les écoles publiques (estimation ministérielle citée par le Sénat, 2023)"
+  statut: à chiffrer
+  maj_le: 2026-11-22
+  sujets: [formation]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: batiments-ddec-perequation
+  theme: Bâtiments scolaires
+  titre: "Répartir la dotation d'équipement des collèges selon le nombre d'élèves et l'état du bâti"
+  explication: "Figée depuis 2009, la dotation d'équipement de l'État couvre 9,28 % des investissements des collèges en Seine-Saint-Denis contre 84,25 % dans les Ardennes (Cour des comptes, 2023). À enveloppe constante d'environ 280 M€ par an, l'État la répartira selon le nombre de collégiens, leur origine sociale et l'état des bâtiments issu de l'inventaire, avec une transition pour les départements perdants. Recommandée par la Cour des comptes (2023, recommandation n° 3), cette piste à tester n'a pas encore fait l'objet d'évaluation causale."
+  preuves:
+    - "La DDEC couvre 9,28 % des investissements de la Seine-Saint-Denis contre 15,61 % en moyenne et 84,25 % dans les Ardennes, sur 2015-2019 (Cour des comptes, 2023)"
+    - "La Cour des comptes recommande de renforcer la péréquation de la DDEC au profit des départements aux besoins les plus importants (2023, recommandation n° 3)"
+    - "Aucune évaluation causale d'une telle réforme"
+    - "Coût : nul à enveloppe constante (environ 280 M€ par an, calcul GT d'après la Cour des comptes, 2023, tableau n° 1)"
+  statut: piste
+  maj_le: 2026-11-22
+  sujets: [formation]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: disc-testing-grands-employeurs
+  theme: Discriminations à l'embauche
+  titre: "Tester chaque année par candidatures fictives les employeurs de plus de 1 000 salariés"
+  explication: "À candidature égale, un nom maghrébin reçoit 31,5 % de rappels en moins qu'un nom français (Insee Références, 2023, p. 50). Une autorité indépendante fera tester chaque année par des chercheurs tous les employeurs publics et privés de plus de 1 000 salariés sur l'origine et l'adresse, stages et alternances compris, avant publication des résultats après un délai de correction de douze mois. Ce contrôle sera annuel, car l'effet d'un simple avertissement disparaît après quinze mois (Défenseur des droits, 2019, p. 4 et 8 ; logement)."
+  preuves:
+    - "22,8 % de rappels pour un nom maghrébin contre 33,3 % pour un nom français, soit 31,5 % de moins, 9 600 candidatures (Insee Références, 2023, p. 50)"
+    - "Environ 20 % de réponses en moins dans 103 très grandes entreprises, 17 163 demandes ; près de 30 % avec contrôles (Challe, Chareyron, L'Horty et Petit, 2020, p. 19)"
+    - "Courrier d'avertissement après test : écart de 1,49 point contre 11,45 dans le groupe témoin à 9 mois, effet disparu à 15 mois (Défenseur des droits, 2019, p. 4 et 8 ; logement)"
+    - "Formation des recruteurs : aucun effet, écart de près de 50 % avant comme après, 202 entreprises formées contre 606 témoins (Challe et al., 2025, p. 3-4)"
+    - "CV anonyme : taux d'entretien des candidats de minorités de 9,3 % à 4,7 %, écart creusé de 10,7 points par rapport au CV nominatif (Behaghel, Crépon et Le Barbanchon, 2015 ; IZA 2014, p. 13-14)"
+    - "Coût : 80 000 à 100 000 € par campagne de testing sur un critère dans un domaine (Assemblée nationale, rapport n° 1903, 2023, p. 56) ; précédent de 3 M€ ajoutés à la Dilcrah en 2024 ; coût total du programme à chiffrer"
+  statut: proposition
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: disc-apprentissage-stages
+  theme: Discriminations à l'embauche
+  titre: "Tester les offres d'apprentissage et de stage et avertir nommément les employeurs qui discriminent"
+  explication: "Pour trouver un apprentissage en restauration, il faut contacter 30 établissements avec un nom maghrébin contre 17 avec un nom français (Anne et al., 2025, p. 1), tandis qu'aucun écart n'apparaît chez les apprenties comptables (Anne et al., 2024, p. 2). L'État fera tester chaque année un échantillon d'offres de stage et d'apprentissage sur les plateformes publiques, d'abord dans les secteurs en tension. Les employeurs présentant un écart recevront un courrier nominatif, efficace à neuf mois (Défenseur des droits, 2019, p. 4), avant un nouveau test."
+  preuves:
+    - "Apprentissage en restauration : 17 restaurants contactés pour une réponse positive avec un nom français contre 30 avec un nom maghrébin, écart relatif de 46 %, 947 restaurants (Anne et al., 2025, p. 1)"
+    - "Apprenties comptables : pas d'écart selon l'origine, 2 000 PME parisiennes (Anne et al., 2024, p. 2)"
+    - "47 % des 18-34 ans jugent les discriminations fréquentes dans la recherche de stage (Défenseur des droits et OIT, 2021, p. 4)"
+    - "Courrier d'avertissement : plus d'écart significatif à 3 et 9 mois dans les agences averties, contre un écart constant chez les témoins (Défenseur des droits, 2019, p. 4)"
+    - "Coût : 80 000 à 100 000 € par campagne sur un critère dans un domaine (Assemblée nationale, rapport n° 1903, p. 56) ; coût annuel selon le nombre de secteurs à chiffrer"
+  statut: à chiffrer
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
+
+- id: disc-inspection-tests
+  theme: Discriminations à l'embauche
+  titre: "Autoriser l'inspection du travail à tester d'office les employeurs pour constater les discriminations"
+  explication: "Seules 15 % des personnes discriminées à l'embauche engagent une démarche (Défenseur des droits, décembre 2025, p. 6), et aucune condamnation pénale n'a été prononcée en 2020 (Sénat, rapport de CMP n° 525, 2024, p. 4). Les inspecteurs du travail pourront réaliser des candidatures fictives et appels mystère de leur propre initiative, sans attendre une plainte, en ciblant leurs contrôles grâce aux testings statistiques. Aucune évaluation causale ne mesurant encore ce pouvoir, il s'agit d'une piste à tester."
+  preuves:
+    - "15 % des personnes discriminées à l'embauche engagent une démarche, en 2024 (Défenseur des droits, décembre 2025, p. 6)"
+    - "Aucune condamnation pénale pour discrimination en 2020, selon le rapporteur de la proposition de loi sur les tests (Sénat, rapport de CMP n° 525, 2024, p. 4)"
+    - "Aucune évaluation causale de ce pouvoir d'inspection trouvée"
+    - "Coût : à chiffrer"
+  statut: piste
+  maj_le: 2026-11-22
+  sujets: [emploi]
+  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
