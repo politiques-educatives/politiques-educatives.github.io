@@ -53,24 +53,6 @@
    "page": "p. 5 (introduction, version NBER)"
   }
  },
- "heures-mercredi": {
-  "pays": "États-Unis (Oregon)",
-  "politique": "Passage de districts scolaires de la semaine de cinq jours à la semaine de quatre jours (avec des journées allongées), 2007-2015.",
-  "type_preuve": "causale",
-  "chiffre": "Baisse de 0,044 à 0,053 écart-type en maths et de 0,033 à 0,038 en lecture ; effets plus forts pour les garçons et, en lecture, pour les élèves pauvres. Les journées s'allongent d'environ 38 minutes, mais le temps scolaire hebdomadaire baisse de 3,6 heures.",
-  "comparaison": "Double différence : élèves des écoles passées à quatre jours, avant et après le changement, comparés aux élèves des écoles restées à cinq jours.",
-  "implication": "soutient",
-  "explication": "La seule évaluation causale proche montre que la semaine de quatre jours fait baisser les résultats, surtout ceux des élèves les plus fragiles, ce qui va dans le sens d'un retour à neuf demi-journées. Le contexte diffère : en Oregon, le passage à quatre jours retire aussi du temps d'enseignement, qui explique environ un tiers de la baisse en maths avec effets fixes élèves ; en France les 24 heures ont été conservées. L'argument porte donc sur l'organisation de la semaine autant que sur le volume.",
-  "citation": "I find that these school schedules have detrimental impacts on student achievement, with declines of between 0.044 and 0.053 standard deviations in math scores",
-  "lu": "résumé",
-  "confiance": "moyenne",
-  "aucun_exemple": "",
-  "source": {
-   "ref": "Thompson P. N. (2019), « Effects of Four-Day School Weeks on Student Achievement: Evidence from Oregon », IZA Discussion Paper 12204 ; publié sous le titre « Is four less than five? Effects of four-day school weeks on student achievement in Oregon », Journal of Public Economics, 193, 104308 (2021).",
-   "url": "https://docs.iza.org/dp12204.pdf",
-   "page": "Résumé (p. 3 du PDF IZA) ; mécanismes et conclusion p. 19-21"
-  }
- },
  "heures-charge": {
   "pays": "Angleterre",
   "politique": "Enquête annuelle du ministère (DfE) Working Lives of Teachers and Leaders, menée chaque année depuis 2022 auprès des enseignants et chefs d'établissement des écoles publiques, qui suit les heures travaillées et l'acceptabilité de la charge, en parallèle de l'objectif de réduction de la charge du groupe de travail de 2024.",
@@ -105,24 +87,6 @@
    "ref": "Glazerman S., Protik A., Teh B., Bruch J. et Max J. (2013), Transfer Incentives for High-Performing Teachers: Final Results from a Multisite Randomized Experiment, Executive Summary, NCEE 2014-4004, Institute of Education Sciences (US Department of Education), Mathematica Policy Research.",
    "url": "https://ies.ed.gov/sites/default/files/migrated/nces_pubs/ncee/pubs/20144003/pdf/20144004.pdf",
    "page": "p. ES-1 (principaux résultats) ; p. ES-3 (recrutement par le chef d'école)"
-  }
- },
- "gouv-coordinateurs": {
-  "pays": "États-Unis (Chicago)",
-  "politique": "Chicago TAP (Teacher Advancement Program, 2007-2011) : enseignants mentors (prime de 7 000 dollars, 1 à 5 heures sans élèves par semaine) et enseignants référents (15 000 dollars, deux heures de cours par jour), réunions hebdomadaires d'équipe (cluster groups), observations régulières, primes de performance ; mise en place tirée au sort entre écoles.",
-  "type_preuve": "causale",
-  "chiffre": "Aucun effet détectable et robuste sur les résultats en maths, lecture et sciences sur quatre ans ; fidélisation dans l'école : 67 % des enseignants de la première cohorte encore présents trois ans plus tard, contre environ 56 % dans les écoles comparables (près de 12 points).",
-  "comparaison": "Écoles tirées au sort pour commencer un an plus tôt comparées aux écoles commençant un an plus tard ; pour la fidélisation, écoles appariées par score de propension.",
-  "implication": "nuance",
-  "explication": "Chicago a créé l'échelon proposé, des enseignants mentors et référents déchargés pour animer des équipes et observer, et l'a évalué avec tirage au sort. Le dispositif a accru le mentorat et retenu davantage d'enseignants, mais n'a pas relevé les résultats des élèves en quatre ans, avec une mise en œuvre jugée peu rigoureuse. Pour notre proposition : créer le poste ne suffit pas ; il faut fixer le contenu du travail (observation structurée, tutorat) et suivre la fidélité de la mise en œuvre.",
-  "citation": "these changes did not, in turn, pay off in terms of higher student achievement within the four-year rollout period in Chicago.",
-  "lu": "résumé",
-  "confiance": "moyenne",
-  "aucun_exemple": "",
-  "source": {
-   "ref": "Glazerman S. et Seifullah A. (2012), An Evaluation of the Chicago Teacher Advancement Program (Chicago TAP) After Four Years, Final Report, Mathematica Policy Research pour la Joyce Foundation, mars 2012.",
-   "url": "https://files.eric.ed.gov/fulltext/ED530098.pdf",
-   "page": "p. xi-xiv (résumé exécutif) ; p. 25 (décharges des mentors et référents)"
   }
  },
  "gouv-visite": {
@@ -395,60 +359,6 @@
    "page": "p. 6-7 (dispositif), p. 9 (paiements), p. 10-11 (leçons), p. 17 (résultat)"
   }
  },
- "formation-deux-temps": {
-  "pays": "Royaume-Uni (Angleterre)",
-  "politique": "Embedding Formative Assessment (SSAT, conçu par Dylan Wiliam) : une journée de lancement pour l'enseignant référent, puis 18 ateliers mensuels d'équipe de 75 à 90 minutes (Teacher Learning Communities) sur le temps de formation habituel et des observations entre pairs, pendant deux ans",
-  "type_preuve": "causale",
-  "chiffre": "Effet de 0,10 écart-type sur le score Attainment 8 au GCSE (intervalle -0,01 à 0,21, significatif au seuil de 10 %), soit deux mois de progrès ou environ une note de GCSE dans une matière ; 0,13 dans les écoles sans programme antérieur similaire ; coût 1,20 £ par élève et par an, environ deux heures par mois de temps enseignant.",
-  "comparaison": "Essai randomisé par établissement : 140 collèges-lycées, 25 393 élèves, contre des écoles témoins sans le programme (qui recevaient 300 £).",
-  "implication": "soutient",
-  "explication": "Un lancement court suivi de réunions d'équipe régulières dans le temps de service, sur un seul programme, améliore les résultats des élèves à l'examen national, pour un coût très faible. C'est le même format que la proposition, mais l'effet est modeste et n'apparaît pas en anglais et en maths pris séparément. L'atelier mensuel d'équipe est le cœur du dispositif, ce qui plaide pour protéger l'heure d'équipe plus que les jours d'août.",
-  "citation": "Students in the Embedding Formative Assessment schools made the equivalent of two additional months’ progress in their Attainment 8 GCSE score",
-  "lu": "texte intégral",
-  "confiance": "élevée",
-  "aucun_exemple": "",
-  "source": {
-   "ref": "Speckesser, S., Runge, J., Foliano, F., Bursnall, M., Hudson-Sharp, N., Rolfe, H. et Anders, J. (2018), « Embedding Formative Assessment: Evaluation report and executive summary », Education Endowment Foundation / NIESR",
-   "url": "https://dera.ioe.ac.uk/id/eprint/32012/",
-   "page": "p. 4-5 (résumé exécutif, tableau 1), p. 6 (dispositif)"
-  }
- },
- "l1-credits": {
-  "pays": "États-Unis",
-  "politique": "Transfert de crédits entre community colleges (cycles courts de deux ans) et universités de quatre ans, sans garantie nationale de reconnaissance",
-  "type_preuve": "causale",
-  "chiffre": "58 % des étudiants transférés gardent la quasi-totalité (90 % ou plus) de leurs crédits, 14 % en perdent plus de 90 % ; ceux qui gardent presque tout ont 2,5 fois plus de chances d'obtenir la licence (BA) que ceux qui en gardent moins de la moitié ; sans perte de crédits, le taux d'obtention passerait de 46 % à 54 %.",
-  "comparaison": "Étudiants passés d'un community college à une université, comparés selon la part de crédits reconnus (enquête nationale BPS:04, cohorte suivie six ans) ; méthode exacte de contrôle de la sélection non vérifiée, l'article n'ayant pas été lu.",
-  "implication": "soutient",
-  "explication": "La perte de crédits au changement d'établissement réduit fortement l'obtention du diplôme, et plus la perte est forte, plus la chance de finir baisse : c'est l'argument central d'une reconnaissance de droit. Le gain chiffré (8 points de diplômés) est une simulation des auteurs, pas l'effet mesuré d'une réforme. Contexte différent : transferts entre établissements américains, pas réorientations après la L1.",
-  "citation": "Students who have all or almost all their credits transferred are 2.5 times more likely to earn a BA",
-  "lu": "résumé",
-  "confiance": "faible",
-  "aucun_exemple": "",
-  "source": {
-   "ref": "Monaghan, D. B. et Attewell, P. (2015), « The Community College Route to the Bachelor's Degree », Educational Evaluation and Policy Analysis 37(1), p. 70-91 ; résultats lus dans le communiqué de l'AERA du 19 mars 2014",
-   "url": "https://www.aera.net/Newsroom/News-Releases-and-Statements/Study-Community-College-Transfers-as-Likely-to-Earn-a-BA-as-Four-Year-Students-Despite-Credit-Transfer-Roadblocks",
-   "page": "communiqué (une page) ; article non lu"
-  }
- },
- "apprentissage-ciblage": {
-  "pays": "Royaume-Uni (Angleterre)",
-  "politique": "Financement public de l'apprentissage ouvert à tous les âges et aux salariés déjà en poste (« conversions »), renforcé par la taxe d'apprentissage de 2017 (Apprenticeship Levy) gérée par les employeurs",
-  "type_preuve": "causale",
-  "chiffre": "Achever un apprentissage augmente le salaire d'environ 19 % en moyenne : 35 % pour les nouvelles recrues, 13 % pour les salariés déjà dans l'entreprise ; 75 % des apprentis avaient au moins un an d'ancienneté dans l'entreprise formatrice avant de commencer.",
-  "comparaison": "Variable instrumentale : la durée minimale de 12 mois imposée en août 2012 (SASE) a fait baisser l'achèvement de façon exogène ; comparaison des salaires selon l'achèvement, séparément pour nouvelles recrues et salariés en poste (contre 16 % et 5 % en double différence simple).",
-  "implication": "soutient",
-  "explication": "L'apprentissage rapporte beaucoup quand il sert d'entrée sur le marché du travail, peu quand il certifie des salariés déjà en poste : une aide non ciblée finance surtout le second cas. Cela appuie le ciblage sur les jeunes peu qualifiés et ajoute un critère utile : réserver l'aide aux nouvelles embauches. Limite : l'étude mesure le rendement de l'apprentissage, pas l'effet d'une aide ciblée sur les embauches.",
-  "citation": "New entrants can benefit more than existing workers, 35% and 13% respectively.",
-  "lu": "texte intégral",
-  "confiance": "moyenne",
-  "aucun_exemple": "",
-  "source": {
-   "ref": "Speckesser, S. et Xu, L. (2022), « Return to apprenticeships: a comparison between existing apprentices and newly recruited apprentices », Oxford Economic Papers 74(1), p. 14-39 (version acceptée, Bournemouth University)",
-   "url": "https://eprints.bournemouth.ac.uk/36219/",
-   "page": "p. 1 (résumé), p. 2-3 (introduction) de la version acceptée"
-  }
- },
  "batiments-inventaire-public": {
   "pays": "Royaume-Uni (Angleterre)",
   "politique": "Condition Data Collection : inspection visuelle de toutes les écoles publiques par le ministère, note de A à D par élément, données publiées école par école en 2023",
@@ -537,24 +447,6 @@
    "ref": "Kline, P., Rose, E. et Walters, C. (2022), « Systemic Discrimination Among Large U.S. Employers », Quarterly Journal of Economics 137(4) (NBER WP 29053)",
    "url": "https://www.nber.org/system/files/working_papers/w29053/w29053.pdf",
    "page": "p. 24"
-  }
- },
- "disc-inspection-tests": {
-  "pays": "Belgique",
-  "politique": "Pouvoir de test (appels mystère, candidatures fictives) des inspecteurs sociaux : Région de Bruxelles-Capitale (2017), État fédéral (2018, article 42/1 du Code pénal social), assoupli par la loi du 1er avril 2022",
-  "type_preuve": "institutionnelle",
-  "chiffre": "Inspection bruxelloise : 4 tests en 2018, 2 en 2019, 0 en 2020, 2 en 2021 ; inspection fédérale : 2 tests en tout au 1er janvier 2022",
-  "comparaison": "Nombre de tests réalisés depuis la création du pouvoir (avant/après, pas de groupe témoin)",
-  "implication": "condition",
-  "explication": "Le test n'était permis qu'après plainte et avec des indices objectifs : il n'a presque jamais été utilisé. Le pouvoir de test ne sert que s'il peut être déclenché à partir de données, comme les testings statistiques.",
-  "citation": "quatre tests réalisés en 2018, deux en 2019, aucun en 2020 et deux en 2021",
-  "lu": "texte intégral",
-  "confiance": "moyenne",
-  "aucun_exemple": null,
-  "source": {
-   "ref": "Neven, J.-F., Ringelheim, J. et van der Plancke, V. (2022), « Les tests de situation et la méthode du client-mystère comme outils de détection et de preuve des discriminations », CRIDHO Working Paper 2022-5, UCLouvain",
-   "url": "https://sites.uclouvain.be/cridho/documents/Working.Papers/CRIDHO-WP-2022-5_Neven-Ringelheim-vanderPlancke_Tests%20situation.pdf",
-   "page": "p. 20 et suivantes"
   }
  },
  "bourses-bareme-lineaire": {
@@ -665,24 +557,6 @@
    "page": "p. 50 (§ 236), aussi p. 15 (§ 65), p. 62 (§ 293), p. 68 (§ 316)"
   }
  },
- "stages-jobs-ete": {
-  "pays": "États-Unis (New York)",
-  "politique": "Summer Youth Employment Program (SYEP) : emplois d'été pour les 14-21 ans, payés par la ville, attribués par loterie quand les candidats dépassent les places",
-  "type_preuve": "causale",
-  "chiffre": "Incarcération en baisse de 0,098 point (9,93 % du niveau du groupe témoin) et mortalité en baisse de 0,073 point (17,97 %) ; légère baisse des salaires pendant les trois années suivantes ; aucun effet sur l'entrée dans le supérieur.",
-  "comparaison": "Gagnants contre perdants des loteries d'accès au programme (2005-2008), données fiscales, pénitentiaires et de décès.",
-  "implication": "nuance",
-  "explication": "Le job d'été protège les jeunes, surtout les garçons, mais ne leur ouvre pas un meilleur emploi ensuite. La mesure tient sur l'argument de sécurité et de première expérience, pas sur l'insertion. Contexte très différent de la France (violence armée, système pénal), d'où une confiance moyenne.",
-  "citation": "SYEP participation decreases the probability of incarceration and decreases the probability of mortality",
-  "lu": "texte intégral",
-  "confiance": "moyenne",
-  "aucun_exemple": null,
-  "source": {
-   "ref": "Gelber A., Isen A. et Kessler J. B. (2016), « The Effects of Youth Employment: Evidence from New York City Lotteries », Quarterly Journal of Economics 131(1), p. 423-460",
-   "url": "https://users.nber.org/~kesslerj/papers/GelberIsenKessler_2016.pdf",
-   "page": "résumé (p. 1) et introduction (p. 4-5)"
-  }
- },
  "stages-superieur-boursiers": {
   "pays": "Allemagne",
   "politique": "Stages en entreprise obligatoires dans certains cursus universitaires selon l'université et la filière",
@@ -735,24 +609,6 @@
    "ref": "Glazerman S., Protik A., Teh B., Bruch J. et Max J. (2013), Transfer Incentives for High-Performing Teachers: Final Results from a Multisite Randomized Experiment, NCEE 2014-4003, Mathematica/IES",
    "url": "https://www.mathematica.org/publications/transfer-incentives-for-highperforming-teachers-final-results-from-a-multisite-randomized-experiment",
    "page": "résumé"
-  }
- },
- "lfi-manuels-papier": {
-  "pays": "Suède",
-  "politique": "Retour aux manuels imprimés : subvention de l'État aux écoles pour acheter manuels et guides de l'enseignant, après une décennie de priorité au numérique",
-  "type_preuve": "institutionnelle",
-  "chiffre": "755 millions de couronnes en 2024 puis 555 millions par an, selon le gouvernement suédois (février 2024)",
-  "comparaison": "Descriptif : pas encore d'évaluation de l'effet sur les élèves",
-  "implication": "condition",
-  "explication": "La Suède a constaté que beaucoup d'écoles n'avaient pas assez de manuels et finance leur achat. L'effet n'est pas encore évalué : la France doit prévoir une évaluation par la DEPP, en commençant par l'éducation prioritaire.",
-  "citation": "For 2025, the Government is proposing an additional SEK 200 million, which means the government grant comprises SEK 755 million and then SEK 555 million annually",
-  "lu": "extrait (via recherche)",
-  "confiance": "moyenne",
-  "aucun_exemple": null,
-  "source": {
-   "ref": "Gouvernement suédois (février 2024), Government investing in more reading time and less screen time",
-   "url": "https://government.se/articles/2024/02/government-investing-in-more-reading-time-and-less-screen-time/",
-   "page": "article"
   }
  }
 }

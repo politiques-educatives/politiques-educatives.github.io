@@ -620,7 +620,7 @@
   statut: vérifié
   resume: "Heures de cours réglementaires par an : France 900 en primaire et 720 au collège, contre 770 et 710 dans l'OCDE. L'Angleterre ne réglemente pas les heures de cours ; ses enseignants en font 893 et 777 dans les faits. Le chiffre français de 720 heures ne correspond pas au service d'un certifié (18 heures sur 36 semaines donnent 648 heures) : convention de déclaration non vérifiée. Le primaire français compte 162 jours de classe, contre 183 dans l'OCDE et 190 en Angleterre."
   cle: "Les enseignants français font 900 heures de cours par an en primaire, contre 770 dans l'OCDE (OCDE, 2026)."
-  propositions: [heures-service-annuel, heures-mercredi]
+  propositions: [heures-service-annuel]
   dossier: 01-england-governance-ors
 - id: talis
   titre: "OCDE, TALIS 2018 et 2024 : temps de travail et formation des enseignants"
@@ -664,7 +664,7 @@
   statut: vérifié
   resume: "À Cincinnati, une année d'évaluation fondée sur quatre observations, dont trois par des pairs formés, relève d'environ 0,10 écart-type les résultats en maths des élèves de ces enseignants les années suivantes. En Angleterre, dans 82 collèges, l'observation mutuelle gagne 0,07 écart-type au GCSE et la doubler n'ajoute rien (Burgess, Rawal et Taylor, 2021) ; l'évaluation officielle du même essai ne trouve aucun effet (EEF, 2017)."
   cle: "Une année d'évaluation par observation a relevé de 0,10 écart-type les résultats des élèves à Cincinnati (Taylor et Tyler, 2012)."
-  propositions: [gouv-visite, gouv-coordinateurs]
+  propositions: [gouv-visite]
   dossier: 03-inspection-evaluation
 - id: ofsted-2025
   titre: "Ofsted, cadre d'inspection des écoles (novembre 2025)"

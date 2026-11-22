@@ -21,8 +21,9 @@
 - id: heures-emploi-du-temps
   theme: Temps des professeurs
   titre: "Construire l'emploi du temps par établissement, avec du tutorat pendant la journée"
-  explication: "Le chef d'établissement et le conseil pédagogique organisent l'emploi du temps sans modèle imposé, avec des groupes temporaires réévalués toutes les six à huit semaines autour des mêmes programmes pour tous. L'heure de concertation hebdomadaire correspond à l'heure de cours convertie, sans heure imposée en plus. Des enseignants volontaires rémunérés assurent le tutorat en journée. Le tutorat est plus efficace pendant le temps scolaire (0,40 écart-type) qu'après (0,21) (Nickow, Oreopoulos et Quan, 2020)."
+  explication: "Le chef d'établissement et le conseil pédagogique organisent l'emploi du temps sans modèle imposé, avec des groupes temporaires réévalués toutes les six à huit semaines autour des mêmes programmes pour tous. L'heure de concertation hebdomadaire correspond à l'heure de cours convertie, sans heure imposée en plus. Des enseignants volontaires rémunérés assurent le tutorat en journée. L'équipe peut choisir un coordinateur de discipline ou de niveau, payé par une indemnité pour mission particulière plutôt que par une décharge, qui organise les groupes temporaires, le tutorat et les supports communs sans évaluer ses collègues. Le tutorat est plus efficace pendant le temps scolaire (0,40 écart-type) qu'après (0,21) (Nickow, Oreopoulos et Quan, 2020)."
   preuves:
+    - "Coordinateur : dans 82 collèges anglais, l'observation mutuelle a gagné 0,07 écart-type au GCSE, et la doubler n'a rien ajouté (Burgess, Rawal et Taylor, 2021) ; l'évaluation officielle du même essai ne trouve aucun effet (EEF, 2017)."
     - "Sur 96 essais randomisés, le tutorat améliore les résultats de 0,37 écart-type, davantage pendant le temps scolaire (0,40) qu'après (0,21), avec des enseignants (0,50) qu'avec des bénévoles (0,21) (Nickow, Oreopoulos et Quan, 2020 ; 0,29 sur 89 essais dans la version publiée en 2024)."
     - "L'effet est plus faible au collège et au lycée ; dans les essais les plus proches d'un déploiement à grande échelle, il n'atteint qu'un tiers à la moitié de celui de l'ensemble des essais, surtout parce qu'il baisse quand le programme grandit (Kraft et al., 2024)."
     - "Les groupes de niveau au sein de la classe gagnent 0,19 à 0,30 écart-type ; les classes séparées par niveau, presque rien (Steenbergen-Hu et al., 2016), mais elles creusent les écarts (Terrin et Triventi, 2023)."
@@ -41,19 +42,6 @@
     - "En Angleterre, le programme national de tutorat est passé à partir de 2021 par les écoles ; ses effets mesurés sont faibles, un mois de progrès au plus (NFER, 2024)."
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
-  maj_le: 2026-11-22
-  sujets: [formation]
-  issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
-
-- id: heures-mercredi
-  theme: Temps des professeurs
-  titre: "Ouvrir le mercredi matin dans les bassins volontaires, à 24 heures de cours constantes"
-  explication: "Lorsque la commune, la région et l'académie le décident ensemble, les 24 heures de cours hebdomadaires sont réparties sur neuf demi-journées, sans temps de service supplémentaire pour les professeurs des écoles. Le primaire français compte 162 jours, contre 183 dans l'OCDE et 190 en Angleterre. Aucune étude française ne mesure toutefois l'effet d'un retour à neuf demi-journées : la preuve est trop mince pour une mesure nationale."
-  preuves:
-    - "Le primaire français se fait sur 162 jours, contre 183 dans l'OCDE et 190 en Angleterre."
-    - "À la rentrée 2023, 93 % des communes ayant une école publique étaient à la semaine de quatre jours (QE AN n° 3908, 2025) ; la Cour des comptes juge l'organisation du temps scolaire « en décalage avec les besoins des élèves » (2025)."
-  note: EDUCATION-note1-allocation-heures-enseignement.pdf
-  statut: piste
   maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
@@ -83,18 +71,6 @@
     - "Le recrutement sur profil, par exemple dans les écoles de Marseille, n'a pas encore été évalué (Cour des comptes, 2024)."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
   statut: à chiffrer
-  maj_le: 2026-11-22
-  sujets: [formation]
-  issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
-
-- id: gouv-coordinateurs
-  theme: Gouvernance de l'établissement
-  titre: "Créer un coordinateur de discipline ou de niveau, choisi par l'équipe et indemnisé"
-  explication: "Dans chaque collège et lycée volontaire, l'équipe choisit un coordinateur de discipline ou de niveau, payé par une indemnité pour mission particulière plutôt que par une décharge consommant des postes. Sans évaluer ses collègues, il organise les groupes temporaires, le tutorat, les supports communs et l'observation entre pairs. Les preuves d'effet sur les élèves restent minces : l'observation mutuelle a gagné 0,07 écart-type dans 82 collèges anglais (Burgess, Rawal et Taylor, 2021), mais l'évaluation officielle ne trouve aucun effet (EEF, 2017)."
-  preuves:
-    - "Dans 82 collèges anglais, l'observation mutuelle a gagné 0,07 écart-type au GCSE, et la doubler n'a rien ajouté (Burgess, Rawal et Taylor, 2021) ; l'évaluation officielle du même essai ne trouve aucun effet (EEF, 2017)."
-  note: EDUCATION-note2-gouvernance-etablissement.pdf
-  statut: piste
   maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
@@ -351,21 +327,6 @@
   sujets: [emploi]
   issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
 
-- id: stages-jobs-ete
-  theme: Stages
-  titre: "Financer des jobs d'été tutorés pour les lycéens des quartiers prioritaires"
-  explication: "Avec la politique de la ville, les collectivités volontaires financent six semaines d'emploi tutoré au salaire minimum, 25 heures hebdomadaires, pour les 16-18 ans des quartiers prioritaires, avec relais d'information par l'Éducation nationale. À Chicago, ces jobs d'été ont réduit de 43 % les arrestations pour violence des participants (Heller, 2014), sans effet sur l'emploi formel ni la scolarité (Davis et Heller, 2017). C'est une piste de sécurité : la preuve reste trop mince pour l'emploi des jeunes."
-  preuves:
-    - "Chicago, 1 634 lycéens tirés au sort : 43 % d'arrestations pour violence en moins sur 16 mois par rapport au groupe témoin (Heller, 2014)"
-    - "Chicago 2012 : 35 % d'arrestations pour violence en moins sur un an, aucun effet sur l'emploi formel ni la scolarité, 45 % d'arrestations pour vol en plus (Davis et Heller, 2017, résumé J-PAL)"
-    - "New York, 294 100 participants aux loteries : incarcération en baisse de 9,93 % et mortalité de 17,97 % par rapport au groupe témoin, mais salaires légèrement plus bas les trois années suivantes (Gelber, Isen et Kessler, 2016)"
-    - "Coût à Chicago : environ 3 000 dollars par participant (Davis et Heller, résumé J-PAL)"
-    - "Coût : à chiffrer pour la France (repère : environ 3 000 dollars par participant à Chicago, salaires et encadrement compris)"
-  statut: piste
-  maj_le: 2026-11-22
-  sujets: [emploi]
-  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
-
 - id: stages-superieur-boursiers
   theme: Stages
   titre: "Garantir un stage aux étudiants boursiers restés sans place à une date butoir"
@@ -506,21 +467,6 @@
   sujets: [emploi]
   issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
 
-- id: disc-inspection-tests
-  theme: Discriminations à l'embauche
-  titre: "Autoriser l'inspection du travail à tester d'office les employeurs contre les discriminations"
-  explication: "Sans attendre une plainte, les inspecteurs du travail peuvent mener d'office des candidatures fictives et des appels mystère, en ciblant leurs contrôles grâce aux testings annuels. Seules 15 % des victimes de discrimination à l'embauche engagent une démarche (Défenseur des droits, décembre 2025, p. 6), et aucune condamnation pénale n'a été prononcée en 2020 (Sénat, rapport de CMP n° 525, 2024, p. 4). Faute d'évaluation causale de ce pouvoir, la preuve reste trop mince pour une mesure autonome."
-  preuves:
-    - "15 % des personnes discriminées à l'embauche engagent une démarche, en 2024 (Défenseur des droits, décembre 2025, p. 6)"
-    - "Aucune condamnation pénale pour discrimination en 2020, selon le rapporteur de la proposition de loi sur les tests (Sénat, rapport de CMP n° 525, 2024, p. 4)"
-    - "Aucune évaluation causale de ce pouvoir d'inspection trouvée"
-    - "Coût : à chiffrer"
-  statut: piste
-  maj_le: 2026-11-22
-  sujets: [emploi]
-  issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
-
-# ---------- Inspirées des propositions de J. Le Floch-Imad (« Main basse sur l'Éducation nationale », 2025), vérifiées par le GT (22/11/2026) : research/29-atelier-gt/le-floch-imad-*
 - id: lfi-heures-dues
   theme: Temps des professeurs
   titre: "Placer réunions et formations hors cours, créer un vivier de remplaçants volontaires et publier les heures perdues"
@@ -565,15 +511,3 @@
   sujets: [formation]
   issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"
 
-- id: lfi-manuels-papier
-  theme: Temps des professeurs
-  titre: "Financer par l'État des manuels imprimés en français et mathématiques du CP à la 3e"
-  explication: "L'État finance un manuel imprimé par élève en français et mathématiques du CP à la 3e et en histoire au collège, avec un label facultatif respectant la liberté pédagogique, alors que les communes paient aujourd'hui au primaire. Aucune étude citée ne prouve l'avantage du papier : l'effet des notes manuscrites n'est pas répliqué (Urry et al., 2021), et les tablettes du Plan numérique 2015 ont relevé les acquis (Azmat et al., 2022, DEPP). La preuve est trop mince pour le programme, et le numérique évalué demeure."
-  preuves:
-    - "Prise de notes à la main : l'avantage trouvé par Mueller et Oppenheimer (2014) n'est pas répliqué ; 145 étudiants, différences faibles et non significatives (Urry et al., 2021, Psychological Science)"
-    - "Tablettes individuelles du Plan numérique de 2015 : +9 à 12 % d'écart-type en mathématiques et +14 à 25 % en français entre la fin de 5e et l'entrée en seconde (Azmat et al., 2022, DEPP, cité par CAE, Note n° 84, p. 9)"
-    - "Coût : à chiffrer (nombre d'élèves du CP à la 3e multiplié par le prix des manuels, moins les dotations existantes)"
-  statut: piste
-  maj_le: 2026-11-22
-  sujets: [formation]
-  issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"

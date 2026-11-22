@@ -35,7 +35,7 @@ themes:
     chiffre: {graphique: heures}
     graphiques_plus: [formation]
     carte: {theme: temps, pays: SCO, faits: [f16, f18, f11, f27]}
-    propositions: [heures-service-annuel, heures-emploi-du-temps, heures-dotation, heures-mercredi, heures-charge, lfi-heures-dues, lfi-budget-temps, lfi-postes-difficiles, lfi-manuels-papier]
+    propositions: [heures-service-annuel, heures-emploi-du-temps, heures-dotation, heures-charge, lfi-heures-dues, lfi-budget-temps, lfi-postes-difficiles]
     livret: ["65", "72", "71"]
     sources: [ocde-heures-2026, stpcd-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, nickow-2020, kraft-2024, guryan-2023, ntp-nfer, apfee, eef-setting, steenbergen-2016, duflo-2011]
     dossiers: [02-groupes-niveau-tutorat, 08-formation-enseignants, 10-brief-formation-continue-enseignants, 16-calendrier-formation-continue]
@@ -47,7 +47,7 @@ themes:
       - "L'autonomie a marché là où elle s'accompagnait d'une nouvelle direction et de résultats publiés ; seule, elle n'a rien changé."
     chiffre: {source: cdc-inspecteurs-2022}
     carte: {theme: gouvernance, pays: ENG, faits: [f39, f40, f43, f46]}
-    propositions: [gouv-recruter, gouv-coordinateurs, gouv-visite]
+    propositions: [gouv-recruter, gouv-visite]
     livret: ["64"]
     sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022]
     dossiers: [01-england-governance-ors]
@@ -187,7 +187,7 @@ themes:
       - "Le livret « Croire en nous » contient des mesures pour la jeunesse, mais il ne répond pas aux inquiétudes exprimées par les jeunes sur le terrain : le manque d'emplois et de stages, le coût de la vie et l'état des écoles."
       - "Premier emploi et chômage : aucune mesure sur l'embauche des débutants, le chômage des jeunes ou les jeunes sans emploi ni formation. Stages et discriminations : les mots n'apparaissent pas dans le livret."
       - "Salaire face au loyer : rien de spécifique pour les jeunes, les bourses ou le logement étudiant."
-    propositions: [j-emploi-tutore, j-prime-conditionnelle, stages-garantie-rep, stages-jobs-ete, stages-superieur-boursiers, bourses-bareme-lineaire, residences-etudiantes-zones-tendues, emplois-etudiants-campus, disc-testing-grands-employeurs, disc-apprentissage-stages, disc-inspection-tests]
+    propositions: [j-emploi-tutore, j-prime-conditionnelle, stages-garantie-rep, stages-superieur-boursiers, bourses-bareme-lineaire, residences-etudiantes-zones-tendues, emplois-etudiants-campus, disc-testing-grands-employeurs, disc-apprentissage-stages]
   reste:
     blocs: [comms]
 
