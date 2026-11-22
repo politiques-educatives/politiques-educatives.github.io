@@ -530,8 +530,8 @@
   sujets: [formation]
   type: méta-analyse
   statut: vérifié
-  resume: "Les programmes de tutorat déployés à grande échelle ont des effets qui tombent au tiers ou à la moitié de ceux des essais de petite taille, et l'effet est plus faible au collège et au lycée."
-  cle: "À grande échelle, l'effet du tutorat tombe au tiers ou à la moitié (Kraft, Schueler et Falken, 2024)."
+  resume: "Dans les essais les plus proches d'un déploiement à grande échelle, les effets du tutorat n'atteignent qu'un tiers à la moitié de ceux de l'ensemble des 282 essais, surtout parce qu'ils baissent quand le programme grandit, et l'effet est plus faible au collège et au lycée."
+  cle: "Dans les essais proches d'un déploiement à grande échelle, l'effet du tutorat n'atteint qu'un tiers à la moitié de celui de l'ensemble des essais (Kraft, Schueler et Falken, 2024)."
   propositions: [heures-emploi-du-temps]
   dossier: 02-groupes-niveau-tutorat
 - id: guryan-2023
@@ -651,7 +651,7 @@
   sujets: [formation]
   type: étude causale
   statut: vérifié
-  resume: "Les collèges en difficulté convertis en academies de 2002 à 2010, qui changeaient souvent de direction, progressent d'environ 0,2 écart-type en quatre ans. Ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2016), et les écoles primaires converties sans difficulté n'ont pas progressé (Eyles, Machin et McNally, 2017). L'autonomie a marché avec une nouvelle direction et des résultats publiés ; seule, elle n'a rien changé."
+  resume: "Les collèges en difficulté convertis en academies de 2002 à 2010, qui changeaient souvent de direction, progressent d'environ 0,2 écart-type en quatre ans. Ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2017), et les écoles primaires converties sans difficulté n'ont pas progressé (Eyles, Machin et McNally, 2017). L'autonomie a marché avec une nouvelle direction et des résultats publiés ; seule, elle n'a rien changé."
   cle: "Les collèges en difficulté devenus academies avant 2010 ont progressé d'environ 0,2 écart-type en quatre ans (Eyles et Machin, 2019)."
   propositions: [gouv-recruter]
   dossier: 01-england-governance-ors
@@ -684,7 +684,7 @@
   sujets: [formation]
   type: texte officiel
   statut: vérifié
-  resume: "Depuis 2019, chaque établissement s'auto-évalue puis reçoit une évaluation externe tous les cinq ans (environ 20 % par an), par des équipes d'inspecteurs et de personnels de direction d'autres établissements. Les rapports ne sont pas notés et pas systématiquement publiés (non vérifié). La valeur ajoutée par lycée (IVAL, depuis 1993) et par collège (IVAC, depuis 2024) n'y joue aucun rôle."
+  resume: "Depuis 2019, chaque établissement s'auto-évalue puis reçoit une évaluation externe tous les cinq ans (environ 20 % par an), par des équipes d'inspecteurs et de personnels de direction d'autres établissements. Les rapports ne sont pas notés et pas systématiquement publiés (non vérifié). La valeur ajoutée par lycée (IVAL, depuis 1993) et par collège (IVAC, depuis 2022) n'y joue aucun rôle."
   cle: "Chaque établissement français reçoit une évaluation externe tous les cinq ans, sans note ni lien avec la valeur ajoutée (Conseil d'évaluation de l'école)."
   propositions: [gouv-evaluation]
   dossier: 03-inspection-evaluation

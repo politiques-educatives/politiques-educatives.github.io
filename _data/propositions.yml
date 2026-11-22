@@ -24,7 +24,7 @@
   explication: "Le chef d'établissement répartit le service avec le conseil pédagogique : cours en barrette pour composer des groupes temporaires, une heure de concertation par semaine pour l'équipe de niveau, le tutorat dans la journée et non après la dernière heure, en petits groupes et par des enseignants."
   preuves:
     - "Sur 96 essais randomisés, le tutorat améliore les résultats de 0,37 écart-type, davantage pendant le temps scolaire (0,40) qu'après (0,21), avec des enseignants (0,50) qu'avec des bénévoles (0,21) (Nickow, Oreopoulos et Quan, 2020 ; 0,29 sur 89 essais dans la version publiée en 2024)."
-    - "L'effet est plus faible au collège et au lycée et tombe au tiers ou à la moitié à grande échelle (Kraft et al., 2024)."
+    - "L'effet est plus faible au collège et au lycée ; dans les essais les plus proches d'un déploiement à grande échelle, il n'atteint qu'un tiers à la moitié de celui de l'ensemble des essais, surtout parce qu'il baisse quand le programme grandit (Kraft et al., 2024)."
     - "Les groupes de niveau au sein de la classe gagnent 0,19 à 0,30 écart-type ; les classes séparées par niveau, presque rien (Steenbergen-Hu et al., 2016), mais elles creusent les écarts (Terrin et Triventi, 2023)."
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
@@ -79,7 +79,7 @@
   explication: "Une part des postes de chaque établissement pourvue sur profil par le chef d'établissement et le conseil pédagogique, en priorité dans les établissements les moins demandés, avec une prime d'affectation, et une évaluation prévue dès le départ."
   preuves:
     - "Les enseignants sont affectés par le mouvement inter et intra-académique selon un barème de points ; les débutants sont plus souvent affectés en éducation prioritaire (DEPP, 2026)."
-    - "Les collèges en difficulté devenus academies de 2002 à 2010, qui changeaient souvent de direction, ont progressé d'environ 0,2 écart-type en quatre ans (Eyles et Machin, 2019) ; ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2016)."
+    - "Les collèges en difficulté devenus academies de 2002 à 2010, qui changeaient souvent de direction, ont progressé d'environ 0,2 écart-type en quatre ans (Eyles et Machin, 2019) ; ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2017)."
     - "Le recrutement sur profil, par exemple dans les écoles de Marseille, n'a pas encore été évalué (Cour des comptes, 2024)."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
   statut: proposition
@@ -115,7 +115,7 @@
 - id: gouv-evaluation
   theme: Gouvernance de l'établissement
   titre: "Un corps spécialisé pour évaluer les établissements, appuyé sur la valeur ajoutée"
-  explication: "Distinct de l'inspection des enseignants, sur le modèle de l'Ofsted, il s'appuie sur des IVAC et IVAL étendus au-delà du brevet et du bac. La DEPP publie une valeur ajoutée par lycée depuis 1993 et par collège depuis 2024, sans rôle dans l'évaluation des établissements."
+  explication: "Distinct de l'inspection des enseignants, sur le modèle de l'Ofsted, il s'appuie sur des IVAC et IVAL étendus au-delà du brevet et du bac. La DEPP publie une valeur ajoutée par lycée depuis 1993 et par collège depuis 2022, sans rôle dans l'évaluation des établissements."
   preuves:
     - "Un échec à l'inspection a relevé les résultats des élèves de 0,12 écart-type en maths en primaire (Hussain, 2015) et d'environ 0,1 dans le secondaire (Allen et Burgess, 2012)."
     - "Depuis novembre 2025, l'Ofsted note chaque établissement sur cinq niveaux, domaine par domaine, sans note globale, environ tous les quatre ans."

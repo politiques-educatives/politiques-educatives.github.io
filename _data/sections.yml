@@ -55,7 +55,7 @@ themes:
   - id: evaluer
     titre: "Évaluer les établissements"
     bref:   # note 2, partie 5
-      - "Depuis la loi de 2019 (premières évaluations en 2020-2021), chaque établissement s'auto-évalue puis reçoit une évaluation externe tous les cinq ans. La DEPP publie une valeur ajoutée par lycée (IVAL) depuis 1993 et par collège (IVAC) depuis 2024, limitée au bac et au brevet et sans rôle dans cette évaluation."
+      - "Depuis la loi de 2019 (premières évaluations en 2020-2021), chaque établissement s'auto-évalue puis reçoit une évaluation externe tous les cinq ans. La DEPP publie une valeur ajoutée par lycée (IVAL) depuis 1993 et par collège (IVAC) depuis 2022, limitée au bac et au brevet et sans rôle dans cette évaluation."
       - "Un échec à l'inspection a relevé les résultats des élèves de 0,12 écart-type en maths en primaire (Hussain, 2015) et d'environ 0,1 dans le secondaire (Allen et Burgess, 2012), sous l'ancien système de notes."
     chiffre: {source: evaluation-etablissements-fr}
     carte: {theme: gouvernance, pays: ENG, faits: [f41, f141, f142, f138]}
