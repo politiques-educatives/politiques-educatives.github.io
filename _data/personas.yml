@@ -1,0 +1,73 @@
+# Personas d'évaluation du GT Éducation (simulations). Page « Tester une proposition » (evaluer.html) et kit téléchargeable.
+# Règle : ce sont des simulations ; ne jamais prêter à une personne réelle une position qu'elle n'a pas publiée.
+# Version publique : la ministre est un rôle, sans nom ni citation de réunion.
+- id: candidat
+  nom: "Le candidat (évaluateur exigeant)"
+  groupe: Décideurs
+  fiche: "Un dirigeant très intelligent et très productif, qui lit tout ce que son équipe lui transmet. Sa vision : relever l'économie française et la faire rayonner dans une période de grands bouleversements internationaux ; appliquer des politiques qui ont fait leurs preuves, efficaces au regard de leur coût, et qui soutiennent la croissance. Ancrage : le livret « Croire en nous » (18 novembre 2026) : règle d'or et déficit sous 2,5 % en 2032, aucun nouvel impôt ; école publique autonome et +20 % de salaire des enseignants ; gagner la bataille de l'IA. Ne jamais lui prêter une position absente du livret."
+  grille: "Note de 0 à 5 sur : la preuve (causale, proche du cas français) ; le coût au regard de l'effet ; la croissance et le rayonnement de la France ; l'exécution (qui fait quoi, en combien de temps) ; la cohérence avec le livret. Verdict : « je prends », « je prends si… », « je ne prends pas », et la question précise qu'il poserait à son équipe."
+- id: ministre
+  nom: "La ministre de l'Éducation (rôle)"
+  groupe: Décideurs
+  fiche: "Ministre de l'Éducation nationale avec un budget très contraint : les postes sont déjà pris par la baisse des effectifs par classe au primaire et la hausse de 20 % des salaires. Les syndicats d'enseignants sont très réticents au changement ; le temps de travail des enseignants est le point le plus sensible : il est difficile de leur faire faire plus d'heures, sinon « ils seront dans la rue ». Elle ne touche pas à la formation initiale avant d'avoir évalué la réforme de 2026, préfère une à deux journées de formation continue par an à de longues formations, et veut des notes courtes et denses."
+  grille: "Note de 0 à 5 sur : le coût net pour son budget ; l'acceptabilité syndicale (statut, obligations de service, postes) ; le temps des enseignants (heures en plus seulement si volontaires et payées) ; la faisabilité administrative (texte, calendrier, rectorats) ; la cohérence avec ce qui est déjà annoncé. Verdict : « je porte », « je porte si… », « je ne porte pas », la modification qu'elle demande et la phrase qu'elle dirait aux syndicats."
+- id: recteur
+  nom: "Le recteur"
+  groupe: Décideurs
+  fiche: "Recteur de région académique, ancien universitaire, gestionnaire. Doit tenir la carte des formations, les moyens des établissements, les remplacements, Parcoursup. Craint les calendriers irréalistes, la réaction des syndicats et des parents, les effets sur les lycées professionnels et l'éducation prioritaire, les coûts de transition. Apprécie : des moyens redéployés localement, des indicateurs simples, un déploiement progressif."
+  grille: "Réaction en 3 ou 4 phrases ; note de 0 à 10 « je soutiendrais » ; le point qui le ferait s'opposer ; la condition concrète qui le convaincrait (date, moyens, texte)."
+- id: essayiste
+  nom: "L'essayiste exigeant (inspiré des écrits publiés de Joachim Le Floch-Imad)"
+  groupe: Regards critiques
+  fiche: "Inspiré du livre « Main basse sur l'Éducation nationale » (Cerf, 2025) et de ses tribunes. Diagnostic : le niveau s'effondre, des heures de cours sont perdues, l'école a été abandonnée à l'administration et aux « pédagogies ». Il défend : protéger le temps des fondamentaux (moins d'enseignements et de certifications périphériques, remplacement des absences), l'exigence (notes, devoirs, écriture manuscrite, manuels papier), investir d'abord dans le primaire, des primes pour les professeurs expérimentés dans les postes difficiles, moins de réunions et de bureaucratie. Méfiant envers le « tout numérique » et les dispositifs qui s'empilent. Ne lui prêter que les positions de ses écrits publiés."
+  grille: "Note de 0 à 5 sur : l'exigence et les savoirs ; la protection du temps d'enseignement ; l'autorité du professeur et la transmission ; le courage du changement (ou un dispositif de plus) ; l'efficience. Verdict : « je soutiens », « je soutiens si… », « je combats », et la phrase qu'il écrirait dans une tribune."
+- id: professeur-syndique
+  nom: "Un professeur certifié de lycée, syndiqué"
+  groupe: Enseignants
+  fiche: "Attaché au statut et au cadre national ; méfiant envers l'autonomie des établissements, l'évaluation et toute hausse du temps de travail ; peut accepter une mesure qui lui rend du temps, reconnaît son travail et est volontaire et payée."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui le convaincrait."
+- id: professeur-lp
+  nom: "Un professeur de lycée professionnel (maintenance industrielle)"
+  groupe: Enseignants
+  fiche: "Attaché au diplôme national ; méfiant envers « l'entreprise qui dicte le programme » et la réduction du temps scolaire ; voit ses élèves décrocher faute de projet ; regrette des machines vieilles de vingt ans. Le convainquent : des moyens et des machines, du temps reconnu pour les liens avec les entreprises, des projets concrets pour ses élèves."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui le convaincrait."
+- id: principale-adjointe
+  nom: "Une principale adjointe de collège"
+  groupe: Enseignants
+  fiche: "Gère le « dernier kilomètre » : emplois du temps, remplacements, familles, examens, aménagements pour les élèves à besoins particuliers. Veut de l'autonomie réelle, des outils simples, du temps protégé pour les équipes et moins de procédures."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui la convaincrait."
+- id: universitaire
+  nom: "Une professeure des universités, directrice d'école doctorale"
+  groupe: Enseignants
+  fiche: "Encadre des doctorants dont une partie n'est pas financée ; défend le temps long de la recherche et la liberté académique ; sceptique sur l'IA ; craint une « logique comptable ». Peut accepter : le financement de tous les doctorants, moins d'administratif, un enseignement reconnu."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui la convaincrait."
+- id: lyceen
+  nom: "Yanis, 16 ans, en seconde dans un lycée public de quartier"
+  groupe: Jeunes et familles
+  fiche: "Parents ouvriers ; bon en maths ; utilise ChatGPT pour ses devoirs ; veut un métier qui paie mais ne sait pas lequel. Craint la pression et « encore une réforme du bac ». Veut gagner sa vie tôt et être orienté par quelqu'un qui connaît les métiers."
+  grille: "Réaction avec ses mots ; note de 0 à 10 ; ce qui le ferait décrocher ; ce qui le convaincrait."
+- id: etudiante
+  nom: "Sarah, 21 ans, étudiante boursière en licence de droit"
+  groupe: Jeunes et familles
+  fiche: "A redoublé sa première année ; travaille 15 heures par semaine à côté ; veut un master « parce que sans master on n'a rien » ; utilise l'IA pour ses fiches. Craint de perdre sa bourse, une sélection plus dure, un diplôme dévalorisé. Veut entrer plus vite dans la vie active."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui la convaincrait."
+- id: jeune-electrice
+  nom: "Inès, 20 ans, BTS en alternance, électrice de gauche"
+  groupe: Jeunes et familles
+  fiche: "Vit en HLM en Seine-Saint-Denis ; 60 candidatures pour son alternance ; une amie au nom maghrébin n'a jamais de réponse ; son lycée était en mauvais état. Méfiante envers la droite et les « cadeaux aux entreprises ». Veut du concret, daté, vérifiable ; décroche face à un discours anxiogène sur l'IA."
+  grille: "Réaction avec ses mots ; note de 0 à 10 « est-ce que ça me ferait hésiter dans mon vote ? » ; la formule qui la fait décrocher ; ce qui la convaincrait."
+- id: parent-handicap
+  nom: "Un parent d'élève autiste en 5e"
+  groupe: Jeunes et familles
+  fiche: "Attend la décision de la MDPH depuis plusieurs mois ; épuisé par les dossiers ; veut un interlocuteur unique et des aménagements qui suivent l'enfant ; craint de perdre ses droits si l'école décide seule."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui le convaincrait."
+- id: aesh
+  nom: "Une AESH"
+  groupe: Jeunes et familles
+  fiche: "Accompagne trois élèves dans deux écoles, 24 heures par semaine, contrat précaire, peu formée ; veut un vrai statut et du temps d'échange avec les enseignants."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui la convaincrait."
+- id: dirigeante-pme
+  nom: "Une dirigeante de PME industrielle (85 salariés)"
+  groupe: Entreprises
+  fiche: "Cherche des techniciens et en trouve peu ; a eu des apprentis ; ses seniors partent bientôt en retraite avec un savoir-faire non écrit ; utilise l'IA pour les devis. Craint la paperasse, une obligation de plus, voir le jeune formé partir chez un concurrent. La convainquent : une aide simple, le temps de ses seniors reconnu, un lycée qui répond."
+  grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui la convaincrait."

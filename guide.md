@@ -47,6 +47,8 @@ Vous avez repéré une erreur ou vous souhaitez ajouter une étude utile au grou
 
 ## Tester une proposition avec des personas d'IA
 
+**Le plus simple : la page [Tester une proposition]({{ '/evaluer.html' | relative_url }})** construit la consigne pour vous à partir des personas que vous cochez ; le [kit complet]({{ '/assets/personas/kit-personas.txt' | relative_url }}) se télécharge.
+
 Avant de finaliser une mesure, il est très utile de la confronter aux personnes qu'elle va toucher au quotidien, ainsi qu'à celui qui devra la défendre publiquement. Un assistant d'IA peut jouer ces différents rôles en quelques minutes. Attention, il s'agit d'un exercice de simulation et non d'un sondage d'opinion. Il sert avant tout à repérer nos angles morts, à identifier les mots qui braquent inutilement et à trouver les conditions concrètes qui emportent l'adhésion.
 
 Voici la méthode en cinq étapes que nous vous proposons :

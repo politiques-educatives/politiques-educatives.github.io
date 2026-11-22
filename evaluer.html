@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Tester une proposition avec des personas"
+---
+<p class="crumbs"><a href="{{ '/' | relative_url }}#accueil">← Accueil</a> · <a href="{{ '/guide.html' | relative_url }}">Mode d'emploi</a></p>
+<h1>Tester une proposition avec des personas</h1>
+<article class="doc">
+<p>Choisissez les personas, collez votre proposition ou votre note, puis copiez la consigne dans l'assistant d'IA de votre choix (Claude, ChatGPT, Le Chat). Rien n'est envoyé depuis cette page. Ce sont des simulations : elles servent à repérer les angles morts et les conditions qui convainquent, pas à remplacer un sondage ni l'avis des personnes réelles. Ne mettez aucune donnée personnelle dans un assistant d'IA.</p>
+<p>Conseil : gardez toujours le candidat et la ministre, et ajoutez les personnes que la mesure touche le plus. Après les réactions, révisez la proposition et soumettez la version 2 aux mêmes personas.</p>
+<h2>1. Les personas</h2>
+<div id="pers"></div>
+<h2>2. Votre proposition ou votre note</h2>
+<textarea id="prop" rows="10" style="width:100%" placeholder="La mesure, pour qui, quand, combien, la preuve. Vous pouvez coller une note entière."></textarea>
+<p><label><input type="checkbox" id="v2"> C'est une version 2, révisée après un premier passage</label></p>
+<h2>3. La consigne à copier</h2>
+<p><button class="btn" id="gen" type="button">Générer la consigne</button> <button class="btn btn2" id="copy" type="button">Copier</button> <span id="ok" class="note-src"></span></p>
+<textarea id="out" rows="16" style="width:100%" readonly></textarea>
+<p class="note-src">Le kit complet (toutes les fiches de personas et les consignes) : <a href="{{ '/assets/personas/kit-personas.txt' | relative_url }}">télécharger le kit</a>.</p>
+</article>
+<script>
+(function () {
+  var P = {{ site.data.personas | jsonify }};
+  var box = document.getElementById("pers"), groups = {};
+  P.forEach(function (p) { (groups[p.groupe] = groups[p.groupe] || []).push(p); });
+  var def = { candidat: 1, ministre: 1 };
+  box.innerHTML = Object.keys(groups).map(function (g) {
+    return "<h3>" + g + "</h3>" + groups[g].map(function (p) {
+      return '<p><label><input type="checkbox" value="' + p.id + '"' + (def[p.id] ? " checked" : "") + "> <strong>" + p.nom + "</strong></label><br><span class=\"note-src\">" + p.fiche + "</span></p>";
+    }).join("");
+  }).join("");
+  function build() {
+    var sel = Array.prototype.slice.call(box.querySelectorAll("input:checked")).map(function (i) { return P.filter(function (p) { return p.id === i.value; })[0]; });
+    var prop = document.getElementById("prop").value.trim() || "[COLLER LA PROPOSITION]";
+    var v2 = document.getElementById("v2").checked;
+    var t = "Exercice de simulation pour tester une proposition de politique éducative (groupe de travail Éducation, Préparer l'avenir). Ce n'est pas un sondage. Tu vas jouer successivement plusieurs rôles, de façon réaliste et sans caricature, puis donner une synthèse d'analyste.\n\n";
+    t += (v2 ? "Voici la VERSION 2 de la proposition, révisée après un premier passage. Pour chaque rôle, dis aussi ce qui a changé pour toi par rapport à la version précédente.\n\n" : "") + "PROPOSITION :\n" + prop + "\n\nLES RÔLES :\n";
+    sel.forEach(function (p, i) { t += "\n" + (i + 1) + ". " + p.nom + "\nQui c'est : " + p.fiche + "\nCe que tu rends : " + p.grille + "\n"; });
+    t += "\nRÈGLES : réponds dans la voix de chaque rôle, avec ses mots. Ne prête à aucune personne réelle une position qu'elle n'a pas publiée. N'invente aucun chiffre : si un chiffre de la proposition te semble douteux, dis-le.\n\nPUIS, HORS DES RÔLES, en analyste neutre :\n- un tableau des notes et verdicts par rôle ;\n- les mots ou les points qui braquent, et la formulation qui fonctionne ;\n- les cinq modifications les plus utiles, classées, pour rendre la proposition plus solide et plus acceptable sans renoncer aux preuves ni au sérieux budgétaire ;\n- une phrase de message politique par public.";
+    document.getElementById("out").value = t;
+  }
+  document.getElementById("gen").addEventListener("click", build);
+  document.getElementById("copy").addEventListener("click", function () {
+    build(); var o = document.getElementById("out"); o.select();
+    (navigator.clipboard ? navigator.clipboard.writeText(o.value) : Promise.resolve(document.execCommand("copy"))).then(function () { document.getElementById("ok").textContent = "Consigne copiée."; });
+  });
+})();
+</script>

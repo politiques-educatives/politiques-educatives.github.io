@@ -424,7 +424,7 @@
     el.innerHTML = '<div class="intro"><p class="kick">Mis à jour le ' + esc(date) + "</p>" +
       "<h1>Propositions et données du GT Éducation</h1>" +
       '<p class="lead">Les travaux du groupe de travail Éducation de Préparer l\'avenir et les données qui les appuient. Chaque thème se lit section par section : en bref, le chiffre clé, ce que font les autres pays, nos propositions.</p></div>' +
-      '<p class="lead"><strong>Nouveau dans le groupe ?</strong> <a href="' + esc(BASE + "/guide.html") + '">Mode d\'emploi</a> : lire un thème en dix minutes, vérifier un chiffre, tester une proposition avec des personas d\'IA.</p>' +
+      '<p class="lead"><strong>Nouveau dans le groupe ?</strong> <a href="' + esc(BASE + "/guide.html") + '">Mode d\'emploi</a> : lire un thème en dix minutes, vérifier un chiffre. <a href="' + esc(BASE + "/evaluer.html") + '">Tester une proposition avec des personas</a> : choisissez les personas, collez votre note, copiez la consigne.</p>' +
       '<h2 class="h2">Par thème</h2><div class="grid">' + themeTiles + "</div>" +
       '<h2 class="h2">Outils interactifs</h2><div class="grid">' + tools + "</div>" +
       '<h2 class="h2">Dernières notes</h2><ul class="lst">' + last + "</ul>" +
