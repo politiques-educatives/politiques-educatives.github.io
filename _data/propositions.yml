@@ -6,55 +6,55 @@
 # ---------- Temps des professeurs
 - id: heures-service-annuel
   theme: Temps des professeurs
-  titre: "Un service annuel plafonné, avec du temps réservé au tutorat et au travail d'équipe"
-  explication: "Un service en heures par an, avec un plafond d'heures de cours et une part réservée, inscrite dans l'emploi du temps, au tutorat, à la concertation, à l'orientation et à la formation. Proposé d'abord aux volontaires et aux nouveaux recrutés, avec la revalorisation de 20 % prévue par le programme. En France, tout ce qui n'est pas une heure de cours se paie en heures supplémentaires ou ne se fait pas."
+  titre: "Convertir une heure de cours hebdomadaire en tutorat et en travail d'équipe"
+  explication: "Comme au premier degré, le service d'enseignement baisse d'une heure de cours par semaine, placée dans l'emploi du temps pour le tutorat, la concertation et l'orientation, sans hausse du temps de service. Cette mesure accompagne la revalorisation de 20 % prévue au programme. Aujourd'hui, un certifié doit 18 heures de cours hebdomadaires, et le reste se paie en heures supplémentaires ou ne se fait pas. L'heure retirée devant être assurée par ailleurs, son coût reste à chiffrer."
   preuves:
     - "Un certifié doit 18 heures de cours par semaine, un agrégé 15, un professeur des écoles 24 heures plus 108 heures par an (décrets de 2008 et 2014)."
     - "Le contrat écossais fixe une semaine de 35 heures, dont 22,5 heures de cours au plus (SNCT) : 855 heures de cours sur 1 365 heures de travail par an (OCDE, 2026)."
     - "Le second professeur principal de terminale, créé fin 2017, est payé par une indemnité, sans aucune heure dégagée."
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: à chiffrer
+  maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
 - id: heures-emploi-du-temps
   theme: Temps des professeurs
-  titre: "Un emploi du temps construit par l'établissement, avec le tutorat pendant la journée"
-  explication: "Le chef d'établissement répartit le service avec le conseil pédagogique : cours en barrette pour composer des groupes temporaires, une heure de concertation par semaine pour l'équipe de niveau, le tutorat dans la journée et non après la dernière heure, en petits groupes et par des enseignants."
+  titre: "Construire l'emploi du temps par établissement, avec du tutorat pendant la journée"
+  explication: "Le chef d'établissement et le conseil pédagogique organisent l'emploi du temps sans modèle imposé, avec des groupes temporaires réévalués toutes les six à huit semaines autour des mêmes programmes pour tous. L'heure de concertation hebdomadaire correspond à l'heure de cours convertie, sans heure imposée en plus. Des enseignants volontaires rémunérés assurent le tutorat en journée. Le tutorat est plus efficace pendant le temps scolaire (0,40 écart-type) qu'après (0,21) (Nickow, Oreopoulos et Quan, 2020)."
   preuves:
     - "Sur 96 essais randomisés, le tutorat améliore les résultats de 0,37 écart-type, davantage pendant le temps scolaire (0,40) qu'après (0,21), avec des enseignants (0,50) qu'avec des bénévoles (0,21) (Nickow, Oreopoulos et Quan, 2020 ; 0,29 sur 89 essais dans la version publiée en 2024)."
     - "L'effet est plus faible au collège et au lycée ; dans les essais les plus proches d'un déploiement à grande échelle, il n'atteint qu'un tiers à la moitié de celui de l'ensemble des essais, surtout parce qu'il baisse quand le programme grandit (Kraft et al., 2024)."
     - "Les groupes de niveau au sein de la classe gagnent 0,19 à 0,30 écart-type ; les classes séparées par niveau, presque rien (Steenbergen-Hu et al., 2016), mais elles creusent les écarts (Terrin et Triventi, 2023)."
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
 - id: heures-dotation
   theme: Temps des professeurs
-  titre: "Une dotation calculée selon les élèves et leurs besoins"
-  explication: "Calculée en heures de service, selon le nombre d'élèves et la part d'élèves en difficulté aux évaluations nationales, avec une majoration par élève défavorisé sur le modèle du pupil premium. Aujourd'hui, les moyens suivent la structure des classes, pas les besoins des élèves."
+  titre: "Calculer la dotation des établissements selon l'effectif et l'origine sociale, à budget constant"
+  explication: "Aujourd'hui, la dotation horaire d'un collège dépend des heures dues aux classes, pas des besoins des élèves. Elle suivra une formule publique à budget national constant, avec un socle par élève et une majoration selon l'indice de position sociale (IPS). Une transition sur trois ans et un plancher par élève protègent les établissements perdants, dont la liste est publiée avant l'entrée en vigueur."
   preuves:
     - "La dotation horaire globale d'un collège se calcule à partir des heures de cours dues aux classes, puis le conseil d'administration en vote la répartition."
     - "En Angleterre, le programme national de tutorat est passé à partir de 2021 par les écoles ; ses effets mesurés sont faibles, un mois de progrès au plus (NFER, 2024)."
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
 - id: heures-mercredi
   theme: Temps des professeurs
-  titre: "Le mercredi matin, décidé par bassin, avec la région et les communes"
-  explication: "Le retour à neuf demi-journées se décide avec la région (transports) et les communes (périscolaire), par réseau de transport, et s'accompagne du service annuel."
+  titre: "Ouvrir le mercredi matin dans les bassins volontaires, à 24 heures de cours constantes"
+  explication: "Lorsque la commune, la région et l'académie le décident ensemble, les 24 heures de cours hebdomadaires sont réparties sur neuf demi-journées, sans temps de service supplémentaire pour les professeurs des écoles. Le primaire français compte 162 jours, contre 183 dans l'OCDE et 190 en Angleterre. Aucune étude française ne mesure toutefois l'effet d'un retour à neuf demi-journées : la preuve est trop mince pour une mesure nationale."
   preuves:
     - "Le primaire français se fait sur 162 jours, contre 183 dans l'OCDE et 190 en Angleterre."
     - "À la rentrée 2023, 93 % des communes ayant une école publique étaient à la semaine de quatre jours (QE AN n° 3908, 2025) ; la Cour des comptes juge l'organisation du temps scolaire « en décalage avec les besoins des élèves » (2025)."
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: piste
+  maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 1 : l'allocation des heures d'enseignement (novembre 2026)"
 
@@ -75,53 +75,53 @@
 
 - id: gouv-recruter
   theme: Gouvernance de l'établissement
-  titre: "Recruter une part des enseignants sur projet, d'abord dans les établissements les moins demandés"
-  explication: "Une part des postes de chaque établissement pourvue sur profil par le chef d'établissement et le conseil pédagogique, en priorité dans les établissements les moins demandés, avec une prime d'affectation, et une évaluation prévue dès le départ."
+  titre: "Recruter jusqu'à 10 % des enseignants sur projet, d'abord dans les établissements peu demandés"
+  explication: "Aujourd'hui, les débutants sont plus souvent affectés en éducation prioritaire (DEPP, 2026). Dans le cadre des postes à profil existants, jusqu'à 10 % des postes d'un établissement sont pourvus sur projet par une commission réunissant chef d'établissement, enseignants du conseil pédagogique et inspecteur, avec droit de recours. Une prime d'affectation est versée tant que l'enseignant reste dans l'établissement, et les autres postes suivent le barème."
   preuves:
     - "Les enseignants sont affectés par le mouvement inter et intra-académique selon un barème de points ; les débutants sont plus souvent affectés en éducation prioritaire (DEPP, 2026)."
     - "Les collèges en difficulté devenus academies de 2002 à 2010, qui changeaient souvent de direction, ont progressé d'environ 0,2 écart-type en quatre ans (Eyles et Machin, 2019) ; ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2017)."
     - "Le recrutement sur profil, par exemple dans les écoles de Marseille, n'a pas encore été évalué (Cour des comptes, 2024)."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: à chiffrer
+  maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
 
 - id: gouv-coordinateurs
   theme: Gouvernance de l'établissement
-  titre: "Un coordinateur par discipline et par niveau, avec une décharge de service"
-  explication: "Un échelon intermédiaire qui organise les groupes, le tutorat et l'observation entre pairs. En Angleterre, les responsables de discipline et de niveau (middle leaders), payés par des primes de responsabilité, forment cet échelon qui manque en France."
+  titre: "Créer un coordinateur de discipline ou de niveau, choisi par l'équipe et indemnisé"
+  explication: "Dans chaque collège et lycée volontaire, l'équipe choisit un coordinateur de discipline ou de niveau, payé par une indemnité pour mission particulière plutôt que par une décharge consommant des postes. Sans évaluer ses collègues, il organise les groupes temporaires, le tutorat, les supports communs et l'observation entre pairs. Les preuves d'effet sur les élèves restent minces : l'observation mutuelle a gagné 0,07 écart-type dans 82 collèges anglais (Burgess, Rawal et Taylor, 2021), mais l'évaluation officielle ne trouve aucun effet (EEF, 2017)."
   preuves:
     - "Dans 82 collèges anglais, l'observation mutuelle a gagné 0,07 écart-type au GCSE, et la doubler n'a rien ajouté (Burgess, Rawal et Taylor, 2021) ; l'évaluation officielle du même essai ne trouve aucun effet (EEF, 2017)."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: piste
+  maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
 
 - id: gouv-visite
   theme: Gouvernance de l'établissement
-  titre: "Une visite-conseil tous les deux ans pour chaque enseignant, chaque année pour les débutants"
-  explication: "Assurée par l'inspecteur ou par des enseignants expérimentés formés à l'observation, avec un plan de formation inscrit dans le service. Après le dernier rendez-vous de carrière, vers la dix-neuvième année de métier, aucune visite de classe n'est obligatoire."
+  titre: "Instaurer une visite-conseil par des pairs formés tous les deux ans, annuelle pour les débutants"
+  explication: "Chaque enseignant reçoit une visite formative tous les deux ans, et chaque année à ses débuts, menée par l'inspecteur ou par des enseignants expérimentés volontaires, rémunérés et formés à l'observation avec grille. Sans lien avec l'avancement, elle débouche sur un plan de formation d'une à deux journées par an. À Cincinnati, une année d'évaluation fondée sur quatre observations, dont trois par des pairs formés, a relevé les résultats en maths d'environ 0,10 écart-type les années suivantes (Taylor et Tyler, 2012)."
   preuves:
     - "À Cincinnati, une année d'évaluation fondée sur quatre observations, dont trois par des pairs formés, a relevé d'environ 0,10 écart-type les résultats en maths des élèves les années suivantes (Taylor et Tyler, 2012)."
     - "Les quelque 3 650 inspecteurs territoriaux (Cour des comptes, 2022) consacrent environ 30 % de leur activité à l'évaluation des enseignants dans le premier degré, 20 à 30 % dans le second."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: à chiffrer
+  maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Note 2 : qui décide dans l'établissement ? (novembre 2026)"
 
 - id: gouv-evaluation
   theme: Gouvernance de l'établissement
-  titre: "Un corps spécialisé pour évaluer les établissements, appuyé sur la valeur ajoutée"
-  explication: "Distinct de l'inspection des enseignants, sur le modèle de l'Ofsted, il s'appuie sur des IVAC et IVAL étendus au-delà du brevet et du bac. La DEPP publie une valeur ajoutée par lycée depuis 1993 et par collège depuis 2022, sans rôle dans l'évaluation des établissements."
+  titre: "Évaluer en priorité les établissements où les élèves progressent le moins, sans nouveau corps"
+  explication: "Sans créer de nouveau corps, le Conseil d'évaluation de l'école évalue les établissements à faible valeur ajoutée, mesurée par les IVAC et IVAL étendus au-delà du brevet et du bac, avec accompagnement et retour sous deux ans. Les résultats sont publiés par domaine, sans note globale ni classement. En Angleterre, un échec à l'inspection a relevé les résultats en maths de 0,12 écart-type au primaire (Hussain, 2015) et d'environ 0,1 au secondaire (Allen et Burgess, 2012)."
   preuves:
     - "Un échec à l'inspection a relevé les résultats des élèves de 0,12 écart-type en maths en primaire (Hussain, 2015) et d'environ 0,1 dans le secondaire (Allen et Burgess, 2012)."
     - "Depuis novembre 2025, l'Ofsted note chaque établissement sur cinq niveaux, domaine par domaine, sans note globale, environ tous les quatre ans."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: à chiffrer
+  maj_le: 2026-11-22
 
 # ---------- Orientation et bac
   sujets: [formation]
@@ -129,42 +129,42 @@
 
 - id: orient-4e
   theme: Orientation et bac
-  titre: "Orienter dès la 4e, avec un tuteur référent jusqu'en terminale"
-  explication: "Le tuteur de l'élève est son référent d'orientation de la 4e à la terminale : un entretien par trimestre, des heures dans son service, une formation sur les filières. Le second professeur principal de terminale, sans heures ni formation, n'a pas marché."
+  titre: "Attribuer à chaque élève un tuteur référent d'orientation de la 4e à la terminale"
+  explication: "De la 4e à la terminale, chaque élève voit chaque trimestre un tuteur référent d'orientation, enseignant volontaire, formé aux filières et rémunéré. Sans heures ni formation, le second professeur principal de terminale n'a pas fonctionné, et seul un tiers des lycées a tenu les deux semaines d'orientation (Cnesco, 2018). En Allemagne, un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés (Resnjanskij et al., 2024). Le coût, estimé entre 30 et 50 millions d'euros par an, reste à confirmer."
   preuves:
     - "Un tiers des lycées seulement a tenu les deux semaines d'orientation (Cnesco, 2018)."
     - "En Allemagne, un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés (Resnjanskij et al., 2024)."
     - "En fin de 3e, 38,6 % des élèves du public entrent en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale ; DEPP, 2025)."
     - "Coût de travail du tuteur référent compté dans le service : 30 à 50 millions d'euros par an (calcul de travail à confirmer)."
   note: EDUCATION-note3-orienter.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: à chiffrer
+  maj_le: 2026-11-22
   sujets: [orientation]
   issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
 
 - id: orient-parents
   theme: Orientation et bac
-  titre: "Deux réunions avec les parents des élèves de 4e et de 3e en difficulté"
-  explication: "Étendre à toute la 4e et la 3e un dispositif testé en France, pour un coût quasi nul."
+  titre: "Organiser deux réunions d'orientation avec les parents des élèves de 4e et 3e en difficulté"
+  explication: "Dans tous les collèges, les parents des élèves de 4e et de 3e en difficulté sont réunis deux fois par an pour préparer l'orientation. Déjà évaluées en France en classe de 3e, ces réunions ont rendu les projets plus réalistes et réduit de 25 à 40 % le redoublement et le décrochage (Goux, Gurgand et Maurin, 2017), pour un coût quasi nul."
   preuves:
     - "Deux réunions avec les parents d'élèves de 3e en difficulté ont réduit de 25 à 40 % le redoublement et le décrochage (Goux, Gurgand et Maurin, 2017)."
     - "Une heure d'intervention d'une scientifique en classe fait passer de 11 % à 14,5 % la part des filles qui entrent dans une formation scientifique sélective (Breda et al., 2023)."
   note: EDUCATION-note3-orienter.pdf
   statut: proposition
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [orientation]
   issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
 
 - id: orient-gatsby
   theme: Orientation et bac
-  titre: "Un cadre national d'orientation mesuré dans chaque établissement, à l'anglaise"
-  explication: "Les huit repères Gatsby (information sur les métiers, rencontres avec des employeurs, stages, entretien individuel) sont mesurés dans chaque établissement anglais. Le rapport Milburn propose d'aller plus loin : une norme « prêt pour le travail » inspectée et la publication de ce que deviennent les élèves de chaque établissement."
+  titre: "Mesurer huit repères d'orientation par établissement et publier le devenir des élèves"
+  explication: "Sur le modèle anglais des repères Gatsby, chaque collège et lycée mesure chaque année huit repères d'orientation : information sur les métiers, rencontres d'employeurs, stages et entretien individuel. Le devenir des élèves de chaque établissement est publié, suivant le rapport Milburn (2026, p. 14-15). En Angleterre, atteindre tous les repères est associé à 8 % de jeunes sans emploi ni formation en moins, un lien qui n'est pas encore causal (Careers & Enterprise Company, 2024)."
   preuves:
     - "Les établissements anglais atteignent 6,0 repères sur 8 en moyenne ; ceux qui les atteignent tous comptent 8 % de jeunes sans emploi ni formation en moins, un lien qui n'est pas encore causal (Careers & Enterprise Company, 2024)."
     - "Norme « prêt pour le travail » inspectée par l'Ofsted et obligation légale de stage en entreprise (Milburn, 2026, p. 14-15)."
   note: EDUCATION-note3-orienter.pdf
-  statut: proposition
-  maj_le: 2026-11-18
+  statut: à chiffrer
+  maj_le: 2026-11-22
   sujets: [orientation]
   issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
 
@@ -214,8 +214,8 @@
 
 - id: ia-master
   theme: IA, jeunes et emploi
-  titre: "Un jeune a-t-il vraiment besoin d'un master ? Une licence qui mène à un métier"
-  explication: "Interroger les employeurs publics et privés sur leurs vrais besoins en bac+5. Construire une licence qui mène à un métier et finie à temps : stage long ou alternance obligatoire en L3 et développement des licences professionnelles. Réserver le master à la recherche, aux études longues, à la réorientation ou à l'alternance. Le master sert souvent de filtre plus que de compétence : injuste pour les enfants d'ouvriers, coûteux, et il retarde de deux ans l'entrée dans la vie active."
+  titre: "Professionnaliser la licence avec un stage long ou l'alternance en L3"
+  explication: "Chaque licence intègre un stage long ou l'alternance en L3, les licences professionnelles se développent, et le master cible recherche, études longues, réorientation et alternance, après enquête auprès des employeurs publics et privés sur leurs besoins en bac+5. À 30 mois, l'emploi salarié atteint 78 % après une licence professionnelle, contre 69 % après un master et 50 % après une licence générale (InserSup 2026). Le diplôme ne tranche que 11 % des recrutements (Dares, enquête Ofer 2016), alors qu'un master coûte environ 24 500 € à l'État (RERS 2025) et retarde l'activité de deux ans."
   preuves:
     - "Emploi salarié à 30 mois : 78 % après une licence professionnelle, 69 % après un master, 50 % après une licence générale, 77 % après un master en alternance (InserSup 2026)."
     - "À 26-27 ans, avoir terminé le master plutôt qu'arrêté en dernière année ajoute 15 points à la probabilité d'être cadre, mais seulement 4 % au salaire, pour un emploi presque identique, 90 % contre 87 % (Insee Première n° 2109, juin 2026)."
@@ -223,58 +223,58 @@
     - "Les enfants d'ouvriers passent de 10 % des étudiants en licence à 6 % en master, contre 31 % à 42 % pour les enfants de cadres ; un master coûte environ 24 500 € par jeune à l'État (RERS 2025)."
     - "Seuls 30 % des étudiants obtiennent leur licence en trois ans (SIES, Note Flash n° 29, novembre 2025)."
   statut: à chiffrer
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [emploi]
   issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-garantie
   theme: IA, jeunes et emploi
-  titre: "Une garantie pour chaque jeune sans emploi ni formation, sur le modèle Milburn"
-  explication: "Le rapport Milburn propose une garantie légale d'opportunité et de soutien pour tout jeune de 18 à 24 ans sans emploi ni formation : un emploi, une formation professionnelle, un apprentissage, un stage jusqu'à 12 semaines ou un service civique, un conseiller sous 14 jours et un plan personnel sous 4 semaines. Le gouvernement britannique en soutient le principe. Transposition aux missions locales et au contrat d'engagement jeune à chiffrer (détail : onglet Milburn)."
+  titre: "Garantir un conseiller sous 14 jours et une offre à chaque jeune sans emploi ni formation"
+  explication: "Via le contrat d'engagement jeune, tout jeune de 18 à 24 ans sans emploi ni formation voit un conseiller de mission locale sous 14 jours, reçoit un plan sous quatre semaines, puis une offre : emploi tutoré, formation professionnelle, apprentissage, stage ou service civique. C'est la garantie du rapport Milburn (2026). La Garantie jeunes a relevé l'emploi de 6,3 points à environ 14 mois (évaluation intermédiaire, 2016), et Kickstart au Royaume-Uni a ajouté 11 emplois non aidés pour 100 participants à 24 mois (DWP, 2024)."
   preuves:
     - "Aide à l'employeur de 3 000 £ par embauche d'un jeune resté six mois sans emploi ni formation, jusqu'à 7 000 £ pour une petite entreprise, et 2 500 £ par apprenti, pour environ 1,1 milliard de livres par an et 170 000 opportunités (Milburn, 2026, p. 12)."
     - "Kickstart (2020-2022) a ajouté 11 jeunes en emploi non aidé pour 100 participants à 24 mois et rapporté 1,18 £ par livre dépensée (DWP, 2024)."
     - "En France, la Garantie jeunes a relevé l'emploi de 6,3 points à environ 14 mois (évaluation intermédiaire, 2016), sans confirmation sur la seconde cohorte."
     - "Financement proposé : 500 millions de livres en 2027/28, 5,8 milliards par an d'ici 2036/37, pour 440 000 jeunes de plus en emploi durable (Milburn, 2026, p. 25 et 30-31) ; montants non engagés par le gouvernement."
   statut: à chiffrer
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [emploi]
   issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-observatoire
   theme: IA, jeunes et emploi
-  titre: "Un suivi annuel des postes de débutants face à l'IA"
-  explication: "L'Observatoire France Travail pourrait publier chaque année les secteurs et territoires où les postes d'entrée reculent face à l'IA, sur le modèle de l'observatoire proposé au Royaume-Uni. Sa première étude, parue le 17 novembre 2026 auprès de 16 000 employeurs, ne porte pas sur les débutants."
+  titre: "Publier un suivi annuel des postes de débutants face à l'intelligence artificielle"
+  explication: "L'Observatoire de France Travail publie chaque année les secteurs et territoires où les postes d'entrée reculent face à l'IA, sur le modèle proposé au Royaume-Uni (Milburn, 2026, p. 72-73). Sa première étude du 17 novembre 2026 auprès de 16 000 employeurs n'isole pas les débutants. Or, entre novembre 2022 et mars 2026, les embauches en CDI des 21-29 ans ont baissé de 28,3 % dans le cinquième des métiers les plus exposés à l'IA, en partie à cause du télétravail (LIFT, 2026)."
   preuves:
     - "Observatoire de l'IA et des jeunes, rapport annuel sur les voies d'entrée qui se ferment, par secteur et par territoire (Milburn, 2026, p. 72-73)."
     - "Embauches en CDI des 21-29 ans : -28,3 % dans le cinquième des métiers les plus exposés à l'IA entre novembre 2022 et mars 2026, une baisse dont une partie vient du télétravail (LIFT, 2026)."
-  statut: à chiffrer
-  maj_le: 2026-11-18
+  statut: proposition
+  maj_le: 2026-11-22
   sujets: [emploi]
   issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-bases
   theme: IA, jeunes et emploi
-  titre: "De bonnes bases pour tous : les maths jusqu'en terminale, pas d'IA en accès libre avant les fondamentaux"
-  explication: "Rétablir les mathématiques jusqu'en terminale pour tous les élèves visant le supérieur, et refuser l'IA en accès libre avant l'acquisition des fondamentaux. Seuil exact à trancher par l'équipe programme, coût à chiffrer."
+  titre: "Maintenir les mathématiques jusqu'en terminale vers le supérieur et encadrer l'accès libre à l'IA"
+  explication: "Tout élève visant le supérieur suit des mathématiques jusqu'en terminale, contre 44,8 % aujourd'hui (DEPP, 2026). Les heures sont prises sur les dotations ou assurées en heures supplémentaires par des enseignants volontaires, sans heure imposée. L'IA en accès libre n'est ouverte qu'après l'acquisition des fondamentaux, car elle fait perdre 17 % à l'examen passé sans elle (Bastani et al., 2025)."
   preuves:
     - "Les mathématiques sont suivies par 44,8 % des élèves de terminale aujourd'hui (DEPP, 2026)."
     - "L'IA en accès libre fait perdre 17 % à l'examen passé sans elle (Bastani et al., 2025)."
     - "À 15 ans, un tiers des élèves est en difficulté de lecture, contre 15 % en 2000 (DEPP, note d'information 26.40, septembre 2026)."
   statut: à chiffrer
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [emploi, ecrans]
   issue_de: "Note IA et jeunes (novembre 2026)"
 
 - id: ia-marche
   theme: IA, jeunes et emploi
-  titre: "Une orientation qui suit le marché du travail, jusqu'à la carte des bacs pro"
-  explication: "Afficher sur Parcoursup et en bac pro l'emploi et le salaire à 30 mois, les postes ouverts dans le bassin (France Travail, BMO) et le profil d'exposition à l'IA ; revoir chaque année la carte des bacs pro selon les embauches locales."
+  titre: "Revoir chaque année la carte des bacs professionnels selon les embauches du bassin"
+  explication: "La carte des bacs professionnels est réexaminée chaque année selon les embauches locales et les postes ouverts du bassin (France Travail, BMO). Si l'insertion décroche, la section reçoit d'abord des partenariats de stage et d'alternance, sans fermeture automatique sur ce seul critère. À 20 ans, moins d'un jeune Français sur trois travaille (environ 30 % en 2023), contre près de 60 % en Allemagne, au Royaume-Uni et aux États-Unis (CAE, Focus n° 110, 2025, lecture du graphique)."
   preuves:
     - "50 % des étudiants craignent que l'IA remplace le métier qu'ils visent (OpinionWay, 2026), alors qu'un métier exposé reste porteur, à l'image des diplômés de comptabilité qui sont 79 % en emploi à 30 mois (InserSup 2026, calculs GT Éducation)."
     - "À 20 ans, moins d'un jeune Français sur trois est en emploi (environ 30 % en 2023), contre près de 60 % en Allemagne, au Royaume-Uni et aux États-Unis (CAE, Focus n° 110, 2025, lecture du graphique)."
   statut: à chiffrer
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
 
 # ---------- Santé mentale et écrans
   sujets: [emploi]
@@ -282,26 +282,26 @@
 
 - id: tuteur-public
   theme: Tuteur IA
-  titre: "Un tuteur IA public, vocal, qui ne donne jamais la solution avant une tentative"
-  explication: "Un tuteur à indices gradués, avec un volet orientation de la 6e à la terminale, commandé par appel d'offres et testé avant toute généralisation, plutôt que des cours d'IA."
+  titre: "Déployer un tuteur IA public et vocal qui guide l'élève sans donner la solution"
+  explication: "Plutôt que des cours d'IA, l'État commande un tuteur vocal à indices gradués qui ne livre jamais la solution avant une tentative, avec un volet orientation de la 6e à la terminale. Ces tuteurs structurés améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025), quand l'IA en accès libre réduit de 17 à 24 % les notes aux examens sans elle (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026). Il est acheté en quatre lots, payés en partie aux résultats."
   preuves:
     - "Les tuteurs structurés qui guident sans donner la réponse améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025)."
     - "L'accès libre à l'IA fait baisser les notes aux examens passés sans elle de 17 à 24 % (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026)."
   note: ""
   statut: proposition
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [ecrans]
   issue_de: "Note sur un tuteur IA pour l'Éducation nationale (octobre 2026)"
 
 - id: tuteur-marche
   theme: Tuteur IA
-  titre: "Un marché public en quatre lots, payé en partie selon les résultats d'un essai"
-  explication: "Éviter l'erreur de MIA Seconde : séparer conception pédagogique et garde-fous, accès aux modèles par une passerelle publique (API Albert), voix sur des modèles français ouverts, et données d'orientation. Changer de modèle sous trois mois, remettre le modèle en concurrence tous les 12 à 24 mois, et lier 20 à 30 % du paiement aux résultats d'un essai indépendant."
+  titre: "Acheter le tuteur IA en quatre lots séparés, payés en partie aux résultats"
+  explication: "Après le retard d'un an de MIA Seconde, commandé 2,8 M€ en 2022 sans résultats publiés (Next, 2024), le marché sépare conception pédagogique et garde-fous, accès aux modèles, voix et données d'orientation. L'accès passe par l'API publique Albert ou, d'ici là, un marché sécurisé, et la voix par des modèles français ouverts. Remplaçable sous trois mois, le modèle est remis en concurrence tous les 12 à 24 mois, et 20 à 30 % du paiement dépend des résultats mesurés par un évaluateur indépendant."
   preuves:
     - "MIA Seconde, commandé en 2022 pour 2,8 M€ sur trois ans, a été livré avec un an de retard, sans résultats publiés (Next, 2024)."
   note: ""
   statut: proposition
-  maj_le: 2026-11-18
+  maj_le: 2026-11-22
   sujets: [ecrans]
   issue_de: "Note sur un tuteur IA pour l'Éducation nationale (octobre 2026)"
 
@@ -309,8 +309,8 @@
 # Textes : Gemini 4 Carbon à partir des fiches de recherche ; preuves reprises des fiches (chiffres vérifiés dans les ledgers).
 - id: j-emploi-tutore
   theme: Premier emploi des jeunes
-  titre: "Un emploi tutoré de six mois en entreprise pour les jeunes sans emploi ni formation"
-  explication: "En entreprise privée, un contrat aidé augmente de 23 points l'accès à un emploi non aidé deux ans et demi plus tard (Cour des comptes, 2018, p. 140). L'État financera une partie du salaire d'un emploi de six mois avec tuteur en entreprise privée, réservé aux jeunes restés 6 à 12 mois sans emploi ni formation. Comme ces contrats ne créent que 0,1 emploi net par embauche (Cour des comptes, 2018, p. 141), ils seront ciblés uniquement sur ces jeunes éloignés de l'emploi."
+  titre: "Financer six mois d'emploi tutoré en entreprise après 6 à 12 mois sans emploi"
+  explication: "Dans le contrat d'engagement jeune, l'État cofinance un emploi de six mois avec tuteur en entreprise privée pour les jeunes sans emploi ni formation depuis 6 à 12 mois, à environ 7 250 € par place (calcul du GT). En entreprise privée, un contrat aidé relève de 23 points l'emploi non aidé deux ans et demi après (Cour des comptes, 2018, p. 140). Comme il ne crée que 0,1 emploi net par embauche (Cour des comptes, 2018, p. 141), il cible ces seuls jeunes."
   preuves:
     - "Contrats aidés du secteur marchand (CIE) : +23 points d'emploi non aidé deux ans et demi après l'entrée, par rapport à des personnes comparables sans contrat (Cour des comptes, 2018, p. 140)"
     - "Mais 0,1 emploi net créé par contrat financé : la plupart des embauches auraient eu lieu sans aide (Cour des comptes, 2018, p. 141)"
@@ -336,8 +336,8 @@
 
 - id: stages-garantie-rep
   theme: Stages
-  titre: "Garantir par l'établissement un stage de 3e et de seconde à chaque élève d'éducation prioritaire"
-  explication: "Deux tiers des stages passent par l'entourage, contre 4 % par l'établissement, et 41 % des enfants d'ouvriers cherchent sans proches (Guichard, DEPP, 2026). Comme l'accompagnement seul ne suffit pas (L'Horty, Duguet et Petit, 2012) et que moins de 10 000 des 33 000 offres dédiées ont trouvé preneur (circulaire du Premier ministre, 31/07/2019), recteurs et préfets réuniront des places publiques et privées. Les établissements de REP, REP+ et ruraux isolés affecteront directement les élèves restés sans stage à une date butoir, avec déploiement évalué par tirage au sort."
+  titre: "Garantir un stage de 3e et de seconde aux élèves d'éducation prioritaire et ruraux isolés"
+  explication: "Deux tiers des stages passent par l'entourage contre 4 % par l'établissement (Guichard, DEPP, 2026), et l'accompagnement seul ne suffit pas (L'Horty, Duguet et Petit, 2012). Préfet et recteur réunissent un vivier de places, d'abord publiques. En REP+, puis en REP et en zone rurale isolée, un référent volontaire et rémunéré attribue une place à chaque élève sans stage à une date butoir, sans tâche ajoutée aux professeurs principaux."
   preuves:
     - "Deux tiers des stages de 3e et de seconde sont trouvés grâce à la famille ou à l'entourage, 4 % grâce à l'établissement (Guichard, DEPP, 2026)"
     - "41 % des enfants d'ouvriers trouvent leur stage sans l'aide de proches, contre 24 % des enfants de cadres (Guichard, DEPP, 2026)"
@@ -353,8 +353,8 @@
 
 - id: stages-jobs-ete
   theme: Stages
-  titre: "Financer un job d'été de six semaines pour les lycéens des quartiers prioritaires"
-  explication: "À Chicago, des jobs d'été tirés au sort ont réduit de 43 % les arrestations pour violence chez les lycéens (Heller, 2014). L'État et les collectivités financeront six semaines d'emploi tutoré au salaire minimum, 25 heures par semaine, pour les 16-18 ans des quartiers prioritaires. C'est une piste à tester par tirage au sort, conçue pour la sécurité et une première expérience, car ces dispositifs n'améliorent pas l'emploi formel ultérieur (Davis et Heller, 2017, résumé J-PAL)."
+  titre: "Financer des jobs d'été tutorés pour les lycéens des quartiers prioritaires"
+  explication: "Avec la politique de la ville, les collectivités volontaires financent six semaines d'emploi tutoré au salaire minimum, 25 heures hebdomadaires, pour les 16-18 ans des quartiers prioritaires, avec relais d'information par l'Éducation nationale. À Chicago, ces jobs d'été ont réduit de 43 % les arrestations pour violence des participants (Heller, 2014), sans effet sur l'emploi formel ni la scolarité (Davis et Heller, 2017). C'est une piste de sécurité : la preuve reste trop mince pour l'emploi des jeunes."
   preuves:
     - "Chicago, 1 634 lycéens tirés au sort : 43 % d'arrestations pour violence en moins sur 16 mois par rapport au groupe témoin (Heller, 2014)"
     - "Chicago 2012 : 35 % d'arrestations pour violence en moins sur un an, aucun effet sur l'emploi formel ni la scolarité, 45 % d'arrestations pour vol en plus (Davis et Heller, 2017, résumé J-PAL)"
@@ -368,23 +368,23 @@
 
 - id: stages-superieur-boursiers
   theme: Stages
-  titre: "Garantir par l'établissement un stage en entreprise aux étudiants boursiers restés sans place"
-  explication: "Un stage pendant les études augmente le salaire d'environ 6 % en Allemagne (Margaryan, Saniter, Schumann et Siedler, 2019), mais en France 26 % des étudiants le trouvent par leur réseau social (SIES, 2017, données Céreq Génération 2010). Chaque formation exigeant un stage attribuera aux boursiers sans solution à une date butoir une place chez ses entreprises partenaires, et publiera la part de stages fournis et gratifiés. Aucune étude n'évaluant encore cette garantie, c'est une piste à tester."
+  titre: "Garantir un stage aux étudiants boursiers restés sans place à une date butoir"
+  explication: "Toute formation exigeant un stage attribue aux boursiers sans solution à une date butoir une place chez ses entreprises partenaires via son service des stages, sans charge nouvelle pour les enseignants-chercheurs. Chaque établissement publie la part de stages fournis et gratifiés. En France, 26 % des étudiants trouvent leur stage par réseau social (SIES, 2017, données Céreq Génération 2010), et un stage durant les études augmente le salaire d'environ 6 % en Allemagne (Margaryan, Saniter, Schumann et Siedler, 2019)."
   preuves:
     - "Allemagne : environ 6 % de salaire en plus après un stage en entreprise pendant les études, estimé en utilisant les stages obligatoires de certains cursus (Margaryan, Saniter, Schumann et Siedler, 2019)"
     - "États-Unis, testing par CV : une expérience de stage augmente de 14 % (2,2 points) le taux de convocation à un entretien (Nunley, Pugh, Romero et Seals, 2015)"
     - "26 % des étudiants trouvent leur stage par leur réseau social ; père en emploi : +7 points de probabilité d'avoir fait un stage (SIES, 2017, données Céreq Génération 2010)"
     - "61 % des sortants de BTS-DUT ont fait un dernier stage court et non gratifié (SIES, 2017)"
     - "Coût : à chiffrer"
-  statut: piste
+  statut: à chiffrer
   maj_le: 2026-11-22
   sujets: [emploi]
   issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
 
 - id: bourses-bareme-lineaire
   theme: "Étudiants : bourses et logement"
-  titre: "Remplacer les échelons des bourses étudiantes par un barème continu et indexé sur les prix"
-  explication: "Le nombre de boursiers a reculé à 662 000 en 2024-2025 (Sénat, 2025), alors qu'être éligible à 1 500 € par an augmente jusqu'à 5 points l'inscription et la réussite en master (Fack et Grenet, 2015). Le ministère remplacera les huit échelons par une formule continue indexée sur les prix, supprimant les effets de seuil. Ce barème, chiffré entre 350 et 400 M€ par an (Sénat, avis n° 144, 2025, p. 15), sera financé en recentrant les APL étudiantes et en supprimant la réduction d'impôt pour frais de scolarité."
+  titre: "Remplacer les huit échelons de bourses par un barème continu, puis l'indexer sur les prix"
+  explication: "Un barème continu remplace les huit échelons et supprime les effets de seuil, sans perte pour les boursiers actuels, avant une indexation sur les prix dans un second temps. L'éligibilité à 1 500 € par an relève jusqu'à 5 points l'inscription et la réussite en master (Fack et Grenet, 2015), alors que les boursiers ont reculé à 662 000 en 2024-2025 (Sénat, 2025). Chiffrée entre 350 et 400 M€ par an (Sénat, avis n° 144, 2025, p. 15), la réforme démarre avec son financement, dont le recentrage à chiffrer des APL étudiantes."
   preuves:
     - "Jusqu'à +5 points d'inscription ou de réinscription pour l'éligibilité à 1 500 € par an, contre les candidats juste au-dessus du seuil (Fack et Grenet, 2015)"
     - "+5 points d'obtention du diplôme pour les entrants en master, jusqu'à +3 points en dernière année, même comparaison (Fack et Grenet, 2015)"
@@ -392,15 +392,15 @@
     - "662 000 boursiers en 2024-2025, plus bas depuis 2015, recul de 2,6 % en un an (Sénat, 2025)"
     - "31 % des boursiers touchent moins de 150 € par mois (Sénat, 2025)"
     - "Coût : 350 à 400 M€ par an selon le ministère (Sénat, avis n° 144, 2025, p. 15), soit 15 à 17 % des 2,32 Md€ de crédits de bourses 2026 ; gain des financements proposés à chiffrer"
-  statut: proposition
+  statut: à chiffrer
   maj_le: 2026-11-22
   sujets: [emploi]
   issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
 
 - id: residences-etudiantes-zones-tendues
   theme: "Étudiants : bourses et logement"
-  titre: "Construire les résidences étudiantes sociales d'abord dans les villes sous 5 places pour 100 étudiants"
-  explication: "À Paris, on compte 3 places sociales pour 100 étudiants contre 8,2 en moyenne, pour un reste à charge de 375 € dans le privé contre 100 € dans le social (Cour des comptes, 2025). L'État, les Crous et les universités construiront des résidences à loyer plafonné dans les villes sous 5 places pour 100 étudiants, sur des terrains publics cédés gratuitement, avec compensation des places perdues. Augmenter l'offre contient les loyers (Grislain-Letrémy et Trevien, 2022), alors qu'une hausse d'aide au logement les relève (Fack, 2006)."
+  titre: "Céder gratuitement des terrains publics pour loger les étudiants dans les villes très tendues"
+  explication: "Dans les villes offrant moins de 5 places sociales pour 100 étudiants, l'État et les universités cèdent gratuitement leurs terrains pour des résidences à loyer plafonné. Toute place supprimée en réhabilitation est compensée, après 11 000 pertes en 2018-2022 (Cour des comptes, 2025). Paris compte 3 places pour 100 étudiants contre 8,2 en moyenne, avec un reste à charge de 375 € dans le privé contre 100 € dans le social. Hausser l'offre contient les loyers (Grislain-Letrémy et Trevien, 2022), avec des objectifs par ville fixés après chiffrage à environ 71 000 € la place (Cour des comptes, 2025)."
   preuves:
     - "Reste à charge après APL à Paris en 2023 : 375 € par mois dans le privé contre 100 € dans le parc social (Cour des comptes, 2025)"
     - "3 places à vocation sociale pour 100 étudiants à Paris contre 13 à Orléans et 8,2 en moyenne nationale (Cour des comptes, 2025)"
@@ -415,15 +415,15 @@
 
 - id: emplois-etudiants-campus
   theme: "Étudiants : bourses et logement"
-  titre: "Créer des emplois étudiants sur le campus de 15 heures maximum, d'abord pour les boursiers"
-  explication: "Près de la moitié des étudiants, 44 %, travaillent pendant l'année (OVE, 2023), ce qui réduit fortement leurs chances de réussir, surtout au-delà de 16 heures hebdomadaires (Beffy, Fougère et Maurel, 2009). À l'inverse, des emplois courts sur le campus aux États-Unis augmentent de 3,2 points l'obtention de la licence (Scott-Clayton et Minaya, 2016). Les universités et les Crous recruteront prioritairement des boursiers jusqu'à 15 heures par semaine, adaptées aux cours et cofinancées par l'État : une piste à tester."
+  titre: "Créer sur les campus des emplois étudiants plafonnés à 15 heures, d'abord pour les boursiers"
+  explication: "Universités et Crous recrutent en priorité des boursiers sur des emplois adaptés aux cours, plafonnés à 15 heures hebdomadaires et cofinancés par l'État, en plus des postes existants. Or 44 % des étudiants travaillent durant l'année (OVE, 2023), ce qui réduit la réussite, surtout au-delà de 16 heures hebdomadaires (Beffy, Fougère et Maurel, 2009). Aux États-Unis, des emplois courts sur le campus augmentent de 3,2 points l'obtention de la licence (Scott-Clayton et Minaya, 2016)."
   preuves:
     - "Sans leur emploi, les étudiants salariés auraient eu 43 points de probabilité de plus de réussir leur année, effet plus fort au-delà de 16 heures par semaine (Beffy, Fougère et Maurel, 2009)"
     - "+3,2 points de licence en six ans pour les participants au Federal Work-Study contre des non-participants comparables ; 11 heures par semaine contre 18 pour les autres étudiants salariés (Scott-Clayton et Minaya, 2016)"
     - "Uruguay, loterie : pas d'effet sur les notes et +4 points d'inscription deux ans après pour les élèves tirés au sort, contre les non-tirés (Le Barbanchon, Ubfal et Araya, 2023)"
     - "44 % des étudiants ont une activité rémunérée pendant l'année (OVE, 2023)"
     - "Coût : À chiffrer"
-  statut: piste
+  statut: à chiffrer
   maj_le: 2026-11-22
   sujets: [emploi]
   issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
@@ -446,8 +446,8 @@
 
 - id: batiments-fonds-chaleur-air
   theme: Bâtiments scolaires
-  titre: "Créer un fonds d'État pour la chaleur, l'air et les sanitaires des écoles défavorisées"
-  explication: "D'ici 2030, 9,4 millions d'élèves subiront de fortes chaleurs (ÉduRénov, 2025), alors que rénover le chauffage et la ventilation améliore les résultats scolaires dans les quartiers pauvres (Biasi, Lafortune et Schönholzer, 2024) et que baisser le CO2 accélère de 12 % le travail scolaire (Wargocki et al., 2020, revue). L'État financera à 90 %, en REP+ puis REP selon l'inventaire national, les travaux thermiques, de ventilation, de sanitaires et de dépollution. Le fonds exclura les dépenses sans effet prouvé et sera évalué par vagues."
+  titre: "Rénover le chauffage, l'air et les sanitaires des écoles prioritaires par redéploiement de crédits"
+  explication: "Après l'inventaire national, l'État finance à 90 % l'isolation thermique, la ventilation, les sanitaires et la dépollution des écoles, d'abord en REP+ puis en REP. Intégré au fonds chaleur étendu aux écoles, ce soutien redéploie des crédits d'investissement existants et exclut les dépenses sans effet prouvé. D'ici 2030, 9,4 millions d'élèves subiront de fortes chaleurs (ÉduRénov, 2025), et rénover chauffage et ventilation améliore les résultats dans les districts pauvres, pas dans les districts aisés (Biasi, Lafortune et Schönholzer, 2024)."
   preuves:
     - "Projets de chauffage-ventilation-climatisation : +0,27 écart-type de district (environ +0,09 écart-type élève) dans les districts pauvres, aucun effet dans les districts aisés (Biasi, Lafortune et Schönholzer, 2024)"
     - "Sans climatisation, une année plus chaude de 1 °F réduit l'apprentissage de l'année d'environ 1 %, par rapport au même élève lors d'un autre passage du test (Goodman et al., 2020)"
@@ -463,14 +463,14 @@
 
 - id: batiments-ddec-perequation
   theme: Bâtiments scolaires
-  titre: "Répartir la dotation d'équipement des collèges selon le nombre d'élèves et l'état du bâti"
-  explication: "Figée depuis 2009, la dotation d'équipement de l'État couvre 9,28 % des investissements des collèges en Seine-Saint-Denis contre 84,25 % dans les Ardennes (Cour des comptes, 2023). À enveloppe constante d'environ 280 M€ par an, l'État la répartira selon le nombre de collégiens, leur origine sociale et l'état des bâtiments issu de l'inventaire, avec une transition pour les départements perdants. Recommandée par la Cour des comptes (2023, recommandation n° 3), cette piste à tester n'a pas encore fait l'objet d'évaluation causale."
+  titre: "Répartir la dotation d'équipement des collèges selon les effectifs, l'origine sociale et le bâti"
+  explication: "Figée depuis 2009, la dotation d'équipement de l'État couvre 9,28 % de l'investissement des collèges en Seine-Saint-Denis, contre 84,25 % dans les Ardennes (Cour des comptes, 2023). À budget constant d'environ 280 M€ par an, elle sera répartie selon le nombre de collégiens, leur origine sociale et l'état inventorié du bâti, avec une transition pour les départements perdants. Recommandée par la Cour des comptes (2023, recommandation n° 3), la mesure n'a pas d'évaluation causale mais ne coûte rien."
   preuves:
     - "La DDEC couvre 9,28 % des investissements de la Seine-Saint-Denis contre 15,61 % en moyenne et 84,25 % dans les Ardennes, sur 2015-2019 (Cour des comptes, 2023)"
     - "La Cour des comptes recommande de renforcer la péréquation de la DDEC au profit des départements aux besoins les plus importants (2023, recommandation n° 3)"
     - "Aucune évaluation causale d'une telle réforme"
     - "Coût : nul à enveloppe constante (environ 280 M€ par an, calcul GT d'après la Cour des comptes, 2023, tableau n° 1)"
-  statut: piste
+  statut: proposition
   maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Ce que le livret ne dit pas encore aux jeunes (GT Éducation, novembre 2026)"
@@ -508,8 +508,8 @@
 
 - id: disc-inspection-tests
   theme: Discriminations à l'embauche
-  titre: "Autoriser l'inspection du travail à tester d'office les employeurs pour constater les discriminations"
-  explication: "Seules 15 % des personnes discriminées à l'embauche engagent une démarche (Défenseur des droits, décembre 2025, p. 6), et aucune condamnation pénale n'a été prononcée en 2020 (Sénat, rapport de CMP n° 525, 2024, p. 4). Les inspecteurs du travail pourront réaliser des candidatures fictives et appels mystère de leur propre initiative, sans attendre une plainte, en ciblant leurs contrôles grâce aux testings statistiques. Aucune évaluation causale ne mesurant encore ce pouvoir, il s'agit d'une piste à tester."
+  titre: "Autoriser l'inspection du travail à tester d'office les employeurs contre les discriminations"
+  explication: "Sans attendre une plainte, les inspecteurs du travail peuvent mener d'office des candidatures fictives et des appels mystère, en ciblant leurs contrôles grâce aux testings annuels. Seules 15 % des victimes de discrimination à l'embauche engagent une démarche (Défenseur des droits, décembre 2025, p. 6), et aucune condamnation pénale n'a été prononcée en 2020 (Sénat, rapport de CMP n° 525, 2024, p. 4). Faute d'évaluation causale de ce pouvoir, la preuve reste trop mince pour une mesure autonome."
   preuves:
     - "15 % des personnes discriminées à l'embauche engagent une démarche, en 2024 (Défenseur des droits, décembre 2025, p. 6)"
     - "Aucune condamnation pénale pour discrimination en 2020, selon le rapporteur de la proposition de loi sur les tests (Sénat, rapport de CMP n° 525, 2024, p. 4)"
@@ -523,8 +523,8 @@
 # ---------- Inspirées des propositions de J. Le Floch-Imad (« Main basse sur l'Éducation nationale », 2025), vérifiées par le GT (22/11/2026) : research/29-atelier-gt/le-floch-imad-*
 - id: lfi-heures-dues
   theme: Temps des professeurs
-  titre: "Assurer chaque heure de cours : réunions hors classe, vivier de remplaçants volontaires, transparence trimestrielle"
-  explication: "En 2023-2024, 9 % des heures ne sont pas assurées au collège public, dont un tiers pour motifs institutionnels, et le remplacement court ne couvre que 11,7 % des besoins (Cour des comptes, 2025, p. 11, 14, 47-48). Inspirée des propositions de Joachim Le Floch-Imad, la mesure place réunions et formations hors classe, publie les heures perdues et crée un vivier de remplaçants volontaires payés à l'heure, sans aucune heure imposée. Les retraités sollicités en 2024 ayant peu répondu (Cour des comptes, 2025, p. 96), ils resteront un appoint."
+  titre: "Placer réunions et formations hors cours, créer un vivier de remplaçants volontaires et publier les heures perdues"
+  explication: "En 2023-2024, 9 % des heures ne sont pas assurées au collège public, dont un tiers pour motifs institutionnels, et le remplacement court couvre 11,7 % des besoins (Cour des comptes, 2025, p. 11, 14, 47-48). Réunions et formations passent hors cours, sur les journées prévues ou rémunérées, et les heures perdues sont publiées chaque trimestre. Un vivier de remplaçants volontaires payés à l'heure est créé sans heure imposée, les retraités restant un appoint après leur faible réponse en 2024 (Cour des comptes, 2025, p. 96)."
   preuves:
     - "9 % des heures d'enseignement non assurées dans les collèges publics en 2023-2024, dont 8 % par non-remplacement ; 11 % en éducation prioritaire contre 8 % ailleurs (Cour des comptes, 2025, p. 14)"
     - "Les absences institutionnelles (formation, concours, projets) représentent 36 % des absences de courte durée et le tiers du temps d'enseignement perdu (Cour des comptes, 2025, p. 11)"
@@ -567,13 +567,13 @@
 
 - id: lfi-manuels-papier
   theme: Temps des professeurs
-  titre: "Garantir un manuel papier par élève dans les fondamentaux, du CP à la 3e, avec label facultatif"
-  explication: "Les communes financent aujourd'hui les manuels du primaire. Inspirée des propositions de Joachim Le Floch-Imad, la mesure garantit un manuel imprimé financé par l'État en français et mathématiques du CP à la 3e (et histoire au collège), avec un label facultatif qui laisse toute liberté pédagogique et n'impose aucune heure aux enseignants. Elle maintient en complément les outils numériques évalués, les tablettes du Plan numérique de 2015 ayant relevé les acquis de +9 à 12 % d'écart-type en mathématiques et +14 à 25 % en français (Azmat et al., 2022, DEPP, cité par CAE, Note n° 84, p. 9)."
+  titre: "Financer par l'État des manuels imprimés en français et mathématiques du CP à la 3e"
+  explication: "L'État finance un manuel imprimé par élève en français et mathématiques du CP à la 3e et en histoire au collège, avec un label facultatif respectant la liberté pédagogique, alors que les communes paient aujourd'hui au primaire. Aucune étude citée ne prouve l'avantage du papier : l'effet des notes manuscrites n'est pas répliqué (Urry et al., 2021), et les tablettes du Plan numérique 2015 ont relevé les acquis (Azmat et al., 2022, DEPP). La preuve est trop mince pour le programme, et le numérique évalué demeure."
   preuves:
     - "Prise de notes à la main : l'avantage trouvé par Mueller et Oppenheimer (2014) n'est pas répliqué ; 145 étudiants, différences faibles et non significatives (Urry et al., 2021, Psychological Science)"
     - "Tablettes individuelles du Plan numérique de 2015 : +9 à 12 % d'écart-type en mathématiques et +14 à 25 % en français entre la fin de 5e et l'entrée en seconde (Azmat et al., 2022, DEPP, cité par CAE, Note n° 84, p. 9)"
     - "Coût : à chiffrer (nombre d'élèves du CP à la 3e multiplié par le prix des manuels, moins les dotations existantes)"
-  statut: proposition
+  statut: piste
   maj_le: 2026-11-22
   sujets: [formation]
   issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"

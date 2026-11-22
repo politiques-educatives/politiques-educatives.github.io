@@ -179,7 +179,7 @@ themes:
     ajouts: [a-garantie]
     sources: [lift-2026, canaries-2025, humlum-2025, insee-ic-2026, orr-2026, milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026, cae-91]
     dossiers: [18-ia-embauches-exposition, 12-milburn-review]
-    notes: [EDUCATION-note-ia-jeunes-v6.pdf, EDUCATION-note-ia-jeunes-v5.pdf, EDUCATION-note-rapport-milburn.pdf]
+    notes: [EDUCATION-note-ia-jeunes-v7.pdf, EDUCATION-note-ia-jeunes-v5.pdf, EDUCATION-note-rapport-milburn.pdf]
     blocs: [suivi, note_ia]
   - id: jeunes
     titre: "Que proposer aux jeunes sur l'emploi, les stages, les études et les discriminations ?"
