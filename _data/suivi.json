@@ -1,0 +1,97 @@
+{
+ "chomage": {
+  "periode": "3e trimestre 2026",
+  "jeunes": 21.0,
+  "jeunes_an_avant": 19.3,
+  "ensemble": 8.2,
+  "serie": [
+   {
+    "t": "2024 T3",
+    "v": 19.8
+   },
+   {
+    "t": "2024 T4",
+    "v": 18.8
+   },
+   {
+    "t": "2025 T1",
+    "v": 19.2
+   },
+   {
+    "t": "2025 T2",
+    "v": 19.0
+   },
+   {
+    "t": "2025 T3",
+    "v": 19.3
+   },
+   {
+    "t": "2025 T4",
+    "v": 21.6
+   },
+   {
+    "t": "2026 T1",
+    "v": 21.2
+   },
+   {
+    "t": "2026 T2",
+    "v": 21.5
+   },
+   {
+    "t": "2026 T3",
+    "v": 21.0
+   }
+  ],
+  "source": "Insee, taux de chômage au sens du BIT, moins de 25 ans, France hors Mayotte, données CVS",
+  "url": "https://www.insee.fr/fr/statistiques/serie/001688537"
+ },
+ "lift": {
+  "fin": "octobre 2025",
+  "trimestre": "3e trimestre 2025",
+  "ia_generative": 705,
+  "ia_toutes": 3515,
+  "part_generative": 20.1,
+  "ia_generative_an_avant": 494,
+  "serie": [
+   {
+    "t": "2023 T3",
+    "v": 81
+   },
+   {
+    "t": "2023 T4",
+    "v": 173
+   },
+   {
+    "t": "2024 T1",
+    "v": 168
+   },
+   {
+    "t": "2024 T2",
+    "v": 294
+   },
+   {
+    "t": "2024 T3",
+    "v": 494
+   },
+   {
+    "t": "2024 T4",
+    "v": 695
+   },
+   {
+    "t": "2025 T1",
+    "v": 642
+   },
+   {
+    "t": "2025 T2",
+    "v": 696
+   },
+   {
+    "t": "2025 T3",
+    "v": 705
+   }
+  ],
+  "source": "LIFT (HEC Paris), tracker « AI diffusion (jobs) », série mensuelle tirée de la base JOCAS de la Dares",
+  "url": "https://heclift.github.io/website/en/ai-trackers/diffusion-emploi/index.html"
+ },
+ "lu_le": "2026-11-22"
+}

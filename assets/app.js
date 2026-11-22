@@ -170,7 +170,32 @@
         item("li", "", "non vérifiable questions", "<strong>Non vérifiable.</strong> Les exemples de questions : la DEPP ne publie aucun résultat question par question.") + "</ul>",
         '<a href="https://x.com/JLeFlochImad/status/2122979063086137629" target="_blank" rel="noopener">Post X du 18 novembre 2026</a>') + "</div>";
   }
-  var BLOCS = { masters: blocMasters, comms: blocComms, note_ia: noteIA };
+  // Suivi en direct (scripts/build_suivi.py, actualisé chaque jour par .github/workflows/suivi.yml) : _data/suivi.json
+  function spark(serie) {
+    if (!serie || serie.length < 2) return "";
+    var vs = serie.map(function (x) { return x.v; }), mn = Math.min.apply(null, vs), mx = Math.max.apply(null, vs), w = 200, h = 40;
+    var pts = vs.map(function (v, i) { return (i * w / (vs.length - 1)).toFixed(1) + "," + (h - 4 - (mx === mn ? 0 : (v - mn) * (h - 8) / (mx - mn))).toFixed(1); }).join(" ");
+    return '<svg viewBox="0 0 ' + w + " " + h + '" width="100%" height="' + h + '" role="img" aria-label="' + esc(serie[0].t + " à " + serie[serie.length - 1].t) + '"><polyline fill="none" stroke="currentColor" stroke-width="2" points="' + pts + '"/></svg>' +
+      '<div class="ts">' + esc(serie[0].t) + " → " + esc(serie[serie.length - 1].t) + "</div>";
+  }
+  function fr1(v) { return v === null || v === undefined ? "n.d." : String(v).replace(".", ","); }
+  function nb(v) { return Number(v).toLocaleString("fr-FR"); }
+  function blocSuivi() {
+    var S = W.SUIVI || {}, c = S.chomage, l = S.lift, t = [];
+    if (c) t.push('<div class="tile"><div class="big">' + fr1(c.jeunes) + " %<span> au " + esc(c.periode) + "</span></div>" +
+      '<div class="tl">Chômage des moins de 25 ans (ensemble : ' + fr1(c.ensemble) + " %), contre " + fr1(c.jeunes_an_avant) + " % un an plus tôt</div>" + spark(c.serie) +
+      '<div class="ts"><a href="' + esc(c.url) + '" target="_blank" rel="noopener">Insee</a>, chômage au sens du BIT, données CVS</div></div>');
+    if (l) t.push('<div class="tile"><div class="big">' + nb(l.ia_generative) + "<span> offres au " + esc(l.trimestre) + "</span></div>" +
+      '<div class="tl">Offres d\'emploi demandant des compétences en IA générative' + (l.ia_generative_an_avant ? ", contre " + nb(l.ia_generative_an_avant) + " un an plus tôt" : "") + " ; " + fr1(l.part_generative) + " % des " + nb(l.ia_toutes) + " offres en IA du trimestre</div>" + spark(l.serie) +
+      '<div class="ts"><a href="' + esc(l.url) + '" target="_blank" rel="noopener">LIFT, HEC Paris</a>, base JOCAS de la Dares ; la série s\'arrête en ' + esc(l.fin) + "</div></div>");
+    t.push('<div class="tile"><div class="big">−28 %<span> contre −7,5 %</span></div>' +
+      '<div class="tl">Embauches en CDI des 21-29 ans, novembre 2022 à mars 2026, dans le cinquième des métiers les plus exposés à l\'IA, contre le cinquième le moins exposé</div>' +
+      '<div class="ts">Palladino, Bergeaud, Bertheau, Bunel et Degos (2026), Banque de France et LIFT. Étude, non actualisée ; la cause n\'est pas établie.</div></div>');
+    return sec("Suivi en direct : l'IA et l'emploi des jeunes",
+      '<div class="tiles">' + t.join("") + "</div>" +
+      '<p class="note-src">Chiffres lus dans les séries publiques le ' + esc(S.lu_le ? S.lu_le.split("-").reverse().join("/") : "") + ", actualisés chaque jour. Le chômage couvre tout le marché du travail et n\'isole pas l\'effet de l\'IA ; les offres en IA mesurent la demande de spécialistes, pas l\'effet de l\'IA sur les autres emplois.</p>", "", "s-suivi");
+  }
+  var BLOCS = { masters: blocMasters, comms: blocComms, note_ia: noteIA, suivi: blocSuivi };
 
 
   // ---------------- « Voie pro et technologies de pointe »: blocks of _data/voie_pro.yml, placed by sections.yml (voiepro / voiepro_plus)
