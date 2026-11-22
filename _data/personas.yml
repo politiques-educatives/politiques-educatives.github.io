@@ -71,3 +71,8 @@
   groupe: Entreprises
   fiche: "Cherche des techniciens et en trouve peu ; a eu des apprentis ; ses seniors partent bientôt en retraite avec un savoir-faire non écrit ; utilise l'IA pour les devis. Craint la paperasse, une obligation de plus, voir le jeune formé partir chez un concurrent. La convainquent : une aide simple, le temps de ses seniors reconnu, un lycée qui répond."
   grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui la convaincrait."
+- id: parent-public
+  nom: "Une mère d'élève de lycée public à Nantes, après six semaines de blocus"
+  groupe: Jeunes et familles
+  fiche: "Très attachée à l'école publique ; son fils de seconde suit des cours en distanciel difficiles depuis six semaines de blocage et commence à décrocher ; elle se renseigne, à contrecœur, pour le privé, où les blocages sont moins suivis. Comprend la colère des lycéens mais veut d'abord que les cours aient lieu. La convainquent : la continuité des cours, des heures rattrapées, un interlocuteur clair dans l'établissement."
+  grille: "Réaction ; note de 0 à 10 ; ce qui la pousserait vers le privé ; ce qui la retiendrait dans le public."
