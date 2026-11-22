@@ -178,7 +178,7 @@
     return '<svg viewBox="0 0 ' + w + " " + h + '" width="100%" height="' + h + '" role="img" aria-label="' + esc(serie[0].t + " à " + serie[serie.length - 1].t) + '"><polyline fill="none" stroke="currentColor" stroke-width="2" points="' + pts + '"/></svg>' +
       '<div class="ts">' + esc(serie[0].t) + " → " + esc(serie[serie.length - 1].t) + "</div>";
   }
-  function fr1(v) { return v === null || v === undefined ? "n.d." : String(v).replace(".", ","); }
+  function fr1(v) { return v === null || v === undefined ? "n.d." : Number(v).toFixed(1).replace(".", ","); }
   function nb(v) { return Number(v).toLocaleString("fr-FR"); }
   function blocSuivi() {
     var S = W.SUIVI || {}, c = S.chomage, l = S.lift, t = [];
