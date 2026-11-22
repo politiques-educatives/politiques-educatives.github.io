@@ -63,7 +63,7 @@
 - id: cnsa-mdph-delais
   titre: "CNSA, délais de traitement des MDPH (2025)"
   ref: "CNSA, Mon Parcours Handicap (2025), durée de traitement des demandes en MDPH."
-  lien: https://www.monparcourshandicap.gouv.fr/actualite/mdph-nouvelle-diminution-de-la-duree-de-traitement-des-demandes
+  lien: https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE16046
   sujets: [inclusion]
   type: données
   statut: vérifié
@@ -89,8 +89,8 @@
   sujets: [inclusion, ecrans]
   type: rapport
   statut: vérifié
-  resume: "La Cour examine la médecine scolaire, les infirmiers et les psychologues de l'Éducation nationale. Fin 2018, on compte 1 médecin scolaire pour 13 000 élèves, 1 psychologue de l'Éducation nationale pour 1 500 et 1 infirmier pour 1 300 (1 médecin ETP pour 15 624 élèves en 2022, selon une source ultérieure). Le budget de la santé scolaire est de 1 260 M€ en 2019. La Cour estime que les difficultés « ne tiennent pas à un manque de moyens budgétaires » mais au pilotage."
-  cle: "1 psychologue de l'Éducation nationale pour 1 500 élèves et 1 médecin scolaire pour 13 000 (Cour des comptes, 2020)."
+  resume: "La Cour examine la médecine scolaire, les infirmiers et les psychologues de l'Éducation nationale. Fin 2018, on compte 1 médecin scolaire pour 13 000 élèves, 1 psychologue de l'Éducation nationale pour 1 492 élèves dans le premier degré public et pour 1 234 dans le second degré (annexe 12), et 1 infirmier pour 1 300 (1 médecin ETP pour 15 624 élèves en 2022, selon une source ultérieure). Le budget de la santé scolaire est de 1 260 M€ en 2019. La Cour estime que les difficultés « ne tiennent pas à un manque de moyens budgétaires » mais au pilotage."
+  cle: "1 psychologue de l'Éducation nationale pour 1 492 élèves dans le premier degré public, 1 pour 1 234 dans le second degré, et 1 médecin scolaire pour 13 000 (Cour des comptes, 2020)."
   propositions: []
   dossier: 09-brief-sante-mentale-handicap-inclusion
 - id: enclass-2024

@@ -31,7 +31,7 @@ STATIC = {
                 ["Français 2de GT", "2019", 18.7], ["Français 2de GT", "2026", 22.1], ["Français 2de pro", "2019", 65.7], ["Français 2de pro", "2026", 69.8]],
     "pisa": [["2000", "France", 15], ["2018", "France", 21], ["2022", "France", 27], ["2025", "France", 33], ["2025", "Moyenne OCDE", 30]],
     "depression": [["Filles", "Lycéens", 25.7], ["Garçons", "Lycéens", 11.7], ["Ensemble", "Lycéens", 19]],
-    "psy": [["France (PsyEN)", "Élèves par psychologue", 1500], ["Finlande", "Élèves par psychologue", 780]],
+    "psy": [["France, 1er degré (PsyEN)", "Élèves par psychologue", 1492], ["France, 2nd degré (PsyEN)", "Élèves par psychologue", 1234], ["Finlande", "Élèves par psychologue", 780]],  # Cour des comptes 2020, annexe 12 ; Finlande : réforme de 2021 (HE 165/2021)
     # IA, jeunes et emploi
     "filtre": [["Enfants d'ouvriers", "En licence", 10.1], ["Enfants d'ouvriers", "En master", 6.3],
                ["Enfants de cadres", "En licence", 31.1], ["Enfants de cadres", "En master", 42.1]],

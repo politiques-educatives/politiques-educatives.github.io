@@ -38,10 +38,10 @@
   note: "Les études ne relient pas encore la santé mentale à la baisse des résultats scolaires."
 - id: psy
   sujet: ecrans
-  titre: "Deux fois plus d'élèves par psychologue qu'en Finlande"
+  titre: "Jusqu'à deux fois plus d'élèves par psychologue qu'en Finlande"
   type: barres-h
   unite: "élèves par psychologue"
-  source: "Cour des comptes, avril 2020 (France, PsyEN) ; loi finlandaise sur le bien-être des élèves, 2013"
+  source: "Cour des comptes, avril 2020, annexe 12 (France, PsyEN, 2018-2019) ; Finlande : loi sur le bien-être des élèves modifiée en 2021"
   note: "La Finlande garantit aussi un rendez-vous sous 7 jours."
 - id: insersup
   sujet: emploi
