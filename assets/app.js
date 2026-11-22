@@ -145,7 +145,10 @@
       row('<span class="pt">Ce que la France a déjà, et ce qui lui manque</span>',
         "<p>La France a déjà une garantie avec allocation (le contrat d'engagement jeune), une obligation de formation jusqu'à 18 ans et les missions locales. Il lui manque ce que Milburn propose : un emploi payé garanti en dernier recours ; une mesure du devenir des élèves par établissement et une norme « prêt pour le travail », inspectées ; un suivi des postes de débutants face à l'IA ; des outils de repérage précoce du décrochage.</p>" +
         '<p class="warn">Le Royaume-Uni mesure les 16-24 ans (13,0 %), la France les 15-29 ans (13,3 %, Insee). Sur les 15-24 ans, le Royaume-Uni (13,6 %, OCDE 2025) est au-dessus de la France (10,5 % en 2023).</p>',
-        "France contrat d'engagement jeune Garantie jeunes missions locales comparaison"),
+        "France contrat d'engagement jeune Garantie jeunes missions locales comparaison") +
+      (W.MILBURN_CRIT && W.MILBURN_CRIT.paragraphes ? row('<span class="pt">' + esc(W.MILBURN_CRIT.titre) + "</span>",
+        W.MILBURN_CRIT.paragraphes.map(function (p) { return "<p>" + md(p) + "</p>"; }).join("") + '<p class="note-src">' + md(W.MILBURN_CRIT.source || "") + "</p>",
+        "Milburn critiques Simons Freedman coût État " + W.MILBURN_CRIT.paragraphes.join(" ")) : ""),
       "981 000 jeunes de 16 à 24 ans sans emploi ni formation au Royaume-Uni, soit 13,0 % (ONS, avril-juin 2026). Rapport publié le 17 novembre 2026.", "s-milburn");
   }
   function blocMasters() {
