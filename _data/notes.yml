@@ -1,6 +1,12 @@
 # Notes finalisées du GT publiées en PDF (assets/notes/, copiées depuis out/). Pas de versions anglaises.
 # La note « L'IA et les jeunes » est publiée en PDF depuis la v5 (19/11/2026).
 notes:
+  - titre: "Gagner du temps de vie : le premier salaire plus tôt, à l'heure de l'IA"
+    fichier: EDUCATION-note-temps-de-vie.pdf
+    date: "22 novembre 2026"
+    pages: 4
+    sujets: [orientation]
+    resume: "Six mesures concrètes, du lycée au doctorat, volontaires, progressives et évaluées : passer le bac un an plus tôt quand on est prêt, la dernière année de bac pro payée chez un employeur, un bonus pour les boursiers qui finissent leur licence à l'heure, des concours de l'État à bac+3, le financement de chaque doctorant en sciences humaines et un assistant d'IA pour chaque doctorant ; avec leur coût, leur bilan et les leçons des autres pays."
   - titre: "L'IA et les jeunes : ouvrir la porte d'entrée"
     fichier: EDUCATION-note-ia-jeunes-v6.pdf
     date: "22 novembre 2026"

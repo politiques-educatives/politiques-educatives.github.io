@@ -25,7 +25,7 @@ def write(name, rows, header=("categorie", "serie", "valeur")):
 STATIC = {
     # Inclusion
     "aesh": [["2017", "AESH", 43000], ["2025", "AESH", 139993]],  # Sénat PLF 2026 ; 2017 « environ 43 000 » (Cnesco 2026)
-    "mdph": [["2023", "Délai moyen", 4.7], ["T2 2025", "Délai moyen", 4.4], ["2023", "Délai légal", 4], ["T2 2025", "Délai légal", 4]],
+    "mdph": [["T4 2021", "Délai moyen", 4.7], ["T2 2022", "Délai moyen", 4.3], ["T2 2025", "Délai moyen", 4.4], ["T4 2021", "Délai légal", 4], ["T2 2022", "Délai légal", 4], ["T2 2025", "Délai légal", 4]],  # CNSA ; réponse QE AN 16046 (août 2026)
     # Écrans, santé mentale, IA à l'école
     "seconde": [["Maths 2de GT", "2019", 19.2], ["Maths 2de GT", "2026", 28.1], ["Maths 2de pro", "2019", 66.2], ["Maths 2de pro", "2026", 75.4],
                 ["Français 2de GT", "2019", 18.7], ["Français 2de GT", "2026", 22.1], ["Français 2de pro", "2019", 65.7], ["Français 2de pro", "2026", 69.8]],

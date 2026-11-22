@@ -144,6 +144,7 @@ themes:
     livret: ["76"]
     ajouts: [a-bac, a-master]
     sources: [sies-licence-2025, insee-2109, ofer-2016, rers-2025, humburg-2015, apec-2024, indeed-diplomes-2024, cereq-generation-2021]
+    notes: [EDUCATION-note-temps-de-vie.pdf]
     dossiers: [13-master-as-filter-evidence, 13-masters-job-market, 13-france-firms-master-filter-and-solutions, 17-orientation-apprentissage-preuves]
     blocs: [masters]
   - id: debouches

@@ -13,7 +13,7 @@
   titre: "Les MDPH traitent les demandes au-delà du délai légal"
   type: ligne
   unite: "mois"
-  source: "CNSA, Mon Parcours Handicap (délai moyen de traitement, tous droits)"
+  source: "CNSA, Mon Parcours Handicap (délai moyen de traitement, tous droits, T4 2021 et T2 2022) ; réponse à la question écrite AN n° 16046, août 2026 (T2 2025)"
   note: "Le délai légal est de 4 mois ; il varie de 2,2 mois (Cantal) à bien davantage selon les départements."
 - id: seconde
   sujet: ecrans

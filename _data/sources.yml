@@ -67,7 +67,7 @@
   sujets: [inclusion]
   type: données
   statut: vérifié
-  resume: "Le délai moyen de traitement d'une demande en MDPH (tous droits confondus) est de 4,4 mois au deuxième trimestre 2025, contre 4,7 mois en 2023, au-dessus du délai légal de 4 mois. Il varie de 2,2 mois (Cantal) à bien davantage selon les départements."
+  resume: "Le délai moyen de traitement d'une demande en MDPH (tous droits confondus) est de 4,4 mois au deuxième trimestre 2025, contre 4,7 mois fin 2021 (CNSA) et jusqu'à 5,9 mois pour la prestation de compensation du handicap (réponse à la QE n° 16046, août 2026), au-dessus du délai légal de 4 mois. Il varie de 2,2 mois (Cantal) à bien davantage selon les départements."
   cle: "Délai moyen de traitement en MDPH : 4,4 mois au T2 2025, pour 4 mois légaux (CNSA)."
   propositions: []
   dossier: 09-brief-sante-mentale-handicap-inclusion
@@ -975,7 +975,7 @@
   sujets: [emploi]
   type: rapport
   statut: vérifié
-  resume: "À 20 ans, seuls 20 % des jeunes Français sont en emploi, contre environ 60 % en Allemagne, au Royaume-Uni et aux États-Unis. Le CAE relève aussi qu'au-dessus du Smic, l'employeur débourse 300 à 400 € pour 100 € de revenu en plus pour le salarié."
-  cle: "À 20 ans, seuls 20 % des jeunes Français sont en emploi, contre environ 60 % en Allemagne, au Royaume-Uni et aux États-Unis (CAE, 2026)."
+  resume: "À 20 ans, moins d'un jeune Français sur trois est en emploi (environ 30 % en 2023, lecture du graphique du Focus n° 110 ; le chiffre de 20 % parfois cité porte sur 1993), contre près de 60 % en Allemagne, au Royaume-Uni et aux États-Unis. Le CAE relève aussi qu'au-dessus du Smic, l'employeur débourse 300 à 400 € pour 100 € de revenu en plus pour le salarié."
+  cle: "À 20 ans, environ 30 % des jeunes Français sont en emploi en 2023, contre près de 60 % en Allemagne, au Royaume-Uni et aux États-Unis (CAE, Focus n° 110, 2025, lecture du graphique)."
   propositions: [ia-marche]
   dossier: ""
