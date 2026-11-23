@@ -20,7 +20,7 @@ Site de travail : https://politiques-educatives.github.io/ (non indexé). Source
 | `assets/modele/` | Modèle de note (.md et .docx, construit par `scripts/build_note.py`) |
 | `scripts/sync_boussole.sh` | Copie la Boussole (`../site/boussole-pipeline/`, index.html et tous les .js) dans `boussole/` |
 | `.github/workflows/charts.yml` | Actualise les graphiques InserSup le 3 de chaque mois |
-| `routines/routine-mensuelle.md` | Consigne de la veille mensuelle (pull request le 17) |
+| `routines/routine-hebdomadaire.md` | Consigne de la veille hebdomadaire (pull request le lundi) |
 | `.github/ISSUE_TEMPLATE/feedback.yml` | Formulaire « Signaler une correction » relié à chaque fiche |
 
 Construire localement : `sh scripts/sync_boussole.sh && python3 scripts/build_politiques.py && python3 scripts/build_voie_pro.py && python3 scripts/charts.py && python3 scripts/build_recherche.py && python3 scripts/build_note_ia.py` puis `jekyll build` (ou GitHub Pages).
