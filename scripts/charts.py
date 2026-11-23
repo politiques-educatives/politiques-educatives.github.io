@@ -26,6 +26,27 @@ STATIC = {
     # Inclusion
     "aesh": [["2017", "AESH", 43000], ["2025", "AESH", 139993]],  # Sénat PLF 2026 ; 2017 « environ 43 000 » (Cnesco 2026)
     "mdph": [["T4 2021", "Délai moyen", 4.7], ["T2 2022", "Délai moyen", 4.3], ["T2 2025", "Délai moyen", 4.4], ["T4 2021", "Délai légal", 4], ["T2 2022", "Délai légal", 4], ["T2 2025", "Délai légal", 4]],  # CNSA ; réponse QE AN 16046 (août 2026)
+    # Le Monde hors-série nov.-déc. 2026, p. 78-79 (« Handicap : la bataille de l'égalité ») ; producteurs d'origine dans graphiques.yml
+    "handicap-pauvrete": [["Personnes handicapées (fortes limitations)", "Taux de pauvreté, 15-64 ans, 2021", 25.6], ["Personnes non handicapées", "Taux de pauvreté, 15-64 ans, 2021", 14.4]],  # DREES, repris par Le Monde
+    "handicap-emploi": [["Bénéficiaires de l'obligation d'emploi", "Taux d'emploi, 2025", 41], ["Ensemble de la population", "Taux d'emploi, 2025", 69]],  # Agefiph, tableau de bord 2025 (lu)
+    "handicap-accessibilite": [["Agences France Travail", "Avril 2026", 99.5], ["Gendarmeries", "Avril 2026", 98], ["Maisons France Services", "Avril 2026", 95],
+                               ["Universités", "Avril 2026", 85], ["Hôpitaux", "Avril 2026", 84], ["Tribunaux", "Avril 2026", 66], ["Commissariats", "Avril 2026", 35]],  # Le Monde, producteur non précisé
+    "handicap-scolarises": [["1er degré, milieu ordinaire", "2006", 111100], ["1er degré, milieu ordinaire", "2024", 246200],
+                            ["2nd degré, milieu ordinaire", "2006", 44300], ["2nd degré, milieu ordinaire", "2024", 249700],
+                            ["Établissements hospitaliers et médico-sociaux", "2006", 77000], ["Établissements hospitaliers et médico-sociaux", "2024", 78200]],  # DEPP, NI 25.63 (2006 et évolutions lues) ; 2024 repris par Le Monde
+    # Le Monde hors-série nov.-déc. 2026, p. 30-31 (« L'école et ses disparités persistantes »)
+    "ecole-projections": [["2015", "Premier degré", 6772.0], ["2025", "Premier degré", 6149.4], ["2035", "Premier degré", 5216.4],
+                          ["2015", "Second degré", 5507.6], ["2025", "Second degré", 5619.7], ["2035", "Second degré", 4875.9]],  # DEPP, DT 2026-E08 (lu) ; 2nd degré 2015 = 2025 moins la hausse de 112 100 élèves
+    "ecole-classes": [["Primaire", "France", 21.1], ["Primaire", "Moyenne OCDE", 20], ["Primaire", "Moyenne UE", 19.2],
+                      ["Collège", "France", 25.7], ["Collège", "Moyenne OCDE", 22.4], ["Collège", "Moyenne UE", 20.8]],  # DEPP ; OCDE, repris par Le Monde
+    "ecole-ips": [["REP+", "IPS moyen des collèges, 2025", 75.1], ["REP", "IPS moyen des collèges, 2025", 86.3], ["Public hors REP", "IPS moyen des collèges, 2025", 104.5], ["Privé sous contrat", "IPS moyen des collèges, 2025", 125.5]],
+    "ecole-brevet": [["REP+", "Réussite au brevet, 2025", 75], ["REP", "Réussite au brevet, 2025", 78], ["Public hors REP", "Réussite au brevet, 2025", 86], ["Privé sous contrat", "Réussite au brevet, 2025", 96]],
+    "ecole-prive-social": [["Privé : très favorisés", "2004", 29.7], ["Privé : très favorisés", "2014", 35.7], ["Privé : très favorisés", "2024", 41.9],
+                           ["Privé : défavorisés", "2004", 26], ["Privé : défavorisés", "2014", 21.2], ["Privé : défavorisés", "2024", 18],
+                           ["Public : très favorisés", "2004", 17], ["Public : très favorisés", "2014", 18.6], ["Public : très favorisés", "2024", 19.5],
+                           ["Public : défavorisés", "2004", 44.1], ["Public : défavorisés", "2014", 43.4], ["Public : défavorisés", "2024", 42.5]],  # DEPP, repris par Le Monde
+    "ecole-pisa": [["Maths 2003", "France", 511], ["Maths 2003", "Moyenne OCDE", 502], ["Maths 2025", "France", 458], ["Maths 2025", "Moyenne OCDE", 463],
+                   ["Écrit 2003", "France", 496], ["Écrit 2003", "Moyenne OCDE", 505], ["Écrit 2025", "France", 456], ["Écrit 2025", "Moyenne OCDE", 461]],  # OCDE-PISA via Le Monde ; 2025 France lu dans DEPP NI 26.40
     # Écrans, santé mentale, IA à l'école
     "seconde": [["Maths 2de GT", "2019", 19.2], ["Maths 2de GT", "2026", 28.1], ["Maths 2de pro", "2019", 66.2], ["Maths 2de pro", "2026", 75.4],
                 ["Français 2de GT", "2019", 18.7], ["Français 2de GT", "2026", 22.1], ["Français 2de pro", "2019", 65.7], ["Français 2de pro", "2026", 69.8]],

@@ -243,7 +243,7 @@
   var genByDir = {}; GEN.forEach(function (n) { if (n.dossier) genByDir[n.dossier] = n; });
   var livByN = {}; LIV.forEach(function (m) { livByN[String(m.n)] = m; });
   var ajById = {}; AJ.forEach(function (a) { if (a.id) ajById[a.id] = a; });
-  var TAG2THEME = { formation: "ecole", inclusion: "handicap", ecrans: "handicap", orientation: "orientation", emploi: "orientation" };
+  var TAG2THEME = { formation: "ecole", inegalites: "ecole", inclusion: "handicap", ecrans: "handicap", orientation: "orientation", emploi: "orientation" };
   var themeOfTags = function (tags) { for (var i = 0; i < (tags || []).length; i++) { if (TAG2THEME[tags[i]]) return TAG2THEME[tags[i]]; if (sujById[tags[i]]) return tags[i]; } return null; };
   function getPath(obj, path) { return String(path).split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, obj); }
   function resolve(x) {   // one « En bref » element -> markdown text
@@ -451,6 +451,23 @@
     var base = { $schema: "https://vega.github.io/schema/vega-lite/v5.json", data: data, width: "container",
       config: { font: "system-ui, sans-serif", axis: { labelColor: "#4a5468", titleColor: "#4a5468", gridColor: "#e3e6ec", domainColor: "#cfd5df", labelFontSize: 11, titleFontSize: 11 },
         legend: { labelColor: "#4a5468", labelFontSize: 11 }, view: { stroke: null }, locale: { number: { decimal: ",", thousands: " ", grouping: [3] } } } };
+    if (g.type === "carte") {   // choropleth des départements de métropole : CSV categorie = code, serie = nom, valeur
+      var sc = { scheme: g.echelle || "blues" };
+      if (g.inverse) sc.reverse = true;
+      if (g.milieu !== undefined) sc.domainMid = g.milieu;
+      delete base.data;
+      base.height = 380;
+      base.projection = { type: "conicConformal", parallels: [44, 49], rotate: [-3, 0] };
+      base.data = { url: BASE + "/assets/charts/geo/departements.geojson", format: { type: "json", property: "features" } };
+      base.layer = [
+        { mark: { type: "geoshape", fill: "#e3e6ec", stroke: "#fff", strokeWidth: 0.5 } },
+        { transform: [{ lookup: "properties.code", from: { data: { url: data.url, format: data.format }, key: "categorie", fields: ["serie", "valeur"] } },
+                      { filter: "isValid(datum.valeur)" }],
+          mark: { type: "geoshape", stroke: "#fff", strokeWidth: 0.5 },
+          encoding: { color: { field: "valeur", type: "quantitative", title: g.unite, scale: sc, legend: { orient: "bottom", direction: "horizontal", gradientLength: 220 } },
+            tooltip: [{ field: "serie", title: "Département" }, { field: "valeur", title: g.unite, format: ",.1~f" }] } }];
+      return base;
+    }
     var lbl = { type: "text", fontSize: 11, color: "#1d2433" };
     var txt = { text: { field: "valeur", type: "quantitative", format: ",.1~f" } };
     if (g.type === "ligne") {

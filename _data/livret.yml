@@ -1,10 +1,19 @@
 # Livret du programme « Croire en nous », volume 1 (18 novembre 2026) : mesures éducation évaluées au regard des travaux du GT.
 # Source : research/15-livret-programme/2026-11-18-livret-education-evaluation.md (pages imprimées). Résumés paraphrasés.
 # sujets : hubs ; eval : convergent | à compléter | tension | hors champ ; cartes : ids de propositions.yml
+# 23/11/2026 : résumés de 64, 67, 72, 73 et 76 alignés sur le texte du livret ; ajout de P06, 27, 80, 81 et 136 (audit de cohérence École).
+- n: "P06"
+  sujets: [formation]
+  titre: "Refonder notre école"
+  resume: "Priorité 06 : créer un nouveau statut d'école publique autonome et augmenter de 20 % le salaire des enseignants pour revaloriser leur métier."
+  page: 5
+  eval: à compléter
+  apport: "Les deux volets sont détaillés dans les mesures N°64 (école publique autonome, convergent) et N°65 (+20 % de salaire, à compléter)."
+  cartes: []
 - n: "64"
   sujets: [formation]
   titre: "Un statut d'école publique autonome"
-  resume: "Le chef d'établissement adapte méthodes, horaires, organisation et discipline, participe au recrutement et à l'évaluation de son équipe ; les évaluations de chaque établissement sont publiées."
+  resume: "Le chef d'établissement, en accord avec la communauté éducative, adapte méthodes, horaires et organisation des classes, peut imposer l'uniforme et fixe les règles de discipline ; il participe au recrutement et à l'évaluation de son équipe. Les évaluations de chaque établissement sont publiées pour les parents et les élus locaux, dans une mobilisation générale des parents, des élus et des professeurs."
   page: 22
   eval: convergent
   apport: "Note 2 : comparaison avec l'Angleterre (recrutement, évaluation, inspection) et conditions d'une autonomie qui marche ; publier des indicateurs de valeur ajoutée plutôt que des résultats bruts."
@@ -15,23 +24,23 @@
   resume: "Hausse de 20 % sur le quinquennat, jusqu'à la moyenne européenne, surtout en milieu de carrière."
   page: 22
   eval: à compléter
-  apport: "Note 1 : lier la hausse à un service annuel qui réserve du temps au tutorat et au travail d'équipe ; coût à chiffrer, le livret ne le chiffre pas."
+  apport: "Note 1 : lier la hausse à un service annuel qui réserve du temps au tutorat et au travail d'équipe. Le livret ne chiffre pas la mesure : 10 à 16,9 Md€ par an, 11,8 Md€ en valeur centrale, hors pensions (calcul du groupe, à vérifier)."
   cartes: [heures-service-annuel]
 - n: "66"
   sujets: [formation]
   titre: "Moins d'élèves par classe en maternelle et en primaire"
   resume: "Réduire les effectifs des classes de maternelle et de primaire."
   page: 22
-  eval: hors champ
-  apport: "Pas de revue dédiée dans nos travaux."
+  eval: convergent
+  apport: "Un élève de moins par classe améliore les résultats de 1,62 % d'écart-type, et le dédoublement en primaire s'autofinance à long terme (CAE, Focus n° 113, 2025) ; la baisse démographique dégagerait au moins 5 Md€ d'économies par an à l'horizon 2035 (CAE, Note n° 93, 2026)."
   cartes: []
 - n: "67"
   sujets: [ecrans]
   titre: "Lire, écrire, compter"
-  resume: "La lecture dès la maternelle, des tests de décodage, un objectif de vocabulaire à l'entrée au CP."
+  resume: "Généraliser la lecture dès la maternelle, organiser des tests de décodage pour repérer tôt les élèves en difficulté et viser la maîtrise de 2 500 mots à l'entrée au CP."
   page: 22
   eval: convergent
-  apport: "Constat DEPP 2026 : dictée de CE1 à 69,9 % de réussite contre 72,4 % en 2025, -7,2 points depuis 2019 ; un tiers des élèves de 15 ans en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40)."
+  apport: "Constat DEPP 2026 : dictée de CE1 à 69,9 % de réussite contre 72,4 % en 2025, -7,2 points depuis 2019 ; un tiers des élèves de 15 ans en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40). La fiche du GT prolonge cet objectif au lycée : des mathématiques jusqu'en terminale pour tout élève qui vise le supérieur, et l'IA en accès libre seulement après l'acquisition des fondamentaux."
   cartes: [ia-bases]
 - n: "68"
   sujets: [ecrans]
@@ -39,7 +48,7 @@
   resume: "Un soutien assuré par d'anciens professeurs, des étudiants volontaires et un assistant d'IA personnalisé."
   page: 22
   eval: convergent
-  apport: "Note sur le tuteur IA et preuves sur le tutorat : un tuteur humain et une IA qui guide sans donner la solution, évalués avant toute généralisation."
+  apport: "Convergent sur l'outil, pas sur un tutorat humain universel. Le tuteur IA public, qui guide sans donner la solution, reste ouvert à tous les élèves ; le tutorat humain est ciblé sur les élèves défavorisés et ruraux (environ 1,1 million de collégiens), seuls à en tirer un effet mesuré (+0,56 écart-type chez les collégiens défavorisés, aucun effet chez les autres ; Resnjanskij et al., 2024). Le tutorat apporte +0,50 écart-type avec des enseignants contre +0,21 avec des bénévoles (Nickow, Oreopoulos et Quan, 2020)."
   cartes: [tuteur-public, heures-emploi-du-temps]
 - n: "69"
   sujets: [ecrans]
@@ -54,21 +63,21 @@
   titre: "Le portable strictement interdit à l'école, au collège et au lycée"
   resume: "Interdiction stricte, avec confiscation et restitution aux parents."
   page: 22
-  eval: tension
-  apport: "Preuves partagées : effet positif en Norvège (chez les filles), aucun effet en Suède, en Angleterre (Goodyear et al., 2025) ni aux États-Unis ; évaluer « Portable en pause » de façon indépendante avant d'en faire un argument."
-  cartes: [sante-portable]
+  eval: convergent
+  apport: "Bonne direction, avec réserves : les preuves sont mitigées. En Norvège, l'interdiction au collège a amélioré les notes des filles et réduit leurs consultations pour troubles psychologiques (Abrahamsson, 2024) ; les études causales ne trouvent pas d'effet, ou un effet très faible, sur les résultats en Suède (Kessel et al., 2020), en Floride (Figlio et al., 2025) et dans l'étude américaine des pochettes (Dee et al., 2026). L'étude anglaise de Goodyear et al. (2025) n'est pas causale. Il faut évaluer « Portable en pause » de façon indépendante."
+  cartes: []
 - n: "71"
   sujets: [formation]
   titre: "Recréer des écoles normales"
   resume: "Des écoles normales plus exigeantes sur les savoirs fondamentaux, et des carrières ouvertes aux professionnels venus d'ailleurs."
   page: 23
   eval: à compléter
-  apport: "Depuis 2026, le concours a lieu à bac+3, suivi d'un master rémunéré, toujours en INSPÉ ; aucune école normale n'existe aujourd'hui."
+  apport: "Depuis 2026, le concours a lieu à bac+3, suivi d'un master rémunéré, toujours en INSPÉ, pour 88 M€ en 2026 et 265 M€ en année pleine (Sénat, 2026) ; aucune école normale n'existe aujourd'hui. Sortir la formation de l'université n'a pas d'appui empirique et son surcoût n'est pas chiffré. Le mode de formation initiale pèse peu : à New York, les écarts entre enseignants certifiés, non certifiés ou issus de voies alternatives ne sont que de 0,01 à 0,02 écart-type, contre 0,33 entre le premier et le dernier quart des enseignants (Kane, Rockoff et Staiger, 2006)."
   cartes: []
 - n: "72"
   sujets: [formation]
-  titre: "Une rentrée avancée pour les volontaires"
-  resume: "Une rentrée une à deux semaines plus tôt pour les volontaires ; les notes de juin comptent pour l'année suivante."
+  titre: "Une rentrée avancée dans les établissements volontaires"
+  resume: "Les établissements volontaires peuvent avancer la rentrée d'une à deux semaines, un temps réservé aux élèves qui en ont besoin ; les notes de juin comptent pour le bulletin de l'année suivante."
   page: 23
   eval: à compléter
   apport: "Note 1 : le temps scolaire et les heures perdues en juin."
@@ -76,10 +85,10 @@
 - n: "73"
   sujets: [ecrans]
   titre: "Une amende de responsabilisation des parents ; le 3018 renforcé"
-  resume: "Une amende pour les parents en cas de manquement, et plus de moyens pour le 3018 contre le harcèlement."
+  resume: "Le maire, sur proposition de l'équipe éducative, peut sanctionner les parents d'enfants harceleurs, perturbateurs ou absentéistes et les parents violents ; les moyens du 3018 contre le harcèlement et le cyberharcèlement sont consolidés."
   page: 23
   eval: hors champ
-  apport: "Non couvert par nos travaux."
+  apport: "Non couvert par nos travaux. Le précédent de la suspension des allocations familiales pour absentéisme (loi Ciotti, 2010) n'a touché que 472 familles et n'a jamais été évalué (Public Sénat, 2023). En Californie, sur 131 312 élèves, un courrier qui explique leur rôle aux parents réduit davantage l'absentéisme que la lettre standard menaçant d'amendes (Lasky-Fink et al., 2019)."
   cartes: []
 - n: "74"
   sujets: [inclusion]
@@ -87,7 +96,7 @@
   resume: "L'intervention systématique des professionnels du handicap et la reconnaissance du métier d'AESH."
   page: 23
   eval: convergent
-  apport: "Compléments santé mentale et inclusion : 139 993 AESH pour 4,74 Md€ (Sénat, PLF 2026), délais MDPH, AESH rattachés à l'établissement."
+  apport: "Compléments santé mentale et inclusion : 139 993 AESH pour 4,74 Md€ (Sénat, PLF 2026), délais MDPH, AESH rattachés à l'établissement. Piste en attente de la note inclusion (mi-décembre) : un dossier unique et deux premiers paliers de soutien décidés par l'école."
   cartes: [sante-paliers]
 - n: "75"
   sujets: [orientation]
@@ -95,16 +104,40 @@
   resume: "Un tutorat personnalisé d'orientation, assuré par des étudiants, des professeurs et des intervenants."
   page: 23
   eval: convergent
-  apport: "Note 3 (orienter dès la 4e avec un tuteur), la Boussole des formations (de la 4e à l'emploi, IA et concurrence chinoise), le modèle Gatsby et Milburn."
+  apport: "Convergent, avec un tutorat humain ciblé : un référent d'orientation pour les élèves défavorisés et ruraux (environ 1,1 million de collégiens), car le mentorat n'améliore que leurs perspectives (+0,56 écart-type, aucun effet chez les autres ; Resnjanskij et al., 2024), et le volet orientation du tuteur IA public pour tous. Appuis : note 3, la Boussole des formations (de la 4e à l'emploi, IA et concurrence chinoise), le modèle Gatsby et Milburn."
   cartes: [orient-4e, orient-transparence, orient-gatsby]
 - n: "76"
   sujets: [emploi, orientation]
   titre: "Assumer la sélection à l'université"
-  resume: "Fermer les formations aux faibles taux de diplôme et d'insertion, et revaloriser les filières scientifiques."
+  resume: "Laisser les universités décider de leur mode de sélection, fermer les formations du supérieur aux faibles taux de diplomation et d'insertion, et revaloriser les filières scientifiques."
   page: 23
   eval: à compléter
   apport: "Publier d'abord les débouchés de chaque formation (un master sur dix sous 49 % d'emploi, un sur dix au-dessus de 86 %) ; le master sert souvent de filtre (Insee Première n° 2109 ; Dares, Ofer 2016) ; licence professionnelle 78 % d'emploi contre 50 % en licence générale (InserSup 2026)."
   cartes: [orient-debouches, ia-master]
+- n: "80"
+  sujets: [orientation, emploi]
+  titre: "Soutenir l'apprentissage"
+  resume: "Rétablir les prépa apprentissage et concentrer l'effort sur les métiers de production."
+  page: 24
+  eval: convergent
+  apport: "Arbitrage du groupe du 22/11/2026 : l'aide à l'embauche d'apprentis est maintenue du CAP à bac+2, hors des 50 Md€ de baisses d'aides de la mesure N°82. La politique de l'apprentissage a coûté 22,2 Md€ en 2025 (OFCE, 2026). Les notes du GT du 22/11 s'appuient sur N°80 : terminale de bac pro en apprentissage, sections lycée-branche, maître d'apprentissage formé, priorité aux métiers de production."
+  cartes: [tdv-bacpro-apprentissage, ee-lycee-branche, ee-maitre-apprentissage]
+- n: "81"
+  sujets: [emploi]
+  titre: "Un droit à la reconversion face à l'IA, et un enseignement adapté"
+  resume: "Un droit à la reconversion pour les salariés dont le métier est menacé par l'IA ; adapter l'enseignement, le recrutement et la formation continue à l'IA."
+  page: 24
+  eval: à compléter
+  apport: "Seule mesure du livret qui parle d'enseignement face à l'IA. Les notes du GT du 22/11 financent sur son volet enseignement l'usage professionnel de l'IA dans les diplômes de CAP, bac pro et BTS, et la révision régulière des référentiels professionnels."
+  cartes: [ia-diplome-ia, ee-referentiels]
+- n: "27"
+  sujets: [ecrans]
+  titre: "Réformer le périscolaire"
+  resume: "Des certificats d'honorabilité partout, des encadrants formés, un responsable formé à la protection des enfants pendant chaque temps périscolaire, et le parcours des éducateurs publié en ligne."
+  page: 12
+  eval: hors champ
+  apport: "Non couvert par nos travaux."
+  cartes: []
 - n: "29"
   sujets: [ecrans]
   titre: "Réseaux sociaux interdits aux moins de 15 ans"
@@ -112,7 +145,7 @@
   page: 12
   eval: convergent
   apport: "Les 16-19 ans passent plus de cinq heures par jour sur les écrans contre 14 minutes à lire (CNL, 2026) ; une corrélation, pas une causalité démontrée."
-  cartes: [sante-portable]
+  cartes: []
 - n: "119"
   sujets: [emploi]
   titre: "Un droit à la reconversion face à l'IA"
@@ -121,6 +154,14 @@
   eval: à compléter
   apport: "Les débutants sont les premiers touchés ; une garantie pour les jeunes sans emploi ni formation sur le modèle Milburn et un suivi annuel des postes de débutants."
   cartes: [ia-garantie, ia-observatoire]
+- n: "136"
+  sujets: [formation]
+  titre: "Rafraîchir les écoles par les réseaux de froid"
+  resume: "Étendre le soutien du fonds chaleur aux réseaux de froid, pour rafraîchir notamment les crèches et les écoles."
+  page: 32
+  eval: à compléter
+  apport: "La mesure ne couvre que le rafraîchissement des écoles : elle peut financer le volet froid des travaux, pas le chauffage, l'air ni les sanitaires. Le GT propose un inventaire public du bâti scolaire, puis des travaux en commençant par les écoles REP+ ; d'ici 2030, 9,4 millions d'élèves seront exposés à de fortes chaleurs (ÉduRénov, 2025)."
+  cartes: [batiments-inventaire-public, batiments-fonds-chaleur-air]
 - n: "P08"
   sujets: [orientation]
   titre: "100 000 ingénieurs formés par an"

@@ -12,6 +12,7 @@ Site de travail : https://politiques-educatives.github.io/ (non indexé). Source
 | `_data/voie_pro.yml` | Thème Voie pro : indice de risque des filières techniques (v1), construit par `scripts/build_voie_pro.py` depuis `../research/19-…/2026-11-19-mesure-risque.md` |
 | `_data/notes_generees.yml` | Notes produites par le générateur (bouton « Générer une note », formulaire `note.yml`) ; lu côté navigateur, absent = liste vide |
 | `scripts/charts.py` | Données des graphiques interactifs (CSV ; `--fetch` : InserSup depuis l'API publique) ; titres et sources dans `_data/graphiques.yml` |
+| `scripts/build_cartes.py` | Données des cartes par département (type `carte` de `graphiques.yml`) depuis `../data/raw-new/handicap-cartes/` et `../data/raw-new/ecole-cartes/` (DREES, DEPP) ; contours dans `assets/charts/geo/departements.geojson` (métropole, simplifié) |
 | `_data/sujets.yml` | Les quatre thèmes (titre, libellé d'onglet, phrase d'intro). Accueil, International et Boussole sont dans `index.html` ; les anciens liens (#ia/…, #gouvernance/…, #<thème>/essentiel|recherche|ailleurs) sont redirigés dans `assets/app.js` (LEGACY, OLDSEC) |
 | `_data/sections.yml` | Les sections de chaque thème, dans l'ordre de lecture (En bref, Le chiffre clé, Ce que font les autres pays, Ce que nous proposons, Pour aller plus loin), et tout ce qui est rattaché à chacune. À éditer à la main ; vérifier avec `python3 scripts/check_sections.py`. Ce qui n'est rattaché nulle part s'affiche dans « Tout le reste du thème » |
 | `_data/sources.yml` | Base de preuves : une fiche par source, résumé détaillé, chiffre à citer, statut de vérification |
@@ -23,7 +24,7 @@ Site de travail : https://politiques-educatives.github.io/ (non indexé). Source
 | `routines/routine-hebdomadaire.md` | Consigne de la veille hebdomadaire (pull request le lundi) |
 | `.github/ISSUE_TEMPLATE/feedback.yml` | Formulaire « Signaler une correction » relié à chaque fiche |
 
-Construire localement : `sh scripts/sync_boussole.sh && python3 scripts/build_politiques.py && python3 scripts/build_voie_pro.py && python3 scripts/charts.py && python3 scripts/build_recherche.py && python3 scripts/build_note_ia.py` puis `jekyll build` (ou GitHub Pages).
+Construire localement : `sh scripts/sync_boussole.sh && python3 scripts/build_politiques.py && python3 scripts/build_voie_pro.py && python3 scripts/charts.py && python3 scripts/build_cartes.py && python3 scripts/build_recherche.py && python3 scripts/build_note_ia.py` puis `jekyll build` (ou GitHub Pages).
 Les scripts adaptés au candidat (note comms) ne sont pas publiés ici, par choix.
 
 ## Générateur de notes (« Rédiger une note », page d'accueil)

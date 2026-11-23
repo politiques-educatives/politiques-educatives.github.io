@@ -1,7 +1,8 @@
 # Base de preuves du GT Éducation : une entrée par source (étude, rapport, données).
 # Tirée des dossiers de recherche (research/*.md) et des notes. Résumés détaillés : ce qui est étudié, données, méthode,
 # chiffres avec point de comparaison, limites. statut : vérifié (lu dans la source) | secondaire (repris d'une source
-# fiable sans lecture de l'original) | non vérifié. sujets : inclusion | ecrans | emploi | orientation | formation.
+# fiable sans lecture de l'original) | non vérifié. sujets : inclusion | ecrans | emploi | orientation | formation | inegalites
+# (inegalites : démographie scolaire, inégalités territoriales et sociales, public-privé ; rangé dans le thème École et enseignants).
 # type : rapport | étude causale | méta-analyse | données | enquête | texte officiel | revue
 # cle : la citation courte à copier (chiffre clé + source). dossier : page /recherche/<slug>/ d'où vient l'entrée.
 
@@ -82,6 +83,84 @@
   cle: "Près de 28 500 saisines du médiateur en 2025, +51 % depuis 2020 (Médiateur de l'Éducation nationale, 2026)."
   propositions: []
   dossier: 09-brief-sante-mentale-handicap-inclusion
+- id: lemonde-hs-2026-handicap
+  titre: "Le Monde, hors-série, « Handicap : la bataille de l'égalité » (novembre-décembre 2026)"
+  ref: "Durand, A.-A. (2026), « Handicap : la bataille de l'égalité », Le Monde, hors-série « Les enjeux du prochain quinquennat », novembre-décembre 2026, p. 78-79."
+  lien: ""
+  sujets: [inclusion]
+  type: revue
+  statut: secondaire
+  resume: "Vingt ans après la loi de 2005, le bilan est mitigé : la scolarisation en classe ordinaire et l'accessibilité ont progressé, mais l'accès aux droits dépend beaucoup du département. Les MDPH, par lesquelles passent six millions de personnes, instruisent un dossier en deux à quinze mois selon le territoire. Un rapport IGAS-IGF de 2025 trouvait des taux d'allocataires de l'AAH allant du simple au sextuple et des montants de PCH variant de 1 à 3,85 ; l'article relie ces écarts à la démographie, à l'implantation ancienne d'établissements spécialisés à la campagne et aux habitudes de chaque MDPH. À l'école, il manquait environ 50 000 accompagnants à la rentrée 2025 et un enfant notifié sur sept attendait encore le sien en octobre. Bâtiments publics, transports et démarches en ligne restent inégalement accessibles. La Conférence nationale du handicap de septembre 2026 a lancé une redéfinition du handicap et confié à la CNSA l'harmonisation des pratiques des MDPH. Chiffres repris de la DREES, de la DEPP, de l'Agefiph, de la CNSA, du Cerema et de la SNCF."
+  sections:
+    - "Effectif : de 5,7 à 18,2 millions de personnes handicapées selon la définition retenue (2022, producteur non précisé)."
+    - "Prévalence : 8 % des 15-64 ans vivant à domicile ont au moins une limitation sévère, de 5,1 % à 11,4 % selon le département (2021, DREES)."
+    - "Pauvreté : 25,6 % des 15-64 ans à fortes limitations fonctionnelles sont pauvres, contre 14,4 % des personnes non handicapées (2021, DREES)."
+    - "Emploi : 41 % des personnes reconnues handicapées sont en emploi, contre 69 % de l'ensemble de la population (2025, Agefiph, d'après l'enquête Emploi de l'Insee)."
+    - "École : 246 200 élèves handicapés en classe ordinaire dans le premier degré et 249 700 dans le second degré en 2024, contre 111 100 et 44 300 en 2006 ; 78 200 en établissement hospitalier ou médico-social (DEPP)."
+    - "Accompagnants : 53 000 AESH en 2017 et 140 000 en 2025 (ministère de l'Éducation nationale ; le Cnesco donne environ 43 000 pour 2017) ; environ 50 000 manquants à la rentrée 2025 ; 48 726 enfants sur 352 102 ayant droit encore sans accompagnant en octobre 2025 ; 20 000 élèves en attente d'une place médico-sociale (2025)."
+    - "MDPH : délai moyen de traitement de 4,5 mois en 2025, de 2 à 15 mois selon le département, pour un délai réglementaire de 4 mois (CNSA)."
+    - "Écarts territoriaux : taux d'allocataires de l'AAH jusqu'à 6,5 fois plus élevé d'un département à l'autre ; montants de PCH de 1 à 3,85 (rapport IGAS-IGF, 2025)."
+    - "Accessibilité : 99,5 % des agences France Travail, 66 % des tribunaux et 35 % des commissariats (avril 2026, producteur non précisé) ; 12 % des démarches en ligne essentielles pleinement accessibles (août 2026) ; 575 gares accessibles sur environ 3 000 (SNCF) ; 44 % des arrêts de cars interurbains sur 108 257 recensés (Cerema, 2025)."
+  cle: "Les MDPH mettent de 2 à 15 mois à traiter un dossier selon le département, pour 4 mois réglementaires (CNSA, 2025, repris par Le Monde, hors-série, nov.-déc. 2026)."
+  propositions: []
+  dossier: ""
+- id: drees-vqs-2021
+  titre: "DREES, enquête Vie quotidienne et santé 2021 : données départementales"
+  ref: "DREES (2023), Enquête Vie quotidienne et santé 2021, données détaillées (nationales, régionales, départementales) ; Rey, M. (2023), Études et Résultats n° 1254."
+  lien: https://data.drees.solidarites-sante.gouv.fr/explore/dataset/enquete-vie-quotidienne-et-sante-2021-donnees-detaillees/
+  sujets: [inclusion]
+  type: données
+  statut: vérifié
+  resume: "L'enquête VQS 2021 mesure les limitations fonctionnelles, les restrictions d'activité et l'aide reçue par les personnes vivant à domicile, en France métropolitaine et dans les DROM. Le fichier départemental donne des pourcentages par tranche d'âge (5-24, 25-59 et 60 ans ou plus), avec la mention « n.s. » quand les répondants sont trop peu nombreux. Part des 25-59 ans ayant au moins une limitation fonctionnelle sévère : de 4,9 % (Yvelines) à 12,5 % (Nièvre), 10 % dans l'Aisne, 6,3 % à Paris. La publication de référence (Études et Résultats n° 1254) estime qu'une personne de 15 ans ou plus sur sept est handicapée en 2021. Le fichier ne donne pas la tranche des 15-64 ans utilisée par Le Monde."
+  sections:
+    - "Onglet LIMFONC : limitation fonctionnelle sévère, par département et tranche d'âge ; repris dans la carte handicap-limitations-dep."
+  cle: "Selon le département, de 4,9 % à 12,5 % des 25-59 ans déclarent au moins une limitation fonctionnelle sévère (DREES, VQS 2021)."
+  propositions: []
+  dossier: ""
+- id: drees-pauvrete-handicap
+  titre: "DREES, niveau de vie et pauvreté des personnes handicapées (2021)"
+  ref: "DREES, L'aide et l'action sociales en France / Le handicap en chiffres, fiche « Les ressources et les conditions de vie des personnes handicapées » (données 2021)."
+  lien: https://drees.solidarites-sante.gouv.fr/sites/default/files/2024-10/ASPH%20-%20Fiche%2012%20-%20Les%20ressources%20et%20les%20conditions%20de%20vie%20des%20personnes%20handicap%C3%A9es.pdf
+  sujets: [inclusion]
+  type: données
+  statut: secondaire
+  resume: "Le Monde reprend de la DREES un taux de pauvreté de 25,6 % chez les 15-64 ans ayant de fortes limitations fonctionnelles, contre 14,4 % chez les personnes non handicapées, en 2021. Les fiches de la DREES citées en ligne portent sur les 15-59 ans et donnent 25,5 % à 25,8 % selon l'édition, contre 14,4 % : l'ordre de grandeur (une personne handicapée sur quatre sous le seuil de pauvreté) est stable, le chiffre exact et la tranche d'âge restent à vérifier dans la fiche (non lue : le site de la DREES refuse les téléchargements automatiques)."
+  cle: "Environ une personne handicapée sur quatre vit sous le seuil de pauvreté, contre une sur sept parmi les autres (DREES, 2021, repris par Le Monde)."
+  propositions: []
+  dossier: ""
+- id: agefiph-tb-2025
+  titre: "Agefiph, emploi et chômage des personnes handicapées, tableau de bord année 2025"
+  ref: "Agefiph (2026), Emploi et chômage des personnes handicapées, tableau de bord national, année 2025."
+  lien: https://www.agefiph.fr/sites/default/files/medias/fichiers/2026-07/Agefiph_TB-emploi-chomage-handicap_2025-VF_0.pdf
+  sujets: [inclusion]
+  type: données
+  statut: vérifié
+  resume: "Tableau de bord annuel de l'Agefiph sur les bénéficiaires de l'obligation d'emploi (BOE), c'est-à-dire les personnes ayant une reconnaissance administrative du handicap, à partir de l'enquête Emploi de l'Insee. Fin 2025 : 3 395 000 personnes reconnues handicapées, dont 1 405 000 en emploi. Taux d'activité de 47 % contre 75 % pour l'ensemble de la population, taux d'emploi de 41 % contre 69 %, taux de chômage de 11,5 % contre 7,7 %. Les entrées en contrats aidés des personnes handicapées baissent de 62 % en un an."
+  cle: "41 % des personnes reconnues handicapées sont en emploi en 2025, contre 69 % de l'ensemble de la population (Agefiph, tableau de bord 2025)."
+  propositions: []
+  dossier: ""
+- id: cerema-arrets-2026
+  titre: "Cerema et ministère des Transports, accessibilité des points d'arrêt des transports interurbains"
+  ref: "Ministère chargé des transports (DMA) et Cerema (2026), État des lieux de l'accessibilité des transports en régions, données au 31 décembre 2025."
+  lien: https://www.ecologie.gouv.fr/sites/default/files/documents/Plaquette_Etat%20des%20lieux%20transports%20r%C3%A9gions%202026-VF_en%20version%20accessible.pdf
+  sujets: [inclusion]
+  type: enquête
+  statut: secondaire
+  resume: "Enquête annuelle de la délégation ministérielle à l'accessibilité et du Cerema auprès des régions et des autorités organisatrices de la mobilité sur l'accessibilité des arrêts de cars et de bus. Le Monde en retient que 44 % des arrêts de transports interurbains sont accessibles, sur 108 257 arrêts enquêtés (environ la moitié du total). Ce chiffre n'a pas été retrouvé tel quel dans les plaquettes 2026 (régions et autorités organisatrices), qui couvrent d'autres champs d'enquête : à vérifier dans la source."
+  cle: "44 % des arrêts de transports interurbains enquêtés sont accessibles (Cerema, 2025, repris par Le Monde ; chiffre à vérifier)."
+  propositions: []
+  dossier: ""
+- id: sncf-gares-accessibles
+  titre: "SNCF, accessibilité des gares (programme de mise en accessibilité)"
+  ref: "SNCF Réseau et SNCF Gares & Connexions, programme d'accessibilité des gares (schéma directeur national d'accessibilité)."
+  lien: https://www.sncf-reseau.com/en/discover-sncf-reseau/rail-accessibility
+  sujets: [inclusion]
+  type: données
+  statut: secondaire
+  resume: "Le Monde indique que 575 gares ferroviaires sur environ 3 000 sont accessibles. Selon les pages de la SNCF repérées en ligne (non lues en entier), 575 serait le nombre de gares rendues accessibles visé fin 2025 dans le programme prioritaire du schéma directeur, et non une part de l'ensemble des gares. Le total d'environ 3 000 gares n'a pas été retrouvé dans une source SNCF : à vérifier."
+  cle: "575 gares accessibles sur environ 3 000 (SNCF, repris par Le Monde, hors-série, nov.-déc. 2026 ; total à vérifier)."
+  propositions: []
+  dossier: ""
 - id: cdc-sante-scolaire-2020
   titre: "Cour des comptes, Les médecins et les personnels de santé scolaire (avril 2020)"
   ref: "Cour des comptes (2020), Les médecins et les personnels de santé scolaire, avril 2020."
@@ -282,24 +361,24 @@
   propositions: []
   dossier: 14-why-scores-fall
 - id: interdictions-portable-null
-  titre: "Interdictions du téléphone sans effet mesuré : Suède, Angleterre, États-Unis"
-  ref: "Kessel et al. (2020), IFN WP 1288 ; Goodyear et al. (2025), Lancet Regional Health Europe ; Figlio et al. (2025) ; Dee et al. (2026), NBER."
+  titre: "Interdictions du téléphone sans effet mesuré : Suède, États-Unis (et une étude anglaise non causale)"
+  ref: "Kessel et al. (2020), IFN WP 1288 ; Figlio et al. (2025) ; Dee et al. (2026), NBER ; Goodyear et al. (2025), Lancet Regional Health Europe (étude transversale, non causale)."
   lien: https://pmc.ncbi.nlm.nih.gov/articles/PMC11850730/
   sujets: [ecrans]
-  type: étude causale
+  type: revue   # 23/11/2026 : regroupe trois études causales (Suède, Floride, États-Unis) et une étude transversale (Goodyear, Angleterre)
   statut: secondaire
   resume: "En Suède, les interdictions n'ont pas d'effet sur les résultats (Kessel et al., 2020). En Angleterre, sur 30 écoles et 1 227 élèves, les politiques restrictives ne vont pas avec un meilleur bien-être, sommeil ou niveau ; les élèves compensent hors de l'école (Goodyear et al., 2025, étude transversale). En Floride, moins d'un centile gagné la deuxième année (Figlio et al., 2025) ; l'étude américaine des pochettes trouve un effet proche de zéro à trois ans (Dee et al., 2026). En Angleterre, Beland et Murphy (2016) trouvaient au contraire +6,4 % d'écart-type."
-  cle: "Les interdictions du téléphone n'ont pas d'effet mesuré sur les résultats en Suède, en Angleterre (Goodyear et al., 2025) ni aux États-Unis."
+  cle: "Les études causales ne trouvent pas d'effet, ou un effet très faible, des interdictions du téléphone sur les résultats en Suède (Kessel et al., 2020), en Floride (Figlio et al., 2025) et aux États-Unis (Dee et al., 2026) ; l'étude anglaise de Goodyear et al. (2025) n'est pas causale."
   propositions: []
   dossier: 14-why-scores-fall
 - id: portable-en-pause
   titre: "« Portable en pause » : bilan ministériel, sans évaluation indépendante"
-  ref: "Ministère de l'Éducation nationale, réponse au Sénat (janvier 2026) ; enquête SNPDEN (septembre 2025)."
+  ref: "Ministère de l'Éducation nationale, réponse en séance à la question n° 25120857S (Sénat, 20 janvier 2026, JO Sénat du 21 janvier 2026, p. 366) ; enquête SNPDEN (septembre 2025)."
   lien: https://www.senat.fr/questions/base/2025/qSEQ25120857S.html
   sujets: [ecrans]
   type: texte officiel
   statut: secondaire
-  resume: "Expérimenté avec plus de 32 000 élèves en 2024-2025, puis généralisé aux collèges publics en 2025-2026. Environ 80 % des collèges participants y sont favorables selon le ministère ; selon une enquête du syndicat des chefs d'établissement (septembre 2025), 9 collèges sur 10 ne l'appliquaient pas. Aucune évaluation d'impact sur les apprentissages n'a été trouvée ; elle a été demandée au Sénat en décembre 2025."
+  resume: "Expérimenté avec plus de 32 000 élèves en 2024-2025, puis généralisé aux collèges publics en 2025-2026. « Près de 80 % des collèges participants » y sont favorables selon le ministère (réponse au Sénat du 20 janvier 2026, vérifiée le 23/11/2026) ; selon une enquête du syndicat des chefs d'établissement (septembre 2025), 9 collèges sur 10 ne l'appliquaient pas. Aucune évaluation d'impact sur les apprentissages n'a été trouvée ; elle a été demandée au Sénat en décembre 2025."
   cle: "« Portable en pause » n'a pas fait l'objet d'une évaluation indépendante de ses effets sur les apprentissages (réponse au Sénat, 2026)."
   propositions: []
   dossier: 14-why-scores-fall
@@ -822,13 +901,13 @@
   dossier: 05-orientation
 - id: resnjanskij-2024
   titre: "Resnjanskij et al. (2024), le mentorat d'élèves défavorisés en Allemagne"
-  ref: "Resnjanskij et al. (2024)."
-  lien: ""
+  ref: "Resnjanskij, Ruhose, Wiederhold et Woessmann (2024), « Can Mentoring Alleviate Family Disadvantage in Adolescence? », Journal of Political Economy 132(3), p. 1013-1062."
+  lien: https://doi.org/10.1086/726905
   sujets: [orientation]
   type: étude causale
   statut: secondaire
-  resume: "En Allemagne, un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés (résultat repris dans la note 3, étude non relue par le GT)."
-  cle: "Un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés en Allemagne (Resnjanskij et al., 2024)."
+  resume: "Essai randomisé en Allemagne : un programme de mentorat associe des collégiens de milieu modeste à un étudiant. Chez les élèves défavorisés, il améliore de plus d'un demi-écart-type (0,56) un indice combinant notes en maths, patience et compétences sociales, et orientation vers l'emploi, mesuré un an après le début ; les effets sur les notes et l'orientation persistent trois ans après. Aucun effet chez les élèves plus favorisés. Résumé de l'article lu le 23/11/2026 ; durée du mentorat (un à deux ans) à vérifier dans l'article."
+  cle: "Le mentorat par des étudiants a amélioré de 0,56 écart-type les perspectives des collégiens défavorisés en Allemagne, sans effet chez les autres (Resnjanskij et al., 2024)."
   propositions: [orient-4e]
   dossier: ""
 - id: cnesco-2018-orientation
@@ -978,4 +1057,62 @@
   resume: "À 20 ans, moins d'un jeune Français sur trois est en emploi (environ 30 % en 2023, lecture du graphique du Focus n° 110 ; le chiffre de 20 % parfois cité porte sur 1993), contre près de 60 % en Allemagne, au Royaume-Uni et aux États-Unis. Le CAE relève aussi qu'au-dessus du Smic, l'employeur débourse 300 à 400 € pour 100 € de revenu en plus pour le salarié."
   cle: "À 20 ans, environ 30 % des jeunes Français sont en emploi en 2023, contre près de 60 % en Allemagne, au Royaume-Uni et aux États-Unis (CAE, Focus n° 110, 2025, lecture du graphique)."
   propositions: [ia-marche]
+  dossier: ""
+# ================= ÉCOLE : DÉMOGRAPHIE ET INÉGALITÉS (Le Monde, hors-série nov.-déc. 2026, et sources d'origine ; 23/11/2026) =================
+- id: lemonde-hs-2026-ecole
+  titre: "Le Monde, hors-série, « L'école et ses disparités persistantes » (novembre-décembre 2026)"
+  ref: "Pommiers, E. (2026), « L'école et ses disparités persistantes », Le Monde, hors-série « Le modèle social tient-il encore ? », novembre-décembre 2026, p. 30-31."
+  lien: ""
+  sujets: [inegalites]
+  type: revue
+  statut: secondaire
+  resume: "La chute de la natalité va transformer l'école. D'ici 2035, écoles, collèges et lycées perdraient environ 1,7 million d'élèves, près de 15 % des effectifs, le primaire d'abord, le secondaire ensuite. Les territoires ne sont pas égaux devant cette baisse : les campagnes ont déjà absorbé une bonne part des fermetures d'écoles publiques depuis 2012, et près de la moitié des écoles qui restent ont moins de quatre classes. L'autrice demande à l'État et aux élus d'anticiper en repensant la carte scolaire, faute de quoi les fractures territoriales s'élargiront. Elle pose aussi l'alternative budgétaire : rendre les postes libérés par la baisse des effectifs ou les réinvestir là où le système est fragile. Les professeurs français sont moins bien payés que leurs voisins européens, enseignent davantage d'heures, devant des classes plus chargées, et le recrutement est en crise. Les inégalités sociales restent parmi les plus fortes de l'OCDE : l'éducation prioritaire concentre les élèves défavorisés, le privé sous contrat attire de plus en plus d'élèves très favorisés, et la baisse démographique pourrait attiser cette concurrence. Les scores PISA reculent."
+  sections:
+    - "Démographie : environ 1,7 million d'élèves de moins entre 2025 et 2035, près de 15 % (DEPP, projections, scénario intermédiaire)."
+    - "Effectifs : 6,5 millions d'élèves dans le premier degré en 2011 et 6,1 millions en 2025 ; 5,6 millions dans le second degré en 2025 ; en 2035, environ 5,4, 5,2 et 5 millions dans le premier degré (scénarios haut, intermédiaire, bas) et 4,9 millions dans le second degré. L'attribution de ces quatre points, incertaine sur le graphique, est confirmée par le Document de travail de la DEPP (5 431 387, 5 216 439, 5 001 491 et 4 875 900)."
+    - "Réseau : plus de 5 000 écoles publiques fermées depuis 2012, soit 11 % ; près de 45 % des écoles ont moins de quatre classes et 8 % une seule ; les collèges de moins de 300 élèves forment 17 % des établissements (année non précisée)."
+    - "Taille des classes : 21,1 élèves en élémentaire contre 20 dans l'OCDE et 19,2 dans l'UE ; 25,7 au collège contre 22,4 et 20,8 (premier cycle du secondaire) ; 30,2 en lycée général et technologique, 18,4 en lycée professionnel (DEPP ; OCDE)."
+    - "Écoles selon la taille moyenne des classes (rentrée 2025) : 41,4 % sous 20 élèves, 50,2 % de 20 à 24, 20,3 % de 25 à 29, 0,1 % à 30 ou plus. La somme imprimée dépasse 100 % : chiffres à vérifier, non repris en graphique."
+    - "Éducation prioritaire et privé : IPS moyen des collèges de 75,1 en REP+, 86,3 en REP, 104,5 dans le public hors REP et 125,5 dans le privé ; réussite au brevet de 75 %, 78 %, 86 % et 96 % (DEPP, 2025)."
+    - "Recrutement social du privé : 41,9 % de collégiens très favorisés en 2024 contre 29,7 % en 2004, et 18 % de défavorisés contre 26 % ; dans le public, 19,5 % et 42,5 % (DEPP)."
+    - "PISA : en maths, 511 points en 2003 et 458 en 2025 (OCDE : 502 puis 463) ; en compréhension de l'écrit, 496 puis 456 (OCDE : 505 puis 461), moyennes OCDE hors Costa Rica, Luxembourg et Espagne. Écart d'environ 100 points en sciences entre les élèves les plus et les moins favorisés : lecture de graphique, légende vraisemblablement inversée, à vérifier dans PISA."
+    - "Cartes : évolution des effectifs du premier degré de 2015 à 2025, de -22,9 % à +24,4 % selon le territoire, avec les écoles fermées (DEPP, Géographie de l'école 2026) ; projection 2025-2035, de -29,3 % à -4,5 % par département (DEPP)."
+  cle: "D'ici 2035, l'école perdrait 1,7 million d'élèves, près de 15 % de ses effectifs (DEPP, repris par Le Monde, hors-série, nov.-déc. 2026)."
+  propositions: []
+  dossier: ""
+- id: depp-projections-2035
+  titre: "DEPP, Projections d'effectifs d'élèves dans les premier et second degrés à horizon 2035 (avril 2026)"
+  ref: "Barhoumi, M., N. Miconnet et P. Serre (2026), Projections d'effectifs d'élèves dans les premier et second degrés à horizon 2035, DEPP, Document de travail n° 2026-E08 ; DEPP (2026), Note d'information n° 26.09."
+  lien: https://www.education.gouv.fr/sites/default/files/document/projections-d-effectifs-d-l-ves-dans-les-premier-et-second-degr-s-horizon-2035-515642.pdf
+  sujets: [inegalites]
+  type: données
+  statut: vérifié
+  resume: "Premières projections à dix ans de la DEPP, déclinées par académie et par département, selon trois hypothèses de fécondité ; le scénario intermédiaire suppose une fécondité stabilisée à 1,5 enfant par femme en 2030. Champ : public et privé sous contrat. De 2025 à 2035, les effectifs baisseraient de 1 676 800 élèves (-14,2 %). Le premier degré passerait de 6 149 400 à 5 216 400 élèves (-15,2 %), entre 5 001 491 et 5 431 387 selon le scénario, après une perte de 622 600 élèves (-9,2 %) entre 2015 et 2025. Le second degré reculerait de 5 619 700 à 4 875 900 (-13,2 %), surtout au collège (-15,3 %), après avoir gagné 112 100 élèves depuis 2015. La baisse toucherait toutes les académies et tous les départements ; 14 départements perdraient au moins 20 % de leurs élèves du premier degré, Paris le plus (-29,3 %)."
+  sections:
+    - "Figure 1 et tableau 1 (p. 8-9) : trajectoires 2011-2035 et variations par secteur et niveau ; repris dans le graphique ecole-projections."
+    - "Figure 5 : évolution 2025-2035 du premier degré par département ; fichiers Excel académiques (repris au format CSV sur data.gouv.fr, totaux nationaux contrôlés) dans la carte ecole-projection-dep."
+  cle: "Le premier degré perdrait 933 000 élèves entre 2025 et 2035 (-15,2 %), après 622 600 de 2015 à 2025 (DEPP, DT 2026-E08)."
+  propositions: []
+  dossier: ""
+- id: depp-effectifs-ecoles
+  titre: "DEPP, effectifs d'élèves par école, rentrées 2009 à 2025 (données ouvertes)"
+  ref: "DEPP, Effectifs d'élèves par école (fr-en-ecoles-effectifs-nb_classes), data.education.gouv.fr, Licence ouverte, observation du 15 septembre 2025."
+  lien: https://data.education.gouv.fr/explore/dataset/fr-en-ecoles-effectifs-nb_classes/
+  sujets: [inegalites]
+  type: données
+  statut: vérifié
+  resume: "Effectifs d'élèves par niveau et nombre de classes de chaque école publique et privée sous contrat, observés à la mi-septembre de chaque rentrée depuis 2009 ; les effectifs inférieurs à 5 sont masqués. Agrégé par le GT par département (hors collectivités d'outre-mer) : 6 776 400 élèves en 2015 et 6 154 900 en 2025, soit -9,2 %, comme la DEPP. Selon le département, l'évolution va de -21,7 % (Haute-Saône) à +2,2 % (Haute-Savoie) en métropole, et de -22,9 % (Martinique) à +24,4 % (Mayotte) outre-mer ; Paris perd 19,2 %. Le nombre d'écoles publiques du fichier passe de 47 672 en 2012 à 42 396 en 2025, soit 5 276 de moins (-11 %)."
+  cle: "De 2015 à 2025, l'école primaire a perdu 9,2 % de ses élèves, jusqu'à 21,7 % en Haute-Saône (DEPP, données ouvertes, calcul GT)."
+  propositions: []
+  dossier: ""
+- id: depp-geographie-ecole-2026
+  titre: "DEPP, Géographie de l'École, édition 2026"
+  ref: "DEPP (2026), Géographie de l'École, 14e édition, juin 2026."
+  lien: https://www.education.gouv.fr/depp/geographie-de-l-ecole
+  sujets: [inegalites]
+  type: rapport
+  statut: secondaire
+  resume: "Recueil de 38 fiches d'indicateurs cartographiés sur le système éducatif, comparés entre territoires (effectifs, réseau des écoles, internats, temps de transport, résultats), accompagné d'un dossier sur les aires d'éducation. Le Monde en tire la carte de l'évolution des effectifs du premier degré entre 2015 et 2025, avec les établissements fermés, et vraisemblablement les chiffres sur les écoles de moins de quatre classes et les petits collèges. Non lu : la page du ministère refuse les téléchargements automatiques."
+  cle: "Près de 45 % des écoles ont moins de quatre classes (DEPP, Géographie de l'École 2026, repris par Le Monde ; non vérifié dans l'original)."
+  propositions: []
   dossier: ""

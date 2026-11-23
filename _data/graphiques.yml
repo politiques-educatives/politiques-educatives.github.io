@@ -1,5 +1,9 @@
 # Graphiques interactifs (Vega-Lite, dessinés dans le navigateur depuis assets/charts/data/<csv>.csv, colonnes categorie, serie, valeur).
 # type : barres (categorie en x, serie en couleur) | barres-h (categorie en y) | ligne (categorie = année en x, serie en couleur)
+#        | carte (départements de métropole, contours assets/charts/geo/departements.geojson ; CSV : categorie = code du département,
+#          serie = nom, valeur ; DROM dans le CSV mais pas sur la carte ; données écrites par scripts/build_cartes.py depuis ../data/raw-new/)
+#          options de carte : echelle (palette Vega, défaut blues), inverse: true (couleur la plus foncée pour la plus petite valeur),
+#          milieu (valeur centrale d'une palette divergente, ex. 0)
 # auto : true = données actualisées chaque mois par .github/workflows/charts.yml (InserSup)
 - id: aesh
   sujet: inclusion
@@ -7,7 +11,7 @@
   type: barres
   unite: "AESH"
   source: "Sénat, rapport PLF 2026 (139 993 en 2025) ; Cnesco, Regards actualisés n° 1, juin 2026 (environ 43 000 en 2017, valeur arrondie)"
-  note: "98 % des AESH sont à temps incomplet, pour un salaire net moyen d'environ 1 000 euros par mois."
+  note: "Les AESH gagnent en moyenne 1 030 euros nets par mois, pour une quotité moyenne de 62 % ; 72 % sont en CDI (Assemblée nationale, rapport n° 3382, octobre 2026)."
 - id: mdph
   sujet: inclusion
   titre: "Les MDPH traitent les demandes au-delà du délai légal"
@@ -116,3 +120,101 @@
   unite: "jours de formation par an"
   source: "Cour des comptes, 2023 (enseignants, 2021 ; autres cadres A, 2019)"
   note: "Années différentes : comparer les ordres de grandeur."
+# --- Le Monde, hors-série nov.-déc. 2026, p. 78-79 « Handicap : la bataille de l'égalité » (graphiques refaits, 23/11/2026)
+- id: handicap-limitations-dep
+  sujet: inclusion
+  titre: "Limitation fonctionnelle sévère : de 4,9 % à 12,5 % des 25-59 ans selon le département"
+  type: carte
+  echelle: purples
+  unite: "% des 25-59 ans"
+  source: "DREES, enquête Vie quotidienne et santé 2021, données départementales (onglet LIMFONC) ; carte de Le Monde, hors-série, nov.-déc. 2026, refaite sur les données ouvertes"
+  note: "Le Monde cartographie les 15-64 ans à domicile (8 % en France, de 5,1 % à 11,4 %) ; les données ouvertes de la DREES ne donnent que les 25-59 ans. Outre-mer dans le fichier CSV (Guadeloupe et Martinique 10 %)."
+- id: handicap-pauvrete
+  sujet: inclusion
+  titre: "Un adulte handicapé sur quatre vit sous le seuil de pauvreté"
+  type: barres
+  unite: "% des 15-64 ans"
+  source: "DREES (2021), repris par Le Monde, hors-série, nov.-déc. 2026"
+  note: "Personnes handicapées = fortes limitations fonctionnelles. Les fiches de la DREES consultées donnent, pour les 15-59 ans, 25,5 % à 25,8 % contre 14,4 % : chiffre exact de Le Monde à vérifier."
+- id: handicap-emploi
+  sujet: inclusion
+  titre: "41 % des personnes reconnues handicapées ont un emploi, contre 69 % de la population"
+  type: barres
+  unite: "% des 15-64 ans en emploi"
+  source: "Agefiph, tableau de bord emploi et chômage des personnes handicapées, année 2025 (enquête Emploi de l'Insee) ; repris par Le Monde, hors-série, nov.-déc. 2026"
+  note: "Bénéficiaires de l'obligation d'emploi : personnes ayant une reconnaissance administrative du handicap. Leur taux de chômage est de 11,5 %, contre 7,7 %."
+- id: handicap-accessibilite
+  sujet: inclusion
+  titre: "Un commissariat sur trois accessible aux personnes handicapées"
+  type: barres-h
+  unite: "% des établissements accessibles"
+  source: "Le Monde, hors-série, nov.-déc. 2026 (avril 2026 ; producteur des données non précisé)"
+  note: "En août 2026, 12 % seulement des démarches administratives essentielles en ligne étaient pleinement accessibles (même source)."
+- id: handicap-scolarises
+  sujet: inclusion
+  titre: "Cinq fois plus d'élèves handicapés en classe ordinaire du second degré qu'en 2006"
+  type: barres
+  unite: "élèves"
+  source: "DEPP, Note d'information 25.63 (rentrées 2006 et 2024) ; repris par Le Monde, hors-série, nov.-déc. 2026"
+  note: "Hausse de 122 % dans le premier degré et de 464 % dans le second degré ordinaire ; stable en établissement hospitalier ou médico-social (+2 %)."
+# --- Le Monde, hors-série nov.-déc. 2026, p. 30-31 « L'école et ses disparités persistantes » (graphiques refaits, 23/11/2026)
+- id: ecole-projections
+  sujet: inegalites
+  titre: "1,7 million d'élèves en moins d'ici 2035"
+  type: ligne
+  unite: "milliers d'élèves"
+  source: "DEPP, Document de travail 2026-E08 et Note d'information 26.09, avril 2026 (scénario intermédiaire) ; repris par Le Monde, hors-série, nov.-déc. 2026"
+  note: "Premier degré en 2035 : 5 431 000 élèves (scénario haut) à 5 001 000 (scénario bas). Second degré 2015 déduit de la hausse de 112 100 élèves entre 2015 et 2025 donnée par la DEPP."
+- id: ecole-effectifs-dep
+  sujet: inegalites
+  titre: "De 2015 à 2025, l'école primaire a perdu jusqu'à 23 % de ses élèves selon le département"
+  type: carte
+  echelle: redblue
+  milieu: 0
+  unite: "évolution des effectifs 2015-2025 (%)"
+  source: "DEPP, effectifs d'élèves par école (data.education.gouv.fr), public et privé sous contrat, calcul GT ; carte de Le Monde (DEPP, Géographie de l'école 2026), refaite sans les écoles fermées"
+  note: "En métropole, de -21,7 % (Haute-Saône) à +2,2 % (Haute-Savoie). Outre-mer, dans le CSV : de -22,9 % (Martinique) à +24,4 % (Mayotte). Sur la France entière, le fichier donne -9,2 %, comme la DEPP."
+- id: ecole-projection-dep
+  sujet: inegalites
+  titre: "D'ici 2035, tous les départements perdent des élèves du primaire, Paris près de 30 %"
+  type: carte
+  echelle: blues
+  inverse: true
+  unite: "évolution projetée 2025-2035 (%)"
+  source: "DEPP, projections d'effectifs à horizon 2035, scénario intermédiaire (fichiers académiques, mis au format CSV sur data.gouv.fr ; totaux nationaux contrôlés) ; carte de Le Monde refaite"
+  note: "14 départements perdraient au moins 20 % de leurs élèves du premier degré. En métropole, de -29,4 % (Paris ; -29,3 % dans la publication de la DEPP) à -5,1 % (Alpes-de-Haute-Provence) ; outre-mer, dans le CSV, de -23,0 % (Martinique) à -4,5 % (Mayotte)."
+- id: ecole-classes
+  sujet: inegalites
+  titre: "Des classes plus chargées en France que dans l'OCDE et l'UE"
+  type: barres
+  unite: "élèves par classe"
+  source: "DEPP ; OCDE (moyennes du premier cycle du secondaire pour le collège), repris par Le Monde, hors-série, nov.-déc. 2026 (année non précisée)"
+  note: "Lycée général et technologique : 30,2 élèves par classe ; lycée professionnel : 18,4."
+- id: ecole-ips
+  sujet: inegalites
+  titre: "Les collèges privés accueillent les élèves les plus favorisés"
+  type: barres
+  unite: "indice de position sociale (IPS) moyen"
+  source: "DEPP (2025), repris par Le Monde, hors-série, nov.-déc. 2026"
+  note: "L'IPS résume le milieu social des élèves à partir des professions des parents : plus il est élevé, plus le milieu est favorisé."
+- id: ecole-brevet
+  sujet: inegalites
+  titre: "21 points d'écart de réussite au brevet entre REP+ et privé"
+  type: barres
+  unite: "% de réussite"
+  source: "DEPP (session 2025), repris par Le Monde, hors-série, nov.-déc. 2026"
+  note: "L'écart suit celui de l'origine sociale des élèves (graphique de l'IPS)."
+- id: ecole-prive-social
+  sujet: inegalites
+  titre: "Le privé compte 42 % de collégiens très favorisés, contre 30 % en 2004"
+  type: barres
+  unite: "% des collégiens du secteur"
+  source: "DEPP (2004, 2014, 2024), repris par Le Monde, hors-série, nov.-déc. 2026"
+  note: "Dans le public, la part des élèves défavorisés reste proche de 43 %."
+- id: ecole-pisa
+  sujet: inegalites
+  titre: "En maths, la France est passée au-dessus de la moyenne de l'OCDE en 2003 à en dessous en 2025"
+  type: barres
+  unite: "score PISA"
+  source: "OCDE, PISA 2003 et 2025, repris par Le Monde, hors-série, nov.-déc. 2026 (moyennes OCDE hors Costa Rica, Luxembourg et Espagne) ; scores France 2025 : DEPP, NI 26.40"
+  note: "Le Monde chiffre aussi à environ 100 points l'écart en sciences entre les élèves les plus et les moins favorisés (lecture de graphique, légende ambiguë)."

@@ -4,4 +4,4 @@ baseurl: ""
 lang: fr
 markdown: kramdown
 repo: politiques-educatives/politiques-educatives.github.io
-exclude: [README.md, routines, scripts, "*.py", "*.sh", Gemfile, Gemfile.lock]
+exclude: [README.md, "CHANGELOG-*.md", routines, scripts, "*.py", "*.sh", Gemfile, Gemfile.lock]

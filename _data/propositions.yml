@@ -105,18 +105,18 @@
 
 - id: orient-4e
   theme: Orientation et bac
-  titre: "Attribuer à chaque élève un tuteur référent d'orientation de la 4e à la terminale"
-  explication: "De la 4e à la terminale, chaque élève voit chaque trimestre un tuteur référent d'orientation, enseignant volontaire, formé aux filières et rémunéré. Sans heures ni formation, le second professeur principal de terminale n'a pas fonctionné, et seul un tiers des lycées a tenu les deux semaines d'orientation (Cnesco, 2018). En Allemagne, un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés (Resnjanskij et al., 2024). Le coût, estimé entre 30 et 50 millions d'euros par an, reste à confirmer."
+  titre: "Un référent d'orientation humain pour les élèves défavorisés et ruraux, et le tuteur IA pour tous"
+  explication: "De la 4e à la terminale, les élèves défavorisés et ruraux (environ 1,1 million de collégiens) voient chaque trimestre un référent d'orientation humain, enseignant volontaire, formé aux filières et rémunéré ; tous les élèves ont accès au volet orientation du tuteur IA public. Le ciblage suit les preuves : en Allemagne, un mentorat par des étudiants a amélioré de 0,56 écart-type les perspectives des collégiens défavorisés, sans effet chez les autres (Resnjanskij et al., 2024). Sans heures ni formation, le second professeur principal de terminale n'a pas fonctionné, et seul un tiers des lycées a tenu les deux semaines d'orientation (Cnesco, 2018). Le coût reste à chiffrer."
   preuves:
     - "Un tiers des lycées seulement a tenu les deux semaines d'orientation (Cnesco, 2018)."
-    - "En Allemagne, un an de mentorat par des étudiants a amélioré de 0,5 écart-type les perspectives des élèves défavorisés (Resnjanskij et al., 2024)."
+    - "En Allemagne, un mentorat par des étudiants a amélioré de 0,56 écart-type un indice combinant notes en maths, patience et compétences sociales, et orientation vers l'emploi chez les collégiens défavorisés, mesuré un an après le début du programme, sans effet chez les élèves plus favorisés (Resnjanskij et al., JPE, 2024 ; mentorat sur un à deux ans, à vérifier)."
     - "En fin de 3e, 38,6 % des élèves du public entrent en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale ; DEPP, 2025)."
-    - "Coût de travail du tuteur référent compté dans le service : 30 à 50 millions d'euros par an (calcul de travail à confirmer)."
+    - "Coût : à chiffrer."
   note: EDUCATION-note3-orienter.pdf
   statut: à chiffrer
-  maj_le: 2026-11-22
+  maj_le: 2026-11-23
   sujets: [orientation]
-  issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026)"
+  issue_de: "Note 3 : orienter plus tôt, et rendre au bac sa valeur (octobre 2026, mise à jour novembre 2026) ; référent ciblé depuis le 23/11/2026"
 
 - id: orient-parents
   theme: Orientation et bac
@@ -259,7 +259,7 @@
 - id: tuteur-public
   theme: Tuteur IA
   titre: "Déployer un tuteur IA public et vocal qui guide l'élève sans donner la solution"
-  explication: "Plutôt que des cours d'IA, l'État commande un tuteur vocal à indices gradués qui ne livre jamais la solution avant une tentative, avec un volet orientation de la 6e à la terminale. Ces tuteurs structurés améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025), quand l'IA en accès libre réduit de 17 à 24 % les notes aux examens sans elle (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026). Il est acheté en quatre lots, payés en partie aux résultats."
+  explication: "Plutôt que des cours d'IA, l'État commande, pour tous les élèves, un tuteur vocal à indices gradués qui ne livre jamais la solution avant une tentative, avec un volet orientation de la 6e à la terminale. Ces tuteurs structurés améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025), quand l'IA en accès libre réduit de 17 à 24 % les notes aux examens sans elle (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026). Il est acheté en quatre lots, payés en partie aux résultats."
   preuves:
     - "Les tuteurs structurés qui guident sans donner la réponse améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025)."
     - "L'accès libre à l'IA fait baisser les notes aux examens passés sans elle de 17 à 24 % (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026)."
@@ -511,3 +511,215 @@
   sujets: [formation]
   issue_de: "Inspirée des propositions de Joachim Le Floch-Imad, vérifiées par le GT (novembre 2026)"
 
+
+# ---------- Inclusion : piste rétablie le 23/11/2026 (fiche supprimée le 18/11, commit 6e1efb3), en attente de la note inclusion
+- id: sante-paliers
+  theme: Handicap et inclusion
+  titre: "Un dossier unique et deux premiers paliers de soutien décidés par l'école"
+  explication: "Piste, en attente de la note inclusion (mi-décembre). Les deux premiers paliers de soutien sont décidés par l'école sans dossier MDPH, et un dossier numérique unique (livret de parcours inclusif, GEVA-Sco, téléservice MDPH) permet à l'établissement de décider des aménagements d'examens de droit commun, avec un coordinateur inclusion déchargé par établissement."
+  preuves:
+    - "Délai moyen de traitement en MDPH : 4,4 mois au deuxième trimestre 2025, pour 4 mois légaux (CNSA) ; budget de l'école inclusive de 4,74 Md€ pour 139 993 AESH (Sénat, PLF 2026)."
+    - "En Finlande, l'école décide seule des deux premiers paliers de soutien, dont bénéficient 26 % des élèves (Statistics Finland, 2024)."
+    - "Le livret de parcours inclusif ne couvrait que 164 000 élèves en juin 2023 (Cour des comptes, 2024, p. 38-39)."
+  note: ""
+  statut: piste
+  maj_le: 2026-11-23
+  sujets: [inclusion]
+  issue_de: "Piste, en attente de la note inclusion (mi-décembre 2026)"
+
+# ---------- Notes finales du 22/11/2026, une fiche par mesure (créées le 23/11/2026)
+# Textes repris des notes : temps-de-formation/2026-11-22-note-temps-de-vie-final.md (P1 à P6),
+# ecole-entreprise/2026-11-22-note-ecole-entreprise-final.md (A1 à A3, B1, C1, C2), ia-jeunes-emploi/2026-11-22-note-ia-jeunes-v7.md (P1, P5).
+- id: tdv-bac-plus-tot
+  theme: Gagner du temps de vie
+  titre: "Passer le bac un an plus tôt quand on est prêt"
+  explication: "Les élèves prêts peuvent faire leur seconde et leur première en un an, ou sauter une classe. L'entrée repose sur des savoirs vérifiés par écrit (notes et évaluations nationales existantes, dont le test de seconde), le conseil de classe le propose à tous les élèves qui remplissent ces critères, et le tutorat des matières sautées est assuré par des enseignants volontaires payés en heures supplémentaires. Le retour dans la classe d'âge est garanti, sans redoublement, et aucun lycée en deux ans pour tous n'est prévu."
+  preuves:
+    - "Sauter une classe réussit aux élèves sélectionnés sur leurs acquis : ils font nettement mieux que leurs camarades du même âge et pas moins bien que leurs aînés (méta-analyse, Steenbergen-Hu, Makel et Olszewski-Kubilius, 2016, p. 849)."
+    - "En Allemagne, le lycée en 8 ans au lieu de 9 pour tous n'a avancé le bac que de 10 mois, avec 3 points de redoublement en plus et 6 points d'entrée à l'université en moins (Huebener et Marcus, 2015 ; Marcus et Zambre, 2016)."
+    - "Coût : se finance seul (tutorat de 500 € par élève déjà déduit) ; solde public de 386 M€ par cohorte au central si 5 % d'une cohorte de lycée général choisit ce parcours, 154 M€ à 2 % (calcul GT)."
+  note: EDUCATION-note-temps-de-vie.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [orientation]
+  issue_de: "Note « Gagner du temps de vie » (novembre 2026), proposition 1"
+
+- id: tdv-bacpro-apprentissage
+  theme: Gagner du temps de vie
+  titre: "Faire la terminale de bac pro en apprentissage, payée, avec le même diplôme"
+  explication: "Un élève de voie professionnelle qui a trouvé un employeur fait sa terminale en apprentissage dans sa spécialité et prépare le même diplôme. Le lycée l'aide à trouver l'employeur, en priorité dans les métiers de production (mesure N°80), et des jours de cours au lycée garantissent un plancher de français et de mathématiques. Le retour au lycée est garanti si le contrat casse, et aucune section n'est fermée au titre de la mesure."
+  preuves:
+    - "Emploi à 12 mois : 74,1 % après un CFA contre 52,8 % après un lycée professionnel ; écart brut, pas un effet causal (InserJeunes)."
+    - "En Suède, une année de plus en filière professionnelle n'a rien rapporté en revenus et a accru le décrochage des plus faibles (Hall, 2012) : le bac pro en 4 ans est écarté."
+    - "Coût : contrats sur le financement existant de l'apprentissage, pour environ 24 000 élèves ; solde public de -18 M€ au central (-50 à 424 M€), réserve à chiffrer sur les heures des professeurs de lycée professionnel (calcul GT)."
+  note: EDUCATION-note-temps-de-vie.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [orientation, emploi]
+  issue_de: "Note « Gagner du temps de vie » (novembre 2026), proposition 2"
+
+- id: tdv-bonus-licence
+  theme: Gagner du temps de vie
+  titre: "Verser un bonus aux boursiers qui finissent leur licence à l'heure, sans aucune perte de bourse"
+  explication: "Un bonus est versé aux étudiants boursiers qui valident leur licence dans les temps, ou en quatre ans s'ils travaillent au moins 10 heures par semaine. Il est annoncé dès l'entrée en L1, comme en Norvège, et aucune perte ni réduction de bourse ne peut résulter de la durée des études. Seuls 30,1 % des bacheliers inscrits en L1 obtiennent leur licence en 3 ans (SIES, 2025)."
+  preuves:
+    - "En Norvège, une remise de prêt d'environ 3 000 dollars pour un diplôme obtenu à l'heure a réduit le retard de 0,8 puis 1,5 semestre, davantage quand elle était connue dès l'entrée (Gunnes, Kirkebøen et Rønning, 2013)."
+    - "Aux Pays-Bas, l'amende pour études longues de 3 063 € par an a été abolie au bout d'un an (Riezebos, 2015)."
+    - "Coût : environ 18 M€ par cohorte au central (9 à 26 M€), sur le programme 231 ; solde public de 3 M€ au central en comptant les recettes de l'année de travail gagnée (calcul GT)."
+  note: EDUCATION-note-temps-de-vie.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [orientation]
+  issue_de: "Note « Gagner du temps de vie » (novembre 2026), proposition 3"
+
+- id: tdv-concours-bac3
+  theme: Gagner du temps de vie
+  titre: "Ouvrir à bac+3 les concours de l'État là où des titulaires d'une licence professionnelle tiennent déjà les emplois"
+  explication: "L'État ouvre certains concours externes dès bac+3, pour les seuls métiers administratifs et techniques où des titulaires d'une licence professionnelle tiennent déjà les emplois, corps par corps à partir de 2029, par modification des décrets statutaires. Les concours d'enseignants, les professions réglementées et les parcours appuyés sur des masters recherche restent hors champ, et aucun master n'est fermé."
+  preuves:
+    - "Le concours enseignant ramené à bac+3 en 2026 a réuni 64 511 inscrits pour 5 200 postes ; il fait l'objet du bilan prévu en 2027."
+    - "Coût : aucune dépense nouvelle ; solde à chiffrer après l'inventaire des corps concernés."
+  note: EDUCATION-note-temps-de-vie.pdf
+  statut: à chiffrer
+  maj_le: 2026-11-23
+  sujets: [emploi]
+  issue_de: "Note « Gagner du temps de vie » (novembre 2026), proposition 4"
+
+- id: tdv-doctorat-shs
+  theme: Gagner du temps de vie
+  titre: "Financer chaque doctorant en sciences humaines et sociales admis sur concours"
+  explication: "Une fois les trois tranches ouvertes, toute admission en doctorat de sciences humaines et sociales s'accompagne d'un financement attribué sur concours par l'école doctorale, avec une 4e année de droit quand le terrain l'exige et l'enseignement payé dès la 1re année (64 heures par an au plus). Aujourd'hui, 50 % des doctorants en sciences humaines sont financés, contre 98 % en sciences exactes, et 35 % de leurs thèses durent 6 ans ou plus (SIES, 2026)."
+  preuves:
+    - "Thèses soutenues en moins de 40 mois : 59 % en sciences exactes contre 11 % en sciences humaines et sociales (SIES, 2026)."
+    - "Coût : tranche 1 de +1 000 contrats doctoraux à la rentrée 2028, environ 83 M€ brut (116 M€ chargés) ; 361 à 482 M€ par an en régime permanent ; tranches 2 et 3 gagées sur une réallocation d'une partie du crédit d'impôt recherche (CAE, Note n° 94, p. 12, montant à chiffrer ; calcul GT)."
+  note: EDUCATION-note-temps-de-vie.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [emploi]
+  issue_de: "Note « Gagner du temps de vie » (novembre 2026), proposition 5"
+
+- id: tdv-ia-doctorants
+  theme: Gagner du temps de vie
+  titre: "Un assistant d'IA pour chaque doctorant, par une licence nationale à prix plafonné"
+  explication: "L'État met un assistant d'IA de pointe à la disposition des 69 971 doctorants inscrits, par une licence nationale multi-fournisseurs ouverte aux offres européennes, dès la rentrée 2028. Le prix est plafonné à 71 € par mois et par doctorant, l'outil est financé sur une ligne séparée sans lien avec la durée des thèses, et les écoles doctorales fixent des étapes « d'abord seul » sans l'outil."
+  preuves:
+    - "Aucune étude causale ne porte encore sur des doctorants ; sur la reproduction d'articles publiés, des équipes aidées par l'IA n'ont pas fait mieux que des équipes humaines (Brodeur et al., 2025)."
+    - "L'IA en accès libre fait perdre 17 % à l'examen passé sans elle (Bastani et al., 2025)."
+    - "Coût : 17 à 60 M€ par an selon le prix retenu, ligne séparée en loi de finances (calcul GT)."
+  note: EDUCATION-note-temps-de-vie.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [emploi]
+  issue_de: "Note « Gagner du temps de vie » (novembre 2026), proposition 6"
+
+- id: ee-lycee-branche
+  theme: École et entreprise
+  titre: "Des sections « lycée-branche » de la seconde au BTS, avec le diplôme national"
+  explication: "Tout lycée professionnel ou technologique peut ouvrir, par convention avec une branche ou au moins deux employeurs du bassin dont une PME, une section de cinq ans de la seconde au BTS : un parrain d'entreprise par élève, un stage chaque année, des modules de BTS dès la terminale et un entretien d'embauche garanti à la sortie. Les diplômes nationaux et les heures de français et de mathématiques restent inchangés ; la priorité va aux métiers de production (N°80), avec au moins la moitié des places pour des élèves d'éducation prioritaire ou boursiers."
+  preuves:
+    - "Aux États-Unis, les Career Academies ont relevé le salaire de 11 % par an pendant huit ans, et de 17 % pour les jeunes hommes (Kemple, MDRC, 2008, p. iii)."
+    - "À New York, P-TECH a porté à 13 % contre 3 % la part de jeunes hommes diplômés à bac+2, pour un coût proche d'un lycée ordinaire (MDRC, 2023)."
+    - "Coût : 3,7 M€ par an en croisière pour 500 sections en 2032 (environ 36 000 lycéens), par redéploiement de crédits de l'Éducation nationale (calcul GT)."
+  note: EDUCATION-note-ecole-entreprise.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [orientation, emploi]
+  issue_de: "Note « Apprendre avec ceux qui savent : écoles, entreprises et seniors » (novembre 2026), A1"
+
+- id: ee-rencontres-pros
+  theme: École et entreprise
+  titre: "Quatre rencontres avec des professionnels pour chaque élève, de la 4e à la terminale"
+  explication: "Chaque élève des collèges et lycées publics et privés sous contrat rencontre au moins quatre fois des professionnels entre la 4e et la terminale, hors heures de français, de mathématiques et d'atelier. Un animateur régional par bassin, rattaché au service public de l'orientation (N°75), fait venir les entreprises, sans tâche nouvelle pour le professeur principal ; l'éducation prioritaire et les zones rurales sont servies en premier, et la part d'élèves de terminale ayant eu quatre rencontres est publiée par établissement."
+  preuves:
+    - "Deux tiers des stages de 3e et de seconde sont trouvés par la famille, contre 4 % par l'établissement (DEPP, NI 26.44, 2026)."
+    - "Une heure d'intervention d'une scientifique a fait passer de 11 % à 14,5 % la part des filles en filière scientifique sélective (Breda et al., 2023)."
+    - "Coût : 15 M€ par an en croisière (300 bassins × 50 000 €), payés par les régions au titre de leur compétence d'information sur les métiers (calcul GT)."
+  note: EDUCATION-note-ecole-entreprise.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [orientation]
+  issue_de: "Note « Apprendre avec ceux qui savent : écoles, entreprises et seniors » (novembre 2026), A2"
+
+- id: ee-referentiels
+  theme: École et entreprise
+  titre: "Réviser tous les cinq ans les diplômes professionnels, avec ceux qui les enseignent"
+  explication: "Chaque référentiel de CAP, bac pro et BTS est révisé au moins tous les cinq ans, en douze mois au plus, par un panel de trois employeurs dont une PME, trois salariés, trois enseignants et un inspecteur. Chaque révision précise quelles tâches l'IA fait déjà et ce qui s'apprend à la place ; la méthode relève du volet enseignement de la mesure N°81."
+  preuves:
+    - "Aucune preuve causale : la revue anglaise juge les preuves « limitées » (CAR, 2025, p. 168)."
+    - "En Angleterre, les T Levels écrits par des employeurs n'ont atteint que 42 % des entrées prévues (NAO, 2025, p. 4)."
+    - "Coût : 0,9 M€ par an (90 révisions × 10 000 €), sur les crédits des commissions et de l'inspection (calcul GT)."
+  note: EDUCATION-note-ecole-entreprise.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [emploi]
+  issue_de: "Note « Apprendre avec ceux qui savent : écoles, entreprises et seniors » (novembre 2026), A3"
+
+- id: ee-maitre-apprentissage
+  theme: École et entreprise
+  titre: "Un maître d'apprentissage nommé, formé et reconnu pour chaque apprenti"
+  explication: "Dans l'aide à l'embauche d'apprentis maintenue du CAP à bac+2, une part tutorale de 100 € par mois pendant 12 mois n'est versée que si le contrat nomme un maître d'apprentissage formé (une journée), dont au moins la moitié lui revient en prime. La priorité va aux salariés de 55 ans et plus. Mesure portée par le ministère du Travail, sans dépense nouvelle pour l'État, sous réserve que l'aide reste hors de N°82 (arbitrage du 22/11/2026)."
+  preuves:
+    - "Aux États-Unis, de courtes rencontres structurées entre collègues ont accru le chiffre d'affaires par appel de 24 %, contre 13 % pour une prime (Sandvik et al., QJE 2020)."
+    - "Le contrat de génération a atteint 20 % de son objectif, avec des binômes souvent « purement statistiques » (Cour des comptes, 2016, p. 61-71)."
+    - "Coût : nul pour l'État (au moins 415 M€ par an d'aide existante rendus conditionnels) ; formation des tuteurs 16 M€ par an dans les plafonds des OPCO (calcul GT)."
+  note: EDUCATION-note-ecole-entreprise.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [emploi]
+  issue_de: "Note « Apprendre avec ceux qui savent : écoles, entreprises et seniors » (novembre 2026), B1"
+
+- id: ee-chef-doeuvre
+  theme: École et entreprise
+  titre: "Le chef-d'œuvre de la voie professionnelle devient une commande réelle, évaluée et montrable"
+  explication: "En dernière année de CAP et de bac pro, le chef-d'œuvre porte sur une commande réelle d'une entreprise, d'une collectivité ou d'une association, trouvée par l'animateur de bassin ou la branche, jamais par la famille. Il est défendu à l'oral devant un jury qui inclut le commanditaire et donne une attestation détaillée à joindre à Parcoursup et au CV, sans heure supplémentaire."
+  preuves:
+    - "Le chef-d'œuvre actuel est jugé « laborieux » (Assemblée nationale, 2025) ; les preuves sont faibles."
+    - "Aux États-Unis, des projets guidés ont porté la réussite à l'examen AP de 37 % à 45 % (3 645 élèves, Saavedra et al., 2022)."
+    - "Coût : nul en heures ; 0,3 M€ une fois pour l'évaluation par la DEPP (hypothèse GT)."
+  note: EDUCATION-note-ecole-entreprise.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [orientation]
+  issue_de: "Note « Apprendre avec ceux qui savent : écoles, entreprises et seniors » (novembre 2026), C1"
+
+- id: ee-seul-puis-ia
+  theme: École et entreprise
+  titre: "D'abord seul, puis plus vite avec l'IA"
+  explication: "Les bases s'évaluent sur table, sans IA, au collège, au lycée et en alternance (en voie professionnelle, gestes en atelier compris). Au lycée et en voie pro, une partie des travaux de projet peut être faite avec l'IA, déclarée puis expliquée à l'oral sans elle ; aucune épreuve nouvelle n'est créée, et les épreuves de projet intègrent la déclaration d'usage de l'IA à partir de la session 2032."
+  preuves:
+    - "En Turquie, l'accès libre à ChatGPT a fait perdre 17 % à l'examen passé sans IA, perte évitée avec un tuteur qui guide (Bastani et al., PNAS 2025)."
+    - "Au Nigeria, six semaines de cours encadrés avec l'IA ont accru le niveau en anglais de 0,23 écart-type (De Simone et al., 2025)."
+    - "Coût : nul (circulaire de rentrée 2028 et formation continue courte existante)."
+  note: EDUCATION-note-ecole-entreprise.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [ecrans]
+  issue_de: "Note « Apprendre avec ceux qui savent : écoles, entreprises et seniors » (novembre 2026), C2"
+
+- id: ia-diplome-ia
+  theme: IA, jeunes et emploi
+  titre: "Enseigner l'usage professionnel de l'IA dans tous les diplômes de CAP, bac pro et BTS"
+  explication: "L'usage professionnel de l'IA (devis, diagnostic, relation client, maintenance) entre dans les référentiels de toutes les spécialités, tertiaires et de production. L'épreuve se fait en deux temps, d'abord sans IA puis la même tâche avec l'IA, avec mention sur le diplôme (session 2029 pour le BTS, 2030 pour le bac pro), et chaque professeur de voie professionnelle suit une à deux journées de formation par an. Le financement passe par le volet enseignement de la mesure N°81 et le budget de formation continue existant."
+  preuves:
+    - "Avec un assistant d'IA, la productivité des travailleurs les moins expérimentés a crû de 34 %, contre 14 % en moyenne (Brynjolfsson, Li et Raymond, 2025 ; étude sur l'outil, pas sur une formation)."
+    - "L'IA utilisée sans cadre pédagogique réduit de 17 % la performance sans IA (Bastani et al., 2025), d'où l'épreuve en deux temps."
+    - "Coût : à chiffrer (formation continue, licences des outils, attestation 2027)."
+  note: EDUCATION-note-ia-jeunes-v7.pdf
+  statut: à chiffrer
+  maj_le: 2026-11-23
+  sujets: [emploi]
+  issue_de: "Note « L'IA et les jeunes » v7 (novembre 2026), P1"
+
+- id: ia-formation-smic
+  theme: IA, jeunes et emploi
+  titre: "20 000 places par an de formation qualifiante payée au Smic, avec un employeur engagé à recruter"
+  explication: "À partir de septembre 2028, 20 000 places par an sont financées pour les jeunes de moins de 26 ans sans CDI sortis de formation depuis moins de trois ans, en priorité sans diplôme. La formation longue (environ 6,2 mois) est payée au Smic, construite avec un employeur partenaire engagé à recruter, vers les métiers en tension et de production (N°80) ; les organismes sont payés en partie selon l'emploi à 12 mois."
+  preuves:
+    - "Aux États-Unis, les programmes sectoriels adossés aux employeurs augmentent les revenus de +40 % en année 3 pour Year Up et de +11 à 12 % jusqu'aux années 5 à 7 pour WorkAdvance (essais randomisés, Katz et al., 2020, p. 7)."
+    - "En France, le PIC n'a donné que +3 points d'accès à l'emploi aux jeunes, contre +9 en moyenne (comité scientifique du PIC, 2025, p. 5, évaluation non expérimentale)."
+    - "Coût : environ 22 100 € par place, soit 0,44 Md€ par an pour 20 000 places, financé par la fin de l'aide aux employeurs d'apprentis au-delà de bac+2 (calcul GT)."
+  note: EDUCATION-note-ia-jeunes-v7.pdf
+  statut: proposition
+  maj_le: 2026-11-23
+  sujets: [emploi]
+  issue_de: "Note « L'IA et les jeunes » v7 (novembre 2026), P5"

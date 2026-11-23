@@ -48,7 +48,7 @@ themes:
     chiffre: {source: cdc-inspecteurs-2022}
     carte: {theme: gouvernance, pays: ENG, faits: [f39, f40, f43, f46]}
     propositions: [gouv-recruter, gouv-visite]
-    livret: ["64"]
+    livret: ["P06", "64"]
     sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022]
     dossiers: [01-england-governance-ors]
     notes: [EDUCATION-note2-gouvernance-etablissement.pdf]
@@ -64,11 +64,20 @@ themes:
     dossiers: [03-inspection-evaluation]
   - id: batiments
     titre: "L'état des bâtiments scolaires"
-    bref:   # même encadré (outils IA et jeunes, 21/11/2026)
-      - "État des écoles : aucune mesure sur la rénovation des bâtiments scolaires dans le livret."
+    bref:   # même encadré (outils IA et jeunes, 21/11/2026), corrigé le 23/11/2026 d'après le livret (N°136, p. 32)
+      - "État des écoles : aucune mesure sur la rénovation des bâtiments scolaires dans le livret ; seule la mesure N°136 finance le rafraîchissement des écoles par les réseaux de froid."
     propositions: [batiments-inventaire-public, batiments-fonds-chaleur-air, batiments-ddec-perequation]
-  reste:
+    livret: ["136"]
+  - id: demographie
+    titre: "Moins d'élèves, des inégalités qui persistent"
+    bref:   # fiches de sources.yml (DEPP, projections 2035 et effectifs par école), ajoutées le 23/11/2026 avec le hors-série du Monde
+      - {source: depp-projections-2035}
+      - {source: depp-effectifs-ecoles}
+    chiffre: {graphique: ecole-projections}
+    graphiques_plus: [ecole-projection-dep, ecole-effectifs-dep, ecole-prive-social, ecole-ips, ecole-brevet, ecole-classes, ecole-pisa]
     livret: ["66"]
+    sources: [lemonde-hs-2026-ecole, depp-projections-2035, depp-effectifs-ecoles, depp-geographie-ecole-2026]
+  reste: {}
 
 - theme: handicap
   sections:
@@ -79,10 +88,11 @@ themes:
       - {source: cnesco-2026-inclusion}
       - {source: cnsa-mdph-delais}
     chiffre: {graphique: aesh}
-    graphiques_plus: [mdph]
+    graphiques_plus: [mdph, handicap-scolarises, handicap-limitations-dep, handicap-emploi, handicap-pauvrete, handicap-accessibilite]
     ailleurs_sources: [{id: inclusion-international, pays: "Italie, New York, Québec, Finlande"}]
+    propositions: [sante-paliers]
     livret: ["74"]
-    sources: [cdc-inclusion-2024, senat-plf2026-inclusion, cnesco-2026-inclusion, depp-ni-25-63, cnsa-mdph-delais, mediateur-2025]
+    sources: [cdc-inclusion-2024, senat-plf2026-inclusion, cnesco-2026-inclusion, depp-ni-25-63, cnsa-mdph-delais, mediateur-2025, lemonde-hs-2026-handicap, drees-vqs-2021, drees-pauvrete-handicap, agefiph-tb-2025, cerema-arrets-2026, sncf-gares-accessibles]
     dossiers: [04-inclusion]
     notes_generees: [notes-generees/2026-11-18-issue-1]
   - id: sante-mentale
@@ -111,7 +121,7 @@ themes:
     sources: [enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-seconde-2026, depp-ce1-2026, depp-pisa-2025, pisa-2022-distraction, cnl-lecture-2026, portable-en-pause, bastani-2025, stromberg-2026, kestin-2025, desimone-2025, henkel-2024, tutor-copilot-2024, mia-seconde, cadre-usage-ia-2025]
     dossiers: [07-outil-ia-public, 09-lecture-rapport-cianum-sortir-clandestinite, 14-why-scores-fall]
   reste:
-    livret: ["73"]
+    livret: ["73", "27"]
 
 - theme: orientation
   sections:
@@ -126,7 +136,7 @@ themes:
     chiffre: {graphique: voeux}
     graphiques_plus: [boursiers]
     carte: {theme: orientation, pays: ENG, faits: [f54, f56, f58, f175]}
-    propositions: [orient-4e, orient-parents, orient-gatsby]
+    propositions: [orient-4e, orient-parents, orient-gatsby, ee-rencontres-pros]
     livret: ["75"]
     sources: [depp-reperes-orientation-2025, goux-2017, avvisati-2014, breda-2023, gatsby, berlioux-2020, resnjanskij-2024, cnesco-2018-orientation]
     dossiers: [05-orientation]
@@ -140,7 +150,7 @@ themes:
     chiffre: {graphique: licence-bac}
     graphiques_plus: [filtre]
     carte: {theme: superieur, pays: UK, faits: [f76, f182, f183, f75]}
-    propositions: [orient-bac, ia-master]
+    propositions: [orient-bac, ia-master, tdv-bac-plus-tot, tdv-bonus-licence, tdv-concours-bac3, tdv-doctorat-shs]
     livret: ["76"]
     ajouts: [a-bac, a-master]
     sources: [sies-licence-2025, insee-2109, ofer-2016, rers-2025, humburg-2015, apec-2024, indeed-diplomes-2024, cereq-generation-2021]
@@ -174,12 +184,12 @@ themes:
       - {source: humlum-2025}
     chiffre: {graphique: embauches}
     carte: {theme: apprentissage, pays: UK, faits: [f87, f192, f202, f200]}
-    propositions: [ia-garantie, ia-observatoire]
-    livret: ["119"]
+    propositions: [ia-garantie, ia-observatoire, ia-diplome-ia, ee-seul-puis-ia, tdv-ia-doctorants]
+    livret: ["81", "119"]
     ajouts: [a-garantie]
     sources: [lift-2026, canaries-2025, humlum-2025, insee-ic-2026, orr-2026, milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026, cae-91]
     dossiers: [18-ia-embauches-exposition, 12-milburn-review]
-    notes: [EDUCATION-note-ia-jeunes-v7.pdf, EDUCATION-note-ia-jeunes-v5.pdf, EDUCATION-note-rapport-milburn.pdf]
+    notes: [EDUCATION-note-ia-jeunes-v7.pdf, EDUCATION-note-rapport-milburn.pdf]
     blocs: [suivi, note_ia]
   - id: jeunes
     titre: "Que proposer aux jeunes sur l'emploi, les stages, les études et les discriminations ?"
@@ -187,7 +197,7 @@ themes:
       - "Le livret « Croire en nous » contient des mesures pour la jeunesse, mais il ne répond pas aux inquiétudes exprimées par les jeunes sur le terrain : le manque d'emplois et de stages, le coût de la vie et l'état des écoles."
       - "Premier emploi et chômage : aucune mesure sur l'embauche des débutants, le chômage des jeunes ou les jeunes sans emploi ni formation. Stages et discriminations : les mots n'apparaissent pas dans le livret."
       - "Salaire face au loyer : rien de spécifique pour les jeunes, les bourses ou le logement étudiant."
-    propositions: [j-emploi-tutore, j-prime-conditionnelle, stages-garantie-rep, stages-superieur-boursiers, bourses-bareme-lineaire, residences-etudiantes-zones-tendues, emplois-etudiants-campus, disc-testing-grands-employeurs, disc-apprentissage-stages]
+    propositions: [j-emploi-tutore, j-prime-conditionnelle, stages-garantie-rep, stages-superieur-boursiers, bourses-bareme-lineaire, residences-etudiantes-zones-tendues, emplois-etudiants-campus, disc-testing-grands-employeurs, disc-apprentissage-stages, ia-formation-smic]
   reste:
     blocs: [comms]
 
@@ -225,7 +235,8 @@ themes:
       - "Emploi à 6 mois : 43 % après un bac pro, 59 % après un BTS (DEPP, InserJeunes, RERS 2025)."
     chiffre: {graphique: emploi6mois}
     carte: {theme: apprentissage, pays: ENG, faits: [f206, f207, f205, f176]}
-    propositions: [ia-marche]
+    propositions: [ia-marche, ee-lycee-branche, tdv-bacpro-apprentissage, ee-maitre-apprentissage, ee-chef-doeuvre, ee-referentiels]
+    livret: ["80"]
     notes: [EDUCATION-note-ecole-entreprise.pdf]
   reste: {}
 
