@@ -88,7 +88,7 @@ themes:
       - {source: cnesco-2026-inclusion}
       - {source: cnsa-mdph-delais}
     chiffre: {graphique: aesh}
-    graphiques_plus: [mdph, handicap-scolarises, handicap-limitations-dep, handicap-emploi, handicap-pauvrete, handicap-accessibilite]
+    graphiques_plus: [mdph, handicap-scolarises, handicap-limitations-dep, handicap-mdph-delai-dep, handicap-pch-accord-dep, handicap-emploi, handicap-pauvrete, handicap-accessibilite]
     ailleurs_sources: [{id: inclusion-international, pays: "Italie, New York, Québec, Finlande"}]
     propositions: [sante-paliers]
     livret: ["74"]

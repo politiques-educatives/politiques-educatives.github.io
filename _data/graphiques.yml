@@ -4,6 +4,8 @@
 #          serie = nom, valeur ; DROM dans le CSV mais pas sur la carte ; données écrites par scripts/build_cartes.py depuis ../data/raw-new/)
 #          options de carte : echelle (palette Vega, défaut blues), inverse: true (couleur la plus foncée pour la plus petite valeur),
 #          milieu (valeur centrale d'une palette divergente, ex. 0)
+#          classes: [libellés dans l'ordre] = carte en classes ordonnées (CSV : valeur = rang 1..n, classe = libellé ; une ligne
+#          « non lu » sans valeur reste en gris) ; couleurs: [une couleur par classe, même ordre] (sinon palette echelle)
 # auto : true = données actualisées chaque mois par .github/workflows/charts.yml (InserSup)
 - id: aesh
   sujet: inclusion
@@ -129,6 +131,24 @@
   unite: "% des 25-59 ans"
   source: "DREES, enquête Vie quotidienne et santé 2021, données départementales (onglet LIMFONC) ; carte de Le Monde, hors-série, nov.-déc. 2026, refaite sur les données ouvertes"
   note: "Le Monde cartographie les 15-64 ans à domicile (8 % en France, de 5,1 % à 11,4 %) ; les données ouvertes de la DREES ne donnent que les 25-59 ans. Outre-mer dans le fichier CSV (Guadeloupe et Martinique 10 %)."
+- id: handicap-mdph-delai-dep
+  sujet: inclusion
+  titre: "Demandes aux MDPH : 2 à 4 mois de délai dans 41 départements, plus de 7 mois en Seine-Maritime, Meurthe-et-Moselle, Val-de-Marne, Martinique et Mayotte"
+  type: carte
+  classes: ["2 à 4 mois", "4 à 5 mois", "5 à 7 mois", "7 à 10 mois", "10 à 15 mois"]
+  couleurs: ["#56605c", "#e3cf9f", "#e08277", "#b5444b", "#6a1c22"]
+  unite: "délai moyen de traitement des demandes (enfants et adultes), 2025"
+  source: "CNSA, baromètre des MDPH (2025) ; classes relevées sur la carte publiée par Le Monde, hors-série, nov.-déc. 2026, les valeurs exactes par département ne sont pas publiées en données ouvertes"
+  note: "Métropole : 41 départements entre 2 et 4 mois, 35 entre 4 et 5, 17 entre 5 et 7, 3 entre 7 et 10, aucun au-delà ; aucun département « non lu ». Outre-mer dans le fichier CSV : Guyane et La Réunion 2 à 4 mois, Guadeloupe 5 à 7, Martinique 7 à 10, Mayotte 10 à 15. France entière : 4 mois et demi, pour un délai réglementaire de 4 mois. Le Rhône et la Métropole de Lyon, distincts sur la carte, sont dans la même classe."
+- id: handicap-pch-accord-dep
+  sujet: inclusion
+  titre: "PCH : plus de la moitié des demandes acceptées dans 22 départements, moins de 35 % dans 20, dont Paris, les Hauts-de-Seine et la Seine-Saint-Denis"
+  type: carte
+  classes: ["moins de 35 %", "35 à 40 %", "40 à 45 %", "45 à 50 %", "plus de 50 %"]
+  couleurs: ["#efe6c8", "#c4b48a", "#a6b13a", "#5d6a2d", "#2e3a1d"]
+  unite: "taux d'accord de la prestation de compensation du handicap (PCH), 2025"
+  source: "CNSA, baromètre des MDPH (2025) ; classes relevées sur la carte publiée par Le Monde, hors-série, nov.-déc. 2026, les valeurs exactes par département ne sont pas publiées en données ouvertes"
+  note: "Métropole : 20 départements sous 35 %, 18 entre 35 et 40 %, 17 entre 40 et 45 %, 18 entre 45 et 50 %, 22 au-dessus de 50 % ; 1 « non lu » (Territoire de Belfort, presque caché par une frontière régionale sur la carte). Outre-mer dans le fichier CSV : Guadeloupe et Guyane sous 35 %, La Réunion 35 à 40 %, Martinique et Mayotte 45 à 50 %."
 - id: handicap-pauvrete
   sujet: inclusion
   titre: "Un adulte handicapé sur quatre vit sous le seuil de pauvreté"

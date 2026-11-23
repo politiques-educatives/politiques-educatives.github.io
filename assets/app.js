@@ -459,13 +459,19 @@
       base.height = 380;
       base.projection = { type: "conicConformal", parallels: [44, 49], rotate: [-3, 0] };
       base.data = { url: BASE + "/assets/charts/geo/departements.geojson", format: { type: "json", property: "features" } };
+      var col = { field: "valeur", type: "quantitative", title: g.unite, scale: sc, legend: { orient: "bottom", direction: "horizontal", gradientLength: 220 } };
+      var ttv = { field: "valeur", title: g.unite, format: ",.1~f" };
+      if (g.classes) {   // classes ordonnées (CSV : valeur = rang 1..n, classe = libellé) : une couleur par classe, dans l'ordre de g.classes
+        col = { field: "classe", type: "ordinal", title: g.unite, scale: g.couleurs ? { domain: g.classes, range: g.couleurs } : { domain: g.classes, scheme: g.echelle || "blues", reverse: !!g.inverse },
+          legend: { orient: "bottom", direction: "horizontal", columns: g.classes.length, symbolType: "square" } };
+        ttv = { field: "classe", title: g.unite };
+      }
       base.layer = [
         { mark: { type: "geoshape", fill: "#e3e6ec", stroke: "#fff", strokeWidth: 0.5 } },
-        { transform: [{ lookup: "properties.code", from: { data: { url: data.url, format: data.format }, key: "categorie", fields: ["serie", "valeur"] } },
+        { transform: [{ lookup: "properties.code", from: { data: { url: data.url, format: data.format }, key: "categorie", fields: ["serie", "valeur", "classe"] } },
                       { filter: "isValid(datum.valeur)" }],
           mark: { type: "geoshape", stroke: "#fff", strokeWidth: 0.5 },
-          encoding: { color: { field: "valeur", type: "quantitative", title: g.unite, scale: sc, legend: { orient: "bottom", direction: "horizontal", gradientLength: 220 } },
-            tooltip: [{ field: "serie", title: "Département" }, { field: "valeur", title: g.unite, format: ",.1~f" }] } }];
+          encoding: { color: col, tooltip: [{ field: "serie", title: "Département" }, ttv] } }];
       return base;
     }
     var lbl = { type: "text", fontSize: 11, color: "#1d2433" };
