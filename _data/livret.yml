@@ -24,7 +24,7 @@
   resume: "Hausse de 20 % sur le quinquennat, jusqu'à la moyenne européenne, surtout en milieu de carrière."
   page: 22
   eval: à compléter
-  apport: "Note 1 : lier la hausse à un service annuel qui réserve du temps au tutorat et au travail d'équipe. Le livret ne chiffre pas la mesure : 10 à 16,9 Md€ par an, 11,8 Md€ en valeur centrale, hors pensions (calcul du groupe, à vérifier)."
+  apport: "Note 1 : lier la hausse à un service annuel qui réserve du temps au tutorat et au travail d'équipe. Le livret ne chiffre pas la mesure : 10 à 16,9 Md€ par an, 11,8 Md€ en valeur centrale, hors pensions (calcul du groupe, à vérifier). Une hausse uniforme retient tous les enseignants de la même façon, alors que les plus efficaces sont 2,5 fois plus sensibles au salaire dans leur décision de partir ; une prime ciblée donnerait le même gain de qualité pour un quart du coût (Tartova, 2025, document de travail)."
   cartes: [heures-service-annuel]
 - n: "66"
   sujets: [formation]
@@ -72,7 +72,7 @@
   resume: "Des écoles normales plus exigeantes sur les savoirs fondamentaux, et des carrières ouvertes aux professionnels venus d'ailleurs."
   page: 23
   eval: à compléter
-  apport: "Depuis 2026, le concours a lieu à bac+3, suivi d'un master rémunéré, toujours en INSPÉ, pour 88 M€ en 2026 et 265 M€ en année pleine (Sénat, 2026) ; aucune école normale n'existe aujourd'hui. Sortir la formation de l'université n'a pas d'appui empirique et son surcoût n'est pas chiffré. Le mode de formation initiale pèse peu : à New York, les écarts entre enseignants certifiés, non certifiés ou issus de voies alternatives ne sont que de 0,01 à 0,02 écart-type, contre 0,33 entre le premier et le dernier quart des enseignants (Kane, Rockoff et Staiger, 2006)."
+  apport: "Depuis 2026, le concours a lieu à bac+3, suivi d'un master rémunéré, toujours en INSPÉ, pour 88 M€ en 2026 et 265 M€ en année pleine (Sénat, 2026) ; aucune école normale n'existe aujourd'hui. Sortir la formation de l'université n'a pas d'appui empirique et son surcoût n'est pas chiffré. Le mode de formation initiale pèse peu : à New York, les écarts entre enseignants certifiés, non certifiés ou issus de voies alternatives ne sont que de 0,01 à 0,02 écart-type, contre 0,33 entre le premier et le dernier quart des enseignants (Kane, Rockoff et Staiger, 2006). La première session du concours à bac+3, en 2026, a pourvu 93 % des postes de maths, contre 74 % en 2025, et 97,5 % des postes du CAPES externe public (ministère de l'Éducation nationale, 2026, calcul du GT) : le dispositif actuel commence à résoudre la pénurie que les écoles normales visent."
   cartes: []
 - n: "72"
   sujets: [formation]

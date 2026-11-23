@@ -1666,3 +1666,28 @@
   statut: vérifié
   resume: "Faire passer le privé sous contrat de 17 % à 25 % des élèves, pour 3,8 Md€ d'économies de fonctionnement selon la Fondation (6,4 Md€ à 30 %). Supprimer la règle des 80/20 entre public et privé ; rendre les établissements publics autonomes, financés par un forfait par élève ; confier le recrutement au chef d'établissement et mettre fin au concours."
   cle: "La Fondation iFRAP propose des établissements publics autonomes financés par élève, qui recrutent eux-mêmes, et 25 % d'élèves dans le privé sous contrat (2026)."
+
+# ================= VEILLE DU 23/11 (soir) : études vérifiées =================
+- id: tartova-2025-salaires
+  titre: Tartova (2025), le salaire retient surtout les enseignants les plus efficaces
+  ref: Tartova, D. (2025), « Who Leaves and Who Stays? The Impact of the Teacher Wage Gap on Teacher Quality », job market paper, École d'économie de Paris, 23 novembre 2025.
+  lien: http://desislavatartova.github.io/pdf/JMP_Desislava_Tartova.pdf
+  sujets:
+  - formation
+  type: étude causale
+  statut: vérifié
+  resume: 'La réforme de 2014 a fortement relevé les primes en éducation prioritaire renforcée (REP+) et peu dans les établissements un peu moins défavorisés. L''auteure s''en sert pour mesurer, avec les données de la DEPP, comment les départs du métier réagissent au salaire selon la valeur ajoutée des enseignants. Les enseignants à forte valeur ajoutée sont 2,5 fois plus sensibles au salaire dans leur décision de partir que ceux à faible valeur ajoutée. Simulation : une prime ciblée sur les plus efficaces donne le même gain de qualité moyenne qu''une hausse uniforme comparable à celle de 2014, pour un quart du coût budgétaire. Limite : document de travail, non publié ; cibler la prime sur la valeur ajoutée est politiquement difficile, comme le note l''auteure.'
+  cle: Les enseignants les plus efficaces sont 2,5 fois plus sensibles au salaire dans leur décision de quitter le métier ; une prime ciblée sur eux coûterait un quart d'une hausse uniforme pour le même gain de qualité (Tartova, 2025, document de travail).
+  propositions:
+  - lfi-postes-difficiles
+- id: tartova-2025-va
+  titre: Tartova (2025), mesurer l'efficacité des enseignants sans tests annuels
+  ref: 'Tartova, D. (2025), « Teacher Value-Added in the Absence of Annual Test Scores: Utilizing Teacher Networks », document de travail, École d''économie de Paris, 24 février 2025.'
+  lien: http://desislavatartova.github.io/pdf/Network_TVA_Desislava_Tartova.pdf
+  sujets:
+  - formation
+  type: étude causale
+  statut: vérifié
+  resume: 'Nouvelle méthode pour mesurer la valeur ajoutée des enseignants là où les élèves ne passent pas de test chaque année : elle compare les résultats d''un même élève entre matières et s''appuie sur les « réseaux » d''enseignants. Validée sur les données de New York. Appliquée aux collèges français : un enseignant un écart-type plus efficace que ses collègues du même établissement fait gagner 0,10 écart-type en maths et 0,07 en français. Limite : document de travail ; l''effet mesuré à l''intérieur des établissements n''est pas directement comparable aux 0,1 à 0,2 écart-type souvent cités pour les États-Unis.'
+  cle: Dans les collèges français, un enseignant un écart-type plus efficace que ses collègues du même établissement fait gagner 0,10 écart-type en maths et 0,07 en français (Tartova, 2025, document de travail).
+  propositions: []
