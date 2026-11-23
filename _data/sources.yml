@@ -1518,7 +1518,7 @@
   sujets: [formation]
   type: étude causale
   statut: vérifié
-  resume: "Première évaluation des groupes de français et de maths mis en place en 6e et 5e à la rentrée 2024 (« choc des savoirs »), sur un échantillon représentatif de 1 500 collèges publics. 94 % des collèges ont changé leur organisation, mais de façons très diverses : 21 % en groupes hétérogènes, 50 % en groupes selon le profil scolaire des élèves. Méthode : différences de différences sur les évaluations nationales de début de 4e, en comparant la première cohorte exposée aux cohortes précédentes et aux collèges sans regroupement. Résultat : aucun effet significatif en français ni en maths, quel que soit le type de groupe, y compris selon le niveau initial et le sexe des élèves. Les groupes ont pourtant réduit les effectifs presque partout, et une partie des collèges a supprimé de l'accompagnement personnalisé ou des options pour les financer. Limite : premiers résultats, sur une seule cohorte."
+  resume: "Première évaluation des groupes de français et de maths mis en place en 6e et 5e à la rentrée 2024 (« choc des savoirs »), sur un échantillon représentatif de 1 500 collèges publics. 94 % des collèges ont changé leur organisation, mais de façons très diverses : 21 % en groupes hétérogènes, 50 % en groupes selon le profil scolaire des élèves. Méthode : différences de différences sur les évaluations nationales de début de 4e, en comparant la première cohorte exposée aux cohortes précédentes et aux collèges sans regroupement. Résultat : aucun effet significatif en français ni en maths, quel que soit le type de groupe, y compris selon le niveau initial et le sexe des élèves. Les groupes ont pourtant réduit les effectifs presque partout, et une partie des collèges a supprimé de l'accompagnement personnalisé ou des options pour les financer. Les groupes étaient confiés aux professeurs du collège, constitués selon les besoins qu'ils identifiaient, sans formation supplémentaire prévue par la réforme. Ce résultat ne contredit pas la littérature, qui trouve des gains sous conditions : groupes temporaires et souples au sein de la classe (0,19 à 0,30 écart-type, Steenbergen-Hu et al., 2016), enseignants formés à adapter leur cours, mêmes programmes pour tous ; les classes séparées par niveau n'apportent presque rien (EEF, 2021). La réforme de 2024 imposait un modèle uniforme à tous les collèges. Limite : premiers résultats, sur une seule cohorte."
   cle: "Les groupes de besoins généralisés en 6e et 5e en 2024 n'ont eu aucun effet mesurable sur les résultats en français et en maths à l'entrée en 4e (DEPP, document de travail 2026-E17)."
 - id: etat-ecole-2026
   titre: "DEPP, L'état de l'École 2026 : salaires et formation des professeurs, diplômes"
@@ -1637,3 +1637,32 @@
   statut: vérifié
   resume: "879 000 contrats d'apprentissage en 2024, contre 306 000 en 2017. Coût public en 2023 : environ 15 Md€, soit 14 700 € par apprenti (périmètre plus étroit que les 24,1 Md€ de l'OFCE). Au niveau CAP, 63 % des apprentis sortis en 2021 sont en emploi 18 mois après, contre 36 % des élèves sortis de la voie scolaire ; l'avantage se réduit nettement au niveau master. Limite : comparaison descriptive, pas un effet causal."
   cle: "Au niveau CAP, 63 % des apprentis sont en emploi 18 mois après leur sortie, contre 36 % des élèves de la voie scolaire (DG Trésor, Trésor-Éco n° 376, 2025)."
+
+# ---- Autres propositions publiées (information, rattachées au sujet qu'elles traitent ; ce ne sont pas des positions du GT)
+- id: montaigne-2026-education
+  titre: "Autre proposition : Institut Montaigne (2026), moins de postes dans le secondaire pour mieux payer les professeurs des écoles"
+  ref: "Institut Montaigne (2026), « Éducation : instruire, émanciper, réenchanter », Les Repères de Montaigne (présidentielle 2027), octobre 2026."
+  lien: https://www.institutmontaigne.org/npp-admin/uploads/notes/education-les-reperes-de-montaigne-6abb7e755ada4270535619.pdf
+  sujets: [inegalites]
+  type: autre proposition
+  statut: vérifié
+  resume: "Priorité à la « stabilisation » : moratoire sur les réformes de structure dès 2027 (sept ministres de l'Éducation depuis 2022). Objectif : revenir dans les dix premiers pays de PISA ; l'Institut estime que +25 points à PISA vaudraient +3 points de PIB, près de 100 Md€ (horizon non précisé). Usage de la baisse démographique (1,7 million d'élèves de moins en 2035) : ne pas remplacer 32 000 départs dans le secondaire (un sur cinq) pour financer +300 € net par mois aux professeurs des écoles débutants (1,2 Md€ en 2032) et 13 élèves par enseignant en cycle 2."
+  cle: "L'Institut Montaigne propose de ne pas remplacer 32 000 départs dans le secondaire pour payer 300 € net de plus par mois aux professeurs des écoles débutants (Repères de Montaigne, 2026)."
+- id: avantgarde-2026-education
+  titre: "Autre proposition : Institut Avant-garde (2026), garder les moyens et réduire la taille des classes"
+  ref: "Institut Avant-garde (2026), « L'ajustement sans les larmes », chapitre 7 « Éducation », juin 2026."
+  lien: https://www.institutavantgarde.fr/wp-content/uploads/2026/06/IAG_Lajustement_sans_les_larmes_CHAP7.pdf
+  sujets: [inegalites]
+  type: autre proposition
+  statut: vérifié
+  resume: "Refuse une baisse « mécanique » de la dépense malgré la baisse du nombre d'élèves et reprend les chiffrages de l'IPP (Charousset et al., 2025). Mesures chiffrées : baisse de la taille des classes (2,9 Md€), alignement des professeurs des écoles sur la grille des certifiés (1,5 Md€), tutorat étudiant au primaire. À l'inverse de l'iFRAP : réduire le financement public du privé sous contrat, avec des critères de mixité sociale (3,5 Md€ d'économies)."
+  cle: "L'Institut Avant-garde propose de garder les moyens pour réduire la taille des classes (2,9 Md€) et de réduire le financement du privé sous contrat (3,5 Md€ d'économies) (2026)."
+- id: ifrap-2026-education
+  titre: "Autre proposition : Fondation iFRAP (2026), autonomie des établissements et plus de privé sous contrat"
+  ref: "Fondation iFRAP (2026), « Éducation : comment redonner un vrai choix », La Revue de la Fondation iFRAP n° 281, septembre 2026."
+  lien: https://www.ifrap.org/sites/default/files/documents/2026-10/etude_ifrap_ecole.pdf
+  sujets: [formation]
+  type: autre proposition
+  statut: vérifié
+  resume: "Faire passer le privé sous contrat de 17 % à 25 % des élèves, pour 3,8 Md€ d'économies de fonctionnement selon la Fondation (6,4 Md€ à 30 %). Supprimer la règle des 80/20 entre public et privé ; rendre les établissements publics autonomes, financés par un forfait par élève ; confier le recrutement au chef d'établissement et mettre fin au concours."
+  cle: "La Fondation iFRAP propose des établissements publics autonomes financés par élève, qui recrutent eux-mêmes, et 25 % d'élèves dans le privé sous contrat (2026)."

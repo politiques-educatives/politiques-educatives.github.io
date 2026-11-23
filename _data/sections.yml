@@ -32,6 +32,7 @@ themes:
     titre: "Le temps des professeurs"
     bref:   # note 1, En bref (« Le constat », « La proposition ») et partie 1
       - "**Le constat.** En France, tout ce qui n'est pas une heure de cours se paie en heures supplémentaires ou ne se fait pas. Le tutorat, le second professeur principal ou les groupes de besoins butent sur ce verrou."
+      - {source: depp-groupes-besoins-2026}   # fiche ajoutée le 23/11/2026 (veille du manuel)
       - "La différence tient moins au volume qu'à la règle : la France compte des heures de cours, l'Angleterre et l'Écosse un temps de travail total."
       - "**La proposition.** Un service annuel, avec un plafond d'heures de cours et une part réservée, inscrite dans l'emploi du temps, au tutorat et au travail d'équipe ; une dotation selon les élèves et leurs besoins ; une mesure régulière de la charge réelle, car un plafond seul ne suffit pas."
     chiffre: {graphique: heures}
@@ -49,7 +50,7 @@ themes:
     chiffre: {source: cdc-inspecteurs-2022}
     propositions: [gouv-recruter, gouv-visite]
     livret: ["P06", "64"]
-    sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022, briole-maurin-2024]
+    sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022, briole-maurin-2024, ifrap-2026-education]
     dossiers: [01-england-governance-ors]
     notes: [EDUCATION-note2-gouvernance-etablissement.pdf]
   - id: evaluer
@@ -75,7 +76,7 @@ themes:
     chiffre: {graphique: ecole-projections}
     graphiques_plus: [ecole-projection-dep, ecole-effectifs-dep, ecole-prive-social, ecole-ips, ecole-brevet, ecole-classes, ecole-pisa]
     livret: ["66"]
-    sources: [lemonde-hs-2026-ecole, depp-projections-2035, depp-effectifs-ecoles, depp-geographie-ecole-2026, cae-93-dintilhac-2026, depp-dedoublement-2026, ipp-taille-classes-2025, senat-plf2027-enseignement, depp-ni-26-42-depense, depp-6e-2025]
+    sources: [lemonde-hs-2026-ecole, depp-projections-2035, depp-effectifs-ecoles, depp-geographie-ecole-2026, cae-93-dintilhac-2026, depp-dedoublement-2026, ipp-taille-classes-2025, senat-plf2027-enseignement, depp-ni-26-42-depense, depp-6e-2025, montaigne-2026-education, avantgarde-2026-education]
   reste:
     sources: [guadalupe-2022, hendren-2020, estonie-pisa-2025]   # pourquoi l'école compte pour la croissance (audit du 23/11/2026)
 
