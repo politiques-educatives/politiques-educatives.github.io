@@ -433,7 +433,7 @@
   sujets: [emploi]
   type: étude causale
   statut: vérifié
-  resume: "Données administratives françaises sur les embauches. Entre novembre 2022 et mars 2026, les embauches en CDI des 21-29 ans reculent de 28,3 % dans le cinquième des métiers les plus exposés à l'IA, contre 7,5 % dans le cinquième le moins exposé, sans vague de licenciements. Une partie de la baisse vient du télétravail. Les utilisatrices intensives d'IA générative embauchent moins de jeunes en CDI depuis 2023 (résultat descriptif selon les auteurs)."
+  resume: "Données administratives françaises sur les embauches. Entre novembre 2022 et mars 2026, les embauches en CDI des 21-29 ans reculent de 28,3 % dans le cinquième des métiers les plus exposés à l'IA, contre 7,5 % dans le cinquième le moins exposé, sans vague de licenciements. Le télétravail et le resserrement monétaire ont pu jouer sur les mêmes métiers. Les utilisatrices intensives d'IA générative embauchent moins de jeunes en CDI depuis 2023 (résultat descriptif selon les auteurs)."
   cle: "Les embauches en CDI des 21-29 ans ont baissé de 28,3 % dans les métiers les plus exposés à l'IA, contre 7,5 % dans les moins exposés (LIFT, 2026)."
   propositions: [ia-observatoire, orient-debouches]
   dossier: 06-index-ia-formations
@@ -1193,7 +1193,7 @@
   type: étude causale
   statut: vérifié
   resume: "Brevets de 1,2 million d'inventeurs américains appariés aux données fiscales de leurs parents. Les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs que ceux de familles sous le revenu médian, et l'écart persiste à résultats en maths égaux dans l'enfance. Les enfants qui grandissent dans une zone riche en inventeurs, ou dont l'entourage innove dans un domaine, ont plus de chances d'innover dans ce même domaine, effet propre au sexe : l'exposition compte, pas seulement le talent (les « Einstein perdus »). Limite : données américaines."
-  cle: "Les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs que ceux sous le revenu médian, même à niveau en maths égal (Bell et al., 2019)."
+  cle: "Les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs que ceux sous le revenu médian, et l'écart reste large à résultats en maths comparables (Bell et al., 2019)."
   propositions: [ee-rencontres-pros]
   dossier: ""
 - id: guadalupe-2022

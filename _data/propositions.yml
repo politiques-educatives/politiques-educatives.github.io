@@ -52,7 +52,7 @@
   explication: "Une enquête annuelle sur le temps de travail des enseignants, comme en Angleterre, pour que l'annualisation ne fasse pas glisser la charge, comme en Écosse. Un plafond seul ne suffit pas."
   preuves:
     - "En Écosse, les enseignants déclarent 46 heures de travail sur une semaine type, 11 de plus que leur semaine contractuelle (UWS pour l'EIS, 2024)."
-    - "Un enseignant anglais de collège déclarait 49,3 heures de travail par semaine, contre environ 41 dans l'OCDE (TALIS 2018) ; l'enquête anglaise de 2025 donne 50,1 heures (DfE, 2025)."
+    - "Un enseignant anglais de collège à temps plein déclarait 49,3 heures de travail par semaine, contre environ 41 dans l'OCDE (TALIS 2018) ; l'enquête anglaise de 2025 donne 50,1 heures (DfE, 2025)."
   note: EDUCATION-note1-allocation-heures-enseignement.pdf
   statut: proposition
   maj_le: 2026-11-18
@@ -107,11 +107,11 @@
 - id: orient-4e
   theme: Orientation et bac
   titre: "Un référent d'orientation humain pour les élèves défavorisés et ruraux, et le tuteur IA pour tous"
-  explication: "De la 4e à la terminale, les élèves défavorisés et ruraux (environ 1,1 million de collégiens) voient chaque trimestre un référent d'orientation humain, enseignant volontaire, formé aux filières et rémunéré ; tous les élèves ont accès au volet orientation du tuteur IA public. Le ciblage suit les preuves : en Allemagne, un mentorat par des étudiants a amélioré de 0,56 écart-type les perspectives des collégiens défavorisés, sans effet chez les autres (Resnjanskij et al., 2024). Sans heures ni formation, le second professeur principal de terminale n'a pas fonctionné, et seul un tiers des lycées a tenu les deux semaines d'orientation (Cnesco, 2018). Le coût reste à chiffrer."
+  explication: "De la 4e à la terminale, les élèves défavorisés et ruraux (environ 1,1 million de collégiens) voient chaque trimestre un référent d'orientation humain, enseignant volontaire, formé aux filières et rémunéré ; tous les élèves ont accès au volet orientation du tuteur IA public. Le ciblage suit les preuves : en Allemagne, un mentorat par des étudiants a amélioré de 0,56 écart-type les perspectives des collégiens défavorisés, sans effet chez les autres (Resnjanskij et al., 2024). En 2018, 89 % des lycées avaient nommé un second professeur principal en terminale, mais seul un tiers avait tenu les deux semaines d'orientation (Cnesco, 2018). Le coût reste à chiffrer."
   preuves:
     - "Un tiers des lycées seulement a tenu les deux semaines d'orientation (Cnesco, 2018)."
-    - "En Allemagne, un mentorat par des étudiants a amélioré de 0,56 écart-type un indice combinant notes en maths, patience et compétences sociales, et orientation vers l'emploi chez les collégiens défavorisés, mesuré un an après le début du programme, sans effet chez les élèves plus favorisés (Resnjanskij et al., JPE, 2024 ; mentorat sur un à deux ans, à vérifier)."
-    - "En fin de 3e, 38,6 % des élèves du public entrent en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale ; DEPP, 2025)."
+    - "En Allemagne, un mentorat par des étudiants a amélioré de 0,56 écart-type un indice combinant notes en maths, patience et compétences sociales, et orientation vers l'emploi chez les collégiens défavorisés, mesuré un an après le début du programme, sans effet chez les élèves plus favorisés (Resnjanskij et al., JPE, 2024 ; mentorat prévu sur environ deux ans)."
+    - "En fin de 3e, 38,6 % des élèves du public sont orientés en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale et technologique ; DGESCO, 2025)."
     - "Coût : à chiffrer."
   note: EDUCATION-note3-orienter.pdf
   statut: à chiffrer
@@ -150,9 +150,9 @@
   titre: "Un bac qui départage : épreuves nationales anonymes et admissions conditionnelles"
   explication: "Réduire la part du contrôle continu et faire peser les épreuves terminales de spécialité, corrigées anonymement, dans l'admission. Une proposition d'admission en licence est confirmée en juillet si l'élève atteint une note fixée par la formation dans les spécialités utiles, comme les offres conditionnelles britanniques. Ceux qui n'atteignent pas la barre ont une année préparatoire ou une place en BTS et en BUT."
   preuves:
-    - "En 2025, 91,8 % des candidats ont été reçus au bac, 96,4 % dans la voie générale, et 58,8 % avec mention (DEPP, 2025)."
+    - "En 2025, 91,6 % des candidats ont été reçus au bac, 96,4 % dans la voie générale, et 58,8 % avec mention (DEPP, 2025)."
     - "Parmi les bacheliers 2018 inscrits en licence, 46,9 % l'ont obtenue en trois ou quatre ans ; parmi ceux de 2020, 40,3 % (SIES, 2023 et 2025)."
-    - "Le passage en deuxième année atteint 70 % pour les bacheliers mention très bien, contre 49,1 % pour l'ensemble des néo-bacheliers en 2024 : le bac contient l'information, mais il ne s'en sert pas."
+    - "Parmi les bacheliers 2020 inscrits en licence, 70 % des mentions très bien l'ont obtenue en 3 ou 4 ans, contre 40 % pour l'ensemble (SIES, 2025) : le bac contient l'information, mais il ne s'en sert pas."
   note: EDUCATION-note3-orienter.pdf
   statut: proposition
   maj_le: 2026-11-18
@@ -223,10 +223,10 @@
 - id: ia-observatoire
   theme: IA, jeunes et emploi
   titre: "Publier un suivi annuel des postes de débutants face à l'intelligence artificielle"
-  explication: "L'Observatoire de France Travail publie chaque année les secteurs et territoires où les postes d'entrée reculent face à l'IA, sur le modèle proposé au Royaume-Uni (Milburn, 2026, p. 72-73). Sa première étude du 17 novembre 2026 auprès de 16 000 employeurs n'isole pas les débutants. Or, entre novembre 2022 et mars 2026, les embauches en CDI des 21-29 ans ont baissé de 28,3 % dans le cinquième des métiers les plus exposés à l'IA, en partie à cause du télétravail (LIFT, 2026)."
+  explication: "L'Observatoire de France Travail publie chaque année les secteurs et territoires où les postes d'entrée reculent face à l'IA, sur le modèle proposé au Royaume-Uni (Milburn, 2026, p. 72-73). Sa première étude du 17 novembre 2026 auprès de 16 000 employeurs n'isole pas les débutants. Or, entre novembre 2022 et mars 2026, les embauches en CDI des 21-29 ans ont baissé de 28,3 % dans le cinquième des métiers les plus exposés à l'IA, une baisse que l'IA n'explique pas seule, car le resserrement monétaire, la correction du secteur technologique et le télétravail touchent les mêmes métiers (Palladino et al., Banque de France, 2026)."
   preuves:
     - "Observatoire de l'IA et des jeunes, rapport annuel sur les voies d'entrée qui se ferment, par secteur et par territoire (Milburn, 2026, p. 72-73)."
-    - "Embauches en CDI des 21-29 ans : -28,3 % dans le cinquième des métiers les plus exposés à l'IA entre novembre 2022 et mars 2026, une baisse dont une partie vient du télétravail (LIFT, 2026)."
+    - "Embauches en CDI des 21-29 ans : -28,3 % dans le cinquième des métiers les plus exposés à l'IA entre novembre 2022 et mars 2026, une baisse que l'IA n'explique pas seule, le télétravail et le resserrement monétaire touchant les mêmes métiers (Palladino et al., Banque de France, 2026)."
   statut: proposition
   maj_le: 2026-11-22
   sujets: [emploi]
@@ -235,9 +235,9 @@
 - id: ia-bases
   theme: IA, jeunes et emploi
   titre: "Maintenir les mathématiques jusqu'en terminale vers le supérieur et encadrer l'accès libre à l'IA"
-  explication: "Tout élève visant le supérieur suit des mathématiques jusqu'en terminale, contre 44,8 % aujourd'hui (DEPP, 2026). Les heures sont prises sur les dotations ou assurées en heures supplémentaires par des enseignants volontaires, sans heure imposée. L'IA en accès libre n'est ouverte qu'après l'acquisition des fondamentaux, car elle fait perdre 17 % à l'examen passé sans elle (Bastani et al., 2025)."
+  explication: "Tout élève visant le supérieur suit des mathématiques jusqu'en terminale, alors qu'aujourd'hui 44,8 % des élèves de terminale générale suivent la spécialité mathématiques et 13,9 % l'option mathématiques complémentaires (DEPP, 2026). Les heures sont prises sur les dotations ou assurées en heures supplémentaires par des enseignants volontaires, sans heure imposée. L'IA en accès libre n'est ouverte qu'après l'acquisition des fondamentaux, car elle fait perdre 17 % à l'examen passé sans elle (Bastani et al., 2025)."
   preuves:
-    - "Les mathématiques sont suivies par 44,8 % des élèves de terminale aujourd'hui (DEPP, 2026)."
+    - "La spécialité mathématiques est suivie par 44,8 % des élèves de terminale générale, et l'option mathématiques complémentaires par 13,9 % (DEPP, 2026)."
     - "L'IA en accès libre fait perdre 17 % à l'examen passé sans elle (Bastani et al., 2025)."
     - "À 15 ans, un tiers des élèves est en difficulté de lecture, contre 15 % en 2000 (DEPP, note d'information 26.40, septembre 2026)."
   statut: à chiffrer
@@ -262,9 +262,9 @@
 - id: tuteur-public
   theme: Tuteur IA
   titre: "Déployer un tuteur IA public et vocal qui guide l'élève sans donner la solution"
-  explication: "Plutôt que des cours d'IA, l'État commande, pour tous les élèves, un tuteur vocal à indices gradués qui ne livre jamais la solution avant une tentative, avec un volet orientation de la 6e à la terminale. Ces tuteurs structurés améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025), quand l'IA en accès libre réduit de 17 à 24 % les notes aux examens sans elle (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026). Il est acheté en quatre lots, payés en partie aux résultats."
+  explication: "Plutôt que des cours d'IA, l'État commande, pour tous les élèves, un tuteur vocal à indices gradués qui ne livre jamais la solution avant une tentative, avec un volet orientation de la 6e à la terminale. Dans des programmes encadrés, ces tuteurs ont amélioré les résultats d'environ 0,3 écart-type au Nigeria et au Ghana (De Simone et al., 2025 ; Henkel et al., 2024), davantage chez des étudiants de physique sur un test immédiat (Kestin et al., 2025), quand l'IA en accès libre réduit de 17 à 24 % les notes aux examens sans elle (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026). Il est acheté en quatre lots, payés en partie aux résultats."
   preuves:
-    - "Les tuteurs structurés qui guident sans donner la réponse améliorent les résultats de 0,3 à 0,6 écart-type (De Simone et al., 2025 ; Henkel et al., 2024 ; Kestin et al., 2025)."
+    - "Dans des programmes encadrés, les tuteurs qui guident sans donner la réponse ont amélioré les résultats d'environ 0,3 écart-type au Nigeria et au Ghana (De Simone et al., 2025 ; Henkel et al., 2024). Sans programme encadré, la personnalisation par IA n'a rien apporté en Chine rurale (Dang et Do, 2026)."
     - "L'accès libre à l'IA fait baisser les notes aux examens passés sans elle de 17 à 24 % (Bastani et al., 2025 ; Strömberg, Lei et Wu, 2026)."
   note: ""
   statut: proposition
@@ -490,10 +490,10 @@
 - id: lfi-budget-temps
   theme: Temps des professeurs
   titre: "Protéger le temps des fondamentaux et confier les tâches administratives aux personnels de soutien"
-  explication: "Au collège, les enseignants déclarent 37,2 heures de travail hebdomadaire dont 19,0 heures de cours (TALIS 2024), alors qu'à Chicago, une double heure d'algèbre a amélioré les résultats des élèves en difficulté (Cortes, Goodman et Nomi, 2015). Inspirée des propositions de Joachim Le Floch-Imad, la mesure impose que toute nouvelle certification ou « éducation à » indique l'heure qu'elle remplace, hors français et mathématiques, et transfère les tâches administratives aux personnels de soutien. Aucune heure de cours n'est imposée en plus aux enseignants, et le transfert devra être chiffré en postes de soutien."
+  explication: "Au collège, les enseignants à temps plein déclarent 38,7 heures de travail par semaine, contre 39 heures en moyenne dans l'UE (TALIS 2024), alors qu'à Chicago, une double heure d'algèbre a amélioré les résultats des élèves en difficulté (Cortes, Goodman et Nomi, 2015). Inspirée des propositions de Joachim Le Floch-Imad, la mesure impose que toute nouvelle certification ou « éducation à » indique l'heure qu'elle remplace, hors français et mathématiques, et transfère les tâches administratives aux personnels de soutien. Aucune heure de cours n'est imposée en plus aux enseignants, et le transfert devra être chiffré en postes de soutien."
   preuves:
     - "Chicago, double heure d'algèbre pour les élèves sous la médiane : +0,15 écart-type à l'ACT et +8,6 points d'entrée dans le supérieur (Cortes, Goodman et Nomi, 2015, déjà dans research/02)"
-    - "Collège : 37,2 h de travail déclarées par semaine, dont 19,0 h de cours, contre 38,5 h dans l'OCDE (TALIS 2024, vérifié dans etablissement-verification.md)"
+    - "Collège : 38,7 h de travail déclarées par semaine par les enseignants à temps plein, contre 39 h en moyenne dans l'UE (TALIS 2024)"
     - "Coût : à budget constant pour la règle de budget-temps ; transfert des tâches à chiffrer (temps de secrétariat et d'assistants d'éducation)"
   statut: proposition
   maj_le: 2026-11-22
@@ -664,7 +664,7 @@
   titre: "Un maître d'apprentissage nommé, formé et reconnu pour chaque apprenti"
   explication: "Dans l'aide à l'embauche d'apprentis maintenue du CAP à bac+2, une part tutorale de 100 € par mois pendant 12 mois n'est versée que si le contrat nomme un maître d'apprentissage formé (une journée), dont au moins la moitié lui revient en prime. La priorité va aux salariés de 55 ans et plus. Mesure portée par le ministère du Travail, sans dépense nouvelle pour l'État, sous réserve que l'aide reste hors de N°82 (arbitrage du 22/11/2026)."
   preuves:
-    - "Aux États-Unis, de courtes rencontres structurées entre collègues ont accru le chiffre d'affaires par appel de 24 %, contre 13 % pour une prime (Sandvik et al., QJE 2020)."
+    - "Aux États-Unis, de courtes rencontres structurées entre collègues ont accru les ventes de plus de 15 %, un effet encore visible 20 semaines après, alors qu'une prime liée à la production commune n'a eu qu'un effet passager (Sandvik et al., QJE 2020)."
     - "Le contrat de génération a atteint 20 % de son objectif, avec des binômes souvent « purement statistiques » (Cour des comptes, 2016, p. 61-71)."
     - "Coût : nul pour l'État (au moins 415 M€ par an d'aide existante rendus conditionnels) ; formation des tuteurs 16 M€ par an dans les plafonds des OPCO (calcul GT)."
   note: EDUCATION-note-ecole-entreprise.pdf
@@ -708,7 +708,7 @@
   preuves:
     - "Avec un assistant d'IA, la productivité des travailleurs les moins expérimentés a crû de 34 %, contre 14 % en moyenne (Brynjolfsson, Li et Raymond, 2025 ; étude sur l'outil, pas sur une formation)."
     - "L'IA utilisée sans cadre pédagogique réduit de 17 % la performance sans IA (Bastani et al., 2025), d'où l'épreuve en deux temps."
-    - "Chez 133 avocats suivis trois mois, l'IA améliore le travail de tous pendant l'usage, mais seuls les expérimentés font mieux ensuite sans l'outil (+0,45 écart-type) ; les débutants n'en gardent rien en moyenne (Autor et al., 2026) : d'où l'apprentissage du métier d'abord."
+    - "Chez 133 avocats en brevets suivis trois mois, l'IA améliore le travail de tous pendant l'usage, mais seuls les expérimentés font mieux ensuite sans l'outil (+0,45 écart-type) ; les débutants n'en gardent rien en moyenne (Autor et al., 2026) : d'où l'apprentissage du métier d'abord."
     - "En France, 69 % des salariés ne sont ni encouragés, ni équipés, ni formés à l'IA par leur employeur, contre 44 % aux États-Unis (Bergeaud et Bunel, LIFT, 2026) : l'école est le seul lieu sûr de cet apprentissage."
     - "Coût : à chiffrer (formation continue, licences des outils, attestation 2027)."
   note: EDUCATION-note-ia-jeunes-v7.pdf

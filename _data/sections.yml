@@ -132,8 +132,8 @@ themes:
       - {amorce: "Voies de réussite", texte: "Il n'y a pas besoin d'attendre de longues années et une pile de diplômes pour entrer dans la vie active : orientons mieux, plus tôt, et valorisons toutes les voies qui mènent à un métier.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
     titre: "Comment mieux orienter, et dès quand ?"
     bref:   # note 3, partie 2
-      - "La première décision tombe en fin de 3e : 38,6 % des élèves du public entrent en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale ; DEPP, 2025)."
-      - "Le second professeur principal de terminale, sans heures ni formation, n'a pas marché : un tiers des lycées seulement a tenu les deux semaines d'orientation (Cnesco, 2018)."
+      - "La première décision tombe en fin de 3e : 38,6 % des élèves du public sont orientés en voie professionnelle, et les premiers vœux y sont les moins souvent satisfaits (58,1 %, contre 87 % en seconde générale et technologique ; DGESCO, 2025)."
+      - "Les mesures de 2018 ont été appliquées de façon inégale : 89 % des lycées ont nommé un second professeur principal en terminale, mais un tiers seulement a tenu les deux semaines d'orientation (Cnesco, 2018)."
       - {source: goux-2017}
     chiffre: {graphique: voeux}
     graphiques_plus: [boursiers]
@@ -145,8 +145,8 @@ themes:
   - id: bac
     titre: "Comment rendre au bac et à la licence leur valeur ?"
     bref:   # note 3, En bref ; fiche orient-bac (preuves) ; bloc « Masters »
-      - "Plus d'un étudiant sur deux inscrit en licence ne l'a pas obtenue au bout de quatre ans. Le baccalauréat, obtenu par 91,8 % des candidats, ne dit plus aux élèves ni aux formations ce qu'ils savent."
-      - "Le passage en deuxième année atteint 70 % pour les bacheliers mention très bien, contre 49,1 % pour l'ensemble des néo-bacheliers en 2024 : le bac contient l'information, mais il ne s'en sert pas."
+      - "Plus d'un étudiant sur deux inscrit en licence ne l'a pas obtenue au bout de quatre ans. Le baccalauréat, obtenu par 91,6 % des candidats, ne dit plus aux élèves ni aux formations ce qu'ils savent."
+      - "Parmi les bacheliers 2020 inscrits en licence, 70 % des mentions très bien l'ont obtenue en 3 ou 4 ans, contre 40 % pour l'ensemble (SIES, 2025) : le bac contient l'information, mais il ne s'en sert pas."
       - "Le master sert souvent de filtre plus que de compétence : il trie par origine sociale, retarde de deux ans l'entrée dans la vie active, et une licence professionnelle insère mieux."
     chiffre: {graphique: licence-bac}
     graphiques_plus: [filtre]

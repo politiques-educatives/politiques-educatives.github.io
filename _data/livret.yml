@@ -32,7 +32,7 @@
   resume: "Réduire les effectifs des classes de maternelle et de primaire."
   page: 22
   eval: convergent
-  apport: "Un élève de moins par classe améliore les résultats de 1,62 % d'écart-type, et le dédoublement en primaire s'autofinance à long terme (CAE, Focus n° 113, 2025) ; la baisse démographique dégagerait au moins 5 Md€ d'économies par an à l'horizon 2035 (CAE, Note n° 93, 2026)."
+  apport: "Un élève de moins par classe améliore les résultats de 1,62 % d'écart-type, et le dédoublement en primaire s'autofinance à long terme (CAE, Focus n° 113, 2025), mais pour la première cohorte de CP en REP+, l'écart gagné ne se voit plus en début de 6e (Charpentier, DEPP, 2026) ; la baisse démographique dégagerait au moins 5 Md€ d'économies par an à l'horizon 2035 (CAE, Note n° 93, 2026)."
   cartes: []
 - n: "67"
   sujets: [ecrans]
@@ -40,7 +40,7 @@
   resume: "Généraliser la lecture dès la maternelle, organiser des tests de décodage pour repérer tôt les élèves en difficulté et viser la maîtrise de 2 500 mots à l'entrée au CP."
   page: 22
   eval: convergent
-  apport: "Constat DEPP 2026 : dictée de CE1 à 69,9 % de réussite contre 72,4 % en 2025, -7,2 points depuis 2019 ; un tiers des élèves de 15 ans en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40). La fiche du GT prolonge cet objectif au lycée : des mathématiques jusqu'en terminale pour tout élève qui vise le supérieur, et l'IA en accès libre seulement après l'acquisition des fondamentaux. Les pays qui ont le plus progressé ont misé sur l'enseignement explicite avec des supports structurés et des manuels labellisés : généralisé en Angleterre, un programme structuré de lecture a relevé les résultats de 0,08 écart-type en un à deux ans (Machin et McNally, 2008, cités par Dintilhac, Houzel et Jaravel, CAE, 2026)."
+  apport: "Constat DEPP 2026 : dictée de CE1 à 69,9 % de réussite contre 72,4 % en 2025, -7,2 points depuis 2019 ; un tiers des élèves de 15 ans en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40). La fiche du GT prolonge cet objectif au lycée : des mathématiques jusqu'en terminale pour tout élève qui vise le supérieur, et l'IA en accès libre seulement après l'acquisition des fondamentaux. Les pays qui ont le plus progressé ont misé sur l'enseignement explicite avec des supports structurés et des manuels labellisés : en Angleterre, un programme structuré de lecture testé dans environ 400 écoles avant sa généralisation a relevé les résultats en lecture de 0,06 à 0,09 écart-type à 11 ans (Machin et McNally, 2008, cités par Dintilhac, Houzel et Jaravel, CAE, 2026)."
   cartes: [ia-bases]
 - n: "68"
   sujets: [ecrans]
@@ -168,5 +168,5 @@
   resume: "Priorité 08 : former 100 000 ingénieurs chaque année."
   page: 5
   eval: à compléter
-  apport: "La Boussole montre les filières scientifiques et techniques et la réussite en licence selon les spécialités du bac. Le vivier dépend de l'exposition, pas seulement du talent : les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs, même à niveau en maths égal (Bell et al., 2019), et la France compterait 2,84 fois plus de docteurs chercheurs ou ingénieurs si les filles et les jeunes modestes innovaient autant que les garçons aisés (Guadalupe et al., CAE, 2022). Le vivier existe : la parité femmes-hommes dans l'accès à l'innovation porterait la croissance de la productivité du travail de 1 % à 1,8 % par an (Jaravel, 2023), et les stéréotypes écartent encore les filles des métiers scientifiques et industriels."
+  apport: "La Boussole montre les filières scientifiques et techniques et la réussite en licence selon les spécialités du bac. Le vivier dépend de l'exposition, pas seulement du talent : les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs que ceux des familles sous le revenu médian, et l'écart reste large à résultats en maths comparables (Bell et al., 2019), et la France compterait 2,84 fois plus de docteurs chercheurs ou ingénieurs si les filles et les jeunes modestes innovaient autant que les garçons aisés (Guadalupe et al., CAE, 2022). Le vivier existe : la parité femmes-hommes dans l'accès à l'innovation porterait la croissance de la productivité du travail de 1 % à 1,8 % par an (Jaravel, 2023), et les stéréotypes écartent encore les filles des métiers scientifiques et industriels."
   cartes: [orient-transparence]
