@@ -139,6 +139,7 @@ a.tocard{font-size:.8rem}
 .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font:600 .88rem system-ui,sans-serif;padding:8px 14px;border-radius:8px;margin:0 6px 8px 0}
 .btn2{background:#fff;color:var(--accent);border:1px solid var(--accent)}
 .bframe{width:100%;height:80vh;min-height:600px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.cfr{width:100%;height:900px;border:0;display:block;margin:6px 0 4px}
 .vr{font-size:.9rem;margin:6px 0}
 .lib li{margin-bottom:6px}.lib .meta{font:.8rem system-ui,sans-serif;color:var(--muted)}
 .c-nouveau{border-color:var(--nouv-fg)}.c-precise{border-color:var(--renf-fg)}.c-modifie{border-color:var(--contr-fg)}

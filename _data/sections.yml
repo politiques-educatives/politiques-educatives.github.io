@@ -13,18 +13,20 @@
 #                 {graphique: id}      la note d'un graphique de graphiques.yml
 #   chiffre   : « Le chiffre clé », un seul : {graphique: id} | {source: id} | {vp: clé} | {vp: carte} (capture de la carte des lycées pro)
 #   graphiques_plus : autres graphiques, montrés dans « Pour aller plus loin »
-#   carte     : faits de la carte internationale (_data/ailleurs.json) : theme (onglet de la carte), pays (pays sélectionné par « Voir sur la carte »), faits (ids, 2 à 4)
-#   ailleurs_sources : études étrangères de sources.yml montrées dans « Ce que font les autres pays » : {id, pays}
+#   ailleurs_sources : études étrangères de sources.yml, listées sous la carte de « Ce que font les autres pays » (bas du thème) : {id, pays}
 #   propositions : ids de propositions.yml (cartes dépliables, avec « Ailleurs : le cas le plus proche »)
 #   livret    : mesures du livret du programme (numéros) ; ajouts : ids de livret_ajouts.yml
 #   sources, dossiers (slugs de recherche.yml), notes (PDF de notes.yml ou politiques.yml), notes_generees (dossier), blocs (masters, comms, note_ia)
 #   voiepro / voiepro_plus : blocs de voie_pro.yml montrés dans la section / dans « Pour aller plus loin »
 #                 (portefeuille, indice, resultats, methode, batiment, limites, chine, donnees, carte)
+# Au niveau du thème, « ailleurs » : la dernière section, « Ce que font les autres pays » (depuis le 23/11/2026, à la place
+#   d'un bloc par section) : carte (onglets de la carte internationale montrés, dans l'ordre), pays (pays ouvert d'abord), intro.
 # « reste » : ce qui n'est rattaché à aucune section, montré replié en bas du thème (« Tout le reste du thème »).
 # Tout élément des fichiers de données qui n'est rattaché nulle part va aussi, automatiquement, dans « Tout le reste » de son thème.
 
 themes:
 - theme: ecole
+  ailleurs: {carte: [temps, gouvernance], pays: SCO, intro: "Temps et formation des professeurs, puis gouvernance des établissements."}
   sections:
   - id: temps
     titre: "Le temps des professeurs"
@@ -34,7 +36,6 @@ themes:
       - "**La proposition.** Un service annuel, avec un plafond d'heures de cours et une part réservée, inscrite dans l'emploi du temps, au tutorat et au travail d'équipe ; une dotation selon les élèves et leurs besoins ; une mesure régulière de la charge réelle, car un plafond seul ne suffit pas."
     chiffre: {graphique: heures}
     graphiques_plus: [formation]
-    carte: {theme: temps, pays: SCO, faits: [f16, f18, f11, f27]}
     propositions: [heures-service-annuel, heures-emploi-du-temps, heures-dotation, heures-charge, lfi-heures-dues, lfi-budget-temps, lfi-postes-difficiles]
     livret: ["65", "72", "71"]
     sources: [ocde-heures-2026, stpcd-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, nickow-2020, kraft-2024, guryan-2023, ntp-nfer, apfee, eef-setting, steenbergen-2016, duflo-2011]
@@ -46,7 +47,6 @@ themes:
       - "**Le constat.** Le chef d'établissement français est responsable des résultats sans tenir les leviers : il ne choisit pas ses enseignants, n'évalue pas leur pédagogie et ne fixe pas leur service. L'enseignant n'a plus d'inspection obligatoire après le milieu de sa carrière."
       - "L'autonomie a marché là où elle s'accompagnait d'une nouvelle direction et de résultats publiés ; seule, elle n'a rien changé."
     chiffre: {source: cdc-inspecteurs-2022}
-    carte: {theme: gouvernance, pays: ENG, faits: [f39, f40, f43, f46]}
     propositions: [gouv-recruter, gouv-visite]
     livret: ["P06", "64"]
     sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022]
@@ -58,7 +58,6 @@ themes:
       - "Depuis la loi de 2019 (premières évaluations en 2020-2021), chaque établissement s'auto-évalue puis reçoit une évaluation externe tous les cinq ans. La DEPP publie une valeur ajoutée par lycée (IVAL) depuis 1993 et par collège (IVAC) depuis 2022, limitée au bac et au brevet et sans rôle dans cette évaluation."
       - "Un échec à l'inspection a relevé les résultats des élèves de 0,12 écart-type en maths en primaire (Hussain, 2015) et d'environ 0,1 dans le secondaire (Allen et Burgess, 2012), sous l'ancien système de notes."
     chiffre: {source: evaluation-etablissements-fr}
-    carte: {theme: gouvernance, pays: ENG, faits: [f41, f141, f142, f138]}
     propositions: [gouv-evaluation]
     sources: [ofsted-2025, evaluation-etablissements-fr]
     dossiers: [03-inspection-evaluation]
@@ -80,6 +79,7 @@ themes:
   reste: {}
 
 - theme: handicap
+  ailleurs: {carte: [handicap], pays: IT, intro: "Comment l'Italie, l'Angleterre, la Finlande, le Portugal, les Pays-Bas, le Québec et New York scolarisent les élèves handicapés."}
   sections:
   - id: handicap
     titre: "Le handicap à l'école"
@@ -124,6 +124,7 @@ themes:
     livret: ["73", "27"]
 
 - theme: orientation
+  ailleurs: {carte: [orientation, superieur, apprentissage], pays: ENG, intro: "Orientation, secondes chances dans le supérieur, apprentissage et premier emploi."}
   sections:
   - id: orienter
     edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
@@ -135,7 +136,6 @@ themes:
       - {source: goux-2017}
     chiffre: {graphique: voeux}
     graphiques_plus: [boursiers]
-    carte: {theme: orientation, pays: ENG, faits: [f54, f56, f58, f175]}
     propositions: [orient-4e, orient-parents, orient-gatsby, ee-rencontres-pros]
     livret: ["75"]
     sources: [depp-reperes-orientation-2025, goux-2017, avvisati-2014, breda-2023, gatsby, berlioux-2020, resnjanskij-2024, cnesco-2018-orientation]
@@ -149,7 +149,6 @@ themes:
       - "Le master sert souvent de filtre plus que de compétence : il trie par origine sociale, retarde de deux ans l'entrée dans la vie active, et une licence professionnelle insère mieux."
     chiffre: {graphique: licence-bac}
     graphiques_plus: [filtre]
-    carte: {theme: superieur, pays: UK, faits: [f76, f182, f183, f75]}
     propositions: [orient-bac, ia-master, tdv-bac-plus-tot, tdv-bonus-licence, tdv-concours-bac3, tdv-doctorat-shs]
     livret: ["76"]
     ajouts: [a-bac, a-master]
@@ -168,7 +167,6 @@ themes:
       - {source: hastings-2015}
     chiffre: {graphique: insersup}
     graphiques_plus: [insersup-tendance]
-    carte: {theme: orientation, pays: US, faits: [f61, f60, f186, f62]}
     propositions: [orient-transparence, orient-debouches]
     livret: ["P08"]
     ajouts: [a-debouches]
@@ -183,7 +181,6 @@ themes:
       - {note_ia: constat.1}
       - {source: humlum-2025}
     chiffre: {graphique: embauches}
-    carte: {theme: apprentissage, pays: UK, faits: [f87, f192, f202, f200]}
     propositions: [ia-garantie, ia-observatoire, ia-diplome-ia, ee-seul-puis-ia, tdv-ia-doctorants]
     livret: ["81", "119"]
     ajouts: [a-garantie]
@@ -202,6 +199,7 @@ themes:
     blocs: [comms]
 
 - theme: voiepro
+  ailleurs: {carte: [apprentissage], pays: ENG, intro: "Apprentissage et entrée dans l'emploi."}
   sections:
   - id: filieres
     edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
@@ -212,7 +210,6 @@ themes:
       - {vp: bref.0}
       - {vp: bref.1}
     chiffre: {vp: bref.2}
-    carte: {theme: apprentissage, pays: ENG, faits: [f88, f85, f86]}
     voiepro: [indice]
     voiepro_plus: [portefeuille, resultats, methode, batiment, limites, donnees]
     dossiers: [19-indice-risque-filieres-techniques, 21-codifiabilite-revue, 21-codifiabilite-donnees]
@@ -234,7 +231,6 @@ themes:
       - "**Mettre les filières techniques à la pointe technologique.** Actualiser les référentiels de bac pro et de BTS pour y intégrer les outils que les usines adoptent (automatisme, maintenance de machines modernes, usage professionnel de l'IA), en commençant par les zones d'emploi les plus exposées à la concurrence chinoise."
       - "Emploi à 6 mois : 43 % après un bac pro, 59 % après un BTS (DEPP, InserJeunes, RERS 2025)."
     chiffre: {graphique: emploi6mois}
-    carte: {theme: apprentissage, pays: ENG, faits: [f206, f207, f205, f176]}
     propositions: [ia-marche, ee-lycee-branche, tdv-bacpro-apprentissage, ee-maitre-apprentissage, ee-chef-doeuvre, ee-referentiels]
     livret: ["80"]
     notes: [EDUCATION-note-ecole-entreprise.pdf]

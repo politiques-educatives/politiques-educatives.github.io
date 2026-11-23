@@ -38,6 +38,13 @@ a { color: var(--accent); }
 header { display: grid; gap: 12px; }
 .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+/* Embed mode (#embed=1, used at the bottom of each theme of the site): no page header or method card, a one-line link instead. */
+.embedbar { display: none; }
+body.embed { padding: 0 0 8px; background: transparent; }
+body.embed .wrap { gap: 12px; max-width: none; }
+body.embed header, body.embed .method { display: none; }
+body.embed .embedbar { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between; font-size: 14px; color: var(--ink-3); }
+body.embed #panel { position: static; max-height: none; }
 
 .tabs { display: flex; flex-wrap: wrap; gap: 8px; }
 .tabs button, .seg button, .subtabs button, .offmap button {
@@ -103,10 +110,11 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
   <header>
     <p class="tag">Préparer l'avenir · GT Éducation · novembre 2026</p>
     <h1>Ailleurs, comment font-ils ?</h1>
-    <p class="lead">Temps des enseignants, gouvernance des établissements, orientation, secondes chances dans le supérieur, apprentissage : ce que font les autres pays, chiffres et sources à l'appui, et ce que nous proposons pour la France.</p>
+    <p class="lead">Temps des enseignants, gouvernance des établissements, orientation, secondes chances dans le supérieur, apprentissage, handicap et santé mentale : ce que font les autres pays, chiffres et sources à l'appui, et ce que nous proposons pour la France.</p>
     <p class="small">Cliquez sur un pays de la carte, ou choisissez-en un dans la liste « Hors carte ». Chaque fait vient d'un dossier vérifié du groupe ; rien n'est ajouté de mémoire.</p>
   </header>
 
+  <p class="embedbar"><span>Cliquez sur un pays, ou choisissez-en un « hors carte ». Chaque fait vient d'un dossier vérifié du groupe.</span><a id="full-link" href="./" target="_blank" rel="noopener">Plein écran, sources et méthode</a></p>
   <nav class="tabs" role="tablist" aria-label="Thèmes" id="themes"></nav>
 
   <section class="card" aria-labelledby="view-title">
@@ -139,7 +147,7 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
   <section class="card method" aria-labelledby="method-title">
     <h2 id="method-title">Sources et méthode</h2>
     <ul>
-      <li><strong>D'où viennent les faits.</strong> Des notes 1 à 3 du GT Éducation et des dossiers de recherche du projet (temps et formation des enseignants, gouvernance anglaise, inspection, orientation, rapport Milburn, calendrier de la formation, vérification des idées sur l'orientation et l'apprentissage, IA et embauches des jeunes). Chaque fait reprend le chiffre tel qu'il est écrit dans son fichier, avec sa source (auteur ou institution, année, lien quand il existe).</li>
+      <li><strong>D'où viennent les faits.</strong> Des notes 1 à 3 du GT Éducation et des dossiers de recherche du projet (temps et formation des enseignants, gouvernance anglaise, inspection, orientation, rapport Milburn, calendrier de la formation, vérification des idées sur l'orientation et l'apprentissage, IA et embauches des jeunes, inclusion des élèves handicapés et santé mentale). Chaque fait reprend le chiffre tel qu'il est écrit dans son fichier, avec sa source (auteur ou institution, année, lien quand il existe).</li>
       <li><strong>Ce qui est exclu.</strong> Tout ce que les dossiers marquent « non vérifié », « à vérifier » ou UNVERIFIED. Quand un pays n'a pas de fait vérifié sur un thème, la fiche le dit : « Pas encore documenté ».</li>
       <li><strong>Contrôle automatique.</strong> Le script de construction vérifie, pour chaque fait, que l'extrait cité figure toujours mot pour mot dans le fichier source ; sinon la page n'est pas reconstruite.</li>
       <li><strong>Les couleurs.</strong> La carte n'est colorée que par des indicateurs mesurés de la même façon dans plusieurs pays. Les écarts de définition sont dans les libellés (par exemple : âge de sortie des études en 2009, dernière année Eurostat disponible). Sinon, la carte montre le nombre de faits documentés.</li>
@@ -164,17 +172,25 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
   const membersOf = g => Object.keys(D.countries).filter(k => D.countries[k].group === g);
   const groupName = g => D.groupNames[g] || D.countries[g].name;
 
+  /* ---------- embed mode and theme subset (#themes=temps,gouvernance&embed=1) ---------- */
+  const q0 = new URLSearchParams(location.hash.slice(1));
+  const only = (q0.get("themes") || "").split(",").filter(k => D.themes.some(t => t.key === k));
+  const THEMES = only.length ? D.themes.filter(t => only.includes(t.key)) : D.themes;
+  const EMBED = q0.get("embed") === "1";
+  if (EMBED) document.body.classList.add("embed");
+
   /* ---------- theme tabs ---------- */
   const themesEl = document.getElementById("themes");
-  D.themes.forEach(t => {
+  if (THEMES.length < 2) themesEl.hidden = true;
+  THEMES.forEach(t => {
     const b = document.createElement("button");
     b.type = "button"; b.setAttribute("role", "tab"); b.id = "tab-" + t.key; b.textContent = t.short;
     b.title = t.label;
     b.addEventListener("click", () => setTheme(t.key));
     b.addEventListener("keydown", e => {
-      const i = D.themes.findIndex(x => x.key === state.theme);
+      const i = THEMES.findIndex(x => x.key === state.theme);
       if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-        const n = D.themes[(i + (e.key === "ArrowRight" ? 1 : D.themes.length - 1)) % D.themes.length];
+        const n = THEMES[(i + (e.key === "ArrowRight" ? 1 : THEMES.length - 1)) % THEMES.length];
         setTheme(n.key); document.getElementById("tab-" + n.key).focus(); e.preventDefault();
       }
     });
@@ -251,6 +267,8 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
       sw.className = ii < 0 ? "nd" : ""; sw.style.background = ii < 0 ? "" : colourOf(ii);
       offBtns[k].classList.toggle("on", state.country === k);
       offBtns[k].setAttribute("aria-pressed", state.country === k ? "true" : "false");
+      // in a theme subset, list only the off-map places documented on the current theme
+      offBtns[k].hidden = only.length > 0 && state.country !== k && !membersOf(k).some(m => countFacts(m, state.theme) > 0);
     });
     const lg = document.getElementById("legend");
     if (state.colorBy === "count") {
@@ -272,6 +290,7 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
     const opts = [["count", "Nombre de faits documentés"]].concat(
       Object.entries(D.indicators).filter(([, v]) => v.theme === state.theme && Object.keys(v.values).length >= 2).map(([k, v]) => [k, v.label]));
     if (!opts.some(o => o[0] === state.colorBy)) state.colorBy = opts.length > 1 ? opts[1][0] : "count";
+    colorSel.closest("label").style.display = EMBED && opts.length < 2 ? "none" : "";   // nothing to choose
     colorSel.innerHTML = opts.map(([k, l]) => `<option value="${k}"${k === state.colorBy ? " selected" : ""}>${esc(l)}</option>`).join("");
   }
   colorSel.addEventListener("change", () => { state.colorBy = colorSel.value; paint(); });
@@ -297,7 +316,7 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
       h += `<ul class="facts">${facts.slice(0, MAX_SHOWN).map(factLi).join("")}</ul>`;
       if (facts.length > MAX_SHOWN) h += `<details><summary>${facts.length - MAX_SHOWN} autre${facts.length - MAX_SHOWN > 1 ? "s" : ""} fait${facts.length - MAX_SHOWN > 1 ? "s" : ""}</summary><ul class="facts" style="margin-top:10px">${facts.slice(MAX_SHOWN).map(factLi).join("")}</ul></details>`;
     }
-    const others = D.themes.filter(t => t.key !== state.theme && D.facts.some(f => f.country === sub && f.theme === t.key));
+    const others = THEMES.filter(t => t.key !== state.theme && D.facts.some(f => f.country === sub && f.theme === t.key));
     if (others.length) h += `<p class="small">Aussi documenté pour ce pays : ${others.map(t => `<button type="button" class="badge" data-theme="${t.key}" style="border:0;cursor:pointer">${esc(t.short)}</button>`).join(" ")}</p>`;
     if (g !== "FR") {
       const fr = factsById[D.france[state.theme]];
@@ -316,7 +335,8 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
 
   /* ---------- table ---------- */
   function renderTable() {
-    const inds = Object.entries(D.indicators).filter(([, v]) => Object.keys(v.values).length);
+    const inds = Object.entries(D.indicators).filter(([, v]) => Object.keys(v.values).length && THEMES.some(t => t.key === v.theme));
+    if (!inds.length) { document.querySelector(".seg").hidden = true; if (EMBED) document.querySelector("#view-title").closest(".bar").style.display = "none"; return; }
     const rows = Object.keys(D.countries).filter(k => inds.some(([, v]) => v.values[k]));
     const themeOf = k => D.themes.find(t => t.key === D.indicators[k].theme).short;
     let h = `<thead><tr><th scope="col">Pays</th>` + inds.map(([k, v]) => `<th scope="col">${esc(v.label)}<br><span class="small">${esc(themeOf(k))}</span></th>`).join("") + `</tr></thead><tbody>`;
@@ -338,7 +358,7 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
   }
   function setTheme(k) {
     state.theme = k;
-    D.themes.forEach(t => {
+    THEMES.forEach(t => {
       const b = document.getElementById("tab-" + t.key);
       b.setAttribute("aria-selected", t.key === k ? "true" : "false"); b.tabIndex = t.key === k ? 0 : -1;
     });
@@ -346,8 +366,10 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
   }
   // Shareable state in the address: #theme=orientation&pays=ENG&vue=tableau
   function saveHash() {
-    const h = `theme=${state.theme}&pays=${state.sub || state.country}` + (state.view === "table" ? "&vue=tableau" : "");
+    const base = `theme=${state.theme}&pays=${state.sub || state.country}` + (state.view === "table" ? "&vue=tableau" : "");
+    const h = base + (only.length ? "&themes=" + only.join(",") : "") + (EMBED ? "&embed=1" : "");
     if (location.hash.slice(1) !== h) history.replaceState(null, "", "#" + h);
+    document.getElementById("full-link").href = "./#" + base;
   }
   function setView(v) {
     state.view = v;
@@ -363,8 +385,8 @@ button.link { font: inherit; background: none; border: 0; color: var(--accent); 
 
   document.getElementById("build-info").textContent = `${D.facts.length} faits vérifiés, ${D.proposals.length} propositions, données construites le ${D.generated.split("-").reverse().join("/")} par scripts/build_comparaisons.py.`;
   renderTable();
-  const q = new URLSearchParams(location.hash.slice(1));
-  const t0 = D.themes.some(t => t.key === q.get("theme")) ? q.get("theme") : "temps";
+  const q = q0;
+  const t0 = THEMES.some(t => t.key === q.get("theme")) ? q.get("theme") : THEMES[0].key;
   const p0 = D.countries[q.get("pays")] ? q.get("pays") : "FR";
   state.country = groupOf(p0); state.sub = p0;
   setTheme(t0);

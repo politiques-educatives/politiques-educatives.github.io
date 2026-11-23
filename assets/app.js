@@ -264,17 +264,34 @@
     if (c.vp && VP) { var t = getPath(VP, c.vp) || ""; return item("div", "kfig", t, '<p class="kf">' + md(t) + "</p>" + vpSrc()); }
     return "";
   }
-  function ailleursHTML(q) {
-    var C = q.carte || {}, lis = (C.faits || []).filter(function (i) { return factById[i]; }).map(function (i) {
-      var f = factById[i];
-      return item("li", "", cname(f.country) + " " + f.fact + " " + f.source, "<b>" + esc(cname(f.country)) + "</b> : " + esc(f.fact) +
-        ' <span class="sub">(' + (f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.source) + "</a>" : esc(f.source)) + ")</span>");
-    }).concat((q.ailleurs_sources || []).filter(function (a) { return srcById[a.id]; }).map(function (a) {
-      var s = srcById[a.id]; return item("li", "", a.pays + " " + s.cle, "<b>" + esc(a.pays) + "</b> : " + md(s.cle) + (s.lien ? ' <a class="sub" href="' + esc(s.lien) + '" target="_blank" rel="noopener">Lien</a>' : ""));
-    }));
-    if (!lis.length) return '<p class="empty">La carte internationale ne couvre pas encore cette section.</p>';
-    var r = C.theme && mapTheme[C.theme] ? "international/carte/" + C.theme + (C.pays ? "/" + C.pays : "") : "";
-    return '<ul class="ail">' + lis.join("") + "</ul>" + (r ? '<p class="more-l"><a href="#' + r + '" data-route="' + r + '">Voir sur la carte (' + esc(mapTheme[C.theme].short || mapTheme[C.theme].label) + ")</a></p>" : "");
+  // « Ce que font les autres pays », at the bottom of each theme (since 23/11/2026): the comparison map restricted to the
+  // theme's tabs (theme-level `ailleurs` in sections.yml), then the foreign studies attached to its sections (ailleurs_sources).
+  function ailleursEndHTML(T, n) {
+    var A = T.ailleurs || {}, tabs = (A.carte || []).filter(function (k) { return mapTheme[k]; });
+    var studies = [];
+    (T.sections || []).forEach(function (q) {
+      (q.ailleurs_sources || []).forEach(function (a) { var s = srcById[a.id]; if (!s) return;
+        studies.push(item("li", "", a.pays + " " + s.cle, "<b>" + esc(a.pays) + "</b> : " + md(s.cle) + ' <span class="sub">(' + md(q.titre) + ")</span>" +
+          (s.lien ? ' <a class="sub" href="' + esc(s.lien) + '" target="_blank" rel="noopener">Lien</a>' : ""))); });
+    });
+    if (!tabs.length && !studies.length) return "";
+    var id = "q-" + T.theme + "-ailleurs", h = '<section class="qsec qail-end" id="' + id + '" data-q="ailleurs" data-t="' + esc(norm("Ce que font les autres pays")) + '" aria-labelledby="qh-' + T.theme + '-ailleurs">' +
+      '<h2 class="qh" id="qh-' + T.theme + '-ailleurs"><span class="qn">' + n + "</span>Ce que font les autres pays</h2>";
+    if (tabs.length) {
+      var src = BASE + "/comparaisons/#themes=" + tabs.join(",") + "&theme=" + tabs[0] + (A.pays ? "&pays=" + A.pays : "") + "&embed=1";
+      h += '<p class="bintro">' + (A.intro ? md(A.intro) + " " : "") + "Cliquez sur un pays pour voir ce qu'il fait, chiffres et sources à l'appui, et ce que nous proposons pour la France.</p>" +
+        '<iframe class="cfr" title="Carte : ce que font les autres pays (' + esc(sujById[T.theme] ? sujById[T.theme].court : T.theme) + ')" loading="lazy" scrolling="no" src="' + esc(src) + '"></iframe>';
+    }
+    if (studies.length) h += blk("Études étrangères", '<ul class="ail">' + studies.join("") + "</ul>", "qail");
+    return h + "</section>";
+  }
+  function fitFrame(f) {   // same-origin iframe: grow to its content
+    function fit() { try { var d = f.contentDocument; if (d && d.body) f.style.height = Math.max(d.documentElement.scrollHeight, d.body.scrollHeight, 400) + "px"; } catch (e) { /* keep CSS height */ } }
+    f.addEventListener("load", function () {
+      fit();
+      try { var d = f.contentDocument; if (W.ResizeObserver && d && d.body) new W.ResizeObserver(fit).observe(d.body);
+        d.addEventListener("click", function () { setTimeout(fit, 50); setTimeout(fit, 400); }); } catch (e) { /* ignore */ }
+    });
   }
   function dosLine(d) {
     return item("li", "", d.titre + " " + (APPORT[d.slug] || ""), '<a href="' + esc(BASE + "/recherche/" + d.slug + ".html") + '">' + esc(APPORT[d.slug] || d.titre) + '</a> <span class="meta">dossier de recherche · ' + d.mots + " mots</span>");
@@ -308,7 +325,6 @@
     if (bref.length) h += blk("En bref", '<ul class="bref">' + bref.map(function (t) { return item("li", "", t, md(t)); }).join("") + "</ul>", "qbref");
     var ch = chiffreHTML(q.chiffre); if (ch) h += blk("Le chiffre clé", ch, "qfig");
     (q.voiepro || []).forEach(function (k) { if (VP && VPB[k]) h += VPB[k](); });
-    h += blk("Ce que font les autres pays", ailleursHTML(q), "qail");
     if (props.length || liv.length || aj.length)
       h += blk("Ce que nous proposons", props.map(propHTML).join("") +
         (liv.length ? '<h4>Dans le livret du programme « Croire en nous »</h4>' + liv.map(livHTML).join("") : "") +
@@ -365,12 +381,15 @@
     rest._liv = ((T.reste || {}).livret || []).map(function (k) { return livByN[String(k)]; }).filter(Boolean).concat(rest._liv);
     rest._props = ids((T.reste || {}).propositions, byId).concat(rest._props);
     var restHTML = plusHTML(rest, "Tout le reste du thème");
-    body.innerHTML = secs.map(function (q, i) { return sectionHTML(T.theme, q, i); }).join("") +
+    var ail = ailleursEndHTML(T, secs.length + 1);
+    body.innerHTML = secs.map(function (q, i) { return sectionHTML(T.theme, q, i); }).join("") + ail +
       (restHTML ? '<section class="qsec qrest" id="q-' + T.theme + '-reste" data-q="reste" data-t="">' + restHTML + "</section>" : "");
     $("#toc-" + T.theme).innerHTML = secs.map(function (q) {
-      return '<li><a href="#' + T.theme + "/" + esc(q.id) + '" data-route="' + T.theme + "/" + esc(q.id) + '">' + md(q.titre) + '</a><span class="hits"></span></li>'; }).join("");
+      return '<li><a href="#' + T.theme + "/" + esc(q.id) + '" data-route="' + T.theme + "/" + esc(q.id) + '">' + md(q.titre) + '</a><span class="hits"></span></li>'; }).join("") +
+      (ail ? '<li><a href="#' + T.theme + '/ailleurs" data-route="' + T.theme + '/ailleurs">Ce que font les autres pays</a><span class="hits"></span></li>' : "");
+    $$("iframe.cfr", body).forEach(fitFrame);
     RT[T.theme] = readMinutes(body);
-    $("#rt-" + T.theme).textContent = "Lecture : environ " + RT[T.theme] + " min · " + plural(secs.length, "section");
+    $("#rt-" + T.theme).textContent = "Lecture : environ " + RT[T.theme] + " min · " + plural(secs.length + (ail ? 1 : 0), "section");
   });
 
   // ---------------- International: « Politiques d'ailleurs »
@@ -387,12 +406,12 @@
         '<p><a class="btn btn2" href="' + esc(BASE + "/assets/notes/" + n.pdf) + '">La note en PDF (1 page)</a></p>');
     }).join("");
     var milSrc = ids(["milburn-2026", "kickstart-2024", "garantie-jeunes-2016", "insee-neet-2026"], srcById);
-    var themes = SUJ.map(function (S) { return '<a href="#' + S.id + '" data-route="' + S.id + '">' + esc(S.titre) + "</a>"; }).join(" · ");
+    var themes = SUJ.map(function (S) { return '<a href="#' + S.id + '/ailleurs" data-route="' + S.id + '/ailleurs">' + esc(S.titre) + "</a>"; }).join(" · ");
     el.innerHTML = sec("Politiques d'ailleurs", fiches, "Fiches d'une page sur une politique étrangère : ce qu'elle propose, ce qui a été retenu, et ce que cela dit pour la France.", "s-fiches") +
       blocMilburn() +
       sec("Les sources du rapport Milburn", milSrc.map(srcHTML).join("")) +
       sec("Le dossier de recherche", dosList(ids(["12-milburn-review"], dosBySlug))) +
-      '<p class="strip">Chaque thème montre, section par section, ce que font les autres pays : ' + themes + "</p>";
+      '<p class="strip">Chaque thème se termine par ce que font les autres pays, sur la carte : ' + themes + "</p>";
   })();
 
 
@@ -423,7 +442,7 @@
     var gh = "https://github.com/" + W.REPO;
     el.innerHTML = '<div class="intro"><p class="kick">Mis à jour le ' + esc(date) + "</p>" +
       "<h1>Propositions et données du GT Éducation</h1>" +
-      '<p class="lead">Les travaux du groupe de travail Éducation de Préparer l\'avenir et les données qui les appuient. Chaque thème se lit section par section : en bref, le chiffre clé, ce que font les autres pays, nos propositions.</p></div>' +
+      '<p class="lead">Les travaux du groupe de travail Éducation de Préparer l\'avenir et les données qui les appuient. Chaque thème se lit section par section : en bref, le chiffre clé, nos propositions ; puis, en bas du thème, ce que font les autres pays, sur une carte.</p></div>' +
       '<p class="lead"><strong>Nouveau dans le groupe ?</strong> <a href="' + esc(BASE + "/guide.html") + '">Mode d\'emploi</a> : lire un thème en dix minutes, vérifier un chiffre. <a href="' + esc(BASE + "/evaluer.html") + '">Tester une proposition avec des personas</a> : choisissez les personas, collez votre note, copiez la consigne.</p>' +
       '<h2 class="h2">Par thème</h2><div class="grid">' + themeTiles + "</div>" +
       '<h2 class="h2">Outils interactifs</h2><div class="grid">' + tools + "</div>" +
@@ -733,7 +752,8 @@
     else if (LEGACY[p[0] + "/" + p[1]]) h = LEGACY[p[0] + "/" + p[1]];
     else if (LEGACY[p[0]] && !$("#t-" + p[0])) h = LEGACY[p[0]] + (p[1] ? "/" + p.slice(1).join("/") : "");
     p = h.split("/");
-    if (sujById[p[0]] && OLDSUB[p[1]]) h = p[2] && OLDSEC[p[2]] ? OLDSEC[p[2]] : p[0];
+    if (sujById[p[0]] && p[1] === "ailleurs") h = p[0] + "/ailleurs";   // old « Ailleurs » sub-tab -> the bottom section (23/11/2026)
+    else if (sujById[p[0]] && OLDSUB[p[1]]) h = p[2] && OLDSEC[p[2]] ? OLDSEC[p[2]] : p[0];
     go(h || "accueil", true);
   }
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
