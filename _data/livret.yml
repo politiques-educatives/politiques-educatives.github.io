@@ -40,7 +40,7 @@
   resume: "Généraliser la lecture dès la maternelle, organiser des tests de décodage pour repérer tôt les élèves en difficulté et viser la maîtrise de 2 500 mots à l'entrée au CP."
   page: 22
   eval: convergent
-  apport: "Constat DEPP 2026 : dictée de CE1 à 69,9 % de réussite contre 72,4 % en 2025, -7,2 points depuis 2019 ; un tiers des élèves de 15 ans en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40). La fiche du GT prolonge cet objectif au lycée : des mathématiques jusqu'en terminale pour tout élève qui vise le supérieur, et l'IA en accès libre seulement après l'acquisition des fondamentaux."
+  apport: "Constat DEPP 2026 : dictée de CE1 à 69,9 % de réussite contre 72,4 % en 2025, -7,2 points depuis 2019 ; un tiers des élèves de 15 ans en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40). La fiche du GT prolonge cet objectif au lycée : des mathématiques jusqu'en terminale pour tout élève qui vise le supérieur, et l'IA en accès libre seulement après l'acquisition des fondamentaux. Les pays qui ont le plus progressé ont misé sur l'enseignement explicite avec des supports structurés et des manuels labellisés : généralisé en Angleterre, un programme structuré de lecture a relevé les résultats de 0,08 écart-type en un à deux ans (Machin et McNally, 2008, cités par Dintilhac, Houzel et Jaravel, CAE, 2026)."
   cartes: [ia-bases]
 - n: "68"
   sujets: [ecrans]
@@ -48,7 +48,7 @@
   resume: "Un soutien assuré par d'anciens professeurs, des étudiants volontaires et un assistant d'IA personnalisé."
   page: 22
   eval: convergent
-  apport: "Convergent sur l'outil, pas sur un tutorat humain universel. Le tuteur IA public, qui guide sans donner la solution, reste ouvert à tous les élèves ; le tutorat humain est ciblé sur les élèves défavorisés et ruraux (environ 1,1 million de collégiens), seuls à en tirer un effet mesuré (+0,56 écart-type chez les collégiens défavorisés, aucun effet chez les autres ; Resnjanskij et al., 2024). Le tutorat apporte +0,50 écart-type avec des enseignants contre +0,21 avec des bénévoles (Nickow, Oreopoulos et Quan, 2020)."
+  apport: "Convergent sur l'outil, pas sur un tutorat humain universel. Le tuteur IA public, qui guide sans donner la solution, reste ouvert à tous les élèves ; le tutorat humain est ciblé sur les élèves défavorisés et ruraux (environ 1,1 million de collégiens), seuls à en tirer un effet mesuré (+0,56 écart-type chez les collégiens défavorisés, aucun effet chez les autres ; Resnjanskij et al., 2024). Le tutorat apporte +0,50 écart-type avec des enseignants contre +0,21 avec des bénévoles (Nickow, Oreopoulos et Quan, 2020). Le tutorat s'autofinance par les recettes fiscales futures quel que soit le tuteur ; avec 400 000 étudiants payés au Smic 20 heures par an, il coûterait environ 290 € par élève pour les 10 % d'élèves de primaire les plus faibles (Grenet et Landais, CAE, 2025)."
   cartes: [tuteur-public, heures-emploi-du-temps]
 - n: "69"
   sujets: [ecrans]
@@ -88,7 +88,7 @@
   resume: "Le maire, sur proposition de l'équipe éducative, peut sanctionner les parents d'enfants harceleurs, perturbateurs ou absentéistes et les parents violents ; les moyens du 3018 contre le harcèlement et le cyberharcèlement sont consolidés."
   page: 23
   eval: hors champ
-  apport: "Non couvert par nos travaux. Le précédent de la suspension des allocations familiales pour absentéisme (loi Ciotti, 2010) n'a touché que 472 familles et n'a jamais été évalué (Public Sénat, 2023). En Californie, sur 131 312 élèves, un courrier qui explique leur rôle aux parents réduit davantage l'absentéisme que la lettre standard menaçant d'amendes (Lasky-Fink et al., 2019)."
+  apport: "Non couvert par nos travaux. Le précédent de la suspension des allocations familiales pour absentéisme (loi Ciotti, 2010) n'a touché que 472 familles et n'a jamais été évalué (Public Sénat, 2023). En Californie, sur 131 312 élèves, un courrier qui explique leur rôle aux parents réduit davantage l'absentéisme que la lettre standard menaçant d'amendes (Lasky-Fink et al., 2019). En France, trois réunions avec les parents (Mallette des parents, environ 8 € par élève) ont réduit absences et sanctions de 15 % d'écart-type (Avvisati et al., 2014, chiffré par Grenet et Landais, CAE, 2025)."
   cartes: []
 - n: "74"
   sujets: [inclusion]
@@ -112,7 +112,7 @@
   resume: "Laisser les universités décider de leur mode de sélection, fermer les formations du supérieur aux faibles taux de diplomation et d'insertion, et revaloriser les filières scientifiques."
   page: 23
   eval: à compléter
-  apport: "Publier d'abord les débouchés de chaque formation (un master sur dix sous 49 % d'emploi, un sur dix au-dessus de 86 %) ; le master sert souvent de filtre (Insee Première n° 2109 ; Dares, Ofer 2016) ; licence professionnelle 78 % d'emploi contre 50 % en licence générale (InserSup 2026)."
+  apport: "Publier d'abord les débouchés de chaque formation (un master sur dix sous 49 % d'emploi, un sur dix au-dessus de 86 %) ; le master sert souvent de filtre (Insee Première n° 2109 ; Dares, Ofer 2016) ; licence professionnelle 78 % d'emploi contre 50 % en licence générale (InserSup 2026). Réserve : en Floride, les élèves admis de justesse à l'université gagnent 22 % de plus huit à quatorze ans après le lycée que ceux refusés de justesse (Zimmerman, 2014) ; une sélection plus stricte doit offrir une autre voie qualifiante à ceux qu'elle écarte."
   cartes: [orient-debouches, ia-master]
 - n: "80"
   sujets: [orientation, emploi]
@@ -120,7 +120,7 @@
   resume: "Rétablir les prépa apprentissage et concentrer l'effort sur les métiers de production."
   page: 24
   eval: convergent
-  apport: "Arbitrage du groupe du 22/11/2026 : l'aide à l'embauche d'apprentis est maintenue du CAP à bac+2, hors des 50 Md€ de baisses d'aides de la mesure N°82. La politique de l'apprentissage a coûté 22,2 Md€ en 2025 (OFCE, 2026). Les notes du GT du 22/11 s'appuient sur N°80 : terminale de bac pro en apprentissage, sections lycée-branche, maître d'apprentissage formé, priorité aux métiers de production."
+  apport: "Arbitrage du groupe du 22/11/2026 : l'aide à l'embauche d'apprentis est maintenue du CAP à bac+2, hors des 50 Md€ de baisses d'aides de la mesure N°82. La politique de l'apprentissage a coûté 22,2 Md€ en 2025 (OFCE, 2026). La baisse de l'aide depuis février 2025 a déjà supprimé 43 000 postes d'alternants en 2025, et l'Insee en prévoit 37 000 de moins en 2026, avec des baisses visant surtout le supérieur (Insee, Note de conjoncture, juin 2026). Les notes du GT du 22/11 s'appuient sur N°80 : terminale de bac pro en apprentissage, sections lycée-branche, maître d'apprentissage formé, priorité aux métiers de production."
   cartes: [tdv-bacpro-apprentissage, ee-lycee-branche, ee-maitre-apprentissage]
 - n: "81"
   sujets: [emploi]
@@ -168,5 +168,5 @@
   resume: "Priorité 08 : former 100 000 ingénieurs chaque année."
   page: 5
   eval: à compléter
-  apport: "La Boussole montre les filières scientifiques et techniques et la réussite en licence selon les spécialités du bac."
+  apport: "La Boussole montre les filières scientifiques et techniques et la réussite en licence selon les spécialités du bac. Le vivier dépend de l'exposition, pas seulement du talent : les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs, même à niveau en maths égal (Bell et al., 2019), et la France compterait 2,84 fois plus de docteurs chercheurs ou ingénieurs si les filles et les jeunes modestes innovaient autant que les garçons aisés (Guadalupe et al., CAE, 2022)."
   cartes: [orient-transparence]

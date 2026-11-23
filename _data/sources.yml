@@ -1116,3 +1116,171 @@
   cle: "Près de 45 % des écoles ont moins de quatre classes (DEPP, Géographie de l'École 2026, repris par Le Monde ; non vérifié dans l'original)."
   propositions: []
   dossier: ""
+
+# ================= AUDIT DU 23/11/2026 : études ajoutées (figures relues dans la source indiquée) =================
+- id: cae-84-grenet-landais-2025
+  titre: "CAE, Note n° 84 (Grenet et Landais, 2025) : le rendement de chaque euro de dépense éducative"
+  ref: "Grenet, J. et C. Landais (2025), « Éducation : comment mieux orienter la dépense publique », Les notes du Conseil d'analyse économique, n° 84, mai 2025."
+  lien: https://cae-eco.fr/static/pdf/CAE084_Education_250520.pdf
+  sujets: [formation]
+  type: revue
+  statut: vérifié
+  resume: "La note classe les politiques éducatives françaises selon un indice d'efficacité de la dépense publique (EDP, en anglais MVPF) : le gain pour les élèves rapporté au coût net pour l'État, une fois comptées les recettes fiscales futures dues à leurs salaires plus élevés. Une politique est dite autofinancée (EDP infini) quand ces recettes dépassent son coût. Champ : premier et second degrés, politiques évaluées par essai ou quasi-expérience, surtout en France. Sont autofinancés le dédoublement des classes en primaire, le tutorat quel que soit le tuteur, les logiciels adaptatifs en maths, un programme de compétences socio-comportementales, la formation continue intensive, les inspections pédagogiques et la Mallette des parents. Le redoublement, la formation continue ponctuelle et les dotations en ordinateurs ou tablettes ont une efficacité nulle ou très faible. Limite : les effets à long terme sont extrapolés à partir des gains de résultats scolaires (9,5 % de salaire par écart-type)."
+  sections:
+    - "Taille des classes (p. 5) : 1,62 % d'écart-type de plus à la fin du CP par élève en moins (évaluation du dédoublement en REP+) ; autofinancé en primaire ; à expérimenter au collège."
+    - "Redoublement (p. 6) : environ 6 000 € l'année en primaire, 8 400 € au collège, 11 500 € au lycée (2015), près de 2 Md€ par an au total, pour des effets nuls ou négatifs à long terme."
+    - "Tutorat (p. 7-8) : +0,37 écart-type en moyenne sur 96 essais (Nickow et al., 2020) ; 400 000 étudiants payés au Smic 20 heures par an couvriraient les 10 % d'élèves de primaire les plus faibles pour environ 290 € par élève, contre près de 10 000 € de gains de salaire et 6 500 € de recettes fiscales par élève."
+    - "Énergie Jeunes (p. 8) : 97 collèges défavorisés, +3 % d'écart-type en 6e et +5 % en 3e, 65 € par élève : autofinancé."
+    - "Enseignants (p. 9-10) : un enseignant d'un écart-type au-dessus de la moyenne relève les résultats de 10 à 20 % d'écart-type par an ; transposé à la France, environ 92 000 € de gains de salaire cumulés par classe. Formation de 80 heures sur deux ans en sciences au primaire : +0,12 écart-type, qui s'estompe sans suivi. Inspections : +3 à 5 % d'écart-type au collège, jusqu'à 10 % en éducation prioritaire, pour moins de 100 € par élève (Briole et Maurin)."
+    - "Mallette des parents (p. 11) : environ 8 € par élève, absences et sanctions en baisse de 15 % d'écart-type, résultats en hausse de 8 % d'écart-type."
+  cle: "Le tutorat, le dédoublement en primaire, les inspections et la Mallette des parents s'autofinancent par les recettes fiscales futures ; le redoublement coûte près de 2 Md€ par an pour un effet nul (Grenet et Landais, CAE, Note n° 84, 2025)."
+  propositions: [heures-emploi-du-temps, gouv-visite]
+  dossier: 10-brief-formation-continue-enseignants
+- id: cae-93-dintilhac-2026
+  titre: "CAE, Note n° 93 (Dintilhac, Houzel et Jaravel, 2026) : un plan pour rattraper le retard scolaire"
+  ref: "Dintilhac, C., G. Houzel et X. Jaravel (2026), « École : un plan d'action pour rattraper le retard français », Les notes du Conseil d'analyse économique, n° 93, septembre 2026."
+  lien: https://cae-eco.fr/static/pdf/CAE093_Education_260903.pdf
+  sujets: [formation]
+  type: revue
+  statut: vérifié
+  resume: "La note part des systèmes qui ont remonté leur niveau en une dizaine d'années et en tire cinq leviers communs : un objectif simple décliné par matière et par classe, un enseignement explicite avec des supports structurés et des manuels labellisés, une formation intensive et un accompagnement des enseignants en classe, des évaluations régulières des élèves qui déclenchent l'aide, et un tutorat ciblé. Elle propose de viser +0,6 écart-type en fin de collège en dix ans (plus d'une année d'apprentissage), de diviser par deux la part d'élèves sous le seuil minimal et de ramener l'écart social à la moyenne de l'OCDE, pour environ 4 Md€ par an, moins que les 5 Md€ au moins d'économies liées à la baisse du nombre d'élèves d'ici 2035. Limite : les effets sont des ordres de grandeur tirés d'études faites ailleurs."
+  sections:
+    - "Tableau 1 (p. 3) : en maths, l'Angleterre gagne 0,57 écart-type au TIMSS de CM1 entre 1995 et 2007 (élèves sous le seuil de 18 % à 6 %) ; le Mississippi +0,64 entre 2003 et 2019 (38 % à 16 %) ; le Maroc +0,93 sur 22 800 élèves (évaluation J-PAL) ; la France recule de 530 à 483 points au TIMSS de 4e entre 1995 et 2019 (-0,62 écart-type)."
+    - "Preuves causales (p. 5-6) : enseignement explicite +0,50 à +0,60 écart-type en conditions expérimentales (méta-analyse de 328 études, Stockard et al., 2018), +0,08 en lecture une fois généralisé en Angleterre (Machin et McNally, 2008) ; formation couplée à un accompagnement en classe environ +0,2 (Kraft et al., 2018) ; tutorat +0,50 par des enseignants, +0,40 par des paraprofessionnels, +0,21 par des non-professionnels (Nickow et al., 2020)."
+    - "France (p. 6) : 3,5 jours de formation continue par an au collège contre 8 dans l'OCDE ; aucun mécanisme de certification des manuels ; 22 élèves par classe en primaire contre 19 en Europe."
+    - "Adhésion (p. 9) : sondage de 800 enseignants du primaire et du collège (juillet 2026) : 93 % favorables à moins d'élèves par classe en primaire, 83 % au tutorat, 81 % à la formation continue et à l'accompagnement, 74 % à de meilleures ressources pédagogiques, 48 % à l'usage des évaluations."
+  cle: "Plusieurs pays ont gagné plus d'une année d'apprentissage en dix ans ; un plan de 4 Md€ par an le permettrait en France, moins que le dividende démographique (Dintilhac, Houzel et Jaravel, CAE, Note n° 93, 2026)."
+  propositions: [heures-service-annuel]
+  dossier: 10-brief-formation-continue-enseignants
+- id: briole-maurin-2024
+  titre: "Briole et Maurin (2024), l'inspection des enseignants en France"
+  ref: "Briole, S. et É. Maurin (2024), « There's Always Room for Improvement: The Persistent Benefits of a Large-scale Teacher Evaluation System », Journal of Human Resources 59(4), p. 1150-1179."
+  lien: https://jhr.uwpress.org/content/early/2022/03/01/jhr.1220-11370R1.full.pdf
+  sujets: [formation]
+  type: étude causale
+  statut: secondaire
+  resume: "Étude sur l'inspection des professeurs de collège français, évalués tous les cinq à six ans (une heure de cours observée, un entretien, un rapport qui compte pour l'avancement). Les auteurs comparent les résultats des élèves avant et après l'inspection de leur professeur. L'inspection améliore l'efficacité des enseignants à tous les stades de carrière, surtout en éducation prioritaire, et l'effet sur les élèves dure plusieurs années après le collège ; le retour de l'inspecteur semble en être le canal. Chiffres repris de la note n° 84 du CAE (non relus dans l'article) : +3 à 5 % d'écart-type au collège, jusqu'à 10 % en éducation prioritaire, pour moins de 100 € par élève."
+  cle: "En France, une inspection avec retour relève les résultats des élèves de 3 à 5 % d'écart-type, jusqu'à 10 % en éducation prioritaire, pour moins de 100 € par élève (Briole et Maurin, 2024, repris par le CAE, Note n° 84)."
+  propositions: [gouv-visite]
+  dossier: ""
+- id: sourdun-2017
+  titre: "Behaghel, de Chaisemartin et Gurgand (2017), l'internat d'excellence de Sourdun"
+  ref: "Behaghel, L., C. de Chaisemartin et M. Gurgand (2017), « Ready for Boarding? The Effects of a Boarding School for Disadvantaged Students », American Economic Journal: Applied Economics 9(1), p. 140-164 ; suivi de long terme, document de travail (2024)."
+  lien: https://www.aeaweb.org/articles?id=10.1257/app.20150090
+  sujets: [orientation]
+  type: étude causale
+  statut: secondaire
+  resume: "Tirage au sort parmi 395 collégiens et lycéens motivés de milieux modestes candidats en 2009 et 2010 à l'internat d'excellence de Sourdun (hébergement, petites classes, enseignants recrutés sur profil). 68 % des admis obtiennent un bac général contre 47 % des non-admis, et 43 % un diplôme du supérieur contre 26 % ; gain de salaire futur estimé à près de 11 %. Coût d'environ 21 600 € par élève et par an, le double d'un élève du secondaire, pour un indice d'efficacité de 4,5. Limites : élèves de niveau intermédiaire et motivés, pas les plus en difficulté ; les internats ouverts depuis fonctionnent autrement. Chiffres repris de la note n° 84 du CAE (p. 7)."
+  cle: "À Sourdun, 43 % des élèves admis par tirage au sort obtiennent un diplôme du supérieur, contre 26 % des non-admis (Behaghel et al., 2017 et 2024, repris par le CAE, Note n° 84)."
+  propositions: []
+  dossier: ""
+- id: energie-jeunes-2025
+  titre: "Huillery et al. (2025), Énergie Jeunes : confiance et persévérance au collège"
+  ref: "Huillery, E., A. Bouguen, A. Charpentier, Y. Algan et C. Chevallier (2025), « The Role of Mindset in Education: A Large-Scale Field Experiment in Disadvantaged Schools », The Economic Journal, à paraître."
+  lien: https://cae-eco.fr/static/pdf/CAE084_Education_250520.pdf
+  sujets: [orientation]
+  type: étude causale
+  statut: secondaire
+  resume: "Essai dans 97 collèges défavorisés d'un programme associatif (interventions en classe) qui vise à renforcer le sentiment d'efficacité personnelle des élèves et à réduire leur fatalisme scolaire et social. Le comportement en classe s'améliore et les résultats progressent de 3 % d'écart-type en 6e et de 5 % en 3e, pour 65 € par élève, ce qui rend le programme autofinancé selon le CAE. Chiffres repris de la note n° 84 du CAE (p. 8), lien vers cette note faute de version publiée en accès libre."
+  cle: "Un programme sur la confiance des collégiens, à 65 € par élève, relève les résultats de 3 à 5 % d'écart-type dans 97 collèges défavorisés (Huillery et al., 2025, repris par le CAE, Note n° 84)."
+  propositions: []
+  dossier: ""
+- id: bell-2019
+  titre: "Bell, Chetty, Jaravel, Petkova et Van Reenen (2019), qui devient inventeur ?"
+  ref: "Bell, A., R. Chetty, X. Jaravel, N. Petkova et J. Van Reenen (2019), « Who Becomes an Inventor in America? The Importance of Exposure to Innovation », Quarterly Journal of Economics 134(2), p. 647-713."
+  lien: https://www.nber.org/papers/w24062
+  sujets: [orientation]
+  type: étude causale
+  statut: vérifié
+  resume: "Brevets de 1,2 million d'inventeurs américains appariés aux données fiscales de leurs parents. Les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs que ceux de familles sous le revenu médian, et l'écart persiste à résultats en maths égaux dans l'enfance. Les enfants qui grandissent dans une zone riche en inventeurs, ou dont l'entourage innove dans un domaine, ont plus de chances d'innover dans ce même domaine, effet propre au sexe : l'exposition compte, pas seulement le talent (les « Einstein perdus »). Limite : données américaines."
+  cle: "Les enfants du 1 % le plus riche ont dix fois plus de chances de devenir inventeurs que ceux sous le revenu médian, même à niveau en maths égal (Bell et al., 2019)."
+  propositions: [ee-rencontres-pros]
+  dossier: ""
+- id: guadalupe-2022
+  titre: "CAE, Note n° 75 (Guadalupe, Jaravel, Philippon et Sraer, 2022) : capital humain et productivité"
+  ref: "Guadalupe, M., X. Jaravel, T. Philippon et D. Sraer (2022), « Cap sur le capital humain pour renouer avec la croissance de la productivité », Les notes du Conseil d'analyse économique, n° 75, septembre 2022."
+  lien: https://cae-eco.fr/en/cap-sur-le-capital-humain-pour-renouer-avec-la-croissance-de-la-productivite
+  sujets: [formation]
+  type: rapport
+  statut: vérifié
+  resume: "La note montre que la France décroche en productivité depuis le début des années 2000 (environ 7 points face aux États-Unis et 5 face à l'Allemagne en une quinzaine d'années, une fois corrigé du sous-emploi des moins qualifiés), soit environ 140 Md€ de PIB en 2019. Elle relie ce décrochage au recul en maths, jusqu'aux meilleurs élèves, et à des compétences socio-comportementales moyennes. Un relèvement du niveau ajouterait 0,2 point de croissance par an, environ 75 Md€ par an après quinze ans ; si les femmes et les jeunes de milieux modestes innovaient autant que les garçons de milieux aisés, la France compterait 2,84 fois plus de docteurs chercheurs ou ingénieurs. Chiffres lus dans le communiqué du CAE (29 septembre 2022). Limite : chiffrages par modèle, pas des évaluations."
+  cle: "Relever le niveau en maths et en compétences socio-comportementales ajouterait 0,2 point de croissance par an, environ 75 Md€ par an après quinze ans (Guadalupe et al., CAE, Note n° 75, 2022)."
+  propositions: []
+  dossier: ""
+- id: hendren-2020
+  titre: "Hendren et Sprung-Keyser (2020), le rendement comparé de 133 politiques publiques"
+  ref: "Hendren, N. et B. Sprung-Keyser (2020), « A Unified Welfare Analysis of Government Policies », Quarterly Journal of Economics 135(3), p. 1209-1318."
+  lien: https://www.nber.org/papers/w26144
+  sujets: [formation]
+  type: méta-analyse
+  statut: secondaire
+  resume: "Les auteurs calculent, pour 133 politiques américaines évaluées depuis un demi-siècle, le gain pour les bénéficiaires rapporté au coût net pour l'État, recettes fiscales futures comprises (MVPF). Les investissements directs dans la santé et l'éducation des enfants modestes ont les rendements les plus élevés, souvent supérieurs à 5, et beaucoup s'autofinancent ; les politiques pour les adultes se situent le plus souvent entre 0,5 et 2. C'est le cadre repris par le CAE pour classer les politiques éducatives françaises. Limite : politiques américaines."
+  cle: "Les dépenses d'éducation et de santé pour les enfants modestes ont les rendements les plus élevés des politiques publiques américaines, et beaucoup s'autofinancent (Hendren et Sprung-Keyser, 2020)."
+  propositions: []
+  dossier: ""
+- id: zimmerman-2014
+  titre: "Zimmerman (2014), ce que rapporte l'admission à l'université aux élèves juste au seuil"
+  ref: "Zimmerman, S. (2014), « The Returns to College Admission for Academically Marginal Students », Journal of Labor Economics 32(4), p. 711-754."
+  lien: https://econpapers.repec.org/RePEc:ucp:jlabec:doi:10.1086/676661
+  sujets: [orientation]
+  type: étude causale
+  statut: secondaire
+  resume: "En Floride, l'admission dans une grande université publique dépend d'un seuil de moyenne au lycée. En comparant les élèves juste au-dessus et juste en dessous (régression sur discontinuité), l'auteur trouve que l'admission rend l'inscription à l'université bien plus probable et accroît les revenus de 22 % entre 8 et 14 ans après le lycée, un gain supérieur au coût des études, surtout pour les garçons et les élèves qui ont droit aux repas gratuits à la cantine (milieux modestes). Lu dans le résumé (non relu dans l'article). Limite : un seul établissement, élèves proches du seuil."
+  cle: "Pour les élèves juste au seuil d'admission, entrer à l'université accroît les revenus de 22 % huit à quatorze ans plus tard (Zimmerman, 2014)."
+  propositions: [orient-bac]
+  dossier: ""
+- id: avenirpro-2024
+  titre: "IPP, Note n° 109 (Cahuc, Hervelin, Largy et Uhlendorff, 2024) : AvenirPro"
+  ref: "Cahuc, P., J. Hervelin, A. Largy et A. Uhlendorff (2024), « AvenirPro : accompagner les lycéens professionnels vers l'emploi », Note de l'IPP n° 109, octobre 2024."
+  lien: https://www.ipp.eu/wp-content/uploads/2025/05/109_Note_IPP_Avenir_Pro-3.pdf
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé sur AvenirPro, accompagnement des élèves de terminale professionnelle vers l'emploi : séances en classe de janvier à juin (recherche d'emploi, entretiens), puis suivi individuel par un conseiller France Travail pendant cinq mois après le bac. 171 lycées tirés au sort par paires (autant de lycées témoins), 4 381 élèves traités, année 2021-2022, emploi mesuré en janvier 2023 (InserJeunes). Le taux d'emploi passe de 16 % à 23 % (environ +7 points, +45 %), seuil de confiance de 89,6 % seulement ; pour le quart des élèves les plus éloignés de l'emploi, il double, de 10 % à 20 %. Les poursuites d'études baissent (de 50 % à 39 %). Lu sur la page de l'IPP. Le dispositif est généralisé aux 2 200 lycées professionnels depuis la rentrée 2025."
+  cle: "AvenirPro fait passer l'emploi des bacheliers professionnels de 16 % à 23 %, et de 10 % à 20 % pour les plus éloignés de l'emploi (Cahuc et al., IPP, 2024)."
+  propositions: [ia-garantie]
+  dossier: ""
+- id: insee-ndc-juin-2026
+  titre: "Insee, Note de conjoncture de juin 2026 : le recul de l'alternance"
+  ref: "Insee (2026), Note de conjoncture, 17 juin 2026, fiche Emploi et éclairage sur la productivité (p. 43-45)."
+  lien: https://www.insee.fr/fr/statistiques/fichier/9007948/ndc-juin-2026.pdf
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "L'alternance (apprentissage et contrats de professionnalisation) a fait environ un tiers de la hausse de l'emploi salarié entre fin 2019 et fin 2024. Avec la baisse de l'aide à l'embauche d'apprentis depuis février 2025, 43 000 postes d'alternants ont disparu en 2025, les deux tiers du recul de l'emploi salarié privé ; l'Insee prévoit encore -37 000 en 2026, avec de nouvelles baisses d'aide visant surtout les diplômes du supérieur et les entreprises de plus de 250 salariés. Les alternants, présents environ la moitié du temps en entreprise, pèsent sur la productivité mesurée : la perte de productivité du privé par rapport à la tendance passe de 3,7 à 2,4 points en 2025 une fois corrigée de leur moindre productivité."
+  cle: "43 000 postes d'alternants ont disparu en 2025 après la baisse de l'aide à l'embauche, les deux tiers du recul de l'emploi salarié privé (Insee, Note de conjoncture, juin 2026, p. 43)."
+  propositions: []
+  dossier: ""
+- id: lift-2026-01
+  titre: "Bergeaud et Bunel (2026), LIFT Policy Paper n° 1 : adopter l'IA ne suffit pas"
+  ref: "Bergeaud, A. et S. Bunel (2026), LIFT Policy Paper n° 1, HEC Paris ; synthèse « L'adoption de l'IA en entreprise ne suffit pas à gagner en productivité », HEC Paris, 12 octobre 2026."
+  lien: https://www.hec.edu/fr/dare/technologie-ia/l-adoption-de-l-ia-en-entreprise-ne-suffit-pas-gagner-en-productivite
+  sujets: [emploi]
+  type: rapport
+  statut: vérifié
+  resume: "Les auteurs comparent la diffusion de l'IA dans les entreprises françaises, allemandes et américaines. 28 % des actifs français utilisent l'IA générative contre 43 % aux États-Unis. Le frein tient surtout à l'organisation et à l'accompagnement des salariés : 69 % des salariés français ne sont ni encouragés par leur employeur ni dotés d'outils ou de formation, contre 44 % aux États-Unis ; 17 % sont à la fois encouragés et équipés, contre 42 %. Réorganiser le travail coûte l'équivalent de 38 mois de salaire par salarié concerné en France, 31 en Allemagne et 7 aux États-Unis. Chiffres lus dans la synthèse de HEC."
+  cle: "69 % des salariés français ne sont ni encouragés, ni équipés, ni formés à l'IA par leur employeur, contre 44 % aux États-Unis (Bergeaud et Bunel, LIFT, 2026)."
+  propositions: [ia-diplome-ia]
+  dossier: ""
+- id: autor-2026
+  titre: "Autor et al. (2026), l'IA chez les avocats en brevets : qui en garde le bénéfice ?"
+  ref: "Autor, D., T. Rodchenko, J. Martin, Z. Iscenko, S. Strand, D. Pearl et M. Ferere (2026), « Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting », NBER Working Paper 35720."
+  lien: https://www.nber.org/papers/w35720
+  sujets: [emploi]
+  type: étude causale
+  statut: vérifié
+  resume: "Essai randomisé de trois mois sur 133 avocats en brevets de onze cabinets américains, dont la moitié reçoit un assistant d'IA de rédaction. Avec l'outil, la qualité des brevets rédigés progresse de 0,34 écart-type à 10 jours et de 0,38 à 90 jours, davantage chez les juniors. Mais à l'exercice final fait sans IA, le gain (0,32 écart-type) se concentre chez les seniors (0,45) ; les juniors n'en gardent rien en moyenne, leurs notes se dispersant vers le très bon et le très mauvais. Une base d'expertise semble nécessaire pour transformer l'usage de l'IA en compétence durable. Limites : étude financée par Google, dont plusieurs auteurs sont salariés ; une seule profession. Lu dans le résumé NBER."
+  cle: "Après trois mois avec un assistant d'IA, seuls les avocats expérimentés font mieux sans l'outil (+0,45 écart-type) ; les débutants n'en gardent rien en moyenne (Autor et al., 2026)."
+  propositions: [ia-diplome-ia, ee-seul-puis-ia]
+  dossier: ""
+- id: card-2018
+  titre: "Card, Kluve et Weber (2018), méta-analyse des politiques actives de l'emploi"
+  ref: "Card, D., J. Kluve et A. Weber (2018), « What Works? A Meta Analysis of Recent Active Labor Market Program Evaluations », Journal of the European Economic Association 16(3), p. 894-931."
+  lien: https://www.nber.org/papers/w21431
+  sujets: [emploi]
+  type: méta-analyse
+  statut: vérifié
+  resume: "Synthèse de plus de 200 évaluations de programmes d'aide au retour à l'emploi (formation, accompagnement, emplois aidés). En moyenne, les effets sont proches de zéro à court terme et deviennent positifs deux à trois ans après la fin du programme. Les programmes qui construisent des compétences ont des gains moyens plus élevés, qui viennent plus tard ; les effets sont plus forts pour les femmes, pour les chômeurs de longue durée et en période de récession. Lu dans le résumé. Limite : programmes surtout européens, durée de suivi variable."
+  cle: "Les formations pour chômeurs n'ont presque aucun effet la première année mais deviennent rentables deux à trois ans après (Card, Kluve et Weber, 2018, plus de 200 études)."
+  propositions: [ia-formation-smic]
+  dossier: ""

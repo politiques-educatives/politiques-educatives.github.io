@@ -82,6 +82,7 @@
   preuves:
     - "À Cincinnati, une année d'évaluation fondée sur quatre observations, dont trois par des pairs formés, a relevé d'environ 0,10 écart-type les résultats en maths des élèves les années suivantes (Taylor et Tyler, 2012)."
     - "Les quelque 3 650 inspecteurs territoriaux (Cour des comptes, 2022) consacrent environ 30 % de leur activité à l'évaluation des enseignants dans le premier degré, 20 à 30 % dans le second."
+    - "En France, l'inspection avec retour au professeur relève les résultats de ses élèves de 3 à 5 % d'écart-type au collège, jusqu'à 10 % en éducation prioritaire, pour moins de 100 € par élève : elle s'autofinance (Briole et Maurin, 2024 ; Grenet et Landais, CAE, 2025)."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
   statut: à chiffrer
   maj_le: 2026-11-22
@@ -211,6 +212,7 @@
     - "Aide à l'employeur de 3 000 £ par embauche d'un jeune resté six mois sans emploi ni formation, jusqu'à 7 000 £ pour une petite entreprise, et 2 500 £ par apprenti, pour environ 1,1 milliard de livres par an et 170 000 opportunités (Milburn, 2026, p. 12)."
     - "Kickstart (2020-2022) a ajouté 11 jeunes en emploi non aidé pour 100 participants à 24 mois et rapporté 1,18 £ par livre dépensée (DWP, 2024)."
     - "En France, la Garantie jeunes a relevé l'emploi de 6,3 points à environ 14 mois (évaluation intermédiaire, 2016), sans confirmation sur la seconde cohorte."
+    - "En lycée professionnel, un accompagnement vers l'emploi prolongé cinq mois après le bac (AvenirPro, essai randomisé dans 171 lycées) a fait passer l'emploi de 16 % à 23 %, et de 10 % à 20 % pour les élèves les plus éloignés de l'emploi (Cahuc et al., IPP, 2024)."
     - "Financement proposé : 500 millions de livres en 2027/28, 5,8 milliards par an d'ici 2036/37, pour 440 000 jeunes de plus en emploi durable (Milburn, 2026, p. 25 et 30-31) ; montants non engagés par le gouvernement."
   statut: à chiffrer
   maj_le: 2026-11-22
@@ -703,6 +705,8 @@
   preuves:
     - "Avec un assistant d'IA, la productivité des travailleurs les moins expérimentés a crû de 34 %, contre 14 % en moyenne (Brynjolfsson, Li et Raymond, 2025 ; étude sur l'outil, pas sur une formation)."
     - "L'IA utilisée sans cadre pédagogique réduit de 17 % la performance sans IA (Bastani et al., 2025), d'où l'épreuve en deux temps."
+    - "Chez 133 avocats suivis trois mois, l'IA améliore le travail de tous pendant l'usage, mais seuls les expérimentés font mieux ensuite sans l'outil (+0,45 écart-type) ; les débutants n'en gardent rien en moyenne (Autor et al., 2026) : d'où l'apprentissage du métier d'abord."
+    - "En France, 69 % des salariés ne sont ni encouragés, ni équipés, ni formés à l'IA par leur employeur, contre 44 % aux États-Unis (Bergeaud et Bunel, LIFT, 2026) : l'école est le seul lieu sûr de cet apprentissage."
     - "Coût : à chiffrer (formation continue, licences des outils, attestation 2027)."
   note: EDUCATION-note-ia-jeunes-v7.pdf
   statut: à chiffrer
@@ -717,6 +721,7 @@
   preuves:
     - "Aux États-Unis, les programmes sectoriels adossés aux employeurs augmentent les revenus de +40 % en année 3 pour Year Up et de +11 à 12 % jusqu'aux années 5 à 7 pour WorkAdvance (essais randomisés, Katz et al., 2020, p. 7)."
     - "En France, le PIC n'a donné que +3 points d'accès à l'emploi aux jeunes, contre +9 en moyenne (comité scientifique du PIC, 2025, p. 5, évaluation non expérimentale)."
+    - "Sur plus de 200 évaluations, les formations pour demandeurs d'emploi n'ont presque aucun effet la première année et deviennent positives deux à trois ans après (Card, Kluve et Weber, 2018) : juger le dispositif sur l'emploi à 12 mois ne suffit pas."
     - "Coût : environ 22 100 € par place, soit 0,44 Md€ par an pour 20 000 places, financé par la fin de l'aide aux employeurs d'apprentis au-delà de bac+2 (calcul GT)."
   note: EDUCATION-note-ia-jeunes-v7.pdf
   statut: proposition
