@@ -470,15 +470,17 @@
     var base = { $schema: "https://vega.github.io/schema/vega-lite/v5.json", data: data, width: "container",
       config: { font: "system-ui, sans-serif", axis: { labelColor: "#4a5468", titleColor: "#4a5468", gridColor: "#e3e6ec", domainColor: "#cfd5df", labelFontSize: 11, titleFontSize: 11 },
         legend: { labelColor: "#4a5468", labelFontSize: 11 }, view: { stroke: null }, locale: { number: { decimal: ",", thousands: " ", grouping: [3] } } } };
-    if (g.type === "carte") {   // choropleth des départements de métropole : CSV categorie = code, serie = nom, valeur
+    if (g.type === "carte") {   // choropleth (départements de métropole par défaut ; g.geo = autre fond) : CSV categorie = code, serie = nom, valeur
       var sc = { scheme: g.echelle || "blues" };
+      if (g.quantiles) { sc.type = "quantile"; sc.scheme = { name: g.echelle || "blues", count: g.quantiles }; }
       if (g.inverse) sc.reverse = true;
       if (g.milieu !== undefined) sc.domainMid = g.milieu;
       delete base.data;
       base.height = 380;
       base.projection = { type: "conicConformal", parallels: [44, 49], rotate: [-3, 0] };
-      base.data = { url: BASE + "/assets/charts/geo/departements.geojson", format: { type: "json", property: "features" } };
+      base.data = { url: BASE + "/assets/charts/geo/" + (g.geo || "departements") + ".geojson", format: { type: "json", property: "features" } };
       var col = { field: "valeur", type: "quantitative", title: g.unite, scale: sc, legend: { orient: "bottom", direction: "horizontal", gradientLength: 220 } };
+      if (g.quantiles) col.legend = { orient: "bottom", direction: "horizontal", format: ",.0f", titleLimit: 560, gradientLength: 260 };
       var ttv = { field: "valeur", title: g.unite, format: ",.1~f" };
       if (g.classes) {   // classes ordonnées (CSV : valeur = rang 1..n, classe = libellé) : une couleur par classe, dans l'ordre de g.classes
         col = { field: "classe", type: "ordinal", title: g.unite, scale: g.couleurs ? { domain: g.classes, range: g.couleurs } : { domain: g.classes, scheme: g.echelle || "blues", reverse: !!g.inverse },
@@ -487,10 +489,10 @@
       }
       base.layer = [
         { mark: { type: "geoshape", fill: "#e3e6ec", stroke: "#fff", strokeWidth: 0.5 } },
-        { transform: [{ lookup: "properties.code", from: { data: { url: data.url, format: data.format }, key: "categorie", fields: ["serie", "valeur", "classe"] } },
+        { transform: [{ lookup: "properties." + (g.cle || "code"), from: { data: { url: data.url, format: data.format }, key: "categorie", fields: ["serie", "valeur", "classe"] } },
                       { filter: "isValid(datum.valeur)" }],
           mark: { type: "geoshape", stroke: "#fff", strokeWidth: 0.5 },
-          encoding: { color: col, tooltip: [{ field: "serie", title: "Département" }, ttv] } }];
+          encoding: { color: col, tooltip: [{ field: "serie", title: g.lieu || "Département" }, ttv] } }];
       return base;
     }
     var lbl = { type: "text", fontSize: 11, color: "#1d2433" };

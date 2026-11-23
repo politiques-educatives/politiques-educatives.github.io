@@ -1,0 +1,306 @@
+categorie,serie,valeur
+0051,Alençon,45.8
+0052,Arles,0.3
+0053,Avignon,89.8
+0054,Beauvais,41.9
+0055,Bollène-Pierrelatte,84.8
+0056,Cosne-Cours-sur-Loire,25.3
+0057,Dreux,99.6
+0058,La Vallée de la Bresle-Vimeu,99.9
+0059,Mâcon,15.6
+0060,Nevers,84.4
+0061,Nogent-le-Rotrou,51.3
+0062,Redon,68.1
+0063,Ussel,5.2
+0064,Valréas,9.9
+0101,Côte sous le vent,100.0
+0102,Est Grande Terre,71.8
+0103,Marie-Galante,100.0
+0104,Région Pointoise,90.2
+0105,Sud Basse-Terre,100.0
+0201,Le Centre-Atlantique,100.0
+0202,Le Centre agglomération,100.0
+0203,Le Nord-Atlantique,100.0
+0204,Le Nord-Caraibe,100.0
+0205,Le Sud,0.0
+0206,Le Sud-Caraibe,0.0
+0301,Est-littoral,0.0
+0302,Ouest-Guyanais,100.0
+0303,Savanes,100.0
+0401,L'Est,100.0
+0402,L'Ouest,100.0
+0403,Le Nord,0.0
+0404,Le Sud,0.0
+1101,Cergy-Vexin,69.0
+1102,Coulommiers,0.0
+1103,Étampes,0.0
+1104,Évry-Courcouronnes,82.4
+1105,Fontainebleau-Nemours,59.1
+1106,Marne-la-Vallée,89.3
+1107,Meaux,85.9
+1108,Melun,62.0
+1109,Paris,18.0
+1110,Provins,0.0
+1111,Rambouillet,0.0
+1112,Roissy,88.4
+1113,Saclay,76.5
+1114,Seine-Yvelinoise,100.0
+1115,Versailles-Saint-Quentin,92.5
+2401,Blois,18.8
+2402,Bourges,83.0
+2403,Chartres,87.7
+2404,Châteaudun,88.8
+2405,Châteauroux,77.6
+2406,Chinon,0.0
+2407,Gien,99.7
+2408,Loches,0.0
+2409,Montargis,100.0
+2410,Orléans,69.2
+2411,Pithiviers,91.7
+2412,Romorantin-Lanthenay,62.5
+2413,Tours,22.0
+2414,Vendôme,6.4
+2415,Vierzon,100.0
+2701,Autun,94.4
+2702,Auxerre,85.0
+2703,Avallon,0.0
+2704,Beaune,8.8
+2705,Belfort,99.8
+2706,Besançon,73.4
+2707,Chalon-sur-Saône,89.5
+2708,Charolais,69.4
+2709,Châtillon-Montbard,78.1
+2710,Creusot-Montceau,99.8
+2711,Dijon,75.1
+2712,Dole,85.1
+2713,Lons-le-Saunier,19.9
+2714,Montbéliard,94.7
+2715,Pontarlier,56.5
+2716,Saint-Claude,95.4
+2717,Sens,91.7
+2718,Vesoul,35.0
+2801,Argentan,88.5
+2802,Avranches,0.0
+2803,Bernay,97.3
+2804,Caen,67.3
+2805,Cherbourg-en-Cotentin,100.0
+2806,Coutances,0.0
+2807,Dieppe-Caux maritime,92.2
+2808,Évreux,100.0
+2809,Flers,63.3
+2810,Granville,0.0
+2811,Honfleur Pont-Audemer,48.0
+2812,L'Aigle,44.0
+2813,Le Havre,98.5
+2814,Lisieux,91.3
+2815,Rouen,95.5
+2816,Saint-Lô,20.6
+2817,Vernon-Gisors,86.0
+2818,Vire Normandie,95.4
+2819,Yvetot-Vallée du Commerce,86.8
+3201,Abbeville,95.3
+3202,Amiens,63.9
+3203,Arras,0.0
+3204,Berck,0.4
+3205,Béthune,99.4
+3206,Boulogne-sur-Mer,99.5
+3207,Calais,89.6
+3208,Cambrai,94.7
+3209,Château-Thierry,100.0
+3210,Compiègne,70.3
+3211,Creil,93.4
+3212,Douai,78.3
+3213,Dunkerque,100.0
+3214,Laon,27.2
+3215,Lens,99.8
+3216,Lille,100.0
+3217,Maubeuge,100.0
+3218,Roubaix-Tourcoing,100.0
+3219,Saint-Omer,97.3
+3220,Saint-Quentin,81.3
+3221,Soissons,97.1
+3222,Valenciennes,99.3
+4401,Bar-le-Duc,61.7
+4402,Châlons-en-Champagne,79.7
+4403,Charleville-Mézières,92.8
+4404,Chaumont,99.6
+4405,Colmar,80.2
+4406,Épernay,100.0
+4407,Épinal,97.2
+4408,Forbach,100.0
+4409,Haguenau,58.9
+4410,Metz,79.9
+4411,Mulhouse,100.0
+4412,Nancy,98.1
+4413,Reims,94.0
+4414,Remiremont,25.9
+4415,Romilly-sur-Seine,75.6
+4416,Saint-Avold,98.5
+4417,Saint-Dié-des-Vosges,100.0
+4418,Saint-Louis,100.0
+4419,Sarrebourg,1.9
+4420,Sarreguemines,70.5
+4421,Sedan,75.5
+4422,Sélestat,100.0
+4423,Strasbourg,41.0
+4424,Thionville,96.9
+4425,Troyes,84.3
+4426,Verdun,0.0
+4427,Vitry-le-François Saint-Dizier,99.5
+5201,Ancenis,91.4
+5202,Angers,0.0
+5203,Challans,44.6
+5204,Château-Gontier-sur-Mayenne,71.1
+5205,Châteaubriant,85.8
+5206,Cholet,100.0
+5207,Fontenay-le-Comte,55.7
+5208,La Ferté-Bernard,84.1
+5209,La Flèche,33.9
+5210,La Roche-sur-Yon,98.3
+5211,Laval,80.6
+5212,Le Mans,90.7
+5213,Les Herbiers-Montaigu,100.0
+5214,Les Sables-d'Olonne,46.5
+5215,Mayenne,89.9
+5216,Nantes,79.4
+5217,Pornic,0.0
+5218,Sablé-sur-Sarthe,87.0
+5219,Saint-Nazaire,81.6
+5220,Saumur,0.0
+5221,Segré-en-Anjou Bleu,64.3
+5301,Auray,0.0
+5302,Brest,84.4
+5303,Carhaix-Plouguer,55.3
+5304,Dinan,100.0
+5305,Fougères,96.2
+5306,Guingamp,100.0
+5307,Lamballe-Armor,58.8
+5308,Lannion,98.6
+5309,Lorient,98.8
+5310,Morlaix,100.0
+5311,Ploërmel,52.8
+5312,Pontivy-Loudéac,28.5
+5313,Quimper,70.6
+5314,Quimperlé,90.6
+5315,Rennes,9.3
+5316,Saint-Brieuc,98.2
+5317,Saint-Malo,4.8
+5318,Vannes,99.1
+5319,Vitré,99.8
+7501,Agen,85.7
+7502,Angoulême,83.2
+7503,Bayonne,75.4
+7504,Bergerac,96.4
+7505,Bordeaux,74.0
+7506,Bressuire,77.8
+7507,Brive-la-Gaillarde,95.5
+7508,Châtellerault,98.6
+7509,Cognac,73.0
+7510,Dax,3.8
+7511,Guéret,98.8
+7512,La Rochelle,0.0
+7513,La Teste-de-Buch,20.0
+7514,Langon,14.6
+7515,Lesparre-Médoc,0.0
+7516,Libourne,85.5
+7517,Limoges,77.6
+7518,Marmande,87.6
+7519,Mont-de-Marsan,0.0
+7520,Niort,78.4
+7521,Oloron-Sainte-Marie,100.0
+7522,Pau,100.0
+7523,Périgueux,38.7
+7524,Poitiers,0.0
+7525,Rochefort,93.6
+7526,Royan,98.2
+7527,Saint-Junien,56.0
+7528,Saintes,0.5
+7529,Sarlat-la-Canéda,100.0
+7530,Thouars,82.6
+7531,Tulle,43.4
+7532,Villeneuve-sur-Lot,0.0
+7601,Agde-Pézenas,100.0
+7602,Albi,77.8
+7603,Alès-Le Vigan,81.6
+7604,Auch,62.7
+7605,Bagnols-sur-Cèze,97.1
+7606,Béziers,78.3
+7607,Cahors,58.5
+7608,Carcassonne-Limoux,23.9
+7609,Castelsarrasin-Moissac,100.0
+7610,Castres-Mazamet,95.9
+7611,Figeac-Villefranche,99.3
+7612,Foix-Pamiers,96.9
+7613,Mende,26.8
+7614,Millau,0.0
+7615,Montauban,16.8
+7616,Montpellier,1.4
+7617,Narbonne,78.4
+7618,Nîmes,4.5
+7619,Nord-du-Lot,99.5
+7620,Perpignan,84.8
+7621,Rodez,73.4
+7622,Saint-Gaudens,99.2
+7623,Sète,100.0
+7624,Tarbes-Lourdes,87.3
+7625,Toulouse,1.9
+8401,Annecy,79.9
+8402,Aubenas,35.9
+8403,Aurillac,97.2
+8404,Belley,2.7
+8405,Bourg-en-Bresse,48.2
+8406,Bourgoin-Jallieu,94.3
+8407,Chambéry,0.9
+8408,Clermont-Ferrand,96.8
+8409,Grenoble,96.6
+8410,Issoire,96.3
+8411,La Maurienne,100.0
+8412,La Plaine du Forez,94.4
+8413,La Tarentaise,1.4
+8414,La Vallée de l'Arve,95.0
+8415,Le Chablais,48.8
+8416,Le Genevois Français,37.7
+8417,Le Livradois,97.3
+8418,Le Mont Blanc,0.0
+8419,Le Puy-en-Velay,77.3
+8420,Les Sources de la Loire,99.9
+8421,Lyon,2.3
+8422,Montélimar,95.2
+8423,Montluçon,82.6
+8424,Moulins,6.1
+8425,Oyonnax,100.0
+8426,Roanne,99.2
+8427,Romans-sur-Isère,95.0
+8428,Saint-Étienne,95.7
+8429,Saint-Flour,100.0
+8430,Tarare,100.0
+8431,Valence,85.5
+8432,Vichy,93.9
+8433,Vienne-Annonay,58.8
+8434,Villefranche-sur-Saône,64.5
+8435,Voiron,100.0
+9301,Aix-en-Provence,97.3
+9302,Briançon,100.0
+9303,Brignoles,0.0
+9304,Cannes,99.8
+9305,Carpentras,35.9
+9306,Cavaillon,56.8
+9307,Digne-les-Bains,99.8
+9308,Draguignan,93.2
+9309,Fréjus,1.9
+9310,Gap,100.0
+9311,Manosque,97.5
+9312,Marseille,99.7
+9313,Martigues-Salon,100.0
+9314,Menton,93.9
+9315,Nice,95.9
+9316,Orange,0.0
+9317,Sainte-Maxime,0.0
+9318,Toulon,75.7
+9401,Ajaccio,86.5
+9402,Bastia,76.2
+9403,Calvi,0.0
+9404,Corte,0.0
+9405,Ghisonaccia,0.0
+9406,Porto-Vecchio,0.0
+9407,Propriano,0.0

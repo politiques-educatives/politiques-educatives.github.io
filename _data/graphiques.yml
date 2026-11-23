@@ -4,6 +4,10 @@
 #          serie = nom, valeur ; DROM dans le CSV mais pas sur la carte ; données écrites par scripts/build_cartes.py depuis ../data/raw-new/)
 #          options de carte : echelle (palette Vega, défaut blues), inverse: true (couleur la plus foncée pour la plus petite valeur),
 #          milieu (valeur centrale d'une palette divergente, ex. 0)
+#          geo: autre fond de carte, nom d'un fichier de assets/charts/geo/ sans .geojson (défaut departements ; ex. zones-emploi =
+#          zones d'emploi 2020 de l'Insee, métropole, écrites par build/cartes_industrie.py de horizons-veille/site-programmes) ;
+#          cle: propriété du GeoJSON jointe à la colonne categorie (défaut code) ; lieu: titre de l'infobulle (défaut Département) ;
+#          quantiles: n = n classes d'effectifs égaux (échelle quantile), utile quand quelques valeurs extrêmes écrasent la palette
 #          classes: [libellés dans l'ordre] = carte en classes ordonnées (CSV : valeur = rang 1..n, classe = libellé ; une ligne
 #          « non lu » sans valeur reste en gris) ; couleurs: [une couleur par classe, même ordre] (sinon palette echelle)
 # auto : true = données actualisées chaque mois par .github/workflows/charts.yml (InserSup)
@@ -238,3 +242,47 @@
   unite: "score PISA"
   source: "OCDE, PISA 2003 et 2025, repris par Le Monde, hors-série, nov.-déc. 2026 (moyennes OCDE hors Costa Rica, Luxembourg et Espagne) ; scores France 2025 : DEPP, NI 26.40"
   note: "Le Monde chiffre aussi à environ 100 points l'écart en sciences entre les élèves les plus et les moins favorisés (lecture de graphique, légende ambiguë)."
+- id: industrie-ze-2015-2025
+  sujet: emploi
+  titre: "Depuis 2015, l'emploi salarié industriel progresse dans 160 zones d'emploi sur 287"
+  type: carte
+  geo: zones-emploi
+  lieu: "Zone d'emploi"
+  quantiles: 5
+  echelle: blues
+  unite: "évolution des salariés de l'industrie, fin 2015 à fin 2025 (%)"
+  source: "Urssaf (2026), effectifs salariés du secteur privé par zone d'emploi x NA88, au 31/12, 2015 et 2025 ; zonage en zones d'emploi 2020, Insee ; d'après la carte du Monde, hors-série, nov.-déc. 2026 (p. 110-111), refaite sur données ouvertes"
+  note: "Industrie = extraction, fabrication, énergie, eau et déchets (grand secteur GS1 de l'Urssaf), salariés du privé, apprentis compris. En métropole, +3,3 % au total (3 016 268 à 3 116 683 salariés) ; de -27,9 % (Autun) à +58,3 % (Briançon, 398 à 630 salariés). Parmi les grands bassins : Cherbourg-en-Cotentin +34,5 % (12 596 à 16 942), Saint-Nazaire +30,0 %, Bordeaux +29,7 %, mais Montbéliard -27,2 % (20 873 à 15 197). Zones de moins de 100 salariés industriels en 2015 exclues. Outre-mer dans le CSV. Calcul GT avec build/cartes_industrie.py (horizons-veille)."
+- id: industrie-ze-1975-2022
+  sujet: emploi
+  titre: "Depuis 1975, l'emploi industriel a reculé dans 221 zones d'emploi sur 286, jusqu'à -81 % à Forbach ; l'Ouest a progressé"
+  type: carte
+  geo: zones-emploi
+  lieu: "Zone d'emploi"
+  quantiles: 5
+  echelle: blues
+  inverse: true
+  unite: "évolution des actifs de 25 à 54 ans travaillant dans l'industrie, 1975-2022 (%)"
+  source: "Insee, recensements harmonisés 1968-2022 (actifs occupés de 25 à 54 ans par secteur, par commune de travail, décembre 2025) ; communes de 1975 rattachées aux zones d'emploi 2020 par le Code officiel géographique 2026 ; d'après la carte du Monde, hors-série, nov.-déc. 2026 (p. 110-111), refaite sur données ouvertes"
+  note: "Le Monde couvre 1975-2024 ; les séries ouvertes par commune et par secteur s'arrêtent au recensement de 2022 et ne gardent que les 25-54 ans. En métropole, 4,22 millions d'actifs de 25 à 54 ans travaillaient dans l'industrie en 1975 et 2,33 millions en 2022 (-45 %) ; médiane des zones -28 %. De -80,7 % (Forbach) à +433,9 % (Lamballe-Armor, 1 160 à 6 193) ; Thionville -80,4 %, Roubaix-Tourcoing -79,5 %, Paris -77,8 %, mais Ploërmel +209,1 %, Vitré +155,7 %. Les chiffres de 1975 viennent d'une exploitation par sondage (valeurs communales multiples de 5) : les petites zones sont imprécises. Métropole seulement ; Propriano (moins de 100 emplois en 1975) exclue."
+- id: industrie-ze-potentiel
+  sujet: emploi
+  titre: "Où l'industrie pèse et embauche : Cherbourg, Fougères, Sablé-sur-Sarthe en tête, Calais, Rambouillet et Metz en bas"
+  type: carte
+  geo: zones-emploi
+  lieu: "Zone d'emploi"
+  quantiles: 5
+  echelle: blues
+  unite: "indicateur Horizons sur 100 (rang moyen)"
+  source: "Urssaf (2026), effectifs salariés du secteur privé par zone d'emploi x NA88, 2015 et 2025 ; indicateur construit par le GT, d'après la carte du Monde, hors-série, nov.-déc. 2026 (p. 110-111), dont l'indice n'est pas publié en données ouvertes"
+  note: "Notre indicateur, pas celui du Monde (qui combine foncier, écosystème, main-d'œuvre, qualité de vie et résilience climatique, sans données publiées par zone). Deux composantes de poids égal, chacune en rang sur 100 entre les 287 zones de métropole : la part de l'industrie dans l'emploi salarié privé fin 2025 et l'évolution de l'emploi salarié industriel de 2015 à 2025. En tête : Cherbourg-en-Cotentin 91,6 (32 % des salariés dans l'industrie, +34 %), Fougères 91,4 (35 %, +21 %), Sablé-sur-Sarthe 90,0 (54 %, +12 %) ; en bas : Calais 5,2 (10 %, -20 %), Rambouillet 8,0, Metz 9,1. 22 des 57 zones de la classe la plus haute sont en Bretagne ou en Pays de la Loire."
+- id: industrie-ze-territoires
+  sujet: emploi
+  titre: "Les Territoires d'industrie couvrent au moins 90 % de l'emploi industriel dans 113 zones d'emploi sur 287, mais moins de 10 % à Lyon, Toulouse et Rennes"
+  type: carte
+  geo: zones-emploi
+  lieu: "Zone d'emploi"
+  echelle: blues
+  unite: "% des emplois industriels de la zone dans un Territoire d'industrie"
+  source: "ANCT (2026), programme Territoires d'industrie, communes couvertes 2023-2027 ; Insee, recensement 2022 (actifs de 25 à 54 ans dans l'industrie par commune de travail)"
+  note: "183 Territoires d'industrie (2023-2027), le programme public de soutien à l'industrie par bassin. Part des actifs de 25 à 54 ans travaillant dans l'industrie dont la commune de travail est couverte. 31 zones n'en comptent aucun, les plus industrielles étant Angers, Chambéry et Poitiers. Outre-mer dans le CSV."

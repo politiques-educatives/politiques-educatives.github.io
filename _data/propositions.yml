@@ -178,6 +178,7 @@
   titre: "Publier l'emploi, le salaire et l'exposition à l'IA de chaque formation, master compris"
   explication: "Pour chaque formation de Parcoursup, une note de résilience à l'IA de A à E, à côté du salaire et du taux d'emploi à 30 mois (InserSup), et les postes ouverts dans le bassin. Le rapport Milburn recommande aussi de rendre visibles les salaires des diplômés de chaque formation du supérieur."
   preuves:
+    - "Montrer aux familles les emplois industriels de leur bassin a un sens économique : là où l'État américain a implanté des usines pendant la guerre, les garçons du comté ont gagné 2,5 % de plus par an une fois adultes, surtout ceux de familles modestes (Garin et Rothbaum, 2025)."
     - "Entre novembre 2022 et mars 2026, les embauches en CDI des 21-29 ans ont baissé de 28,3 % dans les métiers les plus exposés à l'IA, contre 7,5 % dans les moins exposés (Palladino, Bergeaud, Bertheau, Bunel et Degos, 2026)."
     - "La Boussole classe les 13 819 formations de Parcoursup 2025 en 39 familles et affiche l'emploi et le salaire de 2 427 masters d'université (InserSup 2026)."
     - "Salaires des diplômés de chaque formation du supérieur rendus visibles (Milburn, 2026, p. 15-16)."
@@ -551,6 +552,7 @@
   titre: "Faire la terminale de bac pro en apprentissage, payée, avec le même diplôme"
   explication: "Un élève de voie professionnelle qui a trouvé un employeur fait sa terminale en apprentissage dans sa spécialité et prépare le même diplôme. Le lycée l'aide à trouver l'employeur, en priorité dans les métiers de production (mesure N°80), et des jours de cours au lycée garantissent un plancher de français et de mathématiques. Le retour au lycée est garanti si le contrat casse, et aucune section n'est fermée au titre de la mesure."
   preuves:
+    - "Après un choc industriel, l'emploi revient par les jeunes qui entrent, pas par la reconversion des salariés licenciés : dans les zones américaines frappées par la Chine, le rebond d'après 2010 a profité à de nouvelles générations dans d'autres métiers (Autor et al., 2025). Orienter tôt vers les métiers qui recrutent est donc le levier principal."
     - "Emploi à 12 mois : 74,1 % après un CFA contre 52,8 % après un lycée professionnel ; écart brut, pas un effet causal (InserJeunes)."
     - "En Suède, une année de plus en filière professionnelle n'a rien rapporté en revenus et a accru le décrochage des plus faibles (Hall, 2012) : le bac pro en 4 ans est écarté."
     - "Coût : contrats sur le financement existant de l'apprentissage, pour environ 24 000 élèves ; solde public de -18 M€ au central (-50 à 424 M€), réserve à chiffrer sur les heures des professeurs de lycée professionnel (calcul GT)."
@@ -619,6 +621,7 @@
   titre: "Des sections « lycée-branche » de la seconde au BTS, avec le diplôme national"
   explication: "Tout lycée professionnel ou technologique peut ouvrir, par convention avec une branche ou au moins deux employeurs du bassin dont une PME, une section de cinq ans de la seconde au BTS : un parrain d'entreprise par élève, un stage chaque année, des modules de BTS dès la terminale et un entretien d'embauche garanti à la sortie. Les diplômes nationaux et les heures de français et de mathématiques restent inchangés ; la priorité va aux métiers de production (N°80), avec au moins la moitié des places pour des élèves d'éducation prioritaire ou boursiers."
   preuves:
+    - "La proximité de l'offre compte : ouvrir une STS dans un lycée accroît d'environ 8 % l'inscription des élèves du secteur, l'effet étant le plus fort pour les élèves de la voie professionnelle et des petites communes (Thebault, IPP, 2025)."
     - "Aux États-Unis, les Career Academies ont relevé le salaire de 11 % par an pendant huit ans, et de 17 % pour les jeunes hommes (Kemple, MDRC, 2008, p. iii)."
     - "À New York, P-TECH a porté à 13 % contre 3 % la part de jeunes hommes diplômés à bac+2, pour un coût proche d'un lycée ordinaire (MDRC, 2023)."
     - "Coût : 3,7 M€ par an en croisière pour 500 sections en 2032 (environ 36 000 lycéens), par redéploiement de crédits de l'Éducation nationale (calcul GT)."

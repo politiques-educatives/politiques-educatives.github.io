@@ -1284,3 +1284,226 @@
   cle: "Les formations pour chômeurs n'ont presque aucun effet la première année mais deviennent rentables deux à trois ans après (Card, Kluve et Weber, 2018, plus de 200 études)."
   propositions: [ia-formation-smic]
   dossier: ""
+- id: lemonde-hs-2026-industrie
+  titre: "Le Monde, hors-série, « Le made in France marque le pas » (novembre-décembre 2026)"
+  ref: "Bonnefous, B. (2026), « Le made in France marque le pas », Le Monde, hors-série, novembre-décembre 2026, p. 110-111."
+  lien: ""
+  sujets: [emploi]
+  type: revue
+  statut: secondaire
+  resume: "L'article fait de l'industrie un sujet de la présidentielle de 2027. Après des décennies de recul, l'industrie est repartie en 2017 et la crise sanitaire a montré la dépendance du pays pour des biens essentiels ; l'élan s'essouffle depuis 2024. En quarante ans, l'industrie est passée d'environ un cinquième à moins d'un dixième de la richesse nationale, et l'emploi manufacturier d'un quart à environ 9 % de l'emploi total, un peu plus de 3 millions de postes directs. L'année 2021 avait vu plus d'ouvertures que de fermetures d'usines ; au premier semestre 2026, les fermetures l'emportent nettement. Les écarts sont forts selon les filières (défense, énergie et IA demandeuses ; automobile et chimie en difficulté) et selon les territoires : Occitanie aéronautique et Cotentin d'un côté, vallée de la chimie entre Lyon et Grenoble de l'autre. Comme sept emplois industriels sur dix sont hors des métropoles, l'enjeu est aussi territorial. Deux cartes par zone d'emploi illustrent ces écarts : l'évolution de l'emploi industriel depuis 1975 et un indice de potentiel de réindustrialisation (sans producteur explicite, probablement Bpifrance), refaites ici sur données ouvertes."
+  sections:
+    - "Emploi manufacturier : 25 % de l'emploi total dans les années 1980 (plus de 5 millions), 14 % dans les années 2000, environ 9 % aujourd'hui (Insee, Dares)."
+    - "Usines : 51 ouvertures annoncées pour 91 fermetures au premier semestre 2026, le pire solde de premier semestre depuis 2013 (Trendeo)."
+    - "Territoires : 7 emplois industriels sur 10 hors des métropoles ; de -81 % à +127 % d'emplois industriels entre 1975 et 2024 selon la zone d'emploi (Insee)."
+    - "Recrutement : 59 300 emplois vacants dans l'industrie hors construction au deuxième trimestre 2026."
+    - "Carte de potentiel : indice synthétique par zone d'emploi (foncier et infrastructures, écosystème local, main-d'œuvre qualifiée, qualité de vie, résilience climatique), valeurs par zone non publiées."
+  cle: "Sept emplois industriels sur dix sont hors des métropoles, et 59 300 postes industriels étaient vacants au deuxième trimestre 2026 (Le Monde, hors-série, nov.-déc. 2026)."
+  propositions: []
+  dossier: ""
+- id: urssaf-effectifs-ze-na88
+  titre: "Urssaf, effectifs salariés du secteur privé par zone d'emploi et secteur (NA88), au 31 décembre depuis 2006"
+  ref: "Urssaf (2026), Nombre d'établissements employeurs et effectifs salariés du secteur privé, par zone d'emploi x NA88 (au 31/12 depuis 2006), open.urssaf.fr, données 2006-2025."
+  lien: https://www.data.gouv.fr/datasets/nombre-detablissements-employeurs-et-effectifs-salaries-du-secteur-prive-par-zone-demploi-x-na88-au-31-12-depuis-2006
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "Effectifs salariés en fin d'année des établissements employeurs du secteur privé (régime général), par zone d'emploi 2020 et par secteur fin (NA88), de 2006 à 2025, métropole et outre-mer. Apprentis compris depuis la publication de juin 2023 ; données issues de la déclaration sociale nominative (DSN), d'où des révisions de niveau. L'activité et la commune d'un établissement sont celles de sa dernière situation, appliquées à tout l'historique. Fichier lu et agrégé par le GT : l'industrie (extraction, fabrication, énergie, eau et déchets) compte 3 053 933 salariés fin 2015 et 3 162 572 fin 2025 en France (+3,6 %)."
+  cle: "L'emploi salarié privé dans l'industrie est passé de 3 053 933 fin 2015 à 3 162 572 fin 2025, +3,6 % (Urssaf, calcul GT)."
+  propositions: []
+  dossier: ""
+- id: insee-rp-harmonises-secteur
+  titre: "Insee, recensements harmonisés 1968-2022 : actifs occupés de 25 à 54 ans par secteur et commune de travail"
+  ref: "Insee (2025), Structure de la population active de 25 à 54 ans selon la catégorie socioprofessionnelle, le diplôme, le sexe ou le secteur d'activité (1968 à 2022), recensements harmonisés, séries départementales et communales, décembre 2025."
+  lien: https://www.insee.fr/fr/statistiques/1893185
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "Séries comparables des recensements de 1968 à 2022 : actifs occupés de 25 à 54 ans par secteur (agriculture, industrie, bâtiment, tertiaire) et sexe, au lieu de travail, par commune dans la géographie de chaque recensement. Les 15 ans ou plus ne sont publiés que jusqu'en 1999. Rattachées par le GT aux zones d'emploi 2020 (Code officiel géographique 2026), les communes donnent 4,22 millions d'actifs de 25 à 54 ans dans l'industrie en 1975 et 2,37 millions en 2022 en France hors Mayotte, dont 2,33 millions en métropole (-45 % en métropole)."
+  cle: "En métropole, 4,22 millions d'actifs de 25 à 54 ans travaillaient dans l'industrie en 1975, 2,33 millions en 2022 (Insee, recensements harmonisés, calcul GT)."
+  propositions: []
+  dossier: ""
+- id: anct-territoires-industrie
+  titre: "ANCT, programme Territoires d'industrie 2023-2027 : liste des territoires et des communes couvertes"
+  ref: "Agence nationale de la cohésion des territoires (2026), Programme Territoires d'industrie, listes des territoires, EPCI et communes 2023-2027 (COG 2026), data.gouv.fr."
+  lien: https://www.data.gouv.fr/datasets/programme-territoires-dindustrie
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "Le programme Territoires d'industrie aide, bassin par bassin, à répondre aux besoins des industriels : compétences, mobilité des salariés, foncier pour s'implanter ou s'agrandir. Le fichier liste 183 territoires pour 2023-2027 et les communes qu'ils couvrent. L'ANCT rappelle que 70 % de l'emploi industriel se trouve hors des métropoles. Croisé par le GT avec le recensement 2022, il couvre au moins 90 % de l'emploi industriel dans 113 zones d'emploi de métropole sur 287, mais moins de 10 % à Lyon, Toulouse et Rennes."
+  cle: "183 Territoires d'industrie pour 2023-2027 ; 70 % de l'emploi industriel est hors des métropoles (ANCT)."
+  propositions: []
+  dossier: ""
+- id: insee-zones-emploi-2020
+  titre: "Insee, zonage en zones d'emploi 2020 (composition communale et contours, géographie 2026)"
+  ref: "Insee (2026), Zonage en zones d'emploi 2020, composition communale au 1er janvier 2026 et fonds de carte."
+  lien: https://www.insee.fr/fr/information/4652957
+  sujets: [emploi]
+  type: données
+  statut: vérifié
+  resume: "Une zone d'emploi est un espace où la plupart des actifs résident et travaillent ; le zonage 2020 découpe la France en 306 zones (287 en métropole), référence des taux de chômage localisés et des diagnostics territoriaux. Le GT s'en sert pour les cartes de l'industrie : rattachement des communes et contours simplifiés."
+  cle: "306 zones d'emploi, dont 287 en métropole (Insee, zonage 2020)."
+  propositions: []
+  dossier: ""
+
+# ================= POLITIQUE INDUSTRIELLE ET VOIE PRO (23/11/2026) : études citées, statut secondaire =================
+- id: aghion-2026-capital-moderne
+  titre: Aghion, Antonin, Bunel et Jaravel, machines modernes et emploi dans l'industrie française (2026)
+  ref: 'Aghion, P., C. Antonin, S. Bunel et X. Jaravel (2026), « Modern Manufacturing Capital, Labor Demand and Product Market Dynamics: Evidence from France », American Economic Journal: Macroeconomics, à paraître.'
+  lien: https://www.insee.fr/en/statistiques/7613955
+  sujets:
+  - emploi
+  - formation
+  type: étude causale
+  statut: secondaire
+  resume: 'Les auteurs suivent les usines, entreprises et secteurs manufacturiers français de 1995 à 2017 et mesurent ce que change l''achat de machines modernes, automatisation comprise. L''emploi augmente à chaque niveau, y compris celui des ouvriers non qualifiés ; les salaires et leur dispersion ne bougent pas ; ventes, exportations et profits montent et les prix baissent. Au niveau du secteur, l''effet positif n''apparaît que dans les industries exposées aux importations, où les entreprises qui s''équipent prennent des parts aux concurrents étrangers. Limite : l''effet total dans un secteur abrité est nul, et l''étude ne porte pas sur l''IA.'
+  sections:
+  - 'Données : industrie manufacturière française, 1995-2017, usines, entreprises et secteurs.'
+  - 'Résultat : l''investissement en machines modernes accroît l''emploi, ouvriers non qualifiés compris, sans hausse des inégalités de salaire.'
+  - 'Nuance : au niveau sectoriel, gain d''emploi seulement dans les industries concurrencées par les importations.'
+  cle: Dans l'industrie française, les entreprises qui achètent des machines modernes embauchent davantage, y compris des ouvriers non qualifiés (Aghion, Antonin, Bunel et Jaravel, 2026).
+- id: hirvonen-2025
+  titre: Hirvonen, Stenhammar et Tuhkuri, aides à l'achat de machines dans les PME finlandaises (2025)
+  ref: 'Hirvonen, J., A. Stenhammar et J. Tuhkuri (2025), « Winners and Losers of Technology Grants: Evidence on Jobs and Skills », RFBerlin Discussion Paper n° 2504.'
+  lien: https://ideas.repec.org/p/crm/wpaper/2504.html
+  sujets:
+  - emploi
+  - formation
+  type: étude causale
+  statut: secondaire
+  resume: 'Les auteurs comparent les PME finlandaises lauréates d''aides européennes à l''achat de machines (robots, machines à commande numérique), de 1994 à 2018, à des candidates très proches qui ont échoué. L''emploi des lauréates augmente d''environ 20 % (23 % dans la version de 2022), sans que la part des diplômés du supérieur change. Les dossiers de candidature montrent que l''argent a surtout financé l''expansion et de nouveaux produits plutôt que le remplacement des tâches existantes. Limite : document de travail, résultats sur des PME d''un seul pays.'
+  sections:
+  - 'Méthode : lauréates contre candidates écartées de justesse.'
+  - 'Résultat : emploi +20 % environ, composition par diplôme inchangée.'
+  - 'Mécanisme : expansion et nouveaux produits plutôt qu''automatisation des postes.'
+  cle: Les PME finlandaises aidées pour acheter des machines ont accru leur emploi d'environ 20 % par rapport aux candidates écartées, sans évincer les non-diplômés (Hirvonen et al., 2025).
+- id: malgouyres-2017
+  titre: Malgouyres, la concurrence chinoise et l'emploi local en France (2017)
+  ref: 'Malgouyres, C. (2017), « The Impact of Chinese Import Competition on the Local Structure of Employment and Wages: Evidence from France », Journal of Regional Science, 57(3), 411-441.'
+  lien: ''
+  sujets:
+  - emploi
+  - inegalites
+  type: étude causale
+  statut: secondaire
+  resume: 'L''étude transpose à la France la méthode d''Autor, Dorn et Hanson : elle compare les zones d''emploi selon leur spécialisation dans les industries concurrencées par la Chine. La hausse des importations chinoises explique environ 13 % des pertes d''emplois manufacturiers français entre 2001 et 2007, avec des pertes d''emplois locales qui débordent sur les services de la zone. Limite : période ancienne, avant la montée de la Chine dans les biens d''équipement et l''automobile.'
+  sections:
+  - 'Méthode : exposition des zones d''emploi aux importations chinoises.'
+  - 'Résultat : environ 13 % des pertes d''emplois manufacturiers de 2001-2007.'
+  - 'Effet local : les pertes s''étendent hors de l''industrie dans les zones exposées.'
+  cle: La concurrence chinoise explique environ 13 % des emplois industriels perdus en France entre 2001 et 2007 (Malgouyres, 2017).
+- id: autor-2025-places-people
+  titre: Autor, Dorn, Hanson, Jones et Setzler, les lieux et les personnes face au choc chinois (2025)
+  ref: 'Autor, D. H., D. Dorn, G. H. Hanson, M. R. Jones et B. Setzler (2025), « Places versus People: The Ins and Outs of Labor Market Adjustment to Globalization », in C. Dustmann et T. Lemieux (dir.), Handbook of Labor Economics, vol. 6, North-Holland, 549-653.'
+  lien: ''
+  sujets:
+  - emploi
+  - orientation
+  type: revue
+  statut: secondaire
+  resume: 'Les auteurs suivent sur longue période les zones américaines les plus exposées à la concurrence chinoise. L''emploi local y repart après 2010, mais pas pour les ouvriers de l''industrie présents au moment du choc : la plupart n''ont ni changé de région ni trouvé d''emplois mieux payés. Le rebond vient d''une nouvelle génération entrée sur le marché du travail dans d''autres métiers, souvent de services. Leçon pour l''orientation : l''ajustement à un choc industriel passe surtout par les choix des jeunes qui entrent, pas par la reconversion des salariés en place. Chiffres précis à compléter depuis le chapitre.'
+  sections:
+  - 'Constat : rebond de l''emploi local après 2010 dans les zones exposées.'
+  - 'Personnes : les ouvriers déplacés restent sur des trajectoires dégradées.'
+  - 'Mécanisme : l''ajustement passe par les nouveaux entrants.'
+  cle: Après le choc chinois, l'emploi est revenu dans les zones touchées par l'arrivée de jeunes dans d'autres métiers, pas par la reconversion des ouvriers licenciés (Autor et al., 2025).
+- id: kalantzis-thubin-2017
+  titre: Kalantzis et Thubin, les causes de la désindustrialisation en France (Banque de France, 2017)
+  ref: Kalantzis, Y. et C. Thubin (2017), « Les causes de la désindustrialisation en France », Billet du blog de la Banque de France, n° 37.
+  lien: ''
+  sujets:
+  - emploi
+  - orientation
+  type: données
+  statut: secondaire
+  resume: 'Le billet décompose le recul du poids de l''industrie en France. Trois causes structurelles en expliquent 87 % : les gains de productivité plus rapides dans l''industrie, qui font baisser le prix relatif des biens ; le déplacement de la demande des ménages et des entreprises vers les services ; l''externalisation par les industriels de services autrefois faits en interne. La compétitivité face à l''étranger n''explique que le reste. Conséquence pour l''orientation : la part de l''industrie dans l''emploi continuera probablement de baisser, et l''enjeu porte sur les métiers industriels en tension plutôt que sur un pari global sur l''industrie.'
+  sections:
+  - 'Décomposition : 87 % structurel (productivité, demande, externalisation).'
+  - 'Compétitivité extérieure : part minoritaire.'
+  cle: 87 % de la désindustrialisation française tient à des causes structurelles, la compétitivité n'expliquant que le reste (Kalantzis et Thubin, Banque de France, 2017).
+- id: thebault-2025
+  titre: Thebault, ouvrir une STS ou une CPGE près de chez soi (Note IPP n° 114, 2025)
+  ref: Thebault, G. (2025), « Peut-on réduire les inégalités géographiques dans l'accès aux filières sélectives en France ? », Note IPP n° 114, mars 2025.
+  lien: https://www.ipp.eu/wp-content/uploads/2025/03/note_ipp_114-1.pdf
+  sujets:
+  - orientation
+  - inegalites
+  type: étude causale
+  statut: secondaire
+  resume: 'L''étude mesure l''effet des sections de techniciens supérieurs (STS, qui préparent le BTS) et des classes préparatoires ouvertes « de proximité » entre 2006 et 2015. L''ouverture accroît d''environ 8 % la probabilité que les élèves du lycée et des lycées voisins s''inscrivent dans ces filières. L''effet est le plus fort pour les élèves des petites communes et, pour les STS, pour les élèves de la voie professionnelle. L''offre de formation de proximité compte donc pour la poursuite d''études des bacheliers professionnels. Limite : effet mesuré sur l''inscription, pas sur l''emploi.'
+  sections:
+  - 'Champ : ouvertures de STS et de CPGE de 2006 à 2015.'
+  - 'Résultat : +8 % environ de probabilité d''inscription locale.'
+  - 'Hétérogénéité : effet plus fort pour les petites communes et, en STS, pour la voie pro.'
+  cle: Ouvrir une STS ou une CPGE dans un lycée accroît d'environ 8 % l'inscription des élèves du secteur, surtout en petite commune et en voie pro pour les STS (Thebault, IPP, 2025).
+- id: garin-rothbaum-2025
+  titre: Garin et Rothbaum, les usines de la Seconde Guerre mondiale et la mobilité des enfants (2025)
+  ref: 'Garin, A. et J. Rothbaum (2025), « The Long-Run Impacts of Public Industrial Investment on Local Development and Economic Mobility: Evidence from World War II », Quarterly Journal of Economics, 140(1), 459-520.'
+  lien: https://www.nber.org/papers/w32265
+  sujets:
+  - emploi
+  - inegalites
+  type: étude causale
+  statut: secondaire
+  resume: 'Pendant la guerre, l''État américain a financé des usines souvent implantées hors des bassins industriels existants. Les comtés qui les ont reçues ont gardé pendant des décennies davantage d''emplois manufacturiers bien payés. Les hommes nés avant-guerre dans ces comtés gagnaient à l''âge adulte 2,5 % de plus par an (environ 1 200 dollars de 2020) que ceux des comtés comparables, avec un gain plus fort pour les enfants de familles modestes, surtout parce qu''ils avaient accès à ces emplois une fois adultes. Limite : les implantations récentes n''ont pas eu le même effet sur les salaires locaux.'
+  sections:
+  - 'Méthode : comtés avec usine de guerre contre comtés comparables.'
+  - 'Résultat : +2,5 % de revenu annuel à l''âge adulte, davantage pour les enfants modestes.'
+  - 'Mécanisme : accès local à des emplois industriels mieux payés.'
+  cle: Les garçons nés près d'une usine de guerre américaine ont gagné 2,5 % de plus par an une fois adultes, surtout ceux de familles modestes (Garin et Rothbaum, 2025).
+- id: beaurepaire-lavialle-2022
+  titre: Beaurepaire et Lavialle, les délocalisations d'emplois en France (Insee, 2022)
+  ref: Beaurepaire, C. et V. Lavialle (2022), « Plus de 10 000 emplois délocalisés chaque année de 2011 à 2017, en baisse par rapport à la décennie antérieure », Insee Références.
+  lien: ''
+  sujets:
+  - emploi
+  type: données
+  statut: secondaire
+  resume: L'Insee compte les emplois supprimés en France par des entreprises qui transfèrent une activité à l'étranger. Plus de 10 000 emplois ont été délocalisés chaque année de 2011 à 2017, moins que lors de la décennie précédente ; les ouvriers qualifiés de l'industrie sont les plus touchés. Les délocalisations restent faibles au regard des créations et destructions d'emplois annuelles. Chiffres détaillés par métier à compléter depuis la publication.
+  sections:
+  - 'Volume : plus de 10 000 emplois par an en 2011-2017, en baisse.'
+  - 'Profil : surtout des ouvriers qualifiés de l''industrie.'
+  cle: Plus de 10 000 emplois ont été délocalisés chaque année de 2011 à 2017, en baisse par rapport aux années 2000 (Insee, 2022).
+- id: igf-2024-apprentissage
+  titre: Inspection générale des finances, revue des dépenses d'apprentissage et de formation professionnelle (2024)
+  ref: Inspection générale des finances (2024), Revue des dépenses publiques d'apprentissage et de formation professionnelle.
+  lien: ''
+  sujets:
+  - formation
+  - emploi
+  type: rapport
+  statut: secondaire
+  resume: La revue de dépenses chiffre l'effort de la Nation pour l'apprentissage et la formation professionnelle à près de 32 Md€ en 2022, dont 14 Md€ de l'État et 11 Md€ des entreprises. Elle juge l'efficience insuffisante et recommande de concentrer les financements sur les formations les plus qualifiantes. Détail des pistes d'économie à compléter depuis le rapport.
+  sections:
+  - 'Montant : près de 32 Md€ en 2022 (État 14 Md€, entreprises 11 Md€).'
+  - 'Recommandation : cibler les formations les plus qualifiantes.'
+  cle: Apprentissage et formation professionnelle ont coûté près de 32 Md€ en 2022, dont 14 Md€ à l'État (IGF, 2024).
+- id: nimier-david-2023
+  titre: Nimier-David, l'ouverture d'établissements du supérieur et la création d'entreprises (2023)
+  ref: 'Nimier-David, E. (2023), « Local Human Capital and Firm Creation: Evidence from the Massification of Higher Education in France », document de travail.'
+  lien: ''
+  sujets:
+  - orientation
+  - inegalites
+  type: étude causale
+  statut: secondaire
+  resume: 'Dans les années 1990, la France a ouvert plus de 300 établissements d''enseignement supérieur sur tout le territoire (universités, écoles d''ingénieurs, instituts universitaires professionnalisés). L''étude compare les zones qui en ont reçu à celles qui n''en ont pas eu : la hausse locale de main-d''œuvre qualifiée y a accru la création d''entreprises et la productivité du travail. Implanter des formations techniques près des bassins industriels peut donc attirer l''activité autant que la suivre. Chiffres à compléter depuis l''article.'
+  sections:
+  - 'Choc : plus de 300 établissements ouverts dans les années 1990.'
+  - 'Résultat : plus de créations d''entreprises et de productivité locale.'
+  cle: Les zones dotées d'un nouvel établissement du supérieur dans les années 1990 ont vu davantage d'entreprises se créer (Nimier-David, 2023).
+- id: jaravel-2023-marie-curie
+  titre: Jaravel, Marie Curie habite dans le Morbihan (2023)
+  ref: Jaravel, X. (2023), Marie Curie habite dans le Morbihan. Démocratiser l'innovation, Paris, Seuil.
+  lien: ''
+  sujets:
+  - orientation
+  - inegalites
+  type: revue
+  statut: secondaire
+  resume: L'ouvrage rassemble les travaux sur l'origine des innovateurs. En France comme aux États-Unis, devenir ingénieur-docteur, chercheur ou inventeur dépend fortement du milieu social, du sexe et du département d'origine ; le Morbihan a la plus faible part d'enfants qui deviendront inventeurs ou chercheurs malgré de bons résultats scolaires. L'auteur estime que la parité femmes-hommes dans l'accès à l'innovation porterait la croissance annuelle de la productivité du travail de 1 % à 1,8 %, et relève que les stéréotypes de genre détournent les femmes des métiers scientifiques et industriels, souvent mieux payés.
+  sections:
+  - 'Constat : accès aux carrières d''innovation très inégal selon milieu, sexe et territoire.'
+  - 'Chiffrage : parité dans l''innovation, +0,8 point de croissance de la productivité par an.'
+  - 'Lien industrie : stéréotypes qui écartent les femmes des métiers industriels.'
+  cle: La parité femmes-hommes dans l'accès à l'innovation ferait passer la croissance de la productivité du travail de 1 % à 1,8 % par an (Jaravel, 2023).

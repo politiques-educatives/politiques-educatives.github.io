@@ -167,11 +167,11 @@ themes:
       - "La Boussole classe les 13 819 formations de Parcoursup 2025 en 39 familles et affiche l'emploi et le salaire de 2 427 masters d'université (InserSup 2026)."
       - {source: hastings-2015}
     chiffre: {graphique: insersup}
-    graphiques_plus: [insersup-tendance]
+    graphiques_plus: [insersup-tendance, industrie-ze-potentiel]
     propositions: [orient-transparence, orient-debouches]
     livret: ["P08"]
     ajouts: [a-debouches]
-    sources: [insersup, hastings-2015, hoxby-turner-2013, deming-2017, bell-2019]
+    sources: [insersup, hastings-2015, hoxby-turner-2013, deming-2017, bell-2019, nimier-david-2023, jaravel-2023-marie-curie]
     dossiers: [06-index-ia-formations]
   - id: ia
     edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
@@ -204,6 +204,7 @@ themes:
   ailleurs: {carte: [apprentissage], pays: ENG, intro: "Apprentissage et entrée dans l'emploi."}
   sections:
   - id: filieres
+    sources: [aghion-2026-capital-moderne, hirvonen-2025, kalantzis-thubin-2017]
     edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
       - {amorce: "Sécurité du parcours", texte: "Comme on ne met pas tous ses œufs dans le même panier, chaque jeune a droit à un socle solide, un vrai savoir-faire technique et la possibilité de se reformer.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
       - {amorce: "Sur la technologie", texte: "Être exposé à une nouvelle technologie ne veut pas dire être remplacé par elle. C'est le plus souvent l'occasion de mieux exercer son métier et de gagner en qualification, à condition d'y être préparé dès l'école.", source: "Note « Filières techniques, IA et concurrence chinoise », GT Éducation, novembre 2026"}
@@ -222,7 +223,7 @@ themes:
       - "Dans la Boussole des formations : un clic sur un lycée affiche sa fiche."
     chiffre: {vp: carte}
     voiepro_plus: [chine]
-    sources: [hosseini-2026]
+    sources: [hosseini-2026, malgouyres-2017, autor-2025-places-people, beaurepaire-lavialle-2022, garin-rothbaum-2025]
   - id: pointe
     edl:   # éléments de langage, repris tels quels des notes (à dire tels quels)
       - {amorce: "Ambition industrielle", texte: "Nous avons besoin de la jeunesse pour bâtir l'industrie française de demain, avec des filières techniques à la pointe face à la concurrence internationale, notamment chinoise, où personne ne reste sans solution.", source: "Note « L'IA et les jeunes », GT Éducation, novembre 2026"}
@@ -235,8 +236,17 @@ themes:
     chiffre: {graphique: emploi6mois}
     propositions: [ia-marche, ee-lycee-branche, tdv-bacpro-apprentissage, ee-maitre-apprentissage, ee-chef-doeuvre, ee-referentiels]
     livret: ["80"]
-    sources: [avenirpro-2024, insee-ndc-juin-2026]
+    sources: [avenirpro-2024, insee-ndc-juin-2026, igf-2024-apprentissage, thebault-2025]
     notes: [EDUCATION-note-ecole-entreprise.pdf]
+  - id: industrie
+    titre: "Où l'industrie embauche"
+    bref:   # notes des graphiques (cartes par zone d'emploi, d'après Le Monde, hors-série, p. 110-111) et fiche sources
+      - {graphique: industrie-ze-2015-2025}
+      - {graphique: industrie-ze-1975-2022}
+      - {source: lemonde-hs-2026-industrie}
+    chiffre: {graphique: industrie-ze-2015-2025}
+    graphiques_plus: [industrie-ze-1975-2022, industrie-ze-territoires]
+    sources: [lemonde-hs-2026-industrie, urssaf-effectifs-ze-na88, insee-rp-harmonises-secteur, anct-territoires-industrie, insee-zones-emploi-2020]
   reste: {}
 
 # Montré dans « Tout le reste » de chaque thème (sert à tous les thèmes).
