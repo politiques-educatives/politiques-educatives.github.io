@@ -67,7 +67,7 @@
   explication: "Aujourd'hui, les débutants sont plus souvent affectés en éducation prioritaire (DEPP, 2026). Dans le cadre des postes à profil existants, jusqu'à 10 % des postes d'un établissement sont pourvus sur projet par une commission réunissant chef d'établissement, enseignants du conseil pédagogique et inspecteur, avec droit de recours. Une prime d'affectation est versée tant que l'enseignant reste dans l'établissement, et les autres postes suivent le barème."
   preuves:
     - "Les enseignants sont affectés par le mouvement inter et intra-académique selon un barème de points ; les débutants sont plus souvent affectés en éducation prioritaire (DEPP, 2026)."
-    - "Les collèges en difficulté devenus academies de 2002 à 2010, qui changeaient souvent de direction, ont progressé d'environ 0,2 écart-type en quatre ans (Eyles et Machin, 2019) ; ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2017)."
+    - "Les collèges en difficulté devenus academies de 2002 à 2009, qui changeaient souvent de direction, ont progressé d'environ 0,2 écart-type (0,18) en quatre ans (Eyles et Machin, 2019) ; ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2017)."
     - "Le recrutement sur profil, par exemple dans les écoles de Marseille, n'a pas encore été évalué (Cour des comptes, 2024)."
   note: EDUCATION-note2-gouvernance-etablissement.pdf
   statut: à chiffrer
@@ -135,9 +135,9 @@
 - id: orient-gatsby
   theme: Orientation et bac
   titre: "Mesurer huit repères d'orientation par établissement et publier le devenir des élèves"
-  explication: "Sur le modèle anglais des repères Gatsby, chaque collège et lycée mesure chaque année huit repères d'orientation : information sur les métiers, rencontres d'employeurs, stages et entretien individuel. Le devenir des élèves de chaque établissement est publié, suivant le rapport Milburn (2026, p. 14-15). En Angleterre, atteindre tous les repères est associé à 8 % de jeunes sans emploi ni formation en moins, un lien qui n'est pas encore causal (Careers & Enterprise Company, 2024)."
+  explication: "Sur le modèle anglais des repères Gatsby, chaque collège et lycée mesure chaque année huit repères d'orientation : information sur les métiers, rencontres d'employeurs, stages et entretien individuel. Le devenir des élèves de chaque établissement est publié, suivant le rapport Milburn (2026, p. 14-15). En Angleterre, atteindre tous les repères est associé à 8 % de jeunes sans parcours confirmé d'études, d'emploi ou de formation en moins après 16 ans (6,7 % contre 7,3 %), un lien qui n'est pas causal (Careers & Enterprise Company, Percy, 2023, p. 4)."
   preuves:
-    - "Les établissements anglais atteignent 6,0 repères sur 8 en moyenne ; ceux qui les atteignent tous comptent 8 % de jeunes sans emploi ni formation en moins, un lien qui n'est pas encore causal (Careers & Enterprise Company, 2024)."
+    - "Les établissements anglais atteignent 6,0 repères sur 8 en moyenne ; ceux qui les atteignent tous comptent 8 % de jeunes sans parcours confirmé après 16 ans en moins (6,7 % contre 7,3 %), un lien qui n'est pas causal (Careers & Enterprise Company, 2024 ; Percy, 2023, p. 4)."
     - "Norme « prêt pour le travail » inspectée par l'Ofsted et obligation légale de stage en entreprise (Milburn, 2026, p. 14-15)."
   note: EDUCATION-note3-orienter.pdf
   statut: à chiffrer
@@ -291,7 +291,7 @@
   titre: "Financer six mois d'emploi tutoré en entreprise après 6 à 12 mois sans emploi"
   explication: "Dans le contrat d'engagement jeune, l'État cofinance un emploi de six mois avec tuteur en entreprise privée pour les jeunes sans emploi ni formation depuis 6 à 12 mois, à environ 7 250 € par place (calcul du GT). En entreprise privée, un contrat aidé relève de 23 points l'emploi non aidé deux ans et demi après (Cour des comptes, 2018, p. 140). Comme il ne crée que 0,1 emploi net par embauche (Cour des comptes, 2018, p. 141), il cible ces seuls jeunes."
   preuves:
-    - "Contrats aidés du secteur marchand (CIE) : +23 points d'emploi non aidé deux ans et demi après l'entrée, par rapport à des personnes comparables sans contrat (Cour des comptes, 2018, p. 140)"
+    - "Contrats aidés du secteur marchand (CIE) : +23 points d'emploi non aidé deux ans et demi après l'entrée, par rapport à des personnes comparables sans contrat, pour les contrats signés de 2002 à 2007 (Cour des comptes, 2018, tome 2, p. 140, d'après la Dares)"
     - "Mais 0,1 emploi net créé par contrat financé : la plupart des embauches auraient eu lieu sans aide (Cour des comptes, 2018, p. 141)"
     - "Coût : à chiffrer"
   statut: à chiffrer
@@ -302,10 +302,10 @@
 - id: j-prime-conditionnelle
   theme: Premier emploi des jeunes
   titre: "Une prime d'embauche temporaire, versée seulement si l'effectif augmente, quand le chômage des jeunes monte"
-  explication: "Le chômage des 15-24 ans atteint 21,0 % au 3e trimestre 2026 (Insee, 2026), mais une aide générale finance à 84 % des embauches qui auraient eu lieu sans elle (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 25). Nous proposons une prime temporaire aux petites entreprises, déclenchée au-dessus d'un seuil de chômage des jeunes et arrêtée à la décrue. Versée uniquement si l'effectif de l'entreprise augmente, elle crée 4,4 fois plus d'emplois à budget égal (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 27)."
+  explication: "Le chômage des 15-24 ans atteint 21,0 % au 3e trimestre 2026 (Insee, 2026), mais une aide générale finance à 84 % des embauches qui auraient eu lieu sans elle (Cahuc, Carcillo et Le Barbanchon, IZA DP 8330, 2014, p. 25). Nous proposons une prime temporaire aux petites entreprises, déclenchée au-dessus d'un seuil de chômage des jeunes et arrêtée à la décrue. Versée uniquement si l'effectif de l'entreprise augmente, elle crée jusqu'à 4,4 fois plus d'emplois à budget égal (Cahuc, Carcillo et Le Barbanchon, IZA DP 8330, 2014, p. 27)."
   preuves:
-    - "Zéro charges (2009, entreprises de moins de 10 salariés) : 84 % des embauches aidées auraient eu lieu sans l'aide (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 25)"
-    - "Conditionnée à la hausse de l'effectif, la même enveloppe aurait créé 4,4 fois plus d'emplois (Cahuc, Carcillo et Le Barbanchon, 2019, version IZA p. 27)"
+    - "Zéro charges (2009, entreprises de moins de 10 salariés) : 84 % des embauches aidées auraient eu lieu sans l'aide (Cahuc, Carcillo et Le Barbanchon, IZA DP 8330, 2014, p. 25)"
+    - "Conditionnée à la hausse de l'effectif, la même enveloppe aurait créé 4,4 fois plus d'emplois (Cahuc, Carcillo et Le Barbanchon, IZA DP 8330, 2014, p. 27)"
     - "Chômage des 15-24 ans : 21,0 % au 3e trimestre 2026 (Insee, 2026)"
     - "Coût : nul hors période de déclenchement ; seuil et montant à chiffrer"
   statut: proposition
@@ -353,9 +353,9 @@
     - "Jusqu'à +5 points d'inscription ou de réinscription pour l'éligibilité à 1 500 € par an, contre les candidats juste au-dessus du seuil (Fack et Grenet, 2015)"
     - "+5 points d'obtention du diplôme pour les entrants en master, jusqu'à +3 points en dernière année, même comparaison (Fack et Grenet, 2015)"
     - "+2 points (13 %) de diplômés en quatre ans et +5 à 8 % de salaire pour environ 711 $ de bourse en plus, contre les étudiants juste au-dessus du seuil ; dépense remboursée par l'impôt en dix ans (Denning, Marx et Turner, 2019)"
-    - "662 000 boursiers en 2024-2025, plus bas depuis 2015, recul de 2,6 % en un an (Sénat, 2025)"
-    - "31 % des boursiers touchent moins de 150 € par mois (Sénat, 2025)"
-    - "Coût : 350 à 400 M€ par an selon le ministère (Sénat, avis n° 144, 2025, p. 15), soit 15 à 17 % des 2,32 Md€ de crédits de bourses 2026 ; gain des financements proposés à chiffrer"
+    - "662 000 boursiers en 2024-2025, plus bas depuis 2015, recul de 2,6 % en un an (Sénat, rapport n° 139, annexe 23, 2025, p. 47-48)"
+    - "31 % des boursiers touchent moins de 150 € par mois (Sénat, rapport n° 139, annexe 23, 2025, p. 50)"
+    - "Coût : 350 à 400 M€ par an selon le ministère pour l'ensemble de la seconde phase de la réforme (indexation, décohabitation, barème linéaire) (Sénat, avis n° 144, 2025, p. 15), soit 15 à 17 % des 2,32 Md€ de crédits de bourses 2026 ; gain des financements proposés à chiffrer"
   statut: à chiffrer
   maj_le: 2026-11-22
   sujets: [emploi]
@@ -581,7 +581,7 @@
   titre: "Ouvrir à bac+3 les concours de l'État là où des titulaires d'une licence professionnelle tiennent déjà les emplois"
   explication: "L'État ouvre certains concours externes dès bac+3, pour les seuls métiers administratifs et techniques où des titulaires d'une licence professionnelle tiennent déjà les emplois, corps par corps à partir de 2029, par modification des décrets statutaires. Les concours d'enseignants, les professions réglementées et les parcours appuyés sur des masters recherche restent hors champ, et aucun master n'est fermé."
   preuves:
-    - "Le concours enseignant ramené à bac+3 en 2026 a réuni 64 511 inscrits pour 5 200 postes ; il fait l'objet du bilan prévu en 2027."
+    - "Les concours du second degré ramenés à bac+3 en 2026 ont réuni environ 31 000 inscrits (calcul du groupe, somme des concours) pour 5 200 postes, dont 185 non pourvus (devenirenseignant.gouv.fr ; ministère, 2026) ; il fait l'objet du bilan prévu en 2027."
     - "Coût : aucune dépense nouvelle ; solde à chiffrer après l'inventaire des corps concernés."
   note: EDUCATION-note-temps-de-vie.pdf
   statut: à chiffrer
@@ -622,7 +622,7 @@
   explication: "Tout lycée professionnel ou technologique peut ouvrir, par convention avec une branche ou au moins deux employeurs du bassin dont une PME, une section de cinq ans de la seconde au BTS : un parrain d'entreprise par élève, un stage chaque année, des modules de BTS dès la terminale et un entretien d'embauche garanti à la sortie. Les diplômes nationaux et les heures de français et de mathématiques restent inchangés ; la priorité va aux métiers de production (N°80), avec au moins la moitié des places pour des élèves d'éducation prioritaire ou boursiers."
   preuves:
     - "La proximité de l'offre compte : ouvrir une STS dans un lycée accroît d'environ 8 % l'inscription des élèves du secteur, l'effet étant le plus fort pour les élèves de la voie professionnelle et des petites communes (Thebault, IPP, 2025)."
-    - "Aux États-Unis, les Career Academies ont relevé le salaire de 11 % par an pendant huit ans, et de 17 % pour les jeunes hommes (Kemple, MDRC, 2008, p. iii)."
+    - "Aux États-Unis, les Career Academies ont relevé les revenus d'activité de 11 % par an pendant huit ans, et de 17 % pour les jeunes hommes (Kemple, MDRC, 2008, p. iii)."
     - "À New York, P-TECH a porté à 13 % contre 3 % la part de jeunes hommes diplômés à bac+2, pour un coût proche d'un lycée ordinaire (MDRC, 2023)."
     - "Coût : 3,7 M€ par an en croisière pour 500 sections en 2032 (environ 36 000 lycéens), par redéploiement de crédits de l'Éducation nationale (calcul GT)."
   note: EDUCATION-note-ecole-entreprise.pdf

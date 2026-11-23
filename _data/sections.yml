@@ -38,7 +38,7 @@ themes:
     graphiques_plus: [formation]
     propositions: [heures-service-annuel, heures-emploi-du-temps, heures-dotation, heures-charge, lfi-heures-dues, lfi-budget-temps, lfi-postes-difficiles]
     livret: ["65", "72", "71"]
-    sources: [ocde-heures-2026, stpcd-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, nickow-2020, kraft-2024, guryan-2023, ntp-nfer, apfee, eef-setting, steenbergen-2016, duflo-2011, cae-84-grenet-landais-2025]
+    sources: [ocde-heures-2026, stpcd-2026, talis, uws-eis-2024, cdc-formation-2023, senat-formation-2023, formation-pd-research, depp-ni-25-65, nickow-2020, kraft-2024, guryan-2023, ntp-nfer, apfee, eef-setting, steenbergen-2016, duflo-2011, cae-84-grenet-landais-2025, depp-groupes-besoins-2026, etat-ecole-2026]
     dossiers: [02-groupes-niveau-tutorat, 08-formation-enseignants, 10-brief-formation-continue-enseignants, 16-calendrier-formation-continue]
     notes: [EDUCATION-note1-allocation-heures-enseignement.pdf]
   - id: decider
@@ -75,9 +75,9 @@ themes:
     chiffre: {graphique: ecole-projections}
     graphiques_plus: [ecole-projection-dep, ecole-effectifs-dep, ecole-prive-social, ecole-ips, ecole-brevet, ecole-classes, ecole-pisa]
     livret: ["66"]
-    sources: [lemonde-hs-2026-ecole, depp-projections-2035, depp-effectifs-ecoles, depp-geographie-ecole-2026, cae-93-dintilhac-2026]
+    sources: [lemonde-hs-2026-ecole, depp-projections-2035, depp-effectifs-ecoles, depp-geographie-ecole-2026, cae-93-dintilhac-2026, depp-dedoublement-2026, ipp-taille-classes-2025, senat-plf2027-enseignement, depp-ni-26-42-depense, depp-6e-2025]
   reste:
-    sources: [guadalupe-2022, hendren-2020]   # pourquoi l'école compte pour la croissance (audit du 23/11/2026)
+    sources: [guadalupe-2022, hendren-2020, estonie-pisa-2025]   # pourquoi l'école compte pour la croissance (audit du 23/11/2026)
 
 - theme: handicap
   ailleurs: {carte: [handicap], pays: IT, intro: "Comment l'Italie, l'Angleterre, la Finlande, le Portugal, les Pays-Bas, le Québec et New York scolarisent les élèves handicapés."}
@@ -119,7 +119,7 @@ themes:
     propositions: [tuteur-public, tuteur-marche, ia-bases]
     livret: ["67", "68", "69", "70", "29"]
     ajouts: [a-portable]
-    sources: [enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-seconde-2026, depp-ce1-2026, depp-pisa-2025, pisa-2022-distraction, cnl-lecture-2026, portable-en-pause, bastani-2025, stromberg-2026, kestin-2025, desimone-2025, henkel-2024, tutor-copilot-2024, mia-seconde, cadre-usage-ia-2025]
+    sources: [enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-seconde-2026, depp-ce1-2026, depp-pisa-2025, pisa-2022-distraction, cnl-lecture-2026, portable-en-pause, bastani-2025, stromberg-2026, kestin-2025, desimone-2025, henkel-2024, tutor-copilot-2024, mia-seconde, cadre-usage-ia-2025, dang-do-2026]
     dossiers: [07-outil-ia-public, 09-lecture-rapport-cianum-sortir-clandestinite, 14-why-scores-fall]
   reste:
     livret: ["73", "27"]
@@ -139,7 +139,7 @@ themes:
     graphiques_plus: [boursiers]
     propositions: [orient-4e, orient-parents, orient-gatsby, ee-rencontres-pros]
     livret: ["75"]
-    sources: [depp-reperes-orientation-2025, goux-2017, avvisati-2014, breda-2023, gatsby, berlioux-2020, resnjanskij-2024, cnesco-2018-orientation, sourdun-2017, energie-jeunes-2025]
+    sources: [depp-reperes-orientation-2025, goux-2017, avvisati-2014, breda-2023, gatsby, berlioux-2020, resnjanskij-2024, cnesco-2018-orientation, sourdun-2017, energie-jeunes-2025, bechichi-kenedi-2025, filles-maths-2026]
     dossiers: [05-orientation]
     notes: [EDUCATION-note3-orienter.pdf]
   - id: bac
@@ -153,7 +153,7 @@ themes:
     propositions: [orient-bac, ia-master, tdv-bac-plus-tot, tdv-bonus-licence, tdv-concours-bac3, tdv-doctorat-shs]
     livret: ["76"]
     ajouts: [a-bac, a-master]
-    sources: [sies-licence-2025, insee-2109, ofer-2016, rers-2025, humburg-2015, apec-2024, indeed-diplomes-2024, cereq-generation-2021, zimmerman-2014]
+    sources: [sies-licence-2025, insee-2109, ofer-2016, rers-2025, humburg-2015, apec-2024, indeed-diplomes-2024, cereq-generation-2021, zimmerman-2014, capes-2026]
     notes: [EDUCATION-note-temps-de-vie.pdf]
     dossiers: [13-master-as-filter-evidence, 13-masters-job-market, 13-france-firms-master-filter-and-solutions, 17-orientation-apprentissage-preuves]
     blocs: [masters]
@@ -196,7 +196,7 @@ themes:
       - "Premier emploi et chômage : aucune mesure sur l'embauche des débutants, le chômage des jeunes ou les jeunes sans emploi ni formation. Stages et discriminations : les mots n'apparaissent pas dans le livret."
       - "Salaire face au loyer : rien de spécifique pour les jeunes, les bourses ou le logement étudiant."
     propositions: [j-emploi-tutore, j-prime-conditionnelle, stages-garantie-rep, stages-superieur-boursiers, bourses-bareme-lineaire, residences-etudiantes-zones-tendues, emplois-etudiants-campus, disc-testing-grands-employeurs, disc-apprentissage-stages, ia-formation-smic]
-    sources: [card-2018]
+    sources: [card-2018, ipp-cej-2026]
   reste:
     blocs: [comms]
 
@@ -236,7 +236,7 @@ themes:
     chiffre: {graphique: emploi6mois}
     propositions: [ia-marche, ee-lycee-branche, tdv-bacpro-apprentissage, ee-maitre-apprentissage, ee-chef-doeuvre, ee-referentiels]
     livret: ["80"]
-    sources: [avenirpro-2024, insee-ndc-juin-2026, igf-2024-apprentissage, thebault-2025]
+    sources: [avenirpro-2024, insee-ndc-juin-2026, igf-2024-apprentissage, thebault-2025, tresor-apprentissage-2025]
     notes: [EDUCATION-note-ecole-entreprise.pdf]
   - id: industrie
     titre: "Où l'industrie embauche"

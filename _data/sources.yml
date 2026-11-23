@@ -323,7 +323,7 @@
   sujets: [ecrans]
   type: données
   statut: vérifié
-  resume: "Résultats français de PISA 2025 (élèves de 15 ans). Compréhension de l'écrit : 456 points contre 461 dans l'OCDE, -18 points depuis 2022 après -19 entre 2018 et 2022 ; l'OCDE perd 14 points. 33 % des élèves sont sous le niveau 2, contre 27 % en 2022, 21 % en 2018 et 15 % en 2000 (OCDE 30 %). Les garçons perdent 23 points, les filles 11. Maths : 458 points, -16 depuis 2022. Les élèves passent 4,9 heures par jour sur les écrans les jours d'école, dont 3,0 de loisir (3,4 dans l'OCDE) : le temps d'écran français n'est pas exceptionnel. La note évoque d'« éventuels effets durables » du Covid."
+  resume: "Résultats français de PISA 2025 (élèves de 15 ans). Compréhension de l'écrit : 456 points contre 461 dans l'OCDE, -18 points depuis 2022 après -19 entre 2018 et 2022 ; l'OCDE perd 14 points. 33 % des élèves sont sous le niveau 2, contre 27 % en 2022, 21 % en 2018 et 15 % en 2000 (OCDE 30 %). Les garçons perdent 23 points, les filles 11. Maths : 458 points, -16 depuis 2022. Les élèves passent 4,9 heures par jour sur les écrans les jours d'école, dont 3,0 de loisir (3,4 dans l'OCDE) : le temps d'écran français n'est pas exceptionnel. La note évoque d'« éventuels effets durables » du Covid. Écart entre les élèves les plus et les moins favorisés : 95 points en maths (OCDE 83), 91 en compréhension de l'écrit (OCDE 77), parmi les plus forts de l'OCDE."
   cle: "À 15 ans, 33 % des élèves sont en difficulté de lecture, contre 15 % en 2000 (DEPP, NI 26.40, 2026)."
   propositions: [ia-bases]
   dossier: 14-why-scores-fall
@@ -730,7 +730,7 @@
   sujets: [formation]
   type: étude causale
   statut: vérifié
-  resume: "Les collèges en difficulté convertis en academies de 2002 à 2010, qui changeaient souvent de direction, progressent d'environ 0,2 écart-type en quatre ans. Ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2017), et les écoles primaires converties sans difficulté n'ont pas progressé (Eyles, Machin et McNally, 2017). L'autonomie a marché avec une nouvelle direction et des résultats publiés ; seule, elle n'a rien changé."
+  resume: "Les collèges en difficulté convertis en academies de 2002 à 2009, qui changeaient souvent de direction, progressent d'environ 0,2 écart-type (0,18) en quatre ans. Ceux convertis après 2010 n'ont pas gardé d'avance (EPI, 2017), et les écoles primaires converties sans difficulté n'ont pas progressé (Eyles, Machin et McNally, 2017). L'autonomie a marché avec une nouvelle direction et des résultats publiés ; seule, elle n'a rien changé."
   cle: "Les collèges en difficulté devenus academies avant 2010 ont progressé d'environ 0,2 écart-type en quatre ans (Eyles et Machin, 2019)."
   propositions: [gouv-recruter]
   dossier: 01-england-governance-ors
@@ -774,8 +774,8 @@
   sujets: [formation]
   type: rapport
   statut: secondaire
-  resume: "Environ 3 650 inspecteurs territoriaux, dont l'activité est « de plus en plus morcelée », au détriment du suivi des enseignants et de l'appui pédagogique. Ils consacrent environ 30 % de leur activité à l'évaluation des enseignants dans le premier degré, 20 à 30 % dans le second. Depuis 2017, un enseignant n'a plus d'inspection obligatoire après son troisième rendez-vous de carrière, vers la dix-neuvième année."
-  cle: "Après le dernier rendez-vous de carrière, vers 19 ans de métier, aucune visite de classe n'est obligatoire (décret de 2017 ; Cour des comptes, 2022)."
+  resume: "Environ 3 650 inspecteurs territoriaux, dont l'activité est « de plus en plus morcelée », au détriment du suivi des enseignants et de l'appui pédagogique. Ils consacrent environ 30 % de leur activité à l'évaluation des enseignants dans le premier degré, 20 à 30 % dans le second. Depuis 2017, un enseignant n'a plus d'inspection obligatoire après son troisième rendez-vous de carrière, au 9e échelon."
+  cle: "Après le troisième et dernier rendez-vous de carrière, au 9e échelon, aucune inspection n'est plus obligatoire, et la seconde partie de carrière est rarement inspectée (arrêté du 5 mai 2017 ; Cour des comptes, 2022)."
   propositions: [gouv-visite]
   dossier: 03-inspection-evaluation
 - id: formation-pd-research
@@ -1071,11 +1071,11 @@
     - "Démographie : environ 1,7 million d'élèves de moins entre 2025 et 2035, près de 15 % (DEPP, projections, scénario intermédiaire)."
     - "Effectifs : 6,5 millions d'élèves dans le premier degré en 2011 et 6,1 millions en 2025 ; 5,6 millions dans le second degré en 2025 ; en 2035, environ 5,4, 5,2 et 5 millions dans le premier degré (scénarios haut, intermédiaire, bas) et 4,9 millions dans le second degré. L'attribution de ces quatre points, incertaine sur le graphique, est confirmée par le Document de travail de la DEPP (5 431 387, 5 216 439, 5 001 491 et 4 875 900)."
     - "Réseau : plus de 5 000 écoles publiques fermées depuis 2012, soit 11 % ; près de 45 % des écoles ont moins de quatre classes et 8 % une seule ; les collèges de moins de 300 élèves forment 17 % des établissements (année non précisée)."
-    - "Taille des classes : 21,1 élèves en élémentaire contre 20 dans l'OCDE et 19,2 dans l'UE ; 25,7 au collège contre 22,4 et 20,8 (premier cycle du secondaire) ; 30,2 en lycée général et technologique, 18,4 en lycée professionnel (DEPP ; OCDE)."
+    - "Taille des classes : 21,1 élèves en élémentaire contre 20 dans l'OCDE et 19,2 dans l'UE ; 25,7 au collège (DEPP) ; 25,9 contre 23,0 dans l'OCDE et 20,8 dans l'UE au premier cycle du secondaire (OCDE, Regards sur l'éducation 2025, données 2023) ; 30,2 en lycée général et technologique, 18,4 en lycée professionnel (DEPP ; OCDE)."
     - "Écoles selon la taille moyenne des classes (rentrée 2025) : 41,4 % sous 20 élèves, 50,2 % de 20 à 24, 20,3 % de 25 à 29, 0,1 % à 30 ou plus. La somme imprimée dépasse 100 % : chiffres à vérifier, non repris en graphique."
     - "Éducation prioritaire et privé : IPS moyen des collèges de 75,1 en REP+, 86,3 en REP, 104,5 dans le public hors REP et 125,5 dans le privé ; réussite au brevet de 75 %, 78 %, 86 % et 96 % (DEPP, 2025)."
     - "Recrutement social du privé : 41,9 % de collégiens très favorisés en 2024 contre 29,7 % en 2004, et 18 % de défavorisés contre 26 % ; dans le public, 19,5 % et 42,5 % (DEPP)."
-    - "PISA : en maths, 511 points en 2003 et 458 en 2025 (OCDE : 502 puis 463) ; en compréhension de l'écrit, 496 puis 456 (OCDE : 505 puis 461), moyennes OCDE hors Costa Rica, Luxembourg et Espagne. Écart d'environ 100 points en sciences entre les élèves les plus et les moins favorisés : lecture de graphique, légende vraisemblablement inversée, à vérifier dans PISA."
+    - "PISA : en maths, 511 points en 2003 et 458 en 2025 (OCDE : 502 en 2003 pour les 24 pays présents à chaque cycle ; 463 en 2025 pour l'ensemble de l'OCDE) ; en compréhension de l'écrit, 496 puis 456 (OCDE : 505 puis 461), moyennes OCDE hors Costa Rica, Luxembourg et Espagne. Écart d'environ 100 points en sciences entre les élèves les plus et les moins favorisés : lecture de graphique, légende vraisemblablement inversée, à vérifier dans PISA."
     - "Cartes : évolution des effectifs du premier degré de 2015 à 2025, de -22,9 % à +24,4 % selon le territoire, avec les écoles fermées (DEPP, Géographie de l'école 2026) ; projection 2025-2035, de -29,3 % à -4,5 % par département (DEPP)."
   cle: "D'ici 2035, l'école perdrait 1,7 million d'élèves, près de 15 % de ses effectifs (DEPP, repris par Le Monde, hors-série, nov.-déc. 2026)."
   propositions: []
@@ -1507,3 +1507,133 @@
   - 'Chiffrage : parité dans l''innovation, +0,8 point de croissance de la productivité par an.'
   - 'Lien industrie : stéréotypes qui écartent les femmes des métiers industriels.'
   cle: La parité femmes-hommes dans l'accès à l'innovation ferait passer la croissance de la productivité du travail de 1 % à 1,8 % par an (Jaravel, 2023).
+
+# ================= VEILLE DU MANUEL, 23/11/2026 (soir) : études des passages de veille ch. 8 et 9 =================
+# Source : ~/Dropbox/Claude/travail-sur-le-manuel/notes/ch09/carnet.md et ch08/carnet.md (lignes « À intégrer » ou « À mentionner », chiffres lus dans la source).
+# Relus à nouveau le 23/11 : DEPP 2026-E17, Synthèse DEPP n° 8, CAPES 2026 (maths, lettres classiques).
+- id: depp-groupes-besoins-2026
+  titre: "DEPP, document de travail 2026-E17 : les groupes de besoins en 6e et 5e n'ont pas d'effet mesurable"
+  ref: "Bechichi, N., Charpentier, A., Cornetet, J., Dextre Polo, M., El Bah, S. (DEPP), Barone, C., Grenet, J., Gurgand, M., Guyon, N., Huillery, É., Souali, C. et Voisin, A. (2026), « Évaluation des organisations des enseignements de français et de mathématiques en sixième et cinquième. Premiers résultats pour l'année scolaire 2024-2025 », Document de travail DEPP n° 2026-E17, septembre 2026."
+  lien: https://www.education.gouv.fr/sites/default/files/document/-valuation-des-organisations-des-enseignements-de-fran-ais-et-de-math-matiques-en-sixi-me-et-cinqui-me-520978.pdf
+  sujets: [formation]
+  type: étude causale
+  statut: vérifié
+  resume: "Première évaluation des groupes de français et de maths mis en place en 6e et 5e à la rentrée 2024 (« choc des savoirs »), sur un échantillon représentatif de 1 500 collèges publics. 94 % des collèges ont changé leur organisation, mais de façons très diverses : 21 % en groupes hétérogènes, 50 % en groupes selon le profil scolaire des élèves. Méthode : différences de différences sur les évaluations nationales de début de 4e, en comparant la première cohorte exposée aux cohortes précédentes et aux collèges sans regroupement. Résultat : aucun effet significatif en français ni en maths, quel que soit le type de groupe, y compris selon le niveau initial et le sexe des élèves. Les groupes ont pourtant réduit les effectifs presque partout, et une partie des collèges a supprimé de l'accompagnement personnalisé ou des options pour les financer. Limite : premiers résultats, sur une seule cohorte."
+  cle: "Les groupes de besoins généralisés en 6e et 5e en 2024 n'ont eu aucun effet mesurable sur les résultats en français et en maths à l'entrée en 4e (DEPP, document de travail 2026-E17)."
+- id: etat-ecole-2026
+  titre: "DEPP, L'état de l'École 2026 : salaires et formation des professeurs, diplômes"
+  ref: "DEPP (2026), L'état de l'École 2026, novembre 2026, fiches 12, 14, 15 et 35 à 37 (reprend OCDE, Regards sur l'éducation 2026, et TALIS 2024)."
+  lien: https://www.education.gouv.fr/sites/default/files/document/l-tat-de-l-cole-2026-523020.pdf
+  sujets: [formation]
+  type: données
+  statut: vérifié
+  resume: "Recueil annuel d'indicateurs du ministère. Salaires (2024-2025) : un professeur des écoles en milieu de carrière gagne, en salaire statutaire et en parité de pouvoir d'achat, 81 % de la moyenne des pays de l'UE et 50 % du niveau allemand. Formation initiale (TALIS 2024) : 4 enseignants sur 10 dans le primaire et 5 sur 10 au collège la jugent de qualité, les parts les plus basses des pays enquêtés. Diplômes (2025) : 56 % des 25-34 ans sont diplômés du supérieur ; 7,2 % des 18-24 ans ont quitté l'école sans diplôme du second cycle ; environ 79 % d'une génération obtient le bac depuis 2022 ; 88 % des 25-34 ans ont au moins un diplôme du second cycle du secondaire, 2 points de plus que dans l'OCDE."
+  cle: "Un professeur des écoles en milieu de carrière gagne 81 % de la moyenne de l'UE et la moitié du niveau allemand (DEPP, L'état de l'École 2026)."
+- id: depp-dedoublement-2026
+  titre: "DEPP, Synthèse n° 8 (2026) : les gains du dédoublement en REP+ ont disparu à l'entrée en 6e"
+  ref: "Charpentier, A. (2026), « Réduction de la taille de classe en éducation prioritaire : que nous apprennent les données de la DEPP ? », Synthèse DEPP n° 8, février 2026 (résume El Bah, document de travail DEPP 2026.E01)."
+  lien: https://www.education.gouv.fr/sites/default/files/document/r-duction-de-la-taille-de-classe-en-ducation-prioritaire-que-nous-apprennent-les-donn-es-de-la-depp--478949.pdf
+  sujets: [inegalites]
+  type: étude causale
+  statut: vérifié
+  resume: "Première évaluation de long terme du dédoublement des CP et CE1 en éducation prioritaire. La première cohorte (CP en REP+ en 2017-2018) est comparée aux élèves des écoles REP, en différences de différences. En fin de CE1, le gain était significatif : 16 % de l'écart initial avec les élèves hors éducation prioritaire en français, 38 % en maths. À l'entrée en 6e, il n'y a plus d'écart significatif, en français comme en maths. Seule exception : un effet positif en français dans les départements et régions d'outre-mer. Nuance la fiche du CAE (Note n° 84), qui classe le dédoublement parmi les politiques autofinancées à partir des gains de fin de CP."
+  cle: "Les gains du dédoublement en REP+, nets en fin de CE1, ne se voient plus à l'entrée en 6e (DEPP, Synthèse n° 8, 2026)."
+- id: ipp-taille-classes-2025
+  titre: "IPP (2025) : utiliser la baisse du nombre d'élèves pour réduire la taille des classes"
+  ref: "Charousset, P., Grenet, J., Guyon, N. et Souidi, Y. (2025), « Taille des classes et inégalités territoriales : quelle stratégie face à la baisse démographique ? », in IPP, Perspectives budgétaires, chapitre 4, juin 2025."
+  lien: https://hal.science/hal-05458936v1/document
+  sujets: [inegalites]
+  type: rapport
+  statut: vérifié
+  resume: "Le chapitre chiffre deux usages de la baisse des effectifs du premier degré (-8 % entre 2015 et 2024, puis -19 % d'ici 2034). À taille de classe constante, environ 50 000 postes pourraient être supprimés d'ici 2034, soit 3,4 Md€ par an. Si l'on garde les enseignants, la taille moyenne des classes passe de 22,4 à 18,2 élèves (-19 %) ; les auteurs estiment le gain à 4,5 Md€ de salaires futurs et 2,9 Md€ de recettes fiscales, soit 9 € par euro net dépensé. Ils proposent un plafond de 12 élèves par classe en éducation prioritaire. Limite : le rendement s'appuie sur les effets de court terme de la taille des classes, que la DEPP ne retrouve pas à l'entrée en 6e pour le dédoublement."
+  cle: "Garder les enseignants malgré la baisse du nombre d'élèves ramènerait les classes du primaire de 22,4 à 18,2 élèves d'ici 2034 (IPP, 2025)."
+- id: senat-plf2027-enseignement
+  titre: "Sénat, PLF 2027, mission Enseignement scolaire : combien de postes reprendre à la démographie ?"
+  ref: "Paccaud, O. (2026), « PLF 2027, note de présentation, mission Enseignement scolaire », Sénat, commission des finances, octobre 2026."
+  lien: https://www.senat.fr/fileadmin/cru-1792598966/Commissions/Finances/2026-2027/PLF_2027/NP/PLF_2027_NP_Enseignement_scolaire.pdf
+  sujets: [inegalites]
+  type: rapport
+  statut: vérifié
+  resume: "Note du rapporteur spécial du Sénat sur le budget de l'école pour 2027. Le nombre d'élèves baisserait de 1,515 million d'ici 2035 (-13,1 %). Le projet de loi de finances ne reprend que 3 644 emplois au titre de la démographie (1 588 nets), alors qu'une reprise stricte en donnerait 14 777 en 2027. Le rapporteur juge cela « peu ambitieux » et propose de reprendre environ 8 000 emplois pour financer la revalorisation des enseignants. Pour 2026, la commission avait déjà voté 4 000 suppressions de plus que les 4 018 prévues. Position concurrente de celle qui garde les postes pour réduire la taille des classes."
+  cle: "Le budget 2027 reprend 3 644 postes à la baisse du nombre d'élèves ; une reprise stricte en donnerait 14 777 (Sénat, commission des finances, octobre 2026)."
+- id: depp-ni-26-42-depense
+  titre: "DEPP, Note d'information 26.42 : la dépense d'éducation en 2025"
+  ref: "Bagot, M., Dutey, P., de Fornel, F., Liogier, V. et Rousseau, A. (2026), « En 2025, 199,2 milliards d'euros consacrés à l'éducation, soit 6,7 % du PIB », Note d'information DEPP n° 26.42, septembre 2026."
+  lien: https://www.education.gouv.fr/sites/default/files/document/educationnationaledepp-ni-2026-42pdf-520993.pdf
+  sujets: [inegalites]
+  type: données
+  statut: vérifié
+  resume: "La dépense intérieure d'éducation atteint 199,2 Md€ en 2025, 6,7 % du PIB, +0,1 % en euros constants sur un an. Par élève, comparée à la moyenne de l'OCDE (données 2023) : -9,7 % dans l'élémentaire, -3,8 % au collège, +27,7 % au lycée, +4,5 % tous niveaux confondus. La France dépense donc moins que ses voisins là où se forment les bases, et plus au lycée."
+  cle: "La France dépense 9,7 % de moins par élève que la moyenne de l'OCDE à l'école élémentaire, et 27,7 % de plus au lycée (DEPP, NI 26.42, 2026)."
+- id: depp-6e-2025
+  titre: "DEPP, Note d'information 26.21 : évaluations de début de 6e, 5e et 4e en 2025"
+  ref: "Euzeby, F., Jabri, I., Lacroix, A., Valdenaire, M. et al. (2026), « Évaluations exhaustives de début de sixième, de cinquième et de quatrième 2025 », Note d'information DEPP n° 26.21, juin 2026."
+  lien: https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf
+  sujets: [inegalites]
+  type: données
+  statut: vérifié
+  resume: "Évaluations passées par tous les élèves en début de 6e, 5e et 4e. En maths en 6e, les scores sont stables entre 2024 et 2025 et supérieurs à ceux de 2017. Mais les résultats s'étalent : depuis 2017, +1,7 point d'élèves dans les groupes les plus faibles et +3,8 points dans les plus forts. Écarts en maths par rapport au public hors éducation prioritaire : -22 points en REP, -35 points en REP+ ; 49 points entre les 20 % de collèges les moins favorisés et les 20 % les plus favorisés."
+  cle: "En début de 6e, les élèves de REP+ ont 35 points de moins en maths que ceux du public hors éducation prioritaire (DEPP, NI 26.21, 2026)."
+- id: estonie-pisa-2025
+  titre: "Estonie, résultats de PISA 2025"
+  ref: "Ministère estonien de l'Éducation et de la Recherche (2026), « Summary of Estonia's PISA 2025 results », Tartu, septembre 2026."
+  lien: https://hm.ee/sites/default/files/documents/2026-09/PISA_2025_Estonia_results_summary_EN_0.pdf
+  sujets: [formation]
+  type: données
+  statut: vérifié
+  resume: "L'Estonie reste le premier pays d'Europe en maths à PISA 2025 : 508 points, -2 depuis 2022 alors que l'OCDE en perd 11 ; 82,8 % des élèves au niveau 2 ou plus ; 13,3 % de très bons élèves, contre 7,8 % dans l'OCDE. Sciences : 527 points, stable. Compréhension de l'écrit : 499 points, -12 depuis 2022 et -24 depuis 2018. L'écart entre élèves favorisés et défavorisés en sciences est de 68 points, contre 86 dans l'OCDE. Le modèle estonien tient en maths et en sciences, moins en lecture."
+  cle: "En maths, l'Estonie perd 2 points à PISA 2025 quand l'OCDE en perd 11 (ministère estonien de l'Éducation, 2026)."
+- id: bechichi-kenedi-2025
+  titre: "IPP, Note n° 119 (2025) : les choix des anciens élèves orientent ceux des suivants"
+  ref: "Bechichi, N. et Kenedi, G. (2025), « Orientation post-bac : les choix des anciens élèves du lycée influencent-ils ceux des générations suivantes ? », Note IPP n° 119, décembre 2025."
+  lien: https://www.ipp.eu/wp-content/uploads/2025/12/Note_IPP_119_orientation_post_bac.pdf
+  sujets: [orientation]
+  type: étude causale
+  statut: vérifié
+  resume: "Données d'Admission Post-Bac 2012-2017. Les auteurs comparent les lycées où un ancien élève a été admis de justesse dans une formation à ceux où il a été refusé de justesse. Quand l'ancien est admis, la probabilité que les élèves de l'année suivante candidatent à la même formation passe de 35 % à 40 %, et celle d'y être admis de 7 % à 9 %. L'effet passe par les professeurs principaux et est fort de fille à fille (+7,4 points). Parmi les 10 % meilleurs au bac, 47 % des élèves défavorisés candidatent aux 10 % de formations les plus sélectives, contre 74 % des très favorisés. Plus de mixité sociale réduirait cet écart d'aspiration d'environ 10 %."
+  cle: "Quand un ancien élève du lycée est admis dans une formation, les candidatures de l'année suivante à cette formation passent de 35 % à 40 % (IPP, Note n° 119, 2025)."
+- id: filles-maths-2026
+  titre: "Plan « Filles et maths » : objectifs (PLF 2026) et premier point de suivi (DEPP, 2026)"
+  ref: "Annexe au PLF 2026 (2025), « Impact du budget sur l'égalité entre les femmes et les hommes » ; Leduc, Miconnet (2026), « Les choix d'enseignements de spécialité et d'enseignements optionnels à la rentrée 2025 », Note d'information DEPP n° 26.06, février 2026."
+  lien: https://www.assemblee-nationale.fr/dyn/dyn/contenu/visualisation/1089983/file/5-Jaune2026_Impact_Budget_Egalite_FH.pdf
+  sujets: [orientation]
+  type: texte officiel
+  statut: vérifié
+  resume: "Le plan, en vigueur depuis la rentrée 2025, vise 30 000 filles de plus en spécialité maths en terminale en 2030 (environ 5 000 de plus par an à partir de 2026), la parité en spécialité maths en 2030 et au moins 30 % de filles en classe prépa. Coût estimé : environ 28 M€ (formation des enseignants et classes Chams, 31 collèges pilotes en 2025). Constat de départ : 40,1 % des filles abandonnent la spécialité maths entre la 1re et la terminale, contre 23,5 % des garçons. Premier suivi (DEPP, rentrée 2025) : les filles font 41,8 % des élèves de terminale en spécialité maths, exactement comme en 2024 ; 33,7 % des filles la suivent, contre 58,8 % des garçons. Aucune évaluation n'est prévue, seulement des indicateurs par sexe. Lien : https://www.education.gouv.fr/sites/default/files/document/NI_2026-06_Enseignements%20de%20sp%C3%A9cialit%C3%A9s_2025.pdf-480377.pdf"
+  cle: "À la rentrée 2025, les filles restent 41,8 % des élèves de terminale en spécialité maths, comme en 2024 (DEPP, NI 26.06, 2026)."
+- id: capes-2026
+  titre: "CAPES 2026, premier concours à bac+3 : postes et admis"
+  ref: "Ministère de l'Éducation nationale (2026), « Les données statistiques des concours du Capes de la session 2026 », devenirenseignant.gouv.fr, septembre 2026."
+  lien: https://www.devenirenseignant.gouv.fr/les-donnees-statistiques-des-concours-du-capes-de-la-session-2026-1681
+  sujets: [formation]
+  type: données
+  statut: vérifié
+  resume: "Session 2026, la première avec deux concours externes (bac+3 et bac+5). Postes non pourvus = postes moins admis (calcul du GT). CAPES externe public : 7 830 postes (3 697 à bac+3 et 4 133 à bac+5, +60 % sur 2025), 7 634 admis, 196 postes non pourvus (2,5 %), contre 546 (11,2 %) en 2025. Maths : 1 332 admis pour 1 430 postes (700 sur 700 à bac+3, 632 sur 730 à bac+5), 93,1 % des postes pourvus contre 74,4 % en 2025. Restent difficiles : lettres classiques (56 admis pour 80 postes) et allemand (105 pour 118)."
+  cle: "Au premier CAPES à bac+3, en 2026, 93 % des postes de maths sont pourvus, contre 74 % en 2025 (ministère de l'Éducation nationale, calcul du GT)."
+- id: dang-do-2026
+  titre: "Dang et Do (2026), le tutorat par IA dans les écoles pauvres : ce qui marche"
+  ref: "Dang, H.-A. et Do, Q.-T. (2026), « Making AI Tutoring Work for Poorer Schools », IZA Discussion Paper n° 19025, octobre 2026."
+  lien: https://docs.iza.org/dp19025.pdf
+  sujets: [ecrans]
+  type: revue
+  statut: vérifié
+  resume: "Revue des essais randomisés de tutorat par IA. Les programmes complets, avec encadrement et contenus conçus par des enseignants, donnent +0,36 écart-type au Ghana, +0,31 au Nigeria, +0,26 en Sierra Leone. En Chine rurale (315 classes), la personnalisation par IA ne fait pas mieux qu'un entraînement non personnalisé (-0,04). En Turquie, des élèves entraînés avec un chatbot simple font 17 % de moins à l'examen passé sans IA (Bastani et al., 2025). Repère : le tutorat humain donne +0,29 écart-type (Nickow et al.). Conclusion des auteurs : le gain tient au programme, pas à l'IA en soi."
+  cle: "Le tutorat par IA donne +0,26 à +0,36 écart-type dans des programmes encadrés, et rien quand l'IA seule personnalise les exercices (Dang et Do, IZA, 2026)."
+- id: ipp-cej-2026
+  titre: "IPP, Rapport n° 63 (2026) : le Contrat d'engagement jeune comparé à la Garantie jeunes"
+  ref: "Badufle, Bertè, Cano, Filippucci, Rain et Zargouni (2026), « L'impact du Contrat d'engagement jeune sur les trajectoires professionnelles des bénéficiaires », Rapport IPP n° 63, janvier 2026."
+  lien: https://www.ipp.eu/wp-content/uploads/2025/11/Rapport_final_CEJ_trajectoires-3.pdf
+  sujets: [emploi]
+  type: étude causale
+  statut: secondaire
+  resume: "Doubles différences en Missions locales : jeunes entrés en Contrat d'engagement jeune en mars-avril 2022, comparés aux derniers entrés en Garantie jeunes en janvier-février 2022. Effet sur l'emploi globalement similaire à court terme, reprise d'activité plus rapide, coût un peu plus faible. Les jeunes en CEJ ont 3,6 contacts par mois avec leur conseiller (2023), contre 2,3 en Garantie jeunes (2021). Limite : le CEJ a été généralisé sans expérimentation, son effet propre par rapport à l'absence d'accompagnement n'est pas mesuré. Lu sur la page de présentation du rapport."
+  cle: "Le Contrat d'engagement jeune fait à peu près aussi bien que la Garantie jeunes sur l'emploi, pour un coût un peu plus faible (IPP, Rapport n° 63, 2026)."
+- id: tresor-apprentissage-2025
+  titre: "Trésor-Éco n° 376 (2025) : le bilan de l'apprentissage en France"
+  ref: "Barde, Gantois, Gouy-Waz et Leclair (2025), « L'apprentissage en France : quel bilan pour quels objectifs ? », Trésor-Éco n° 376, DG Trésor, novembre 2025."
+  lien: https://www.tresor.economie.gouv.fr/Articles/8e3bcd40-cec3-4bd2-88b6-e5e7a8087d39/files/fd39940b-b32e-4245-9daf-21211b1df4e1
+  sujets: [emploi]
+  type: rapport
+  statut: vérifié
+  resume: "879 000 contrats d'apprentissage en 2024, contre 306 000 en 2017. Coût public en 2023 : environ 15 Md€, soit 14 700 € par apprenti (périmètre plus étroit que les 24,1 Md€ de l'OFCE). Au niveau CAP, 63 % des apprentis sortis en 2021 sont en emploi 18 mois après, contre 36 % des élèves sortis de la voie scolaire ; l'avantage se réduit nettement au niveau master. Limite : comparaison descriptive, pas un effet causal."
+  cle: "Au niveau CAP, 63 % des apprentis sont en emploi 18 mois après leur sortie, contre 36 % des élèves de la voie scolaire (DG Trésor, Trésor-Éco n° 376, 2025)."
