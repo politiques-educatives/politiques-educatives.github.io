@@ -24,7 +24,7 @@
   resume: "Hausse de 20 % sur le quinquennat, jusqu'à la moyenne européenne, surtout en milieu de carrière."
   page: 22
   eval: à compléter
-  apport: "Note 1 : lier la hausse à un service annuel qui réserve du temps au tutorat et au travail d'équipe. Le livret ne chiffre pas la mesure : 10 à 16,9 Md€ par an, 11,8 Md€ en valeur centrale, hors pensions (calcul du groupe, à vérifier). Une hausse uniforme retient tous les enseignants de la même façon, alors que les plus efficaces sont 2,5 fois plus sensibles au salaire dans leur décision de partir ; une prime ciblée donnerait le même gain de qualité pour un quart du coût (Tartova, 2025, document de travail)."
+  apport: "Note 1 : lier la hausse à un service annuel qui réserve du temps au tutorat et au travail d'équipe. Le livret ne chiffre pas la mesure : 10 à 16,9 Md€ par an, 11,8 Md€ en valeur centrale, hors pensions (calcul du groupe, à vérifier). L'élasticité des départs au salaire est estimée 2,5 fois plus forte chez les enseignants au-dessus de la médiane d'efficacité, mais l'écart avec les autres n'est significatif qu'à 10 % au mieux ; le gain simulé d'une hausse uniforme, ou d'une prime ciblée quatre fois moins chère, est faible : 0,015 écart-type en cinq ans (Tartova, 2025, document de travail)."
   cartes: [heures-service-annuel]
 - n: "66"
   sujets: [formation]
