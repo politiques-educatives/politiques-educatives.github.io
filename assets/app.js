@@ -513,7 +513,7 @@
     }
     base.height = { step: 34 };
     base.encoding = { y: { field: "categorie", type: "nominal", sort: null, title: null, axis: { labelLimit: 220 } }, yOffset: { field: "serie", sort: null },
-      x: { field: "valeur", type: "quantitative", title: g.unite }, color: color, tooltip: tip };
+      x: { field: "valeur", type: "quantitative", title: g.unite, axis: g.graduations ? { tickCount: g.graduations } : {} }, color: color, tooltip: tip };
     base.layer = [{ mark: { type: "bar", cornerRadiusEnd: 3 } }, { mark: Object.assign({ align: "left", dx: 4 }, lbl), encoding: txt }];
     return base;
   }

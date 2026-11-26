@@ -298,6 +298,7 @@
   sujet: emploi
   titre: "La concurrence chinoise vise quelques filières industrielles : électricité et électronique d'abord"
   type: barres-h
+  graduations: 5
   unite: "× la moyenne de l'industrie"
   source: "Comext (Eurostat), importations de la France depuis la Chine 2018-2024 ; emploi Urssaf ; calculs GT Éducation (papier China shock 2, travaux en cours)"
   note: "Hausse des importations depuis la Chine par salarié des industries où travaillent les diplômés, rapportée à la moyenne de l'industrie. Exposition, pas effet : le papier China shock 2 ne trouve pas d'effet significatif sur l'emploi. Aucune spécialité de la voie pro ne cumule une forte exposition à l'IA et à la Chine."
@@ -333,7 +334,7 @@
 - id: deux-chocs-secteur-ips
   sujet: emploi
   titre: "L'exposition à l'IA ne suit pas le profil social des lycées pro ; elle est plus forte dans le privé"
-  type: barres
+  type: barres-h
   unite: "% des élèves de terminale"
   source: "Boussole des formations ; DEPP, IPS des lycées, rentrée 2022 (data.education.gouv.fr) ; calculs GT Éducation"
   note: "Quarts de lycées professionnels selon l'indice de position sociale de la voie pro. Exposés à l'IA : au moins 40 % des tâches ; exposés à la Chine : au moins 1,2 fois la moyenne de l'industrie. Les données par formation commencent au lycée : rien ne distingue encore les collèges."
