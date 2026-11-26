@@ -286,3 +286,54 @@
   unite: "% des emplois industriels de la zone dans un Territoire d'industrie"
   source: "ANCT (2026), programme Territoires d'industrie, communes couvertes 2023-2027 ; Insee, recensement 2022 (actifs de 25 à 54 ans dans l'industrie par commune de travail)"
   note: "183 Territoires d'industrie (2023-2027), le programme public de soutien à l'industrie par bassin. Part des actifs de 25 à 54 ans travaillant dans l'industrie dont la commune de travail est couverte. 31 zones n'en comptent aucun, les plus industrielles étant Angers, Chambéry et Poitiers. Outre-mer dans le CSV."
+# ================= Les formations face aux deux chocs, IA et concurrence chinoise (26/11/2026 ; ../scripts/build_figures_deux_chocs.py) =================
+- id: deux-chocs-ia-types
+  sujet: emploi
+  titre: "L'IA touche d'abord les formations du supérieur et du tertiaire, peu le CAP, la santé et le social"
+  type: barres-h
+  unite: "% des tâches des premiers emplois"
+  source: "Hosseini et Lichtinger (2026), via les fiches métiers ROME ; InserJeunes 2023-2024 (effectifs 2023) ; Parcoursup 2025 ; calculs GT Éducation (Boussole des formations)"
+  note: "Moyenne de la part des tâches des premiers emplois qu'une IA peut faire, pondérée par les élèves de terminale (CAP, bac pro) ou par le nombre de formations (familles Parcoursup). Exposition ne veut pas dire remplacement."
+- id: deux-chocs-chine-familles
+  sujet: emploi
+  titre: "La concurrence chinoise vise quelques filières industrielles : électricité et électronique d'abord"
+  type: barres-h
+  unite: "× la moyenne de l'industrie"
+  source: "Comext (Eurostat), importations de la France depuis la Chine 2018-2024 ; emploi Urssaf ; calculs GT Éducation (papier China shock 2, travaux en cours)"
+  note: "Hausse des importations depuis la Chine par salarié des industries où travaillent les diplômés, rapportée à la moyenne de l'industrie. Exposition, pas effet : le papier China shock 2 ne trouve pas d'effet significatif sur l'emploi. Aucune spécialité de la voie pro ne cumule une forte exposition à l'IA et à la Chine."
+- id: deux-chocs-ia-academies
+  sujet: emploi
+  titre: "Exposition à l'IA de la voie pro : de 18 % des élèves à Limoges à 38 % en Île-de-France"
+  type: barres-h
+  unite: "% des élèves de terminale de la voie pro"
+  source: "Boussole des formations (InserJeunes 2023-2024, effectifs 2023) ; Hosseini et Lichtinger (2026) ; DEPP, IPS des lycées (académies) ; calculs GT Éducation"
+  note: "Part des élèves de terminale (bac pro et CAP) dans une spécialité dont au moins 40 % des tâches des premiers emplois peuvent être faites par une IA. France : 30 %."
+- id: deux-chocs-ia-ze
+  sujet: emploi
+  titre: "Les deux chocs ne touchent pas les mêmes territoires (1) : exposition de la voie pro à l'IA, par zone d'emploi"
+  type: carte
+  geo: zones-emploi
+  lieu: "Zone d'emploi"
+  quantiles: 5
+  echelle: blues
+  unite: "% des élèves de terminale de la voie pro"
+  source: "Boussole des formations ; Hosseini et Lichtinger (2026) ; calculs GT Éducation"
+  note: "Part des élèves de terminale de la voie pro de la zone dans une spécialité exposée à l'IA (au moins 40 % des tâches)."
+- id: deux-chocs-chine-ze
+  sujet: emploi
+  titre: "Les deux chocs ne touchent pas les mêmes territoires (2) : exposition de la zone à la concurrence chinoise"
+  type: carte
+  geo: zones-emploi
+  lieu: "Zone d'emploi"
+  quantiles: 5
+  echelle: oranges
+  unite: "centile parmi les 287 zones"
+  source: "Papier China shock 2 (travaux en cours), méthode d'Autor, Dorn et Hanson (2013), importations Comext ; calculs GT Éducation"
+  note: "Exposition, pas effet mesuré : l'estimation du papier n'est pas significative."
+- id: deux-chocs-secteur-ips
+  sujet: emploi
+  titre: "L'exposition à l'IA ne suit pas le profil social des lycées pro ; elle est plus forte dans le privé"
+  type: barres
+  unite: "% des élèves de terminale"
+  source: "Boussole des formations ; DEPP, IPS des lycées, rentrée 2022 (data.education.gouv.fr) ; calculs GT Éducation"
+  note: "Quarts de lycées professionnels selon l'indice de position sociale de la voie pro. Exposés à l'IA : au moins 40 % des tâches ; exposés à la Chine : au moins 1,2 fois la moyenne de l'industrie. Les données par formation commencent au lycée : rien ne distingue encore les collèges."

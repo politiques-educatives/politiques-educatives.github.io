@@ -169,7 +169,7 @@ themes:
       - "La Boussole classe les 13 819 formations de Parcoursup 2025 en 39 familles et affiche l'emploi et le salaire de 2 427 masters d'université (InserSup 2026)."
       - {source: hastings-2015}
     chiffre: {graphique: insersup}
-    graphiques_plus: [insersup-tendance, industrie-ze-potentiel]
+    graphiques_plus: [insersup-tendance, industrie-ze-potentiel, deux-chocs-ia-types, deux-chocs-chine-familles, deux-chocs-ia-academies, deux-chocs-ia-ze, deux-chocs-chine-ze, deux-chocs-secteur-ips]
     propositions: [orient-transparence, orient-debouches]
     livret: ["P08"]
     ajouts: [a-debouches]

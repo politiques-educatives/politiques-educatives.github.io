@@ -1,0 +1,288 @@
+categorie,serie,valeur
+0051,Alençon,63
+0052,Arles,13
+0053,Avignon,12
+0054,Beauvais,70
+0055,Bollène-Pierrelatte,37
+0056,Cosne-Cours-sur-Loire,40
+0057,Dreux,77
+0058,La Vallée de la Bresle-Vimeu,99
+0059,Mâcon,74
+0060,Nevers,69
+0061,Nogent-le-Rotrou,94
+0062,Redon,65
+0063,Ussel,56
+0064,Valréas,18
+1101,Cergy-Vexin,46
+1102,Coulommiers,38
+1103,Etampes,6
+1104,Evry,44
+1105,Fontainebleau-Nemours,41
+1106,Marne-la-Vallée,22
+1107,Meaux,27
+1108,Melun,18
+1109,Paris,5
+1110,Provins,44
+1111,Rambouillet,26
+1112,Roissy,7
+1113,Saclay,21
+1114,Seine-Yvelinoise,42
+1115,Versailles-Saint-Quentin,40
+2401,Blois,34
+2402,Bourges,66
+2403,Chartres,76
+2404,Châteaudun,100
+2405,Châteauroux,77
+2406,Chinon,6
+2407,Gien,81
+2408,Loches,72
+2409,Montargis,66
+2410,Orléans,57
+2411,Pithiviers,82
+2412,Romorantin-Lanthenay,93
+2413,Tours,64
+2414,Vendôme,97
+2415,Vierzon,90
+2701,Autun,61
+2702,Auxerre,62
+2703,Avallon,55
+2704,Beaune,61
+2705,Belfort,83
+2706,Besançon,67
+2707,Chalon-sur-Saône,68
+2708,Charolais,49
+2709,Châtillon-Montbard,96
+2710,Creusot-Montceau,79
+2711,Dijon,57
+2712,Dole,87
+2713,Lons-le-Saunier,55
+2714,Montbéliard,74
+2715,Pontarlier,78
+2716,Saint-Claude,99
+2717,Sens,82
+2718,Vesoul,75
+2801,Argentan,45
+2802,Avranches,84
+2803,Bernay,85
+2804,Caen,22
+2805,Cherbourg en Cotentin,86
+2806,Coutances,22
+2807,Dieppe-Caux maritime,24
+2808,Evreux,63
+2809,Flers,57
+2810,Granville,37
+2811,Honfleur Pont-Audemer,27
+2812,L'Aigle,95
+2813,Le Havre,43
+2814,Lisieux,76
+2815,Rouen,54
+2816,Saint-Lô,60
+2817,Vernon-Gisors,94
+2818,Vire Normandie,74
+2819,Yvetot-Vallée du Commerce,85
+3201,Abbeville,33
+3202,Amiens,60
+3203,Arras,54
+3204,Berck,14
+3205,Béthune,68
+3206,Boulogne-sur-Mer,4
+3207,Calais,52
+3208,Cambrai,77
+3209,Château-Thierry,80
+3210,Compiègne,78
+3211,Creil,47
+3212,Douai,39
+3213,Dunkerque,31
+3214,Laon,86
+3215,Lens,23
+3216,Lille,15
+3217,Maubeuge,81
+3218,Roubaix-Tourcoing,62
+3219,Saint-Omer,59
+3220,Saint-Quentin,91
+3221,Soissons,73
+3222,Valenciennes,45
+4401,Bar-le-Duc,63
+4402,Châlons-en-Champagne,54
+4403,Charleville-Mézières,72
+4404,Chaumont,71
+4405,Colmar,79
+4406,Épernay,64
+4407,Épinal,69
+4408,Forbach,53
+4409,Haguenau,88
+4410,Metz,17
+4411,Mulhouse,59
+4412,Nancy,25
+4413,Reims,25
+4414,Remiremont,86
+4415,Romilly-sur-Seine,97
+4416,Saint-Avold,98
+4417,Saint-Dié-des-Vosges,84
+4418,Saint-Louis,95
+4419,Sarrebourg,85
+4420,Sarreguemines,87
+4421,Sedan,97
+4422,Sélestat,99
+4423,Strasbourg,48
+4424,Thionville,20
+4425,Troyes,67
+4426,Verdun,52
+4427,Vitry-le-François Saint-Dizier,75
+5201,Ancenis,80
+5202,Angers,30
+5203,Challans,78
+5204,Château-Gontier,91
+5205,Châteaubriant,71
+5206,Cholet,70
+5207,Fontenay-le-Comte,48
+5208,La Ferté-Bernard,98
+5209,La Flèche,91
+5210,La Roche-sur-Yon,95
+5211,Laval,72
+5212,Le Mans,52
+5213,Les Herbiers-Montaigu,90
+5214,Les Sables-d'Olonne,47
+5215,Mayenne,96
+5216,Nantes,40
+5217,Pornic,30
+5218,Sablé-sur-Sarthe,51
+5219,Saint-Nazaire,89
+5220,Saumur,62
+5221,Segré-en-Anjou Bleu,94
+5301,Auray,30
+5302,Brest,28
+5303,Carhaix-Plouguer,3
+5304,Dinan,23
+5305,Fougères,66
+5306,Guingamp,19
+5307,Lamballe-Armor,7
+5308,Lannion,33
+5309,Lorient,80
+5310,Morlaix,10
+5311,Ploërmel,51
+5312,Pontivy-Loudéac,36
+5313,Quimper,43
+5314,Quimperlé,16
+5315,Rennes,13
+5316,Saint-Brieuc,21
+5317,Saint-Malo,28
+5318,Vannes,26
+5319,Vitré,56
+7501,Agen,29
+7502,Angoulême,92
+7503,Bayonne,29
+7504,Bergerac,33
+7505,Bordeaux,24
+7506,Bressuire,79
+7507,Brive-la-Gaillarde,46
+7508,Châtellerault,89
+7509,Cognac,47
+7510,Dax,31
+7511,Guéret,49
+7512,La Rochelle,56
+7513,La Teste-de-Buch,41
+7514,Langon,17
+7515,Lesparre-Médoc,12
+7516,Libourne,53
+7517,Limoges,32
+7518,Marmande,42
+7519,Mont-de-Marsan,24
+7520,Niort,44
+7521,Oloron-Sainte-Marie,35
+7522,Pau,36
+7523,Périgueux,34
+7524,Poitiers,46
+7525,Rochefort,36
+7526,Royan,8
+7527,Saint-Junien,70
+7528,Saintes,16
+7529,Sarlat-La-Canéda,20
+7530,Thouars,32
+7531,Tulle,32
+7532,Villeneuve-sur-Lot,11
+7601,Agde-Pézenas,14
+7602,Albi,31
+7603,Alès-Le Vigan,59
+7604,Auch,15
+7605,Bagnols-sur-Cèze,20
+7606,Béziers,16
+7607,Cahors,13
+7608,Carcassonne-Limoux,14
+7609,Castelsarrasin-Moissac,10
+7610,Castres-Mazamet,50
+7611,Figeac-Villefranche,76
+7612,Foix-Pamiers,29
+7613,Mende,17
+7614,Millau,26
+7615,Montauban,58
+7616,Montpellier,9
+7617,Narbonne,9
+7618,Nîmes,9
+7619,Nord-du-Lot,48
+7620,Perpignan,8
+7621,Rodez,18
+7622,Saint-Gaudens,23
+7623,Sète,11
+7624,Tarbes-Lourdes,41
+7625,Toulouse,25
+8401,Annecy,92
+8402,Aubenas,39
+8403,Aurillac,43
+8404,Belley,100
+8405,Bourg en Bresse,53
+8406,Bourgoin-Jallieu,84
+8407,Chambéry,45
+8408,Clermont-Ferrand,68
+8409,Grenoble,92
+8410,Issoire,58
+8411,La Maurienne,50
+8412,La Plaine du Forez,82
+8413,La Tarentaise,21
+8414,La Vallée de l'Arve,88
+8415,Le Chablais,51
+8416,Le Genevois Français,34
+8417,Le Livradois,89
+8418,Le Mont Blanc,15
+8419,Le Puy en Velay,73
+8420,Les Sources de la Loire,93
+8421,Lyon,49
+8422,Montélimar,8
+8423,Montluçon,83
+8424,Moulins,55
+8425,Oyonnax,98
+8426,Roanne,75
+8427,Romans sur Isère,69
+8428,Saint Etienne,67
+8429,Saint Flour,39
+8430,Tarare,90
+8431,Valence,61
+8432,Vichy,83
+8433,Vienne-Annonay,93
+8434,Villefranche-sur-Saône,71
+8435,Voiron,87
+9301,Aix-en-Provence,60
+9302,Briançon,1
+9303,Brignoles,1
+9304,Cannes,28
+9305,Carpentras,19
+9306,Cavaillon,38
+9307,Digne-les-Bains,64
+9308,Draguignan,3
+9309,Fréjus,7
+9310,Gap,2
+9311,Manosque,5
+9312,Marseille,10
+9313,Martigues-Salon,37
+9314,Menton,2
+9315,Nice,11
+9316,Orange,35
+9317,Sainte-Maxime,38
+9318,Toulon,65
+9401,Ajaccio,5
+9402,Bastia,6
+9403,Calvi,4
+9404,Corte,1
+9405,Ghisonaccia,2
+9406,Porto-Vecchio,3
+9407,Propriano,0
