@@ -1695,3 +1695,71 @@
   resume: 'Nouvelle méthode pour mesurer la valeur ajoutée des enseignants là où les élèves ne passent pas de test chaque année : elle compare les résultats d''un même élève entre matières et s''appuie sur les « réseaux » d''enseignants. Validée sur les données de New York. Appliquée aux collèges français : un enseignant un écart-type plus efficace que ses collègues du même établissement fait gagner 0,10 écart-type en maths et 0,07 en français. Limite : document de travail ; avec la même méthode, l''effet est de 0,14 et 0,10 écart-type à New York.'
   cle: Dans les collèges français, un enseignant un écart-type plus efficace que ses collègues du même établissement fait gagner 0,10 écart-type en maths et 0,07 en français (Tartova, 2025, document de travail).
   propositions: []
+
+# ================= VEILLE DU 24/11/2026 (liens transmis ; texte : Gemini 4 Carbon, vérifié ; research/31-veille-2026-11-24) =================
+- id: commonsense-google-2026
+  titre: "Common Sense Media (2026), l'IA de la recherche Google et les mineurs"
+  ref: "Common Sense Media, Youth AI Safety Institute (2026), AI Risk Assessment. Google Search: AI Overview & AI Mode, 14 juillet 2026."
+  lien: https://institute.commonsensemedia.org/sites/default/files/risk-assessments/csm-ai-risk-assessment-google-search-07142026_0.pdf
+  sujets: [ecrans]
+  type: rapport
+  statut: vérifié
+  resume: "Le 14 juillet 2026, l'association Common Sense Media et son Youth AI Safety Institute (institut sur la sécurité de l'IA pour les jeunes, financé aussi par des entreprises dont il évalue les produits) classent en « risque inacceptable » deux outils Google : AI Overview (résumé en tête des résultats) et AI Mode (agent conversationnel intégré). L'étude porte sur plus de 2 600 requêtes aux États-Unis (19 mai au 1er juillet 2026, comptes de 11 et 15 ans). Sur 214 messages justifiant un renvoi vers un médecin ou une ligne d'écoute, l'orientation a lieu dans 58 % (AI Overview) et 77 % des cas (AI Mode), sous le seuil de 95 % (96 % d'AI Mode pour le suicide). AI Mode a fait 180 devoirs sur 180. Au moment des tests, désactivation impossible sans couper la recherche. Limites : tests non causaux aux États-Unis, méthode contestée par Google."
+  cle: "Aux États-Unis, les fonctions d'IA de Google renvoient les mineurs vers de l'aide dans 58 % à 77 % des cas requis, contre un seuil de 95 % fixé par les évaluateurs (Common Sense Media, 14/07/2026)."
+  propositions: []
+  dossier: ""
+- id: bloomberg-2026-ia-ecole
+  titre: "Bloomberg Businessweek (2026), l'agent conversationnel comme confident sur l'ordinateur de l'école"
+  ref: "Bloomberg Businessweek (2026), enquête sur l'IA de Google à l'école et la plainte d'une famille américaine, novembre 2026."
+  lien: https://www.bloomberg.com/features/2026-google-classroom-ai-safety/
+  sujets: [ecrans]
+  type: enquête de presse
+  statut: vérifié
+  resume: "En novembre 2026, Bloomberg Businessweek publie une enquête sur une élève de 13 ans en Caroline du Nord (sous pseudonyme). Entre décembre 2025 et mars 2026, elle a envoyé plus de 7 000 messages à AI Mode (agent conversationnel de Google) sur l'ordinateur de l'école, mêlant devoirs et détresse. En mars 2026, un logiciel de surveillance de documents a alerté l'école, pas l'agent. L'outil enregistrait les premières questions sans ses réponses : parents et école ignorent presque tout du contenu généré ; l'agent l'a au moins une fois renvoyée vers la ligne d'écoute, selon les traces. L'élève savait parler à une machine. La famille a attaqué Google en justice en novembre 2026 (allégations d'un cas, non jugées). Google examine la plainte et désactivera par défaut Gemini et la recherche pour les élèves aux États-Unis début 2027, la réactivation ramenant l'IA."
+  cle: "Aux États-Unis, une famille poursuit Google après 7 000 messages d'une élève de 13 ans en détresse à AI Mode sur un ordinateur scolaire, sans alerte ni historique des réponses (Bloomberg Businessweek, novembre 2026)."
+  propositions: []
+  dossier: ""
+- id: snt-ia-2027
+  titre: "Une heure d'IA par semaine en seconde à la rentrée 2027 (annonce, 2026)"
+  ref: "Ministère de l'Éducation nationale, lettre de saisine du Conseil supérieur des programmes, 20 juillet 2026 (compte rendu : News Tank, 30 juillet 2026) ; É. Geffray, LCI, 23 novembre 2026."
+  lien: https://education.newstank.fr/article/view/449845/rentree-2027-deux-heures-snt-hebdomadaires-heure-enseignement-ia-e-geffray.html
+  sujets: [ecrans]
+  type: annonce officielle
+  statut: secondaire
+  resume: "Le 19 juin 2026, le Premier ministre puis le ministre de l'Éducation nationale Édouard Geffray ont annoncé un cours sur l'IA en classe de seconde (saisine du Conseil supérieur des programmes du 20 juillet 2026). Sur LCI le 23 novembre 2026, le ministre déclare : « Dès la rentrée 2027, nous allons enseigner l'IA en seconde. Tous les élèves auront une heure par semaine dédiée ». Le cours de SNT (sciences numériques et technologie) doit passer de 1 h 30 à deux heures hebdomadaires, dont une heure sur l'IA (bases scientifiques et techniques, éthique, esprit critique). Ce cours diffère de notre proposition de tuteur IA. Limites : lettre non lue (compte rendu News Tank du 30 juillet 2026), programme non publié, aucune évaluation disponible dans nos dossiers."
+  cle: "À la rentrée 2027, le cours de SNT en seconde doit passer de 1 h 30 à deux heures par semaine, incluant une heure dédiée à l'IA, sans programme publié à ce stade (LCI, 23/11/2026)."
+  propositions: []
+  dossier: ""
+- id: mckinsey-competences-2025
+  titre: "McKinsey Global Institute (2025), quelles compétences l'IA change le plus"
+  ref: "McKinsey Global Institute (2025), Agents, robots, and us: Skill partnerships in the age of AI, novembre 2025 (graphique 12)."
+  lien: https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai
+  sujets: [emploi]
+  type: rapport
+  statut: secondaire
+  resume: "En novembre 2025, le cabinet de conseil McKinsey Global Institute publie « Agents, robots, and us: Skill partnerships in the age of AI » (partenariats de compétences à l'ère de l'IA, graphique rediffusé le 23 novembre 2026). L'étude calcule un indice d'exposition à l'automatisation sur cinq ans (de 0 à 100) pour environ 6 800 compétences. Dans le scénario médian, la médiane atteint 28 % (un quart sous 23 %, un quart au-dessus de 33 %), contre 51 % en scénario d'adoption accélérée (quartiles à 43 % et 59 %). Sur les 100 compétences les plus demandées, négociation, direction d'équipe et accompagnement sont parmi les moins exposées, facturation et langage de programmation SQL parmi les plus exposées. L'usage évolue sans disparition, rejoignant Deming (2017) sur les compétences sociales. Limite : projections, non effets mesurés."
+  cle: "Selon des projections de conseil, la médiane d'exposition des compétences à l'automatisation sur cinq ans atteint 28 %, l'accompagnement et la négociation étant moins exposés que la programmation SQL (McKinsey Global Institute, novembre 2025)."
+  propositions: []
+  dossier: ""
+- id: bohlmark-holmlund-lindahl-2016
+  titre: "Böhlmark, Holmlund et Lindahl (2016), libre choix de l'école et ségrégation en Suède"
+  ref: "Böhlmark, A., H. Holmlund et M. Lindahl (2015), « School choice and segregation: evidence from Sweden », IFAU 2015:8 ; publié en 2016 dans le Journal of Population Economics."
+  lien: https://www.ifau.se/globalassets/pdf/se/2015/wp2015-08-school-choice-and-segregation.pdf
+  sujets: [formation]
+  type: étude descriptive
+  statut: vérifié
+  resume: "Böhlmark, Holmlund et Lindahl (2015, IFAU 2015:8 ; publié en 2016, Journal of Population Economics) étudient la réforme en Suède de 1992 instaurant un chèque scolaire pour tous et le choix de l'école. Là où ce choix s'est développé, la ségrégation entre élèves immigrés et natifs, ainsi qu'entre enfants selon le niveau de diplôme des parents, a davantage progressé, y compris à quartier donné. Le lieu de résidence demeure le premier facteur explicatif. La hausse imputable au choix reste « relativement faible » et le niveau de ségrégation en Suède demeure de niveau bas à médian en comparaison entre pays. Les auteurs suggèrent un chèque majoré pour les élèves défavorisés et un tirage au sort en cas de surnombre. Limite : approche descriptive selon les auteurs, malgré des tests allant vers la causalité."
+  cle: "En Suède après 1992, la ségrégation scolaire a plus augmenté là où le choix de l'école s'est développé, mais la hausse attribuable au choix est « relativement faible », le quartier restant le premier facteur explicatif (Böhlmark, Holmlund et Lindahl, 2015, IFAU 2015:8)."
+  propositions: []
+  dossier: ""
+- id: bohlmark-lindahl-2015
+  titre: "Böhlmark et Lindahl (2015), écoles indépendantes et résultats en Suède"
+  ref: "Böhlmark, A. et M. Lindahl (2012), « Independent schools and long-run educational outcomes », IFAU 2012:19 ; publié en 2015 dans Economica 82."
+  lien: https://www.ifau.se/globalassets/pdf/se/2012/wp12-19-Independent-schools-and-long-run-educational-outcomes.pdf
+  sujets: [formation]
+  type: étude causale
+  statut: secondaire
+  resume: "Böhlmark et Lindahl (2012, IFAU 2012:19 ; publié en 2015, Economica 82) comparent l'évolution des performances scolaires entre les communes de Suède selon l'augmentation de la proportion d'élèves scolarisés dans des écoles indépendantes après la réforme de 1992. Une proportion accrue fait progresser la moyenne des résultats en fin d'école obligatoire et à long terme, sans augmentation des dépenses. Cet effet provient de la concurrence entre établissements plutôt que d'un gain réservé aux élèves inscrits dans les écoles indépendantes. Pour la majorité des indicateurs étudiés, aucun effet statistiquement significatif n'apparaît avant une dizaine d'années environ. Le résumé consulté ne fournit pas d'ampleur chiffrée. Limite : méthode reposant sur des comparaisons entre communes, à croiser avec l'article étudiant la ségrégation."
+  cle: "En Suède après 1992, l'essor des écoles indépendantes améliore la moyenne des résultats après environ dix ans par effet de concurrence et à dépenses constantes, sans chiffrage lu (Böhlmark et Lindahl, 2012, IFAU 2012:19)."
+  propositions: []
+  dossier: ""

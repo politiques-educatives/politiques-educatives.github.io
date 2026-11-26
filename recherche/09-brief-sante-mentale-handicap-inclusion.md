@@ -6,7 +6,7 @@ sujets: ["inclusion", "ecrans"]
 ---
 {% raw %}
 
-GT Éducation, Préparer l'avenir. Rédigé le 17 novembre 2026, après la réunion du 16 novembre.
+GT Éducation. Rédigé le 17 novembre 2026, après la réunion du 16 novembre.
 Objet : nourrir la note 1 (inclusion scolaire : le parcours parents-école, découpler payeur et prescripteur) et les travaux sur la santé scolaire et la santé mentale des lycéens.
 Convention : chaque chiffre porte sa source et son lien. « À vérifier » signale un point non confirmé dans une source primaire. Les PDF téléchargés sont dans `sources/` (voir la section 5). Le rapport de l'Élysée « IA générative et vulnérabilités » (nov. 2026) est dans le dossier mais n'est pas résumé ici.
 

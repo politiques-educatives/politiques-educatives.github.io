@@ -327,7 +327,7 @@
     (q.voiepro || []).forEach(function (k) { if (VP && VPB[k]) h += VPB[k](); });
     if (props.length || liv.length || aj.length)
       h += blk("Ce que nous proposons", props.map(propHTML).join("") +
-        (liv.length ? '<h4>Dans le livret du programme « Croire en nous »</h4>' + liv.map(livHTML).join("") : "") +
+        (liv.length ? '<h4>Dans le programme</h4>' + liv.map(livHTML).join("") : "") +
         (aj.length ? "<h4>Ce que nos travaux ajoutent au livret</h4>" + '<ul class="ajouts">' + aj.map(function (a) { return item("li", "", a.texte, md(a.texte)); }).join("") + "</ul>" : ""), "qprop");
     if ((q.edl || []).length) h += blk("Éléments de langage", '<ul class="edl">' + q.edl.map(function (e) {
       return item("li", "", e.amorce + " " + e.texte, '<b>' + esc(e.amorce) + '.</b> « ' + esc(e.texte) + ' »' + '<span class="note-src"> ' + esc(e.source) + "</span>"); }).join("") +
@@ -442,7 +442,7 @@
     var gh = "https://github.com/" + W.REPO;
     el.innerHTML = '<div class="intro"><p class="kick">Mis à jour le ' + esc(date) + "</p>" +
       "<h1>Propositions et données du GT Éducation</h1>" +
-      '<p class="lead">Les travaux du groupe de travail Éducation de Préparer l\'avenir et les données qui les appuient. Chaque thème se lit section par section : en bref, le chiffre clé, nos propositions ; puis, en bas du thème, ce que font les autres pays, sur une carte.</p></div>' +
+      '<p class="lead">Les travaux du groupe de travail Éducation et les données qui les appuient. Chaque thème se lit section par section : en bref, le chiffre clé, nos propositions ; puis, en bas du thème, ce que font les autres pays, sur une carte.</p></div>' +
       '<p class="lead"><strong>Nouveau dans le groupe ?</strong> <a href="' + esc(BASE + "/guide.html") + '">Mode d\'emploi</a> : lire un thème en dix minutes, vérifier un chiffre. <a href="' + esc(BASE + "/evaluer.html") + '">Tester une proposition avec des personas</a> : choisissez les personas, collez votre note, copiez la consigne.</p>' +
       '<h2 class="h2">Par thème</h2><div class="grid">' + themeTiles + "</div>" +
       '<h2 class="h2">Outils interactifs</h2><div class="grid">' + tools + "</div>" +

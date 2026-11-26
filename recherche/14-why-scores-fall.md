@@ -6,7 +6,7 @@ sujets: ["ecrans"]
 ---
 {% raw %}
 
-GT Éducation, Préparer l'avenir. Labels: **VERIFIED** = primary source read today; **SECONDARY** = press, search snippet or summary of the primary; **UNVERIFIED** = not confirmed. Note: education.gouv.fr HTML pages and oecd.org blocked automated access today; DEPP PDFs were read directly. The 18 Nov 2026 DEPP note on the September 2026 tests was **not** read (page blocked): its figures below are SECONDARY.
+GT Éducation. Labels: **VERIFIED** = primary source read today; **SECONDARY** = press, search snippet or summary of the primary; **UNVERIFIED** = not confirmed. Note: education.gouv.fr HTML pages and oecd.org blocked automated access today; DEPP PDFs were read directly. The 18 Nov 2026 DEPP note on the September 2026 tests was **not** read (page blocked): its figures below are SECONDARY.
 
 > **Corrections after direct reading (Claude, 18 Nov 2026, Chrome; copies in `sources/`).** The 18 Nov communiqué and the 2026 DEPP reports (CE1, 6e, 5e, 4e, seconde) were read in full. Use these values instead of the SECONDARY ones in section 1:
 > - CE1 « écrire des mots dictés »: 69.9% in 2026 vs 72.4% in 2025 (-2.5) and -7.2 points since 2019. The 73% for 2023 is only on a chart.

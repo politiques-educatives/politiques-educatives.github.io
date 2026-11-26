@@ -17,7 +17,6 @@ sujets: ["ecrans"]
 |---|---|---|
 | **Internal line: "zéro IA générative pour l'élève jusqu'au bac"** | Notes 06 and 07 (rev. 2026-09-24) removed the pupil-facing AI agent; the proposal here puts a generative tool in front of pupils **from 6e**. Needs an explicit arbitration, or a reframing (supervised, guardrailed tool ≠ free use, which is what the negative evidence measures). | `education-reform/notes/07-point-faible-ia-soutien-universel.md` |
 | **Ministry framework: pupil use only from 4e, in class** | Cadre d'usage (June 2025): pedagogical generative-AI use by pupils allowed **from 4e, in class, under teacher supervision**; primary pupils learn concepts without using generative services. A 6e start (and home voice mode) goes beyond it. | Banque des Territoires summary, https://www.banquedesterritoires.fr/ia-en-education-ce-que-prevoit-le-cadre-dusage-pour-la-communaute-educative ; primary text https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647 (403 to fetch: wording **UNVERIFIED** on primary) |
-| Philippe's own wording (internal) | « zéro IA avant le collège, puis une formation à son usage responsable et éclairé, et un soutien scolaire universel qui pourra intégrer un agent IA au lycée ». The new proposal (from 6e) is closer to Philippe's original phrasing than notes 06/07 were, but earlier (collège, not lycée). | `notes/07-...md` (interview quote); no public source found |
 
 ## A. What France already does
 

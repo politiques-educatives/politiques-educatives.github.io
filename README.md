@@ -1,4 +1,4 @@
-# Propositions et données du GT Éducation (Préparer l'avenir)
+# Propositions et données du GT Éducation
 
 Site de travail : https://politiques-educatives.github.io/ (non indexé). Source dans `horizons-education-ia/site-politiques-educatives/`.
 

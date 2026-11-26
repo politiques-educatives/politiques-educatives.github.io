@@ -1,5 +1,5 @@
 # Le titre est la proposition elle-même, pas le thème
-_GT Éducation, Préparer l'avenir – mois année · auteur ou autrice_
+_GT Éducation – mois année · auteur ou autrice_
 ## En bref
 - **Le constat.** Une phrase chiffrée, avec sa source (Organisme, année).
 - **La proposition.** Une phrase : ce qui change, pour qui.

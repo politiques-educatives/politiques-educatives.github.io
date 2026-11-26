@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-KIT PERSONAS DU GT ÉDUCATION (Préparer l'avenir) · simulations pour tester une proposition
+KIT PERSONAS DU GT ÉDUCATION · simulations pour tester une proposition
 Mode d'emploi : https://politiques-educatives.github.io/guide.html · Page interactive : https://politiques-educatives.github.io/evaluer.html
 
 Méthode : (1) écrire la proposition en trois lignes (mesure, pour qui, quand, combien, preuve) ; (2) choisir le candidat, la ministre et les personnes que la mesure touche le plus ; (3) coller la consigne et les fiches dans un assistant d'IA ; (4) réviser (version 2) ; (5) soumettre la version 2 aux mêmes personas. Ce sont des simulations : ne jamais prêter à une personne réelle une position qu'elle n'a pas publiée ; aucune donnée personnelle dans un assistant d'IA.

@@ -6,7 +6,7 @@ sujets: ["formation"]
 ---
 {% raw %}
 
-Research note, Horizons education group. Compiled 2026-10-26. English.
+Research note, GT Éducation. Compiled 2026-10-26. English.
 Convention: **[V]** = read in the primary source this session; **[S]** = from a reliable secondary source (law firm, trade press), not checked against the primary text; **UNVERIFIED** = could not be confirmed.
 Caveat: the session's web-search budget ran out before every point could be closed. The gaps are listed in section F.
 

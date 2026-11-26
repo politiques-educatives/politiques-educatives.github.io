@@ -252,7 +252,7 @@
   echelle: blues
   unite: "évolution des salariés de l'industrie, fin 2015 à fin 2025 (%)"
   source: "Urssaf (2026), effectifs salariés du secteur privé par zone d'emploi x NA88, au 31/12, 2015 et 2025 ; zonage en zones d'emploi 2020, Insee ; d'après la carte du Monde, hors-série, nov.-déc. 2026 (p. 110-111), refaite sur données ouvertes"
-  note: "Industrie = extraction, fabrication, énergie, eau et déchets (grand secteur GS1 de l'Urssaf), salariés du privé, apprentis compris. En métropole, +3,3 % au total (3 016 268 à 3 116 683 salariés) ; de -27,9 % (Autun) à +58,3 % (Briançon, 398 à 630 salariés). Parmi les grands bassins : Cherbourg-en-Cotentin +34,5 % (12 596 à 16 942), Saint-Nazaire +30,0 %, Bordeaux +29,7 %, mais Montbéliard -27,2 % (20 873 à 15 197). Zones de moins de 100 salariés industriels en 2015 exclues. Outre-mer dans le CSV. Calcul GT avec build/cartes_industrie.py (horizons-veille)."
+  note: "Industrie = extraction, fabrication, énergie, eau et déchets (grand secteur GS1 de l'Urssaf), salariés du privé, apprentis compris. En métropole, +3,3 % au total (3 016 268 à 3 116 683 salariés) ; de -27,9 % (Autun) à +58,3 % (Briançon, 398 à 630 salariés). Parmi les grands bassins : Cherbourg-en-Cotentin +34,5 % (12 596 à 16 942), Saint-Nazaire +30,0 %, Bordeaux +29,7 %, mais Montbéliard -27,2 % (20 873 à 15 197). Zones de moins de 100 salariés industriels en 2015 exclues. Outre-mer dans le CSV. Calcul GT."
 - id: industrie-ze-1975-2022
   sujet: emploi
   titre: "Depuis 1975, l'emploi industriel a reculé dans 221 zones d'emploi sur 286, jusqu'à -81 % à Forbach ; l'Ouest a progressé"
@@ -273,7 +273,7 @@
   lieu: "Zone d'emploi"
   quantiles: 5
   echelle: blues
-  unite: "indicateur Horizons sur 100 (rang moyen)"
+  unite: "indicateur GT sur 100 (rang moyen)"
   source: "Urssaf (2026), effectifs salariés du secteur privé par zone d'emploi x NA88, 2015 et 2025 ; indicateur construit par le GT, d'après la carte du Monde, hors-série, nov.-déc. 2026 (p. 110-111), dont l'indice n'est pas publié en données ouvertes"
   note: "Notre indicateur, pas celui du Monde (qui combine foncier, écosystème, main-d'œuvre, qualité de vie et résilience climatique, sans données publiées par zone). Deux composantes de poids égal, chacune en rang sur 100 entre les 287 zones de métropole : la part de l'industrie dans l'emploi salarié privé fin 2025 et l'évolution de l'emploi salarié industriel de 2015 à 2025. En tête : Cherbourg-en-Cotentin 91,6 (32 % des salariés dans l'industrie, +34 %), Fougères 91,4 (35 %, +21 %), Sablé-sur-Sarthe 90,0 (54 %, +12 %) ; en bas : Calais 5,2 (10 %, -20 %), Rambouillet 8,0, Metz 9,1. 22 des 57 zones de la classe la plus haute sont en Bretagne ou en Pays de la Loire."
 - id: industrie-ze-territoires

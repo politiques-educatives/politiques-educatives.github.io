@@ -50,7 +50,7 @@ themes:
     chiffre: {source: cdc-inspecteurs-2022}
     propositions: [gouv-recruter, gouv-visite]
     livret: ["P06", "64"]
-    sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022, briole-maurin-2024, ifrap-2026-education]
+    sources: [eyles-machin-2019, taylor-tyler-2012, cdc-inspecteurs-2022, briole-maurin-2024, ifrap-2026-education, bohlmark-holmlund-lindahl-2016, bohlmark-lindahl-2015]
     dossiers: [01-england-governance-ors]
     notes: [EDUCATION-note2-gouvernance-etablissement.pdf]
   - id: evaluer
@@ -103,10 +103,11 @@ themes:
       - {source: drees-suicide-2025}
       - {source: enfants-ecrans-2024}
       - {source: cdc-sante-scolaire-2020}
+      - {source: commonsense-google-2026}   # 24/11/2026
     chiffre: {graphique: depression}
     graphiques_plus: [psy]
     ailleurs_sources: [{id: kiva-2018, pays: Finlande}]
-    sources: [enclass-2024, drees-suicide-2025, cdc-sante-scolaire-2020, pssm-cochrane-2023, myriad-2022]
+    sources: [enclass-2024, drees-suicide-2025, cdc-sante-scolaire-2020, pssm-cochrane-2023, myriad-2022, commonsense-google-2026, bloomberg-2026-ia-ecole]
     dossiers: [09-brief-sante-mentale-handicap-inclusion]
   - id: ecrans
     titre: "Écrans, portable et IA à l'école"
@@ -120,7 +121,7 @@ themes:
     propositions: [tuteur-public, tuteur-marche, ia-bases]
     livret: ["67", "68", "69", "70", "29"]
     ajouts: [a-portable]
-    sources: [enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-seconde-2026, depp-ce1-2026, depp-pisa-2025, pisa-2022-distraction, cnl-lecture-2026, portable-en-pause, bastani-2025, stromberg-2026, kestin-2025, desimone-2025, henkel-2024, tutor-copilot-2024, mia-seconde, cadre-usage-ia-2025, dang-do-2026]
+    sources: [enfants-ecrans-2024, proteger-sans-empecher-2026, cianum-clandestinite-2026, depp-seconde-2026, depp-ce1-2026, depp-pisa-2025, pisa-2022-distraction, cnl-lecture-2026, portable-en-pause, bastani-2025, stromberg-2026, kestin-2025, desimone-2025, henkel-2024, tutor-copilot-2024, mia-seconde, cadre-usage-ia-2025, dang-do-2026, snt-ia-2027]
     dossiers: [07-outil-ia-public, 09-lecture-rapport-cianum-sortir-clandestinite, 14-why-scores-fall]
   reste:
     livret: ["73", "27"]
@@ -186,14 +187,14 @@ themes:
     propositions: [ia-garantie, ia-observatoire, ia-diplome-ia, ee-seul-puis-ia, tdv-ia-doctorants]
     livret: ["81", "119"]
     ajouts: [a-garantie]
-    sources: [lift-2026, canaries-2025, humlum-2025, insee-ic-2026, orr-2026, milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026, cae-91, lift-2026-01, autor-2026]
+    sources: [lift-2026, canaries-2025, humlum-2025, insee-ic-2026, orr-2026, milburn-2026, kickstart-2024, garantie-jeunes-2016, insee-neet-2026, cae-91, lift-2026-01, autor-2026, mckinsey-competences-2025]
     dossiers: [18-ia-embauches-exposition, 12-milburn-review]
     notes: [EDUCATION-note-ia-jeunes-v7.pdf, EDUCATION-note-rapport-milburn.pdf]
     blocs: [suivi, note_ia]
   - id: jeunes
     titre: "Que proposer aux jeunes sur l'emploi, les stages, les études et les discriminations ?"
     bref:   # encadré « Ce que le programme ne dit pas encore aux jeunes », notes/parler-ia-jeunes/2026-11-21-outils-ia-jeunes.md (Gemini, vérifié)
-      - "Le livret « Croire en nous » contient des mesures pour la jeunesse, mais il ne répond pas aux inquiétudes exprimées par les jeunes sur le terrain : le manque d'emplois et de stages, le coût de la vie et l'état des écoles."
+      - "Le programme contient des mesures pour la jeunesse, mais il ne répond pas aux inquiétudes exprimées par les jeunes sur le terrain : le manque d'emplois et de stages, le coût de la vie et l'état des écoles."
       - "Premier emploi et chômage : aucune mesure sur l'embauche des débutants, le chômage des jeunes ou les jeunes sans emploi ni formation. Stages et discriminations : les mots n'apparaissent pas dans le livret."
       - "Salaire face au loyer : rien de spécifique pour les jeunes, les bourses ou le logement étudiant."
     propositions: [j-emploi-tutore, j-prime-conditionnelle, stages-garantie-rep, stages-superieur-boursiers, bourses-bareme-lineaire, residences-etudiantes-zones-tendues, emplois-etudiants-campus, disc-testing-grands-employeurs, disc-apprentissage-stages, ia-formation-smic]

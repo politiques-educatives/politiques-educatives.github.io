@@ -32,7 +32,7 @@ SPENT = []
 
 STRUCTURE = """Structure obligatoire (syntaxe ligne à ligne, rien d'autre) :
 # <Titre = la proposition elle-même, pas le thème>
-_GT Éducation, Préparer l'avenir – <mois année> · brouillon généré automatiquement, non relu_
+_GT Éducation – <mois année> · brouillon généré automatiquement, non relu_
 ## En bref
 - **Le constat.** <une phrase chiffrée>
 - **La proposition.** <une phrase>
@@ -56,7 +56,7 @@ _GT Éducation, Préparer l'avenir – <mois année> · brouillon généré auto
 
 RULES = """Règles : français, phrases courtes, mots simples ; une à deux pages (3 000 à 6 000 caractères).
 N'utiliser QUE les faits vérifiés fournis, avec leur chiffre exact et leur source entre parenthèses.
-Ne jamais inventer un chiffre, une citation, une source ni une position d'Édouard Philippe
+Ne jamais inventer un chiffre, une citation, une source ni une position du programme
 (écrire « à vérifier » ou « à chiffrer »). Pas de tiret long ni de double tiret. Parler de rôles, pas de personnes.
 Mots interdits : delve, leverage, multifacette, de surcroît, robuste, transformateur, pivot."""
 
@@ -278,14 +278,14 @@ les sites d'écoles privées, de conseil ou de presse. Évaluations causales et 
     if lp.exists():
         import yaml
         mes = yaml.safe_load(lp.read_text()) or []
-        livret = ("\nProgramme du candidat, livret « Croire en nous », volume 1 (18/11/2026), mesures éducation "
+        livret = ("\nProgramme, volume 1 (18/11/2026), mesures éducation "
                   "(seule source admise pour la position actuelle du programme) :\n" +
                   "\n".join(f"- mesure n°{m['n']}, p. {m['page']} : {m['titre']}. {m['resume']}" for m in mes))
     brief = f"""Note pour : {a.public}. Sujet : {a.sujet}. {('Angle : ' + a.angle) if a.angle else ''}
 Date : {today.strftime('%m/%Y')}.
 Faits vérifiés (les seuls utilisables) :
 """ + "\n".join(f"- {f['fait']} [chiffre vérifié : {f['chiffre']}] (source : {f['source']}) {f.get('url_verifiee', f['url'])}" for f in ok) + livret
-    system = ("Tu rédiges une note de campagne du GT Éducation de Préparer l'avenir (Horizons), "
+    system = ("Tu rédiges une note du GT Éducation, sans aucun label ni référence de parti, "
               "au format des notes existantes du groupe.\n" + RULES + "\n\n" + STRUCTURE)
     note, _ = call(WRITE_MODEL, brief, system=system, max_out=12000, think=2000)
     note = note.strip().strip("`")

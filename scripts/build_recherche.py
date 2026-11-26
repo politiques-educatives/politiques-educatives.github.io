@@ -38,11 +38,16 @@ FILES = [  # (path under research/, slug, sujets)
     ("22-comparaisons-propositions/2026-11-19-synthese.md", "22-cas-etrangers-propositions", ["formation", "orientation", "emploi", "ecrans"]),
 ]
 NAMES = re.compile(r"gavini|rufenacht|virginie(?!-occidentale)|v[ée]ronique|\bmato\b|landau|lemesle|whatsapp\.com|slack\.com|drive\.google|docs\.google|"
-                   r"\b(du|le|la|au|notre|ligne de la) candidate?\b|édouard philippe|edouard philippe|\badrien\b|échange privé|note de campagne|scratchpad|/private/tmp|~/|mis de côté", re.I)
+                   r"\b(du|le|la|au|notre|ligne de la) candidate?\b|édouard philippe|edouard philippe|\bphilippe\b|edouardphilippe|mélenchon|\badrien\b|échange privé|note de campagne|scratchpad|/private/tmp|~/|mis de côté", re.I)
 SUBS = [(re.compile(r"\s*\((amendé|amendée) par Adrien[^)]*\)", re.I), ""),
         (re.compile(r"\s+d'Adrien\b"), ""),
         (re.compile(r"calcul de session", re.I), "calcul du GT"),
-        (re.compile(r",? par moi ou par un agent", re.I), "")]
+        (re.compile(r",? par moi ou par un agent", re.I), ""),
+        # 26/11/2026 : aucun label ni référence de parti sur le site
+        (re.compile(r"GT Éducation, Préparer l'avenir", re.I), "GT Éducation"),
+        (re.compile(r"Horizons education group", re.I), "GT Éducation"),
+        (re.compile(r"\s*\(?Préparer l'avenir\)?", re.I), ""),
+        (re.compile(r"livret « Croire en nous »", re.I), "programme")]
 DROP_SECTIONS = re.compile(r"proposed insertions|pistes pour la note|insertions? propos|ce que le groupe peut reprendre|lecture pour le gt|reformuler la mesure|chiffres de la note de campagne|passer à la v1|prototype calculé aujourd|deming et le portefeuille", re.I)
 
 index, listing = [], []

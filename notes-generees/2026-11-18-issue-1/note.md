@@ -1,5 +1,5 @@
 # Instaurer un dossier numérique unique et autoriser les aménagements scolaires sans attendre la MDPH
-_GT Éducation, Préparer l'avenir – novembre 2026 · brouillon généré automatiquement, non relu_
+_GT Éducation – novembre 2026 · brouillon généré automatiquement, non relu_
 ## En bref
 - **Le constat.** À la rentrée 2025, 550 000 élèves en situation de handicap sont scolarisés en milieu ordinaire (Ministère de l'Éducation nationale, 2026), mais les familles subissent des délais d'instruction en MDPH allant de 6 à 18 mois dans certains départements (Assemblée nationale, 2026).
 - **La proposition.** Généraliser un dossier numérique unique reliant l'école, la famille et la MDPH, et confier aux établissements la décision des aménagements de premier niveau sans attendre de notification administrative.

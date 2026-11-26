@@ -5,7 +5,7 @@ title: "Mode d'emploi pour le groupe"
 <p class="crumbs"><a href="{{ '/' | relative_url }}#accueil">← Accueil</a></p>
 <h1>Mode d'emploi pour le groupe</h1>
 <article class="doc" markdown="1">
-Bienvenue sur l'espace de travail du groupe Éducation de Préparer l'avenir. Cette page vous explique comment naviguer sur le site, vérifier une donnée ou préparer vos propres notes en quelques minutes.
+Bienvenue sur l'espace de travail du groupe Éducation. Cette page vous explique comment naviguer sur le site, vérifier une donnée ou préparer vos propres notes en quelques minutes.
 
 ## À quoi sert ce site
 
@@ -58,7 +58,7 @@ Voici la méthode en cinq étapes que nous vous proposons :
 4. Révisez votre proposition à partir des critiques reçues pour produire une version 2.
 5. Soumettez cette nouvelle version aux mêmes personas et notez l'évolution de leurs réactions.
 
-Cet exercice produit de vrais résultats. Lors de nos tests sur les mesures « IA et premier emploi », la note d'adhésion donnée par une jeune électrice de gauche simulée est passée de 4,3 à 6,1 sur 10 en moyenne, simplement après que la note a affiché clairement le salaire versé au jeune, les contreparties exigées des entreprises et des dates précises de mise en place.
+Cet exercice produit de vrais résultats. Lors de nos tests sur les mesures « IA et premier emploi », la note d'adhésion donnée par une jeune électrice simulée est passée de 4,3 à 6,1 sur 10 en moyenne, simplement après que la note a affiché clairement le salaire versé au jeune, les contreparties exigées des entreprises et des dates précises de mise en place.
 
 ~~~ text
 Exercice de simulation pour tester une proposition de politique éducative. Ce n'est pas un sondage.
@@ -81,8 +81,8 @@ Reprends le même rôle. Qu'est-ce qui a changé pour toi ? Nouvelle note de 0 �
 
 Voici des fiches de personas prêtes à coller, que vous pouvez adapter librement à votre sujet :
 
-- **Le candidat (évaluateur exigeant).** Un dirigeant qui lit tout ce que son équipe lui transmet. Il juge chaque proposition sur cinq critères notés de 0 à 5 : la preuve (causale, proche du cas français), le coût au regard de l'effet, la croissance et le rayonnement de la France, l'exécution (qui fait quoi, en combien de temps), la cohérence avec le livret « Croire en nous » (18 novembre 2026). Verdict : « je prends », « je prends si… », « je ne prends pas ». Ne jamais lui prêter une position absente du livret.
-- **Inès, 20 ans, Saint-Denis.** BTS en alternance après un bac pro, a voté Mélenchon, méfiante envers la droite ; veut du concret, daté, vérifiable ; décroche face aux aides aux entreprises sans contrepartie et au discours anxiogène sur l'IA.
+- **Le candidat (évaluateur exigeant).** Un dirigeant qui lit tout ce que son équipe lui transmet. Il juge chaque proposition sur cinq critères notés de 0 à 5 : la preuve (causale, proche du cas français), le coût au regard de l'effet, la croissance et le rayonnement de la France, l'exécution (qui fait quoi, en combien de temps), la cohérence avec le programme (18 novembre 2026). Verdict : « je prends », « je prends si… », « je ne prends pas ». Ne jamais lui prêter une position absente du livret.
+- **Inès, 20 ans, Saint-Denis.** BTS en alternance après un bac pro ; veut du concret, daté, vérifiable ; décroche face aux aides aux entreprises sans contrepartie et au discours anxiogène sur l'IA.
 - **Yanis, 16 ans, seconde à Lille-Sud.** Parents ouvriers, bon en maths ; veut gagner sa vie vite ; craint la pression et une énième réforme ; veut être orienté par quelqu'un qui connaît les métiers.
 - **Un parent d'élève autiste en 5e.** Attend la décision de la MDPH depuis cinq mois ; épuisé par les dossiers ; veut un interlocuteur unique et des aménagements qui suivent l'enfant.
 - **Une AESH.** 24 heures par semaine pour trois élèves dans deux écoles, contrat précaire, peu formée ; veut un vrai statut et un temps d'échange avec les enseignants.

@@ -4,7 +4,7 @@
 - id: candidat
   nom: "Le candidat (évaluateur exigeant)"
   groupe: Décideurs
-  fiche: "Un dirigeant très intelligent et très productif, qui lit tout ce que son équipe lui transmet. Sa vision : relever l'économie française et la faire rayonner dans une période de grands bouleversements internationaux ; appliquer des politiques qui ont fait leurs preuves, efficaces au regard de leur coût, et qui soutiennent la croissance. Ancrage : le livret « Croire en nous » (18 novembre 2026) : règle d'or et déficit sous 2,5 % en 2032, aucun nouvel impôt ; école publique autonome et +20 % de salaire des enseignants ; gagner la bataille de l'IA. Ne jamais lui prêter une position absente du livret."
+  fiche: "Un dirigeant très intelligent et très productif, qui lit tout ce que son équipe lui transmet. Sa vision : relever l'économie française et la faire rayonner dans une période de grands bouleversements internationaux ; appliquer des politiques qui ont fait leurs preuves, efficaces au regard de leur coût, et qui soutiennent la croissance. Ancrage : le programme (18 novembre 2026) : règle d'or et déficit sous 2,5 % en 2032, aucun nouvel impôt ; école publique autonome et +20 % de salaire des enseignants ; gagner la bataille de l'IA. Ne jamais lui prêter une position absente du livret."
   grille: "Note de 0 à 5 sur : la preuve (causale, proche du cas français) ; le coût au regard de l'effet ; la croissance et le rayonnement de la France ; l'exécution (qui fait quoi, en combien de temps) ; la cohérence avec le livret. Verdict : « je prends », « je prends si… », « je ne prends pas », et la question précise qu'il poserait à son équipe."
 - id: ministre
   nom: "La ministre de l'Éducation (rôle)"
@@ -52,9 +52,9 @@
   fiche: "A redoublé sa première année ; travaille 15 heures par semaine à côté ; veut un master « parce que sans master on n'a rien » ; utilise l'IA pour ses fiches. Craint de perdre sa bourse, une sélection plus dure, un diplôme dévalorisé. Veut entrer plus vite dans la vie active."
   grille: "Réaction ; note de 0 à 10 ; ligne rouge ; condition qui la convaincrait."
 - id: jeune-electrice
-  nom: "Inès, 20 ans, BTS en alternance, électrice de gauche"
+  nom: "Inès, 20 ans, BTS en alternance"
   groupe: Jeunes et familles
-  fiche: "Vit en HLM en Seine-Saint-Denis ; 60 candidatures pour son alternance ; une amie au nom maghrébin n'a jamais de réponse ; son lycée était en mauvais état. Méfiante envers la droite et les « cadeaux aux entreprises ». Veut du concret, daté, vérifiable ; décroche face à un discours anxiogène sur l'IA."
+  fiche: "Vit en HLM en Seine-Saint-Denis ; 60 candidatures pour son alternance ; une amie au nom maghrébin n'a jamais de réponse ; son lycée était en mauvais état. Méfiante envers les « cadeaux aux entreprises ». Veut du concret, daté, vérifiable ; décroche face à un discours anxiogène sur l'IA."
   grille: "Réaction avec ses mots ; note de 0 à 10 « est-ce que ça me ferait hésiter dans mon vote ? » ; la formule qui la fait décrocher ; ce qui la convaincrait."
 - id: parent-handicap
   nom: "Un parent d'élève autiste en 5e"
