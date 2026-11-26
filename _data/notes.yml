@@ -1,5 +1,5 @@
 # Notes finalisées du GT publiées en PDF (assets/notes/, copiées depuis out/). Pas de versions anglaises.
-# La note « L'IA et les jeunes » est publiée en PDF depuis la v5 (19/11/2026) ; la v7 (22/11/2026) remplace la v5, retirée de la liste le 23/11/2026 (le PDF reste dans assets/notes/).
+# La note « L'IA et les jeunes » est publiée en PDF depuis la v5 (19/11/2026) ; la v18 (26/11/2026) remplace la v7, avec un lien vers le Google Doc ; la v7 (22/11/2026) remplace la v5, retirée de la liste le 23/11/2026 (le PDF reste dans assets/notes/).
 notes:
   - titre: "Apprendre avec ceux qui savent : écoles, entreprises et seniors à l'heure de l'IA"
     fichier: EDUCATION-note-ecole-entreprise.pdf
@@ -13,12 +13,13 @@ notes:
     pages: 5
     sujets: [orientation]
     resume: "Six mesures concrètes, du lycée au doctorat, volontaires, progressives et évaluées : passer le bac un an plus tôt quand on est prêt, la dernière année de bac pro payée chez un employeur, un bonus pour les boursiers qui finissent leur licence à l'heure, des concours de l'État à bac+3, le financement de chaque doctorant en sciences humaines et un assistant d'IA pour chaque doctorant ; avec leur coût, leur bilan et les leçons des autres pays."
-  - titre: "L'IA et les jeunes : ouvrir la porte d'entrée"
-    fichier: EDUCATION-note-ia-jeunes-v7.pdf
-    date: "22 novembre 2026"
-    pages: 6
+  - titre: "Comment éviter une crise de l'embauche en France ? (L'IA et les jeunes)"
+    fichier: EDUCATION-note-ia-jeunes-v18.pdf
+    gdoc: "https://docs.google.com/document/d/1PN9DwcmHm8ZAJoqU1S-PvAKOj3lm3g7QiyUXpt3CFUs/edit"
+    date: "26 novembre 2026"
+    pages: 4
     sujets: [emploi]
-    resume: "Les griefs des jeunes et nos réponses, la place de l'IA dans nos réformes du travail, puis sept mesures concrètes sur l'intelligence artificielle et le premier emploi, chacune chiffrée, datée et appuyée sur un exemple étranger, complétées par trois mesures sur les fins de mois et le bâti scolaire."
+    resume: "Ce que proposent les candidats sur l'embauche des débutants face à l'IA, puis cinq propositions : voir avant de choisir (N°75 complétée), un premier contrat pour les débutants (N°81 et N°119 corrigées), le temps des anciens (N°80 complétée), des formations qui rendent des comptes (N°76 corrigée, carte des formations), une première expérience dans chaque licence."
   - titre: "L'allocation des heures d'enseignement, comparaison internationale et britannique"
     fichier: EDUCATION-note1-allocation-heures-enseignement.pdf
     date: "novembre 2026"

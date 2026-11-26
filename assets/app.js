@@ -99,7 +99,7 @@
     var href = gen ? (n.pdf ? fileUrl(n.pdf) : "") : BASE + "/assets/notes/" + n.fichier;
     return item("li", "", [n.titre, n.resume].join(" "),
       (href ? '<a href="' + esc(href) + '">' + esc(n.titre) + "</a>" : esc(n.titre)) +  ' <span class="meta">' + esc(frDate(n.date)) + (n.pages ? " · " + esc(n.pages) + " p." : "") +
-      (gen && n.docx ? ' · <a href="' + esc(fileUrl(n.docx)) + '">Word</a>' : "") + (gen ? " · brouillon généré, non relu" : " · PDF") + "</span>" +
+      (gen && n.docx ? ' · <a href="' + esc(fileUrl(n.docx)) + '">Word</a>' : "") + (gen ? " · brouillon généré, non relu" : " · PDF") + (n.gdoc ? ' · <a href="' + esc(n.gdoc) + '" target="_blank" rel="noopener">Google Doc</a>' : "") + "</span>" +
       (n.resume ? '<div class="sub">' + md(n.resume) + "</div>" : ""));
   }
   function polNoteHTML(n) {   // a one-page note on a foreign policy, listed with the theme's notes
@@ -437,7 +437,7 @@
       tile("boussole/carte", "La carte des lycées pro", VP ? VP.carte.split(". ")[0] + ". Un clic sur un lycée affiche sa fiche." : "", "Outil interactif · dans la Boussole", BASE + "/assets/captures/boussole-lycees-pro-ia-chine.jpg") +
       tile("international/carte", "La carte internationale", "Clique sur un pays : temps des professeurs, gouvernance, orientation, secondes chances dans le supérieur et apprentissage, chaque chiffre sourcé.", "Outil interactif");
     var last = POL.map(function (n) { return '<li><a href="#international/politiques" data-route="international/politiques">' + esc(n.titre) + '</a> <span class="mut">' + esc(n.date) + ' · <a href="' + esc(BASE + "/assets/notes/" + n.pdf) + '">PDF</a></span></li>'; }).join("") +
-      NOTES.map(function (n) { return '<li><a href="' + esc(BASE + "/assets/notes/" + n.fichier) + '">' + esc(n.titre) + '</a> <span class="mut">' + esc(n.date) + " · PDF</span></li>"; }).join("") +
+      NOTES.map(function (n) { return '<li><a href="' + esc(BASE + "/assets/notes/" + n.fichier) + '">' + esc(n.titre) + '</a> <span class="mut">' + esc(n.date) + " · PDF" + (n.gdoc ? ' · <a href="' + esc(n.gdoc) + '" target="_blank" rel="noopener">Google Doc</a>' : "") + "</span></li>"; }).join("") +
       GEN.map(function (n) { var pdf = n.pdf || (n.dossier ? n.dossier + "/note.pdf" : ""); return "<li>" + (pdf ? '<a href="' + esc(fileUrl(pdf)) + '">' + esc(n.titre) + "</a>" : esc(n.titre)) + ' <span class="mut">' + esc(frDate(n.date)) + " · brouillon généré, non relu</span></li>"; }).join("");
     var gh = "https://github.com/" + W.REPO;
     el.innerHTML = '<div class="intro"><p class="kick">Mis à jour le ' + esc(date) + "</p>" +
